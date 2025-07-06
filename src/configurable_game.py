@@ -55,22 +55,8 @@ class ConfigurableGame:
     
     def setup_game(self):
         """Create agents based on configuration"""
-        # Build role list
-        roles = []
-        for role, count in self.role_distribution.items():
-            roles.extend([role] * count)
-        
-        # Shuffle both lists
-        names = self.player_names.copy()
-        random.shuffle(names)
-        random.shuffle(roles)
-        
-        # Create agents
-        self.state.agents = []
-        for name, role in zip(names, roles):
-            agent = MafiaAgent(name, role, self.state.llm)
-            self.state.agents.append(agent)
-        
+        # Use the new setup method that handles structure
+        self.state.setup_agents(self.player_names, self.role_distribution)
         self.display.show_roles(self.state.agents)
     
     def play(self):

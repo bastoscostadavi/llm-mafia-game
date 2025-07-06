@@ -36,16 +36,20 @@ class MafiaAgent:
     
     def get_game_structure(self) -> str:
         """Full game structure that everyone knows"""
+        # This needs to be set by the game when agents are created
+        if hasattr(self, 'game_structure'):
+            return self.game_structure
+        
+        # Fallback to generic description
         return """Game Structure (public knowledge):
-    - 8 players total
-    - 2 assassins (work together, kill at night)
-    - 1 psychopath (works alone, kills at night)  
-    - 1 detective (investigates at night)
-    - 1 angel (protects at night)
-    - 3 villagers (no night action)
+    - Multiple players with secret roles
+    - Evil roles (assassins/psychopath) kill at night
+    - Detective investigates at night
+    - Angel protects at night
+    - Villagers have no night action
 
     Win conditions:
-    - Good wins: All evil (assassins + psychopath) eliminated
+    - Good wins: All evil eliminated
     - Assassins win: Good players ≤ assassins
     - Psychopath wins: Be the last one alive"""
 
