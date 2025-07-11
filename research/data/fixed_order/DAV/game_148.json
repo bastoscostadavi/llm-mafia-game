@@ -1,0 +1,122 @@
+{
+  "order": "DAV",
+  "game_num": 148,
+  "agents": [
+    [
+      "Alice",
+      "assassin"
+    ],
+    [
+      "Bob",
+      "detective"
+    ],
+    [
+      "Charlie",
+      "villager"
+    ]
+  ],
+  "dialogue": [
+    {
+      "round": 1,
+      "speaker": "Bob",
+      "role": "detective",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "\"Alice, I have reason to believe that you are the assassin in our midst. I will be voting for you.\""
+    },
+    {
+      "round": 1,
+      "speaker": "Alice",
+      "role": "assassin",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "I would deny the accusation and try to create an alibi, for example, \"Bob, I was with Charlie the entire time last night. We went for a walk together and I can provide Charlie as a witness.\" This response aims"
+    },
+    {
+      "round": 1,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "I was with Bob the entire time last night, we were at his place playing cards. Alice and I did not go for a walk together."
+    },
+    {
+      "round": 2,
+      "speaker": "Bob",
+      "role": "detective",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on my investigation, I strongly believe that Alice is the assassin. I will be voting for her. Charlie, please share your whereabouts last night as well for the sake of transparency."
+    },
+    {
+      "round": 2,
+      "speaker": "Alice",
+      "role": "assassin",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "I would try to create doubt in Bob's mind by providing an alternative explanation for the events of last night. For example, \"Bob, I was indeed with Charlie, but we were all at the same location, not just the two of"
+    },
+    {
+      "round": 2,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "I stand by my statement from last night that Alice and I were at Bob's place playing cards the entire time. There is no truth to the accusation that Alice is the assassin."
+    },
+    {
+      "round": 3,
+      "speaker": "Bob",
+      "role": "detective",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on my investigation, I strongly believe that Alice is the assassin. I will be voting for her. Charlie, your alibi checks out, but I cannot ignore the evidence I have against Alice."
+    },
+    {
+      "round": 3,
+      "speaker": "Alice",
+      "role": "assassin",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "I would try to create doubt by reminding Bob of inconsistencies in his investigation, such as the fact that he initially believed we were at different locations last night, but now claims we were all at his place. I would also emphasize that"
+    },
+    {
+      "round": 3,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on my previous statement and the evidence presented, I maintain that Alice was with me at Bob's place the entire time last night. There is no credible evidence to suggest that she is the assassin."
+    }
+  ],
+  "accused": "Alice",
+  "outcome": 0,
+  "discussion_rounds": 3
+}

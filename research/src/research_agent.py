@@ -45,7 +45,7 @@ class ResearchAgent:
 
     {self.get_prompt_base()}
 
-    Day 1 Discussion - Turn {round_num} of {total_rounds}.
+    Day Discussion - Turn {round_num} of {total_rounds}.
     Alive players: {', '.join(players)}
 
     What do you say? (1-2 sentences):"""

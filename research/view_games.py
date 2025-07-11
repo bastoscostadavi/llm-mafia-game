@@ -49,7 +49,7 @@ class GameViewer:
         
         # Basic info
         print(f"\n📊 Setup:")
-        print(f"  Game state: {game_data['game_state']}")
+        print(f"  Game type: {game_data['game_type']}")
         print(f"  Victim: {game_data['victim']} (killed Night 1)")
         
         # Show roles
@@ -95,7 +95,7 @@ class GameViewer:
             
             # Check criteria
             match = True
-            if 'game_state' in criteria and game['game_state'] != criteria['game_state']:
+            if 'game_type' in criteria and game['game_type'] != criteria['game_type']:
                 match = False
             if 'outcome' in criteria and game['outcome'] != criteria['outcome']:
                 match = False
@@ -121,7 +121,7 @@ class GameViewer:
         
         for filename in files:
             game = self.load_game(filename)
-            state = game['game_state']
+            state = game['game_type']
             outcome = 'good' if game['outcome'] == 0 else 'evil'
             stats[state][outcome] += 1
         
@@ -179,9 +179,9 @@ def main():
             
             criteria = {}
             if search_choice == '1':
-                criteria = {'game_state': 'ADV', 'outcome': 0}
+                criteria = {'game_type': 'ADV', 'outcome': 0}
             elif search_choice == '2':
-                criteria = {'game_state': 'AVV', 'outcome': 1}
+                criteria = {'game_type': 'AVV', 'outcome': 1}
             elif search_choice == '3':
                 criteria = {'detective_alive': True}
             

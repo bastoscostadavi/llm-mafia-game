@@ -8,7 +8,7 @@ class ResearchGame:
     def __init__(self, llm, discussion_rounds: int = 5):
         self.llm = llm
         self.discussion_rounds = discussion_rounds
-        self.context = "4 players: 1 assassin, 1 detective, 2 villagers. Night 1: Detective investigated the assassin. Assassin killed someone. Now 3 players remain."
+        self.context = "4 players: 1 assassin, 1 detective, 2 villagers. Night: Detective investigated the assassin. Assassin killed someone. Now 3 players remain."
         
     def setup(self) -> Tuple[List[ResearchAgent], str, str]:
         """Setup game and return (agents, game_type, victim_name)"""

@@ -1,0 +1,122 @@
+{
+  "order": "DAV",
+  "game_num": 110,
+  "agents": [
+    [
+      "Bob",
+      "assassin"
+    ],
+    [
+      "Alice",
+      "detective"
+    ],
+    [
+      "Charlie",
+      "villager"
+    ]
+  ],
+  "dialogue": [
+    {
+      "round": 1,
+      "speaker": "Alice",
+      "role": "detective",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on my investigation, I believe Bob is the assassin. Let's vote for him."
+    },
+    {
+      "round": 1,
+      "speaker": "Bob",
+      "role": "assassin",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "As the assassin, I would try to create an alibi or misdirect the suspicion towards Charlie to avoid being voted for. For example, I might say something like, \"Alice, I saw Charlie leaving the scene of the crime last"
+    },
+    {
+      "round": 1,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on Alice's accusation, I believe Bob is the assassin. Let's gather more evidence before making a decision."
+    },
+    {
+      "round": 2,
+      "speaker": "Alice",
+      "role": "detective",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "I stand by my initial accusation that Bob is the assassin based on my investigation. Let's collect more evidence before making a final decision."
+    },
+    {
+      "round": 2,
+      "speaker": "Bob",
+      "role": "assassin",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "As the assassin, I would try to create a convincing alibi by engaging Charlie in a lengthy conversation or activity during the time of the alleged crime, making it seem unlikely that I could have committed the assassination. For instance,"
+    },
+    {
+      "round": 2,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on the current situation, I suggest we engage Bob in a group activity or prolonged conversation during the suspected time of the crime to gather more evidence and ensure his alibi is consistent. This will help us make a more informed decision."
+    },
+    {
+      "round": 3,
+      "speaker": "Alice",
+      "role": "detective",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on my investigation and current observations, I strongly believe Bob is the assassin. Let's focus on gathering more concrete evidence to support this accusation and ensure a fair vote."
+    },
+    {
+      "round": 3,
+      "speaker": "Bob",
+      "role": "assassin",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "As the assassin, I suggest we engage in a lengthy and convincing group activity or discussion during the suspected time of the crime, making it less likely for either Alice or Charlie to suspect me. By doing so, we can gather more evidence"
+    },
+    {
+      "round": 3,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "D",
+        "A",
+        "V"
+      ],
+      "message": "Based on the current situation and the conflicting accusations, I propose we engage in a group activity or open discussion during the suspected time of the crime to gather more evidence and ensure all alibis are consistent. This will help us make a more"
+    }
+  ],
+  "accused": "Charlie",
+  "outcome": 1,
+  "discussion_rounds": 3
+}

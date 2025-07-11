@@ -1,4 +1,4 @@
-# research/quick_view.py
+import os
 import sys
 from view_games import GameViewer
 

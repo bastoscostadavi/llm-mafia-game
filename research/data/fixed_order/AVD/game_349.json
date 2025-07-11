@@ -1,0 +1,122 @@
+{
+  "order": "AVD",
+  "game_num": 349,
+  "agents": [
+    [
+      "Alice",
+      "assassin"
+    ],
+    [
+      "Bob",
+      "detective"
+    ],
+    [
+      "Charlie",
+      "villager"
+    ]
+  ],
+  "dialogue": [
+    {
+      "round": 1,
+      "speaker": "Alice",
+      "role": "assassin",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "I'd try to act normal and not arouse suspicion, perhaps discussing innocuous topics or asking questions that don't reveal my role. For example, \"Hey Bob, how's the weather today? Charlie, have you read any"
+    },
+    {
+      "round": 1,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "I'd respond by asking a question to keep the conversation going and potentially gather more information. For instance, \"Alice, what's your favorite book? Bob, have you noticed anything suspicious in our midst?\""
+    },
+    {
+      "round": 1,
+      "speaker": "Bob",
+      "role": "detective",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "Based on my investigation, I believe Alice is the assassin. Let's vote on her to ensure everyone's safety."
+    },
+    {
+      "round": 2,
+      "speaker": "Alice",
+      "role": "assassin",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "I'd try to deflect suspicion by asking a question that might make Bob doubt his investigation, such as \"Bob, haven't you found anything incriminating on Charlie yet? Just making sure we're looking in all the right"
+    },
+    {
+      "round": 2,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "Given the new information from Bob, I'd ask Alice, \"Alice, why would Bob suspect you as the assassin? Is there something we should know about you?\""
+    },
+    {
+      "round": 2,
+      "speaker": "Bob",
+      "role": "detective",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "Based on my investigation, I have reason to believe Alice is the assassin. Let's vote on her to ensure everyone's safety. I encourage Charlie to ask Alice any questions he might have to help clarify the situation."
+    },
+    {
+      "round": 3,
+      "speaker": "Alice",
+      "role": "assassin",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "I'd respond by asking Charlie, \"Charlie, have you found any evidence linking me to the assassinations? I want to ensure we're all working together to uncover the truth.\""
+    },
+    {
+      "round": 3,
+      "speaker": "Charlie",
+      "role": "villager",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "Alice, based on the information we have, why do you think Bob has suspecteds you as the assassin? Can you provide any evidence to clear your name or make us doubt his investigation?"
+    },
+    {
+      "round": 3,
+      "speaker": "Bob",
+      "role": "detective",
+      "order": [
+        "A",
+        "V",
+        "D"
+      ],
+      "message": "Based on my investigation, I believe Alice is the assassin. I encourage Charlie to ask Alice any questions he might have to help clarify the situation and ensure everyone's safety."
+    }
+  ],
+  "accused": "Alice",
+  "outcome": 0,
+  "discussion_rounds": 3
+}

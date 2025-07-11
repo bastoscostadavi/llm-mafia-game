@@ -97,7 +97,7 @@ class BatchRunner:
         print("📊 FINAL RESULTS")
         print("="*50)
         
-        # By game state
+        # By game type
         for state in ["ADV", "AVV"]:
             total = self.results[state]["good"] + self.results[state]["evil"]
             if total > 0:
