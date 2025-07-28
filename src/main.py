@@ -140,8 +140,8 @@ def create_game(players, discussion_rounds=2):
         ]
     """
     from src.agents.agent import MafiaAgent
-    from src.game.phases.day_phase import DayPhase
-    from src.game.phases.night_phase import NightPhase
+    from src.day_phase import DayPhase
+    from src.night_phase import NightPhase
     
     # Create agents
     agents = []
