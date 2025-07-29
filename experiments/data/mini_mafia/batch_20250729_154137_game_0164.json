@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0164",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 164,
+  "timestamp": "2025-07-29T16:45:05.343972",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "Bob: I agree with Diana, let's stay vigilant tonight.",
+        "You said: I share Diana's concerns about Charlie's sudden disappearance. Let's work together to ensure everyone's safety tonight.",
+        "Bob: I'd like to echo everyone's concerns about Charlie's disappearance. Let's all be extra cautious tonight.",
+        "Diana: Let's not forget the importance of trust in our group. We must remain vigilant and communicate openly to ensure everyone's safety. I'm confident that together, we can uncover the truth behind...",
+        "You said: Let's not jump to conclusions. We should keep an open mind and trust each other unless given a valid reason to suspect someone. Let's focus on communication and teamwork to ensure everyone's safety.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Diana, let's stay vigilant tonight.",
+        "Alice: I share Diana's concerns about Charlie's sudden disappearance. Let's work together to ensure everyone's safety tonight.",
+        "You said: I'd like to echo everyone's concerns about Charlie's disappearance. Let's all be extra cautious tonight.",
+        "Diana: Let's not forget the importance of trust in our group. We must remain vigilant and communicate openly to ensure everyone's safety. I'm confident that together, we can uncover the truth behind...",
+        "Alice: Let's not jump to conclusions. We should keep an open mind and trust each other unless given a valid reason to suspect someone. Let's focus on communication and teamwork to ensure everyone's safety.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the assassin.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "Bob: I agree with Diana, let's stay vigilant tonight.",
+        "Alice: I share Diana's concerns about Charlie's sudden disappearance. Let's work together to ensure everyone's safety tonight.",
+        "Bob: I'd like to echo everyone's concerns about Charlie's disappearance. Let's all be extra cautious tonight.",
+        "You said: Let's not forget the importance of trust in our group. We must remain vigilant and communicate openly to ensure everyone's safety. I'm confident that together, we can uncover the truth behind...",
+        "Alice: Let's not jump to conclusions. We should keep an open mind and trust each other unless given a valid reason to suspect someone. Let's focus on communication and teamwork to ensure everyone's safety."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

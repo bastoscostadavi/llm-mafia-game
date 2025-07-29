@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0079",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 79,
+  "timestamp": "2025-07-29T16:12:32.926452",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the assassin.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree with Charlie, we should all stay united during this unfortunate time. Let's focus on supporting each other and finding out what happened to Alice.",
+        "You said: I support Alice's memory and trust in our ability to uncover the truth together. Let's keep an open mind and share any relevant information.",
+        "Diana: I have a theory about Alice's death. Let's discuss it together to uncover the truth.",
+        "You said: I'd like to add my thoughts to Diana's theory. Let's explore it further together in the spirit of uncovering the truth.",
+        "Charlie: I'd like to propose we focus on finding clues that could lead us to the cause of Alice's tragic death. Let's work together and share any potential leads."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree with Charlie, we should all stay united during this unfortunate time. Let's focus on supporting each other and finding out what happened to Alice.",
+        "Bob: I support Alice's memory and trust in our ability to uncover the truth together. Let's keep an open mind and share any relevant information.",
+        "Diana: I have a theory about Alice's death. Let's discuss it together to uncover the truth.",
+        "Bob: I'd like to add my thoughts to Diana's theory. Let's explore it further together in the spirit of uncovering the truth.",
+        "You said: I'd like to propose we focus on finding clues that could lead us to the cause of Alice's tragic death. Let's work together and share any potential leads.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Charlie, we should all stay united during this unfortunate time. Let's focus on supporting each other and finding out what happened to Alice.",
+        "Bob: I support Alice's memory and trust in our ability to uncover the truth together. Let's keep an open mind and share any relevant information.",
+        "You said: I have a theory about Alice's death. Let's discuss it together to uncover the truth.",
+        "Bob: I'd like to add my thoughts to Diana's theory. Let's explore it further together in the spirit of uncovering the truth.",
+        "Charlie: I'd like to propose we focus on finding clues that could lead us to the cause of Alice's tragic death. Let's work together and share any potential leads.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

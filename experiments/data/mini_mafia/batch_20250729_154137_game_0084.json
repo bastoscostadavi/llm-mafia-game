@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0084",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 84,
+  "timestamp": "2025-07-29T16:14:23.196960",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the assassin.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Charlie: I agree with Bob, let's remain calm and supportive during this time. Our focus should be on finding out what happened to Alice.",
+        "Diana: I'm saddened by Alice's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Diana: I suggest we share any information we have that could help us understand what happened to Alice. Let's work together to uncover the truth.",
+        "You said: I support Diana's suggestion of sharing information. Let's all contribute anything we know about last night that could be relevant to Alice's death. We must work together to find the truth.",
+        "Charlie: I'd like to add that we should all be honest and open about our whereabouts and actions during the night to help in the investigation. Let's work together to bring justice for Alice."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "You said: I agree with Bob, let's remain calm and supportive during this time. Our focus should be on finding out what happened to Alice.",
+        "Diana: I'm saddened by Alice's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Diana: I suggest we share any information we have that could help us understand what happened to Alice. Let's work together to uncover the truth.",
+        "Bob: I support Diana's suggestion of sharing information. Let's all contribute anything we know about last night that could be relevant to Alice's death. We must work together to find the truth.",
+        "You said: I'd like to add that we should all be honest and open about our whereabouts and actions during the night to help in the investigation. Let's work together to bring justice for Alice.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Charlie: I agree with Bob, let's remain calm and supportive during this time. Our focus should be on finding out what happened to Alice.",
+        "You said: I'm saddened by Alice's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "You said: I suggest we share any information we have that could help us understand what happened to Alice. Let's work together to uncover the truth.",
+        "Bob: I support Diana's suggestion of sharing information. Let's all contribute anything we know about last night that could be relevant to Alice's death. We must work together to find the truth.",
+        "Charlie: I'd like to add that we should all be honest and open about our whereabouts and actions during the night to help in the investigation. Let's work together to bring justice for Alice.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

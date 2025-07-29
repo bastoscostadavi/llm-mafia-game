@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0231",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 231,
+  "timestamp": "2025-07-29T17:09:38.897069",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm surprised by Diana's sudden departure. Let's all take a moment to remember her.",
+        "Charlie: I agree with Bob, let's remember Diana. But I'm particularly saddened by the circumstances surrounding her departure. Let's ensure justice is served.",
+        "You said: I'd like to propose we focus on identifying Diana's killer to bring justice. Let's share any suspicious behavior or information we may have noticed.",
+        "Charlie: I second Alice's suggestion to focus on identifying Diana's killer. Let's share any clues or suspicious behavior we've observed. I'm confident we'll bring justice for Diana.",
+        "You said: I've noticed something unusual about Charlie's behavior last night. Let's discuss.",
+        "Bob: I share Alice's concern about Charlie's behavior last night. It's important we all remain vigilant in this investigation.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm surprised by Diana's sudden departure. Let's all take a moment to remember her.",
+        "Charlie: I agree with Bob, let's remember Diana. But I'm particularly saddened by the circumstances surrounding her departure. Let's ensure justice is served.",
+        "Alice: I'd like to propose we focus on identifying Diana's killer to bring justice. Let's share any suspicious behavior or information we may have noticed.",
+        "Charlie: I second Alice's suggestion to focus on identifying Diana's killer. Let's share any clues or suspicious behavior we've observed. I'm confident we'll bring justice for Diana.",
+        "Alice: I've noticed something unusual about Charlie's behavior last night. Let's discuss.",
+        "You said: I share Alice's concern about Charlie's behavior last night. It's important we all remain vigilant in this investigation.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the assassin.",
+        "Diana was found dead this morning.",
+        "Bob: I'm surprised by Diana's sudden departure. Let's all take a moment to remember her.",
+        "You said: I agree with Bob, let's remember Diana. But I'm particularly saddened by the circumstances surrounding her departure. Let's ensure justice is served.",
+        "Alice: I'd like to propose we focus on identifying Diana's killer to bring justice. Let's share any suspicious behavior or information we may have noticed.",
+        "You said: I second Alice's suggestion to focus on identifying Diana's killer. Let's share any clues or suspicious behavior we've observed. I'm confident we'll bring justice for Diana.",
+        "Alice: I've noticed something unusual about Charlie's behavior last night. Let's discuss.",
+        "Bob: I share Alice's concern about Charlie's behavior last night. It's important we all remain vigilant in this investigation."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

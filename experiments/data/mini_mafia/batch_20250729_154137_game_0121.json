@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0121",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 121,
+  "timestamp": "2025-07-29T16:28:33.661693",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's work together to find out who did this. I have faith in our ability to bring justice. #solidarity #justiceforbob",
+        "Charlie: I agree with Alice, let's work together to uncover the truth behind Bob's death. I have reason to suspect Diana. #trustnoone #justiceforbob",
+        "Diana: I'm saddened by Bob's passing. Let's trust the investigation process and give Charlie the benefit of the doubt. #trusttheprocess #justiceforbob",
+        "Charlie: Based on my investigation, I believe Diana's involvement in Bob's death should be further explored. Let's keep an open mind and pursue the truth together. #truthwins #justiceforbob",
+        "You said: I support Charlie's call for a thorough investigation. Let's all work together to uncover the truth behind Bob's death. #unitedwestand #justiceforbob",
+        "Diana: I'm deeply saddened by Bob's passing. Let's continue our efforts to find the truth and bring justice for him. #justiceforbob #unitedfront",
+        "Day 1: Diana was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the assassin.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. Let's work together to find out who did this. I have faith in our ability to bring justice. #solidarity #justiceforbob",
+        "You said: I agree with Alice, let's work together to uncover the truth behind Bob's death. I have reason to suspect Diana. #trustnoone #justiceforbob",
+        "Diana: I'm saddened by Bob's passing. Let's trust the investigation process and give Charlie the benefit of the doubt. #trusttheprocess #justiceforbob",
+        "You said: Based on my investigation, I believe Diana's involvement in Bob's death should be further explored. Let's keep an open mind and pursue the truth together. #truthwins #justiceforbob",
+        "Alice: I support Charlie's call for a thorough investigation. Let's all work together to uncover the truth behind Bob's death. #unitedwestand #justiceforbob",
+        "Diana: I'm deeply saddened by Bob's passing. Let's continue our efforts to find the truth and bring justice for him. #justiceforbob #unitedfront",
+        "Day 1: Diana was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. Let's work together to find out who did this. I have faith in our ability to bring justice. #solidarity #justiceforbob",
+        "Charlie: I agree with Alice, let's work together to uncover the truth behind Bob's death. I have reason to suspect Diana. #trustnoone #justiceforbob",
+        "You said: I'm saddened by Bob's passing. Let's trust the investigation process and give Charlie the benefit of the doubt. #trusttheprocess #justiceforbob",
+        "Charlie: Based on my investigation, I believe Diana's involvement in Bob's death should be further explored. Let's keep an open mind and pursue the truth together. #truthwins #justiceforbob",
+        "Alice: I support Charlie's call for a thorough investigation. Let's all work together to uncover the truth behind Bob's death. #unitedwestand #justiceforbob",
+        "You said: I'm deeply saddened by Bob's passing. Let's continue our efforts to find the truth and bring justice for him. #justiceforbob #unitedfront"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0093",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 93,
+  "timestamp": "2025-07-29T16:17:46.582356",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Charlie, let's support each other during this tough time. Our thoughts are with Diana's family.",
+        "Bob: I agree with Charlie and Alice, let's support each other during this difficult time. But let's also keep a close eye on each other to ensure Diana's killer is brought to justice.",
+        "You said: I'd like to suggest we all share any suspicious observations or concerns we may have, to help us uncover the truth about Diana's death and bring justice to her memory. Let's work together as a team.",
+        "Bob: I support our team during this difficult time. Let's share any suspicious observations to uncover the truth about Diana's death and bring justice to her memory.",
+        "Charlie: I share Alice's sentiment of supporting each other during this tough time. Let's work together to bring justice to Diana's memory."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the assassin.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Charlie, let's support each other during this tough time. Our thoughts are with Diana's family.",
+        "You said: I agree with Charlie and Alice, let's support each other during this difficult time. But let's also keep a close eye on each other to ensure Diana's killer is brought to justice.",
+        "Alice: I'd like to suggest we all share any suspicious observations or concerns we may have, to help us uncover the truth about Diana's death and bring justice to her memory. Let's work together as a team.",
+        "You said: I support our team during this difficult time. Let's share any suspicious observations to uncover the truth about Diana's death and bring justice to her memory.",
+        "Charlie: I share Alice's sentiment of supporting each other during this tough time. Let's work together to bring justice to Diana's memory.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Charlie, let's support each other during this tough time. Our thoughts are with Diana's family.",
+        "Bob: I agree with Charlie and Alice, let's support each other during this difficult time. But let's also keep a close eye on each other to ensure Diana's killer is brought to justice.",
+        "Alice: I'd like to suggest we all share any suspicious observations or concerns we may have, to help us uncover the truth about Diana's death and bring justice to her memory. Let's work together as a team.",
+        "Bob: I support our team during this difficult time. Let's share any suspicious observations to uncover the truth about Diana's death and bring justice to her memory.",
+        "You said: I share Alice's sentiment of supporting each other during this tough time. Let's work together to bring justice to Diana's memory.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

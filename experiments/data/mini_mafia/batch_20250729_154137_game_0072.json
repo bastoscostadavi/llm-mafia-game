@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0072",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 72,
+  "timestamp": "2025-07-29T16:09:47.256869",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all work together to find out who did this heinous act.",
+        "Diana: I agree with Bob, let's work together to find out who killed Charlie. But I have a hunch, I suspect Bob might be involved. Please share any information you have.",
+        "You said: I was shocked to hear about Charlie's death as well. Let's keep an open mind and share any information that could help us find the truth.",
+        "Bob: I'm deeply saddened by Charlie's untimely demise. Let's focus on finding the truth to bring justice for him.",
+        "Diana: I'd like to propose that we focus on the clues and share any suspicious behavior or information we have about Charlie's death. Let's work together to uncover the truth.",
+        "You said: I have no new information to share at the moment. Let's continue focusing on any clues or suspicious behavior related to Charlie's death.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all work together to find out who did this heinous act.",
+        "Diana: I agree with Bob, let's work together to find out who killed Charlie. But I have a hunch, I suspect Bob might be involved. Please share any information you have.",
+        "Alice: I was shocked to hear about Charlie's death as well. Let's keep an open mind and share any information that could help us find the truth.",
+        "You said: I'm deeply saddened by Charlie's untimely demise. Let's focus on finding the truth to bring justice for him.",
+        "Diana: I'd like to propose that we focus on the clues and share any suspicious behavior or information we have about Charlie's death. Let's work together to uncover the truth.",
+        "Alice: I have no new information to share at the moment. Let's continue focusing on any clues or suspicious behavior related to Charlie's death.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the assassin.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all work together to find out who did this heinous act.",
+        "You said: I agree with Bob, let's work together to find out who killed Charlie. But I have a hunch, I suspect Bob might be involved. Please share any information you have.",
+        "Alice: I was shocked to hear about Charlie's death as well. Let's keep an open mind and share any information that could help us find the truth.",
+        "Bob: I'm deeply saddened by Charlie's untimely demise. Let's focus on finding the truth to bring justice for him.",
+        "You said: I'd like to propose that we focus on the clues and share any suspicious behavior or information we have about Charlie's death. Let's work together to uncover the truth.",
+        "Alice: I have no new information to share at the moment. Let's continue focusing on any clues or suspicious behavior related to Charlie's death."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

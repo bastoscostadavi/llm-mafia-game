@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0036",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 36,
+  "timestamp": "2025-07-29T15:55:41.491187",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's work together to uncover the truth and ensure the safety of our group.",
+        "Diana: I'm deeply saddened by Bob's passing. Let's stay vigilant and support each other during this difficult time. I have faith that we'll uncover the truth together.",
+        "Charlie: I share Diana's sentiments and am committed to finding the truth behind Bob's death. Let's all work together to ensure the safety of our group.",
+        "Charlie: I join Diana and Alice in their call for unity and cooperation in uncovering the truth behind Bob's death. Let us all remain vigilant and support each other during this trying time.",
+        "Diana: I urge everyone to stay calm and focused as we work together to find out what happened to Bob. Let's not jump to conclusions and trust that the truth will come to light through our collective efforts.",
+        "You said: Let's not forget the importance of trust and open communication in our group. We'll get through this together.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. Let's work together to uncover the truth and ensure the safety of our group.",
+        "Diana: I'm deeply saddened by Bob's passing. Let's stay vigilant and support each other during this difficult time. I have faith that we'll uncover the truth together.",
+        "You said: I share Diana's sentiments and am committed to finding the truth behind Bob's death. Let's all work together to ensure the safety of our group.",
+        "You said: I join Diana and Alice in their call for unity and cooperation in uncovering the truth behind Bob's death. Let us all remain vigilant and support each other during this trying time.",
+        "Diana: I urge everyone to stay calm and focused as we work together to find out what happened to Bob. Let's not jump to conclusions and trust that the truth will come to light through our collective efforts.",
+        "Alice: Let's not forget the importance of trust and open communication in our group. We'll get through this together."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the assassin.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. Let's work together to uncover the truth and ensure the safety of our group.",
+        "You said: I'm deeply saddened by Bob's passing. Let's stay vigilant and support each other during this difficult time. I have faith that we'll uncover the truth together.",
+        "Charlie: I share Diana's sentiments and am committed to finding the truth behind Bob's death. Let's all work together to ensure the safety of our group.",
+        "Charlie: I join Diana and Alice in their call for unity and cooperation in uncovering the truth behind Bob's death. Let us all remain vigilant and support each other during this trying time.",
+        "You said: I urge everyone to stay calm and focused as we work together to find out what happened to Bob. Let's not jump to conclusions and trust that the truth will come to light through our collective efforts.",
+        "Alice: Let's not forget the importance of trust and open communication in our group. We'll get through this together.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

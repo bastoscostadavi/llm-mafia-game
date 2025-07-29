@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0101",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 101,
+  "timestamp": "2025-07-29T16:20:50.267272",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the assassin.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I agree with Diana, let's keep an eye out for any suspicious behavior. We want to ensure everyone's safety in this game.",
+        "You said: I share Diana's concerns. Let's all be vigilant to maintain trust and ensure safety within our group.",
+        "You said: I'd like to echo Diana's concerns for safety. Let's all stay vigilant together.",
+        "Charlie: Let's not jump to conclusions based on suspicions. We should focus on building trust and unity within our group.",
+        "Diana: Let's continue focusing on ensuring safety and trust within our group. Any unusual behavior should be reported and discussed openly."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Diana, let's keep an eye out for any suspicious behavior. We want to ensure everyone's safety in this game.",
+        "Alice: I share Diana's concerns. Let's all be vigilant to maintain trust and ensure safety within our group.",
+        "Alice: I'd like to echo Diana's concerns for safety. Let's all stay vigilant together.",
+        "You said: Let's not jump to conclusions based on suspicions. We should focus on building trust and unity within our group.",
+        "Diana: Let's continue focusing on ensuring safety and trust within our group. Any unusual behavior should be reported and discussed openly.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the assassin.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I agree with Diana, let's keep an eye out for any suspicious behavior. We want to ensure everyone's safety in this game.",
+        "Alice: I share Diana's concerns. Let's all be vigilant to maintain trust and ensure safety within our group.",
+        "Alice: I'd like to echo Diana's concerns for safety. Let's all stay vigilant together.",
+        "Charlie: Let's not jump to conclusions based on suspicions. We should focus on building trust and unity within our group.",
+        "You said: Let's continue focusing on ensuring safety and trust within our group. Any unusual behavior should be reported and discussed openly.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

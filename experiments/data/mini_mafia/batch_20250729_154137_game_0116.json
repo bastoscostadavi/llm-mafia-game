@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0116",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 116,
+  "timestamp": "2025-07-29T16:26:40.282543",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree, let's stay vigilant and support each other. But we must also remember that we lost a member of our group last night. It's important to figure out what happened to Alice. I plan to...",
+        "You said: I agree, we should stay vigilant and support each other. But let's not jump to conclusions yet. We don't know for sure what happened to Alice. Let's give Diana space to investigate.",
+        "Charlie: Let's not speculate or accuse anyone at this moment. Let's give Diana the time she needs to investigate and keep our communication focused on supporting each other during this unfortunate time.",
+        "Diana: Let's not forget Alice. I'll do my best to uncover what happened to her. In the meantime, let's stay united and supportive of each other.",
+        "You said: Let's continue to support each other during this difficult time. We should trust in Diana's investigation and avoid jumping to conclusions."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree, let's stay vigilant and support each other. But we must also remember that we lost a member of our group last night. It's important to figure out what happened to Alice. I plan to...",
+        "Bob: I agree, we should stay vigilant and support each other. But let's not jump to conclusions yet. We don't know for sure what happened to Alice. Let's give Diana space to investigate.",
+        "You said: Let's not speculate or accuse anyone at this moment. Let's give Diana the time she needs to investigate and keep our communication focused on supporting each other during this unfortunate time.",
+        "Diana: Let's not forget Alice. I'll do my best to uncover what happened to her. In the meantime, let's stay united and supportive of each other.",
+        "Bob: Let's continue to support each other during this difficult time. We should trust in Diana's investigation and avoid jumping to conclusions.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's stay vigilant and support each other. But we must also remember that we lost a member of our group last night. It's important to figure out what happened to Alice. I plan to...",
+        "Bob: I agree, we should stay vigilant and support each other. But let's not jump to conclusions yet. We don't know for sure what happened to Alice. Let's give Diana space to investigate.",
+        "Charlie: Let's not speculate or accuse anyone at this moment. Let's give Diana the time she needs to investigate and keep our communication focused on supporting each other during this unfortunate time.",
+        "You said: Let's not forget Alice. I'll do my best to uncover what happened to her. In the meantime, let's stay united and supportive of each other.",
+        "Bob: Let's continue to support each other during this difficult time. We should trust in Diana's investigation and avoid jumping to conclusions.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

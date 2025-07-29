@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0070",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 70,
+  "timestamp": "2025-07-29T16:08:58.102418",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's work together to find out what happened and bring the culprit to justice.",
+        "Diana: I'm saddened by Bob's death. Let's focus on finding clues to identify the culprit. Charlie, do you have any alibi for last night?",
+        "Charlie: I agree with Alice, let's work together to find the culprit. I have nothing to hide.",
+        "You said: Let's not jump to conclusions. We should collectively discuss and share any potential clues we may have to help find the real culprit.",
+        "Charlie: I share Alice's sentiment for cooperation. Let's focus on uncovering the truth behind Bob's death. No hidden intentions from my side.",
+        "Diana: Let's stay focused on finding clues to identify the culprit behind Bob's death. We must work together to ensure justice is served.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. Let's work together to find out what happened and bring the culprit to justice.",
+        "Diana: I'm saddened by Bob's death. Let's focus on finding clues to identify the culprit. Charlie, do you have any alibi for last night?",
+        "You said: I agree with Alice, let's work together to find the culprit. I have nothing to hide.",
+        "Alice: Let's not jump to conclusions. We should collectively discuss and share any potential clues we may have to help find the real culprit.",
+        "You said: I share Alice's sentiment for cooperation. Let's focus on uncovering the truth behind Bob's death. No hidden intentions from my side.",
+        "Diana: Let's stay focused on finding clues to identify the culprit behind Bob's death. We must work together to ensure justice is served."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the assassin.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. Let's work together to find out what happened and bring the culprit to justice.",
+        "You said: I'm saddened by Bob's death. Let's focus on finding clues to identify the culprit. Charlie, do you have any alibi for last night?",
+        "Charlie: I agree with Alice, let's work together to find the culprit. I have nothing to hide.",
+        "Alice: Let's not jump to conclusions. We should collectively discuss and share any potential clues we may have to help find the real culprit.",
+        "Charlie: I share Alice's sentiment for cooperation. Let's focus on uncovering the truth behind Bob's death. No hidden intentions from my side.",
+        "You said: Let's stay focused on finding clues to identify the culprit behind Bob's death. We must work together to ensure justice is served.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

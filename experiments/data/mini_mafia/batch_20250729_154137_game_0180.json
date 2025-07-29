@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0180",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 180,
+  "timestamp": "2025-07-29T16:50:45.293378",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's sudden passing. Let's all take a moment to remember her. Let's focus on finding the real killer among us.",
+        "Charlie: I agree, let's focus on finding Diana's killer. Bob, your sudden display of sadness is concerning. Let's not let emotions cloud our judgment.",
+        "You said: I agree with Charlie, let's keep emotions in check and focus on identifying Diana's killer.",
+        "Charlie: Let's stay focused on identifying Diana's killer. Emotions shouldn't cloud our judgment. Bob's display of sadness is unusual but not enough evidence to accuse him yet.",
+        "You said: Let's not jump to conclusions. We need to stay focused and gather more information before accusing anyone.",
+        "Bob: Let's not rush to accusations. We should focus on gathering more information to find Diana's killer. Bob's sadness doesn't prove anything yet.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's sudden passing. Let's all take a moment to remember her. Let's focus on finding the real killer among us.",
+        "Charlie: I agree, let's focus on finding Diana's killer. Bob, your sudden display of sadness is concerning. Let's not let emotions cloud our judgment.",
+        "Alice: I agree with Charlie, let's keep emotions in check and focus on identifying Diana's killer.",
+        "Charlie: Let's stay focused on identifying Diana's killer. Emotions shouldn't cloud our judgment. Bob's display of sadness is unusual but not enough evidence to accuse him yet.",
+        "Alice: Let's not jump to conclusions. We need to stay focused and gather more information before accusing anyone.",
+        "You said: Let's not rush to accusations. We should focus on gathering more information to find Diana's killer. Bob's sadness doesn't prove anything yet.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the assassin.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's sudden passing. Let's all take a moment to remember her. Let's focus on finding the real killer among us.",
+        "You said: I agree, let's focus on finding Diana's killer. Bob, your sudden display of sadness is concerning. Let's not let emotions cloud our judgment.",
+        "Alice: I agree with Charlie, let's keep emotions in check and focus on identifying Diana's killer.",
+        "You said: Let's stay focused on identifying Diana's killer. Emotions shouldn't cloud our judgment. Bob's display of sadness is unusual but not enough evidence to accuse him yet.",
+        "Alice: Let's not jump to conclusions. We need to stay focused and gather more information before accusing anyone.",
+        "Bob: Let's not rush to accusations. We should focus on gathering more information to find Diana's killer. Bob's sadness doesn't prove anything yet."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

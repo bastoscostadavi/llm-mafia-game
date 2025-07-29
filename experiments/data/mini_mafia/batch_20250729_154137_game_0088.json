@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0088",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 88,
+  "timestamp": "2025-07-29T16:15:56.681895",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden demise. Let's work together to find out who among us is the assassin. We need to ensure everyone's safety.",
+        "Charlie: I agree with Bob, let's work together to find the assassin. My condolences to Diana's family.",
+        "You said: I'm saddened by Diana's passing. Let's focus on identifying the assassin to ensure everyone's safety.",
+        "Bob: I'm deeply troubled by Diana's death. Let's stay vigilant and united to unmask the assassin. We owe it to her memory. #Teamwork #SafetyFirst",
+        "You said: I'd like to propose we share any unusual observations or suspicions we may have during the discussion phase. Let's work together to find the assassin and ensure everyone's safety.",
+        "Charlie: I'm concerned about Diana's death and support the efforts to find the assassin. Let's all be cautious and attentive during the discussion and voting phases. #SafetyFirst #JusticeForDiana"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the assassin.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden demise. Let's work together to find out who among us is the assassin. We need to ensure everyone's safety.",
+        "Charlie: I agree with Bob, let's work together to find the assassin. My condolences to Diana's family.",
+        "Alice: I'm saddened by Diana's passing. Let's focus on identifying the assassin to ensure everyone's safety.",
+        "You said: I'm deeply troubled by Diana's death. Let's stay vigilant and united to unmask the assassin. We owe it to her memory. #Teamwork #SafetyFirst",
+        "Alice: I'd like to propose we share any unusual observations or suspicions we may have during the discussion phase. Let's work together to find the assassin and ensure everyone's safety.",
+        "Charlie: I'm concerned about Diana's death and support the efforts to find the assassin. Let's all be cautious and attentive during the discussion and voting phases. #SafetyFirst #JusticeForDiana",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden demise. Let's work together to find out who among us is the assassin. We need to ensure everyone's safety.",
+        "You said: I agree with Bob, let's work together to find the assassin. My condolences to Diana's family.",
+        "Alice: I'm saddened by Diana's passing. Let's focus on identifying the assassin to ensure everyone's safety.",
+        "Bob: I'm deeply troubled by Diana's death. Let's stay vigilant and united to unmask the assassin. We owe it to her memory. #Teamwork #SafetyFirst",
+        "Alice: I'd like to propose we share any unusual observations or suspicions we may have during the discussion phase. Let's work together to find the assassin and ensure everyone's safety.",
+        "You said: I'm concerned about Diana's death and support the efforts to find the assassin. Let's all be cautious and attentive during the discussion and voting phases. #SafetyFirst #JusticeForDiana",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

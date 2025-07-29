@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0137",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 137,
+  "timestamp": "2025-07-29T16:35:25.992585",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the assassin.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's try to uncover the truth together to ensure everyone's safety.",
+        "Bob: I agree with Charlie, let's work together to find out what happened to Diana. My thoughts are with her family during this difficult time.",
+        "You said: I believe we should focus on identifying the cause of Diana's death. Let's share any relevant information we may have. The more details we share, the better chance we have of uncovering the truth....",
+        "Charlie: I believe we should continue our discussion about the clues we have and try to eliminate potential suspects. Let's stay vigilant and work together to uncover the truth.",
+        "Bob: I'd like to add that we should all be cautious during the investigation, as the killer could still be among us. Let's work together to ensure everyone's safety.",
+        "You said: Let's remain focused on the investigation. I suggest we discuss potential suspects based on the information we have. Let's eliminate possibilities together.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's try to uncover the truth together to ensure everyone's safety.",
+        "You said: I agree with Charlie, let's work together to find out what happened to Diana. My thoughts are with her family during this difficult time.",
+        "Alice: I believe we should focus on identifying the cause of Diana's death. Let's share any relevant information we may have. The more details we share, the better chance we have of uncovering the truth....",
+        "Charlie: I believe we should continue our discussion about the clues we have and try to eliminate potential suspects. Let's stay vigilant and work together to uncover the truth.",
+        "You said: I'd like to add that we should all be cautious during the investigation, as the killer could still be among us. Let's work together to ensure everyone's safety.",
+        "Alice: Let's remain focused on the investigation. I suggest we discuss potential suspects based on the information we have. Let's eliminate possibilities together."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's try to uncover the truth together to ensure everyone's safety.",
+        "Bob: I agree with Charlie, let's work together to find out what happened to Diana. My thoughts are with her family during this difficult time.",
+        "Alice: I believe we should focus on identifying the cause of Diana's death. Let's share any relevant information we may have. The more details we share, the better chance we have of uncovering the truth....",
+        "You said: I believe we should continue our discussion about the clues we have and try to eliminate potential suspects. Let's stay vigilant and work together to uncover the truth.",
+        "Bob: I'd like to add that we should all be cautious during the investigation, as the killer could still be among us. Let's work together to ensure everyone's safety.",
+        "Alice: Let's remain focused on the investigation. I suggest we discuss potential suspects based on the information we have. Let's eliminate possibilities together.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0025",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 25,
+  "timestamp": "2025-07-29T15:51:06.893699",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's untimely death. Let's all take a moment to remember her. Meanwhile, we must stay vigilant and find out who among us could have done this. Charlie, do you have any...",
+        "Charlie: I'm shocked by Diana's passing. Let's work together to find the truth and bring justice.",
+        "You said: I agree with Bob, let's stay focused on finding out who is responsible for Diana's death. We should all share any suspicious observations or interactions we had with Diana or anyone else during the...",
+        "You said: I remember Diana mentioning she saw something strange in the forest the night before her death. We should look into that further.",
+        "Charlie: I share Alice's concern about Diana's forest encounter. Let's explore this lead together.",
+        "Bob: Let's not jump to conclusions based on Diana's forest encounter. We should consider all possibilities and gather more information before making accusations.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the assassin.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's untimely death. Let's all take a moment to remember her. Meanwhile, we must stay vigilant and find out who among us could have done this. Charlie, do you have any...",
+        "Charlie: I'm shocked by Diana's passing. Let's work together to find the truth and bring justice.",
+        "Alice: I agree with Bob, let's stay focused on finding out who is responsible for Diana's death. We should all share any suspicious observations or interactions we had with Diana or anyone else during the...",
+        "Alice: I remember Diana mentioning she saw something strange in the forest the night before her death. We should look into that further.",
+        "Charlie: I share Alice's concern about Diana's forest encounter. Let's explore this lead together.",
+        "You said: Let's not jump to conclusions based on Diana's forest encounter. We should consider all possibilities and gather more information before making accusations.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's untimely death. Let's all take a moment to remember her. Meanwhile, we must stay vigilant and find out who among us could have done this. Charlie, do you have any...",
+        "You said: I'm shocked by Diana's passing. Let's work together to find the truth and bring justice.",
+        "Alice: I agree with Bob, let's stay focused on finding out who is responsible for Diana's death. We should all share any suspicious observations or interactions we had with Diana or anyone else during the...",
+        "Alice: I remember Diana mentioning she saw something strange in the forest the night before her death. We should look into that further.",
+        "You said: I share Alice's concern about Diana's forest encounter. Let's explore this lead together.",
+        "Bob: Let's not jump to conclusions based on Diana's forest encounter. We should consider all possibilities and gather more information before making accusations."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

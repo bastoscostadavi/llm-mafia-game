@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0174",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 174,
+  "timestamp": "2025-07-29T16:48:31.800421",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's try to figure out what happened together. We should all cooperate to uncover the truth.",
+        "Diana: I agree with Bob. We should work together to uncover the truth behind Alice's death. Let's share any suspicious information we may have. I don't have any clues yet, but I'll keep you all updated if...",
+        "Charlie: I'm saddened by Alice's passing. Let's all stay focused on finding the truth. I have no information to share at the moment.",
+        "Charlie: I'm deeply saddened by Alice's death. Let's stay focused on finding the truth together. No new information to share at the moment.",
+        "Diana: I'm confident that we can uncover the truth about Alice's death together. Let's remain vigilant and share any new information as soon as we have it.",
+        "You said: I have no new information to share, but I'm committed to helping us find the truth about Alice's death. Let's continue to work together.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's try to figure out what happened together. We should all cooperate to uncover the truth.",
+        "Diana: I agree with Bob. We should work together to uncover the truth behind Alice's death. Let's share any suspicious information we may have. I don't have any clues yet, but I'll keep you all updated if...",
+        "You said: I'm saddened by Alice's passing. Let's all stay focused on finding the truth. I have no information to share at the moment.",
+        "You said: I'm deeply saddened by Alice's death. Let's stay focused on finding the truth together. No new information to share at the moment.",
+        "Diana: I'm confident that we can uncover the truth about Alice's death together. Let's remain vigilant and share any new information as soon as we have it.",
+        "Bob: I have no new information to share, but I'm committed to helping us find the truth about Alice's death. Let's continue to work together."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the assassin.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's try to figure out what happened together. We should all cooperate to uncover the truth.",
+        "You said: I agree with Bob. We should work together to uncover the truth behind Alice's death. Let's share any suspicious information we may have. I don't have any clues yet, but I'll keep you all updated if...",
+        "Charlie: I'm saddened by Alice's passing. Let's all stay focused on finding the truth. I have no information to share at the moment.",
+        "Charlie: I'm deeply saddened by Alice's death. Let's stay focused on finding the truth together. No new information to share at the moment.",
+        "You said: I'm confident that we can uncover the truth about Alice's death together. Let's remain vigilant and share any new information as soon as we have it.",
+        "Bob: I have no new information to share, but I'm committed to helping us find the truth about Alice's death. Let's continue to work together.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

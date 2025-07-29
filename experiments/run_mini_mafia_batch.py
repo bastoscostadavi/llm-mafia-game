@@ -66,7 +66,7 @@ def save_game_data(game, game_num, batch_id):
     }
     
     # Save to file
-    data_dir = Path(__file__).parent / "data"
+    data_dir = Path(__file__).parent / "data" / "mini_mafia"
     data_dir.mkdir(parents=True, exist_ok=True)
     
     filename = f"{batch_id}_game_{game_num:04d}.json"
@@ -170,7 +170,7 @@ def run_batch(n_games, debug_prompts=False):
     }
     
     # Save summary file
-    data_dir = Path(__file__).parent / "data"
+    data_dir = Path(__file__).parent / "data" / "mini_mafia"
     summary_file = data_dir / f"{batch_id}_summary.json"
     
     with open(summary_file, 'w') as f:
@@ -183,7 +183,7 @@ def run_batch(n_games, debug_prompts=False):
     print(f"Good wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
     print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
     print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
-    print(f"\nResults saved to: experiments/data/")
+    print(f"\nResults saved to: experiments/data/mini_mafia/")
     print(f"Use: python game_viewer.py to analyze results")
     
     return batch_id, summary

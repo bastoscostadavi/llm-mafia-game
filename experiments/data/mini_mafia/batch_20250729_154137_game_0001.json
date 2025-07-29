@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0001",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 1,
+  "timestamp": "2025-07-29T15:42:15.475611",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all stay vigilant and support each other during this difficult time. I have faith in our ability to uncover the truth together. #unitedwecanwin",
+        "Charlie: I agree with Diana. Let's work together to find the truth and bring justice for Bob. #justiceforbob",
+        "You said: I'm saddened by Bob's death. Let's all share any information we have to help find the truth. #togetherwecanfindanswers",
+        "You said: I remember Bob mentioning he received some strange messages before his death. Let's discuss this further to see if it holds any clues. #strangemessages #cluesforbob.",
+        "Charlie: I also remember Bob mentioning strange messages. Let's examine these messages closely to uncover any hidden information. #cluesforbob #togetherwecanfindanswers",
+        "Diana: Let's not jump to conclusions. We should carefully examine the strange messages and consider all possibilities before making any accusations. #cautioniskey #cluesforbob.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all stay vigilant and support each other during this difficult time. I have faith in our ability to uncover the truth together. #unitedwecanwin",
+        "You said: I agree with Diana. Let's work together to find the truth and bring justice for Bob. #justiceforbob",
+        "Alice: I'm saddened by Bob's death. Let's all share any information we have to help find the truth. #togetherwecanfindanswers",
+        "Alice: I remember Bob mentioning he received some strange messages before his death. Let's discuss this further to see if it holds any clues. #strangemessages #cluesforbob.",
+        "You said: I also remember Bob mentioning strange messages. Let's examine these messages closely to uncover any hidden information. #cluesforbob #togetherwecanfindanswers",
+        "Diana: Let's not jump to conclusions. We should carefully examine the strange messages and consider all possibilities before making any accusations. #cautioniskey #cluesforbob."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the assassin.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's all stay vigilant and support each other during this difficult time. I have faith in our ability to uncover the truth together. #unitedwecanwin",
+        "Charlie: I agree with Diana. Let's work together to find the truth and bring justice for Bob. #justiceforbob",
+        "Alice: I'm saddened by Bob's death. Let's all share any information we have to help find the truth. #togetherwecanfindanswers",
+        "Alice: I remember Bob mentioning he received some strange messages before his death. Let's discuss this further to see if it holds any clues. #strangemessages #cluesforbob.",
+        "Charlie: I also remember Bob mentioning strange messages. Let's examine these messages closely to uncover any hidden information. #cluesforbob #togetherwecanfindanswers",
+        "You said: Let's not jump to conclusions. We should carefully examine the strange messages and consider all possibilities before making any accusations. #cautioniskey #cluesforbob.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

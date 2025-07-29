@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0057",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 57,
+  "timestamp": "2025-07-29T16:03:58.291105",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm suspicious of Charlie's behavior last night. Let's keep a close eye on him tonight.",
+        "Charlie: I find it strange that Diana seemed so certain about her suspicions last night. Let's focus on ensuring everyone's safety tonight.",
+        "You said: I agree with Diana, let's keep a watchful eye on Charlie tonight for everyone's safety.",
+        "Diana: Let's stay vigilant and keep a close eye on Charlie's actions tonight for everyone's safety.",
+        "Charlie: Let's not jump to conclusions and focus on ensuring everyone's safety tonight. We still have a few good players left in the game.",
+        "You said: Let's not let fear and suspicion divide us. Let's focus on ensuring everyone's safety tonight, as we still have a few good players left in the game.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm suspicious of Charlie's behavior last night. Let's keep a close eye on him tonight.",
+        "You said: I find it strange that Diana seemed so certain about her suspicions last night. Let's focus on ensuring everyone's safety tonight.",
+        "Alice: I agree with Diana, let's keep a watchful eye on Charlie tonight for everyone's safety.",
+        "Diana: Let's stay vigilant and keep a close eye on Charlie's actions tonight for everyone's safety.",
+        "You said: Let's not jump to conclusions and focus on ensuring everyone's safety tonight. We still have a few good players left in the game.",
+        "Alice: Let's not let fear and suspicion divide us. Let's focus on ensuring everyone's safety tonight, as we still have a few good players left in the game."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the assassin.",
+        "Bob was found dead this morning.",
+        "You said: I'm suspicious of Charlie's behavior last night. Let's keep a close eye on him tonight.",
+        "Charlie: I find it strange that Diana seemed so certain about her suspicions last night. Let's focus on ensuring everyone's safety tonight.",
+        "Alice: I agree with Diana, let's keep a watchful eye on Charlie tonight for everyone's safety.",
+        "You said: Let's stay vigilant and keep a close eye on Charlie's actions tonight for everyone's safety.",
+        "Charlie: Let's not jump to conclusions and focus on ensuring everyone's safety tonight. We still have a few good players left in the game.",
+        "Alice: Let's not let fear and suspicion divide us. Let's focus on ensuring everyone's safety tonight, as we still have a few good players left in the game.",
+        "Day 1: Charlie was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

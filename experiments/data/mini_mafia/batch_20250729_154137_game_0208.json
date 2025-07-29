@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0208",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 208,
+  "timestamp": "2025-07-29T17:01:07.977632",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the assassin.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked about Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: Diana's reaction to Bob's death seems strange. Let's keep a close eye on her actions.",
+        "Charlie: I'm saddened by Bob's passing and support Diana during this tough time. Let's work together to find out what happened.",
+        "You said: Diana's unexpected grief over Bob's death warrants further investigation. Let's stay cautious.",
+        "Charlie: I share Alice's concerns about Diana's reaction to Bob's death. Let's remain vigilant and support each other in our investigation.",
+        "Diana: I'm deeply saddened by Bob's passing and urge us to come together during this trying time. Let's not jump to conclusions and support each other in our investigation."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked about Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: Diana's reaction to Bob's death seems strange. Let's keep a close eye on her actions.",
+        "You said: I'm saddened by Bob's passing and support Diana during this tough time. Let's work together to find out what happened.",
+        "Alice: Diana's unexpected grief over Bob's death warrants further investigation. Let's stay cautious.",
+        "You said: I share Alice's concerns about Diana's reaction to Bob's death. Let's remain vigilant and support each other in our investigation.",
+        "Diana: I'm deeply saddened by Bob's passing and urge us to come together during this trying time. Let's not jump to conclusions and support each other in our investigation.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: Diana's reaction to Bob's death seems strange. Let's keep a close eye on her actions.",
+        "Charlie: I'm saddened by Bob's passing and support Diana during this tough time. Let's work together to find out what happened.",
+        "Alice: Diana's unexpected grief over Bob's death warrants further investigation. Let's stay cautious.",
+        "Charlie: I share Alice's concerns about Diana's reaction to Bob's death. Let's remain vigilant and support each other in our investigation.",
+        "You said: I'm deeply saddened by Bob's passing and urge us to come together during this trying time. Let's not jump to conclusions and support each other in our investigation.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

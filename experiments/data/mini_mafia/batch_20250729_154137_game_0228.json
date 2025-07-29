@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0228",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 228,
+  "timestamp": "2025-07-29T17:08:26.815382",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to work together to uncover what happened.",
+        "You said: I agree with Diana, let's all support each other during this tough time. Let's work together to find out what happened to Alice.",
+        "Charlie: I agree with Diana, let's stay united and find out who is responsible for Alice's death. Bob, do you think there's anything suspicious about your alibi for last night?",
+        "Diana: Let's not jump to conclusions. We need to gather more information before accusing anyone. Let's continue supporting each other and work together to find the truth.",
+        "Charlie: I suggest we keep an open dialogue to uncover the truth about Alice's death. Let's be vigilant and share any suspicions we may have. Bob, can you provide an detailed alibi for last night?",
+        "You said: I support Diana's suggestion to stay united and find the truth. I have nothing to hide about my alibi last night. Let's continue the open dialogue and share any suspicions."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to work together to uncover what happened.",
+        "Bob: I agree with Diana, let's all support each other during this tough time. Let's work together to find out what happened to Alice.",
+        "You said: I agree with Diana, let's stay united and find out who is responsible for Alice's death. Bob, do you think there's anything suspicious about your alibi for last night?",
+        "Diana: Let's not jump to conclusions. We need to gather more information before accusing anyone. Let's continue supporting each other and work together to find the truth.",
+        "You said: I suggest we keep an open dialogue to uncover the truth about Alice's death. Let's be vigilant and share any suspicions we may have. Bob, can you provide an detailed alibi for last night?",
+        "Bob: I support Diana's suggestion to stay united and find the truth. I have nothing to hide about my alibi last night. Let's continue the open dialogue and share any suspicions.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to work together to uncover what happened.",
+        "Bob: I agree with Diana, let's all support each other during this tough time. Let's work together to find out what happened to Alice.",
+        "Charlie: I agree with Diana, let's stay united and find out who is responsible for Alice's death. Bob, do you think there's anything suspicious about your alibi for last night?",
+        "You said: Let's not jump to conclusions. We need to gather more information before accusing anyone. Let's continue supporting each other and work together to find the truth.",
+        "Charlie: I suggest we keep an open dialogue to uncover the truth about Alice's death. Let's be vigilant and share any suspicions we may have. Bob, can you provide an detailed alibi for last night?",
+        "Bob: I support Diana's suggestion to stay united and find the truth. I have nothing to hide about my alibi last night. Let's continue the open dialogue and share any suspicions.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

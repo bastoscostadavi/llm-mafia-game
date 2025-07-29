@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0003",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 3,
+  "timestamp": "2025-07-29T15:42:58.271978",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the assassin.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all stay vigilant and try to uncover the truth together.",
+        "You said: I'm saddened by Bob's death. Let's focus on finding out who among us is the assassin to ensure everyone's safety.",
+        "Charlie: I agree with Alice and Diana. Let's work together to find the assassin and bring them to justice.",
+        "You said: Let's not jump to conclusions. We need to remain calm and gather more information before making any accusations. Charlie, please share any relevant information you might have about Bob's death.",
+        "Diana: I agree with Alice and Charlie. Let's all share any information we have to help us find the assassin and ensure everyone's safety.",
+        "Charlie: I'm deeply saddened by Bob's passing. Let's all work together to find the assassin and bring them to justice. Our unity is our strength in this trying time."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all stay vigilant and try to uncover the truth together.",
+        "Alice: I'm saddened by Bob's death. Let's focus on finding out who among us is the assassin to ensure everyone's safety.",
+        "You said: I agree with Alice and Diana. Let's work together to find the assassin and bring them to justice.",
+        "Alice: Let's not jump to conclusions. We need to remain calm and gather more information before making any accusations. Charlie, please share any relevant information you might have about Bob's death.",
+        "Diana: I agree with Alice and Charlie. Let's all share any information we have to help us find the assassin and ensure everyone's safety.",
+        "You said: I'm deeply saddened by Bob's passing. Let's all work together to find the assassin and bring them to justice. Our unity is our strength in this trying time.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's all stay vigilant and try to uncover the truth together.",
+        "Alice: I'm saddened by Bob's death. Let's focus on finding out who among us is the assassin to ensure everyone's safety.",
+        "Charlie: I agree with Alice and Diana. Let's work together to find the assassin and bring them to justice.",
+        "Alice: Let's not jump to conclusions. We need to remain calm and gather more information before making any accusations. Charlie, please share any relevant information you might have about Bob's death.",
+        "You said: I agree with Alice and Charlie. Let's all share any information we have to help us find the assassin and ensure everyone's safety.",
+        "Charlie: I'm deeply saddened by Bob's passing. Let's all work together to find the assassin and bring them to justice. Our unity is our strength in this trying time.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

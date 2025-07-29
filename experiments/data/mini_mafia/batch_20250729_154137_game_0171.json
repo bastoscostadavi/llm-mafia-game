@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0171",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 171,
+  "timestamp": "2025-07-29T16:47:28.704516",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other during this round.",
+        "You said: I agree with Diana, let's stay vigilant. Alice's absence is suspicious.",
+        "Charlie: I agree with Diana and Bob, let's be cautious and keep a close eye on each other during this round. Alice's absence is troubling.",
+        "You said: I'd like to express my condolences for Alice. Her sudden absence leaves us all concerned. Let's work together to ensure everyone's safety during this round.",
+        "Diana: I'd like to remind everyone to stay vigilant and cautious following Alice's sudden absence. Let's work together to ensure everyone's safety during this round.",
+        "Charlie: I'd like to echo Bob and Diana's sentiments. Let's remain vigilant and support each other during this round following Alice's unexpected departure."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other during this round.",
+        "Bob: I agree with Diana, let's stay vigilant. Alice's absence is suspicious.",
+        "You said: I agree with Diana and Bob, let's be cautious and keep a close eye on each other during this round. Alice's absence is troubling.",
+        "Bob: I'd like to express my condolences for Alice. Her sudden absence leaves us all concerned. Let's work together to ensure everyone's safety during this round.",
+        "Diana: I'd like to remind everyone to stay vigilant and cautious following Alice's sudden absence. Let's work together to ensure everyone's safety during this round.",
+        "You said: I'd like to echo Bob and Diana's sentiments. Let's remain vigilant and support each other during this round following Alice's unexpected departure.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other during this round.",
+        "Bob: I agree with Diana, let's stay vigilant. Alice's absence is suspicious.",
+        "Charlie: I agree with Diana and Bob, let's be cautious and keep a close eye on each other during this round. Alice's absence is troubling.",
+        "Bob: I'd like to express my condolences for Alice. Her sudden absence leaves us all concerned. Let's work together to ensure everyone's safety during this round.",
+        "You said: I'd like to remind everyone to stay vigilant and cautious following Alice's sudden absence. Let's work together to ensure everyone's safety during this round.",
+        "Charlie: I'd like to echo Bob and Diana's sentiments. Let's remain vigilant and support each other during this round following Alice's unexpected departure.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -8,7 +8,10 @@ This folder contains experimental scripts and tools for studying LLM behavior in
 experiments/
 ├── run_mini_mafia_batch.py    # Batch experiment runner
 ├── game_viewer.py             # Game viewer for batch results
-├── data/                      # All saved results (games + summaries)
+├── data/
+│   └── mini_mafia/            # Mini-mafia experiment results
+│       ├── batch_YYYYMMDD_HHMMSS_game_NNNN.json
+│       └── batch_YYYYMMDD_HHMMSS_summary.json
 └── README.md                  # This file
 ```
 
@@ -69,4 +72,4 @@ Each batch creates:
 - **Game files**: `batch_YYYYMMDD_HHMMSS_game_NNNN.json` - Complete game logs with player memories
 - **Summary files**: `batch_YYYYMMDD_HHMMSS_summary.json` - Batch statistics and win rates
 
-All files are saved in the `data/` directory for easy analysis.
+All files are saved in the `data/mini_mafia/` directory for easy analysis.

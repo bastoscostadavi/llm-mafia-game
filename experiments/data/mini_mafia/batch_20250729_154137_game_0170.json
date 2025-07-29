@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0170",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 170,
+  "timestamp": "2025-07-29T16:47:07.178263",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the assassin.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Alice, let's all stay vigilant. Charlie's disappearance is strange and we should keep an eye on each other to ensure everyone's safety.",
+        "Diana: I agree with Bob and Alice, let's stay vigilant to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions. We should trust each other unless we have solid evidence. Keeping a calm head will help us uncover the truth.",
+        "You said: I'm still worried about Charlie's sudden disappearance. Let's continue to stay vigilant and keep an open communication with each other.",
+        "Diana: Let's all remain calm and focused. We've lost a valuable member of our group, let's work together to uncover what happened to Charlie."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's all stay vigilant. Charlie's disappearance is strange and we should keep an eye on each other to ensure everyone's safety.",
+        "Diana: I agree with Bob and Alice, let's stay vigilant to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions. We should trust each other unless we have solid evidence. Keeping a calm head will help us uncover the truth.",
+        "Alice: I'm still worried about Charlie's sudden disappearance. Let's continue to stay vigilant and keep an open communication with each other.",
+        "Diana: Let's all remain calm and focused. We've lost a valuable member of our group, let's work together to uncover what happened to Charlie.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Alice, let's all stay vigilant. Charlie's disappearance is strange and we should keep an eye on each other to ensure everyone's safety.",
+        "You said: I agree with Bob and Alice, let's stay vigilant to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions. We should trust each other unless we have solid evidence. Keeping a calm head will help us uncover the truth.",
+        "Alice: I'm still worried about Charlie's sudden disappearance. Let's continue to stay vigilant and keep an open communication with each other.",
+        "You said: Let's all remain calm and focused. We've lost a valuable member of our group, let's work together to uncover what happened to Charlie.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

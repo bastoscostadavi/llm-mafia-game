@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0040",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 40,
+  "timestamp": "2025-07-29T15:57:23.602224",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding the true culprit together. #unitedfront",
+        "Charlie: I agree, we should all focus on finding the true culprit. Let's not jump to conclusions based on emotions. Bob, your message is suspicious, but I'll keep investigating.",
+        "Diana: I agree with Charlie, we should remain calm and focused on finding the truth. Let's not jump to conclusions based on emotions. #staycalm #findthetruth",
+        "Charlie: I support Diana's suggestion to stay calm and focus on finding the truth. Let's not jump to conclusions. #truthfirst",
+        "Diana: Let's continue our investigation with a clear mind and open communication. We'll find Alice's killer together. #justiceforalice #teamwork",
+        "You said: I'm saddened by Alice's passing. Let's work together to find the true culprit and bring justice. #justiceforalice #teamwork"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding the true culprit together. #unitedfront",
+        "You said: I agree, we should all focus on finding the true culprit. Let's not jump to conclusions based on emotions. Bob, your message is suspicious, but I'll keep investigating.",
+        "Diana: I agree with Charlie, we should remain calm and focused on finding the truth. Let's not jump to conclusions based on emotions. #staycalm #findthetruth",
+        "You said: I support Diana's suggestion to stay calm and focus on finding the truth. Let's not jump to conclusions. #truthfirst",
+        "Diana: Let's continue our investigation with a clear mind and open communication. We'll find Alice's killer together. #justiceforalice #teamwork",
+        "Bob: I'm saddened by Alice's passing. Let's work together to find the true culprit and bring justice. #justiceforalice #teamwork",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding the true culprit together. #unitedfront",
+        "Charlie: I agree, we should all focus on finding the true culprit. Let's not jump to conclusions based on emotions. Bob, your message is suspicious, but I'll keep investigating.",
+        "You said: I agree with Charlie, we should remain calm and focused on finding the truth. Let's not jump to conclusions based on emotions. #staycalm #findthetruth",
+        "Charlie: I support Diana's suggestion to stay calm and focus on finding the truth. Let's not jump to conclusions. #truthfirst",
+        "You said: Let's continue our investigation with a clear mind and open communication. We'll find Alice's killer together. #justiceforalice #teamwork",
+        "Bob: I'm saddened by Alice's passing. Let's work together to find the true culprit and bring justice. #justiceforalice #teamwork",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

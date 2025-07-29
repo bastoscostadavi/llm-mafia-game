@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0212",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 212,
+  "timestamp": "2025-07-29T17:02:36.010562",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the assassin.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, this is a tragic loss. Let's all try to support each other during this time. However, I can't help but feel uneasy about Bob's investigation last night.",
+        "Bob: I agree with Charlie, let's support each other during this difficult time. However, I'm concerned about Alice's comment regarding my investigation. Let's keep an open dialogue to ensure trust and...",
+        "You said: I'd like to echo Charlie's words about supporting each other during this tough time. Let's remain vigilant and open in our communication.",
+        "Bob: I'd like to express my condolences for Diana's loss and echo the importance of open communication and trust among us. Let's work together to ensure everyone's safety.",
+        "Charlie: I'd like to reiterate the importance of staying united and supportive during this tough time. Let's maintain open communication and trust."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the assassin.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, this is a tragic loss. Let's all try to support each other during this time. However, I can't help but feel uneasy about Bob's investigation last night.",
+        "You said: I agree with Charlie, let's support each other during this difficult time. However, I'm concerned about Alice's comment regarding my investigation. Let's keep an open dialogue to ensure trust and...",
+        "Alice: I'd like to echo Charlie's words about supporting each other during this tough time. Let's remain vigilant and open in our communication.",
+        "You said: I'd like to express my condolences for Diana's loss and echo the importance of open communication and trust among us. Let's work together to ensure everyone's safety.",
+        "Charlie: I'd like to reiterate the importance of staying united and supportive during this tough time. Let's maintain open communication and trust.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, this is a tragic loss. Let's all try to support each other during this time. However, I can't help but feel uneasy about Bob's investigation last night.",
+        "Bob: I agree with Charlie, let's support each other during this difficult time. However, I'm concerned about Alice's comment regarding my investigation. Let's keep an open dialogue to ensure trust and...",
+        "Alice: I'd like to echo Charlie's words about supporting each other during this tough time. Let's remain vigilant and open in our communication.",
+        "Bob: I'd like to express my condolences for Diana's loss and echo the importance of open communication and trust among us. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to reiterate the importance of staying united and supportive during this tough time. Let's maintain open communication and trust.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

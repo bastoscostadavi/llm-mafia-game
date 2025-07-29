@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0044",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 44,
+  "timestamp": "2025-07-29T15:58:58.818009",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's sudden demise. Let's all try to support each other during this difficult time. However, I have reason to believe that something suspicious happened last night. We must...",
+        "You said: I agree with Diana, let's all support each other during this sad time. However, I also think it's important to stay vigilant and keep an open dialogue to ensure everyone's safety.",
+        "Charlie: I agree with Diana and Bob, let's support each other and stay vigilant. I have no information to share at this moment.",
+        "You said: I'd like to echo Diana and Charlie's sentiments, and encourage open communication to ensure everyone's safety. Let's all remain vigilant during this difficult time.",
+        "Charlie: I support Alice and believe in open communication for everyone's safety. No new information to share.",
+        "Diana: I'd like to propose we focus on supporting each other during this sad time, but also maintain open communication to ensure everyone's safety. Let's remain vigilant together."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's sudden demise. Let's all try to support each other during this difficult time. However, I have reason to believe that something suspicious happened last night. We must...",
+        "Bob: I agree with Diana, let's all support each other during this sad time. However, I also think it's important to stay vigilant and keep an open dialogue to ensure everyone's safety.",
+        "You said: I agree with Diana and Bob, let's support each other and stay vigilant. I have no information to share at this moment.",
+        "Bob: I'd like to echo Diana and Charlie's sentiments, and encourage open communication to ensure everyone's safety. Let's all remain vigilant during this difficult time.",
+        "You said: I support Alice and believe in open communication for everyone's safety. No new information to share.",
+        "Diana: I'd like to propose we focus on supporting each other during this sad time, but also maintain open communication to ensure everyone's safety. Let's remain vigilant together.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's all try to support each other during this difficult time. However, I have reason to believe that something suspicious happened last night. We must...",
+        "Bob: I agree with Diana, let's all support each other during this sad time. However, I also think it's important to stay vigilant and keep an open dialogue to ensure everyone's safety.",
+        "Charlie: I agree with Diana and Bob, let's support each other and stay vigilant. I have no information to share at this moment.",
+        "Bob: I'd like to echo Diana and Charlie's sentiments, and encourage open communication to ensure everyone's safety. Let's all remain vigilant during this difficult time.",
+        "Charlie: I support Alice and believe in open communication for everyone's safety. No new information to share.",
+        "You said: I'd like to propose we focus on supporting each other during this sad time, but also maintain open communication to ensure everyone's safety. Let's remain vigilant together.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0205",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 205,
+  "timestamp": "2025-07-29T17:00:03.042656",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's all take a moment to remember her fondly. Meanwhile, let's stay vigilant to ensure the killer doesn't strike again. #restinpeaceAlice",
+        "Charlie: I agree with Bob, let's remember Alice and stay vigilant. But I'd also like to suggest we focus on identifying the killer to ensure their actions don't continue. #JusticeForAlice",
+        "Diana: I agree with Charlie, let's focus on finding the killer to ensure safety for all. #JusticeForAlice\n\n(Note: This message is intended to convey sympathy for Alice's death and support for finding the...",
+        "You said: Let's not jump to conclusions. We must remain calm and focused on finding the killer together. #UnityIsKey\n\n[End of turn]",
+        "Diana: Let's not forget the importance of staying focused on identifying the killer. #JusticeForAlice",
+        "Charlie: Let's not lose focus on identifying the killer. We owe it to Alice's memory to bring justice. #JusticeForAlice\n\n[End of turn]"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's sudden demise. Let's all take a moment to remember her fondly. Meanwhile, let's stay vigilant to ensure the killer doesn't strike again. #restinpeaceAlice",
+        "You said: I agree with Bob, let's remember Alice and stay vigilant. But I'd also like to suggest we focus on identifying the killer to ensure their actions don't continue. #JusticeForAlice",
+        "Diana: I agree with Charlie, let's focus on finding the killer to ensure safety for all. #JusticeForAlice\n\n(Note: This message is intended to convey sympathy for Alice's death and support for finding the...",
+        "Bob: Let's not jump to conclusions. We must remain calm and focused on finding the killer together. #UnityIsKey\n\n[End of turn]",
+        "Diana: Let's not forget the importance of staying focused on identifying the killer. #JusticeForAlice",
+        "You said: Let's not lose focus on identifying the killer. We owe it to Alice's memory to bring justice. #JusticeForAlice\n\n[End of turn]",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's sudden demise. Let's all take a moment to remember her fondly. Meanwhile, let's stay vigilant to ensure the killer doesn't strike again. #restinpeaceAlice",
+        "Charlie: I agree with Bob, let's remember Alice and stay vigilant. But I'd also like to suggest we focus on identifying the killer to ensure their actions don't continue. #JusticeForAlice",
+        "You said: I agree with Charlie, let's focus on finding the killer to ensure safety for all. #JusticeForAlice\n\n(Note: This message is intended to convey sympathy for Alice's death and support for finding the...",
+        "Bob: Let's not jump to conclusions. We must remain calm and focused on finding the killer together. #UnityIsKey\n\n[End of turn]",
+        "You said: Let's not forget the importance of staying focused on identifying the killer. #JusticeForAlice",
+        "Charlie: Let's not lose focus on identifying the killer. We owe it to Alice's memory to bring justice. #JusticeForAlice\n\n[End of turn]",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

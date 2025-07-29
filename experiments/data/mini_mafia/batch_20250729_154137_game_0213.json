@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0213",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 213,
+  "timestamp": "2025-07-29T17:03:00.243673",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's untimely demise. Let's unite to find out who among us is the killer and bring them to justice. #JusticeForAlice",
+        "You said: I'm shocked by Alice's death. Let's stay vigilant and work together to find out who did this heinous act. #JusticeForAlice",
+        "Diana: I'm saddened by Alice's death. Let's focus on finding the real killer and bring them to justice. #JusticeForAlice",
+        "You said: I agree with Charlie and Diana. Let's work together to find the true assassin and bring them to justice. #JusticeForAlice. #UnitedWeStand.",
+        "Diana: I echo Bob and Charlie's sentiments. Let's stay focused and work together to uncover the truth behind Alice's death. #JusticeForAlice #UnitedWeStand",
+        "Charlie: Let's not jump to conclusions. We must remain calm and focused to ensure we identify the true assassin. #JusticeForAlice #StayCalm #UnitedWeStand"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the assassin.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's unite to find out who among us is the killer and bring them to justice. #JusticeForAlice",
+        "Bob: I'm shocked by Alice's death. Let's stay vigilant and work together to find out who did this heinous act. #JusticeForAlice",
+        "Diana: I'm saddened by Alice's death. Let's focus on finding the real killer and bring them to justice. #JusticeForAlice",
+        "Bob: I agree with Charlie and Diana. Let's work together to find the true assassin and bring them to justice. #JusticeForAlice. #UnitedWeStand.",
+        "Diana: I echo Bob and Charlie's sentiments. Let's stay focused and work together to uncover the truth behind Alice's death. #JusticeForAlice #UnitedWeStand",
+        "You said: Let's not jump to conclusions. We must remain calm and focused to ensure we identify the true assassin. #JusticeForAlice #StayCalm #UnitedWeStand",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's untimely demise. Let's unite to find out who among us is the killer and bring them to justice. #JusticeForAlice",
+        "Bob: I'm shocked by Alice's death. Let's stay vigilant and work together to find out who did this heinous act. #JusticeForAlice",
+        "You said: I'm saddened by Alice's death. Let's focus on finding the real killer and bring them to justice. #JusticeForAlice",
+        "Bob: I agree with Charlie and Diana. Let's work together to find the true assassin and bring them to justice. #JusticeForAlice. #UnitedWeStand.",
+        "You said: I echo Bob and Charlie's sentiments. Let's stay focused and work together to uncover the truth behind Alice's death. #JusticeForAlice #UnitedWeStand",
+        "Charlie: Let's not jump to conclusions. We must remain calm and focused to ensure we identify the true assassin. #JusticeForAlice #StayCalm #UnitedWeStand",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

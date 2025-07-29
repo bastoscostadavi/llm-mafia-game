@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0185",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 185,
+  "timestamp": "2025-07-29T16:52:32.409860",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the assassin.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden death. Let's work together to find out who did this.",
+        "You said: I'm saddened by Charlie's death. Let's stay calm and focus on finding the truth together.",
+        "Bob: I'm concerned about Charlie's sudden death. Let's all share any relevant information we have to help find the truth.",
+        "Diana: I agree with Alice and Bob. Let's collectively share any information that might help us determine who could have committed this heinous act.",
+        "You said: I'm saddened by Charlie's death and support our collective efforts to find the truth. Let's all share any information we have, no matter how small it may seem.",
+        "Bob: I have vital information regarding Charlie's death. Let's work together to uncover the truth."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the assassin.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden death. Let's work together to find out who did this.",
+        "Alice: I'm saddened by Charlie's death. Let's stay calm and focus on finding the truth together.",
+        "You said: I'm concerned about Charlie's sudden death. Let's all share any relevant information we have to help find the truth.",
+        "Diana: I agree with Alice and Bob. Let's collectively share any information that might help us determine who could have committed this heinous act.",
+        "Alice: I'm saddened by Charlie's death and support our collective efforts to find the truth. Let's all share any information we have, no matter how small it may seem.",
+        "You said: I have vital information regarding Charlie's death. Let's work together to uncover the truth.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's work together to find out who did this.",
+        "Alice: I'm saddened by Charlie's death. Let's stay calm and focus on finding the truth together.",
+        "Bob: I'm concerned about Charlie's sudden death. Let's all share any relevant information we have to help find the truth.",
+        "You said: I agree with Alice and Bob. Let's collectively share any information that might help us determine who could have committed this heinous act.",
+        "Alice: I'm saddened by Charlie's death and support our collective efforts to find the truth. Let's all share any information we have, no matter how small it may seem.",
+        "Bob: I have vital information regarding Charlie's death. Let's work together to uncover the truth.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

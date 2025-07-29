@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0217",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 217,
+  "timestamp": "2025-07-29T17:04:26.539876",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all stay alert and keep an eye out for any suspicious behavior.",
+        "Charlie: I share Diana and Bob's concerns for Alice's safety. Let's work together to ensure everyone's well-being during this game.",
+        "Charlie: I support Diana and Bob's call for vigilance and will do my best to keep an eye out for any unusual activity. Let's all work together to ensure everyone's safety.",
+        "Diana: Let's not let fear cloud our judgments. We need to trust each other and work together to uncover the truth behind Alice's disappearance. Let's focus on observing everyone's behavior carefully.",
+        "You said: Let's not jump to conclusions. We should trust each other and focus on observing everyone's behavior carefully, as Diana suggested."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all stay alert and keep an eye out for any suspicious behavior.",
+        "You said: I share Diana and Bob's concerns for Alice's safety. Let's work together to ensure everyone's well-being during this game.",
+        "You said: I support Diana and Bob's call for vigilance and will do my best to keep an eye out for any unusual activity. Let's all work together to ensure everyone's safety.",
+        "Diana: Let's not let fear cloud our judgments. We need to trust each other and work together to uncover the truth behind Alice's disappearance. Let's focus on observing everyone's behavior carefully.",
+        "Bob: Let's not jump to conclusions. We should trust each other and focus on observing everyone's behavior carefully, as Diana suggested.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the assassin.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all stay alert and keep an eye out for any suspicious behavior.",
+        "Charlie: I share Diana and Bob's concerns for Alice's safety. Let's work together to ensure everyone's well-being during this game.",
+        "Charlie: I support Diana and Bob's call for vigilance and will do my best to keep an eye out for any unusual activity. Let's all work together to ensure everyone's safety.",
+        "You said: Let's not let fear cloud our judgments. We need to trust each other and work together to uncover the truth behind Alice's disappearance. Let's focus on observing everyone's behavior carefully.",
+        "Bob: Let's not jump to conclusions. We should trust each other and focus on observing everyone's behavior carefully, as Diana suggested.",
+        "Day 1: Bob was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

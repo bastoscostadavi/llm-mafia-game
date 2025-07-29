@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0028",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 28,
+  "timestamp": "2025-07-29T15:52:19.688038",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the assassin.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "Diana: I agree with Charlie and Alice, let's all stay vigilant. But I'm particularly concerned about the moon tonight. It's full and might be a bit distracting. Let's not let our guard down.",
+        "Charlie: Let's not forget the importance of keeping an eye on each other, given Bob's sudden disappearance. Stay vigilant.",
+        "You said: Let's not forget the recent events and stay extra vigilant tonight. The moon's beauty should not distract us from our duty to ensure everyone's safety.",
+        "Diana: Let's not forget the importance of keeping a sharp eye out tonight, given recent events. The moon may be beautiful but we must prioritize everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "Diana: I agree with Charlie and Alice, let's all stay vigilant. But I'm particularly concerned about the moon tonight. It's full and might be a bit distracting. Let's not let our guard down.",
+        "You said: Let's not forget the importance of keeping an eye on each other, given Bob's sudden disappearance. Stay vigilant.",
+        "Alice: Let's not forget the recent events and stay extra vigilant tonight. The moon's beauty should not distract us from our duty to ensure everyone's safety.",
+        "Diana: Let's not forget the importance of keeping a sharp eye out tonight, given recent events. The moon may be beautiful but we must prioritize everyone's safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I agree with Charlie and Alice, let's all stay vigilant. But I'm particularly concerned about the moon tonight. It's full and might be a bit distracting. Let's not let our guard down.",
+        "Charlie: Let's not forget the importance of keeping an eye on each other, given Bob's sudden disappearance. Stay vigilant.",
+        "Alice: Let's not forget the recent events and stay extra vigilant tonight. The moon's beauty should not distract us from our duty to ensure everyone's safety.",
+        "You said: Let's not forget the importance of keeping a sharp eye out tonight, given recent events. The moon may be beautiful but we must prioritize everyone's safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

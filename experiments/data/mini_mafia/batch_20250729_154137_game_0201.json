@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0201",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 201,
+  "timestamp": "2025-07-29T16:58:31.079316",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the assassin.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We should also be vigilant and look out for any suspicious behavior.",
+        "Diana: I agree, let's all support each other during this difficult time. But let's also keep a close eye on any suspicious behavior. It's important we work together to ensure everyone's safety.",
+        "You said: I agree, let's support each other during this difficult time. But we must also stay vigilant and report any suspicious behavior. I noticed Diana's odd reaction to Alice's death. Let's discuss this...",
+        "Charlie: I'd like to echo everyone's sentiments about supporting each other and staying vigilant. Let's focus on identifying any potential threats to our group. Bob, your observation about Diana's reaction...",
+        "Diana: I'm deeply saddened by Alice's passing and want to ensure we all stay united during this challenging time. Let's focus on identifying any potential threats to our group. There's no room for...",
+        "You said: I'm concerned about Diana's reaction to Alice's death and think it's important we discuss this further. Let's maintain vigilance and work together.",
+        "Day 1: Diana was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We should also be vigilant and look out for any suspicious behavior.",
+        "Diana: I agree, let's all support each other during this difficult time. But let's also keep a close eye on any suspicious behavior. It's important we work together to ensure everyone's safety.",
+        "Bob: I agree, let's support each other during this difficult time. But we must also stay vigilant and report any suspicious behavior. I noticed Diana's odd reaction to Alice's death. Let's discuss this...",
+        "You said: I'd like to echo everyone's sentiments about supporting each other and staying vigilant. Let's focus on identifying any potential threats to our group. Bob, your observation about Diana's reaction...",
+        "Diana: I'm deeply saddened by Alice's passing and want to ensure we all stay united during this challenging time. Let's focus on identifying any potential threats to our group. There's no room for...",
+        "Bob: I'm concerned about Diana's reaction to Alice's death and think it's important we discuss this further. Let's maintain vigilance and work together.",
+        "Day 1: Diana was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We should also be vigilant and look out for any suspicious behavior.",
+        "You said: I agree, let's all support each other during this difficult time. But let's also keep a close eye on any suspicious behavior. It's important we work together to ensure everyone's safety.",
+        "Bob: I agree, let's support each other during this difficult time. But we must also stay vigilant and report any suspicious behavior. I noticed Diana's odd reaction to Alice's death. Let's discuss this...",
+        "Charlie: I'd like to echo everyone's sentiments about supporting each other and staying vigilant. Let's focus on identifying any potential threats to our group. Bob, your observation about Diana's reaction...",
+        "You said: I'm deeply saddened by Alice's passing and want to ensure we all stay united during this challenging time. Let's focus on identifying any potential threats to our group. There's no room for...",
+        "Bob: I'm concerned about Diana's reaction to Alice's death and think it's important we discuss this further. Let's maintain vigilance and work together."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

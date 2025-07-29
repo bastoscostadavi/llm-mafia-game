@@ -17,12 +17,12 @@ class BatchViewer:
     def __init__(self, data_dir: str = None):
         # Auto-detect data directory
         if data_dir is None:
-            if os.path.exists("data"):
-                self.data_dir = "data"
-            elif os.path.exists("../data"):
-                self.data_dir = "../data"
+            if os.path.exists("data/mini_mafia"):
+                self.data_dir = "data/mini_mafia"
+            elif os.path.exists("../data/mini_mafia"):
+                self.data_dir = "../data/mini_mafia"
             else:
-                self.data_dir = "data"  # fallback
+                self.data_dir = "data/mini_mafia"  # fallback
         else:
             self.data_dir = data_dir
         
@@ -31,8 +31,15 @@ class BatchViewer:
         if not os.path.exists(self.data_dir):
             return []
         
+        # First try to find batches via summary files
         files = [f for f in os.listdir(self.data_dir) if f.endswith('_summary.json')]
         batches = [f.replace('_summary.json', '') for f in files]
+        
+        # If no summary files, extract batch IDs from game files
+        if not batches:
+            game_files = [f for f in os.listdir(self.data_dir) if f.endswith('_game_0000.json')]
+            batches = [f.replace('_game_0000.json', '') for f in game_files]
+        
         return sorted(batches)
     
     def load_batch_summary(self, batch_id: str) -> Optional[Dict]:
@@ -62,18 +69,38 @@ class BatchViewer:
     def show_batch_summary(self, batch_id: str):
         """Show summary statistics for a batch"""
         summary = self.load_batch_summary(batch_id)
-        if not summary:
-            print(f"❌ Batch {batch_id} not found")
-            return
-        
-        print(f"\n📊 BATCH SUMMARY: {batch_id}")
-        print("=" * 50)
-        print(f"Total games: {summary['total_games']}")
-        print(f"Good wins: {summary['statistics']['good_wins']} ({summary['win_rates']['good']:.1%})")
-        print(f"Evil wins: {summary['statistics']['evil_wins']} ({summary['win_rates']['evil']:.1%})")
-        print(f"Unknown: {summary['statistics']['unknown']} ({summary['win_rates']['unknown']:.1%})")
-        print(f"Timestamp: {summary['timestamp']}")
-        print(f"Debug prompts: {summary['configuration']['debug_prompts']}")
+        if summary:
+            # Use existing summary file
+            print(f"\n📊 BATCH SUMMARY: {batch_id}")
+            print("=" * 50)
+            print(f"Total games: {summary['total_games']}")
+            print(f"Good wins: {summary['statistics']['good_wins']} ({summary['win_rates']['good']:.1%})")
+            print(f"Evil wins: {summary['statistics']['evil_wins']} ({summary['win_rates']['evil']:.1%})")
+            print(f"Unknown: {summary['statistics']['unknown']} ({summary['win_rates']['unknown']:.1%})")
+            print(f"Timestamp: {summary['timestamp']}")
+            print(f"Debug prompts: {summary['configuration']['debug_prompts']}")
+        else:
+            # Generate summary from game files
+            games = self.load_batch_games(batch_id)
+            if not games:
+                print(f"❌ Batch {batch_id} not found")
+                return
+                
+            # Calculate statistics from games
+            total_games = len(games)
+            good_wins = sum(1 for g in games if g.get('winner') == 'good')
+            evil_wins = sum(1 for g in games if g.get('winner') == 'evil')
+            unknown = total_games - good_wins - evil_wins
+            
+            print(f"\n📊 BATCH SUMMARY: {batch_id} (generated)")
+            print("=" * 50)
+            print(f"Total games: {total_games}")
+            print(f"Good wins: {good_wins} ({good_wins/total_games:.1%})")
+            print(f"Evil wins: {evil_wins} ({evil_wins/total_games:.1%})")
+            print(f"Unknown: {unknown} ({unknown/total_games:.1%})")
+            if games:
+                print(f"Timestamp: {games[0].get('timestamp', 'Unknown')}")
+            print(f"Debug prompts: Unknown")
     
     def show_game_detail(self, batch_id: str, game_num: int):
         """Show detailed view of a specific game"""
@@ -114,7 +141,12 @@ class BatchViewer:
             print("Available batches:")
             for i, batch in enumerate(batches, 1):
                 summary = self.load_batch_summary(batch)
-                games_count = summary['total_games'] if summary else "?"
+                if summary:
+                    games_count = summary['total_games']
+                else:
+                    # Count games manually
+                    games = self.load_batch_games(batch)
+                    games_count = len(games)
                 print(f"  {i}. {batch} ({games_count} games)")
             
             print(f"\nOptions:")

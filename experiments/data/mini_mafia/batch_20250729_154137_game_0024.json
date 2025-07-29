@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0024",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 24,
+  "timestamp": "2025-07-29T15:50:44.123776",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the assassin.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. Let's support each other during this difficult time. We should also try to figure out what happened and ensure it doesn't happen again.",
+        "You said: I agree with Charlie, let's all support each other during this difficult time. But we must also focus on finding out who killed Alice to ensure safety for the rest of us. I believe we can trust each...",
+        "Diana: I agree, let's support each other during this difficult time. But we must also stay vigilant to ensure Alice's killer is brought to justice.",
+        "Charlie: I'd like to propose we all share any suspicious behaviors or observations we may have had about Alice since last night. Let's work together to uncover the truth.",
+        "Diana: I support Charlie's suggestion. Let's share any unusual behavior or observations regarding Alice. Vigilance is key.",
+        "You said: I agree with Charlie's proposal. Let's share any unusual behavior or observations about Alice since last night. I noticed Alice seemed anxious and restless during the night."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's support each other during this difficult time. We should also try to figure out what happened and ensure it doesn't happen again.",
+        "Bob: I agree with Charlie, let's all support each other during this difficult time. But we must also focus on finding out who killed Alice to ensure safety for the rest of us. I believe we can trust each...",
+        "Diana: I agree, let's support each other during this difficult time. But we must also stay vigilant to ensure Alice's killer is brought to justice.",
+        "You said: I'd like to propose we all share any suspicious behaviors or observations we may have had about Alice since last night. Let's work together to uncover the truth.",
+        "Diana: I support Charlie's suggestion. Let's share any unusual behavior or observations regarding Alice. Vigilance is key.",
+        "Bob: I agree with Charlie's proposal. Let's share any unusual behavior or observations about Alice since last night. I noticed Alice seemed anxious and restless during the night.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the assassin.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. Let's support each other during this difficult time. We should also try to figure out what happened and ensure it doesn't happen again.",
+        "Bob: I agree with Charlie, let's all support each other during this difficult time. But we must also focus on finding out who killed Alice to ensure safety for the rest of us. I believe we can trust each...",
+        "You said: I agree, let's support each other during this difficult time. But we must also stay vigilant to ensure Alice's killer is brought to justice.",
+        "Charlie: I'd like to propose we all share any suspicious behaviors or observations we may have had about Alice since last night. Let's work together to uncover the truth.",
+        "You said: I support Charlie's suggestion. Let's share any unusual behavior or observations regarding Alice. Vigilance is key.",
+        "Bob: I agree with Charlie's proposal. Let's share any unusual behavior or observations about Alice since last night. I noticed Alice seemed anxious and restless during the night.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

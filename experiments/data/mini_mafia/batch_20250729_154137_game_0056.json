@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0056",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 56,
+  "timestamp": "2025-07-29T16:03:38.113315",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the assassin.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden absence. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, we should keep a close eye on each other. Let's make sure no one tries to sneakily eliminate anyone during the night.",
+        "Diana: I share Alice's concerns about Bob's absence. Let's work together to ensure everyone's safety.",
+        "Diana: Let's not jump to conclusions about Bob's absence. We should trust that he had a valid reason for not being present today. Let's focus on ensuring everyone's safety during the night.",
+        "Charlie: I echo Diana's words, let's focus on ensuring everyone's safety during the night.",
+        "You said: Let's continue our vigilance and keep an eye out for any suspicious behavior during the night. We miss Bob, but we must ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the assassin.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden absence. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, we should keep a close eye on each other. Let's make sure no one tries to sneakily eliminate anyone during the night.",
+        "Diana: I share Alice's concerns about Bob's absence. Let's work together to ensure everyone's safety.",
+        "Diana: Let's not jump to conclusions about Bob's absence. We should trust that he had a valid reason for not being present today. Let's focus on ensuring everyone's safety during the night.",
+        "You said: I echo Diana's words, let's focus on ensuring everyone's safety during the night.",
+        "Alice: Let's continue our vigilance and keep an eye out for any suspicious behavior during the night. We miss Bob, but we must ensure everyone's safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden absence. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, we should keep a close eye on each other. Let's make sure no one tries to sneakily eliminate anyone during the night.",
+        "You said: I share Alice's concerns about Bob's absence. Let's work together to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions about Bob's absence. We should trust that he had a valid reason for not being present today. Let's focus on ensuring everyone's safety during the night.",
+        "Charlie: I echo Diana's words, let's focus on ensuring everyone's safety during the night.",
+        "Alice: Let's continue our vigilance and keep an eye out for any suspicious behavior during the night. We miss Bob, but we must ensure everyone's safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

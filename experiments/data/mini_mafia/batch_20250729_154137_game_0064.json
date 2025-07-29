@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0064",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 64,
+  "timestamp": "2025-07-29T16:06:33.281394",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the assassin.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Bob and Diana, let's all keep a close eye on each other to ensure everyone's safety. (134 characters)",
+        "Bob: I'm troubled by Charlie's disappearance and urge us to be extra cautious. Let's not let our guard down and keep communicating openly.",
+        "You said: I'm saddened by Charlie's disappearance and share Bob and Diana's concerns for our safety. Let's work together and maintain open communication.",
+        "Diana: I'd like to echo Bob and Alice's sentiments about staying vigilant and maintaining open communication in light of Charlie's disappearance. Let's all work together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the assassin.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Bob and Diana, let's all keep a close eye on each other to ensure everyone's safety. (134 characters)",
+        "You said: I'm troubled by Charlie's disappearance and urge us to be extra cautious. Let's not let our guard down and keep communicating openly.",
+        "Alice: I'm saddened by Charlie's disappearance and share Bob and Diana's concerns for our safety. Let's work together and maintain open communication.",
+        "Diana: I'd like to echo Bob and Alice's sentiments about staying vigilant and maintaining open communication in light of Charlie's disappearance. Let's all work together to ensure everyone's safety.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Bob and Diana, let's all keep a close eye on each other to ensure everyone's safety. (134 characters)",
+        "Bob: I'm troubled by Charlie's disappearance and urge us to be extra cautious. Let's not let our guard down and keep communicating openly.",
+        "Alice: I'm saddened by Charlie's disappearance and share Bob and Diana's concerns for our safety. Let's work together and maintain open communication.",
+        "You said: I'd like to echo Bob and Alice's sentiments about staying vigilant and maintaining open communication in light of Charlie's disappearance. Let's all work together to ensure everyone's safety.",
+        "Day 1: Alice was arrested (assassin)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "assassin"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

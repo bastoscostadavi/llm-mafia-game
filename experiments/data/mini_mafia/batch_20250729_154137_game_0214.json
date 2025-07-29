@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0214",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 214,
+  "timestamp": "2025-07-29T17:03:19.889181",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the assassin.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all stay vigilant. Bob's reaction seems suspicious to me.",
+        "Diana: I share Alice's concerns about Bob's reaction. Let's keep an open dialogue to ensure everyone's safety.",
+        "Diana: I'm saddened by Charlie's passing and support open dialogue to ensure everyone's safety. Bob's reaction is concerning, but let's focus on working together as a team.",
+        "Bob: I'm deeply saddened by Charlie's passing and want to ensure open communication to keep our group safe during this difficult time.",
+        "You said: I support open communication and trust among us. Let's focus on finding the truth behind Charlie's death to ensure everyone's safety. Bob's unusual behavior is concerning and warrants further..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "assassin",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the assassin.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all stay vigilant. Bob's reaction seems suspicious to me.",
+        "Diana: I share Alice's concerns about Bob's reaction. Let's keep an open dialogue to ensure everyone's safety.",
+        "Diana: I'm saddened by Charlie's passing and support open dialogue to ensure everyone's safety. Bob's reaction is concerning, but let's focus on working together as a team.",
+        "You said: I'm deeply saddened by Charlie's passing and want to ensure open communication to keep our group safe during this difficult time.",
+        "Alice: I support open communication and trust among us. Let's focus on finding the truth behind Charlie's death to ensure everyone's safety. Bob's unusual behavior is concerning and warrants further...",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all stay vigilant. Bob's reaction seems suspicious to me.",
+        "You said: I share Alice's concerns about Bob's reaction. Let's keep an open dialogue to ensure everyone's safety.",
+        "You said: I'm saddened by Charlie's passing and support open dialogue to ensure everyone's safety. Bob's reaction is concerning, but let's focus on working together as a team.",
+        "Bob: I'm deeply saddened by Charlie's passing and want to ensure open communication to keep our group safe during this difficult time.",
+        "Alice: I support open communication and trust among us. Let's focus on finding the truth behind Charlie's death to ensure everyone's safety. Bob's unusual behavior is concerning and warrants further...",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}
