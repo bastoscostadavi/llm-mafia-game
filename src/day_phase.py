@@ -29,10 +29,9 @@ class DayPhase:
             random.shuffle(agents_order)
             
             for agent in agents_order:
-                print(f"\n{agent.name}'s turn:")
-                
                 # Agent sends a public message
-                action = agent.decide_action(alive_names, round_num)
+                all_player_names = [a.name for a in self.state.agents]
+                action = agent.decide_action(alive_names, round_num, all_player_names, self.state.discussion_rounds)
                 self._process_message(agent, action, alive)
     
     def _process_message(self, sender, action, alive_players):
@@ -66,7 +65,8 @@ class DayPhase:
         
         for agent in voting_order:
             candidates = [a.name for a in alive if a != agent]
-            vote = agent.vote(candidates)
+            all_player_names = [a.name for a in self.state.agents]
+            vote = agent.vote(candidates, all_player_names, self.state.discussion_rounds)
             votes[agent.name] = vote
             print(f"{agent.name} votes for {vote}")
         
@@ -100,8 +100,6 @@ class DayPhase:
         # Create announcement for memory
         if arrested_agent.role == "assassin":
             announcement = f"Day {self.state.round}: {arrested} was arrested (assassin)"
-        elif arrested_agent.role == "psychopath":
-            announcement = f"Day {self.state.round}: {arrested} was arrested (psychopath)"
         else:
             announcement = f"Day {self.state.round}: {arrested} was arrested (innocent)"
         

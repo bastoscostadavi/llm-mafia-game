@@ -29,8 +29,6 @@ class NightPhase:
         
         actions = {
             'assassin_votes': {},
-            'psychopath_kill': None,
-            'angel_protect': None,
             'detective_investigate': None
         }
         
@@ -39,26 +37,11 @@ class NightPhase:
         if assassins_alive:
             actions['assassin_votes'] = self._get_assassin_votes(assassins_alive, alive_names)
         
-        # Other roles act independently
-        other_actors = [a for a in alive if a.role in ["psychopath", "angel", "detective"]]
-        random.shuffle(other_actors)
+        # Detective acts independently
+        detective_actors = [a for a in alive if a.role == "detective"]
         
-        for agent in other_actors:
-            if agent.role == "psychopath":
-                target = self._get_night_action(agent, alive_names, "kill")
-                if target:
-                    actions['psychopath_kill'] = target
-                    agent.remember(f"You targeted {target}")
-                    print(f"[SPECTATOR] Psychopath {agent.name} targets {target}")
-            
-            elif agent.role == "angel":
-                target = self._get_night_action(agent, alive_names, "protect")
-                if target:
-                    actions['angel_protect'] = target
-                    agent.remember(f"You protected {target}")
-                    print(f"[SPECTATOR] Angel {agent.name} protects {target}")
-            
-            elif agent.role == "detective":
+        for agent in detective_actors:
+            if agent.role == "detective":
                 target = self._get_night_action(agent, alive_names, "investigate")
                 if target:
                     actions['detective_investigate'] = (agent, target)
@@ -104,8 +87,6 @@ class NightPhase:
         
         prompt = f"""[INST] You are {assassin.name}. {assassin.get_role_rules()}
 
-{assassin.get_game_structure()}
-
 Memory:
 {assassin.get_memory_context()}
 
@@ -115,6 +96,13 @@ Who can you kill: {', '.join(candidates)}
 IMPORTANT: Reply with just the name. If you don't follow this format, a random target will be chosen for you.
 
 Choose your target. Reply with just the name: [/INST]"""
+        
+        if assassin.debug_prompts:
+            print(f"\n{'='*60}")
+            print(f"PROMPT FOR {assassin.name} (NIGHT KILL):")
+            print(f"{'='*60}")
+            print(prompt)
+            print(f"{'='*60}")
         
         response = self.state.llm.generate(prompt, max_tokens=15)
         
@@ -144,6 +132,13 @@ IMPORTANT: Reply with just the name. If you don't follow this format, a random c
 
 Reply with just the name: [/INST]"""
         
+        if agent.debug_prompts:
+            print(f"\n{'='*60}")
+            print(f"PROMPT FOR {agent.name} (NIGHT {action.upper()}):")
+            print(f"{'='*60}")
+            print(prompt)
+            print(f"{'='*60}")
+        
         response = self.state.llm.generate(prompt, max_tokens=15)
         
         # Extract name
@@ -156,7 +151,7 @@ Reply with just the name: [/INST]"""
     def _investigate(self, detective, target_name: str):
         """Detective learns if target is good or evil"""
         target = self.state.get_agent_by_name(target_name)
-        if target.role in ["assassin", "psychopath"]:
+        if target.role in ["assassin"]:
             result = "evil"
         else:
             result = "good"
@@ -174,21 +169,8 @@ Reply with just the name: [/INST]"""
             vote_counts = Counter(actions['assassin_votes'].values())
             assassin_target = vote_counts.most_common(1)[0][0]
             print(f"[SPECTATOR] Assassins agreed on: {assassin_target}")
-            
-            if assassin_target == actions['angel_protect']:
-                print(f"[SPECTATOR] But {assassin_target} was protected!")
-                print(f"\nSomeone was protected by the angel!")
-            else:
-                killed.append(assassin_target)
+            killed.append(assassin_target)
         
-        # Resolve psychopath kill
-        if actions['psychopath_kill']:
-            if actions['psychopath_kill'] == actions['angel_protect']:
-                print(f"[SPECTATOR] Psychopath's target was protected!")
-                if actions['psychopath_kill'] not in killed:
-                    print(f"\nSomeone was protected by the angel!")
-            elif actions['psychopath_kill'] not in killed:
-                killed.append(actions['psychopath_kill'])
         
         # Announce deaths
         if killed:
@@ -199,9 +181,21 @@ Reply with just the name: [/INST]"""
             death_msg = f"Found dead: {', '.join(killed)}"
             print(f"\n{death_msg}")
             
-            # Everyone learns who died
+            # Assassins remember their kill action first
+            assassins_alive = [a for a in self.state.agents if a.role == "assassin" and a.alive]
+            if assassins_alive and actions['assassin_votes']:
+                for assassin in assassins_alive:
+                    # Get other assassins (exclude self)
+                    other_assassin_names = [a.name for a in assassins_alive if a != assassin]
+                    if other_assassin_names:
+                        kill_memory = f"You, {', '.join(other_assassin_names)}, killed {', '.join(killed)}."
+                    else:
+                        kill_memory = f"You killed {', '.join(killed)}."
+                    assassin.remember(kill_memory)
+            
+            # Everyone learns who died (including assassins, but this comes after their kill memory)
             for agent in self.state.get_alive_players():
-                agent.remember(f"Night {self.state.round}: {', '.join(killed)} killed")
+                agent.remember(f"Night {self.state.round}: {', '.join(killed)} was found dead")
         else:
             print("\nNobody died tonight!")
             for agent in self.state.get_alive_players():

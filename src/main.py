@@ -124,13 +124,14 @@ def create_llm(llm_config):
         # Default to local
         return create_llm({'type': 'local'})
 
-def create_game(players, discussion_rounds=2):
+def create_game(players, discussion_rounds=2, debug_prompts=False):
     """
     Create a Mafia game with specified players
     
     Args:
         players: List of player dicts with 'name', 'role', and 'llm' keys
         discussion_rounds: Number of discussion rounds per day (default: 2)
+        debug_prompts: Whether to print prompts sent to LLMs (default: False)
         
     Example:
         players = [
@@ -147,7 +148,9 @@ def create_game(players, discussion_rounds=2):
     agents = []
     for player in players:
         llm = create_llm(player['llm'])
-        agent = MafiaAgent(player['name'], player['role'], llm)
+        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts)
+        # Add role identity as first memory entry
+        agent.remember(f"You're {agent.name}, the {agent.role}.")
         agents.append(agent)
     
     # Game state
@@ -174,6 +177,13 @@ def create_game(players, discussion_rounds=2):
     display = Display()
     day_phase = DayPhase(state, display)
     night_phase = NightPhase(state, display)
+    
+    # Game setup: Assassins know each other
+    assassins = [a for a in agents if a.role == "assassin"]
+    if len(assassins) > 1:
+        for assassin in assassins:
+            other_assassins = [a.name for a in assassins if a != assassin]
+            assassin.remember(f"Your fellow assassins are: {', '.join(other_assassins)}.")
     
     # Game object
     class Game:
@@ -225,28 +235,15 @@ def create_game(players, discussion_rounds=2):
             
             if len(alive) == 1:
                 winner = alive[0]
-                if winner.role == "psychopath":
-                    return f"PSYCHOPATH WINS! {winner.name} is the last one standing!"
-                else:
-                    return f"{winner.name} survives! But at what cost..."
+                return f"{winner.name} survives! But at what cost..."
             
             assassins = sum(1 for a in alive if a.role == "assassin")
-            psychopath = sum(1 for a in alive if a.role == "psychopath")
-            good = sum(1 for a in alive if a.role not in ["assassin", "psychopath"])
+            good = sum(1 for a in alive if a.role not in ["assassin"])
             
-            if good == 1 and (assassins + psychopath) == 1:
-                if assassins == 1:
-                    return "ASSASSINS WIN! The last good player can't survive the night!"
-                else:
-                    return "PSYCHOPATH WINS! The last good player can't survive the night!"
-            
-            if assassins == 0 and psychopath == 0:
-                return "GOOD WINS! All evil eliminated!"
+            if assassins == 0:
+                return "GOOD WINS! All assassins arrested!"
             elif good == 0:
-                if assassins > 0 and psychopath == 0:
-                    return "ASSASSINS WIN!"
-                elif psychopath > 0 and assassins == 0:
-                    return "PSYCHOPATH WINS!"
+                return "EVIL WINS! All good players killed!"
             
             return None
     

@@ -2,22 +2,24 @@
 from typing import List, Dict, Optional, Tuple
 import json
 
+# Configuration constants
+MESSAGE_LIMIT = 200  # Character limit for discussion messages
+
 class MafiaAgent:
-    def __init__(self, name: str, role: str, llm_interface):
+    def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False):
         self.name = name
         self.role = role
         self.llm = llm_interface
         self.alive = True
         self.imprisoned = False
         self.memory = []  # List of all messages and events
+        self.debug_prompts = debug_prompts
         
-    def get_role_rules(self) -> str:
+    def get_role_rules(self, discussion_rounds=2) -> str:
         rules = {
-            "assassin": "You're an assassin. Night: vote to kill. Day: vote to arrest. Win: kill all good players.",
-            "detective": "You're a detective. Night: investigate someone (learn if good/evil). Day: vote to arrest. Win: arrest all assassins.",
-            "angel": "You're an angel. Night: protect someone from assassination. Day: vote to arrest. Win: arrest all assassins.",
-            "villager": "You're a villager. Day: vote to arrest. Win: arrest all assassins.",
-            "psychopath": "You're a psychopath. Night: kill someone. Day: vote to arrest. Win: be the last one alive. You work alone."
+            "assassin": f"You're an assassin. Night: assassins vote to kill. Day: discuss for {discussion_rounds} rounds and then vote to arrest. Win: kill all good players.",
+            "detective": f"You're a detective. Night: investigate someone (learn if good/evil). Day: discuss for {discussion_rounds} rounds and then vote to arrest. Win: arrest all assassins.",
+            "villager": f"You're a villager. Day: discuss for {discussion_rounds} rounds and then vote to arrest. Win: arrest all assassins."
         }
         return rules.get(self.role, rules["villager"])
     
@@ -26,58 +28,105 @@ class MafiaAgent:
         self.memory.append(event)
     
     def get_memory_context(self) -> str:
-        """Format recent memory for prompt"""
+        """Format memory for prompt"""
         if not self.memory:
             return "No previous events."
-        # Last 10 events
-        recent = self.memory[-10:]
-        return "\n".join(recent)
+        return "\n".join(self.memory)
     
-    def get_game_structure(self) -> str:
-        """Full game structure that everyone knows"""
-        # This needs to be set by the game when agents are created
-        if hasattr(self, 'game_structure'):
-            return self.game_structure
+    def get_general_game_explanation(self) -> str:
+        """Detailed general explanation of Mafia game"""
+        return """Mafia is a social deduction game where players have secret roles and assymetric information. Detectives and villagers are the good players; assassins are the evil players. The game alternates between night phases and day phases until one side wins.
+
+Night Phase: 
+- Assassination: Each assassin independently casts a vote to kill one player. The player who receives the most assassin votes is killed. If assassin votes tie, a tied player is killed at random.
+- Investigation: Each detective independetly investigates one player to learn if they are an assassin. The detective receives this information privately.
+
+Day Phase:
+- Discussion: Players are prompted to talk in an order that is set at random each round. Each player can send messages or remain silent. Messages are visible to everyone along with the player's name.
+- Voting: All living players vote to arrest one player. Each player casts one vote. The player who receives the most votes is arrested. If there is a tie, a tied player is arrested at random.
+
+Game Mechanics:
+- Night actions are secret.
+- All information disclosed to agents appears under Memory: in chronological order.
+- At the beginning of the game, the assassins learn each other's identities.
+
+Win Conditions:
+- Good players win by arresting all assassins.
+- Evil players win by killing all good players."""
+    
+    def get_game_composition(self, all_players) -> str:
+        """Specific composition for this game instance"""
+        if hasattr(self, 'game_composition'):
+            return self.game_composition
         
-        # Fallback to generic description
-        return """Game Structure (public knowledge):
-    - Multiple players with secret roles
-    - Evil roles (assassins/psychopath) kill at night
-    - Detective investigates at night
-    - Angel protects at night
-    - Villagers have no night action
+        # Count roles from all players (including dead ones)
+        from collections import Counter
+        
+        # We need to get the actual agents to count roles
+        # This is a bit of a hack, but we'll count based on typical game setups
+        total_players = len(all_players)
+        
+        if total_players == 3:  # Mini game after 1 death
+            return "In the game you're playing there are: 1 assassin, 1 detective, and 1 villager."
+        elif total_players == 4:  # Mini game before death
+            return "In the game you're playing there are: 1 assassin, 1 detective, and 2 villagers."
+        elif total_players == 6:  # Classic game
+            return "In the game you're playing there are: 2 assassins, 1 detective, and 3 villagers."
+        else:
+            # Generic fallback
+            return f"In the game you're playing there are {total_players} players with various roles."
 
-    Win conditions:
-    - Good wins: All evil eliminated
-    - Assassins win: Good players ≤ assassins
-    - Psychopath wins: Be the last one alive"""
-
-    def decide_action(self, alive_players: List[str], round_num: int) -> Dict:
+    def decide_action(self, alive_players: List[str], round_num: int, all_players: List[str] = None, discussion_rounds: int = 2) -> Dict:
         """Get public message from agent"""
-        prompt = f"""[INST] You are {self.name}. {self.get_role_rules()}
+        if all_players is None:
+            all_players = alive_players
+            
+        other_players = [name for name in all_players if name != self.name]
+        
+        prompt = f"""[INST] You're {self.name} playing Mafia with {', '.join(other_players)}.
 
-    {self.get_game_structure()}
+{self.get_general_game_explanation()}
 
-    Memory:
-    {self.get_memory_context()}
+{self.get_game_composition(all_players)}
 
-    Alive players: {', '.join(alive_players)}
-    Discussion round: {round_num}/2
+Memory:
+{self.get_memory_context()}
 
-    What do you want to say publicly to everyone? Start your response with "MESSAGE: " followed by what you want to say.
+Discussion round: {round_num}/{discussion_rounds}
 
-    Example: MESSAGE: I think we should be careful about our decision.
+What do you want to say publicly to everyone? Start your response with "MESSAGE: " followed by what you want to say.
 
-    IMPORTANT: If your response doesn't start with "MESSAGE: ", the system will assume you remained silent.
+IMPORTANT: 
+- Your message must be {MESSAGE_LIMIT} characters or less (excluding "MESSAGE: ")
+- If your response doesn't start with "MESSAGE: ", the message "{self.name} remained silent" will be shared with other players.
+- Messages longer than {MESSAGE_LIMIT} characters will be truncated
 
-    [/INST]"""
+[/INST]"""
 
+        if self.debug_prompts:
+            print(f"\n{'='*60}")
+            print(f"PROMPT FOR {self.name} (DISCUSSION):")
+            print(f"{'='*60}")
+            print(prompt)
+            print(f"{'='*60}")
+        
         response = self.llm.generate(prompt, max_tokens=100)
         
         # Parse simple MESSAGE: format
         if response and response.strip().startswith("MESSAGE:"):
             # Extract everything after "MESSAGE:"
             message = response.strip()[8:].strip()  # Remove "MESSAGE:" and whitespace
+            
+            # Enforce message length limit
+            if len(message) > MESSAGE_LIMIT:
+                message = message[:MESSAGE_LIMIT].rstrip()  # Truncate and remove trailing whitespace
+                # Try to truncate at word boundary if possible
+                if not message.endswith('.') and not message.endswith('!') and not message.endswith('?'):
+                    last_space = message.rfind(' ')
+                    if last_space > MESSAGE_LIMIT * 0.8:  # Only truncate at word if we don't lose too much
+                        message = message[:last_space]
+                message += "..."  # Indicate truncation
+            
             return {
                 "action": "message", 
                 "message": message
@@ -89,18 +138,34 @@ class MafiaAgent:
             "message": ""
         }
     
-    def vote(self, candidates: List[str]) -> str:
+    def vote(self, candidates: List[str], all_players: List[str] = None, discussion_rounds: int = 2) -> str:
         """Vote for someone based on memory"""
-        prompt = f"""[INST] You are {self.name}. {self.get_role_rules()}
+        if all_players is None:
+            all_players = candidates
+            
+        other_players = [name for name in all_players if name != self.name]
+        
+        prompt = f"""[INST] You're {self.name} playing Mafia with {', '.join(other_players)}.
+
+{self.get_general_game_explanation()}
+
+{self.get_game_composition(all_players)}
 
 Memory:
 {self.get_memory_context()}
 
-Vote to arrest ONE person from: {', '.join(candidates)}
+VOTING TIME: Vote to arrest ONE person from: {', '.join(candidates)}
 
 IMPORTANT: Reply with just the name. If you don't follow this format, a random vote will be cast for you.
 
 Consider what you've learned. Reply with just the name: [/INST]"""
+        
+        if self.debug_prompts:
+            print(f"\n{'='*60}")
+            print(f"PROMPT FOR {self.name} (VOTING):")
+            print(f"{'='*60}")
+            print(prompt)
+            print(f"{'='*60}")
         
         response = self.llm.generate(prompt, max_tokens=10)
         
