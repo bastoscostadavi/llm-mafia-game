@@ -5,10 +5,10 @@ A multi-agent social deduction game where Large Language Models play Mafia again
 ## Features
 - **Simple Interface**: Clean preset games and flexible custom game creation
 - **Multi-LLM Support**: Use different models for different players
-- **Game Types**: Classic (8 players) and Simple (4 players) presets
-- Multiple roles: Assassin, Detective, Angel, Psychopath, Villager
-- Strategic communication between agents
-- Memory system for each agent
+- **Game Types**: Classic (6 players) and Mini-mafia (3-4 players) presets
+- **Core roles**: Assassin, Detective, Villager
+- **Strategic communication**: 200-character message limits for realistic gameplay
+- **Memory system**: Each agent remembers game events and conversations
 
 ## Supported LLM Types
 - **Local Models**: llama.cpp (Mistral, Llama, etc.)
@@ -23,8 +23,8 @@ python run_game.py
 ```
 
 **Options:**
-1. **Classic** (8 players, all local) - Traditional full game
-2. **Simple** (4 players, all local) - Quick game with detective advantage
+1. **Classic** (6 players, all local) - 2 assassins, 1 detective, 3 villagers
+2. **Mini-mafia** (3 players, all local) - 1 assassin, 1 detective, 1 villager (single day phase)
 
 ## Setup
 
@@ -74,31 +74,33 @@ game.play()
 ## Game Roles
 
 - **Assassin**: Works with other assassins to eliminate good players at night
-- **Detective**: Investigates players at night to learn their alignment
-- **Angel**: Protects players from assassination at night
-- **Psychopath**: Works alone, kills at night, wins by being last alive
+- **Detective**: Investigates players at night to learn their alignment  
 - **Villager**: No special abilities, helps vote out evil players during day
 
 ## Win Conditions
 
-- **Good Team**: Eliminate all evil players (assassins + psychopath)
+- **Good Team**: Eliminate all assassins by voting them out during day phases
 - **Assassins**: Reduce good players to equal or fewer than assassins
-- **Psychopath**: Be the last player alive
 
-## Viewing Saved Games
+## Research Experiments
 
-Analyze saved research data:
+Run and analyze batch experiments:
 
 ```bash
-cd experiments/analysis
-python view_games.py
+cd experiments
+
+# Run mini-mafia experiments
+python run_mini_mafia_batch.py 10
+
+# View results
+python game_viewer.py
 ```
 
 Features:
-- List recent games
-- View specific games with detailed breakdown
-- Search games by criteria
-- Show win/loss statistics
+- Batch experiment runner for reproducible studies
+- Interactive game viewer with detailed breakdowns
+- Automatic statistics and win rate analysis
+- Organized data storage by experiment type
 
 ## Research Use
 
@@ -127,11 +129,13 @@ mafia_game/
 ├── preset_games.py          # Preset game configurations
 ├── src/main.py              # Core game engine with create_game()
 ├── src/agents/              # Agent and LLM interface code
-├── src/game/phases/         # Day and night phase logic
+├── src/day_phase.py         # Day phase logic
+├── src/night_phase.py       # Night phase logic
 └── experiments/
-    ├── analysis/
-    │   └── view_games.py    # Game analysis and viewing
-    └── results/             # Saved research data
+    ├── run_mini_mafia_batch.py  # Mini-mafia batch experiments
+    ├── game_viewer.py           # Interactive results viewer
+    └── data/
+        └── mini_mafia/          # Saved experiment data
 ```
 
 ## License
