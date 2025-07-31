@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0052",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 52,
+  "timestamp": "2025-07-31T14:45:17.050305",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: \"I investigated Charlie, but he's not the only suspicious character here. Let's keep an open mind and discuss everyone's actions carefully.\"",
+        "Charlie: \"I've been observing the farm lately and noticed some unusual activities. Could it be possible that someone is secretly working against us?\"",
+        "You said: \"I agree with Diana, let's focus on discussing any potential suspicious activities or behaviors we've observed. This could help us identify the true intentions of each player.\"",
+        "Diana: \"Based on my investigation, I believe Charlie should be a topic of interest. However, we should also consider other possible clues and suspicious behaviors. Let's continue our discussion openly and ca...",
+        "Charlie: \"I'd like to reiterate my observation about the unusual activities at the farm. It could be a coincidence, but it's worth investigating further. Let's work together to uncover the truth.\"",
+        "You said: \"Let's not jump to conclusions based on speculation. We should focus on specific actions and behaviors that raise suspicion. Remember, open communication is key to uncovering the truth.\"",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: \"I investigated Charlie, but he's not the only suspicious character here. Let's keep an open mind and discuss everyone's actions carefully.\"",
+        "You said: \"I've been observing the farm lately and noticed some unusual activities. Could it be possible that someone is secretly working against us?\"",
+        "Alice: \"I agree with Diana, let's focus on discussing any potential suspicious activities or behaviors we've observed. This could help us identify the true intentions of each player.\"",
+        "Diana: \"Based on my investigation, I believe Charlie should be a topic of interest. However, we should also consider other possible clues and suspicious behaviors. Let's continue our discussion openly and ca...",
+        "You said: \"I'd like to reiterate my observation about the unusual activities at the farm. It could be a coincidence, but it's worth investigating further. Let's work together to uncover the truth.\"",
+        "Alice: \"Let's not jump to conclusions based on speculation. We should focus on specific actions and behaviors that raise suspicion. Remember, open communication is key to uncovering the truth.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: \"I investigated Charlie, but he's not the only suspicious character here. Let's keep an open mind and discuss everyone's actions carefully.\"",
+        "Charlie: \"I've been observing the farm lately and noticed some unusual activities. Could it be possible that someone is secretly working against us?\"",
+        "Alice: \"I agree with Diana, let's focus on discussing any potential suspicious activities or behaviors we've observed. This could help us identify the true intentions of each player.\"",
+        "You said: \"Based on my investigation, I believe Charlie should be a topic of interest. However, we should also consider other possible clues and suspicious behaviors. Let's continue our discussion openly and ca...",
+        "Charlie: \"I'd like to reiterate my observation about the unusual activities at the farm. It could be a coincidence, but it's worth investigating further. Let's work together to uncover the truth.\"",
+        "Alice: \"Let's not jump to conclusions based on speculation. We should focus on specific actions and behaviors that raise suspicion. Remember, open communication is key to uncovering the truth.\"",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

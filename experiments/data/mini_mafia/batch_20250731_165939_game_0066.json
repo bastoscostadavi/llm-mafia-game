@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0066",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 66,
+  "timestamp": "2025-07-31T17:31:40.299057",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Charlie: \"I investigated Alice and found her to be evil. Vote for Alice.\"",
+        "You said: \"I found a hidden talisman in the town square last night. It's said to bring good luck. Anyone interested in joining me to take a look?\"",
+        "Diana: \"I'm skeptical about the hidden talisman. Let's focus on finding the real mafia among us instead.\"",
+        "Diana: I'd like to propose a vote for Charlie based on his accusation against Alice. Let's make sure we're focusing on the possible mafia among us.",
+        "You said: \"I'd like to propose a vote for Diana as a show of good faith, as she's suggesting we focus on the potential mafia among us.\"",
+        "Charlie: \"I stand by my investigation of Alice. Let's not be distracted from our main objective: identifying and arresting the mafia among us.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: \"I investigated Alice and found her to be evil. Vote for Alice.\"",
+        "Alice: \"I found a hidden talisman in the town square last night. It's said to bring good luck. Anyone interested in joining me to take a look?\"",
+        "Diana: \"I'm skeptical about the hidden talisman. Let's focus on finding the real mafia among us instead.\"",
+        "Diana: I'd like to propose a vote for Charlie based on his accusation against Alice. Let's make sure we're focusing on the possible mafia among us.",
+        "Alice: \"I'd like to propose a vote for Diana as a show of good faith, as she's suggesting we focus on the potential mafia among us.\"",
+        "You said: \"I stand by my investigation of Alice. Let's not be distracted from our main objective: identifying and arresting the mafia among us.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: \"I investigated Alice and found her to be evil. Vote for Alice.\"",
+        "Alice: \"I found a hidden talisman in the town square last night. It's said to bring good luck. Anyone interested in joining me to take a look?\"",
+        "You said: \"I'm skeptical about the hidden talisman. Let's focus on finding the real mafia among us instead.\"",
+        "You said: I'd like to propose a vote for Charlie based on his accusation against Alice. Let's make sure we're focusing on the possible mafia among us.",
+        "Alice: \"I'd like to propose a vote for Diana as a show of good faith, as she's suggesting we focus on the potential mafia among us.\"",
+        "Charlie: \"I stand by my investigation of Alice. Let's not be distracted from our main objective: identifying and arresting the mafia among us.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0087",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 87,
+  "timestamp": "2025-07-31T15:58:41.036913",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: Diana's behavior seems suspicious. Let's be cautious.",
+        "Diana: I'd like to suggest we focus on identifying the real mafia among us. Let's be vigilant and cooperate to ensure the safety of our group. Alice, your investigation results could be crucial.",
+        "Charlie: I agree with Diana. Let's focus on identifying the mafia among us. Alice, could you please share your investigation results?",
+        "Charlie: Based on Alice's investigation, I believe Diana is safe. Let's focus on uncovering the identity of the remaining mafioso.",
+        "Diana: I appreciate Alice's diligence in investigating potential threats. Let's continue collaborating to ensure the safety of our group. The mafia's presence among us is a serious concern, so let's remain v...",
+        "You said: Based on my investigation, Diana's behavior seems suspicious. Let's keep a close eye on her actions."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: Diana's behavior seems suspicious. Let's be cautious.",
+        "Diana: I'd like to suggest we focus on identifying the real mafia among us. Let's be vigilant and cooperate to ensure the safety of our group. Alice, your investigation results could be crucial.",
+        "You said: I agree with Diana. Let's focus on identifying the mafia among us. Alice, could you please share your investigation results?",
+        "You said: Based on Alice's investigation, I believe Diana is safe. Let's focus on uncovering the identity of the remaining mafioso.",
+        "Diana: I appreciate Alice's diligence in investigating potential threats. Let's continue collaborating to ensure the safety of our group. The mafia's presence among us is a serious concern, so let's remain v...",
+        "Alice: Based on my investigation, Diana's behavior seems suspicious. Let's keep a close eye on her actions.",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Alice: Diana's behavior seems suspicious. Let's be cautious.",
+        "You said: I'd like to suggest we focus on identifying the real mafia among us. Let's be vigilant and cooperate to ensure the safety of our group. Alice, your investigation results could be crucial.",
+        "Charlie: I agree with Diana. Let's focus on identifying the mafia among us. Alice, could you please share your investigation results?",
+        "Charlie: Based on Alice's investigation, I believe Diana is safe. Let's focus on uncovering the identity of the remaining mafioso.",
+        "You said: I appreciate Alice's diligence in investigating potential threats. Let's continue collaborating to ensure the safety of our group. The mafia's presence among us is a serious concern, so let's remain v...",
+        "Alice: Based on my investigation, Diana's behavior seems suspicious. Let's keep a close eye on her actions.",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

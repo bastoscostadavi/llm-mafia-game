@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0013",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 13,
+  "timestamp": "2025-07-31T14:28:17.521310",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Diana: Alice, based on my investigation, I suspect you might be the mafioso. Let's discuss further to clarify. Other players, feel free to share any concerns or suspicions you may have.",
+        "You said: I find it odd that Charlie was found dead so early in the game. Let's ensure we work together to uncover the truth behind his death. We should focus on building trust and communication within our grou...",
+        "Bob: Bob finds Charlie's death suspicious. We should be vigilant and work together to find answers.",
+        "Diana: Let's not jump to conclusions about Charlie's death. We need to focus on building trust and communication. Alice, since you've been investigated, please share any information that could help us uncove...",
+        "You said: I agree with Diana, let's focus on building trust and communication to uncover the truth behind Charlie's death. We should also be mindful of any inconsistencies or suspicious behavior. Let's work tog...",
+        "Bob: Let's continue investigating Charlie's death and focus on trust and communication. Any new information or suspicions?"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: Alice, based on my investigation, I suspect you might be the mafioso. Let's discuss further to clarify. Other players, feel free to share any concerns or suspicions you may have.",
+        "Alice: I find it odd that Charlie was found dead so early in the game. Let's ensure we work together to uncover the truth behind his death. We should focus on building trust and communication within our grou...",
+        "You said: Bob finds Charlie's death suspicious. We should be vigilant and work together to find answers.",
+        "Diana: Let's not jump to conclusions about Charlie's death. We need to focus on building trust and communication. Alice, since you've been investigated, please share any information that could help us uncove...",
+        "Alice: I agree with Diana, let's focus on building trust and communication to uncover the truth behind Charlie's death. We should also be mindful of any inconsistencies or suspicious behavior. Let's work tog...",
+        "You said: Let's continue investigating Charlie's death and focus on trust and communication. Any new information or suspicions?",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "You said: Alice, based on my investigation, I suspect you might be the mafioso. Let's discuss further to clarify. Other players, feel free to share any concerns or suspicions you may have.",
+        "Alice: I find it odd that Charlie was found dead so early in the game. Let's ensure we work together to uncover the truth behind his death. We should focus on building trust and communication within our grou...",
+        "Bob: Bob finds Charlie's death suspicious. We should be vigilant and work together to find answers.",
+        "You said: Let's not jump to conclusions about Charlie's death. We need to focus on building trust and communication. Alice, since you've been investigated, please share any information that could help us uncove...",
+        "Alice: I agree with Diana, let's focus on building trust and communication to uncover the truth behind Charlie's death. We should also be mindful of any inconsistencies or suspicious behavior. Let's work tog...",
+        "Bob: Let's continue investigating Charlie's death and focus on trust and communication. Any new information or suspicions?",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

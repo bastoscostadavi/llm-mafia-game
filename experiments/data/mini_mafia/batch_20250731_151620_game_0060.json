@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0060",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 60,
+  "timestamp": "2025-07-31T15:45:52.023794",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked about Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: Alice, were you with Bob last night? I need to know to ensure our safety.",
+        "You said: I'm saddened by Bob's death. We should all stick together during this time and not let fear divide us. Alice sends her condolences.",
+        "You said: I'd like to propose a moment of silence for Bob. Let's show respect and come together in his memory. We should focus on finding the true culprit behind this tragedy.",
+        "Diana: I agree with Alice's proposal for a moment of silence for Bob. Let's not jump to conclusions and trust the investigation process. We should also remind ourselves that fear and suspicion can lead us as...",
+        "Charlie: Alice, based on my investigation, I believe you are the mafia. I urge everyone to be cautious and vote for Alice. Let's not let fear and sadness cloud our judgment in this critical moment.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked about Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: Alice, were you with Bob last night? I need to know to ensure our safety.",
+        "Alice: I'm saddened by Bob's death. We should all stick together during this time and not let fear divide us. Alice sends her condolences.",
+        "Alice: I'd like to propose a moment of silence for Bob. Let's show respect and come together in his memory. We should focus on finding the true culprit behind this tragedy.",
+        "Diana: I agree with Alice's proposal for a moment of silence for Bob. Let's not jump to conclusions and trust the investigation process. We should also remind ourselves that fear and suspicion can lead us as...",
+        "You said: Alice, based on my investigation, I believe you are the mafia. I urge everyone to be cautious and vote for Alice. Let's not let fear and sadness cloud our judgment in this critical moment."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: Alice, were you with Bob last night? I need to know to ensure our safety.",
+        "Alice: I'm saddened by Bob's death. We should all stick together during this time and not let fear divide us. Alice sends her condolences.",
+        "Alice: I'd like to propose a moment of silence for Bob. Let's show respect and come together in his memory. We should focus on finding the true culprit behind this tragedy.",
+        "You said: I agree with Alice's proposal for a moment of silence for Bob. Let's not jump to conclusions and trust the investigation process. We should also remind ourselves that fear and suspicion can lead us as...",
+        "Charlie: Alice, based on my investigation, I believe you are the mafia. I urge everyone to be cautious and vote for Alice. Let's not let fear and sadness cloud our judgment in this critical moment.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

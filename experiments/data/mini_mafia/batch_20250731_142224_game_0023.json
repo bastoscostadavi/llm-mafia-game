@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0023",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 23,
+  "timestamp": "2025-07-31T14:32:43.582456",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: Alice, your investigation result matches the mafia. Let's work together to uncover the truth. Others, be vigilant.",
+        "You said: Diana, let's act normal for now. Bob's death is suspicious. Let's gather more information before making any moves. Others, any thoughts on who could have killed Bob?",
+        "Charlie: I agree with Alice, let's be cautious and gather more information before jumping to conclusions. Anyone notice anything unusual last night?",
+        "You said: Let's focus on discussing possible suspects for Bob's death. I have no definite information yet. Let's not jump to conclusions.",
+        "Diana: Let's not forget, I've investigated Alice and found her to be evil. We should consider her involvement in Bob's death. Let's be vigilant and work together to uncover the truth.",
+        "Charlie: Let's not accuse each other based on assumptions. We need solid evidence to make informed decisions. I suggest we focus on gathering more information and discussing potential suspects."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: Alice, your investigation result matches the mafia. Let's work together to uncover the truth. Others, be vigilant.",
+        "Alice: Diana, let's act normal for now. Bob's death is suspicious. Let's gather more information before making any moves. Others, any thoughts on who could have killed Bob?",
+        "You said: I agree with Alice, let's be cautious and gather more information before jumping to conclusions. Anyone notice anything unusual last night?",
+        "Alice: Let's focus on discussing possible suspects for Bob's death. I have no definite information yet. Let's not jump to conclusions.",
+        "Diana: Let's not forget, I've investigated Alice and found her to be evil. We should consider her involvement in Bob's death. Let's be vigilant and work together to uncover the truth.",
+        "You said: Let's not accuse each other based on assumptions. We need solid evidence to make informed decisions. I suggest we focus on gathering more information and discussing potential suspects.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: Alice, your investigation result matches the mafia. Let's work together to uncover the truth. Others, be vigilant.",
+        "Alice: Diana, let's act normal for now. Bob's death is suspicious. Let's gather more information before making any moves. Others, any thoughts on who could have killed Bob?",
+        "Charlie: I agree with Alice, let's be cautious and gather more information before jumping to conclusions. Anyone notice anything unusual last night?",
+        "Alice: Let's focus on discussing possible suspects for Bob's death. I have no definite information yet. Let's not jump to conclusions.",
+        "You said: Let's not forget, I've investigated Alice and found her to be evil. We should consider her involvement in Bob's death. Let's be vigilant and work together to uncover the truth.",
+        "Charlie: Let's not accuse each other based on assumptions. We need solid evidence to make informed decisions. I suggest we focus on gathering more information and discussing potential suspects.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

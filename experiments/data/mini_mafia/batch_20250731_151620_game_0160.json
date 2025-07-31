@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0160",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 160,
+  "timestamp": "2025-07-31T16:33:18.984861",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. We should all be vigilant and look out for each other.",
+        "You said: I agree with Diana, let's all keep an eye out for each other. But I'm also worried about Bob's sudden disappearance. We should discuss any unusual behavior or suspicions we have.",
+        "Charlie: I'd like to propose that we focus on identifying the cause of Bob's disappearance. Let's share any unusual observations or suspicions we have. We should work together to ensure everyone's safety.",
+        "You said: I've noticed that Bob's room was locked from the inside last night. It could be an explanation for his disappearance, but we should also consider other possibilities. Let's keep an open mind and share...",
+        "Diana: I'm worried about the recent events and think we should all share any suspicious occurrences. Let's work together to ensure everyone's safety.",
+        "Charlie: Based on my investigation, I believe Bob's room being locked from the inside could be significant. Let's discuss this further and consider other possibilities as well. We should remain vigilant and wo...",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. We should all be vigilant and look out for each other.",
+        "Alice: I agree with Diana, let's all keep an eye out for each other. But I'm also worried about Bob's sudden disappearance. We should discuss any unusual behavior or suspicions we have.",
+        "You said: I'd like to propose that we focus on identifying the cause of Bob's disappearance. Let's share any unusual observations or suspicions we have. We should work together to ensure everyone's safety.",
+        "Alice: I've noticed that Bob's room was locked from the inside last night. It could be an explanation for his disappearance, but we should also consider other possibilities. Let's keep an open mind and share...",
+        "Diana: I'm worried about the recent events and think we should all share any suspicious occurrences. Let's work together to ensure everyone's safety.",
+        "You said: Based on my investigation, I believe Bob's room being locked from the inside could be significant. Let's discuss this further and consider other possibilities as well. We should remain vigilant and wo..."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. We should all be vigilant and look out for each other.",
+        "Alice: I agree with Diana, let's all keep an eye out for each other. But I'm also worried about Bob's sudden disappearance. We should discuss any unusual behavior or suspicions we have.",
+        "Charlie: I'd like to propose that we focus on identifying the cause of Bob's disappearance. Let's share any unusual observations or suspicions we have. We should work together to ensure everyone's safety.",
+        "Alice: I've noticed that Bob's room was locked from the inside last night. It could be an explanation for his disappearance, but we should also consider other possibilities. Let's keep an open mind and share...",
+        "You said: I'm worried about the recent events and think we should all share any suspicious occurrences. Let's work together to ensure everyone's safety.",
+        "Charlie: Based on my investigation, I believe Bob's room being locked from the inside could be significant. Let's discuss this further and consider other possibilities as well. We should remain vigilant and wo...",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

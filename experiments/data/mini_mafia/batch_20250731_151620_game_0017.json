@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0017",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 17,
+  "timestamp": "2025-07-31T15:25:20.167414",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "You said: \"I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.\"",
+        "Charlie: I agree with Alice, let's keep a close eye on each other following Bob's mysterious disappearance.",
+        "Diana: \"I'd like to propose that we hold a memorial for Bob. Let's take this opportunity to share any suspicions or concerns we might have, in memory of our late friend.\"",
+        "Diana: \"Let's not jump to conclusions based on suspicions. Let's remember Bob as a friend and focus on finding the truth together. We need to work as a team to uncover the real culprit.\"",
+        "You said: \"I'm worried about the unusual turn of events. Let's not forget that we need to trust each other to uncover the truth. We should share any potential leads we might have.\"",
+        "Charlie: I'd like to share Alice's concern about Bob's sudden disappearance. Let's remain vigilant and report any suspicious activities."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "Alice: \"I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.\"",
+        "You said: I agree with Alice, let's keep a close eye on each other following Bob's mysterious disappearance.",
+        "Diana: \"I'd like to propose that we hold a memorial for Bob. Let's take this opportunity to share any suspicions or concerns we might have, in memory of our late friend.\"",
+        "Diana: \"Let's not jump to conclusions based on suspicions. Let's remember Bob as a friend and focus on finding the truth together. We need to work as a team to uncover the real culprit.\"",
+        "Alice: \"I'm worried about the unusual turn of events. Let's not forget that we need to trust each other to uncover the truth. We should share any potential leads we might have.\"",
+        "You said: I'd like to share Alice's concern about Bob's sudden disappearance. Let's remain vigilant and report any suspicious activities.",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: \"I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.\"",
+        "Charlie: I agree with Alice, let's keep a close eye on each other following Bob's mysterious disappearance.",
+        "You said: \"I'd like to propose that we hold a memorial for Bob. Let's take this opportunity to share any suspicions or concerns we might have, in memory of our late friend.\"",
+        "You said: \"Let's not jump to conclusions based on suspicions. Let's remember Bob as a friend and focus on finding the truth together. We need to work as a team to uncover the real culprit.\"",
+        "Alice: \"I'm worried about the unusual turn of events. Let's not forget that we need to trust each other to uncover the truth. We should share any potential leads we might have.\"",
+        "Charlie: I'd like to share Alice's concern about Bob's sudden disappearance. Let's remain vigilant and report any suspicious activities.",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

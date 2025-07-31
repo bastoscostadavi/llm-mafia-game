@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0071",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 71,
+  "timestamp": "2025-07-31T15:51:01.400609",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I investigated Bob and found him to be evil. Be cautious, he could be the mafioso among us.\"",
+        "Diana: \"I'm concerned about Alice's sudden death and Charlie's accusation. Let's stay vigilant and keep an open dialogue to ensure trust within our group.\"",
+        "You said: \"I agree with Diana, let's stay vigilant and maintain open communication to ensure trust within our group. I have no information to share at this moment.\"",
+        "Diana: \"Let's not jump to conclusions based on accusations or rumors. We need to trust each other and work together to uncover the truth about Alice's death. I suggest we focus on open communication and gath...",
+        "Charlie: \"I stand by my investigation results. Bob, your actions are suspicious. Let's work together to find the real mafioso.\"",
+        "You said: \"I support open communication and trust within our group. Let's work together to uncover the truth about Alice's death and find the real mafioso among us.\"",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: \"I investigated Bob and found him to be evil. Be cautious, he could be the mafioso among us.\"",
+        "Diana: \"I'm concerned about Alice's sudden death and Charlie's accusation. Let's stay vigilant and keep an open dialogue to ensure trust within our group.\"",
+        "Bob: \"I agree with Diana, let's stay vigilant and maintain open communication to ensure trust within our group. I have no information to share at this moment.\"",
+        "Diana: \"Let's not jump to conclusions based on accusations or rumors. We need to trust each other and work together to uncover the truth about Alice's death. I suggest we focus on open communication and gath...",
+        "You said: \"I stand by my investigation results. Bob, your actions are suspicious. Let's work together to find the real mafioso.\"",
+        "Bob: \"I support open communication and trust within our group. Let's work together to uncover the truth about Alice's death and find the real mafioso among us.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I investigated Bob and found him to be evil. Be cautious, he could be the mafioso among us.\"",
+        "You said: \"I'm concerned about Alice's sudden death and Charlie's accusation. Let's stay vigilant and keep an open dialogue to ensure trust within our group.\"",
+        "Bob: \"I agree with Diana, let's stay vigilant and maintain open communication to ensure trust within our group. I have no information to share at this moment.\"",
+        "You said: \"Let's not jump to conclusions based on accusations or rumors. We need to trust each other and work together to uncover the truth about Alice's death. I suggest we focus on open communication and gath...",
+        "Charlie: \"I stand by my investigation results. Bob, your actions are suspicious. Let's work together to find the real mafioso.\"",
+        "Bob: \"I support open communication and trust within our group. Let's work together to uncover the truth about Alice's death and find the real mafioso among us.\"",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

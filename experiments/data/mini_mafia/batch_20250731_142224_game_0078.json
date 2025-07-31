@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0078",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 78,
+  "timestamp": "2025-07-31T14:57:56.983751",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Charlie was found dead this morning.",
+        "You said: Bob's behavior seems suspicious. Let's keep a close eye on him.",
+        "Diana: I agree with Alice, let's keep an eye on Bob. It's important we stay vigilant.",
+        "Bob: I'd like to reassure everyone that I have no intention of harming anyone here. Let's all work together to ensure a peaceful game.",
+        "Diana: Based on recent events, it's crucial that we remain vigilant and keep a close eye on each other's actions. Let's work together to uncover the truth.",
+        "You said: Based on recent investigations, let's focus our attention on those with suspicious behavior. I believe we can uncover the truth together.",
+        "Bob: I'd like to reiterate my commitment to peace and cooperation in the game. Let's focus on open communication to ensure a fair and enjoyable experience for all.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Alice: Bob's behavior seems suspicious. Let's keep a close eye on him.",
+        "Diana: I agree with Alice, let's keep an eye on Bob. It's important we stay vigilant.",
+        "You said: I'd like to reassure everyone that I have no intention of harming anyone here. Let's all work together to ensure a peaceful game.",
+        "Diana: Based on recent events, it's crucial that we remain vigilant and keep a close eye on each other's actions. Let's work together to uncover the truth.",
+        "Alice: Based on recent investigations, let's focus our attention on those with suspicious behavior. I believe we can uncover the truth together.",
+        "You said: I'd like to reiterate my commitment to peace and cooperation in the game. Let's focus on open communication to ensure a fair and enjoyable experience for all."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: Bob's behavior seems suspicious. Let's keep a close eye on him.",
+        "You said: I agree with Alice, let's keep an eye on Bob. It's important we stay vigilant.",
+        "Bob: I'd like to reassure everyone that I have no intention of harming anyone here. Let's all work together to ensure a peaceful game.",
+        "You said: Based on recent events, it's crucial that we remain vigilant and keep a close eye on each other's actions. Let's work together to uncover the truth.",
+        "Alice: Based on recent investigations, let's focus our attention on those with suspicious behavior. I believe we can uncover the truth together.",
+        "Bob: I'd like to reiterate my commitment to peace and cooperation in the game. Let's focus on open communication to ensure a fair and enjoyable experience for all.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

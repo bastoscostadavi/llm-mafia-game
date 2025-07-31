@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0083",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 83,
+  "timestamp": "2025-07-31T15:56:45.116896",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other. Bob, could you share any information about the night before Diana's death?",
+        "Bob: \"I agree with Alice, let's be cautious. I have nothing to hide.\"",
+        "Charlie: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's keep our communications open and transparent during the day.",
+        "You said: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's remember that transparency and open communication are key during the day. Bob, your unusual behavior during the nigh...",
+        "Charlie: I'd like to propose we focus our efforts on finding out who could have caused Diana's death. Let's remember, communication and cooperation are essential during this critical time.",
+        "Bob: I'd like to offer my condolences for Diana's death. Let's all remain vigilant and cooperate to find the true culprit. Trust is crucial in this game."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other. Bob, could you share any information about the night before Diana's death?",
+        "You said: \"I agree with Alice, let's be cautious. I have nothing to hide.\"",
+        "Charlie: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's keep our communications open and transparent during the day.",
+        "Alice: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's remember that transparency and open communication are key during the day. Bob, your unusual behavior during the nigh...",
+        "Charlie: I'd like to propose we focus our efforts on finding out who could have caused Diana's death. Let's remember, communication and cooperation are essential during this critical time.",
+        "You said: I'd like to offer my condolences for Diana's death. Let's all remain vigilant and cooperate to find the true culprit. Trust is crucial in this game.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other. Bob, could you share any information about the night before Diana's death?",
+        "Bob: \"I agree with Alice, let's be cautious. I have nothing to hide.\"",
+        "You said: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's keep our communications open and transparent during the day.",
+        "Alice: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's remember that transparency and open communication are key during the day. Bob, your unusual behavior during the nigh...",
+        "You said: I'd like to propose we focus our efforts on finding out who could have caused Diana's death. Let's remember, communication and cooperation are essential during this critical time.",
+        "Bob: I'd like to offer my condolences for Diana's death. Let's all remain vigilant and cooperate to find the true culprit. Trust is crucial in this game.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

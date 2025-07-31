@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0015",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 15,
+  "timestamp": "2025-07-31T14:29:05.659434",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden death. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Diana: I agree with Bob, let's stay vigilant and ensure everyone's safety. If anyone notices anything suspicious, please share it with us.",
+        "Charlie: I share Bob's concerns for everyone's safety. Let's work together to uncover any hidden threats among us.",
+        "Diana: Based on Alice's sudden death, I suggest we focus on identifying any unusual behavior or inconsistencies. Let's work together to ensure everyone's safety and trust the process.",
+        "Charlie: I'm deeply concerned about Alice's death and urge us all to stay vigilant. Let's work together to identify any suspicious behavior and ensure everyone's safety.",
+        "You said: Based on Charlie's reaction, let's focus on his actions and statements. We need to ensure everyone's safety, but it's crucial we identify any potential threats. Let's remain vigilant and work together..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden death. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Diana: I agree with Bob, let's stay vigilant and ensure everyone's safety. If anyone notices anything suspicious, please share it with us.",
+        "You said: I share Bob's concerns for everyone's safety. Let's work together to uncover any hidden threats among us.",
+        "Diana: Based on Alice's sudden death, I suggest we focus on identifying any unusual behavior or inconsistencies. Let's work together to ensure everyone's safety and trust the process.",
+        "You said: I'm deeply concerned about Alice's death and urge us all to stay vigilant. Let's work together to identify any suspicious behavior and ensure everyone's safety.",
+        "Bob: Based on Charlie's reaction, let's focus on his actions and statements. We need to ensure everyone's safety, but it's crucial we identify any potential threats. Let's remain vigilant and work together...",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden death. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Bob, let's stay vigilant and ensure everyone's safety. If anyone notices anything suspicious, please share it with us.",
+        "Charlie: I share Bob's concerns for everyone's safety. Let's work together to uncover any hidden threats among us.",
+        "You said: Based on Alice's sudden death, I suggest we focus on identifying any unusual behavior or inconsistencies. Let's work together to ensure everyone's safety and trust the process.",
+        "Charlie: I'm deeply concerned about Alice's death and urge us all to stay vigilant. Let's work together to identify any suspicious behavior and ensure everyone's safety.",
+        "Bob: Based on Charlie's reaction, let's focus on his actions and statements. We need to ensure everyone's safety, but it's crucial we identify any potential threats. Let's remain vigilant and work together...",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

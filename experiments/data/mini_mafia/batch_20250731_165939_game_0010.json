@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0010",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 10,
+  "timestamp": "2025-07-31T17:04:54.947724",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Charlie: Alice, your behavior is suspicious. Let's focus on uncovering the truth behind Bob's death.",
+        "You said: I agree with Charlie, we must find out who is behind Bob's death. Let's work together to uncover any clues we may have missed during the day.",
+        "Charlie: Alice, your suspicious behavior and agreement with me raises questions. Let's focus on finding the real culprit behind Bob's death. We can't afford to let the mafia go unchecked.",
+        "You said: I'm saddened by Bob's death and want to help find the truth. Let's focus on potential clues and not jump to conclusions. We can work together to ensure justice is served.",
+        "Diana: I'm concerned about the suspicious behavior of some players. Let's remain vigilant and keep investigating potential clues to find the real culprit behind Bob's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: Alice, your behavior is suspicious. Let's focus on uncovering the truth behind Bob's death.",
+        "Alice: I agree with Charlie, we must find out who is behind Bob's death. Let's work together to uncover any clues we may have missed during the day.",
+        "You said: Alice, your suspicious behavior and agreement with me raises questions. Let's focus on finding the real culprit behind Bob's death. We can't afford to let the mafia go unchecked.",
+        "Alice: I'm saddened by Bob's death and want to help find the truth. Let's focus on potential clues and not jump to conclusions. We can work together to ensure justice is served.",
+        "Diana: I'm concerned about the suspicious behavior of some players. Let's remain vigilant and keep investigating potential clues to find the real culprit behind Bob's death.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Charlie: Alice, your behavior is suspicious. Let's focus on uncovering the truth behind Bob's death.",
+        "Alice: I agree with Charlie, we must find out who is behind Bob's death. Let's work together to uncover any clues we may have missed during the day.",
+        "Charlie: Alice, your suspicious behavior and agreement with me raises questions. Let's focus on finding the real culprit behind Bob's death. We can't afford to let the mafia go unchecked.",
+        "Alice: I'm saddened by Bob's death and want to help find the truth. Let's focus on potential clues and not jump to conclusions. We can work together to ensure justice is served.",
+        "You said: I'm concerned about the suspicious behavior of some players. Let's remain vigilant and keep investigating potential clues to find the real culprit behind Bob's death.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

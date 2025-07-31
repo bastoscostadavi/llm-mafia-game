@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0061",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 61,
+  "timestamp": "2025-07-31T14:50:23.208767",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: \"I investigated Diana last night, and she's shown signs of deception. Let's be cautious around her.\"",
+        "You said: \"I agree with Bob's concern about Diana's deceptive behavior. Let's keep a close eye on her actions today.\"",
+        "Diana: \"I'd like to assure everyone that I'm committed to working together with the team to identify the mafia among us. Let's focus on analyzing each other's actions and statements carefully.\"",
+        "Diana: \"Let's not jump to conclusions based on last night's events. We should focus on analyzing each other's actions and statements carefully. I trust everyone's commitment to finding the mafia among us.\"",
+        "Bob: \"Let's not ignore the suspicious behavior from Diana. We should consider her as a potential threat and monitor her actions closely.\"",
+        "You said: \"Let's not accuse or suspect anyone based on last night's investigation results. We should focus on observing everyone's actions during the day and try to gather more information before making any con...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "You said: \"I investigated Diana last night, and she's shown signs of deception. Let's be cautious around her.\"",
+        "Alice: \"I agree with Bob's concern about Diana's deceptive behavior. Let's keep a close eye on her actions today.\"",
+        "Diana: \"I'd like to assure everyone that I'm committed to working together with the team to identify the mafia among us. Let's focus on analyzing each other's actions and statements carefully.\"",
+        "Diana: \"Let's not jump to conclusions based on last night's events. We should focus on analyzing each other's actions and statements carefully. I trust everyone's commitment to finding the mafia among us.\"",
+        "You said: \"Let's not ignore the suspicious behavior from Diana. We should consider her as a potential threat and monitor her actions closely.\"",
+        "Alice: \"Let's not accuse or suspect anyone based on last night's investigation results. We should focus on observing everyone's actions during the day and try to gather more information before making any con...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Bob: \"I investigated Diana last night, and she's shown signs of deception. Let's be cautious around her.\"",
+        "Alice: \"I agree with Bob's concern about Diana's deceptive behavior. Let's keep a close eye on her actions today.\"",
+        "You said: \"I'd like to assure everyone that I'm committed to working together with the team to identify the mafia among us. Let's focus on analyzing each other's actions and statements carefully.\"",
+        "You said: \"Let's not jump to conclusions based on last night's events. We should focus on analyzing each other's actions and statements carefully. I trust everyone's commitment to finding the mafia among us.\"",
+        "Bob: \"Let's not ignore the suspicious behavior from Diana. We should consider her as a potential threat and monitor her actions closely.\"",
+        "Alice: \"Let's not accuse or suspect anyone based on last night's investigation results. We should focus on observing everyone's actions during the day and try to gather more information before making any con..."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

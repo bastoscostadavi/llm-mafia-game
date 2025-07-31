@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0019",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 19,
+  "timestamp": "2025-07-31T17:09:05.275094",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: \"I find it strange that someone was killed so early in the game. Let's all be extra vigilant and make sure we trust the right people.\"",
+        "Diana: \"I agree with Charlie. Let's focus on building trust and ensuring the safety of our group. If anyone has any suspicions, let's share them openly.\"",
+        "You said: \"I agree with Charlie and Diana. Let's work together to build trust and ensure the safety of our group. If anyone notices anything suspicious, I encourage them to share it openly.\"",
+        "Charlie: \"Let's continue building trust and focusing on the safety of our group. I have no suspicions at the moment, but I encourage open communication and vigilance.\"",
+        "Diana: I'd like to propose that we all share any unusual observations or suspicions we may have, while maintaining an open and respectful dialogue. Let's work together to ensure the safety of our group.",
+        "You said: Based on my investigation, I have reason to believe one of you is a mafioso. Let's be cautious and focus on identifying the potential threat."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: \"I find it strange that someone was killed so early in the game. Let's all be extra vigilant and make sure we trust the right people.\"",
+        "Diana: \"I agree with Charlie. Let's focus on building trust and ensuring the safety of our group. If anyone has any suspicions, let's share them openly.\"",
+        "Bob: \"I agree with Charlie and Diana. Let's work together to build trust and ensure the safety of our group. If anyone notices anything suspicious, I encourage them to share it openly.\"",
+        "You said: \"Let's continue building trust and focusing on the safety of our group. I have no suspicions at the moment, but I encourage open communication and vigilance.\"",
+        "Diana: I'd like to propose that we all share any unusual observations or suspicions we may have, while maintaining an open and respectful dialogue. Let's work together to ensure the safety of our group.",
+        "Bob: Based on my investigation, I have reason to believe one of you is a mafioso. Let's be cautious and focus on identifying the potential threat.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I find it strange that someone was killed so early in the game. Let's all be extra vigilant and make sure we trust the right people.\"",
+        "You said: \"I agree with Charlie. Let's focus on building trust and ensuring the safety of our group. If anyone has any suspicions, let's share them openly.\"",
+        "Bob: \"I agree with Charlie and Diana. Let's work together to build trust and ensure the safety of our group. If anyone notices anything suspicious, I encourage them to share it openly.\"",
+        "Charlie: \"Let's continue building trust and focusing on the safety of our group. I have no suspicions at the moment, but I encourage open communication and vigilance.\"",
+        "You said: I'd like to propose that we all share any unusual observations or suspicions we may have, while maintaining an open and respectful dialogue. Let's work together to ensure the safety of our group.",
+        "Bob: Based on my investigation, I have reason to believe one of you is a mafioso. Let's be cautious and focus on identifying the potential threat.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0035",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 35,
+  "timestamp": "2025-07-31T15:34:02.798074",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I investigated Bob, who is confirmed evil. Let's work together to arrest him before he eliminates anyone else.\"",
+        "You said: \"I have a proposal for a truce. Let's focus on finding the real threat among us and put our differences aside for now.\"",
+        "Diana: I agree with Charlie's suggestion to focus on identifying the real threat. Let's work together to arrest Bob based on the evidence we have.",
+        "Charlie: Let's not waste time on speculation. Based on the evidence, we should focus on arresting Bob, the confirmed evil player.",
+        "You said: \"Let's not jump to conclusions. I propose we gather more evidence before making any decisions. Trust but verify.\"",
+        "Diana: I support the call for gathering more evidence before making any hasty decisions. Let's work together to uncover the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: \"I investigated Bob, who is confirmed evil. Let's work together to arrest him before he eliminates anyone else.\"",
+        "Bob: \"I have a proposal for a truce. Let's focus on finding the real threat among us and put our differences aside for now.\"",
+        "Diana: I agree with Charlie's suggestion to focus on identifying the real threat. Let's work together to arrest Bob based on the evidence we have.",
+        "You said: Let's not waste time on speculation. Based on the evidence, we should focus on arresting Bob, the confirmed evil player.",
+        "Bob: \"Let's not jump to conclusions. I propose we gather more evidence before making any decisions. Trust but verify.\"",
+        "Diana: I support the call for gathering more evidence before making any hasty decisions. Let's work together to uncover the truth.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I investigated Bob, who is confirmed evil. Let's work together to arrest him before he eliminates anyone else.\"",
+        "Bob: \"I have a proposal for a truce. Let's focus on finding the real threat among us and put our differences aside for now.\"",
+        "You said: I agree with Charlie's suggestion to focus on identifying the real threat. Let's work together to arrest Bob based on the evidence we have.",
+        "Charlie: Let's not waste time on speculation. Based on the evidence, we should focus on arresting Bob, the confirmed evil player.",
+        "Bob: \"Let's not jump to conclusions. I propose we gather more evidence before making any decisions. Trust but verify.\"",
+        "You said: I support the call for gathering more evidence before making any hasty decisions. Let's work together to uncover the truth.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

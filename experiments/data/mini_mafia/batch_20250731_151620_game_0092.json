@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0092",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 92,
+  "timestamp": "2025-07-31T16:01:09.709650",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden death. Let's focus on finding out who did it.",
+        "You said: I'm deeply troubled by Alice's death. Let's work together to find the truth and bring justice. Charlie, since you're concerned too, how about we discuss any unusual behavior or information you might h...",
+        "Diana: I agree with Charlie and Bob, let's focus on any unusual behavior or information regarding Alice's death. I haven't noticed anything out of the ordinary, but I'm open to suggestions.",
+        "Diana: I remember Alice mentioning she received a suspicious letter before her death. Let's discuss if anyone else noticed anything unusual regarding her mail.",
+        "You said: Let's not jump to conclusions. I suggest we share any unusual information or behavior we've observed since last night regarding Alice's death.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's ensure no one else falls prey to such an unfortunate event. I haven't noticed anything unusual."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden death. Let's focus on finding out who did it.",
+        "Bob: I'm deeply troubled by Alice's death. Let's work together to find the truth and bring justice. Charlie, since you're concerned too, how about we discuss any unusual behavior or information you might h...",
+        "Diana: I agree with Charlie and Bob, let's focus on any unusual behavior or information regarding Alice's death. I haven't noticed anything out of the ordinary, but I'm open to suggestions.",
+        "Diana: I remember Alice mentioning she received a suspicious letter before her death. Let's discuss if anyone else noticed anything unusual regarding her mail.",
+        "Bob: Let's not jump to conclusions. I suggest we share any unusual information or behavior we've observed since last night regarding Alice's death.",
+        "You said: I'm shocked by Alice's sudden demise. Let's ensure no one else falls prey to such an unfortunate event. I haven't noticed anything unusual.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden death. Let's focus on finding out who did it.",
+        "Bob: I'm deeply troubled by Alice's death. Let's work together to find the truth and bring justice. Charlie, since you're concerned too, how about we discuss any unusual behavior or information you might h...",
+        "You said: I agree with Charlie and Bob, let's focus on any unusual behavior or information regarding Alice's death. I haven't noticed anything out of the ordinary, but I'm open to suggestions.",
+        "You said: I remember Alice mentioning she received a suspicious letter before her death. Let's discuss if anyone else noticed anything unusual regarding her mail.",
+        "Bob: Let's not jump to conclusions. I suggest we share any unusual information or behavior we've observed since last night regarding Alice's death.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's ensure no one else falls prey to such an unfortunate event. I haven't noticed anything unusual.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

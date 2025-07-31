@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0148",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 148,
+  "timestamp": "2025-07-31T16:27:41.038707",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Alice, let's be cautious and watch out for any suspicious behavior.",
+        "Charlie: I share Alice's concerns about Diana's death. Let's all be extra vigilant and report any suspicious activities.",
+        "Bob: I've noticed Charlie's concern towards Diana's death. Let's focus on understanding why he was so affected. We should ask him about his relationship with Diana.",
+        "You said: I've noticed some unusual behavior from Charlie regarding Diana's death. Let's press him for more information.",
+        "Charlie: I'm deeply saddened by Diana's passing. Let's all try to support each other during this difficult time. I have no information about her death.",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's be cautious and watch out for any suspicious behavior.",
+        "Charlie: I share Alice's concerns about Diana's death. Let's all be extra vigilant and report any suspicious activities.",
+        "You said: I've noticed Charlie's concern towards Diana's death. Let's focus on understanding why he was so affected. We should ask him about his relationship with Diana.",
+        "Alice: I've noticed some unusual behavior from Charlie regarding Diana's death. Let's press him for more information.",
+        "Charlie: I'm deeply saddened by Diana's passing. Let's all try to support each other during this difficult time. I have no information about her death.",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Alice, let's be cautious and watch out for any suspicious behavior.",
+        "You said: I share Alice's concerns about Diana's death. Let's all be extra vigilant and report any suspicious activities.",
+        "Bob: I've noticed Charlie's concern towards Diana's death. Let's focus on understanding why he was so affected. We should ask him about his relationship with Diana.",
+        "Alice: I've noticed some unusual behavior from Charlie regarding Diana's death. Let's press him for more information.",
+        "You said: I'm deeply saddened by Diana's passing. Let's all try to support each other during this difficult time. I have no information about her death."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

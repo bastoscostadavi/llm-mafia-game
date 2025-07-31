@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0057",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 57,
+  "timestamp": "2025-07-31T17:27:21.434693",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about the sudden death of Bob. Let's all be vigilant and make sure we trust everyone in this game.",
+        "You said: I agree with Diana, let's be vigilant. I'm particularly concerned about the sudden death of Bob. We should all share any suspicious observations or information we have.",
+        "Charlie: I also find Bob's sudden death concerning. Let's keep a close eye on each other and share any suspicions.",
+        "Diana: I'm still worried about Bob's sudden death. Let's try to find clues to uncover the truth behind it. We should all share any suspicious information we have, no matter how small it may seem.",
+        "Charlie: I've noticed that Bob was always the last to speak during discussions. Let's not overlook this unusual behavior. We should also consider the possibility of a mafia alliance. Let's stay alert and commu...",
+        "You said: Based on my investigation, I have reason to suspect that one of you is a mafioso. Let's focus on finding clues to uncover the truth behind Bob's death and ensure the safety of our group. We should be..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about the sudden death of Bob. Let's all be vigilant and make sure we trust everyone in this game.",
+        "Alice: I agree with Diana, let's be vigilant. I'm particularly concerned about the sudden death of Bob. We should all share any suspicious observations or information we have.",
+        "You said: I also find Bob's sudden death concerning. Let's keep a close eye on each other and share any suspicions.",
+        "Diana: I'm still worried about Bob's sudden death. Let's try to find clues to uncover the truth behind it. We should all share any suspicious information we have, no matter how small it may seem.",
+        "You said: I've noticed that Bob was always the last to speak during discussions. Let's not overlook this unusual behavior. We should also consider the possibility of a mafia alliance. Let's stay alert and commu...",
+        "Alice: Based on my investigation, I have reason to suspect that one of you is a mafioso. Let's focus on finding clues to uncover the truth behind Bob's death and ensure the safety of our group. We should be...",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about the sudden death of Bob. Let's all be vigilant and make sure we trust everyone in this game.",
+        "Alice: I agree with Diana, let's be vigilant. I'm particularly concerned about the sudden death of Bob. We should all share any suspicious observations or information we have.",
+        "Charlie: I also find Bob's sudden death concerning. Let's keep a close eye on each other and share any suspicions.",
+        "You said: I'm still worried about Bob's sudden death. Let's try to find clues to uncover the truth behind it. We should all share any suspicious information we have, no matter how small it may seem.",
+        "Charlie: I've noticed that Bob was always the last to speak during discussions. Let's not overlook this unusual behavior. We should also consider the possibility of a mafia alliance. Let's stay alert and commu...",
+        "Alice: Based on my investigation, I have reason to suspect that one of you is a mafioso. Let's focus on finding clues to uncover the truth behind Bob's death and ensure the safety of our group. We should be...",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

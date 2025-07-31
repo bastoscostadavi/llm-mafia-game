@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0072",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 72,
+  "timestamp": "2025-07-31T14:55:18.876012",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Diana: Alice, have you seen anything suspicious last night? Let's ensure a peaceful village.",
+        "You said: Alice: I had a strange dream last night. It left me feeling uneasy. Let's all be vigilant today.",
+        "Bob: I had an unsettling dream last night. Let's all keep a close eye on each other today.",
+        "Bob: Bob: Based on recent events, let's be extra cautious today and report any unusual behavior.",
+        "You said: Let's not jump to conclusions based on dreams or suspicions. We should focus on maintaining peace and unity in our village. Let's be open and trusting towards each other today.",
+        "Diana: Alice and Bob, your unusual behavior last night raises concern. Let's prioritize trust and transparency today."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: Alice, have you seen anything suspicious last night? Let's ensure a peaceful village.",
+        "Alice: Alice: I had a strange dream last night. It left me feeling uneasy. Let's all be vigilant today.",
+        "You said: I had an unsettling dream last night. Let's all keep a close eye on each other today.",
+        "You said: Bob: Based on recent events, let's be extra cautious today and report any unusual behavior.",
+        "Alice: Let's not jump to conclusions based on dreams or suspicions. We should focus on maintaining peace and unity in our village. Let's be open and trusting towards each other today.",
+        "Diana: Alice and Bob, your unusual behavior last night raises concern. Let's prioritize trust and transparency today.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "You said: Alice, have you seen anything suspicious last night? Let's ensure a peaceful village.",
+        "Alice: Alice: I had a strange dream last night. It left me feeling uneasy. Let's all be vigilant today.",
+        "Bob: I had an unsettling dream last night. Let's all keep a close eye on each other today.",
+        "Bob: Bob: Based on recent events, let's be extra cautious today and report any unusual behavior.",
+        "Alice: Let's not jump to conclusions based on dreams or suspicions. We should focus on maintaining peace and unity in our village. Let's be open and trusting towards each other today.",
+        "You said: Alice and Bob, your unusual behavior last night raises concern. Let's prioritize trust and transparency today.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

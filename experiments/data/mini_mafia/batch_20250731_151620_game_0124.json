@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0124",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 124,
+  "timestamp": "2025-07-31T16:16:22.734514",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Charlie: Alice's secret was revealed during the night. We must be cautious around her. Let's discuss our suspicions.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's make sure we all stay vigilant and work together to uncover the truth behind it.\"",
+        "Bob: \"I agree with Alice, let's focus on finding out who killed Diana. We should all keep an eye on each other during the day and night.\"",
+        "You said: \"Let's not jump to conclusions about Diana's death yet. We should continue investigating and trust each other during the day. I'll cooperate fully to find the truth.\"",
+        "Bob: \"I'd like to propose that we all share any suspicions or concerns we have, to help us investigate Diana's death together. Let's try to keep an open mind and work as a team.\"",
+        "Charlie: I've learned that Alice is evil. We must be extra cautious and vigilant, especially around her. Let's work together to outvote or outmaneuver her before she eliminates more of us."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: Alice's secret was revealed during the night. We must be cautious around her. Let's discuss our suspicions.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's make sure we all stay vigilant and work together to uncover the truth behind it.\"",
+        "You said: \"I agree with Alice, let's focus on finding out who killed Diana. We should all keep an eye on each other during the day and night.\"",
+        "Alice: \"Let's not jump to conclusions about Diana's death yet. We should continue investigating and trust each other during the day. I'll cooperate fully to find the truth.\"",
+        "You said: \"I'd like to propose that we all share any suspicions or concerns we have, to help us investigate Diana's death together. Let's try to keep an open mind and work as a team.\"",
+        "Charlie: I've learned that Alice is evil. We must be extra cautious and vigilant, especially around her. Let's work together to outvote or outmaneuver her before she eliminates more of us.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: Alice's secret was revealed during the night. We must be cautious around her. Let's discuss our suspicions.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's make sure we all stay vigilant and work together to uncover the truth behind it.\"",
+        "Bob: \"I agree with Alice, let's focus on finding out who killed Diana. We should all keep an eye on each other during the day and night.\"",
+        "Alice: \"Let's not jump to conclusions about Diana's death yet. We should continue investigating and trust each other during the day. I'll cooperate fully to find the truth.\"",
+        "Bob: \"I'd like to propose that we all share any suspicions or concerns we have, to help us investigate Diana's death together. Let's try to keep an open mind and work as a team.\"",
+        "You said: I've learned that Alice is evil. We must be extra cautious and vigilant, especially around her. Let's work together to outvote or outmaneuver her before she eliminates more of us.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

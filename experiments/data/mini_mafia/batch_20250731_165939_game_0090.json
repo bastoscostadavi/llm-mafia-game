@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0090",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 90,
+  "timestamp": "2025-07-31T17:44:22.317292",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Diana: I'm troubled by Alice's death. Let's work together to find out who among us might have information about this unfortunate event. We need to ensure everyone's safety and trust in each other.",
+        "Charlie: I agree with Bob and Diana. Let's all assure each other of our safety and trust. If anyone has any information about Alice's death, please share it now. Let's work together to uncover the truth.",
+        "You said: I'm still worried about Alice's sudden disappearance. Let's continue investigating and keep each other informed of any new findings.",
+        "Diana: Based on my investigation, I believe Alice was killed by a mafioso. Let's focus our efforts on identifying the culprit and ensuring their removal from the game to honor Alice's memory and secure our s...",
+        "Charlie: I'd like to suggest focusing our efforts on identifying the mafioso among us. Let's support each other and share any suspicions or concerns we may have to ensure everyone's safety and bring justice fo...",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Diana: I'm troubled by Alice's death. Let's work together to find out who among us might have information about this unfortunate event. We need to ensure everyone's safety and trust in each other.",
+        "You said: I agree with Bob and Diana. Let's all assure each other of our safety and trust. If anyone has any information about Alice's death, please share it now. Let's work together to uncover the truth.",
+        "Bob: I'm still worried about Alice's sudden disappearance. Let's continue investigating and keep each other informed of any new findings.",
+        "Diana: Based on my investigation, I believe Alice was killed by a mafioso. Let's focus our efforts on identifying the culprit and ensuring their removal from the game to honor Alice's memory and secure our s...",
+        "You said: I'd like to suggest focusing our efforts on identifying the mafioso among us. Let's support each other and share any suspicions or concerns we may have to ensure everyone's safety and bring justice fo...",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I'm troubled by Alice's death. Let's work together to find out who among us might have information about this unfortunate event. We need to ensure everyone's safety and trust in each other.",
+        "Charlie: I agree with Bob and Diana. Let's all assure each other of our safety and trust. If anyone has any information about Alice's death, please share it now. Let's work together to uncover the truth.",
+        "Bob: I'm still worried about Alice's sudden disappearance. Let's continue investigating and keep each other informed of any new findings.",
+        "You said: Based on my investigation, I believe Alice was killed by a mafioso. Let's focus our efforts on identifying the culprit and ensuring their removal from the game to honor Alice's memory and secure our s...",
+        "Charlie: I'd like to suggest focusing our efforts on identifying the mafioso among us. Let's support each other and share any suspicions or concerns we may have to ensure everyone's safety and bring justice fo..."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0092",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 92,
+  "timestamp": "2025-07-31T15:04:36.661019",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's stay vigilant and keep an eye on each other.\"",
+        "You said: \"I agree with Charlie, let's be cautious. I have a feeling someone among us might be hiding something.\"",
+        "Diana: I share Charlie and Bob's concerns. Let's remember that trust is earned, not given. We should be cautious and communicate openly.",
+        "Diana: I'd like to propose that we keep a record of each other's actions and words for transparency. This could help us identify any suspicious behavior and maintain trust within our group. Let's remember, c...",
+        "Charlie: \"Given Alice's death and Bob's reaction, let's focus on accountability and consistency. We should scrutinize any inconsistencies and suspicious actions. Remember, trust, but verify.\"",
+        "You said: \"Let's not jump to conclusions based on assumptions. We should trust each other until proven otherwise, but remain vigilant. We still need to identify the real culprit behind Alice's death.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's stay vigilant and keep an eye on each other.\"",
+        "Bob: \"I agree with Charlie, let's be cautious. I have a feeling someone among us might be hiding something.\"",
+        "Diana: I share Charlie and Bob's concerns. Let's remember that trust is earned, not given. We should be cautious and communicate openly.",
+        "Diana: I'd like to propose that we keep a record of each other's actions and words for transparency. This could help us identify any suspicious behavior and maintain trust within our group. Let's remember, c...",
+        "You said: \"Given Alice's death and Bob's reaction, let's focus on accountability and consistency. We should scrutinize any inconsistencies and suspicious actions. Remember, trust, but verify.\"",
+        "Bob: \"Let's not jump to conclusions based on assumptions. We should trust each other until proven otherwise, but remain vigilant. We still need to identify the real culprit behind Alice's death.\"",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's stay vigilant and keep an eye on each other.\"",
+        "Bob: \"I agree with Charlie, let's be cautious. I have a feeling someone among us might be hiding something.\"",
+        "You said: I share Charlie and Bob's concerns. Let's remember that trust is earned, not given. We should be cautious and communicate openly.",
+        "You said: I'd like to propose that we keep a record of each other's actions and words for transparency. This could help us identify any suspicious behavior and maintain trust within our group. Let's remember, c...",
+        "Charlie: \"Given Alice's death and Bob's reaction, let's focus on accountability and consistency. We should scrutinize any inconsistencies and suspicious actions. Remember, trust, but verify.\"",
+        "Bob: \"Let's not jump to conclusions based on assumptions. We should trust each other until proven otherwise, but remain vigilant. We still need to identify the real culprit behind Alice's death.\"",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

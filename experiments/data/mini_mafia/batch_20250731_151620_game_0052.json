@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0052",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 52,
+  "timestamp": "2025-07-31T15:41:59.843594",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden death. Let's be vigilant and ensure we protect each other during this difficult time.",
+        "Diana: I agree with Charlie, let's be cautious and support each other. Alice's passing is a reminder of the importance of trust and unity in our group.",
+        "You said: I'm troubled by Alice's passing and believe it's crucial we remain vigilant. Let's not forget, Charlie was the last to have interacted with her before her death. We should be cautious with him.",
+        "You said: I'd like to remind everyone of the unusual circumstances surrounding Alice's death and Charlie's recent interaction with her. Let's stay vigilant and consider the potential risks.",
+        "Charlie: I'm saddened by Alice's passing and want to assure everyone I had no involvement. Let's focus on finding the true culprit and healing as a group.",
+        "Diana: I support Charlie's call for vigilance. Let's work together to uncover the truth behind Alice's death and ensure our group's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden death. Let's be vigilant and ensure we protect each other during this difficult time.",
+        "Diana: I agree with Charlie, let's be cautious and support each other. Alice's passing is a reminder of the importance of trust and unity in our group.",
+        "Bob: I'm troubled by Alice's passing and believe it's crucial we remain vigilant. Let's not forget, Charlie was the last to have interacted with her before her death. We should be cautious with him.",
+        "Bob: I'd like to remind everyone of the unusual circumstances surrounding Alice's death and Charlie's recent interaction with her. Let's stay vigilant and consider the potential risks.",
+        "You said: I'm saddened by Alice's passing and want to assure everyone I had no involvement. Let's focus on finding the true culprit and healing as a group.",
+        "Diana: I support Charlie's call for vigilance. Let's work together to uncover the truth behind Alice's death and ensure our group's safety.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden death. Let's be vigilant and ensure we protect each other during this difficult time.",
+        "You said: I agree with Charlie, let's be cautious and support each other. Alice's passing is a reminder of the importance of trust and unity in our group.",
+        "Bob: I'm troubled by Alice's passing and believe it's crucial we remain vigilant. Let's not forget, Charlie was the last to have interacted with her before her death. We should be cautious with him.",
+        "Bob: I'd like to remind everyone of the unusual circumstances surrounding Alice's death and Charlie's recent interaction with her. Let's stay vigilant and consider the potential risks.",
+        "Charlie: I'm saddened by Alice's passing and want to assure everyone I had no involvement. Let's focus on finding the true culprit and healing as a group.",
+        "You said: I support Charlie's call for vigilance. Let's work together to uncover the truth behind Alice's death and ensure our group's safety.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

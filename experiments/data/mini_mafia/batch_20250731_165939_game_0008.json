@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0008",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 8,
+  "timestamp": "2025-07-31T17:04:01.494675",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Alice, let's all be cautious and make sure we trust each other. I have no reason to suspect anyone in particular, but we should all keep an open line of communication.",
+        "Bob: I share Alice's concerns about Charlie's sudden disappearance. Let's all be vigilant and make sure we trust each other. I'll be paying extra close attention to any unusual behavior.",
+        "Bob: I'd like to propose that we vote for Charlie's last known actions or whereabouts today. It's important we get to the bottom of this.",
+        "Diana: I support Bob's proposal to vote for Charlie's last known actions or whereabouts today. Let's work together to uncover any clues that may lead us to the truth.",
+        "You said: I'd like to echo Diana's words about keeping open lines of communication and staying vigilant. Let's not jump to conclusions and focus on gathering more information first."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Alice, let's all be cautious and make sure we trust each other. I have no reason to suspect anyone in particular, but we should all keep an open line of communication.",
+        "You said: I share Alice's concerns about Charlie's sudden disappearance. Let's all be vigilant and make sure we trust each other. I'll be paying extra close attention to any unusual behavior.",
+        "You said: I'd like to propose that we vote for Charlie's last known actions or whereabouts today. It's important we get to the bottom of this.",
+        "Diana: I support Bob's proposal to vote for Charlie's last known actions or whereabouts today. Let's work together to uncover any clues that may lead us to the truth.",
+        "Alice: I'd like to echo Diana's words about keeping open lines of communication and staying vigilant. Let's not jump to conclusions and focus on gathering more information first.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's all be cautious and make sure we trust each other. I have no reason to suspect anyone in particular, but we should all keep an open line of communication.",
+        "Bob: I share Alice's concerns about Charlie's sudden disappearance. Let's all be vigilant and make sure we trust each other. I'll be paying extra close attention to any unusual behavior.",
+        "Bob: I'd like to propose that we vote for Charlie's last known actions or whereabouts today. It's important we get to the bottom of this.",
+        "You said: I support Bob's proposal to vote for Charlie's last known actions or whereabouts today. Let's work together to uncover any clues that may lead us to the truth.",
+        "Alice: I'd like to echo Diana's words about keeping open lines of communication and staying vigilant. Let's not jump to conclusions and focus on gathering more information first.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

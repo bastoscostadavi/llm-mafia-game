@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0012",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 12,
+  "timestamp": "2025-07-31T15:22:26.061140",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's work together to find out what happened.\"",
+        "Bob: I agree with Charlie, let's investigate Diana's death together. We need to find out who among us is the mafia. Let's keep an open mind and share any suspicious information we have.",
+        "You said: I agree with Charlie and Bob, let's investigate Diana's death together. I have nothing suspicious to share at the moment, but I will keep observing everyone's behavior carefully. Let's work together t...",
+        "Bob: I'm troubled by Diana's death and Charlie's suspicious behavior. We should be cautious and investigate further. Let's share any information that might help us uncover the truth.",
+        "Charlie: \"I'm surprised by Diana's death. Let's all stay vigilant and work together to uncover the truth behind it.\"",
+        "You said: I'm worried about Diana's sudden death and think we should focus our investigation on possible leads. Let's not jump to conclusions or accuse each other without solid evidence. We can work together to...",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Bob, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's work together to find out what happened.\"",
+        "You said: I agree with Charlie, let's investigate Diana's death together. We need to find out who among us is the mafia. Let's keep an open mind and share any suspicious information we have.",
+        "Alice: I agree with Charlie and Bob, let's investigate Diana's death together. I have nothing suspicious to share at the moment, but I will keep observing everyone's behavior carefully. Let's work together t...",
+        "You said: I'm troubled by Diana's death and Charlie's suspicious behavior. We should be cautious and investigate further. Let's share any information that might help us uncover the truth.",
+        "Charlie: \"I'm surprised by Diana's death. Let's all stay vigilant and work together to uncover the truth behind it.\"",
+        "Alice: I'm worried about Diana's sudden death and think we should focus our investigation on possible leads. Let's not jump to conclusions or accuse each other without solid evidence. We can work together to...",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Bob, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's work together to find out what happened.\"",
+        "Bob: I agree with Charlie, let's investigate Diana's death together. We need to find out who among us is the mafia. Let's keep an open mind and share any suspicious information we have.",
+        "Alice: I agree with Charlie and Bob, let's investigate Diana's death together. I have nothing suspicious to share at the moment, but I will keep observing everyone's behavior carefully. Let's work together t...",
+        "Bob: I'm troubled by Diana's death and Charlie's suspicious behavior. We should be cautious and investigate further. Let's share any information that might help us uncover the truth.",
+        "You said: \"I'm surprised by Diana's death. Let's all stay vigilant and work together to uncover the truth behind it.\"",
+        "Alice: I'm worried about Diana's sudden death and think we should focus our investigation on possible leads. Let's not jump to conclusions or accuse each other without solid evidence. We can work together to..."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

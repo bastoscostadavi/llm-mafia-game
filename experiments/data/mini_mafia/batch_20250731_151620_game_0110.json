@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0110",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 110,
+  "timestamp": "2025-07-31T16:09:40.549783",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's be cautious and try to find out who could have done this.",
+        "You said: Diana, have you seen or heard anything unusual last night? I'm concerned about Charlie's death.",
+        "Diana: I'm saddened by Charlie's death. Let's work together to find the real culprit. I have faith in our ability to uncover the truth.",
+        "Bob: I'm worried about Charlie's death and think we should focus our investigation on those who had the most opportunity or motivation to harm him. Let's be vigilant.",
+        "You said: Diana, have you seen or heard anything unusual last night that could have led to Charlie's death? Let's work together to find out the truth.",
+        "Diana: Let's not jump to conclusions. We should focus on gathering more information before accusing anyone. I believe we can find the truth together."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's be cautious and try to find out who could have done this.",
+        "Alice: Diana, have you seen or heard anything unusual last night? I'm concerned about Charlie's death.",
+        "Diana: I'm saddened by Charlie's death. Let's work together to find the real culprit. I have faith in our ability to uncover the truth.",
+        "You said: I'm worried about Charlie's death and think we should focus our investigation on those who had the most opportunity or motivation to harm him. Let's be vigilant.",
+        "Alice: Diana, have you seen or heard anything unusual last night that could have led to Charlie's death? Let's work together to find out the truth.",
+        "Diana: Let's not jump to conclusions. We should focus on gathering more information before accusing anyone. I believe we can find the truth together.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's be cautious and try to find out who could have done this.",
+        "Alice: Diana, have you seen or heard anything unusual last night? I'm concerned about Charlie's death.",
+        "You said: I'm saddened by Charlie's death. Let's work together to find the real culprit. I have faith in our ability to uncover the truth.",
+        "Bob: I'm worried about Charlie's death and think we should focus our investigation on those who had the most opportunity or motivation to harm him. Let's be vigilant.",
+        "Alice: Diana, have you seen or heard anything unusual last night that could have led to Charlie's death? Let's work together to find out the truth.",
+        "You said: Let's not jump to conclusions. We should focus on gathering more information before accusing anyone. I believe we can find the truth together.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0167",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 167,
+  "timestamp": "2025-07-31T16:36:30.636057",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I find it odd that Diana was found dead so suddenly. Let's stay vigilant and ensure we're all working together to uncover the truth.",
+        "You said: I agree with Charlie, let's keep a close eye on each other and communicate openly to ensure trust within our group.",
+        "Bob: I find Diana's sudden death suspicious. Let's all be vigilant and open about our actions and thoughts to uncover the truth.",
+        "Charlie: I find it unfortunate that we've lost Diana, but let's focus on identifying the culprit. Trust is essential, so let's communicate openly and honestly.",
+        "You said: I'd like to propose a vote for Bob tonight. I find his suspicions towards Diana's death unsettling, and his advocacy for open communication seems like a cover. Let's trust our instincts and ensure the...",
+        "Bob: I'd like to remind everyone that open communication is crucial to uncovering the truth. Let's continue to share our thoughts and suspicions honestly. The loss of Diana is unfortunate, but we must stay...",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: I find it odd that Diana was found dead so suddenly. Let's stay vigilant and ensure we're all working together to uncover the truth.",
+        "Alice: I agree with Charlie, let's keep a close eye on each other and communicate openly to ensure trust within our group.",
+        "You said: I find Diana's sudden death suspicious. Let's all be vigilant and open about our actions and thoughts to uncover the truth.",
+        "Charlie: I find it unfortunate that we've lost Diana, but let's focus on identifying the culprit. Trust is essential, so let's communicate openly and honestly.",
+        "Alice: I'd like to propose a vote for Bob tonight. I find his suspicions towards Diana's death unsettling, and his advocacy for open communication seems like a cover. Let's trust our instincts and ensure the...",
+        "You said: I'd like to remind everyone that open communication is crucial to uncovering the truth. Let's continue to share our thoughts and suspicions honestly. The loss of Diana is unfortunate, but we must stay..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: I find it odd that Diana was found dead so suddenly. Let's stay vigilant and ensure we're all working together to uncover the truth.",
+        "Alice: I agree with Charlie, let's keep a close eye on each other and communicate openly to ensure trust within our group.",
+        "Bob: I find Diana's sudden death suspicious. Let's all be vigilant and open about our actions and thoughts to uncover the truth.",
+        "You said: I find it unfortunate that we've lost Diana, but let's focus on identifying the culprit. Trust is essential, so let's communicate openly and honestly.",
+        "Alice: I'd like to propose a vote for Bob tonight. I find his suspicions towards Diana's death unsettling, and his advocacy for open communication seems like a cover. Let's trust our instincts and ensure the...",
+        "Bob: I'd like to remind everyone that open communication is crucial to uncovering the truth. Let's continue to share our thoughts and suspicions honestly. The loss of Diana is unfortunate, but we must stay...",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

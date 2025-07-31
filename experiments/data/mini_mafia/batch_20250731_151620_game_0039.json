@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0039",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 39,
+  "timestamp": "2025-07-31T15:35:52.903930",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Diana: \"I investigated Bob last night. Be cautious, Bob might be the mafioso.\"",
+        "You said: I find it strange that someone has already been found dead. Let's all stay vigilant and ensure everyone's safety.",
+        "Charlie: I agree with Bob, let's all be cautious and ensure everyone's safety. However, I'm concerned about the sudden death and the fact that Alice was investigated last night. Let's keep an eye on Diana's ac...",
+        "You said: I'm concerned about the recent turn of events. Let's focus on ensuring everyone's safety and trust the investigation process. We should be cautious but avoid jumping to conclusions.",
+        "Charlie: Given the sudden death and Diana's investigation, I suggest we focus on ensuring everyone's safety and trust the investigation process. However, let's remain vigilant and keep an open communication ch...",
+        "Diana: \"Let's focus on ensuring everyone's safety and trust the investigation process. I'll continue investigating and encourage open communication.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: \"I investigated Bob last night. Be cautious, Bob might be the mafioso.\"",
+        "Bob: I find it strange that someone has already been found dead. Let's all stay vigilant and ensure everyone's safety.",
+        "You said: I agree with Bob, let's all be cautious and ensure everyone's safety. However, I'm concerned about the sudden death and the fact that Alice was investigated last night. Let's keep an eye on Diana's ac...",
+        "Bob: I'm concerned about the recent turn of events. Let's focus on ensuring everyone's safety and trust the investigation process. We should be cautious but avoid jumping to conclusions.",
+        "You said: Given the sudden death and Diana's investigation, I suggest we focus on ensuring everyone's safety and trust the investigation process. However, let's remain vigilant and keep an open communication ch...",
+        "Diana: \"Let's focus on ensuring everyone's safety and trust the investigation process. I'll continue investigating and encourage open communication.\"",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: \"I investigated Bob last night. Be cautious, Bob might be the mafioso.\"",
+        "Bob: I find it strange that someone has already been found dead. Let's all stay vigilant and ensure everyone's safety.",
+        "Charlie: I agree with Bob, let's all be cautious and ensure everyone's safety. However, I'm concerned about the sudden death and the fact that Alice was investigated last night. Let's keep an eye on Diana's ac...",
+        "Bob: I'm concerned about the recent turn of events. Let's focus on ensuring everyone's safety and trust the investigation process. We should be cautious but avoid jumping to conclusions.",
+        "Charlie: Given the sudden death and Diana's investigation, I suggest we focus on ensuring everyone's safety and trust the investigation process. However, let's remain vigilant and keep an open communication ch...",
+        "You said: \"Let's focus on ensuring everyone's safety and trust the investigation process. I'll continue investigating and encourage open communication.\"",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0076",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 76,
+  "timestamp": "2025-07-31T15:53:23.469008",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Bob, let's keep an eye on each other. If anyone notices anything suspicious, please share it with the group.",
+        "You said: I'm worried about Charlie's sudden disappearance. Let's be extra cautious and keep an eye out for any unusual behavior.",
+        "You said: I'm troubled by Charlie's absence and the suspicious statements from Bob. Let's be extra cautious and remember, transparency builds trust.",
+        "Bob: I'm still concerned about Charlie's sudden disappearance. Let's remain vigilant and remember, trust is key in this game.",
+        "Diana: I'd like to propose we focus on identifying the culprit behind Charlie's disappearance. Let's all share any suspicious observations we've had since last night. Together, we can increase our chances of...",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Bob, let's keep an eye on each other. If anyone notices anything suspicious, please share it with the group.",
+        "Alice: I'm worried about Charlie's sudden disappearance. Let's be extra cautious and keep an eye out for any unusual behavior.",
+        "Alice: I'm troubled by Charlie's absence and the suspicious statements from Bob. Let's be extra cautious and remember, transparency builds trust.",
+        "You said: I'm still concerned about Charlie's sudden disappearance. Let's remain vigilant and remember, trust is key in this game.",
+        "Diana: I'd like to propose we focus on identifying the culprit behind Charlie's disappearance. Let's all share any suspicious observations we've had since last night. Together, we can increase our chances of..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Bob, let's keep an eye on each other. If anyone notices anything suspicious, please share it with the group.",
+        "Alice: I'm worried about Charlie's sudden disappearance. Let's be extra cautious and keep an eye out for any unusual behavior.",
+        "Alice: I'm troubled by Charlie's absence and the suspicious statements from Bob. Let's be extra cautious and remember, transparency builds trust.",
+        "Bob: I'm still concerned about Charlie's sudden disappearance. Let's remain vigilant and remember, trust is key in this game.",
+        "You said: I'd like to propose we focus on identifying the culprit behind Charlie's disappearance. Let's all share any suspicious observations we've had since last night. Together, we can increase our chances of...",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

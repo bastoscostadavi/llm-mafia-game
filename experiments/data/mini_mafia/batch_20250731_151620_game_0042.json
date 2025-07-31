@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0042",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 42,
+  "timestamp": "2025-07-31T15:37:18.022039",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: \"I investigated Charlie and found him to be evil. Let's vote for Charlie.\"",
+        "Charlie: \"I found a strange footprint near the scene of the crime. It's not Bob's size. Could it be relevant?\"",
+        "You said: \"The footprint could be important, let's discuss it further before voting.\"",
+        "Charlie: \"I believe the footprint could be a clue. Let's focus on investigating it further before jumping to conclusions about the vote.\"",
+        "You said: \"Let's continue investigating the mysterious footprint before making any hasty decisions. It could lead us to crucial information.\"",
+        "Diana: \"Let's not forget the suspicious footprint near the crime scene. We should investigate it further before voting.\"",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: \"I investigated Charlie and found him to be evil. Let's vote for Charlie.\"",
+        "You said: \"I found a strange footprint near the scene of the crime. It's not Bob's size. Could it be relevant?\"",
+        "Alice: \"The footprint could be important, let's discuss it further before voting.\"",
+        "You said: \"I believe the footprint could be a clue. Let's focus on investigating it further before jumping to conclusions about the vote.\"",
+        "Alice: \"Let's continue investigating the mysterious footprint before making any hasty decisions. It could lead us to crucial information.\"",
+        "Diana: \"Let's not forget the suspicious footprint near the crime scene. We should investigate it further before voting.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: \"I investigated Charlie and found him to be evil. Let's vote for Charlie.\"",
+        "Charlie: \"I found a strange footprint near the scene of the crime. It's not Bob's size. Could it be relevant?\"",
+        "Alice: \"The footprint could be important, let's discuss it further before voting.\"",
+        "Charlie: \"I believe the footprint could be a clue. Let's focus on investigating it further before jumping to conclusions about the vote.\"",
+        "Alice: \"Let's continue investigating the mysterious footprint before making any hasty decisions. It could lead us to crucial information.\"",
+        "You said: \"Let's not forget the suspicious footprint near the crime scene. We should investigate it further before voting.\"",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

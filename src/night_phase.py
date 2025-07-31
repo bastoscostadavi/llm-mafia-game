@@ -16,21 +16,13 @@ class NightPhase:
         if len(alive) <= 1:
             return
         
-        # Collect all night actions
-        actions = self._collect_night_actions()
-        
-        # Resolve actions and announce results
-        self._resolve_night_actions(actions)
+        # Process all night actions
+        self._process_night_actions()
     
-    def _collect_night_actions(self) -> dict:
-        """Collect actions from all night-active roles"""
+    def _process_night_actions(self):
+        """Process all night actions: kills and investigations"""
         alive = self.state.get_alive_players()
         alive_names = self.state.get_alive_names()
-        
-        actions = {
-            'mafioso_kill': None,
-            'detective_investigate': None
-        }
         
         # One random mafioso chooses kill target
         mafiosos_alive = [a for a in alive if a.role == "mafioso"]
@@ -38,24 +30,18 @@ class NightPhase:
             chosen_mafioso = random.choice(mafiosos_alive)
             target = self._get_night_action(chosen_mafioso, alive_names, "kill")
             if target:
-                actions['mafioso_kill'] = (chosen_mafioso, target)
-                print(f"[SPECTATOR] {chosen_mafioso.name} (chosen mafioso) targets {target}")
+                self._kill(chosen_mafioso, target)
         
         # Detective acts independently
         detective_actors = [a for a in alive if a.role == "detective"]
-        
         for agent in detective_actors:
-            if agent.role == "detective":
-                target = self._get_night_action(agent, alive_names, "investigate")
-                if target:
-                    actions['detective_investigate'] = (agent, target)
-                    self._investigate(agent, target)
-        
-        return actions
+            target = self._get_night_action(agent, alive_names, "investigate")
+            if target:
+                self._investigate(agent, target)
     
     
     def _get_night_action(self, agent, alive_names: List[str], action: str) -> Optional[str]:
-        """Get night action from non-mafioso roles"""
+        """Get night action"""
         candidates = [n for n in alive_names if n != agent.name]
         
         if not candidates:
@@ -102,10 +88,32 @@ Reply with just the name (otherwise a random choice will be made for you): [/INS
                 return name
         
         # If no valid name found, make random choice
-        random_choice = random.choice(candidates)
+        fallback_choice = random.choice(candidates)
         if agent.debug_prompts:
-            print(f"[DEBUG] {agent.name} failed to parse response, random choice: {random_choice}")
-        return random_choice
+            print(f"[DEBUG] {agent.name} failed to parse response, random choice: {fallback_choice}")
+        return fallback_choice
+    
+    def _kill(self, chosen_mafioso, target_name: str):
+        """Mafioso kills target and updates memories"""
+        # Kill the target
+        victim = self.state.get_agent_by_name(target_name)
+        victim.alive = False
+        
+        print(f"[SPECTATOR] {chosen_mafioso.name} (chosen mafioso) kills {target_name}")
+        print(f"\nFound dead: {target_name}")
+        
+        # All mafiosos learn about the kill
+        mafiosos_alive = [a for a in self.state.agents if a.role == "mafioso" and a.alive]
+        for mafioso in mafiosos_alive:
+            if mafioso == chosen_mafioso:
+                kill_memory = f"You killed {target_name}"
+            else:
+                kill_memory = f"The Mafia member {chosen_mafioso.name} killed {target_name}"
+            mafioso.remember(kill_memory)
+        
+        # Everyone learns who died
+        for agent in self.state.get_alive_players():
+            agent.remember(f"Night {self.state.round}: {target_name} was found dead")
     
     def _investigate(self, detective, target_name: str):
         """Detective learns if target is good or evil"""
@@ -118,42 +126,3 @@ Reply with just the name (otherwise a random choice will be made for you): [/INS
         detective.remember(f"You investigated {target_name}: {result}")
         print(f"[SPECTATOR] Detective {detective.name} investigates {target_name} (learns: {result})")
     
-    def _resolve_night_actions(self, actions: dict):
-        """Resolve all night actions and announce deaths"""
-        print("\n[SPECTATOR] Resolving night actions...")
-        killed = []
-        
-        # Resolve mafioso kill
-        if actions['mafioso_kill']:
-            chosen_mafioso, target = actions['mafioso_kill']
-            killed.append(target)
-        
-        
-        # Announce deaths
-        if killed:
-            for victim_name in killed:
-                victim = self.state.get_agent_by_name(victim_name)
-                victim.alive = False
-            
-            death_msg = f"Found dead: {', '.join(killed)}"
-            print(f"\n{death_msg}")
-            
-            # Mafiosi remember the kill action
-            if actions['mafioso_kill']:
-                chosen_mafioso, target = actions['mafioso_kill']
-                # All mafiosos learn about the kill, but only the chosen one remembers making it
-                mafiosos_alive = [a for a in self.state.agents if a.role == "mafioso" and a.alive]
-                for mafioso in mafiosos_alive:
-                    if mafioso == chosen_mafioso:
-                        kill_memory = f"You killed {target}"
-                    else:
-                        kill_memory = f"The Mafia member {chosen_mafioso.name} killed {target}"
-                    mafioso.remember(kill_memory)
-            
-            # Everyone learns who died (including mafiosos, but this comes after their kill memory)
-            for agent in self.state.get_alive_players():
-                agent.remember(f"Night {self.state.round}: {', '.join(killed)} was found dead")
-        else:
-            print("\nNobody died tonight!")
-            for agent in self.state.get_alive_players():
-                agent.remember(f"Night {self.state.round}: Nobody died")

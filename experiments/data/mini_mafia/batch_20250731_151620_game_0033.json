@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0033",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 33,
+  "timestamp": "2025-07-31T15:33:04.420820",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Diana, let's support each other. I'm here for you both. (trying to hide my true intentions)",
+        "Charlie: Based on my investigation, I have reason to believe one of you is a mafioso. Let's be cautious and vigilant during our discussions. We must ensure the safety of our group.",
+        "Charlie: Based on recent events, it's important that we remain vigilant and trust no one blindly. Let's work together to uncover the truth behind Bob's death and ensure the safety of our group.",
+        "Diana: Based on Charlie's investigation, it's crucial we focus on identifying the mafioso among us. Let's work together to uncover any suspicious behavior.",
+        "You said: I'd like to propose we focus on finding clues related to Bob's death instead of speculating about mafia membership. Let's remain calm and cooperate in our investigation."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Diana, let's support each other. I'm here for you both. (trying to hide my true intentions)",
+        "You said: Based on my investigation, I have reason to believe one of you is a mafioso. Let's be cautious and vigilant during our discussions. We must ensure the safety of our group.",
+        "You said: Based on recent events, it's important that we remain vigilant and trust no one blindly. Let's work together to uncover the truth behind Bob's death and ensure the safety of our group.",
+        "Diana: Based on Charlie's investigation, it's crucial we focus on identifying the mafioso among us. Let's work together to uncover any suspicious behavior.",
+        "Alice: I'd like to propose we focus on finding clues related to Bob's death instead of speculating about mafia membership. Let's remain calm and cooperate in our investigation.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Diana, let's support each other. I'm here for you both. (trying to hide my true intentions)",
+        "Charlie: Based on my investigation, I have reason to believe one of you is a mafioso. Let's be cautious and vigilant during our discussions. We must ensure the safety of our group.",
+        "Charlie: Based on recent events, it's important that we remain vigilant and trust no one blindly. Let's work together to uncover the truth behind Bob's death and ensure the safety of our group.",
+        "You said: Based on Charlie's investigation, it's crucial we focus on identifying the mafioso among us. Let's work together to uncover any suspicious behavior.",
+        "Alice: I'd like to propose we focus on finding clues related to Bob's death instead of speculating about mafia membership. Let's remain calm and cooperate in our investigation.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

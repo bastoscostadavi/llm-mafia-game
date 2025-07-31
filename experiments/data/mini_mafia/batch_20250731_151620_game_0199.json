@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0199",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 199,
+  "timestamp": "2025-07-31T16:51:13.196473",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I'm troubled by Bob's death. Let's work together to find out who among us is the mafia. We should be cautious and trust but verify.",
+        "Diana: I agree with Alice and Charlie. Let's all be vigilant and trust but verify. I also want to express my condolences to Bob's family. May justice be served.",
+        "You said: I'm worried about the strange turn of events. Let's ensure we all cooperate to uncover the truth and bring the mafia to justice.",
+        "Diana: I'm shocked by Bob's death and believe it's crucial we work together to uncover the truth. Let's stay focused and vigilant.",
+        "Charlie: Based on my investigation and given the suspicious circumstances surrounding Bob's death, I suggest we focus our investigations on Alice and Diana. Let's cooperate to uncover any hidden information."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I'm troubled by Bob's death. Let's work together to find out who among us is the mafia. We should be cautious and trust but verify.",
+        "Diana: I agree with Alice and Charlie. Let's all be vigilant and trust but verify. I also want to express my condolences to Bob's family. May justice be served.",
+        "Alice: I'm worried about the strange turn of events. Let's ensure we all cooperate to uncover the truth and bring the mafia to justice.",
+        "Diana: I'm shocked by Bob's death and believe it's crucial we work together to uncover the truth. Let's stay focused and vigilant.",
+        "You said: Based on my investigation and given the suspicious circumstances surrounding Bob's death, I suggest we focus our investigations on Alice and Diana. Let's cooperate to uncover any hidden information.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I'm troubled by Bob's death. Let's work together to find out who among us is the mafia. We should be cautious and trust but verify.",
+        "You said: I agree with Alice and Charlie. Let's all be vigilant and trust but verify. I also want to express my condolences to Bob's family. May justice be served.",
+        "Alice: I'm worried about the strange turn of events. Let's ensure we all cooperate to uncover the truth and bring the mafia to justice.",
+        "You said: I'm shocked by Bob's death and believe it's crucial we work together to uncover the truth. Let's stay focused and vigilant.",
+        "Charlie: Based on my investigation and given the suspicious circumstances surrounding Bob's death, I suggest we focus our investigations on Alice and Diana. Let's cooperate to uncover any hidden information.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

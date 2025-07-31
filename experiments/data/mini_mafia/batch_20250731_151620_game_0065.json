@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0065",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 65,
+  "timestamp": "2025-07-31T15:48:11.326445",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other and work together to uncover the truth.\"",
+        "Charlie: \"I agree with Alice, let's be vigilant. I investigated Alice and found nothing incriminating, but I'm still concerned about Diana's disappearance.\"",
+        "Bob: \"I share Alice and Charlie's concerns about Diana's disappearance. Let's try to gather more information during the day and stay alert at night.\"",
+        "Bob: \"I noticed Charlie investigated Alice last night. Let's focus on gathering more information about Diana's disappearance and be cautious of any unusual behavior.\"",
+        "You said: \"I'd like to propose we form a temporary alliance to investigate Diana's disappearance further. Let's share any suspicious observations and work together during the day.\"",
+        "Charlie: \"Let's not jump to conclusions about each other based on investigations. We should focus on finding clues related to Diana's disappearance.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other and work together to uncover the truth.\"",
+        "Charlie: \"I agree with Alice, let's be vigilant. I investigated Alice and found nothing incriminating, but I'm still concerned about Diana's disappearance.\"",
+        "You said: \"I share Alice and Charlie's concerns about Diana's disappearance. Let's try to gather more information during the day and stay alert at night.\"",
+        "You said: \"I noticed Charlie investigated Alice last night. Let's focus on gathering more information about Diana's disappearance and be cautious of any unusual behavior.\"",
+        "Alice: \"I'd like to propose we form a temporary alliance to investigate Diana's disappearance further. Let's share any suspicious observations and work together during the day.\"",
+        "Charlie: \"Let's not jump to conclusions about each other based on investigations. We should focus on finding clues related to Diana's disappearance.\"",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other and work together to uncover the truth.\"",
+        "You said: \"I agree with Alice, let's be vigilant. I investigated Alice and found nothing incriminating, but I'm still concerned about Diana's disappearance.\"",
+        "Bob: \"I share Alice and Charlie's concerns about Diana's disappearance. Let's try to gather more information during the day and stay alert at night.\"",
+        "Bob: \"I noticed Charlie investigated Alice last night. Let's focus on gathering more information about Diana's disappearance and be cautious of any unusual behavior.\"",
+        "Alice: \"I'd like to propose we form a temporary alliance to investigate Diana's disappearance further. Let's share any suspicious observations and work together during the day.\"",
+        "You said: \"Let's not jump to conclusions about each other based on investigations. We should focus on finding clues related to Diana's disappearance.\"",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

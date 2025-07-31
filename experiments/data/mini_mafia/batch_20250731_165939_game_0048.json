@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0048",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 48,
+  "timestamp": "2025-07-31T17:23:08.436431",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: \"I find it strange that Charlie was found dead so suddenly. Let's all be vigilant and ensure we protect ourselves from any potential threats.\"",
+        "Bob: \"I agree with Alice, let's stay vigilant. But I also want to express my condolences for Charlie. It's a sad day for us all.\"",
+        "Diana: \"I'd like to propose a vote for Bob tonight. Alice's suspicious behavior and her comment about staying vigilant have raised my concerns. Let's work together to ensure our safety.\"",
+        "Diana: \"I'd like to reiterate the importance of staying vigilant and working together to ensure the safety of our group. Let's not jump to conclusions, but keep an open dialogue and trust each other's judgem...",
+        "Bob: \"I understand the concerns, but let's not jump to conclusions. Let's focus on keeping our group united and trust each other. We should also remember that investigations and votes are important tools t...",
+        "You said: \"I'd like to remind everyone of the importance of trust and unity in our group. Let's focus on working together and avoid making hasty decisions based on suspicions.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: \"I find it strange that Charlie was found dead so suddenly. Let's all be vigilant and ensure we protect ourselves from any potential threats.\"",
+        "You said: \"I agree with Alice, let's stay vigilant. But I also want to express my condolences for Charlie. It's a sad day for us all.\"",
+        "Diana: \"I'd like to propose a vote for Bob tonight. Alice's suspicious behavior and her comment about staying vigilant have raised my concerns. Let's work together to ensure our safety.\"",
+        "Diana: \"I'd like to reiterate the importance of staying vigilant and working together to ensure the safety of our group. Let's not jump to conclusions, but keep an open dialogue and trust each other's judgem...",
+        "You said: \"I understand the concerns, but let's not jump to conclusions. Let's focus on keeping our group united and trust each other. We should also remember that investigations and votes are important tools t...",
+        "Alice: \"I'd like to remind everyone of the importance of trust and unity in our group. Let's focus on working together and avoid making hasty decisions based on suspicions.\"",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Alice: \"I find it strange that Charlie was found dead so suddenly. Let's all be vigilant and ensure we protect ourselves from any potential threats.\"",
+        "Bob: \"I agree with Alice, let's stay vigilant. But I also want to express my condolences for Charlie. It's a sad day for us all.\"",
+        "You said: \"I'd like to propose a vote for Bob tonight. Alice's suspicious behavior and her comment about staying vigilant have raised my concerns. Let's work together to ensure our safety.\"",
+        "You said: \"I'd like to reiterate the importance of staying vigilant and working together to ensure the safety of our group. Let's not jump to conclusions, but keep an open dialogue and trust each other's judgem...",
+        "Bob: \"I understand the concerns, but let's not jump to conclusions. Let's focus on keeping our group united and trust each other. We should also remember that investigations and votes are important tools t...",
+        "Alice: \"I'd like to remind everyone of the importance of trust and unity in our group. Let's focus on working together and avoid making hasty decisions based on suspicions.\"",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

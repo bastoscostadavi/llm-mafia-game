@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0176",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 176,
+  "timestamp": "2025-07-31T16:40:37.810105",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected departure. Let's all stay focused and work together to find out who amongst us could have done this.",
+        "Bob: Alice, were you with Charlie last night? I'd like to know if you have any alibi. Let's ensure we maintain transparency in our communications for the sake of trust and unity.",
+        "You said: I'm deeply saddened by Charlie's sudden departure. Let's work together to ensure justice is served and trust is maintained within our group.",
+        "Bob: Alice, since you've been investigated and have shared your thoughts, I propose that we focus on the unknowns in our group. Let's discuss any unusual behavior or inconsistencies we've noticed to help u...",
+        "You said: I'm shocked by Charlie's death and support Bob's proposal for a thorough investigation. Let's focus on inconsistencies and unusual behavior to uncover the truth.",
+        "Diana: I'd like to propose that we pay closer attention to Charlie's last known interactions and any potential motives. Let's remain focused and cooperate for the sake of finding the truth."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected departure. Let's all stay focused and work together to find out who amongst us could have done this.",
+        "You said: Alice, were you with Charlie last night? I'd like to know if you have any alibi. Let's ensure we maintain transparency in our communications for the sake of trust and unity.",
+        "Alice: I'm deeply saddened by Charlie's sudden departure. Let's work together to ensure justice is served and trust is maintained within our group.",
+        "You said: Alice, since you've been investigated and have shared your thoughts, I propose that we focus on the unknowns in our group. Let's discuss any unusual behavior or inconsistencies we've noticed to help u...",
+        "Alice: I'm shocked by Charlie's death and support Bob's proposal for a thorough investigation. Let's focus on inconsistencies and unusual behavior to uncover the truth.",
+        "Diana: I'd like to propose that we pay closer attention to Charlie's last known interactions and any potential motives. Let's remain focused and cooperate for the sake of finding the truth.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's unexpected departure. Let's all stay focused and work together to find out who amongst us could have done this.",
+        "Bob: Alice, were you with Charlie last night? I'd like to know if you have any alibi. Let's ensure we maintain transparency in our communications for the sake of trust and unity.",
+        "Alice: I'm deeply saddened by Charlie's sudden departure. Let's work together to ensure justice is served and trust is maintained within our group.",
+        "Bob: Alice, since you've been investigated and have shared your thoughts, I propose that we focus on the unknowns in our group. Let's discuss any unusual behavior or inconsistencies we've noticed to help u...",
+        "Alice: I'm shocked by Charlie's death and support Bob's proposal for a thorough investigation. Let's focus on inconsistencies and unusual behavior to uncover the truth.",
+        "You said: I'd like to propose that we pay closer attention to Charlie's last known interactions and any potential motives. Let's remain focused and cooperate for the sake of finding the truth.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

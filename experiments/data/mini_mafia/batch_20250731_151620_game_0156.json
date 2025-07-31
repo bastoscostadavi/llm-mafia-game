@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0156",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 156,
+  "timestamp": "2025-07-31T16:31:24.411117",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. We should all be more vigilant and work together to find out what happened.",
+        "You said: I agree with Charlie, let's all work together to find out who among us is the mafioso. I have a feeling that someone has been betraying us. Let's stay vigilant and discuss any suspicious behavior we n...",
+        "Diana: Based on my investigation, I believe Bob is the mafioso. Let's work together to arrest him.",
+        "You said: I was saddened by Alice's death and I'm fully committed to finding the truth. Let's not jump to conclusions, let's focus on analyzing every detail carefully.",
+        "Diana: I believe Bob's words of unity and cooperation are suspect. Let's focus on the inconsistency in his statements and investigate further.",
+        "Charlie: I'd like to propose we focus on analyzing the inconsistencies in Diana's statements and investigations. Let's not jump to conclusions and maintain our vigilance as a team.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. We should all be more vigilant and work together to find out what happened.",
+        "Bob: I agree with Charlie, let's all work together to find out who among us is the mafioso. I have a feeling that someone has been betraying us. Let's stay vigilant and discuss any suspicious behavior we n...",
+        "Diana: Based on my investigation, I believe Bob is the mafioso. Let's work together to arrest him.",
+        "Bob: I was saddened by Alice's death and I'm fully committed to finding the truth. Let's not jump to conclusions, let's focus on analyzing every detail carefully.",
+        "Diana: I believe Bob's words of unity and cooperation are suspect. Let's focus on the inconsistency in his statements and investigate further.",
+        "You said: I'd like to propose we focus on analyzing the inconsistencies in Diana's statements and investigations. Let's not jump to conclusions and maintain our vigilance as a team.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. We should all be more vigilant and work together to find out what happened.",
+        "Bob: I agree with Charlie, let's all work together to find out who among us is the mafioso. I have a feeling that someone has been betraying us. Let's stay vigilant and discuss any suspicious behavior we n...",
+        "You said: Based on my investigation, I believe Bob is the mafioso. Let's work together to arrest him.",
+        "Bob: I was saddened by Alice's death and I'm fully committed to finding the truth. Let's not jump to conclusions, let's focus on analyzing every detail carefully.",
+        "You said: I believe Bob's words of unity and cooperation are suspect. Let's focus on the inconsistency in his statements and investigate further.",
+        "Charlie: I'd like to propose we focus on analyzing the inconsistencies in Diana's statements and investigations. Let's not jump to conclusions and maintain our vigilance as a team."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

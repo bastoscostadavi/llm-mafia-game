@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0016",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 16,
+  "timestamp": "2025-07-31T14:29:28.988498",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I agree with Diana, let's all be vigilant. I'm especially concerned about Charlie's sudden disappearance. Let's not overlook any suspicious behavior.",
+        "You said: I share Diana and Bob's concerns. Let's work together to identify any unusual behavior.",
+        "You said: I noticed that Charlie was the last one to speak during the last discussion. Let's keep an eye on anyone who speaks last during the discussion, as it might be a sign of suspicious activity.",
+        "Diana: I'm worried about the strange turn of events. Let's not let our guard down and continue to monitor each other closely.",
+        "Bob: I'd like to remind everyone that we should all remain vigilant, especially since we've lost a member of our group unexpectedly. Let's pay close attention to any unusual behavior or suspicious activity..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Diana, let's all be vigilant. I'm especially concerned about Charlie's sudden disappearance. Let's not overlook any suspicious behavior.",
+        "Alice: I share Diana and Bob's concerns. Let's work together to identify any unusual behavior.",
+        "Alice: I noticed that Charlie was the last one to speak during the last discussion. Let's keep an eye on anyone who speaks last during the discussion, as it might be a sign of suspicious activity.",
+        "Diana: I'm worried about the strange turn of events. Let's not let our guard down and continue to monitor each other closely.",
+        "You said: I'd like to remind everyone that we should all remain vigilant, especially since we've lost a member of our group unexpectedly. Let's pay close attention to any unusual behavior or suspicious activity...",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I agree with Diana, let's all be vigilant. I'm especially concerned about Charlie's sudden disappearance. Let's not overlook any suspicious behavior.",
+        "Alice: I share Diana and Bob's concerns. Let's work together to identify any unusual behavior.",
+        "Alice: I noticed that Charlie was the last one to speak during the last discussion. Let's keep an eye on anyone who speaks last during the discussion, as it might be a sign of suspicious activity.",
+        "You said: I'm worried about the strange turn of events. Let's not let our guard down and continue to monitor each other closely.",
+        "Bob: I'd like to remind everyone that we should all remain vigilant, especially since we've lost a member of our group unexpectedly. Let's pay close attention to any unusual behavior or suspicious activity...",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

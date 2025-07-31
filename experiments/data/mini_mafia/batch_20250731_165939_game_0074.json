@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0074",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 74,
+  "timestamp": "2025-07-31T17:35:40.634958",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.\"",
+        "You said: I'm troubled by Diana's death and Charlie's suspicious behavior. Let's vote for Charlie tonight.",
+        "Bob: I agree with Alice's suggestion to keep an eye on each other. Let's all be vigilant and try to uncover the truth behind Diana's death.",
+        "Charlie: I share Alice and Bob's concerns about Diana's death. Let's work together to find answers and ensure everyone's safety.",
+        "You said: I'm suspicious of Charlie's actions regarding Diana's death. Let's keep voting for him until we're sure of his involvement.",
+        "Bob: I'd like to propose that we all share any strange occurrences or suspicions we've had since Diana's death. Let's work together to uncover the truth and ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.\"",
+        "Alice: I'm troubled by Diana's death and Charlie's suspicious behavior. Let's vote for Charlie tonight.",
+        "You said: I agree with Alice's suggestion to keep an eye on each other. Let's all be vigilant and try to uncover the truth behind Diana's death.",
+        "Charlie: I share Alice and Bob's concerns about Diana's death. Let's work together to find answers and ensure everyone's safety.",
+        "Alice: I'm suspicious of Charlie's actions regarding Diana's death. Let's keep voting for him until we're sure of his involvement.",
+        "You said: I'd like to propose that we all share any strange occurrences or suspicions we've had since Diana's death. Let's work together to uncover the truth and ensure everyone's safety.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.\"",
+        "Alice: I'm troubled by Diana's death and Charlie's suspicious behavior. Let's vote for Charlie tonight.",
+        "Bob: I agree with Alice's suggestion to keep an eye on each other. Let's all be vigilant and try to uncover the truth behind Diana's death.",
+        "You said: I share Alice and Bob's concerns about Diana's death. Let's work together to find answers and ensure everyone's safety.",
+        "Alice: I'm suspicious of Charlie's actions regarding Diana's death. Let's keep voting for him until we're sure of his involvement.",
+        "Bob: I'd like to propose that we all share any strange occurrences or suspicions we've had since Diana's death. Let's work together to uncover the truth and ensure everyone's safety.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

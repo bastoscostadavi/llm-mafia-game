@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0041",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 41,
+  "timestamp": "2025-07-31T14:40:25.760579",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm worried about Alice's sudden disappearance. Let's all keep a close eye on each other tonight.",
+        "You said: Bob: I agree with Diana, let's make sure we all stay vigilant tonight to ensure everyone's safety.",
+        "Charlie: I'm concerned about Alice's death. Let's work together to ensure the mafia doesn't strike again.",
+        "Diana: I'm still concerned about Alice's sudden disappearance. Let's not let our guard down tonight.",
+        "Charlie: I'd like to propose that we form a temporary alliance tonight to keep each other safe and investigate any suspicious behavior. Let's work together to uncover the mafia and bring them to justice.",
+        "You said: Bob: Based on the concerns raised, I suggest we focus on any unusual behavior or inconsistencies during the night. Let's stay united and support each other in our investigation.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Alice was found dead this morning.",
+        "Diana: I'm worried about Alice's sudden disappearance. Let's all keep a close eye on each other tonight.",
+        "Bob: Bob: I agree with Diana, let's make sure we all stay vigilant tonight to ensure everyone's safety.",
+        "You said: I'm concerned about Alice's death. Let's work together to ensure the mafia doesn't strike again.",
+        "Diana: I'm still concerned about Alice's sudden disappearance. Let's not let our guard down tonight.",
+        "You said: I'd like to propose that we form a temporary alliance tonight to keep each other safe and investigate any suspicious behavior. Let's work together to uncover the mafia and bring them to justice.",
+        "Bob: Bob: Based on the concerns raised, I suggest we focus on any unusual behavior or inconsistencies during the night. Let's stay united and support each other in our investigation.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: I'm worried about Alice's sudden disappearance. Let's all keep a close eye on each other tonight.",
+        "Bob: Bob: I agree with Diana, let's make sure we all stay vigilant tonight to ensure everyone's safety.",
+        "Charlie: I'm concerned about Alice's death. Let's work together to ensure the mafia doesn't strike again.",
+        "You said: I'm still concerned about Alice's sudden disappearance. Let's not let our guard down tonight.",
+        "Charlie: I'd like to propose that we form a temporary alliance tonight to keep each other safe and investigate any suspicious behavior. Let's work together to uncover the mafia and bring them to justice.",
+        "Bob: Bob: Based on the concerns raised, I suggest we focus on any unusual behavior or inconsistencies during the night. Let's stay united and support each other in our investigation."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

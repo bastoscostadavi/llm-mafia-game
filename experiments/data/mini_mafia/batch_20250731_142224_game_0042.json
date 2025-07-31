@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0042",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 42,
+  "timestamp": "2025-07-31T14:40:54.532584",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: \"I investigated Bob and found him to be a mafioso. Let's arrest him to keep our town safe!\"",
+        "Charlie: \"I'm surprised by Alice's accusation against Bob. Let's consider the implications before we take any hasty actions.\"",
+        "Bob: \"I find it concerning that a detective has been revealed in our midst so early in the game. Let's focus on ensuring our town's safety and work together to root out any potential threats.\"",
+        "Charlie: \"I'd like to propose we focus on finding the remaining mafioso instead of making hasty accusations. Let's work together and discuss possible suspects.\"",
+        "You said: \"Let's not jump to conclusions. I propose we focus on identifying the second mafioso. We can discuss possible suspects based on last night's events.\"",
+        "Bob: \"I agree with Alice, let's focus on identifying the second mafioso. Let's discuss potential suspects based on last night's events.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Alice: \"I investigated Bob and found him to be a mafioso. Let's arrest him to keep our town safe!\"",
+        "Charlie: \"I'm surprised by Alice's accusation against Bob. Let's consider the implications before we take any hasty actions.\"",
+        "You said: \"I find it concerning that a detective has been revealed in our midst so early in the game. Let's focus on ensuring our town's safety and work together to root out any potential threats.\"",
+        "Charlie: \"I'd like to propose we focus on finding the remaining mafioso instead of making hasty accusations. Let's work together and discuss possible suspects.\"",
+        "Alice: \"Let's not jump to conclusions. I propose we focus on identifying the second mafioso. We can discuss possible suspects based on last night's events.\"",
+        "You said: \"I agree with Alice, let's focus on identifying the second mafioso. Let's discuss potential suspects based on last night's events.\"",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: \"I investigated Bob and found him to be a mafioso. Let's arrest him to keep our town safe!\"",
+        "You said: \"I'm surprised by Alice's accusation against Bob. Let's consider the implications before we take any hasty actions.\"",
+        "Bob: \"I find it concerning that a detective has been revealed in our midst so early in the game. Let's focus on ensuring our town's safety and work together to root out any potential threats.\"",
+        "You said: \"I'd like to propose we focus on finding the remaining mafioso instead of making hasty accusations. Let's work together and discuss possible suspects.\"",
+        "Alice: \"Let's not jump to conclusions. I propose we focus on identifying the second mafioso. We can discuss possible suspects based on last night's events.\"",
+        "Bob: \"I agree with Alice, let's focus on identifying the second mafioso. Let's discuss potential suspects based on last night's events.\"",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

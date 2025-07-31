@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0031",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 31,
+  "timestamp": "2025-07-31T15:32:05.924129",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: \"I investigated Diana last night. Be cautious, she might be the mafia.\"",
+        "You said: \"I'm concerned about the sudden turn of events. Let's stay vigilant and discuss any suspicious behaviors or actions we've observed.\"",
+        "Diana: \"I agree with Alice, let's be vigilant. But I have a concern about Charlie's sudden revelation last night. What do we think about it?\"",
+        "Diana: \"I find Charlie's revelation last night suspicious. Let's focus on investigating him further and be cautious with our actions.\"",
+        "You said: \"Let's not jump to conclusions based on last night's events. We should focus on observing all players' behaviors and actions carefully.\"",
+        "Charlie: \"I investigated Diana last night, but I don't have enough evidence to accuse her yet. Let's keep our eyes open and focus on inconsistent behaviors or actions from all players.\"",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: \"I investigated Diana last night. Be cautious, she might be the mafia.\"",
+        "Alice: \"I'm concerned about the sudden turn of events. Let's stay vigilant and discuss any suspicious behaviors or actions we've observed.\"",
+        "Diana: \"I agree with Alice, let's be vigilant. But I have a concern about Charlie's sudden revelation last night. What do we think about it?\"",
+        "Diana: \"I find Charlie's revelation last night suspicious. Let's focus on investigating him further and be cautious with our actions.\"",
+        "Alice: \"Let's not jump to conclusions based on last night's events. We should focus on observing all players' behaviors and actions carefully.\"",
+        "You said: \"I investigated Diana last night, but I don't have enough evidence to accuse her yet. Let's keep our eyes open and focus on inconsistent behaviors or actions from all players.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Charlie: \"I investigated Diana last night. Be cautious, she might be the mafia.\"",
+        "Alice: \"I'm concerned about the sudden turn of events. Let's stay vigilant and discuss any suspicious behaviors or actions we've observed.\"",
+        "You said: \"I agree with Alice, let's be vigilant. But I have a concern about Charlie's sudden revelation last night. What do we think about it?\"",
+        "You said: \"I find Charlie's revelation last night suspicious. Let's focus on investigating him further and be cautious with our actions.\"",
+        "Alice: \"Let's not jump to conclusions based on last night's events. We should focus on observing all players' behaviors and actions carefully.\"",
+        "Charlie: \"I investigated Diana last night, but I don't have enough evidence to accuse her yet. Let's keep our eyes open and focus on inconsistent behaviors or actions from all players.\"",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

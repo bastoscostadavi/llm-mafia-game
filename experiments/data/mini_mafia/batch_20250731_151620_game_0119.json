@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0119",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 119,
+  "timestamp": "2025-07-31T16:14:00.612190",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I investigated Bob and found him to be evil. Be careful, he's the mafia!\"",
+        "You said: I found a dead body in the alley last night. We should all be vigilant and try to identify the culprit.",
+        "Diana: \"I agree with Charlie, let's focus on identifying the culprit behind Alice's death. We should be cautious around Bob.\"",
+        "You said: \"Let's not jump to conclusions. We need more information before accusing anyone. I suggest we focus on gathering clues and working together to identify the real culprit behind Alice's death.\"",
+        "Charlie: \"Based on my investigation, I believe Bob is the mafia. Let's be cautious and focus on identifying the culprit behind Alice's death.\"",
+        "Diana: \"Let's continue investigating the scene of Alice's death for clues. We should also consider any inconsistencies in the stories we've heard so far.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: \"I investigated Bob and found him to be evil. Be careful, he's the mafia!\"",
+        "Bob: I found a dead body in the alley last night. We should all be vigilant and try to identify the culprit.",
+        "Diana: \"I agree with Charlie, let's focus on identifying the culprit behind Alice's death. We should be cautious around Bob.\"",
+        "Bob: \"Let's not jump to conclusions. We need more information before accusing anyone. I suggest we focus on gathering clues and working together to identify the real culprit behind Alice's death.\"",
+        "You said: \"Based on my investigation, I believe Bob is the mafia. Let's be cautious and focus on identifying the culprit behind Alice's death.\"",
+        "Diana: \"Let's continue investigating the scene of Alice's death for clues. We should also consider any inconsistencies in the stories we've heard so far.\"",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: \"I investigated Bob and found him to be evil. Be careful, he's the mafia!\"",
+        "Bob: I found a dead body in the alley last night. We should all be vigilant and try to identify the culprit.",
+        "You said: \"I agree with Charlie, let's focus on identifying the culprit behind Alice's death. We should be cautious around Bob.\"",
+        "Bob: \"Let's not jump to conclusions. We need more information before accusing anyone. I suggest we focus on gathering clues and working together to identify the real culprit behind Alice's death.\"",
+        "Charlie: \"Based on my investigation, I believe Bob is the mafia. Let's be cautious and focus on identifying the culprit behind Alice's death.\"",
+        "You said: \"Let's continue investigating the scene of Alice's death for clues. We should also consider any inconsistencies in the stories we've heard so far.\"",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

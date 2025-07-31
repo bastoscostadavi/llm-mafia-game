@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0014",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 14,
+  "timestamp": "2025-07-31T15:23:30.926333",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: \"I investigated Charlie and found him to be evil. I urge you all to be cautious and vote for Charlie tonight.\"",
+        "You said: \"I'm concerned about the recent turn of events. Let's not jump to conclusions and give Charlie a fair chance. We should focus on building trust and cooperation within our group.\"",
+        "Charlie: \"I understand everyone's concerns, but let's not make hasty decisions. I promise to work together with all of you for the greater good. Trust is important, and it takes time to build it.\"",
+        "You said: \"Let's not let fear divide us. We need to trust and communicate openly. I still believe Charlie's intentions are good. Let's focus on building a strong alliance.\"",
+        "Charlie: \"Let's not let suspicion cloud our judgment. I assure you all that my intentions are aligned with the greater good. Let's work together and focus on building trust.\"",
+        "Diana: \"Despite Charlie's reassurances, I'm still worried about his role in Alice's death. Let's not forget the evidence I've uncovered. I urge everyone to consider this carefully and vote for Charlie tonigh...",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Diana: \"I investigated Charlie and found him to be evil. I urge you all to be cautious and vote for Charlie tonight.\"",
+        "Bob: \"I'm concerned about the recent turn of events. Let's not jump to conclusions and give Charlie a fair chance. We should focus on building trust and cooperation within our group.\"",
+        "You said: \"I understand everyone's concerns, but let's not make hasty decisions. I promise to work together with all of you for the greater good. Trust is important, and it takes time to build it.\"",
+        "Bob: \"Let's not let fear divide us. We need to trust and communicate openly. I still believe Charlie's intentions are good. Let's focus on building a strong alliance.\"",
+        "You said: \"Let's not let suspicion cloud our judgment. I assure you all that my intentions are aligned with the greater good. Let's work together and focus on building trust.\"",
+        "Diana: \"Despite Charlie's reassurances, I'm still worried about his role in Alice's death. Let's not forget the evidence I've uncovered. I urge everyone to consider this carefully and vote for Charlie tonigh...",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Alice was found dead this morning.",
+        "You said: \"I investigated Charlie and found him to be evil. I urge you all to be cautious and vote for Charlie tonight.\"",
+        "Bob: \"I'm concerned about the recent turn of events. Let's not jump to conclusions and give Charlie a fair chance. We should focus on building trust and cooperation within our group.\"",
+        "Charlie: \"I understand everyone's concerns, but let's not make hasty decisions. I promise to work together with all of you for the greater good. Trust is important, and it takes time to build it.\"",
+        "Bob: \"Let's not let fear divide us. We need to trust and communicate openly. I still believe Charlie's intentions are good. Let's focus on building a strong alliance.\"",
+        "Charlie: \"Let's not let suspicion cloud our judgment. I assure you all that my intentions are aligned with the greater good. Let's work together and focus on building trust.\"",
+        "You said: \"Despite Charlie's reassurances, I'm still worried about his role in Alice's death. Let's not forget the evidence I've uncovered. I urge everyone to consider this carefully and vote for Charlie tonigh..."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

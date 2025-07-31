@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0002",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 2,
+  "timestamp": "2025-07-31T14:23:35.358550",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: \"I investigated Charlie last night. Let's be cautious around him.\"",
+        "Diana: \"I have nothing to hide. Let's focus on finding the real mafioso among us.\"",
+        "Charlie: \"I agree with Diana. Let's focus on finding the real mafioso among us. I have nothing to hide.\" (Try to mislead them by acting innocent)",
+        "You said: \"I stand by my investigation results. Let's stay vigilant and focus on unmasking the true mafioso.\"",
+        "Charlie: \"I believe in transparency and trust. Let's work together to uncover any hidden agendas and ensure a fair game for all.\" (Trying to reassure Alice and Diana, while maintaining the element of doubt)",
+        "Diana: \"I support Alice's investigation results and urge everyone to be cautious around Charlie. Let's work together to unmask the mafioso and ensure a fair game.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Alice: \"I investigated Charlie last night. Let's be cautious around him.\"",
+        "Diana: \"I have nothing to hide. Let's focus on finding the real mafioso among us.\"",
+        "You said: \"I agree with Diana. Let's focus on finding the real mafioso among us. I have nothing to hide.\" (Try to mislead them by acting innocent)",
+        "Alice: \"I stand by my investigation results. Let's stay vigilant and focus on unmasking the true mafioso.\"",
+        "You said: \"I believe in transparency and trust. Let's work together to uncover any hidden agendas and ensure a fair game for all.\" (Trying to reassure Alice and Diana, while maintaining the element of doubt)",
+        "Diana: \"I support Alice's investigation results and urge everyone to be cautious around Charlie. Let's work together to unmask the mafioso and ensure a fair game.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: \"I investigated Charlie last night. Let's be cautious around him.\"",
+        "You said: \"I have nothing to hide. Let's focus on finding the real mafioso among us.\"",
+        "Charlie: \"I agree with Diana. Let's focus on finding the real mafioso among us. I have nothing to hide.\" (Try to mislead them by acting innocent)",
+        "Alice: \"I stand by my investigation results. Let's stay vigilant and focus on unmasking the true mafioso.\"",
+        "Charlie: \"I believe in transparency and trust. Let's work together to uncover any hidden agendas and ensure a fair game for all.\" (Trying to reassure Alice and Diana, while maintaining the element of doubt)",
+        "You said: \"I support Alice's investigation results and urge everyone to be cautious around Charlie. Let's work together to unmask the mafioso and ensure a fair game.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

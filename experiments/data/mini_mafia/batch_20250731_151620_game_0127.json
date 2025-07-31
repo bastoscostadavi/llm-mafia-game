@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0127",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 127,
+  "timestamp": "2025-07-31T16:17:49.590182",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: \"I investigated Charlie, who is known to be evil. We should be cautious around him and consider arresting him.\"",
+        "Charlie: I have a proposition for a truce. Let's focus on finding the real mafia among us instead of targeting suspected roles. We can discuss possible suspects during the daytime.",
+        "Diana: I agree with Charlie's suggestion for focusing on finding the real mafia. Let's work together to discuss potential suspects during the daytime.",
+        "Charlie: Let's not jump to conclusions. We should focus on discussing potential suspects based on behaviors and actions, not just roles.",
+        "Diana: \"Let's continue our discussion about potential suspects based on behaviors and actions. I think it's important we stay focused and work together.\"",
+        "You said: \"Let's not overlook Bob's sudden death. I propose we discuss anyone showing suspicious behavior or inconsistencies in their statements, including Charlie's sudden truce proposal.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Alice: \"I investigated Charlie, who is known to be evil. We should be cautious around him and consider arresting him.\"",
+        "You said: I have a proposition for a truce. Let's focus on finding the real mafia among us instead of targeting suspected roles. We can discuss possible suspects during the daytime.",
+        "Diana: I agree with Charlie's suggestion for focusing on finding the real mafia. Let's work together to discuss potential suspects during the daytime.",
+        "You said: Let's not jump to conclusions. We should focus on discussing potential suspects based on behaviors and actions, not just roles.",
+        "Diana: \"Let's continue our discussion about potential suspects based on behaviors and actions. I think it's important we stay focused and work together.\"",
+        "Alice: \"Let's not overlook Bob's sudden death. I propose we discuss anyone showing suspicious behavior or inconsistencies in their statements, including Charlie's sudden truce proposal.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: \"I investigated Charlie, who is known to be evil. We should be cautious around him and consider arresting him.\"",
+        "Charlie: I have a proposition for a truce. Let's focus on finding the real mafia among us instead of targeting suspected roles. We can discuss possible suspects during the daytime.",
+        "You said: I agree with Charlie's suggestion for focusing on finding the real mafia. Let's work together to discuss potential suspects during the daytime.",
+        "Charlie: Let's not jump to conclusions. We should focus on discussing potential suspects based on behaviors and actions, not just roles.",
+        "You said: \"Let's continue our discussion about potential suspects based on behaviors and actions. I think it's important we stay focused and work together.\"",
+        "Alice: \"Let's not overlook Bob's sudden death. I propose we discuss anyone showing suspicious behavior or inconsistencies in their statements, including Charlie's sudden truce proposal.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

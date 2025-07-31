@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0004",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 4,
+  "timestamp": "2025-07-31T14:24:30.350747",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I'm troubled by Charlie's death. Let's make sure we all cooperate to find out what happened and ensure everyone's safety.",
+        "You said: I agree with Diana and Bob, let's all keep a close eye on each other and cooperate to uncover the truth about Charlie's death.",
+        "Diana: I'm uneasy about Charlie's death. Let's focus on finding out what happened and maintaining trust within our group. We should all remain open and transparent during our discussions.",
+        "Bob: I'd like to propose we focus on identifying the cause of Charlie's death and maintain open communication to foster trust within our group. Let's remain vigilant and cooperate to uncover any potential...",
+        "You said: I believe we should continue to cooperate and focus on identifying the cause of Charlie's death. Let's remain vigilant and open during our discussions to maintain trust within our group.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Diana",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I'm troubled by Charlie's death. Let's make sure we all cooperate to find out what happened and ensure everyone's safety.",
+        "Alice: I agree with Diana and Bob, let's all keep a close eye on each other and cooperate to uncover the truth about Charlie's death.",
+        "Diana: I'm uneasy about Charlie's death. Let's focus on finding out what happened and maintaining trust within our group. We should all remain open and transparent during our discussions.",
+        "You said: I'd like to propose we focus on identifying the cause of Charlie's death and maintain open communication to foster trust within our group. Let's remain vigilant and cooperate to uncover any potential...",
+        "Alice: I believe we should continue to cooperate and focus on identifying the cause of Charlie's death. Let's remain vigilant and open during our discussions to maintain trust within our group."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I'm troubled by Charlie's death. Let's make sure we all cooperate to find out what happened and ensure everyone's safety.",
+        "Alice: I agree with Diana and Bob, let's all keep a close eye on each other and cooperate to uncover the truth about Charlie's death.",
+        "You said: I'm uneasy about Charlie's death. Let's focus on finding out what happened and maintaining trust within our group. We should all remain open and transparent during our discussions.",
+        "Bob: I'd like to propose we focus on identifying the cause of Charlie's death and maintain open communication to foster trust within our group. Let's remain vigilant and cooperate to uncover any potential...",
+        "Alice: I believe we should continue to cooperate and focus on identifying the cause of Charlie's death. Let's remain vigilant and open during our discussions to maintain trust within our group.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Diana",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

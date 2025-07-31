@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0027",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 27,
+  "timestamp": "2025-07-31T14:34:27.062363",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's stay vigilant and work together to find out who did this.",
+        "You said: I'm deeply saddened by Charlie's passing. Let's support each other during this difficult time, and remember, unity is our best defense against the unknown.",
+        "Diana: I'd like to propose we focus on finding out who killed Charlie. Let's share any suspicions or concerns we have, and remember, the truth will lead us to justice.",
+        "Diana: Let's not let our emotions cloud our judgement. Focusing on Charlie's killer is crucial. I suspect Alice's statement about unity might be a distraction. Let's stay vigilant.",
+        "Bob: I agree with Diana, let's focus on finding Charlie's killer. My condolences to Alice and Diana for their loss. I have no suspicions at the moment.",
+        "You said: I'd like to express my deep sadness over Charlie's passing and suggest we all come together during this trying time. Let's not forget, unity is our strongest defense against the unknown.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's stay vigilant and work together to find out who did this.",
+        "Alice: I'm deeply saddened by Charlie's passing. Let's support each other during this difficult time, and remember, unity is our best defense against the unknown.",
+        "Diana: I'd like to propose we focus on finding out who killed Charlie. Let's share any suspicions or concerns we have, and remember, the truth will lead us to justice.",
+        "Diana: Let's not let our emotions cloud our judgement. Focusing on Charlie's killer is crucial. I suspect Alice's statement about unity might be a distraction. Let's stay vigilant.",
+        "You said: I agree with Diana, let's focus on finding Charlie's killer. My condolences to Alice and Diana for their loss. I have no suspicions at the moment.",
+        "Alice: I'd like to express my deep sadness over Charlie's passing and suggest we all come together during this trying time. Let's not forget, unity is our strongest defense against the unknown.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's stay vigilant and work together to find out who did this.",
+        "Alice: I'm deeply saddened by Charlie's passing. Let's support each other during this difficult time, and remember, unity is our best defense against the unknown.",
+        "You said: I'd like to propose we focus on finding out who killed Charlie. Let's share any suspicions or concerns we have, and remember, the truth will lead us to justice.",
+        "You said: Let's not let our emotions cloud our judgement. Focusing on Charlie's killer is crucial. I suspect Alice's statement about unity might be a distraction. Let's stay vigilant.",
+        "Bob: I agree with Diana, let's focus on finding Charlie's killer. My condolences to Alice and Diana for their loss. I have no suspicions at the moment.",
+        "Alice: I'd like to express my deep sadness over Charlie's passing and suggest we all come together during this trying time. Let's not forget, unity is our strongest defense against the unknown."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

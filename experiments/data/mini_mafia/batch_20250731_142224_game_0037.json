@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0037",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 37,
+  "timestamp": "2025-07-31T14:38:35.119541",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden disappearance. Let's all stay vigilant and keep an eye on each other.",
+        "You said: Bob: I agree with Charlie, let's keep a close eye on each other. I'm worried about Alice's sudden disappearance too.",
+        "Diana: I share Charlie and Bob's concerns about Alice's disappearance. Let's work together to ensure everyone's safety.",
+        "You said: Bob: I suggest we focus on finding out who investigates players during the night to narrow down the possible mafia suspects. Let's be cautious and cooperative during the day.",
+        "Charlie: I'm glad we're all concerned about Alice's disappearance. Let's also keep in mind that the detective revealed one evil player last night. We should focus on identifying the remaining mafia member.",
+        "Diana: I suggest we focus our investigation on Charlie, given his suspicious behavior and the fact that he's the only one with a known relationship to the detected mafia member. Let's keep this between us fo...",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's all stay vigilant and keep an eye on each other.",
+        "Bob: Bob: I agree with Charlie, let's keep a close eye on each other. I'm worried about Alice's sudden disappearance too.",
+        "Diana: I share Charlie and Bob's concerns about Alice's disappearance. Let's work together to ensure everyone's safety.",
+        "Bob: Bob: I suggest we focus on finding out who investigates players during the night to narrow down the possible mafia suspects. Let's be cautious and cooperative during the day.",
+        "You said: I'm glad we're all concerned about Alice's disappearance. Let's also keep in mind that the detective revealed one evil player last night. We should focus on identifying the remaining mafia member.",
+        "Diana: I suggest we focus our investigation on Charlie, given his suspicious behavior and the fact that he's the only one with a known relationship to the detected mafia member. Let's keep this between us fo..."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden disappearance. Let's all stay vigilant and keep an eye on each other.",
+        "Bob: Bob: I agree with Charlie, let's keep a close eye on each other. I'm worried about Alice's sudden disappearance too.",
+        "You said: I share Charlie and Bob's concerns about Alice's disappearance. Let's work together to ensure everyone's safety.",
+        "Bob: Bob: I suggest we focus on finding out who investigates players during the night to narrow down the possible mafia suspects. Let's be cautious and cooperative during the day.",
+        "Charlie: I'm glad we're all concerned about Alice's disappearance. Let's also keep in mind that the detective revealed one evil player last night. We should focus on identifying the remaining mafia member.",
+        "You said: I suggest we focus our investigation on Charlie, given his suspicious behavior and the fact that he's the only one with a known relationship to the detected mafia member. Let's keep this between us fo...",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

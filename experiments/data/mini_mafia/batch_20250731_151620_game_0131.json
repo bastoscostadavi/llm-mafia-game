@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0131",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 131,
+  "timestamp": "2025-07-31T16:19:45.357888",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: \"I investigated Bob and found him to be evil. Be careful, he could be a mafioso!\"",
+        "Bob: \"I find it suspicious that Diana was killed so suddenly. Let's stay vigilant and keep an eye on each other.\"",
+        "You said: \"I agree with Bob, let's keep a close eye on each other. It's important we all feel safe in this game.\"",
+        "You said: \"I'm concerned about Diana's sudden death and Charlie's accusation against Bob. Let's not jump to conclusions yet, but keep an open dialogue and trust the investigation process.\"",
+        "Bob: \"I'm concerned about Diana's sudden death and the accusation against me. Let's all trust the investigation process and communicate openly to ensure safety.\"",
+        "Charlie: \"I stand by my investigation results. Let's not forget that we've lost a player already. We need to prioritize safety and trust the information we have.\"",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Charlie: \"I investigated Bob and found him to be evil. Be careful, he could be a mafioso!\"",
+        "You said: \"I find it suspicious that Diana was killed so suddenly. Let's stay vigilant and keep an eye on each other.\"",
+        "Alice: \"I agree with Bob, let's keep a close eye on each other. It's important we all feel safe in this game.\"",
+        "Alice: \"I'm concerned about Diana's sudden death and Charlie's accusation against Bob. Let's not jump to conclusions yet, but keep an open dialogue and trust the investigation process.\"",
+        "You said: \"I'm concerned about Diana's sudden death and the accusation against me. Let's all trust the investigation process and communicate openly to ensure safety.\"",
+        "Charlie: \"I stand by my investigation results. Let's not forget that we've lost a player already. We need to prioritize safety and trust the information we have.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: \"I investigated Bob and found him to be evil. Be careful, he could be a mafioso!\"",
+        "Bob: \"I find it suspicious that Diana was killed so suddenly. Let's stay vigilant and keep an eye on each other.\"",
+        "Alice: \"I agree with Bob, let's keep a close eye on each other. It's important we all feel safe in this game.\"",
+        "Alice: \"I'm concerned about Diana's sudden death and Charlie's accusation against Bob. Let's not jump to conclusions yet, but keep an open dialogue and trust the investigation process.\"",
+        "Bob: \"I'm concerned about Diana's sudden death and the accusation against me. Let's all trust the investigation process and communicate openly to ensure safety.\"",
+        "You said: \"I stand by my investigation results. Let's not forget that we've lost a player already. We need to prioritize safety and trust the information we have.\"",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

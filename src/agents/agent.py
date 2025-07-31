@@ -1,6 +1,7 @@
 # src/agent.py
 from typing import List, Dict, Optional, Tuple
 import json
+import random
 
 # Configuration constants
 MESSAGE_LIMIT = 200  # Character limit for discussion messages
@@ -28,20 +29,21 @@ class MafiaAgent:
     
     def get_general_game_explanation(self) -> str:
         """Detailed general explanation of Mafia game"""
-        return """Mafia is a social deduction game with secret roles and asymmetric information. The evil mafia competes against the good villagers and detectives. The game alternates between night and day phases until one side wins.
+        return """Mafia is a social deduction game with secret roles and asymmetric information. The evil mafia competes against the good villagers and detectives. The game alternates between night and day until one side wins.
 
-Night Phase: 
+Night: 
 - Assassination: Each night, one mafioso is randomly selected to choose a player to kill. The chosen player is killed.
 - Investigation: Each detective independently investigates one player to learn if they are a mafioso. This information is received privately.
 
-Day Phase:
+Day:
 - Discussion: Players speak in a randomly determined order. Each may send a message or remain silent. All messages are public and attributed by name.
 - Voting: All players vote to arrest someone. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.
 
 Game Mechanics:
 - Night actions are secret.
 - The arrested and killed players do not participate in the game anymore.
-- All information disclosed to agents appears under "Memory:" in chronological order.
+- All information disclosed to players appears under "Memory:" in chronological order.
+- Memory is an individual atribute of each players.
 - At the beginning of the game, the mafiosos learn each other's identities.  
 - Night deaths and daytime votes are publicly announced.
 - The only communication channel is the public discussion during the day.
@@ -65,11 +67,12 @@ Win Conditions:
         return f"In the game you're playing there are: {', and '.join(parts)}."
 
     def get_discussion_message(self, alive_players: List[str], round_num: int, all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> Dict:
-        """Get public discussion message from agent"""
+        """Get public discussion message from players"""
         if all_players is None:
             all_players = alive_players
             
         other_players = [name for name in all_players if name != self.name]
+        random.shuffle(other_players)
         
         prompt = f"""[INST] You're {self.name} playing Mafia with {', '.join(other_players)}.
 
@@ -115,10 +118,7 @@ IMPORTANT:
             # Enforce message length limit
             if len(message) > MESSAGE_LIMIT:
                 message = message[:MESSAGE_LIMIT].rstrip()  # Truncate and remove trailing whitespace
-                message += "..." 
-            
-            if self.debug_prompts:
-                print(f"[DEBUG] {self.name} parsed message: '{message}'")
+                message += "..."
             
             return {
                 "type": "message", 
@@ -139,6 +139,7 @@ IMPORTANT:
             all_players = candidates
             
         other_players = [name for name in all_players if name != self.name]
+        random.shuffle(other_players)
         
         prompt = f"""[INST] You're {self.name} playing Mafia with {', '.join(other_players)}.
 
@@ -183,8 +184,7 @@ IMPORTANT:
                 return candidate
         
         # If no valid "VOTE: name" found, cast random vote
-        import random
-        random_vote = random.choice(candidates)
+        fallback_vote = random.choice(candidates)
         if self.debug_prompts:
-            print(f"[DEBUG] {self.name} failed to parse VOTE: format, random vote: {random_vote}")
-        return random_vote
+            print(f"[DEBUG] {self.name} failed to parse VOTE: format, random vote: {fallback_vote}")
+        return fallback_vote

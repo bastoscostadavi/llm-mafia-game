@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0045",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 45,
+  "timestamp": "2025-07-31T17:21:44.714721",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's stay vigilant and support each other during these trying times.",
+        "Bob: Alice, have you seen anything suspicious lately? Let's all be cautious and keep an eye out for any odd behavior.",
+        "You said: I agree with Diana, let's all stay vigilant and support each other during these trying times. Let's not jump to conclusions and trust each other unless we have solid evidence.",
+        "Diana: I'd like to propose that we form a pact to protect each other and maintain unity in our small group. Let's keep communicating openly and trust each other, but stay vigilant as well. We can't let fear...",
+        "Bob: Alice, have you seen anything suspicious lately that could have led to Charlie's death? Let's all remember to stay vigilant and trust each other based on facts, not assumptions.",
+        "You said: Alice: Let's not jump to conclusions and trust each other based on facts. I agree with Diana's suggestion to maintain unity and open communication. Let's focus on identifying the true culprit behind C..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's stay vigilant and support each other during these trying times.",
+        "You said: Alice, have you seen anything suspicious lately? Let's all be cautious and keep an eye out for any odd behavior.",
+        "Alice: I agree with Diana, let's all stay vigilant and support each other during these trying times. Let's not jump to conclusions and trust each other unless we have solid evidence.",
+        "Diana: I'd like to propose that we form a pact to protect each other and maintain unity in our small group. Let's keep communicating openly and trust each other, but stay vigilant as well. We can't let fear...",
+        "You said: Alice, have you seen anything suspicious lately that could have led to Charlie's death? Let's all remember to stay vigilant and trust each other based on facts, not assumptions.",
+        "Alice: Alice: Let's not jump to conclusions and trust each other based on facts. I agree with Diana's suggestion to maintain unity and open communication. Let's focus on identifying the true culprit behind C...",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's stay vigilant and support each other during these trying times.",
+        "Bob: Alice, have you seen anything suspicious lately? Let's all be cautious and keep an eye out for any odd behavior.",
+        "Alice: I agree with Diana, let's all stay vigilant and support each other during these trying times. Let's not jump to conclusions and trust each other unless we have solid evidence.",
+        "You said: I'd like to propose that we form a pact to protect each other and maintain unity in our small group. Let's keep communicating openly and trust each other, but stay vigilant as well. We can't let fear...",
+        "Bob: Alice, have you seen anything suspicious lately that could have led to Charlie's death? Let's all remember to stay vigilant and trust each other based on facts, not assumptions.",
+        "Alice: Alice: Let's not jump to conclusions and trust each other based on facts. I agree with Diana's suggestion to maintain unity and open communication. Let's focus on identifying the true culprit behind C...",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

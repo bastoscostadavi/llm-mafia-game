@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0190",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 190,
+  "timestamp": "2025-07-31T16:46:58.653782",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: \"I investigated Bob last night and found him to be evil. Be careful, Bob might be trying to mislead us.\"",
+        "Bob: \"I'm worried about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "Charlie: I'm concerned about Diana's disappearance as well. Let's all focus on finding out what happened.",
+        "Charlie: I think we should all focus our suspicions on the person who investigated last night, Alice. Let's discuss why she chose Bob and if it was a genuine investigation or a manipulative move.",
+        "You said: \"I stand by my investigation of Bob. Let's not forget that he is a known mafioso. We should focus on the facts and prioritize safety.\"",
+        "Bob: \"Let's not jump to conclusions about Alice's investigation. It's important we keep an open mind and focus on finding the truth about Diana's disappearance.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Alice: \"I investigated Bob last night and found him to be evil. Be careful, Bob might be trying to mislead us.\"",
+        "You said: \"I'm worried about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "Charlie: I'm concerned about Diana's disappearance as well. Let's all focus on finding out what happened.",
+        "Charlie: I think we should all focus our suspicions on the person who investigated last night, Alice. Let's discuss why she chose Bob and if it was a genuine investigation or a manipulative move.",
+        "Alice: \"I stand by my investigation of Bob. Let's not forget that he is a known mafioso. We should focus on the facts and prioritize safety.\"",
+        "You said: \"Let's not jump to conclusions about Alice's investigation. It's important we keep an open mind and focus on finding the truth about Diana's disappearance.\"",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: \"I investigated Bob last night and found him to be evil. Be careful, Bob might be trying to mislead us.\"",
+        "Bob: \"I'm worried about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "You said: I'm concerned about Diana's disappearance as well. Let's all focus on finding out what happened.",
+        "You said: I think we should all focus our suspicions on the person who investigated last night, Alice. Let's discuss why she chose Bob and if it was a genuine investigation or a manipulative move.",
+        "Alice: \"I stand by my investigation of Bob. Let's not forget that he is a known mafioso. We should focus on the facts and prioritize safety.\"",
+        "Bob: \"Let's not jump to conclusions about Alice's investigation. It's important we keep an open mind and focus on finding the truth about Diana's disappearance.\"",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

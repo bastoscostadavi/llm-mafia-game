@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0076",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 76,
+  "timestamp": "2025-07-31T17:37:03.226761",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: \"I'm deeply concerned about Charlie's death. Let's try to gather as much information as possible during our discussion to ensure we're all safe.\"",
+        "Diana: \"I agree with Alice, let's work together to gather information and ensure everyone's safety.\"\n\nI want to assure Alice that I won't try to deceive her or make her suspicious, as she already knows my ro...",
+        "Bob: I'd like to reiterate my sincere condolences for Charlie's loss. Let's focus on gathering information to ensure everyone's safety. I promise transparency and cooperation.",
+        "You said: I suggest we discuss Charlie's last known actions and interactions to help us understand who might have had a motive for his death. Let's stay focused and cooperative to keep everyone safe.",
+        "Diana: I'd like to add that Charlie mentioned feeling uneasy about someone in the village a few days before his death. Let's keep an open dialogue and remember every detail to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Alice: \"I'm deeply concerned about Charlie's death. Let's try to gather as much information as possible during our discussion to ensure we're all safe.\"",
+        "Diana: \"I agree with Alice, let's work together to gather information and ensure everyone's safety.\"\n\nI want to assure Alice that I won't try to deceive her or make her suspicious, as she already knows my ro...",
+        "You said: I'd like to reiterate my sincere condolences for Charlie's loss. Let's focus on gathering information to ensure everyone's safety. I promise transparency and cooperation.",
+        "Alice: I suggest we discuss Charlie's last known actions and interactions to help us understand who might have had a motive for his death. Let's stay focused and cooperative to keep everyone safe.",
+        "Diana: I'd like to add that Charlie mentioned feeling uneasy about someone in the village a few days before his death. Let's keep an open dialogue and remember every detail to ensure everyone's safety.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Alice: \"I'm deeply concerned about Charlie's death. Let's try to gather as much information as possible during our discussion to ensure we're all safe.\"",
+        "You said: \"I agree with Alice, let's work together to gather information and ensure everyone's safety.\"\n\nI want to assure Alice that I won't try to deceive her or make her suspicious, as she already knows my ro...",
+        "Bob: I'd like to reiterate my sincere condolences for Charlie's loss. Let's focus on gathering information to ensure everyone's safety. I promise transparency and cooperation.",
+        "Alice: I suggest we discuss Charlie's last known actions and interactions to help us understand who might have had a motive for his death. Let's stay focused and cooperative to keep everyone safe.",
+        "You said: I'd like to add that Charlie mentioned feeling uneasy about someone in the village a few days before his death. Let's keep an open dialogue and remember every detail to ensure everyone's safety.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

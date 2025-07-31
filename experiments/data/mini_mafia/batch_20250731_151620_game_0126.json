@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0126",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 126,
+  "timestamp": "2025-07-31T16:17:22.564981",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Bob, let's be vigilant and watch out for any suspicious behavior.",
+        "Diana: I share Bob's concerns about Charlie's sudden disappearance. Let's all keep a close eye on each other and report any suspicious activity.",
+        "Bob: I'm still worried about Charlie's disappearance. Let's not forget that we need to trust each other to win this game. I suggest we focus on observing any inconsistent behavior or actions from everyone.",
+        "Diana: I'd like to echo Bob's suggestion to focus on inconsistent behavior. Let's stay vigilant and report any suspicious activity for everyone's safety.",
+        "You said: I'd like to add that Charlie's disappearance is worrying. Let's stay alert and report any unusual behavior or inconsistencies.",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Bob, let's be vigilant and watch out for any suspicious behavior.",
+        "Diana: I share Bob's concerns about Charlie's sudden disappearance. Let's all keep a close eye on each other and report any suspicious activity.",
+        "You said: I'm still worried about Charlie's disappearance. Let's not forget that we need to trust each other to win this game. I suggest we focus on observing any inconsistent behavior or actions from everyone.",
+        "Diana: I'd like to echo Bob's suggestion to focus on inconsistent behavior. Let's stay vigilant and report any suspicious activity for everyone's safety.",
+        "Alice: I'd like to add that Charlie's disappearance is worrying. Let's stay alert and report any unusual behavior or inconsistencies."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Bob, let's be vigilant and watch out for any suspicious behavior.",
+        "You said: I share Bob's concerns about Charlie's sudden disappearance. Let's all keep a close eye on each other and report any suspicious activity.",
+        "Bob: I'm still worried about Charlie's disappearance. Let's not forget that we need to trust each other to win this game. I suggest we focus on observing any inconsistent behavior or actions from everyone.",
+        "You said: I'd like to echo Bob's suggestion to focus on inconsistent behavior. Let's stay vigilant and report any suspicious activity for everyone's safety.",
+        "Alice: I'd like to add that Charlie's disappearance is worrying. Let's stay alert and report any unusual behavior or inconsistencies.",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

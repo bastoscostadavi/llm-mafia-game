@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0026",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 26,
+  "timestamp": "2025-07-31T17:13:08.117490",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to find out who did this.",
+        "Charlie: I'm deeply concerned about Diana's death. Let's focus on finding clues and sharing information to uncover the truth together.",
+        "Bob: I agree with Alice and Charlie. Let's all focus on finding clues and staying vigilant to ensure Diana's killer is brought to justice.",
+        "You said: Let's not jump to conclusions. We should consider all possible scenarios and gather more information before making any accusations.",
+        "Charlie: Based on my investigation, I believe Bob's involvement in Diana's death cannot be ruled out. Let's keep a close eye on him.",
+        "Bob: Let's not forget the importance of gathering more information before making any accusations. We should focus on finding clues and staying vigilant together. Let's not let emotions cloud our judgment.",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to find out who did this.",
+        "Charlie: I'm deeply concerned about Diana's death. Let's focus on finding clues and sharing information to uncover the truth together.",
+        "You said: I agree with Alice and Charlie. Let's all focus on finding clues and staying vigilant to ensure Diana's killer is brought to justice.",
+        "Alice: Let's not jump to conclusions. We should consider all possible scenarios and gather more information before making any accusations.",
+        "Charlie: Based on my investigation, I believe Bob's involvement in Diana's death cannot be ruled out. Let's keep a close eye on him.",
+        "You said: Let's not forget the importance of gathering more information before making any accusations. We should focus on finding clues and staying vigilant together. Let's not let emotions cloud our judgment."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to find out who did this.",
+        "You said: I'm deeply concerned about Diana's death. Let's focus on finding clues and sharing information to uncover the truth together.",
+        "Bob: I agree with Alice and Charlie. Let's all focus on finding clues and staying vigilant to ensure Diana's killer is brought to justice.",
+        "Alice: Let's not jump to conclusions. We should consider all possible scenarios and gather more information before making any accusations.",
+        "You said: Based on my investigation, I believe Bob's involvement in Diana's death cannot be ruled out. Let's keep a close eye on him.",
+        "Bob: Let's not forget the importance of gathering more information before making any accusations. We should focus on finding clues and staying vigilant together. Let's not let emotions cloud our judgment.",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

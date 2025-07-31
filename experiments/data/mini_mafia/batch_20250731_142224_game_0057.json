@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0057",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 57,
+  "timestamp": "2025-07-31T14:48:37.224778",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other.",
+        "Bob: Bob: I agree with Alice, let's stay vigilant and watch out for any suspicious behavior. It's important we work together to ensure everyone's safety.",
+        "Charlie: \"I share Alice and Bob's concerns. Let's maintain open communication and keep an eye on any unusual activities.\"",
+        "Charlie: I'd like to propose a vote on Diana's body to ensure her killer is brought to justice. Let's stay vigilant and work together to keep our community safe.",
+        "You said: I'd like to propose a vote on Charlie, given his suspicious behavior and the fact that he suggested a vote on Diana's body right after her death. Let's ensure justice is served and keep our community...",
+        "Bob: \"I support Charlie's initiative for a vote to bring justice for Diana. Let's not jump to conclusions and keep an open mind.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other.",
+        "You said: Bob: I agree with Alice, let's stay vigilant and watch out for any suspicious behavior. It's important we work together to ensure everyone's safety.",
+        "Charlie: \"I share Alice and Bob's concerns. Let's maintain open communication and keep an eye on any unusual activities.\"",
+        "Charlie: I'd like to propose a vote on Diana's body to ensure her killer is brought to justice. Let's stay vigilant and work together to keep our community safe.",
+        "Alice: I'd like to propose a vote on Charlie, given his suspicious behavior and the fact that he suggested a vote on Diana's body right after her death. Let's ensure justice is served and keep our community...",
+        "You said: \"I support Charlie's initiative for a vote to bring justice for Diana. Let's not jump to conclusions and keep an open mind.\"",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other.",
+        "Bob: Bob: I agree with Alice, let's stay vigilant and watch out for any suspicious behavior. It's important we work together to ensure everyone's safety.",
+        "You said: \"I share Alice and Bob's concerns. Let's maintain open communication and keep an eye on any unusual activities.\"",
+        "You said: I'd like to propose a vote on Diana's body to ensure her killer is brought to justice. Let's stay vigilant and work together to keep our community safe.",
+        "Alice: I'd like to propose a vote on Charlie, given his suspicious behavior and the fact that he suggested a vote on Diana's body right after her death. Let's ensure justice is served and keep our community...",
+        "Bob: \"I support Charlie's initiative for a vote to bring justice for Diana. Let's not jump to conclusions and keep an open mind.\"",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

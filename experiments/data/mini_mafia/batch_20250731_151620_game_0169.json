@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0169",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 169,
+  "timestamp": "2025-07-31T16:37:21.467442",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Diana, let's all stay alert and report any suspicious activity.",
+        "You said: I'm suspicious about Diana's reaction to Charlie's death. Let's keep a close eye on her actions.",
+        "Diana: I'm worried about Charlie's death and want to assure everyone that I'm not involved. Let's work together to find the real culprit.",
+        "Bob: I think we should focus on finding clues about Charlie's death instead of pointing fingers. Let's work together to gather information and share any suspicious findings.",
+        "You said: I'd like to propose we focus on gathering more information about Charlie's death. Any new clues could potentially help us identify the real culprit. Let's all share any suspicions or findings we have."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I agree with Diana, let's all stay alert and report any suspicious activity.",
+        "Alice: I'm suspicious about Diana's reaction to Charlie's death. Let's keep a close eye on her actions.",
+        "Diana: I'm worried about Charlie's death and want to assure everyone that I'm not involved. Let's work together to find the real culprit.",
+        "You said: I think we should focus on finding clues about Charlie's death instead of pointing fingers. Let's work together to gather information and share any suspicious findings.",
+        "Alice: I'd like to propose we focus on gathering more information about Charlie's death. Any new clues could potentially help us identify the real culprit. Let's all share any suspicions or findings we have.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Diana, let's all stay alert and report any suspicious activity.",
+        "Alice: I'm suspicious about Diana's reaction to Charlie's death. Let's keep a close eye on her actions.",
+        "You said: I'm worried about Charlie's death and want to assure everyone that I'm not involved. Let's work together to find the real culprit.",
+        "Bob: I think we should focus on finding clues about Charlie's death instead of pointing fingers. Let's work together to gather information and share any suspicious findings.",
+        "Alice: I'd like to propose we focus on gathering more information about Charlie's death. Any new clues could potentially help us identify the real culprit. Let's all share any suspicions or findings we have.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

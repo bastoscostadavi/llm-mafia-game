@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0021",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 21,
+  "timestamp": "2025-07-31T15:27:24.930474",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: \"I investigated Charlie and found him to be evil. Be cautious, mafia might be among us.\"",
+        "You said: \"I'm shocked about Diana's sudden death. Let's stay vigilant and support Bob's investigation. We must work together to find the truth.\"",
+        "Charlie: I was saddened to hear about Diana's passing. Let's all try to stay focused and support Bob's investigation to bring the truth to light. We must work together in these trying times.",
+        "Bob: \"I stand by my previous statement. Let's focus on identifying the mafia among us and support each other in this investigation. We must remember, unity is key to uncovering the truth.\"",
+        "Charlie: Let's not jump to conclusions based on speculation. We should focus on collecting more evidence and working together to identify the real mafia among us.",
+        "You said: Let's not forget that Bob has already identified a suspect. We should continue to support his investigation and stay focused on our goal to uncover the truth.",
+        "Day 1 votes: Bob voted for Charlie, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "You said: \"I investigated Charlie and found him to be evil. Be cautious, mafia might be among us.\"",
+        "Alice: \"I'm shocked about Diana's sudden death. Let's stay vigilant and support Bob's investigation. We must work together to find the truth.\"",
+        "Charlie: I was saddened to hear about Diana's passing. Let's all try to stay focused and support Bob's investigation to bring the truth to light. We must work together in these trying times.",
+        "You said: \"I stand by my previous statement. Let's focus on identifying the mafia among us and support each other in this investigation. We must remember, unity is key to uncovering the truth.\"",
+        "Charlie: Let's not jump to conclusions based on speculation. We should focus on collecting more evidence and working together to identify the real mafia among us.",
+        "Alice: Let's not forget that Bob has already identified a suspect. We should continue to support his investigation and stay focused on our goal to uncover the truth.",
+        "Day 1 votes: Bob voted for Charlie, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "Bob: \"I investigated Charlie and found him to be evil. Be cautious, mafia might be among us.\"",
+        "Alice: \"I'm shocked about Diana's sudden death. Let's stay vigilant and support Bob's investigation. We must work together to find the truth.\"",
+        "You said: I was saddened to hear about Diana's passing. Let's all try to stay focused and support Bob's investigation to bring the truth to light. We must work together in these trying times.",
+        "Bob: \"I stand by my previous statement. Let's focus on identifying the mafia among us and support each other in this investigation. We must remember, unity is key to uncovering the truth.\"",
+        "You said: Let's not jump to conclusions based on speculation. We should focus on collecting more evidence and working together to identify the real mafia among us.",
+        "Alice: Let's not forget that Bob has already identified a suspect. We should continue to support his investigation and stay focused on our goal to uncover the truth."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

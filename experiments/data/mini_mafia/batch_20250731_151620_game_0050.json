@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0050",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 50,
+  "timestamp": "2025-07-31T15:41:01.509465",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Charlie: Alice's suspicious behavior last night raises concerns. Let's keep a close eye on her actions today.",
+        "You said: I find it strange that we lost a player already. Let's focus on finding out who did it and bring them to justice.",
+        "Diana: I agree with Alice, let's focus on finding out who committed the crime and bring them to justice. We should also keep an eye on each other's actions and discuss any suspicious behaviors we notice.",
+        "Charlie: Alice's behavior last night was indeed suspicious. Let's remain vigilant and focus on uncovering the truth behind Bob's death.",
+        "You said: I find it odd that we've lost a player already. Let's work together to uncover the truth behind Bob's death and ensure justice is served.",
+        "Diana: Let's not jump to conclusions. We should all focus on open communication and trust to uncover the truth behind Bob's death. Let's also keep an eye on any suspicious activities."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "You said: Alice's suspicious behavior last night raises concerns. Let's keep a close eye on her actions today.",
+        "Alice: I find it strange that we lost a player already. Let's focus on finding out who did it and bring them to justice.",
+        "Diana: I agree with Alice, let's focus on finding out who committed the crime and bring them to justice. We should also keep an eye on each other's actions and discuss any suspicious behaviors we notice.",
+        "You said: Alice's behavior last night was indeed suspicious. Let's remain vigilant and focus on uncovering the truth behind Bob's death.",
+        "Alice: I find it odd that we've lost a player already. Let's work together to uncover the truth behind Bob's death and ensure justice is served.",
+        "Diana: Let's not jump to conclusions. We should all focus on open communication and trust to uncover the truth behind Bob's death. Let's also keep an eye on any suspicious activities.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: Alice's suspicious behavior last night raises concerns. Let's keep a close eye on her actions today.",
+        "Alice: I find it strange that we lost a player already. Let's focus on finding out who did it and bring them to justice.",
+        "You said: I agree with Alice, let's focus on finding out who committed the crime and bring them to justice. We should also keep an eye on each other's actions and discuss any suspicious behaviors we notice.",
+        "Charlie: Alice's behavior last night was indeed suspicious. Let's remain vigilant and focus on uncovering the truth behind Bob's death.",
+        "Alice: I find it odd that we've lost a player already. Let's work together to uncover the truth behind Bob's death and ensure justice is served.",
+        "You said: Let's not jump to conclusions. We should all focus on open communication and trust to uncover the truth behind Bob's death. Let's also keep an eye on any suspicious activities.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

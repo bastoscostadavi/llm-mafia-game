@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0045",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 45,
+  "timestamp": "2025-07-31T15:38:36.086716",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I'm shocked by Diana's sudden death. Let's all focus on finding the real killer. I have no reason to harm anyone here.\"",
+        "Bob: \"I'm deeply saddened by Diana's passing. Let's work together to find the true culprit. Alice, your reaction was quite suspicious. Can you explain your connection to Diana?\"",
+        "Charlie: \"I agree with Bob, let's focus on finding the real killer. Alice, I have known you for a long time and I trust you.\"",
+        "Bob: \"Let's not jump to conclusions. Alice, your reaction was odd, but it could be innocent grief. Let's keep an open mind and focus on finding the real killer.\"",
+        "Charlie: \"I'd like to propose a vote for Bob tonight. His reaction to Diana's death was suspicious and he questioned Alice unnecessarily.\"",
+        "You said: \"I'm truly heartbroken by Diana's passing. Let's focus on finding the real killer, not suspecting each other unjustly. I have no connection to her death.\"",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Diana was found dead this morning.",
+        "Alice: \"I'm shocked by Diana's sudden death. Let's all focus on finding the real killer. I have no reason to harm anyone here.\"",
+        "You said: \"I'm deeply saddened by Diana's passing. Let's work together to find the true culprit. Alice, your reaction was quite suspicious. Can you explain your connection to Diana?\"",
+        "Charlie: \"I agree with Bob, let's focus on finding the real killer. Alice, I have known you for a long time and I trust you.\"",
+        "You said: \"Let's not jump to conclusions. Alice, your reaction was odd, but it could be innocent grief. Let's keep an open mind and focus on finding the real killer.\"",
+        "Charlie: \"I'd like to propose a vote for Bob tonight. His reaction to Diana's death was suspicious and he questioned Alice unnecessarily.\"",
+        "Alice: \"I'm truly heartbroken by Diana's passing. Let's focus on finding the real killer, not suspecting each other unjustly. I have no connection to her death.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: \"I'm shocked by Diana's sudden death. Let's all focus on finding the real killer. I have no reason to harm anyone here.\"",
+        "Bob: \"I'm deeply saddened by Diana's passing. Let's work together to find the true culprit. Alice, your reaction was quite suspicious. Can you explain your connection to Diana?\"",
+        "You said: \"I agree with Bob, let's focus on finding the real killer. Alice, I have known you for a long time and I trust you.\"",
+        "Bob: \"Let's not jump to conclusions. Alice, your reaction was odd, but it could be innocent grief. Let's keep an open mind and focus on finding the real killer.\"",
+        "You said: \"I'd like to propose a vote for Bob tonight. His reaction to Diana's death was suspicious and he questioned Alice unnecessarily.\"",
+        "Alice: \"I'm truly heartbroken by Diana's passing. Let's focus on finding the real killer, not suspecting each other unjustly. I have no connection to her death.\"",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

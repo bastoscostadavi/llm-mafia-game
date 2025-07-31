@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0005",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 5,
+  "timestamp": "2025-07-31T14:24:56.514069",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and work together to uncover the truth behind this tragedy.",
+        "Charlie: I'm deeply concerned about Alice's death. Let's focus on identifying any inconsistencies or suspicious behavior to ensure everyone's safety.",
+        "Diana: I'm saddened by Alice's demise. Let's remember, even in grief, to remain cautious and not jump to conclusions. We need to stay united to uncover the truth.",
+        "Charlie: Let's closely examine Diana's actions and statements since she was identified as a potential mafioso. We must ensure the safety of our remaining villagers.",
+        "You said: I agree with Charlie's suggestion to scrutinize Diana's actions. Let's also remember that we cannot jump to conclusions based on suspicions alone. We should remain open-minded and vigilant to ensure t...",
+        "Diana: I'm genuinely upset about Alice's passing. Let's all focus on finding the real culprit behind this tragedy to ensure our safety and bring justice for Alice.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and work together to uncover the truth behind this tragedy.",
+        "You said: I'm deeply concerned about Alice's death. Let's focus on identifying any inconsistencies or suspicious behavior to ensure everyone's safety.",
+        "Diana: I'm saddened by Alice's demise. Let's remember, even in grief, to remain cautious and not jump to conclusions. We need to stay united to uncover the truth.",
+        "You said: Let's closely examine Diana's actions and statements since she was identified as a potential mafioso. We must ensure the safety of our remaining villagers.",
+        "Bob: I agree with Charlie's suggestion to scrutinize Diana's actions. Let's also remember that we cannot jump to conclusions based on suspicions alone. We should remain open-minded and vigilant to ensure t...",
+        "Diana: I'm genuinely upset about Alice's passing. Let's all focus on finding the real culprit behind this tragedy to ensure our safety and bring justice for Alice.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and work together to uncover the truth behind this tragedy.",
+        "Charlie: I'm deeply concerned about Alice's death. Let's focus on identifying any inconsistencies or suspicious behavior to ensure everyone's safety.",
+        "You said: I'm saddened by Alice's demise. Let's remember, even in grief, to remain cautious and not jump to conclusions. We need to stay united to uncover the truth.",
+        "Charlie: Let's closely examine Diana's actions and statements since she was identified as a potential mafioso. We must ensure the safety of our remaining villagers.",
+        "Bob: I agree with Charlie's suggestion to scrutinize Diana's actions. Let's also remember that we cannot jump to conclusions based on suspicions alone. We should remain open-minded and vigilant to ensure t...",
+        "You said: I'm genuinely upset about Alice's passing. Let's all focus on finding the real culprit behind this tragedy to ensure our safety and bring justice for Alice."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

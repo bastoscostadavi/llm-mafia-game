@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0088",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 88,
+  "timestamp": "2025-07-31T15:02:38.868999",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other during the day.\"",
+        "You said: I'm disturbed by Diana's death. Let's work together to ensure safety and trust during the day. If anyone suspects anything, let's share it openly.",
+        "Bob: Bob expresses sympathy for Diana's death and supports the idea of maintaining trust and open communication among the group.",
+        "Bob: I agree with Alice and Charlie. Let's all cooperate and share any concerns we may have. We need to ensure everyone's safety and trust during the day.",
+        "You said: Based on my investigation, I have reason to believe that one of us is a mafioso. Let's all remain vigilant and share any suspicious behaviors or actions during the day. We must work together to uncove...",
+        "Charlie: I'd like to echo Alice's sentiments about remaining vigilant and maintaining open communication. Let's all support each other during this difficult time. However, I'm concerned about the potential pre..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other during the day.\"",
+        "Alice: I'm disturbed by Diana's death. Let's work together to ensure safety and trust during the day. If anyone suspects anything, let's share it openly.",
+        "You said: Bob expresses sympathy for Diana's death and supports the idea of maintaining trust and open communication among the group.",
+        "You said: I agree with Alice and Charlie. Let's all cooperate and share any concerns we may have. We need to ensure everyone's safety and trust during the day.",
+        "Alice: Based on my investigation, I have reason to believe that one of us is a mafioso. Let's all remain vigilant and share any suspicious behaviors or actions during the day. We must work together to uncove...",
+        "Charlie: I'd like to echo Alice's sentiments about remaining vigilant and maintaining open communication. Let's all support each other during this difficult time. However, I'm concerned about the potential pre...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other during the day.\"",
+        "Alice: I'm disturbed by Diana's death. Let's work together to ensure safety and trust during the day. If anyone suspects anything, let's share it openly.",
+        "Bob: Bob expresses sympathy for Diana's death and supports the idea of maintaining trust and open communication among the group.",
+        "Bob: I agree with Alice and Charlie. Let's all cooperate and share any concerns we may have. We need to ensure everyone's safety and trust during the day.",
+        "Alice: Based on my investigation, I have reason to believe that one of us is a mafioso. Let's all remain vigilant and share any suspicious behaviors or actions during the day. We must work together to uncove...",
+        "You said: I'd like to echo Alice's sentiments about remaining vigilant and maintaining open communication. Let's all support each other during this difficult time. However, I'm concerned about the potential pre...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0104",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 104,
+  "timestamp": "2025-07-31T16:06:54.421895",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's work together to find out what happened.",
+        "You said: I agree with Diana. Let's keep an eye on each other and report any suspicious behavior. Bob's death is a reminder that we need to stay vigilant.",
+        "Charlie: I'm concerned about Bob's sudden disappearance. Let's be extra cautious and report any suspicious activity.",
+        "Diana: I'm still worried about Bob's disappearance. Let's all share any relevant information we might have to help us understand what happened.",
+        "Charlie: I'm troubled by Bob's death and Diana's suspicious behavior. Let's be on high alert and share any new information.",
+        "You said: I'm uneasy about Charlie's reaction to Bob's death. Let's focus on gathering facts, not accusations.",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Diana, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's work together to find out what happened.",
+        "Alice: I agree with Diana. Let's keep an eye on each other and report any suspicious behavior. Bob's death is a reminder that we need to stay vigilant.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's be extra cautious and report any suspicious activity.",
+        "Diana: I'm still worried about Bob's disappearance. Let's all share any relevant information we might have to help us understand what happened.",
+        "You said: I'm troubled by Bob's death and Diana's suspicious behavior. Let's be on high alert and share any new information.",
+        "Alice: I'm uneasy about Charlie's reaction to Bob's death. Let's focus on gathering facts, not accusations."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's work together to find out what happened.",
+        "Alice: I agree with Diana. Let's keep an eye on each other and report any suspicious behavior. Bob's death is a reminder that we need to stay vigilant.",
+        "Charlie: I'm concerned about Bob's sudden disappearance. Let's be extra cautious and report any suspicious activity.",
+        "You said: I'm still worried about Bob's disappearance. Let's all share any relevant information we might have to help us understand what happened.",
+        "Charlie: I'm troubled by Bob's death and Diana's suspicious behavior. Let's be on high alert and share any new information.",
+        "Alice: I'm uneasy about Charlie's reaction to Bob's death. Let's focus on gathering facts, not accusations.",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Diana, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

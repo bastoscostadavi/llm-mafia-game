@@ -62,12 +62,14 @@ def mini_mafia_game(debug_prompts=False):
     # Detective and mafioso know each other
     detective.remember(f"You investigated {mafioso.name}: evil")
     detective.remember(f"{mafioso.name} knows you're the detective")
-    mafioso.remember(f"You discovered {detective.name} is the detective.")
+    mafioso.remember(f"You killed {victim.name}")
     mafioso.remember(f"{detective.name} investigated you and learned you're evil.")
     
-    # Everyone knows who was found dead
-    death_message = f"{victim.name} was found dead this morning."
+    # Everyone knows who was found dead, including role information for mini-mafia
+    death_message = f"{victim.name} ({victim.role}) was found dead this morning."
+    
     for agent in alive_agents:
+        # In mini-mafia, players learn the role of the dead person
         agent.remember(death_message)
     
     # Override play method for single day phase

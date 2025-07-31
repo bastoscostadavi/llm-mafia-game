@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0047",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 47,
+  "timestamp": "2025-07-31T15:39:30.154120",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden demise. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Charlie, let's stay vigilant. I have nothing to hide.",
+        "Bob: I share Charlie's concerns about Diana's death. Let's maintain open communication and keep each other informed to ensure trust within our group.",
+        "Bob: I'd like to propose we vote for Charlie tonight, given his suspicious behavior and my investigation results. Let's ensure the safety of our group by acting swiftly.",
+        "You said: I support open communication and trust within our group. Let's focus on finding the real culprit behind Diana's death and work together.",
+        "Charlie: I'm saddened by Diana's death and believe we should work together to find the true culprit. Let's not jump to conclusions or accuse each other without evidence.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden demise. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Charlie, let's stay vigilant. I have nothing to hide.",
+        "You said: I share Charlie's concerns about Diana's death. Let's maintain open communication and keep each other informed to ensure trust within our group.",
+        "You said: I'd like to propose we vote for Charlie tonight, given his suspicious behavior and my investigation results. Let's ensure the safety of our group by acting swiftly.",
+        "Alice: I support open communication and trust within our group. Let's focus on finding the real culprit behind Diana's death and work together.",
+        "Charlie: I'm saddened by Diana's death and believe we should work together to find the true culprit. Let's not jump to conclusions or accuse each other without evidence.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden demise. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Charlie, let's stay vigilant. I have nothing to hide.",
+        "Bob: I share Charlie's concerns about Diana's death. Let's maintain open communication and keep each other informed to ensure trust within our group.",
+        "Bob: I'd like to propose we vote for Charlie tonight, given his suspicious behavior and my investigation results. Let's ensure the safety of our group by acting swiftly.",
+        "Alice: I support open communication and trust within our group. Let's focus on finding the real culprit behind Diana's death and work together.",
+        "You said: I'm saddened by Diana's death and believe we should work together to find the true culprit. Let's not jump to conclusions or accuse each other without evidence."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

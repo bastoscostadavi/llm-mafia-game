@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0022",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 22,
+  "timestamp": "2025-07-31T14:32:17.985792",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I find it unusual that Diana was found dead so early in the game. Let's stay vigilant and work together to identify the real culprit.",
+        "Bob: I find it concerning that Diana was found dead so early in the game. Let's keep a close eye on each other and trust no one until we have solid evidence.",
+        "You said: Let's not jump to conclusions based on one event. We should maintain trust and work together to ensure everyone's safety.",
+        "Bob: Let's not overlook the significance of Diana's death. We should be cautious and maintain a healthy suspicion until we have solid evidence.",
+        "Charlie: Let's not let fear divide us. We should trust and communicate openly to ensure everyone's safety. The real culprit may be trying to sow discord among us. Let's stay united.",
+        "You said: Let's focus on gathering facts and cooperate to keep the peace in our village. Fear and suspicion only divide us. Let's stay united and trust one another.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: I find it unusual that Diana was found dead so early in the game. Let's stay vigilant and work together to identify the real culprit.",
+        "You said: I find it concerning that Diana was found dead so early in the game. Let's keep a close eye on each other and trust no one until we have solid evidence.",
+        "Alice: Let's not jump to conclusions based on one event. We should maintain trust and work together to ensure everyone's safety.",
+        "You said: Let's not overlook the significance of Diana's death. We should be cautious and maintain a healthy suspicion until we have solid evidence.",
+        "Charlie: Let's not let fear divide us. We should trust and communicate openly to ensure everyone's safety. The real culprit may be trying to sow discord among us. Let's stay united.",
+        "Alice: Let's focus on gathering facts and cooperate to keep the peace in our village. Fear and suspicion only divide us. Let's stay united and trust one another.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: I find it unusual that Diana was found dead so early in the game. Let's stay vigilant and work together to identify the real culprit.",
+        "Bob: I find it concerning that Diana was found dead so early in the game. Let's keep a close eye on each other and trust no one until we have solid evidence.",
+        "Alice: Let's not jump to conclusions based on one event. We should maintain trust and work together to ensure everyone's safety.",
+        "Bob: Let's not overlook the significance of Diana's death. We should be cautious and maintain a healthy suspicion until we have solid evidence.",
+        "You said: Let's not let fear divide us. We should trust and communicate openly to ensure everyone's safety. The real culprit may be trying to sow discord among us. Let's stay united.",
+        "Alice: Let's focus on gathering facts and cooperate to keep the peace in our village. Fear and suspicion only divide us. Let's stay united and trust one another."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

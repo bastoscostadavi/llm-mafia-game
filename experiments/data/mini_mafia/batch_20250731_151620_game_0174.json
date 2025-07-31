@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0174",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 174,
+  "timestamp": "2025-07-31T16:39:41.076733",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.\"",
+        "Bob: \"I agree with Charlie's suggestion. Let's all be vigilant to ensure everyone's safety, especially after Diana's disappearance.\"",
+        "You said: \"I support Charlie and Bob's suggestion for increased vigilance. Let's remember to trust each other and communicate openly to ensure everyone's safety.\"",
+        "Charlie: \"I'd like to echo Alice's words about trust and communication. Let's all be extra cautious and share any suspicious observations we may have.\"",
+        "Bob: \"Based on my investigation, I believe it's important that we remain vigilant towards Charlie. Let's not forget that he's the one who suggested increased vigilance after Diana's disappearance. We shoul...",
+        "You said: \"I'd like to remind everyone of the importance of trust and communication. Let's not jump to conclusions based on speculation. We should focus on keeping an open dialogue to ensure everyone's safety.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie: evil",
+        "Charlie knows you're the detective",
+        "Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.\"",
+        "You said: \"I agree with Charlie's suggestion. Let's all be vigilant to ensure everyone's safety, especially after Diana's disappearance.\"",
+        "Alice: \"I support Charlie and Bob's suggestion for increased vigilance. Let's remember to trust each other and communicate openly to ensure everyone's safety.\"",
+        "Charlie: \"I'd like to echo Alice's words about trust and communication. Let's all be extra cautious and share any suspicious observations we may have.\"",
+        "You said: \"Based on my investigation, I believe it's important that we remain vigilant towards Charlie. Let's not forget that he's the one who suggested increased vigilance after Diana's disappearance. We shoul...",
+        "Alice: \"I'd like to remind everyone of the importance of trust and communication. Let's not jump to conclusions based on speculation. We should focus on keeping an open dialogue to ensure everyone's safety.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other to ensure everyone's safety.\"",
+        "Bob: \"I agree with Charlie's suggestion. Let's all be vigilant to ensure everyone's safety, especially after Diana's disappearance.\"",
+        "Alice: \"I support Charlie and Bob's suggestion for increased vigilance. Let's remember to trust each other and communicate openly to ensure everyone's safety.\"",
+        "You said: \"I'd like to echo Alice's words about trust and communication. Let's all be extra cautious and share any suspicious observations we may have.\"",
+        "Bob: \"Based on my investigation, I believe it's important that we remain vigilant towards Charlie. Let's not forget that he's the one who suggested increased vigilance after Diana's disappearance. We shoul...",
+        "Alice: \"I'd like to remind everyone of the importance of trust and communication. Let's not jump to conclusions based on speculation. We should focus on keeping an open dialogue to ensure everyone's safety.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

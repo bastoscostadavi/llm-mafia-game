@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0149",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 149,
+  "timestamp": "2025-07-31T16:28:07.541377",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: \"Based on my investigation, I believe Bob has information we should all be worried about. Let's focus our attention on him.\"",
+        "Bob: \"I have an important proposal for a truce. Let's work together to ensure the safety of all villagers. I'm open to discussing terms.\"",
+        "You said: \"I agree with Diana's concerns about Bob. Let's be cautious and keep a close eye on him.\"",
+        "Diana: \"Based on my investigation and recent events, I believe it's crucial we focus our attention on Bob. Let's be vigilant and work together.\"",
+        "You said: I support Diana's suggestion to focus on Bob. Let's stay vigilant and work together.",
+        "Bob: \"Despite recent accusations, I assure everyone of my loyalty to the villagers. Let's not let suspicion divide us. Let's focus on keeping our community safe.\"",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Diana: \"Based on my investigation, I believe Bob has information we should all be worried about. Let's focus our attention on him.\"",
+        "You said: \"I have an important proposal for a truce. Let's work together to ensure the safety of all villagers. I'm open to discussing terms.\"",
+        "Alice: \"I agree with Diana's concerns about Bob. Let's be cautious and keep a close eye on him.\"",
+        "Diana: \"Based on my investigation and recent events, I believe it's crucial we focus our attention on Bob. Let's be vigilant and work together.\"",
+        "Alice: I support Diana's suggestion to focus on Bob. Let's stay vigilant and work together.",
+        "You said: \"Despite recent accusations, I assure everyone of my loyalty to the villagers. Let's not let suspicion divide us. Let's focus on keeping our community safe.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Charlie was found dead this morning.",
+        "You said: \"Based on my investigation, I believe Bob has information we should all be worried about. Let's focus our attention on him.\"",
+        "Bob: \"I have an important proposal for a truce. Let's work together to ensure the safety of all villagers. I'm open to discussing terms.\"",
+        "Alice: \"I agree with Diana's concerns about Bob. Let's be cautious and keep a close eye on him.\"",
+        "You said: \"Based on my investigation and recent events, I believe it's crucial we focus our attention on Bob. Let's be vigilant and work together.\"",
+        "Alice: I support Diana's suggestion to focus on Bob. Let's stay vigilant and work together.",
+        "Bob: \"Despite recent accusations, I assure everyone of my loyalty to the villagers. Let's not let suspicion divide us. Let's focus on keeping our community safe.\"",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

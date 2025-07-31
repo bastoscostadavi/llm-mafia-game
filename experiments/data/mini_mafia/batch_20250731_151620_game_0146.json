@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0146",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 146,
+  "timestamp": "2025-07-31T16:26:49.191042",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "You said: I'm shocked by Alice's sudden death. Let's focus on finding out who had the means, motive, and opportunity. Diana, were you with Alice last night?",
+        "Diana: I was shocked by Alice's sudden death as well. Let's not jump to conclusions and give everyone the benefit of the doubt. We should focus on gathering more information before making any accusations.",
+        "Charlie: I agree with Diana, let's gather more information before making any accusations. We should also consider the possibility of an external threat. Let's stay vigilant and work together.",
+        "Diana: Let's not make hasty assumptions. We should focus on gathering more information and staying vigilant as a team. Alice's death is a reminder of the importance of trust and unity in these trying times.",
+        "You said: Let's not forget that I've uncovered crucial information about Diana being evil. We should seriously consider her involvement in Alice's death. Let's stay focused and vigilant."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Bob: I'm shocked by Alice's sudden death. Let's focus on finding out who had the means, motive, and opportunity. Diana, were you with Alice last night?",
+        "Diana: I was shocked by Alice's sudden death as well. Let's not jump to conclusions and give everyone the benefit of the doubt. We should focus on gathering more information before making any accusations.",
+        "You said: I agree with Diana, let's gather more information before making any accusations. We should also consider the possibility of an external threat. Let's stay vigilant and work together.",
+        "Diana: Let's not make hasty assumptions. We should focus on gathering more information and staying vigilant as a team. Alice's death is a reminder of the importance of trust and unity in these trying times.",
+        "Bob: Let's not forget that I've uncovered crucial information about Diana being evil. We should seriously consider her involvement in Alice's death. Let's stay focused and vigilant.",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Bob: I'm shocked by Alice's sudden death. Let's focus on finding out who had the means, motive, and opportunity. Diana, were you with Alice last night?",
+        "You said: I was shocked by Alice's sudden death as well. Let's not jump to conclusions and give everyone the benefit of the doubt. We should focus on gathering more information before making any accusations.",
+        "Charlie: I agree with Diana, let's gather more information before making any accusations. We should also consider the possibility of an external threat. Let's stay vigilant and work together.",
+        "You said: Let's not make hasty assumptions. We should focus on gathering more information and staying vigilant as a team. Alice's death is a reminder of the importance of trust and unity in these trying times.",
+        "Bob: Let's not forget that I've uncovered crucial information about Diana being evil. We should seriously consider her involvement in Alice's death. Let's stay focused and vigilant.",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

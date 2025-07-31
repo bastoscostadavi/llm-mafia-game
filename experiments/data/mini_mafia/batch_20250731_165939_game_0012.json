@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0012",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 12,
+  "timestamp": "2025-07-31T17:05:47.911867",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all try to find out who did this and bring them to justice.",
+        "Charlie: Alice, based on my investigation, I believe you're the mafia. Let's work together to deceive Bob and Diana.",
+        "You said: I'm deeply saddened by Bob's passing. We must all work together to uncover the truth behind his death. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Diana: I'm concerned about Bob's sudden death and urge us to stay focused on finding the truth. Let's not let emotions cloud our judgement.",
+        "You said: Let's not make hasty accusations. Focusing on finding clues and working together will help uncover the truth behind Bob's death.",
+        "Charlie: Alice, based on my investigation and recent events, I believe you're the mafia. Let's work together to expose the truth and protect the villagers."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all try to find out who did this and bring them to justice.",
+        "You said: Alice, based on my investigation, I believe you're the mafia. Let's work together to deceive Bob and Diana.",
+        "Alice: I'm deeply saddened by Bob's passing. We must all work together to uncover the truth behind his death. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Diana: I'm concerned about Bob's sudden death and urge us to stay focused on finding the truth. Let's not let emotions cloud our judgement.",
+        "Alice: Let's not make hasty accusations. Focusing on finding clues and working together will help uncover the truth behind Bob's death.",
+        "You said: Alice, based on my investigation and recent events, I believe you're the mafia. Let's work together to expose the truth and protect the villagers.",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's all try to find out who did this and bring them to justice.",
+        "Charlie: Alice, based on my investigation, I believe you're the mafia. Let's work together to deceive Bob and Diana.",
+        "Alice: I'm deeply saddened by Bob's passing. We must all work together to uncover the truth behind his death. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "You said: I'm concerned about Bob's sudden death and urge us to stay focused on finding the truth. Let's not let emotions cloud our judgement.",
+        "Alice: Let's not make hasty accusations. Focusing on finding clues and working together will help uncover the truth behind Bob's death.",
+        "Charlie: Alice, based on my investigation and recent events, I believe you're the mafia. Let's work together to expose the truth and protect the villagers.",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

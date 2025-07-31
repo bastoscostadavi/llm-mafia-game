@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0145",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 145,
+  "timestamp": "2025-07-31T16:26:20.065221",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: \"I find it odd that Diana was found dead so suddenly. Let's be careful and watch each other closely.\"",
+        "You said: \"I agree with Bob, let's keep a close eye on each other. It's important we all work together to ensure everyone's safety.\"",
+        "Charlie: \"I noticed some unusual behavior last night. Let's keep an extra close eye on Bob tonight.\"",
+        "Charlie: \"I've noticed inconsistencies in some of the statements made during the day. Let's focus on the truth and trust each other's words.\"",
+        "Bob: \"I'm concerned about Diana's sudden death. Let's not jump to conclusions, but let's keep a close eye on any suspicious activities.\"",
+        "You said: \"Let's not make hasty assumptions based on suspicions. We should focus on trust and open communication. Let's work together to uncover any inconsistencies.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: \"I find it odd that Diana was found dead so suddenly. Let's be careful and watch each other closely.\"",
+        "Alice: \"I agree with Bob, let's keep a close eye on each other. It's important we all work together to ensure everyone's safety.\"",
+        "Charlie: \"I noticed some unusual behavior last night. Let's keep an extra close eye on Bob tonight.\"",
+        "Charlie: \"I've noticed inconsistencies in some of the statements made during the day. Let's focus on the truth and trust each other's words.\"",
+        "You said: \"I'm concerned about Diana's sudden death. Let's not jump to conclusions, but let's keep a close eye on any suspicious activities.\"",
+        "Alice: \"Let's not make hasty assumptions based on suspicions. We should focus on trust and open communication. Let's work together to uncover any inconsistencies.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob: evil",
+        "Bob knows you're the detective",
+        "Diana was found dead this morning.",
+        "Bob: \"I find it odd that Diana was found dead so suddenly. Let's be careful and watch each other closely.\"",
+        "Alice: \"I agree with Bob, let's keep a close eye on each other. It's important we all work together to ensure everyone's safety.\"",
+        "You said: \"I noticed some unusual behavior last night. Let's keep an extra close eye on Bob tonight.\"",
+        "You said: \"I've noticed inconsistencies in some of the statements made during the day. Let's focus on the truth and trust each other's words.\"",
+        "Bob: \"I'm concerned about Diana's sudden death. Let's not jump to conclusions, but let's keep a close eye on any suspicious activities.\"",
+        "Alice: \"Let's not make hasty assumptions based on suspicions. We should focus on trust and open communication. Let's work together to uncover any inconsistencies.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

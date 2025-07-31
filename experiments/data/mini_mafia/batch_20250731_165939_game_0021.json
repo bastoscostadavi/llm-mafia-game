@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0021",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 21,
+  "timestamp": "2025-07-31T17:10:23.873388",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and keep an eye out for any suspicious activities.",
+        "Bob: I agree with Alice, let's stay alert and report any unusual behavior.",
+        "Diana: I'm troubled by Charlie's death and Alice's suspicious behavior last night. Let's keep a close eye on each other during the day.",
+        "Bob: Bob is worried about Charlie's death and suggests forming a unity to ensure everyone's safety. Let's focus on finding the culprit together.",
+        "Diana: I'm still troubled by Charlie's sudden disappearance and Alice's suspicious behavior last night. Let's form a united front and closely monitor each other during the day. We must ensure the safety of o...",
+        "You said: I'm concerned about the recent events and suggest we all focus on finding the real culprit behind Charlie's death. Let's try to gather more information and work together."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and keep an eye out for any suspicious activities.",
+        "You said: I agree with Alice, let's stay alert and report any unusual behavior.",
+        "Diana: I'm troubled by Charlie's death and Alice's suspicious behavior last night. Let's keep a close eye on each other during the day.",
+        "You said: Bob is worried about Charlie's death and suggests forming a unity to ensure everyone's safety. Let's focus on finding the culprit together.",
+        "Diana: I'm still troubled by Charlie's sudden disappearance and Alice's suspicious behavior last night. Let's form a united front and closely monitor each other during the day. We must ensure the safety of o...",
+        "Alice: I'm concerned about the recent events and suggest we all focus on finding the real culprit behind Charlie's death. Let's try to gather more information and work together.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and keep an eye out for any suspicious activities.",
+        "Bob: I agree with Alice, let's stay alert and report any unusual behavior.",
+        "You said: I'm troubled by Charlie's death and Alice's suspicious behavior last night. Let's keep a close eye on each other during the day.",
+        "Bob: Bob is worried about Charlie's death and suggests forming a unity to ensure everyone's safety. Let's focus on finding the culprit together.",
+        "You said: I'm still troubled by Charlie's sudden disappearance and Alice's suspicious behavior last night. Let's form a united front and closely monitor each other during the day. We must ensure the safety of o...",
+        "Alice: I'm concerned about the recent events and suggest we all focus on finding the real culprit behind Charlie's death. Let's try to gather more information and work together.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

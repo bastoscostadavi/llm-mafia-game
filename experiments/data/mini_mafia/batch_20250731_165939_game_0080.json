@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_165939_game_0080",
+  "batch_id": "batch_20250731_165939",
+  "game_number": 80,
+  "timestamp": "2025-07-31T17:38:48.150574",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Diana is the detective.",
+        "Diana investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Diana: Alice, have you seen anything suspicious during the night or this morning? Let's ensure a safe and fair game for everyone.",
+        "Bob: I had a strange dream last night about a full moon and wolves howling. It was quite unsettling. Let's stay vigilant.",
+        "You said: I had a strange dream as well, Bob. Let's trust each other and work together for a peaceful game.",
+        "Bob: I'm relieved that we're all on the same page about staying vigilant. Let's focus on observing each other's behavior and trust the investigation process. We'll get to the bottom of this together.",
+        "Diana: Alice, let's discuss your strange dream in more detail. Bob, have you noticed anything unusual about Charlie lately? Let's keep the communication open for everyone's safety.",
+        "You said: I had an unsettling dream about a full moon and wolves howling. Let's all stay focused and trust the investigation process."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: Alice, have you seen anything suspicious during the night or this morning? Let's ensure a safe and fair game for everyone.",
+        "You said: I had a strange dream last night about a full moon and wolves howling. It was quite unsettling. Let's stay vigilant.",
+        "Alice: I had a strange dream as well, Bob. Let's trust each other and work together for a peaceful game.",
+        "You said: I'm relieved that we're all on the same page about staying vigilant. Let's focus on observing each other's behavior and trust the investigation process. We'll get to the bottom of this together.",
+        "Diana: Alice, let's discuss your strange dream in more detail. Bob, have you noticed anything unusual about Charlie lately? Let's keep the communication open for everyone's safety.",
+        "Alice: I had an unsettling dream about a full moon and wolves howling. Let's all stay focused and trust the investigation process.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Charlie was found dead this morning.",
+        "You said: Alice, have you seen anything suspicious during the night or this morning? Let's ensure a safe and fair game for everyone.",
+        "Bob: I had a strange dream last night about a full moon and wolves howling. It was quite unsettling. Let's stay vigilant.",
+        "Alice: I had a strange dream as well, Bob. Let's trust each other and work together for a peaceful game.",
+        "Bob: I'm relieved that we're all on the same page about staying vigilant. Let's focus on observing each other's behavior and trust the investigation process. We'll get to the bottom of this together.",
+        "You said: Alice, let's discuss your strange dream in more detail. Bob, have you noticed anything unusual about Charlie lately? Let's keep the communication open for everyone's safety.",
+        "Alice: I had an unsettling dream about a full moon and wolves howling. Let's all stay focused and trust the investigation process.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0189",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 189,
+  "timestamp": "2025-07-31T16:46:32.821011",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden death. Let's all be vigilant and work together to find out what happened.",
+        "Charlie: I'm troubled by Diana's investigation result and Alice's death. Let's keep a close eye on her actions.",
+        "You said: Bob: I agree with Diana, we need to be cautious and work together to uncover the truth behind Alice's death. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Charlie: I'm suspicious of Diana's involvement in Alice's death and her being a mafia member. Let's be cautious and consider the possibility of her being the killer.",
+        "You said: Bob: I support Diana's call for caution and working together. Let's not accuse anyone without solid evidence. I trust that everyone is committed to finding the truth behind Alice's death.",
+        "Diana: I'm saddened by Alice's death and want to ensure we find the truth. Let's focus on discussing potential leads and evidence, not accusations."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden death. Let's all be vigilant and work together to find out what happened.",
+        "You said: I'm troubled by Diana's investigation result and Alice's death. Let's keep a close eye on her actions.",
+        "Bob: Bob: I agree with Diana, we need to be cautious and work together to uncover the truth behind Alice's death. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "You said: I'm suspicious of Diana's involvement in Alice's death and her being a mafia member. Let's be cautious and consider the possibility of her being the killer.",
+        "Bob: Bob: I support Diana's call for caution and working together. Let's not accuse anyone without solid evidence. I trust that everyone is committed to finding the truth behind Alice's death.",
+        "Diana: I'm saddened by Alice's death and want to ensure we find the truth. Let's focus on discussing potential leads and evidence, not accusations.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Charlie is the detective.",
+        "Charlie investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden death. Let's all be vigilant and work together to find out what happened.",
+        "Charlie: I'm troubled by Diana's investigation result and Alice's death. Let's keep a close eye on her actions.",
+        "Bob: Bob: I agree with Diana, we need to be cautious and work together to uncover the truth behind Alice's death. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Charlie: I'm suspicious of Diana's involvement in Alice's death and her being a mafia member. Let's be cautious and consider the possibility of her being the killer.",
+        "Bob: Bob: I support Diana's call for caution and working together. Let's not accuse anyone without solid evidence. I trust that everyone is committed to finding the truth behind Alice's death.",
+        "You said: I'm saddened by Alice's death and want to ensure we find the truth. Let's focus on discussing potential leads and evidence, not accusations.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

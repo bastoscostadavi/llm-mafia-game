@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0171",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 171,
+  "timestamp": "2025-07-31T16:38:15.535040",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all stay vigilant and try to uncover the truth behind this tragedy.",
+        "You said: I'm deeply saddened by Alice's death. Let's focus on finding the truth. I investigated Diana and found her to be suspicious. Be cautious, everyone.",
+        "Diana: I'm shocked by Alice's death too. Let's work together to find the real culprit. I have no information regarding her demise.",
+        "You said: I'm concerned about Diana's reaction to Alice's death. Let's keep pressing for information.",
+        "Charlie: Based on Bob's investigation results, let's focus on Diana. She seems to have some information. Let's press her for details.",
+        "Diana: I'm truly saddened by Alice's passing. Let's not jump to conclusions and give Diana a fair chance to share any relevant information she may have. We're in this together to uncover the truth.",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all stay vigilant and try to uncover the truth behind this tragedy.",
+        "Bob: I'm deeply saddened by Alice's death. Let's focus on finding the truth. I investigated Diana and found her to be suspicious. Be cautious, everyone.",
+        "Diana: I'm shocked by Alice's death too. Let's work together to find the real culprit. I have no information regarding her demise.",
+        "Bob: I'm concerned about Diana's reaction to Alice's death. Let's keep pressing for information.",
+        "You said: Based on Bob's investigation results, let's focus on Diana. She seems to have some information. Let's press her for details.",
+        "Diana: I'm truly saddened by Alice's passing. Let's not jump to conclusions and give Diana a fair chance to share any relevant information she may have. We're in this together to uncover the truth.",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all stay vigilant and try to uncover the truth behind this tragedy.",
+        "Bob: I'm deeply saddened by Alice's death. Let's focus on finding the truth. I investigated Diana and found her to be suspicious. Be cautious, everyone.",
+        "You said: I'm shocked by Alice's death too. Let's work together to find the real culprit. I have no information regarding her demise.",
+        "Bob: I'm concerned about Diana's reaction to Alice's death. Let's keep pressing for information.",
+        "Charlie: Based on Bob's investigation results, let's focus on Diana. She seems to have some information. Let's press her for details.",
+        "You said: I'm truly saddened by Alice's passing. Let's not jump to conclusions and give Diana a fair chance to share any relevant information she may have. We're in this together to uncover the truth."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

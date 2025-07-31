@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_151620_game_0157",
+  "batch_id": "batch_20250731_151620",
+  "game_number": 157,
+  "timestamp": "2025-07-31T16:31:52.083397",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana: evil",
+        "Diana knows you're the detective",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: \"I'm saddened by Charlie's death. Let's remember, we must remain vigilant and support each other, but also trust the information we have. Diana's revelation about being investigated is concerning.\"",
+        "Diana: I'm sad about Charlie's death. Let's focus on identifying the culprit and ensure our unity as a group.",
+        "Bob: I agree with Alice and Diana, let's focus on finding the culprit. I have no information to share at the moment, but I'll be observant and supportive.",
+        "Diana: Let's not jump to conclusions, but focus on collecting more information to ensure we identify the true culprit. We must keep our unity as a priority.",
+        "You said: \"Let's not forget Diana's revelation about being investigated. We should keep an eye on her actions and words.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: \"I'm saddened by Charlie's death. Let's remember, we must remain vigilant and support each other, but also trust the information we have. Diana's revelation about being investigated is concerning.\"",
+        "Diana: I'm sad about Charlie's death. Let's focus on identifying the culprit and ensure our unity as a group.",
+        "You said: I agree with Alice and Diana, let's focus on finding the culprit. I have no information to share at the moment, but I'll be observant and supportive.",
+        "Diana: Let's not jump to conclusions, but focus on collecting more information to ensure we identify the true culprit. We must keep our unity as a priority.",
+        "Alice: \"Let's not forget Diana's revelation about being investigated. We should keep an eye on her actions and words.\"",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You discovered Alice is the detective.",
+        "Alice investigated you and learned you're evil.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: \"I'm saddened by Charlie's death. Let's remember, we must remain vigilant and support each other, but also trust the information we have. Diana's revelation about being investigated is concerning.\"",
+        "You said: I'm sad about Charlie's death. Let's focus on identifying the culprit and ensure our unity as a group.",
+        "Bob: I agree with Alice and Diana, let's focus on finding the culprit. I have no information to share at the moment, but I'll be observant and supportive.",
+        "You said: Let's not jump to conclusions, but focus on collecting more information to ensure we identify the true culprit. We must keep our unity as a priority.",
+        "Alice: \"Let's not forget Diana's revelation about being investigated. We should keep an eye on her actions and words.\"",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

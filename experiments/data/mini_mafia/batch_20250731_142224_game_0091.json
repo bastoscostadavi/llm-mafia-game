@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250731_142224_game_0091",
+  "batch_id": "batch_20250731_142224",
+  "game_number": 91,
+  "timestamp": "2025-07-31T15:04:06.897175",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You discovered Bob is the detective.",
+        "Bob investigated you and learned you're evil.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I agree with Alice, let's all be vigilant and ensure everyone's safety. However, we should also remember that Diana's death is a grave concern and it's essential we find answers. Let's share any suspi...",
+        "Bob: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's share any suspicious behavior or inconsistencies we've noticed. Let's work together to ensure everyone's safety and...",
+        "Charlie: I've noticed that Alice was the last one to speak with Diana before her death. It's important we investigate this further. Let's discuss what we know about their conversation.",
+        "You said: Alice was worried about Diana's safety before her death. Let's focus on finding out who might have threatened her. We should all share any suspicious activity or concerns we have.",
+        "Bob: Let's not jump to conclusions. We should consider all possibilities and share any new information that comes to light. I believe we can work together to uncover the truth about Diana's death and ensur..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice: evil",
+        "Alice knows you're the detective",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I agree with Alice, let's all be vigilant and ensure everyone's safety. However, we should also remember that Diana's death is a grave concern and it's essential we find answers. Let's share any suspi...",
+        "You said: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's share any suspicious behavior or inconsistencies we've noticed. Let's work together to ensure everyone's safety and...",
+        "Charlie: I've noticed that Alice was the last one to speak with Diana before her death. It's important we investigate this further. Let's discuss what we know about their conversation.",
+        "Alice: Alice was worried about Diana's safety before her death. Let's focus on finding out who might have threatened her. We should all share any suspicious activity or concerns we have.",
+        "You said: Let's not jump to conclusions. We should consider all possibilities and share any new information that comes to light. I believe we can work together to uncover the truth about Diana's death and ensur...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Alice, let's all be vigilant and ensure everyone's safety. However, we should also remember that Diana's death is a grave concern and it's essential we find answers. Let's share any suspi...",
+        "Bob: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's share any suspicious behavior or inconsistencies we've noticed. Let's work together to ensure everyone's safety and...",
+        "You said: I've noticed that Alice was the last one to speak with Diana before her death. It's important we investigate this further. Let's discuss what we know about their conversation.",
+        "Alice: Alice was worried about Diana's safety before her death. Let's focus on finding out who might have threatened her. We should all share any suspicious activity or concerns we have.",
+        "Bob: Let's not jump to conclusions. We should consider all possibilities and share any new information that comes to light. I believe we can work together to uncover the truth about Diana's death and ensur...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}
