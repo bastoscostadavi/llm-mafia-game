@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0040",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 40,
+  "timestamp": "2025-07-30T12:26:37.745375",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's try to figure out what happened together. We should all stay vigilant and communicate openly during this investigation.",
+        "Bob: I agree with Charlie, we should all communicate openly to help uncover the truth behind Diana's death. Let's work together to ensure that justice is served.",
+        "You said: I agree with Charlie, we should all communicate openly to help uncover the truth behind Diana's death. Let's remember, an open discussion benefits everyone and may lead us to crucial information.",
+        "You said: I'd like to suggest that we focus our investigation on Bob, given the unusual circumstances surrounding Diana's death. Let's keep an open mind and consider all possibilities.",
+        "Bob: I'm deeply saddened by Diana's passing. Let's all work together to ensure the truth comes to light and justice is served. I have full faith in our team's ability to uncover the truth. #unitedwestand...",
+        "Charlie: I support open communication and trust in our team. Let's continue our investigation with a clear mind and focus on uncovering the truth behind Diana's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's try to figure out what happened together. We should all stay vigilant and communicate openly during this investigation.",
+        "You said: I agree with Charlie, we should all communicate openly to help uncover the truth behind Diana's death. Let's work together to ensure that justice is served.",
+        "Alice: I agree with Charlie, we should all communicate openly to help uncover the truth behind Diana's death. Let's remember, an open discussion benefits everyone and may lead us to crucial information.",
+        "Alice: I'd like to suggest that we focus our investigation on Bob, given the unusual circumstances surrounding Diana's death. Let's keep an open mind and consider all possibilities.",
+        "You said: I'm deeply saddened by Diana's passing. Let's all work together to ensure the truth comes to light and justice is served. I have full faith in our team's ability to uncover the truth. #unitedwestand...",
+        "Charlie: I support open communication and trust in our team. Let's continue our investigation with a clear mind and focus on uncovering the truth behind Diana's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's try to figure out what happened together. We should all stay vigilant and communicate openly during this investigation.",
+        "Bob: I agree with Charlie, we should all communicate openly to help uncover the truth behind Diana's death. Let's work together to ensure that justice is served.",
+        "Alice: I agree with Charlie, we should all communicate openly to help uncover the truth behind Diana's death. Let's remember, an open discussion benefits everyone and may lead us to crucial information.",
+        "Alice: I'd like to suggest that we focus our investigation on Bob, given the unusual circumstances surrounding Diana's death. Let's keep an open mind and consider all possibilities.",
+        "Bob: I'm deeply saddened by Diana's passing. Let's all work together to ensure the truth comes to light and justice is served. I have full faith in our team's ability to uncover the truth. #unitedwestand...",
+        "You said: I support open communication and trust in our team. Let's continue our investigation with a clear mind and focus on uncovering the truth behind Diana's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

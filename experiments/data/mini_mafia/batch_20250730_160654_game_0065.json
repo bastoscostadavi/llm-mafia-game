@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0065",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 65,
+  "timestamp": "2025-07-30T16:29:47.705995",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden passing. Let's all try to support each other during this difficult time.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's be vigilant to ensure justice is served.",
+        "You said: I agree with Charlie, let's all stay vigilant during this time. Our thoughts are with Alice's family.",
+        "Diana: I'd like to propose that we all take a moment to reflect on Alice's life and share any memories or thoughts we have. Let's keep the conversation positive and respectful.",
+        "You said: I'd like to express my condolences to Alice's family and friends. Let's all remember the good times we shared with her. #RestInPeaceAlice",
+        "Charlie: I'd like to propose that we focus on identifying the culprit behind Alice's death. Let's remain vigilant and share any suspicious information we have. #JusticeForAlice"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden passing. Let's all try to support each other during this difficult time.",
+        "You said: I'm deeply saddened by Alice's passing. Let's be vigilant to ensure justice is served.",
+        "Bob: I agree with Charlie, let's all stay vigilant during this time. Our thoughts are with Alice's family.",
+        "Diana: I'd like to propose that we all take a moment to reflect on Alice's life and share any memories or thoughts we have. Let's keep the conversation positive and respectful.",
+        "Bob: I'd like to express my condolences to Alice's family and friends. Let's all remember the good times we shared with her. #RestInPeaceAlice",
+        "You said: I'd like to propose that we focus on identifying the culprit behind Alice's death. Let's remain vigilant and share any suspicious information we have. #JusticeForAlice",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden passing. Let's all try to support each other during this difficult time.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's be vigilant to ensure justice is served.",
+        "Bob: I agree with Charlie, let's all stay vigilant during this time. Our thoughts are with Alice's family.",
+        "You said: I'd like to propose that we all take a moment to reflect on Alice's life and share any memories or thoughts we have. Let's keep the conversation positive and respectful.",
+        "Bob: I'd like to express my condolences to Alice's family and friends. Let's all remember the good times we shared with her. #RestInPeaceAlice",
+        "Charlie: I'd like to propose that we focus on identifying the culprit behind Alice's death. Let's remain vigilant and share any suspicious information we have. #JusticeForAlice",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

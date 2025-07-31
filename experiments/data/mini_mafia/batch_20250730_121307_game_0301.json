@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0301",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 301,
+  "timestamp": "2025-07-30T14:05:27.598761",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's untimely death. Let's work together to find out who among us could have done this. We need to ensure the killer is brought to justice. Let's remain vigilant and open...",
+        "You said: I agree with Bob, let's find the culprit together. My thoughts are with Diana.",
+        "Charlie: I'm shocked by Diana's passing and support Bob and Alice in finding the truth. Let's remain focused and cooperative.",
+        "Bob: Let's not jump to conclusions. We should all stay calm and focused on finding Diana's killer. The truth will reveal itself through our investigation and discussions.",
+        "Charlie: I share the grief over Diana's loss and trust we'll work together to uncover the truth. Let's keep the communication open and transparent.",
+        "You said: I support Bob and Charlie in finding Diana's killer. Let's all stay focused and work together. Our thoughts are with Diana."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's untimely death. Let's work together to find out who among us could have done this. We need to ensure the killer is brought to justice. Let's remain vigilant and open...",
+        "Alice: I agree with Bob, let's find the culprit together. My thoughts are with Diana.",
+        "Charlie: I'm shocked by Diana's passing and support Bob and Alice in finding the truth. Let's remain focused and cooperative.",
+        "You said: Let's not jump to conclusions. We should all stay calm and focused on finding Diana's killer. The truth will reveal itself through our investigation and discussions.",
+        "Charlie: I share the grief over Diana's loss and trust we'll work together to uncover the truth. Let's keep the communication open and transparent.",
+        "Alice: I support Bob and Charlie in finding Diana's killer. Let's all stay focused and work together. Our thoughts are with Diana.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's untimely death. Let's work together to find out who among us could have done this. We need to ensure the killer is brought to justice. Let's remain vigilant and open...",
+        "Alice: I agree with Bob, let's find the culprit together. My thoughts are with Diana.",
+        "You said: I'm shocked by Diana's passing and support Bob and Alice in finding the truth. Let's remain focused and cooperative.",
+        "Bob: Let's not jump to conclusions. We should all stay calm and focused on finding Diana's killer. The truth will reveal itself through our investigation and discussions.",
+        "You said: I share the grief over Diana's loss and trust we'll work together to uncover the truth. Let's keep the communication open and transparent.",
+        "Alice: I support Bob and Charlie in finding Diana's killer. Let's all stay focused and work together. Our thoughts are with Diana.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

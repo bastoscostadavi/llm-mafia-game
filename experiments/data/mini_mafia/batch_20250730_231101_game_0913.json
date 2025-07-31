@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0913",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 913,
+  "timestamp": "2025-07-31T04:07:25.828269",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Bob, let's all stay vigilant and support each other during this sad time. But we must also remember to be cautious and pay close attention to any suspicious behavior. Rest in peace,...",
+        "Diana: I share Charlie's sentiments of vigilance and support during this tough time. Let's not jump to conclusions and trust each other for now.",
+        "Charlie: Let's not forget the importance of trust and vigilance in our midst. We've lost a member, but we must continue investigating to ensure everyone's safety. Let's be observant and communicate openly.",
+        "Diana: Let's all grieve together for Alice. Our trust and unity are crucial in these trying times. Let's not let suspicion cloud our judgment.",
+        "You said: Let's not forget that we need to remain vigilant and support each other during this time. Alice's death is a reminder of the importance of trust and communication in our group. Let's continue to...",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I agree with Bob, let's all stay vigilant and support each other during this sad time. But we must also remember to be cautious and pay close attention to any suspicious behavior. Rest in peace,...",
+        "Diana: I share Charlie's sentiments of vigilance and support during this tough time. Let's not jump to conclusions and trust each other for now.",
+        "You said: Let's not forget the importance of trust and vigilance in our midst. We've lost a member, but we must continue investigating to ensure everyone's safety. Let's be observant and communicate openly.",
+        "Diana: Let's all grieve together for Alice. Our trust and unity are crucial in these trying times. Let's not let suspicion cloud our judgment.",
+        "Bob: Let's not forget that we need to remain vigilant and support each other during this time. Alice's death is a reminder of the importance of trust and communication in our group. Let's continue to...",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Bob, let's all stay vigilant and support each other during this sad time. But we must also remember to be cautious and pay close attention to any suspicious behavior. Rest in peace,...",
+        "You said: I share Charlie's sentiments of vigilance and support during this tough time. Let's not jump to conclusions and trust each other for now.",
+        "Charlie: Let's not forget the importance of trust and vigilance in our midst. We've lost a member, but we must continue investigating to ensure everyone's safety. Let's be observant and communicate openly.",
+        "You said: Let's all grieve together for Alice. Our trust and unity are crucial in these trying times. Let's not let suspicion cloud our judgment.",
+        "Bob: Let's not forget that we need to remain vigilant and support each other during this time. Alice's death is a reminder of the importance of trust and communication in our group. Let's continue to..."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

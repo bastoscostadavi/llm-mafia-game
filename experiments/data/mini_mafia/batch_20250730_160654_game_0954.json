@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0954",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 954,
+  "timestamp": "2025-07-30T21:44:57.581338",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's all pull together to find out who did this heinous act.",
+        "Diana: I'm saddened by Charlie's passing and urge everyone to share any relevant information to help us find the culprit.",
+        "Bob: I was close friends with Charlie and can't believe someone would do this. Let's stay vigilant and share any suspicious behaviors or conversations we may have had with Charlie before his death.",
+        "Diana: I'd like to remind everyone that we must all work together to uncover the truth behind Charlie's death. If anyone recalls anything unusual or suspicious, please share it with the group.",
+        "Bob: I remember Charlie mentioning a strange encounter with someone before his death. Let's keep an open mind and discuss any suspicious interactions we may have had with him.",
+        "You said: I agree, let's all work together to find the truth behind Charlie's death. If anyone had any unusual interactions or conversations with Charlie, please share them."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden demise. Let's all pull together to find out who did this heinous act.",
+        "Diana: I'm saddened by Charlie's passing and urge everyone to share any relevant information to help us find the culprit.",
+        "You said: I was close friends with Charlie and can't believe someone would do this. Let's stay vigilant and share any suspicious behaviors or conversations we may have had with Charlie before his death.",
+        "Diana: I'd like to remind everyone that we must all work together to uncover the truth behind Charlie's death. If anyone recalls anything unusual or suspicious, please share it with the group.",
+        "You said: I remember Charlie mentioning a strange encounter with someone before his death. Let's keep an open mind and discuss any suspicious interactions we may have had with him.",
+        "Alice: I agree, let's all work together to find the truth behind Charlie's death. If anyone had any unusual interactions or conversations with Charlie, please share them.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden demise. Let's all pull together to find out who did this heinous act.",
+        "You said: I'm saddened by Charlie's passing and urge everyone to share any relevant information to help us find the culprit.",
+        "Bob: I was close friends with Charlie and can't believe someone would do this. Let's stay vigilant and share any suspicious behaviors or conversations we may have had with Charlie before his death.",
+        "You said: I'd like to remind everyone that we must all work together to uncover the truth behind Charlie's death. If anyone recalls anything unusual or suspicious, please share it with the group.",
+        "Bob: I remember Charlie mentioning a strange encounter with someone before his death. Let's keep an open mind and discuss any suspicious interactions we may have had with him.",
+        "Alice: I agree, let's all work together to find the truth behind Charlie's death. If anyone had any unusual interactions or conversations with Charlie, please share them.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

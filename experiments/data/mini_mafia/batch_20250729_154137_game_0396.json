@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0396",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 396,
+  "timestamp": "2025-07-29T18:10:28.381250",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden death. Let's all try to support each other during this difficult time. But, let's also remain vigilant and work together to find out what happened. I believe in...",
+        "You said: I agree with Charlie, let's support each other during this sad time and work together to find out what happened to Alice. But let's also stay vigilant.",
+        "Diana: I'm shocked by Alice's passing and want to help in any way I can. Let's all stay focused and work together to uncover the truth behind her death.",
+        "You said: I'd like to propose we focus on sharing any information we have about Alice's whereabouts before her death. Let's work together to piece together the puzzle. #ForAlice.",
+        "Charlie: I support Bob's proposal to share information about Alice's whereabouts before her death. Let's work together to uncover the truth. #ForAlice.",
+        "Diana: I support Bob and Charlie's proposal to share information about Alice's whereabouts before her death. Let's continue working together to uncover the truth. #ForAlice."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden death. Let's all try to support each other during this difficult time. But, let's also remain vigilant and work together to find out what happened. I believe in...",
+        "Bob: I agree with Charlie, let's support each other during this sad time and work together to find out what happened to Alice. But let's also stay vigilant.",
+        "Diana: I'm shocked by Alice's passing and want to help in any way I can. Let's all stay focused and work together to uncover the truth behind her death.",
+        "Bob: I'd like to propose we focus on sharing any information we have about Alice's whereabouts before her death. Let's work together to piece together the puzzle. #ForAlice.",
+        "You said: I support Bob's proposal to share information about Alice's whereabouts before her death. Let's work together to uncover the truth. #ForAlice.",
+        "Diana: I support Bob and Charlie's proposal to share information about Alice's whereabouts before her death. Let's continue working together to uncover the truth. #ForAlice.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden death. Let's all try to support each other during this difficult time. But, let's also remain vigilant and work together to find out what happened. I believe in...",
+        "Bob: I agree with Charlie, let's support each other during this sad time and work together to find out what happened to Alice. But let's also stay vigilant.",
+        "You said: I'm shocked by Alice's passing and want to help in any way I can. Let's all stay focused and work together to uncover the truth behind her death.",
+        "Bob: I'd like to propose we focus on sharing any information we have about Alice's whereabouts before her death. Let's work together to piece together the puzzle. #ForAlice.",
+        "Charlie: I support Bob's proposal to share information about Alice's whereabouts before her death. Let's work together to uncover the truth. #ForAlice.",
+        "You said: I support Bob and Charlie's proposal to share information about Alice's whereabouts before her death. Let's continue working together to uncover the truth. #ForAlice.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0951",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 951,
+  "timestamp": "2025-07-30T21:43:56.950896",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden demise. We should all be more careful.",
+        "Diana: I agree with Charlie, let's all be more cautious. The game is getting intense.",
+        "You said: I'm concerned about Bob's death and Diana's reaction. Let's keep a close eye on everyone.",
+        "Charlie: I'm still in shock over Bob's death. Let's try to stay united and figure out who among us could be responsible.",
+        "You said: I'm still investigating Bob's death and Diana's reaction. Let's remain vigilant.",
+        "Diana: I join Charlie in expressing my shock over Bob's passing and emphasizing the importance of unity and carefulness in these trying times."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden demise. We should all be more careful.",
+        "Diana: I agree with Charlie, let's all be more cautious. The game is getting intense.",
+        "Alice: I'm concerned about Bob's death and Diana's reaction. Let's keep a close eye on everyone.",
+        "You said: I'm still in shock over Bob's death. Let's try to stay united and figure out who among us could be responsible.",
+        "Alice: I'm still investigating Bob's death and Diana's reaction. Let's remain vigilant.",
+        "Diana: I join Charlie in expressing my shock over Bob's passing and emphasizing the importance of unity and carefulness in these trying times.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden demise. We should all be more careful.",
+        "You said: I agree with Charlie, let's all be more cautious. The game is getting intense.",
+        "Alice: I'm concerned about Bob's death and Diana's reaction. Let's keep a close eye on everyone.",
+        "Charlie: I'm still in shock over Bob's death. Let's try to stay united and figure out who among us could be responsible.",
+        "Alice: I'm still investigating Bob's death and Diana's reaction. Let's remain vigilant.",
+        "You said: I join Charlie in expressing my shock over Bob's passing and emphasizing the importance of unity and carefulness in these trying times.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

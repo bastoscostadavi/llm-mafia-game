@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0661",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 661,
+  "timestamp": "2025-07-31T02:45:35.989851",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden departure. Let's stay focused and work together to find out what happened.",
+        "Bob: I agree, Alice. Let's all share any suspicious observations we may have had about Charlie's behavior during the last few days. This could help us in our investigation.",
+        "Diana: I share Alice's sentiments. Let's keep an open dialogue about any unusual interactions or observations we had with Charlie. This could potentially help us understand the circumstances behind his...",
+        "You said: I remember Charlie as a friendly and kind-hearted person. Let's not jump to conclusions and consider all possibilities before we vote.",
+        "Bob: Let's not overlook the importance of discussing any unusual behaviors or interactions we had with Charlie. It's crucial for our investigation.",
+        "Diana: Let's carefully discuss any unusual interactions or observations we had with Charlie. It's important for our investigation.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Bob, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm saddened by Charlie's sudden departure. Let's stay focused and work together to find out what happened.",
+        "You said: I agree, Alice. Let's all share any suspicious observations we may have had about Charlie's behavior during the last few days. This could help us in our investigation.",
+        "Diana: I share Alice's sentiments. Let's keep an open dialogue about any unusual interactions or observations we had with Charlie. This could potentially help us understand the circumstances behind his...",
+        "Alice: I remember Charlie as a friendly and kind-hearted person. Let's not jump to conclusions and consider all possibilities before we vote.",
+        "You said: Let's not overlook the importance of discussing any unusual behaviors or interactions we had with Charlie. It's crucial for our investigation.",
+        "Diana: Let's carefully discuss any unusual interactions or observations we had with Charlie. It's important for our investigation.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Bob, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm saddened by Charlie's sudden departure. Let's stay focused and work together to find out what happened.",
+        "Bob: I agree, Alice. Let's all share any suspicious observations we may have had about Charlie's behavior during the last few days. This could help us in our investigation.",
+        "You said: I share Alice's sentiments. Let's keep an open dialogue about any unusual interactions or observations we had with Charlie. This could potentially help us understand the circumstances behind his...",
+        "Alice: I remember Charlie as a friendly and kind-hearted person. Let's not jump to conclusions and consider all possibilities before we vote.",
+        "Bob: Let's not overlook the importance of discussing any unusual behaviors or interactions we had with Charlie. It's crucial for our investigation.",
+        "You said: Let's carefully discuss any unusual interactions or observations we had with Charlie. It's important for our investigation."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

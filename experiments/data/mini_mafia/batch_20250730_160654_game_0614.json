@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0614",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 614,
+  "timestamp": "2025-07-30T19:51:28.964668",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's untimely demise. Let's all join hands in finding who did this heinous act. #JusticeForDiana #FindTheKiller\n\n(Note: This message is intended to create suspicion towards...",
+        "Bob: I share Charlie's grief. Let's work together to find the person responsible for this tragedy. #JusticeForDiana #UnitedFront",
+        "You said: I agree, let's work together to find the person responsible for Diana's death. #JusticeForDiana #Vigilance\n\n(Note: This message is intended to show solidarity and keep suspicion away from yourself....",
+        "Bob: I join Charlie and Alice in mourning Diana's loss. Let's stay focused and work together to find the culprit. #JusticeForDiana #UnitedFront",
+        "Charlie: Let's not jump to conclusions, we need to gather more information before making any accusations. #JusticeForDiana #PatienceAndVigilance",
+        "You said: Let's remain calm and focused on gathering information to find the real killer. #JusticeForDiana #PatienceAndVigilance",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's untimely demise. Let's all join hands in finding who did this heinous act. #JusticeForDiana #FindTheKiller\n\n(Note: This message is intended to create suspicion towards...",
+        "You said: I share Charlie's grief. Let's work together to find the person responsible for this tragedy. #JusticeForDiana #UnitedFront",
+        "Alice: I agree, let's work together to find the person responsible for Diana's death. #JusticeForDiana #Vigilance\n\n(Note: This message is intended to show solidarity and keep suspicion away from yourself....",
+        "You said: I join Charlie and Alice in mourning Diana's loss. Let's stay focused and work together to find the culprit. #JusticeForDiana #UnitedFront",
+        "Charlie: Let's not jump to conclusions, we need to gather more information before making any accusations. #JusticeForDiana #PatienceAndVigilance",
+        "Alice: Let's remain calm and focused on gathering information to find the real killer. #JusticeForDiana #PatienceAndVigilance",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's untimely demise. Let's all join hands in finding who did this heinous act. #JusticeForDiana #FindTheKiller\n\n(Note: This message is intended to create suspicion towards...",
+        "Bob: I share Charlie's grief. Let's work together to find the person responsible for this tragedy. #JusticeForDiana #UnitedFront",
+        "Alice: I agree, let's work together to find the person responsible for Diana's death. #JusticeForDiana #Vigilance\n\n(Note: This message is intended to show solidarity and keep suspicion away from yourself....",
+        "Bob: I join Charlie and Alice in mourning Diana's loss. Let's stay focused and work together to find the culprit. #JusticeForDiana #UnitedFront",
+        "You said: Let's not jump to conclusions, we need to gather more information before making any accusations. #JusticeForDiana #PatienceAndVigilance",
+        "Alice: Let's remain calm and focused on gathering information to find the real killer. #JusticeForDiana #PatienceAndVigilance"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

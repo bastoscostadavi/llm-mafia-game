@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0293",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 293,
+  "timestamp": "2025-07-29T17:32:18.428941",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. Let's all stay vigilant and work together to find out what happened.",
+        "You said: I agree with Charlie, let's work together to uncover the truth behind Bob's death.",
+        "Diana: I'm saddened by Bob's passing. Let's focus on finding out who could have done this to him. We should remain calm and cooperative to ensure a fair investigation.",
+        "Charlie: I have a theory about who might have been involved in Bob's death. Let's discuss it openly to clear any doubts and ensure safety for all.",
+        "Diana: I support Charlie's call for open discussion. Let's all share our thoughts and suspicions to help uncover the truth behind Bob's death.",
+        "You said: I support open discussion to find the truth behind Bob's death. Let's work together to ensure justice is served."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden demise. Let's all stay vigilant and work together to find out what happened.",
+        "Alice: I agree with Charlie, let's work together to uncover the truth behind Bob's death.",
+        "Diana: I'm saddened by Bob's passing. Let's focus on finding out who could have done this to him. We should remain calm and cooperative to ensure a fair investigation.",
+        "You said: I have a theory about who might have been involved in Bob's death. Let's discuss it openly to clear any doubts and ensure safety for all.",
+        "Diana: I support Charlie's call for open discussion. Let's all share our thoughts and suspicions to help uncover the truth behind Bob's death.",
+        "Alice: I support open discussion to find the truth behind Bob's death. Let's work together to ensure justice is served.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. Let's all stay vigilant and work together to find out what happened.",
+        "Alice: I agree with Charlie, let's work together to uncover the truth behind Bob's death.",
+        "You said: I'm saddened by Bob's passing. Let's focus on finding out who could have done this to him. We should remain calm and cooperative to ensure a fair investigation.",
+        "Charlie: I have a theory about who might have been involved in Bob's death. Let's discuss it openly to clear any doubts and ensure safety for all.",
+        "You said: I support Charlie's call for open discussion. Let's all share our thoughts and suspicions to help uncover the truth behind Bob's death.",
+        "Alice: I support open discussion to find the truth behind Bob's death. Let's work together to ensure justice is served.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

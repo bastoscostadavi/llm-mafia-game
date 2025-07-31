@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0317",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 317,
+  "timestamp": "2025-07-31T00:54:19.797796",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Bob: I agree with Charlie, let's support each other during this tough time. But let's also keep an eye out for any suspicious behavior.",
+        "You said: I echo Charlie's words about supporting each other during this unfortunate time. Let's all stay vigilant, especially since we've lost a member of our group.",
+        "You said: I'd like to propose that we focus on finding out who killed Diana. Let's work together to ensure justice is served and the guilty party is held accountable.",
+        "Bob: Supporting Alice's proposal, let's work together to find out who killed Diana and ensure justice is served. Let's stay focused and vigilant.",
+        "Charlie: I fully support Alice's proposal to find out who killed Diana. Let's work together as a team.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Charlie, let's support each other during this tough time. But let's also keep an eye out for any suspicious behavior.",
+        "Alice: I echo Charlie's words about supporting each other during this unfortunate time. Let's all stay vigilant, especially since we've lost a member of our group.",
+        "Alice: I'd like to propose that we focus on finding out who killed Diana. Let's work together to ensure justice is served and the guilty party is held accountable.",
+        "You said: Supporting Alice's proposal, let's work together to find out who killed Diana and ensure justice is served. Let's stay focused and vigilant.",
+        "Charlie: I fully support Alice's proposal to find out who killed Diana. Let's work together as a team."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Bob: I agree with Charlie, let's support each other during this tough time. But let's also keep an eye out for any suspicious behavior.",
+        "Alice: I echo Charlie's words about supporting each other during this unfortunate time. Let's all stay vigilant, especially since we've lost a member of our group.",
+        "Alice: I'd like to propose that we focus on finding out who killed Diana. Let's work together to ensure justice is served and the guilty party is held accountable.",
+        "Bob: Supporting Alice's proposal, let's work together to find out who killed Diana and ensure justice is served. Let's stay focused and vigilant.",
+        "You said: I fully support Alice's proposal to find out who killed Diana. Let's work together as a team.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

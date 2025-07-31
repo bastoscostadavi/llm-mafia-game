@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0616",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 616,
+  "timestamp": "2025-07-30T19:52:10.783614",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm deeply saddened by Bob's untimely demise. Let's all support each other during this difficult time. Let's focus on finding the culprit together.",
+        "Diana: I'm shocked by Bob's sudden death. Let's work together to find the truth behind this tragedy.",
+        "You said: I agree with Charlie and Diana, let's work together to find the truth about Bob's death. Any clues or information that comes to mind, please share.",
+        "Diana: I'm concerned about Bob's death and want to help find the truth. Let's collaborate to uncover any clues that may lead us to the culprit.",
+        "Charlie: I'd like to remind everyone of Bob's last words before the night ended. He mentioned feeling uneasy and seeing strange shadows around the house. Let's consider this as a potential clue.",
+        "You said: Let's not jump to conclusions based on Bob's last words. We should gather more information before making any accusations.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm deeply saddened by Bob's untimely demise. Let's all support each other during this difficult time. Let's focus on finding the culprit together.",
+        "Diana: I'm shocked by Bob's sudden death. Let's work together to find the truth behind this tragedy.",
+        "Alice: I agree with Charlie and Diana, let's work together to find the truth about Bob's death. Any clues or information that comes to mind, please share.",
+        "Diana: I'm concerned about Bob's death and want to help find the truth. Let's collaborate to uncover any clues that may lead us to the culprit.",
+        "You said: I'd like to remind everyone of Bob's last words before the night ended. He mentioned feeling uneasy and seeing strange shadows around the house. Let's consider this as a potential clue.",
+        "Alice: Let's not jump to conclusions based on Bob's last words. We should gather more information before making any accusations."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm deeply saddened by Bob's untimely demise. Let's all support each other during this difficult time. Let's focus on finding the culprit together.",
+        "You said: I'm shocked by Bob's sudden death. Let's work together to find the truth behind this tragedy.",
+        "Alice: I agree with Charlie and Diana, let's work together to find the truth about Bob's death. Any clues or information that comes to mind, please share.",
+        "You said: I'm concerned about Bob's death and want to help find the truth. Let's collaborate to uncover any clues that may lead us to the culprit.",
+        "Charlie: I'd like to remind everyone of Bob's last words before the night ended. He mentioned feeling uneasy and seeing strange shadows around the house. Let's consider this as a potential clue.",
+        "Alice: Let's not jump to conclusions based on Bob's last words. We should gather more information before making any accusations.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

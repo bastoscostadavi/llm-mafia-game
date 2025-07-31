@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0351",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 351,
+  "timestamp": "2025-07-30T18:11:59.738423",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm sad about Charlie's sudden departure. Let's all take a moment to remember him. We should focus on finding out who did this and bring them to justice.",
+        "You said: I agree with Diana, let's work together to find out who killed Charlie and bring them to justice.",
+        "Bob: I support Alice and Diana's efforts to find the truth about Charlie's death. Let's keep an open mind and share any relevant information we may have.",
+        "You said: I remember Charlie as a kind and friendly person. Let's not jump to conclusions and consider all possibilities to ensure justice is served.",
+        "Diana: Let's not forget that we need to find the truth about Charlie's death. We should all share any information we have to help bring justice for Charlie.",
+        "Bob: I agree with Alice and Diana's sentiments. Let's remain focused on finding the truth behind Charlie's death. Any new information should be shared openly.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm sad about Charlie's sudden departure. Let's all take a moment to remember him. We should focus on finding out who did this and bring them to justice.",
+        "Alice: I agree with Diana, let's work together to find out who killed Charlie and bring them to justice.",
+        "You said: I support Alice and Diana's efforts to find the truth about Charlie's death. Let's keep an open mind and share any relevant information we may have.",
+        "Alice: I remember Charlie as a kind and friendly person. Let's not jump to conclusions and consider all possibilities to ensure justice is served.",
+        "Diana: Let's not forget that we need to find the truth about Charlie's death. We should all share any information we have to help bring justice for Charlie.",
+        "You said: I agree with Alice and Diana's sentiments. Let's remain focused on finding the truth behind Charlie's death. Any new information should be shared openly.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm sad about Charlie's sudden departure. Let's all take a moment to remember him. We should focus on finding out who did this and bring them to justice.",
+        "Alice: I agree with Diana, let's work together to find out who killed Charlie and bring them to justice.",
+        "Bob: I support Alice and Diana's efforts to find the truth about Charlie's death. Let's keep an open mind and share any relevant information we may have.",
+        "Alice: I remember Charlie as a kind and friendly person. Let's not jump to conclusions and consider all possibilities to ensure justice is served.",
+        "You said: Let's not forget that we need to find the truth about Charlie's death. We should all share any information we have to help bring justice for Charlie.",
+        "Bob: I agree with Alice and Diana's sentiments. Let's remain focused on finding the truth behind Charlie's death. Any new information should be shared openly."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

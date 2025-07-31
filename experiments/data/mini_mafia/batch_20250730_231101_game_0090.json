@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0090",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 90,
+  "timestamp": "2025-07-30T23:40:29.090247",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden absence. Let's all be vigilant and pay close attention to each other's behavior.",
+        "Diana: I agree with Alice, let's keep a watchful eye on everyone's actions to ensure the safety of our group.",
+        "Charlie: I share Alice and Diana's concerns. Let's work together to ensure our safety.",
+        "Charlie: I'd like to echo Alice and Diana's sentiments, let's all stay vigilant and keep an open line of communication to ensure our group's safety.",
+        "You said: I'd like to reiterate the importance of staying vigilant and keeping open lines of communication to ensure the safety of our group. Let's continue observing each other closely.",
+        "Diana: Let's not jump to conclusions. Let's focus on observing each other's actions carefully to maintain trust and ensure group safety.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden absence. Let's all be vigilant and pay close attention to each other's behavior.",
+        "Diana: I agree with Alice, let's keep a watchful eye on everyone's actions to ensure the safety of our group.",
+        "You said: I share Alice and Diana's concerns. Let's work together to ensure our safety.",
+        "You said: I'd like to echo Alice and Diana's sentiments, let's all stay vigilant and keep an open line of communication to ensure our group's safety.",
+        "Alice: I'd like to reiterate the importance of staying vigilant and keeping open lines of communication to ensure the safety of our group. Let's continue observing each other closely.",
+        "Diana: Let's not jump to conclusions. Let's focus on observing each other's actions carefully to maintain trust and ensure group safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden absence. Let's all be vigilant and pay close attention to each other's behavior.",
+        "You said: I agree with Alice, let's keep a watchful eye on everyone's actions to ensure the safety of our group.",
+        "Charlie: I share Alice and Diana's concerns. Let's work together to ensure our safety.",
+        "Charlie: I'd like to echo Alice and Diana's sentiments, let's all stay vigilant and keep an open line of communication to ensure our group's safety.",
+        "Alice: I'd like to reiterate the importance of staying vigilant and keeping open lines of communication to ensure the safety of our group. Let's continue observing each other closely.",
+        "You said: Let's not jump to conclusions. Let's focus on observing each other's actions carefully to maintain trust and ensure group safety.",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

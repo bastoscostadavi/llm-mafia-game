@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0361",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 361,
+  "timestamp": "2025-07-30T14:29:06.739285",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden demise. Let's work together to ensure justice is served and find out who among us is the real culprit.",
+        "You said: I'm saddened by Charlie's death. Let's focus on identifying the perpetrator to bring justice. I suspect Bob's behavior has been suspicious since the beginning.",
+        "Bob: I agree with Alice's suspicions. Let's stay vigilant and work together to uncover the truth.",
+        "Diana: I share Alice's concerns about Bob's behavior. Let's keep our eyes open for any signs of guilt.",
+        "Bob: I share the concern about finding the truth behind Charlie's death. Let's all work together to uncover any clues that may help us identify the real culprit.",
+        "You said: Let's not jump to conclusions. We should all focus on gathering more information to identify the real killer. I still suspect Bob's behavior is suspicious. But let's keep an open mind and work..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden demise. Let's work together to ensure justice is served and find out who among us is the real culprit.",
+        "Alice: I'm saddened by Charlie's death. Let's focus on identifying the perpetrator to bring justice. I suspect Bob's behavior has been suspicious since the beginning.",
+        "You said: I agree with Alice's suspicions. Let's stay vigilant and work together to uncover the truth.",
+        "Diana: I share Alice's concerns about Bob's behavior. Let's keep our eyes open for any signs of guilt.",
+        "You said: I share the concern about finding the truth behind Charlie's death. Let's all work together to uncover any clues that may help us identify the real culprit.",
+        "Alice: Let's not jump to conclusions. We should all focus on gathering more information to identify the real killer. I still suspect Bob's behavior is suspicious. But let's keep an open mind and work...",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's work together to ensure justice is served and find out who among us is the real culprit.",
+        "Alice: I'm saddened by Charlie's death. Let's focus on identifying the perpetrator to bring justice. I suspect Bob's behavior has been suspicious since the beginning.",
+        "Bob: I agree with Alice's suspicions. Let's stay vigilant and work together to uncover the truth.",
+        "You said: I share Alice's concerns about Bob's behavior. Let's keep our eyes open for any signs of guilt.",
+        "Bob: I share the concern about finding the truth behind Charlie's death. Let's all work together to uncover any clues that may help us identify the real culprit.",
+        "Alice: Let's not jump to conclusions. We should all focus on gathering more information to identify the real killer. I still suspect Bob's behavior is suspicious. But let's keep an open mind and work...",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

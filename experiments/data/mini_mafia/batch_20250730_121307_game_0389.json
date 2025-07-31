@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0389",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 389,
+  "timestamp": "2025-07-30T14:39:33.656910",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. Bob, do you have any insight into what might have happened?",
+        "You said: I agree with Charlie, let's stay united and support each other during this tragic time. My thoughts are with Diana's family. I have no information about the cause of her death.",
+        "Bob: I share Charlie's sentiments and offer my condolences to Diana's family. Let's remain vigilant as we seek the truth behind her sudden death.",
+        "Charlie: I'd like to propose that we focus on finding out who is responsible for Diana's death. Let's remain vigilant and share any suspicious information we have. Let's unite and support each other during...",
+        "You said: I support Charlie's suggestion to focus on finding Diana's killer. Let's all share any relevant information we may have. Our unity is key in solving this mystery. #JusticeForDiana",
+        "Bob: I support Charlie's proposal to investigate Diana's death. Let's remain vigilant and share any suspicious information we have. #JusticeForDiana",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. Bob, do you have any insight into what might have happened?",
+        "Alice: I agree with Charlie, let's stay united and support each other during this tragic time. My thoughts are with Diana's family. I have no information about the cause of her death.",
+        "You said: I share Charlie's sentiments and offer my condolences to Diana's family. Let's remain vigilant as we seek the truth behind her sudden death.",
+        "Charlie: I'd like to propose that we focus on finding out who is responsible for Diana's death. Let's remain vigilant and share any suspicious information we have. Let's unite and support each other during...",
+        "Alice: I support Charlie's suggestion to focus on finding Diana's killer. Let's all share any relevant information we may have. Our unity is key in solving this mystery. #JusticeForDiana",
+        "You said: I support Charlie's proposal to investigate Diana's death. Let's remain vigilant and share any suspicious information we have. #JusticeForDiana"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. Bob, do you have any insight into what might have happened?",
+        "Alice: I agree with Charlie, let's stay united and support each other during this tragic time. My thoughts are with Diana's family. I have no information about the cause of her death.",
+        "Bob: I share Charlie's sentiments and offer my condolences to Diana's family. Let's remain vigilant as we seek the truth behind her sudden death.",
+        "You said: I'd like to propose that we focus on finding out who is responsible for Diana's death. Let's remain vigilant and share any suspicious information we have. Let's unite and support each other during...",
+        "Alice: I support Charlie's suggestion to focus on finding Diana's killer. Let's all share any relevant information we may have. Our unity is key in solving this mystery. #JusticeForDiana",
+        "Bob: I support Charlie's proposal to investigate Diana's death. Let's remain vigilant and share any suspicious information we have. #JusticeForDiana",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

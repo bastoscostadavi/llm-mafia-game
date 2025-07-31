@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0448",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 448,
+  "timestamp": "2025-07-31T01:36:50.142789",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on everyone tonight.",
+        "Bob: I agree with Alice, let's be vigilant tonight.",
+        "Charlie: I agree with Alice and Bob, let's all stay alert tonight. (Try to maintain a low profile as a mafioso)",
+        "Bob: Let's not jump to conclusions, but we should all be cautious tonight after Diana's mysterious disappearance.",
+        "Charlie: Let's all focus on ensuring everyone's safety tonight following the mysterious events. We should remain vigilant, but not jump to conclusions.",
+        "You said: Let's not forget the unusual events of the night. We should keep a watchful eye on Charlie tonight, as he seemed oddly calm about Diana's disappearance.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on everyone tonight.",
+        "You said: I agree with Alice, let's be vigilant tonight.",
+        "Charlie: I agree with Alice and Bob, let's all stay alert tonight. (Try to maintain a low profile as a mafioso)",
+        "You said: Let's not jump to conclusions, but we should all be cautious tonight after Diana's mysterious disappearance.",
+        "Charlie: Let's all focus on ensuring everyone's safety tonight following the mysterious events. We should remain vigilant, but not jump to conclusions.",
+        "Alice: Let's not forget the unusual events of the night. We should keep a watchful eye on Charlie tonight, as he seemed oddly calm about Diana's disappearance.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on everyone tonight.",
+        "Bob: I agree with Alice, let's be vigilant tonight.",
+        "You said: I agree with Alice and Bob, let's all stay alert tonight. (Try to maintain a low profile as a mafioso)",
+        "Bob: Let's not jump to conclusions, but we should all be cautious tonight after Diana's mysterious disappearance.",
+        "You said: Let's all focus on ensuring everyone's safety tonight following the mysterious events. We should remain vigilant, but not jump to conclusions.",
+        "Alice: Let's not forget the unusual events of the night. We should keep a watchful eye on Charlie tonight, as he seemed oddly calm about Diana's disappearance."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

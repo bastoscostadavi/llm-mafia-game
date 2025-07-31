@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0212",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 212,
+  "timestamp": "2025-07-30T17:21:26.774057",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's also stay vigilant and try to figure out what happened.",
+        "Charlie: I agree with Alice, let's support each other and stay vigilant. I'll be conducting a thorough investigation into Diana's death. If anyone has any information, please share it.",
+        "Bob: I'm saddened by Diana's passing. Let's all come together during this tough time. We should focus on finding the truth and supporting each other.",
+        "You said: I'd like to remind everyone that we should all stay focused on finding out what happened to Diana and supporting each other during this difficult time. Let's work together to uncover the truth.",
+        "Charlie: I've made some progress in my investigation and believe I have a lead. Let's discuss this further during the day phase. Stay vigilant, team.",
+        "Bob: I support Alice's call for us to stay focused on finding the truth about Diana's death and to support each other during this difficult time. Let's work together to uncover any new information.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's also stay vigilant and try to figure out what happened.",
+        "Charlie: I agree with Alice, let's support each other and stay vigilant. I'll be conducting a thorough investigation into Diana's death. If anyone has any information, please share it.",
+        "You said: I'm saddened by Diana's passing. Let's all come together during this tough time. We should focus on finding the truth and supporting each other.",
+        "Alice: I'd like to remind everyone that we should all stay focused on finding out what happened to Diana and supporting each other during this difficult time. Let's work together to uncover the truth.",
+        "Charlie: I've made some progress in my investigation and believe I have a lead. Let's discuss this further during the day phase. Stay vigilant, team.",
+        "You said: I support Alice's call for us to stay focused on finding the truth about Diana's death and to support each other during this difficult time. Let's work together to uncover any new information.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's also stay vigilant and try to figure out what happened.",
+        "You said: I agree with Alice, let's support each other and stay vigilant. I'll be conducting a thorough investigation into Diana's death. If anyone has any information, please share it.",
+        "Bob: I'm saddened by Diana's passing. Let's all come together during this tough time. We should focus on finding the truth and supporting each other.",
+        "Alice: I'd like to remind everyone that we should all stay focused on finding out what happened to Diana and supporting each other during this difficult time. Let's work together to uncover the truth.",
+        "You said: I've made some progress in my investigation and believe I have a lead. Let's discuss this further during the day phase. Stay vigilant, team.",
+        "Bob: I support Alice's call for us to stay focused on finding the truth about Diana's death and to support each other during this difficult time. Let's work together to uncover any new information."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

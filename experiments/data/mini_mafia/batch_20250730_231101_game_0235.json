@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0235",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 235,
+  "timestamp": "2025-07-31T00:27:36.003035",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all be vigilant and keep an eye out for any suspicious behavior.",
+        "Charlie: I share Diana's concerns about Alice's sudden disappearance. Let's all work together to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant and report any suspicious behavior.",
+        "Charlie: I'd like to echo everyone's concerns about Alice's sudden disappearance. Let's stay vigilant as a team.",
+        "Diana: I'm troubled by Alice's disappearance and urge everyone to be extra cautious. Let's report any unusual behavior to maintain trust and safety in our group.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all be vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I share Diana's concerns about Alice's sudden disappearance. Let's all work together to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions, but we should remain vigilant and report any suspicious behavior.",
+        "You said: I'd like to echo everyone's concerns about Alice's sudden disappearance. Let's stay vigilant as a team.",
+        "Diana: I'm troubled by Alice's disappearance and urge everyone to be extra cautious. Let's report any unusual behavior to maintain trust and safety in our group."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all be vigilant and keep an eye out for any suspicious behavior.",
+        "Charlie: I share Diana's concerns about Alice's sudden disappearance. Let's all work together to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions, but we should remain vigilant and report any suspicious behavior.",
+        "Charlie: I'd like to echo everyone's concerns about Alice's sudden disappearance. Let's stay vigilant as a team.",
+        "You said: I'm troubled by Alice's disappearance and urge everyone to be extra cautious. Let's report any unusual behavior to maintain trust and safety in our group.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

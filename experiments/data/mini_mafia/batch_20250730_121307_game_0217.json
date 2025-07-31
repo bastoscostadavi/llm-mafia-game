@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0217",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 217,
+  "timestamp": "2025-07-30T13:33:35.945949",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm surprised by Diana's sudden demise. Let's all be vigilant and support each other during these trying times.",
+        "Charlie: I agree with Alice, let's stay united and support each other during this unfortunate time.",
+        "Bob: I'm saddened by Diana's passing. Let's work together to ensure safety and unity in our group.",
+        "Bob: Let's not jump to conclusions, but stay vigilant and united as a group in this time of loss.",
+        "You said: Let's not let Diana's death distract us from our goal. We must stay focused and united to ensure the safety of our group.",
+        "Charlie: I support Alice and Bob's words of unity and vigilance during this difficult time. Let's stick together as a team."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm surprised by Diana's sudden demise. Let's all be vigilant and support each other during these trying times.",
+        "Charlie: I agree with Alice, let's stay united and support each other during this unfortunate time.",
+        "You said: I'm saddened by Diana's passing. Let's work together to ensure safety and unity in our group.",
+        "You said: Let's not jump to conclusions, but stay vigilant and united as a group in this time of loss.",
+        "Alice: Let's not let Diana's death distract us from our goal. We must stay focused and united to ensure the safety of our group.",
+        "Charlie: I support Alice and Bob's words of unity and vigilance during this difficult time. Let's stick together as a team.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm surprised by Diana's sudden demise. Let's all be vigilant and support each other during these trying times.",
+        "You said: I agree with Alice, let's stay united and support each other during this unfortunate time.",
+        "Bob: I'm saddened by Diana's passing. Let's work together to ensure safety and unity in our group.",
+        "Bob: Let's not jump to conclusions, but stay vigilant and united as a group in this time of loss.",
+        "Alice: Let's not let Diana's death distract us from our goal. We must stay focused and united to ensure the safety of our group.",
+        "You said: I support Alice and Bob's words of unity and vigilance during this difficult time. Let's stick together as a team.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

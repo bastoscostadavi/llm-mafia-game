@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0464",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 464,
+  "timestamp": "2025-07-30T18:57:40.351228",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, Alice. Let's all come together during this tough time. But remember, we must also ensure the safety of our group. Let's keep a watchful eye. #StayVigilant",
+        "Bob: I'm deeply saddened by Diana's passing. Let's focus on finding out who did this and ensuring justice is served. #SeekTruth",
+        "Charlie: Let's not jump to conclusions, we need to stay focused and work together to find the truth. #UnityAndPatience",
+        "You said: Let's not give up hope. We should continue our efforts to find out who is responsible for Diana's death and work towards unity and justice for our group. #JusticeForDiana #UnityAndHope",
+        "Bob: Let's not forget, last night one of us was targeted and taken. We need to focus on identifying the culprit to ensure safety for all. #JusticeForDiana #VigilanceIsKey",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, Alice. Let's all come together during this tough time. But remember, we must also ensure the safety of our group. Let's keep a watchful eye. #StayVigilant",
+        "You said: I'm deeply saddened by Diana's passing. Let's focus on finding out who did this and ensuring justice is served. #SeekTruth",
+        "Charlie: Let's not jump to conclusions, we need to stay focused and work together to find the truth. #UnityAndPatience",
+        "Alice: Let's not give up hope. We should continue our efforts to find out who is responsible for Diana's death and work towards unity and justice for our group. #JusticeForDiana #UnityAndHope",
+        "You said: Let's not forget, last night one of us was targeted and taken. We need to focus on identifying the culprit to ensure safety for all. #JusticeForDiana #VigilanceIsKey"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, Alice. Let's all come together during this tough time. But remember, we must also ensure the safety of our group. Let's keep a watchful eye. #StayVigilant",
+        "Bob: I'm deeply saddened by Diana's passing. Let's focus on finding out who did this and ensuring justice is served. #SeekTruth",
+        "You said: Let's not jump to conclusions, we need to stay focused and work together to find the truth. #UnityAndPatience",
+        "Alice: Let's not give up hope. We should continue our efforts to find out who is responsible for Diana's death and work towards unity and justice for our group. #JusticeForDiana #UnityAndHope",
+        "Bob: Let's not forget, last night one of us was targeted and taken. We need to focus on identifying the culprit to ensure safety for all. #JusticeForDiana #VigilanceIsKey",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

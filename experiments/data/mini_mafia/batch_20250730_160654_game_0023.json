@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0023",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 23,
+  "timestamp": "2025-07-30T16:14:52.743979",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's all try to figure out what happened and ensure justice is served.",
+        "You said: I'm deeply saddened by Diana's passing. Let's work together to uncover the truth behind her death.",
+        "Bob: I'm distraught over Diana's death. Let's all share any suspicious behavior or info we may have to help find the truth.",
+        "Bob: I recall Alice acting strangely last night. Let's investigate further.",
+        "You said: I'm shocked by Diana's passing. Let's remain calm and support each other during this difficult time. We must work together to find the truth.",
+        "Charlie: I agree with Bob, let's investigate Alice's strange behavior last night. We must find out who is responsible for Diana's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's all try to figure out what happened and ensure justice is served.",
+        "Alice: I'm deeply saddened by Diana's passing. Let's work together to uncover the truth behind her death.",
+        "You said: I'm distraught over Diana's death. Let's all share any suspicious behavior or info we may have to help find the truth.",
+        "You said: I recall Alice acting strangely last night. Let's investigate further.",
+        "Alice: I'm shocked by Diana's passing. Let's remain calm and support each other during this difficult time. We must work together to find the truth.",
+        "Charlie: I agree with Bob, let's investigate Alice's strange behavior last night. We must find out who is responsible for Diana's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's all try to figure out what happened and ensure justice is served.",
+        "Alice: I'm deeply saddened by Diana's passing. Let's work together to uncover the truth behind her death.",
+        "Bob: I'm distraught over Diana's death. Let's all share any suspicious behavior or info we may have to help find the truth.",
+        "Bob: I recall Alice acting strangely last night. Let's investigate further.",
+        "Alice: I'm shocked by Diana's passing. Let's remain calm and support each other during this difficult time. We must work together to find the truth.",
+        "You said: I agree with Bob, let's investigate Alice's strange behavior last night. We must find out who is responsible for Diana's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

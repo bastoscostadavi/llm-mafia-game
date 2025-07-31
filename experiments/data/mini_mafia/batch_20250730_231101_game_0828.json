@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0828",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 828,
+  "timestamp": "2025-07-31T03:39:42.063310",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and work together to find out who did this.",
+        "You said: I agree with Bob, let's stay vigilant and work together to find out who killed Charlie. I'll share any suspicious information I have.",
+        "Diana: I'm saddened by Charlie's death. Let's not jump to conclusions and give the investigation sufficient time to uncover the truth.",
+        "Diana: Let's not rush to judgments. We need to gather more information before making any accusations.",
+        "You said: Based on my investigation, I suspect Diana's involvement in Charlie's death. Let's consider her as a prime suspect. We should be cautious and gather more evidence before making any conclusions.",
+        "Bob: Let's continue our investigation with an open mind and focus on collecting more evidence before making any accusations. We don't want to miss any crucial information.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and work together to find out who did this.",
+        "Alice: I agree with Bob, let's stay vigilant and work together to find out who killed Charlie. I'll share any suspicious information I have.",
+        "Diana: I'm saddened by Charlie's death. Let's not jump to conclusions and give the investigation sufficient time to uncover the truth.",
+        "Diana: Let's not rush to judgments. We need to gather more information before making any accusations.",
+        "Alice: Based on my investigation, I suspect Diana's involvement in Charlie's death. Let's consider her as a prime suspect. We should be cautious and gather more evidence before making any conclusions.",
+        "You said: Let's continue our investigation with an open mind and focus on collecting more evidence before making any accusations. We don't want to miss any crucial information.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and work together to find out who did this.",
+        "Alice: I agree with Bob, let's stay vigilant and work together to find out who killed Charlie. I'll share any suspicious information I have.",
+        "You said: I'm saddened by Charlie's death. Let's not jump to conclusions and give the investigation sufficient time to uncover the truth.",
+        "You said: Let's not rush to judgments. We need to gather more information before making any accusations.",
+        "Alice: Based on my investigation, I suspect Diana's involvement in Charlie's death. Let's consider her as a prime suspect. We should be cautious and gather more evidence before making any conclusions.",
+        "Bob: Let's continue our investigation with an open mind and focus on collecting more evidence before making any accusations. We don't want to miss any crucial information."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

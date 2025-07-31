@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0458",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 458,
+  "timestamp": "2025-07-30T15:04:58.240476",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also remember to share any suspicious information we may have. Rest in peace, Diana....",
+        "Charlie: I agree with Bob, let's stay vigilant and support each other during this difficult time. If anyone notices anything suspicious, please share it with us.",
+        "You said: I agree with Bob and Charlie, let's stay vigilant and support each other. I have some concerns about the way Diana's death occurred, but I'll share more during private conversations.",
+        "Charlie: I'd like to echo Bob and Alice's sentiments. Let's all stay united and support each other during this trying time. If anything suspicious arises, please bring it up. Rest in peace, Diana.",
+        "Bob: I'd like to propose we keep a close eye on Alice's behavior tonight. The circumstances surrounding Diana's death seem suspicious. Let's work together to ensure everyone's safety.",
+        "You said: I support Bob's suggestion for increased vigilance tonight. Let's work together to ensure everyone's safety.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also remember to share any suspicious information we may have. Rest in peace, Diana....",
+        "Charlie: I agree with Bob, let's stay vigilant and support each other during this difficult time. If anyone notices anything suspicious, please share it with us.",
+        "Alice: I agree with Bob and Charlie, let's stay vigilant and support each other. I have some concerns about the way Diana's death occurred, but I'll share more during private conversations.",
+        "Charlie: I'd like to echo Bob and Alice's sentiments. Let's all stay united and support each other during this trying time. If anything suspicious arises, please bring it up. Rest in peace, Diana.",
+        "You said: I'd like to propose we keep a close eye on Alice's behavior tonight. The circumstances surrounding Diana's death seem suspicious. Let's work together to ensure everyone's safety.",
+        "Alice: I support Bob's suggestion for increased vigilance tonight. Let's work together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also remember to share any suspicious information we may have. Rest in peace, Diana....",
+        "You said: I agree with Bob, let's stay vigilant and support each other during this difficult time. If anyone notices anything suspicious, please share it with us.",
+        "Alice: I agree with Bob and Charlie, let's stay vigilant and support each other. I have some concerns about the way Diana's death occurred, but I'll share more during private conversations.",
+        "You said: I'd like to echo Bob and Alice's sentiments. Let's all stay united and support each other during this trying time. If anything suspicious arises, please bring it up. Rest in peace, Diana.",
+        "Bob: I'd like to propose we keep a close eye on Alice's behavior tonight. The circumstances surrounding Diana's death seem suspicious. Let's work together to ensure everyone's safety.",
+        "Alice: I support Bob's suggestion for increased vigilance tonight. Let's work together to ensure everyone's safety.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0288",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 288,
+  "timestamp": "2025-07-31T00:44:51.682753",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm saddened by Charlie's sudden demise. Let's all support Diana during this difficult time. We must unite and find the real culprit behind this heinous act.",
+        "Diana: I agree with Bob, we need to find the real culprit. Let's focus our investigation on possible suspects based on the clues and information we have.",
+        "You said: Let's not jump to conclusions. We should wait for more information before accusing anyone. It's important we work together to find the truth.",
+        "You said: Let's remain calm and gather more information before jumping to conclusions. Our unity and patience will help us find the truth.",
+        "Bob: Let's not forget that we're grieving for Charlie. Let's focus on finding the truth while being respectful and supportive to each other.",
+        "Diana: Let's not forget that Bob's expression of sadness might be a disguise. We should consider all possibilities and gather more information.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden demise. Let's all support Diana during this difficult time. We must unite and find the real culprit behind this heinous act.",
+        "Diana: I agree with Bob, we need to find the real culprit. Let's focus our investigation on possible suspects based on the clues and information we have.",
+        "Alice: Let's not jump to conclusions. We should wait for more information before accusing anyone. It's important we work together to find the truth.",
+        "Alice: Let's remain calm and gather more information before jumping to conclusions. Our unity and patience will help us find the truth.",
+        "You said: Let's not forget that we're grieving for Charlie. Let's focus on finding the truth while being respectful and supportive to each other.",
+        "Diana: Let's not forget that Bob's expression of sadness might be a disguise. We should consider all possibilities and gather more information."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm saddened by Charlie's sudden demise. Let's all support Diana during this difficult time. We must unite and find the real culprit behind this heinous act.",
+        "You said: I agree with Bob, we need to find the real culprit. Let's focus our investigation on possible suspects based on the clues and information we have.",
+        "Alice: Let's not jump to conclusions. We should wait for more information before accusing anyone. It's important we work together to find the truth.",
+        "Alice: Let's remain calm and gather more information before jumping to conclusions. Our unity and patience will help us find the truth.",
+        "Bob: Let's not forget that we're grieving for Charlie. Let's focus on finding the truth while being respectful and supportive to each other.",
+        "You said: Let's not forget that Bob's expression of sadness might be a disguise. We should consider all possibilities and gather more information.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

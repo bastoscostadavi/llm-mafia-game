@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0438",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 438,
+  "timestamp": "2025-07-30T14:57:40.111287",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all stay vigilant. It's important we trust each other, but keep a close eye on any suspicious behavior.",
+        "You said: I share Diana's concerns and agree we should all stay vigilant. Let's work together to ensure everyone's safety.",
+        "Bob: I'd like to echo everyone's concerns about Charlie's disappearance. Let's remain vigilant and trust each other, but keep a close eye on any unusual behavior.",
+        "You said: I'd like to remind everyone to stay vigilant and trust each other, but also keep an eye out for any unusual behavior following Charlie's disappearance. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to reiterate the importance of staying vigilant following Charlie's disappearance. Let's trust each other, but keep a close eye on any unusual behavior.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all stay vigilant. It's important we trust each other, but keep a close eye on any suspicious behavior.",
+        "Alice: I share Diana's concerns and agree we should all stay vigilant. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to echo everyone's concerns about Charlie's disappearance. Let's remain vigilant and trust each other, but keep a close eye on any unusual behavior.",
+        "Alice: I'd like to remind everyone to stay vigilant and trust each other, but also keep an eye out for any unusual behavior following Charlie's disappearance. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to reiterate the importance of staying vigilant following Charlie's disappearance. Let's trust each other, but keep a close eye on any unusual behavior."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all stay vigilant. It's important we trust each other, but keep a close eye on any suspicious behavior.",
+        "Alice: I share Diana's concerns and agree we should all stay vigilant. Let's work together to ensure everyone's safety.",
+        "Bob: I'd like to echo everyone's concerns about Charlie's disappearance. Let's remain vigilant and trust each other, but keep a close eye on any unusual behavior.",
+        "Alice: I'd like to remind everyone to stay vigilant and trust each other, but also keep an eye out for any unusual behavior following Charlie's disappearance. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to reiterate the importance of staying vigilant following Charlie's disappearance. Let's trust each other, but keep a close eye on any unusual behavior.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

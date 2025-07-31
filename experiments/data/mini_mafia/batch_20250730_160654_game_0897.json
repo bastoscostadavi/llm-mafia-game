@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0897",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 897,
+  "timestamp": "2025-07-30T21:26:12.691153",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. We should all work together to uncover the truth.",
+        "Charlie: I agree, let's all work together to uncover the truth behind Alice's death. Let's keep an open mind and share any information we might have. #teamwork #truthseekers #mafiagame. #Charlie #Diana #Bob",
+        "Diana: I've noticed Charlie's unusual behavior and concern for Alice's death. Let's keep a close eye on him. #suspicion #mafiagame. #Diana #Charlie #Bob.",
+        "You said: I'm saddened by Alice's passing and urge us to remain focused on finding the truth. Let's not jump to conclusions and allow the investigation to run its course. #truth #mafiagame. #Bob.",
+        "Diana: Let's not overlook Charlie's suspicious behavior towards Alice. We should investigate further before jumping to conclusions about her death. #investigation #mafiagame. #Diana #Charlie #Bob.",
+        "Charlie: I'd like to express my condolences for Alice's tragic loss. Let's all work together to ensure justice is served and the truth comes to light. #justice #mafiagame. #Charlie.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. We should all work together to uncover the truth.",
+        "You said: I agree, let's all work together to uncover the truth behind Alice's death. Let's keep an open mind and share any information we might have. #teamwork #truthseekers #mafiagame. #Charlie #Diana #Bob",
+        "Diana: I've noticed Charlie's unusual behavior and concern for Alice's death. Let's keep a close eye on him. #suspicion #mafiagame. #Diana #Charlie #Bob.",
+        "Bob: I'm saddened by Alice's passing and urge us to remain focused on finding the truth. Let's not jump to conclusions and allow the investigation to run its course. #truth #mafiagame. #Bob.",
+        "Diana: Let's not overlook Charlie's suspicious behavior towards Alice. We should investigate further before jumping to conclusions about her death. #investigation #mafiagame. #Diana #Charlie #Bob.",
+        "You said: I'd like to express my condolences for Alice's tragic loss. Let's all work together to ensure justice is served and the truth comes to light. #justice #mafiagame. #Charlie."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. We should all work together to uncover the truth.",
+        "Charlie: I agree, let's all work together to uncover the truth behind Alice's death. Let's keep an open mind and share any information we might have. #teamwork #truthseekers #mafiagame. #Charlie #Diana #Bob",
+        "You said: I've noticed Charlie's unusual behavior and concern for Alice's death. Let's keep a close eye on him. #suspicion #mafiagame. #Diana #Charlie #Bob.",
+        "Bob: I'm saddened by Alice's passing and urge us to remain focused on finding the truth. Let's not jump to conclusions and allow the investigation to run its course. #truth #mafiagame. #Bob.",
+        "You said: Let's not overlook Charlie's suspicious behavior towards Alice. We should investigate further before jumping to conclusions about her death. #investigation #mafiagame. #Diana #Charlie #Bob.",
+        "Charlie: I'd like to express my condolences for Alice's tragic loss. Let's all work together to ensure justice is served and the truth comes to light. #justice #mafiagame. #Charlie.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

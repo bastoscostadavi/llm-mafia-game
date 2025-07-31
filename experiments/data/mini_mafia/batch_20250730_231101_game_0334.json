@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0334",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 334,
+  "timestamp": "2025-07-31T00:59:45.843704",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Bob: I agree with Alice, let's all support each other in this unfortunate time. However, we must also remain vigilant. Let's keep an eye on Charlie's actions and reactions during this investigation.",
+        "Charlie: I share Alice and Bob's sentiments. Let's all come together during this tough time. I'll do my best to support both of you as well. Let's not let suspicion cloud our judgment. We can get through...",
+        "Bob: Let's continue our support for each other during this challenging time, while keeping a watchful eye on suspicious behavior. Our vigilance is crucial. #StayAlert #SupportEachOther",
+        "You said: Let's not jump to conclusions based on emotions. We need to remain calm and rational to uncover the truth behind Diana's death. #StayCalm #InvestigateThoroughly",
+        "Charlie: Let's not let fear and suspicion divide us. We should work together to uncover the truth behind Diana's death. #UnityIsStrength #SupportEachOther #InvestigateTogether",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Alice, let's all support each other in this unfortunate time. However, we must also remain vigilant. Let's keep an eye on Charlie's actions and reactions during this investigation.",
+        "Charlie: I share Alice and Bob's sentiments. Let's all come together during this tough time. I'll do my best to support both of you as well. Let's not let suspicion cloud our judgment. We can get through...",
+        "You said: Let's continue our support for each other during this challenging time, while keeping a watchful eye on suspicious behavior. Our vigilance is crucial. #StayAlert #SupportEachOther",
+        "Alice: Let's not jump to conclusions based on emotions. We need to remain calm and rational to uncover the truth behind Diana's death. #StayCalm #InvestigateThoroughly",
+        "Charlie: Let's not let fear and suspicion divide us. We should work together to uncover the truth behind Diana's death. #UnityIsStrength #SupportEachOther #InvestigateTogether"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Bob: I agree with Alice, let's all support each other in this unfortunate time. However, we must also remain vigilant. Let's keep an eye on Charlie's actions and reactions during this investigation.",
+        "You said: I share Alice and Bob's sentiments. Let's all come together during this tough time. I'll do my best to support both of you as well. Let's not let suspicion cloud our judgment. We can get through...",
+        "Bob: Let's continue our support for each other during this challenging time, while keeping a watchful eye on suspicious behavior. Our vigilance is crucial. #StayAlert #SupportEachOther",
+        "Alice: Let's not jump to conclusions based on emotions. We need to remain calm and rational to uncover the truth behind Diana's death. #StayCalm #InvestigateThoroughly",
+        "You said: Let's not let fear and suspicion divide us. We should work together to uncover the truth behind Diana's death. #UnityIsStrength #SupportEachOther #InvestigateTogether",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

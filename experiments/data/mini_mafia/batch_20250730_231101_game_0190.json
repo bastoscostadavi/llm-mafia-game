@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0190",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 190,
+  "timestamp": "2025-07-31T00:13:16.175005",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked and saddened by Diana's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Bob: I agree with Charlie. Let's stay vigilant and support each other. However, I'm particularly concerned about last night's events. We must find out who did this and bring them to justice.",
+        "You said: I join Charlie and Bob in expressing sympathy for Diana. Let's work together to ensure justice is served. But, let's not jump to conclusions or accuse anyone prematurely. We need solid evidence to...",
+        "Charlie: I support Diana's memory and share the concern for last night's events. Let's work together to find the truth and ensure justice.",
+        "Bob: Let's not forget, we need to find out who was responsible for Diana's death. We should keep an open mind and look for clues during our investigation. Let's stay focused and work together.",
+        "You said: Let's all express our condolences for Diana and focus on uncovering the truth together. We need to remain calm and think critically to avoid any hasty conclusions.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked and saddened by Diana's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I agree with Charlie. Let's stay vigilant and support each other. However, I'm particularly concerned about last night's events. We must find out who did this and bring them to justice.",
+        "Alice: I join Charlie and Bob in expressing sympathy for Diana. Let's work together to ensure justice is served. But, let's not jump to conclusions or accuse anyone prematurely. We need solid evidence to...",
+        "Charlie: I support Diana's memory and share the concern for last night's events. Let's work together to find the truth and ensure justice.",
+        "You said: Let's not forget, we need to find out who was responsible for Diana's death. We should keep an open mind and look for clues during our investigation. Let's stay focused and work together.",
+        "Alice: Let's all express our condolences for Diana and focus on uncovering the truth together. We need to remain calm and think critically to avoid any hasty conclusions."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked and saddened by Diana's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Bob: I agree with Charlie. Let's stay vigilant and support each other. However, I'm particularly concerned about last night's events. We must find out who did this and bring them to justice.",
+        "Alice: I join Charlie and Bob in expressing sympathy for Diana. Let's work together to ensure justice is served. But, let's not jump to conclusions or accuse anyone prematurely. We need solid evidence to...",
+        "You said: I support Diana's memory and share the concern for last night's events. Let's work together to find the truth and ensure justice.",
+        "Bob: Let's not forget, we need to find out who was responsible for Diana's death. We should keep an open mind and look for clues during our investigation. Let's stay focused and work together.",
+        "Alice: Let's all express our condolences for Diana and focus on uncovering the truth together. We need to remain calm and think critically to avoid any hasty conclusions.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

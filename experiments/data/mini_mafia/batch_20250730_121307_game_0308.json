@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0308",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 308,
+  "timestamp": "2025-07-30T14:08:04.155210",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's work together to ensure the culprit is brought to justice. Let's not jump to conclusions and consider all possibilities.",
+        "Diana: I agree with Alice, let's stay calm and investigate thoroughly to find out who is behind Charlie's death.",
+        "Bob: I agree with Alice and Diana, let's stay calm and investigate thoroughly to find out who is behind Charlie's death. We don't want to jump to conclusions.",
+        "Bob: Let's stay focused on the investigation and trust the process. We have important clues to follow, let's not let emotions cloud our judgement.",
+        "You said: Let's continue our investigation with a clear mind and open hearts. We're one step closer to bringing justice for Charlie. #StayCalmInvestigateThoroughly",
+        "Diana: Let's not rush into accusations. Let's continue our investigation to find the truth behind Charlie's death. Together, we can bring justice. #StayCalmInvestigateThoroughly",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden demise. Let's work together to ensure the culprit is brought to justice. Let's not jump to conclusions and consider all possibilities.",
+        "Diana: I agree with Alice, let's stay calm and investigate thoroughly to find out who is behind Charlie's death.",
+        "You said: I agree with Alice and Diana, let's stay calm and investigate thoroughly to find out who is behind Charlie's death. We don't want to jump to conclusions.",
+        "You said: Let's stay focused on the investigation and trust the process. We have important clues to follow, let's not let emotions cloud our judgement.",
+        "Alice: Let's continue our investigation with a clear mind and open hearts. We're one step closer to bringing justice for Charlie. #StayCalmInvestigateThoroughly",
+        "Diana: Let's not rush into accusations. Let's continue our investigation to find the truth behind Charlie's death. Together, we can bring justice. #StayCalmInvestigateThoroughly"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden demise. Let's work together to ensure the culprit is brought to justice. Let's not jump to conclusions and consider all possibilities.",
+        "You said: I agree with Alice, let's stay calm and investigate thoroughly to find out who is behind Charlie's death.",
+        "Bob: I agree with Alice and Diana, let's stay calm and investigate thoroughly to find out who is behind Charlie's death. We don't want to jump to conclusions.",
+        "Bob: Let's stay focused on the investigation and trust the process. We have important clues to follow, let's not let emotions cloud our judgement.",
+        "Alice: Let's continue our investigation with a clear mind and open hearts. We're one step closer to bringing justice for Charlie. #StayCalmInvestigateThoroughly",
+        "You said: Let's not rush into accusations. Let's continue our investigation to find the truth behind Charlie's death. Together, we can bring justice. #StayCalmInvestigateThoroughly",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

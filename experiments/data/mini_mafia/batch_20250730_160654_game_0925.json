@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0925",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 925,
+  "timestamp": "2025-07-30T21:35:35.215001",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and make sure everyone is accounted for tonight.",
+        "You said: I agree with Bob, let's make sure everyone is safe tonight. If anyone notices anything unusual, please share it with the group.",
+        "Diana: I agree with both Alice and Bob, let's ensure everyone's safety tonight. If I notice anything unusual, I'll share it with the group.",
+        "Diana: Let's all stay vigilant and ensure everyone's safety tonight. Any unusual observations, please share with the group.",
+        "You said: Let's keep an eye out for any unusual behavior tonight. If we notice anything suspicious, we should bring it up as a group.",
+        "Bob: Let's remain vigilant and report any unusual behavior or observations. Safety should be our top priority tonight."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and make sure everyone is accounted for tonight.",
+        "Alice: I agree with Bob, let's make sure everyone is safe tonight. If anyone notices anything unusual, please share it with the group.",
+        "Diana: I agree with both Alice and Bob, let's ensure everyone's safety tonight. If I notice anything unusual, I'll share it with the group.",
+        "Diana: Let's all stay vigilant and ensure everyone's safety tonight. Any unusual observations, please share with the group.",
+        "Alice: Let's keep an eye out for any unusual behavior tonight. If we notice anything suspicious, we should bring it up as a group.",
+        "You said: Let's remain vigilant and report any unusual behavior or observations. Safety should be our top priority tonight.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and make sure everyone is accounted for tonight.",
+        "Alice: I agree with Bob, let's make sure everyone is safe tonight. If anyone notices anything unusual, please share it with the group.",
+        "You said: I agree with both Alice and Bob, let's ensure everyone's safety tonight. If I notice anything unusual, I'll share it with the group.",
+        "You said: Let's all stay vigilant and ensure everyone's safety tonight. Any unusual observations, please share with the group.",
+        "Alice: Let's keep an eye out for any unusual behavior tonight. If we notice anything suspicious, we should bring it up as a group.",
+        "Bob: Let's remain vigilant and report any unusual behavior or observations. Safety should be our top priority tonight.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

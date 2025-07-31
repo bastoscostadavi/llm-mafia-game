@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0529",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 529,
+  "timestamp": "2025-07-30T15:32:36.033428",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm surprised by the turn of events. Let's all stay focused and work together to find out what happened to Bob.",
+        "Charlie: I'm shocked by Bob's death. Let's try to uncover the truth together. Alice, can you share any information you have about last night?",
+        "Diana: I remember seeing Bob talking to Charlie late last night. They seemed to be having a heated discussion. It might be worth investigating further.",
+        "Charlie: Based on last night's events and Alice's recent statement, it's important we scrutinize Alice's actions. Let's remain vigilant.",
+        "Diana: Based on what I saw last night, I think it's important that we keep an open dialogue and not jump to conclusions. Let's continue to gather information and work together to uncover the truth about...",
+        "You said: I agree with Diana. Let's keep an open dialogue and gather more information before jumping to conclusions. Alice."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Alice: I'm surprised by the turn of events. Let's all stay focused and work together to find out what happened to Bob.",
+        "You said: I'm shocked by Bob's death. Let's try to uncover the truth together. Alice, can you share any information you have about last night?",
+        "Diana: I remember seeing Bob talking to Charlie late last night. They seemed to be having a heated discussion. It might be worth investigating further.",
+        "You said: Based on last night's events and Alice's recent statement, it's important we scrutinize Alice's actions. Let's remain vigilant.",
+        "Diana: Based on what I saw last night, I think it's important that we keep an open dialogue and not jump to conclusions. Let's continue to gather information and work together to uncover the truth about...",
+        "Alice: I agree with Diana. Let's keep an open dialogue and gather more information before jumping to conclusions. Alice.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm surprised by the turn of events. Let's all stay focused and work together to find out what happened to Bob.",
+        "Charlie: I'm shocked by Bob's death. Let's try to uncover the truth together. Alice, can you share any information you have about last night?",
+        "You said: I remember seeing Bob talking to Charlie late last night. They seemed to be having a heated discussion. It might be worth investigating further.",
+        "Charlie: Based on last night's events and Alice's recent statement, it's important we scrutinize Alice's actions. Let's remain vigilant.",
+        "You said: Based on what I saw last night, I think it's important that we keep an open dialogue and not jump to conclusions. Let's continue to gather information and work together to uncover the truth about...",
+        "Alice: I agree with Diana. Let's keep an open dialogue and gather more information before jumping to conclusions. Alice.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

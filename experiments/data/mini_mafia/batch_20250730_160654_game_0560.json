@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0560",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 560,
+  "timestamp": "2025-07-30T19:31:05.125082",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden departure. Let's all remain vigilant and work together to find out what happened.",
+        "Diana: I'm saddened by Charlie's passing. Let's all stay focused and work together to uncover the truth.",
+        "Bob: I'm deeply saddened by Charlie's unexpected death. Let's all try to stay calm and focused as we work together to uncover the truth.",
+        "Bob: Let's not jump to conclusions based on assumptions. We need solid evidence to determine what really happened to Charlie.",
+        "You said: Let's not forget that we need to stay focused on finding the truth about Charlie's death. We should all share any information we have, no matter how small it may seem.",
+        "Diana: Let's not forget that Charlie was a valuable member of our group. Let's work together to ensure justice is served and the truth is revealed."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden departure. Let's all remain vigilant and work together to find out what happened.",
+        "Diana: I'm saddened by Charlie's passing. Let's all stay focused and work together to uncover the truth.",
+        "You said: I'm deeply saddened by Charlie's unexpected death. Let's all try to stay calm and focused as we work together to uncover the truth.",
+        "You said: Let's not jump to conclusions based on assumptions. We need solid evidence to determine what really happened to Charlie.",
+        "Alice: Let's not forget that we need to stay focused on finding the truth about Charlie's death. We should all share any information we have, no matter how small it may seem.",
+        "Diana: Let's not forget that Charlie was a valuable member of our group. Let's work together to ensure justice is served and the truth is revealed.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden departure. Let's all remain vigilant and work together to find out what happened.",
+        "You said: I'm saddened by Charlie's passing. Let's all stay focused and work together to uncover the truth.",
+        "Bob: I'm deeply saddened by Charlie's unexpected death. Let's all try to stay calm and focused as we work together to uncover the truth.",
+        "Bob: Let's not jump to conclusions based on assumptions. We need solid evidence to determine what really happened to Charlie.",
+        "Alice: Let's not forget that we need to stay focused on finding the truth about Charlie's death. We should all share any information we have, no matter how small it may seem.",
+        "You said: Let's not forget that Charlie was a valuable member of our group. Let's work together to ensure justice is served and the truth is revealed.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

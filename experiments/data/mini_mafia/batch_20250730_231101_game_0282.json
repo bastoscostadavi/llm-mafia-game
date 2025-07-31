@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0282",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 282,
+  "timestamp": "2025-07-31T00:42:47.760083",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden disappearance. Let's all be vigilant and keep an eye on each other.",
+        "You said: I agree with Bob, let's stay vigilant. It's important we all trust each other in this game.",
+        "Charlie: I second the motion of staying vigilant. Let's all trust each other and work together to ensure everyone's safety in this game.",
+        "You said: I'd like to add, let's not jump to conclusions based on suspicions. We should focus on building trust and working together as a team.",
+        "Charlie: Let's continue building trust and staying vigilant. We're all in this together.",
+        "Bob: I'd like to reiterate the importance of vigilance and trust in our team. Let's continue working together to ensure everyone's safety.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's all be vigilant and keep an eye on each other.",
+        "Alice: I agree with Bob, let's stay vigilant. It's important we all trust each other in this game.",
+        "Charlie: I second the motion of staying vigilant. Let's all trust each other and work together to ensure everyone's safety in this game.",
+        "Alice: I'd like to add, let's not jump to conclusions based on suspicions. We should focus on building trust and working together as a team.",
+        "Charlie: Let's continue building trust and staying vigilant. We're all in this together.",
+        "You said: I'd like to reiterate the importance of vigilance and trust in our team. Let's continue working together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden disappearance. Let's all be vigilant and keep an eye on each other.",
+        "Alice: I agree with Bob, let's stay vigilant. It's important we all trust each other in this game.",
+        "You said: I second the motion of staying vigilant. Let's all trust each other and work together to ensure everyone's safety in this game.",
+        "Alice: I'd like to add, let's not jump to conclusions based on suspicions. We should focus on building trust and working together as a team.",
+        "You said: Let's continue building trust and staying vigilant. We're all in this together.",
+        "Bob: I'd like to reiterate the importance of vigilance and trust in our team. Let's continue working together to ensure everyone's safety.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

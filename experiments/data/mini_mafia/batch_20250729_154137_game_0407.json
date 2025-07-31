@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0407",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 407,
+  "timestamp": "2025-07-29T18:14:31.341124",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's work together to uncover the truth behind this.",
+        "Charlie: I'm saddened by Alice's passing. Let's all stay focused and work together to find the truth.",
+        "You said: I'm confident we can uncover the truth behind Alice's death. Let's keep communication open and trust each other during this investigation.",
+        "You said: I believe it's crucial that we share any relevant information we have to help uncover the truth behind Alice's death. Let's all stay vigilant and communicate openly.",
+        "Diana: I agree with Bob, let's share any information we have to uncover the truth behind Alice's death. Let's also stay alert and communicate openly.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all work together to find the truth and bring justice for her."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's work together to uncover the truth behind this.",
+        "You said: I'm saddened by Alice's passing. Let's all stay focused and work together to find the truth.",
+        "Bob: I'm confident we can uncover the truth behind Alice's death. Let's keep communication open and trust each other during this investigation.",
+        "Bob: I believe it's crucial that we share any relevant information we have to help uncover the truth behind Alice's death. Let's all stay vigilant and communicate openly.",
+        "Diana: I agree with Bob, let's share any information we have to uncover the truth behind Alice's death. Let's also stay alert and communicate openly.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all work together to find the truth and bring justice for her.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's work together to uncover the truth behind this.",
+        "Charlie: I'm saddened by Alice's passing. Let's all stay focused and work together to find the truth.",
+        "Bob: I'm confident we can uncover the truth behind Alice's death. Let's keep communication open and trust each other during this investigation.",
+        "Bob: I believe it's crucial that we share any relevant information we have to help uncover the truth behind Alice's death. Let's all stay vigilant and communicate openly.",
+        "You said: I agree with Bob, let's share any information we have to uncover the truth behind Alice's death. Let's also stay alert and communicate openly.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all work together to find the truth and bring justice for her.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

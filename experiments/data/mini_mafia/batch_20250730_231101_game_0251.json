@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0251",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 251,
+  "timestamp": "2025-07-31T00:32:45.690783",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden demise. Let's all be cautious and support each other during this trying time.",
+        "Charlie: I'm saddened by Diana's passing. Let's be vigilant to ensure justice is served.",
+        "Bob: I second Charlie's call for vigilance. Let's work together to ensure the perpetrator is brought to justice.",
+        "Charlie: Let's not let our emotions cloud our judgment. We need to stay focused on identifying the culprit behind Diana's death. Let's work together to uncover the truth.",
+        "Bob: Let's remain calm and focused. We need to work together to identify the culprit behind Diana's death. Our emotions won't help us in this investigation.",
+        "You said: Let's not jump to conclusions. We must allow the investigation to proceed before making any accusations."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked about Diana's sudden demise. Let's all be cautious and support each other during this trying time.",
+        "Charlie: I'm saddened by Diana's passing. Let's be vigilant to ensure justice is served.",
+        "You said: I second Charlie's call for vigilance. Let's work together to ensure the perpetrator is brought to justice.",
+        "Charlie: Let's not let our emotions cloud our judgment. We need to stay focused on identifying the culprit behind Diana's death. Let's work together to uncover the truth.",
+        "You said: Let's remain calm and focused. We need to work together to identify the culprit behind Diana's death. Our emotions won't help us in this investigation.",
+        "Alice: Let's not jump to conclusions. We must allow the investigation to proceed before making any accusations.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked about Diana's sudden demise. Let's all be cautious and support each other during this trying time.",
+        "You said: I'm saddened by Diana's passing. Let's be vigilant to ensure justice is served.",
+        "Bob: I second Charlie's call for vigilance. Let's work together to ensure the perpetrator is brought to justice.",
+        "You said: Let's not let our emotions cloud our judgment. We need to stay focused on identifying the culprit behind Diana's death. Let's work together to uncover the truth.",
+        "Bob: Let's remain calm and focused. We need to work together to identify the culprit behind Diana's death. Our emotions won't help us in this investigation.",
+        "Alice: Let's not jump to conclusions. We must allow the investigation to proceed before making any accusations.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

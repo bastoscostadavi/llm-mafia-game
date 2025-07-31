@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0457",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 457,
+  "timestamp": "2025-07-30T15:04:33.898583",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Alice and Diana, let's all stay vigilant. But I have a feeling that someone among us might be hiding something. Let's keep a close eye on each other.",
+        "You said: I'd like to echo Bob's sentiments and urge everyone to be extra cautious tonight. Let's all make sure we trust each other fully before making any accusations.",
+        "Diana: I'd like to remind everyone to stay vigilant and report any suspicious behavior or unusual activities. Let's work together to ensure everyone's safety.",
+        "Bob: I'd like to reiterate the importance of staying vigilant tonight. Let's keep an open communication channel and trust each other, but remain cautious."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Alice: I agree with Diana, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I agree with Alice and Diana, let's all stay vigilant. But I have a feeling that someone among us might be hiding something. Let's keep a close eye on each other.",
+        "Alice: I'd like to echo Bob's sentiments and urge everyone to be extra cautious tonight. Let's all make sure we trust each other fully before making any accusations.",
+        "Diana: I'd like to remind everyone to stay vigilant and report any suspicious behavior or unusual activities. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to reiterate the importance of staying vigilant tonight. Let's keep an open communication channel and trust each other, but remain cautious.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Alice: I agree with Diana, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Alice and Diana, let's all stay vigilant. But I have a feeling that someone among us might be hiding something. Let's keep a close eye on each other.",
+        "Alice: I'd like to echo Bob's sentiments and urge everyone to be extra cautious tonight. Let's all make sure we trust each other fully before making any accusations.",
+        "You said: I'd like to remind everyone to stay vigilant and report any suspicious behavior or unusual activities. Let's work together to ensure everyone's safety.",
+        "Bob: I'd like to reiterate the importance of staying vigilant tonight. Let's keep an open communication channel and trust each other, but remain cautious.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

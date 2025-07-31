@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0144",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 144,
+  "timestamp": "2025-07-30T13:05:52.854794",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all try to support each other during this difficult time. We should also be vigilant and make sure no mafiosos among us take advantage of this tragedy...",
+        "You said: I agree, let's be vigilant and support each other during this sad time. However, I'm concerned about Charlie's behavior last night. He seemed unusually quiet and distant. We should keep a close eye...",
+        "Charlie: I'm saddened by Diana's passing. Let's all support each other during this trying time. I agree with Alice, we should remain vigilant. However, let's not jump to conclusions or accuse anyone without...",
+        "You said: I'm concerned about Charlie's strange behavior last night. We should consider this when making our decisions during the day vote. Let's stay vigilant.",
+        "Charlie: I share Alice's concerns about last night. Let's remain vigilant and support each other. However, let's not jump to conclusions or accuse without solid evidence. We must trust the investigation...",
+        "Bob: Let's remember Diana's words about unity and support during this difficult time. We should remain vigilant but not let fear divide us. Let's trust the investigation results and support each other...."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's all try to support each other during this difficult time. We should also be vigilant and make sure no mafiosos among us take advantage of this tragedy...",
+        "Alice: I agree, let's be vigilant and support each other during this sad time. However, I'm concerned about Charlie's behavior last night. He seemed unusually quiet and distant. We should keep a close eye...",
+        "Charlie: I'm saddened by Diana's passing. Let's all support each other during this trying time. I agree with Alice, we should remain vigilant. However, let's not jump to conclusions or accuse anyone without...",
+        "Alice: I'm concerned about Charlie's strange behavior last night. We should consider this when making our decisions during the day vote. Let's stay vigilant.",
+        "Charlie: I share Alice's concerns about last night. Let's remain vigilant and support each other. However, let's not jump to conclusions or accuse without solid evidence. We must trust the investigation...",
+        "You said: Let's remember Diana's words about unity and support during this difficult time. We should remain vigilant but not let fear divide us. Let's trust the investigation results and support each other....",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all try to support each other during this difficult time. We should also be vigilant and make sure no mafiosos among us take advantage of this tragedy...",
+        "Alice: I agree, let's be vigilant and support each other during this sad time. However, I'm concerned about Charlie's behavior last night. He seemed unusually quiet and distant. We should keep a close eye...",
+        "You said: I'm saddened by Diana's passing. Let's all support each other during this trying time. I agree with Alice, we should remain vigilant. However, let's not jump to conclusions or accuse anyone without...",
+        "Alice: I'm concerned about Charlie's strange behavior last night. We should consider this when making our decisions during the day vote. Let's stay vigilant.",
+        "You said: I share Alice's concerns about last night. Let's remain vigilant and support each other. However, let's not jump to conclusions or accuse without solid evidence. We must trust the investigation...",
+        "Bob: Let's remember Diana's words about unity and support during this difficult time. We should remain vigilant but not let fear divide us. Let's trust the investigation results and support each other....",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

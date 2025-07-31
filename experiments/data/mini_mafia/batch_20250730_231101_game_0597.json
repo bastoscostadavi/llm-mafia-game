@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0597",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 597,
+  "timestamp": "2025-07-31T02:24:54.174106",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's sudden demise. Let's all support each other during this trying time. Let's focus on finding the real culprit and bring them to justice.",
+        "You said: I agree with Bob, let's work together to find the real culprit. My thoughts are with Diana and her family during this difficult time.",
+        "Charlie: I support Bob and Alice's call for unity and working together to find the real culprit behind Diana's death. Let's focus on the investigation and ensure justice is served.",
+        "Charlie: I second Bob and Alice's call for unity and working together to identify the true culprit behind Diana's tragic demise. Let's stay focused on the investigation.",
+        "You said: Let's not jump to conclusions. We should gather more information before making any accusations. Let's focus on the investigation and work together.",
+        "Bob: Let's not forget the importance of unity and teamwork in this trying situation. We must focus on finding the real culprit together.",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's sudden demise. Let's all support each other during this trying time. Let's focus on finding the real culprit and bring them to justice.",
+        "Alice: I agree with Bob, let's work together to find the real culprit. My thoughts are with Diana and her family during this difficult time.",
+        "Charlie: I support Bob and Alice's call for unity and working together to find the real culprit behind Diana's death. Let's focus on the investigation and ensure justice is served.",
+        "Charlie: I second Bob and Alice's call for unity and working together to identify the true culprit behind Diana's tragic demise. Let's stay focused on the investigation.",
+        "Alice: Let's not jump to conclusions. We should gather more information before making any accusations. Let's focus on the investigation and work together.",
+        "You said: Let's not forget the importance of unity and teamwork in this trying situation. We must focus on finding the real culprit together.",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's sudden demise. Let's all support each other during this trying time. Let's focus on finding the real culprit and bring them to justice.",
+        "Alice: I agree with Bob, let's work together to find the real culprit. My thoughts are with Diana and her family during this difficult time.",
+        "You said: I support Bob and Alice's call for unity and working together to find the real culprit behind Diana's death. Let's focus on the investigation and ensure justice is served.",
+        "You said: I second Bob and Alice's call for unity and working together to identify the true culprit behind Diana's tragic demise. Let's stay focused on the investigation.",
+        "Alice: Let's not jump to conclusions. We should gather more information before making any accusations. Let's focus on the investigation and work together.",
+        "Bob: Let's not forget the importance of unity and teamwork in this trying situation. We must focus on finding the real culprit together."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

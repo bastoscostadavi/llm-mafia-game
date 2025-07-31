@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0015",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 15,
+  "timestamp": "2025-07-30T16:12:00.360335",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all be vigilant and support each other during these trying times.",
+        "Diana: I'm saddened by Charlie's death. Let's work together to uncover the truth behind this tragic event.",
+        "You said: I agree with Bob and Diana, let's all stay vigilant and work together to uncover the truth.",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any accusations. Stay vigilant and open-minded.",
+        "Bob: Let's not forget that we're all grieving over Charlie's loss. Let's focus on finding the culprit together while being mindful of each other's emotions.",
+        "You said: Let's not overlook any details in our investigation. We should discuss any suspicious behavior or patterns we've noticed. Together, we can find the truth and bring justice for Charlie.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all be vigilant and support each other during these trying times.",
+        "Diana: I'm saddened by Charlie's death. Let's work together to uncover the truth behind this tragic event.",
+        "Alice: I agree with Bob and Diana, let's all stay vigilant and work together to uncover the truth.",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any accusations. Stay vigilant and open-minded.",
+        "You said: Let's not forget that we're all grieving over Charlie's loss. Let's focus on finding the culprit together while being mindful of each other's emotions.",
+        "Alice: Let's not overlook any details in our investigation. We should discuss any suspicious behavior or patterns we've noticed. Together, we can find the truth and bring justice for Charlie."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all be vigilant and support each other during these trying times.",
+        "You said: I'm saddened by Charlie's death. Let's work together to uncover the truth behind this tragic event.",
+        "Alice: I agree with Bob and Diana, let's all stay vigilant and work together to uncover the truth.",
+        "You said: Let's not jump to conclusions. We need to gather more information before making any accusations. Stay vigilant and open-minded.",
+        "Bob: Let's not forget that we're all grieving over Charlie's loss. Let's focus on finding the culprit together while being mindful of each other's emotions.",
+        "Alice: Let's not overlook any details in our investigation. We should discuss any suspicious behavior or patterns we've noticed. Together, we can find the truth and bring justice for Charlie.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

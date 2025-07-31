@@ -103,7 +103,7 @@ class BatchViewer:
             print(f"Debug prompts: Unknown")
     
     def show_game_detail(self, batch_id: str, game_num: int):
-        """Show detailed view of a specific game"""
+        """Show detailed view of a specific game - matches runtime display format"""
         games = self.load_batch_games(batch_id)
         if game_num >= len(games):
             print(f"❌ Game {game_num} not found in batch {batch_id}")
@@ -111,19 +111,113 @@ class BatchViewer:
         
         game = games[game_num]
         
-        print(f"\n🎮 GAME DETAIL: {game['game_id']}")
-        print("=" * 50)
-        print(f"Winner: {game['winner'].upper()}")
-        print(f"Arrested: {game['arrested_player']['name']} ({game['arrested_player']['role']})")
-        print(f"Dead: {game['dead_player']['name']} ({game['dead_player']['role']})")
-        print(f"Rounds: {game['total_rounds']}")
+        # Game start
+        print("Initializing Mafia Game...")
+        print("\nSecret roles:")
+        for player in game['initial_players']:
+            print(f"  {player['name']}: {player['role']}")
         
-        print("\n📝 PLAYER MEMORIES:")
+        # Simulate game flow based on memories
+        self._simulate_game_flow(game)
+        
+        # Game end
+        winner_text = "GOOD WINS! All mafiosos arrested!" if game['winner'] == 'good' else "EVIL WINS! All good players killed!"
+        print(f"\n==================================================")
+        print(winner_text)
+        print(f"==================================================")
+        
+        # Final roles
+        print(f"\nFINAL ROLES:")
         for player in game['final_state']:
-            if player['alive'] or player['imprisoned']:
-                print(f"\n{player['name']} ({player['role']}):")
-                for i, memory in enumerate(player['memory'], 1):  # All memories
-                    print(f"  {i}. {memory}")
+            if player['imprisoned']:
+                status = "[IMPRISONED] "
+            elif not player['alive']:
+                status = "[DEAD] "
+            else:
+                status = "[ALIVE] "
+            print(f"{status}{player['name']}: {player['role'].upper()}")
+    
+    def _simulate_game_flow(self, game):
+        """Simulate the game flow based on stored memories"""
+        # Extract game events from memories
+        for round_num in range(1, game['total_rounds'] + 1):
+            print(f"\nNIGHT {round_num}")
+            
+            # Show night actions (detective investigation, mafioso coordination)
+            print("\n[SPECTATOR] Resolving night actions...")
+            
+            # Find who died this round
+            dead_player = game['dead_player']['name']
+            if round_num == 1:  # In mini-mafia, death happens in round 1
+                print(f"\nFound dead: {dead_player}")
+            
+            print(f"\n==================================================")
+            print(f"DAY {round_num}")
+            print(f"==================================================")
+            
+            # Show current status
+            alive_players = [p['name'] for p in game['final_state'] if p['alive'] and not p['imprisoned']]
+            imprisoned_players = [p['name'] for p in game['final_state'] if p['imprisoned']]
+            dead_players = [p['name'] for p in game['final_state'] if not p['alive']]
+            
+            print(f"\nCurrent Status:")
+            print(f"  Alive: {', '.join(alive_players) if alive_players else 'None'}")
+            print(f"  Imprisoned: {', '.join(imprisoned_players) if imprisoned_players else 'None'}")
+            print(f"  Dead: {', '.join(dead_players) if dead_players else 'None'}")
+            
+            # Show discussion
+            print(f"\nDISCUSSION - Day {round_num}")
+            
+            # Extract discussion from memories
+            self._show_discussion_from_memories(game, round_num)
+            
+            # Show voting
+            print(f"\nVOTING:")
+            self._show_voting_from_memories(game, round_num)
+    
+    def _show_discussion_from_memories(self, game, round_num):
+        """Extract and show discussion from player memories"""
+        discussions = []
+        
+        # Collect all discussion messages from memories
+        for player in game['final_state']:
+            for memory in player['memory']:
+                # Look for player messages (not system messages)
+                if ':' in memory and not memory.startswith('You'):
+                    if not any(memory.startswith(prefix) for prefix in ['Night', 'Day', 'Found dead', 'You investigated']):
+                        discussions.append(memory)
+                elif memory.startswith('You said:'):
+                    # Convert "You said:" to player name
+                    message = memory.replace('You said:', f"{player['name']}:")
+                    discussions.append(message)
+        
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_discussions = []
+        for msg in discussions:
+            if msg not in seen:
+                seen.add(msg)
+                unique_discussions.append(msg)
+        
+        # Show discussion rounds
+        if unique_discussions:
+            messages_per_round = len(unique_discussions) // game['discussion_rounds']
+            for round_idx in range(game['discussion_rounds']):
+                print(f"\nRound {round_idx + 1}:")
+                start_idx = round_idx * messages_per_round
+                end_idx = start_idx + messages_per_round if round_idx < game['discussion_rounds'] - 1 else len(unique_discussions)
+                
+                for msg in unique_discussions[start_idx:end_idx]:
+                    print(msg)
+    
+    def _show_voting_from_memories(self, game, round_num):
+        """Show voting results from game data"""
+        # In mini-mafia, show who was arrested
+        arrested_player = game['arrested_player']
+        
+        # Simulate voting (we don't have individual votes stored, so show result)
+        print(f"\n{arrested_player['name']} has been arrested!")
+        print(f"They were {arrested_player['role'].upper()}!")
     
     def interactive_menu(self):
         """Interactive menu for browsing batches"""

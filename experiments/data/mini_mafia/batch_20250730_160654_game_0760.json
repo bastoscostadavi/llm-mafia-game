@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0760",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 760,
+  "timestamp": "2025-07-30T20:40:20.807523",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's passing. Let's all support each other during this difficult time.",
+        "You said: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this challenging time.",
+        "Bob: I'd like to propose we all share any suspicious behaviors or observations we may have had regarding Diana during the discussion rounds to help us find the truth behind her death. Let's work together...",
+        "You said: I second Bob's proposal. Let's share any suspicious behaviors or observations we had about Diana to help us find the truth.",
+        "Charlie: I agree with Bob, let's share any suspicious behaviors or observations we had about Diana during the discussion rounds. Let's support each other in finding the truth.",
+        "Bob: I remember Diana being unusually quiet during the last game night. Let's discuss if this could be relevant to her sudden passing."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's passing. Let's all support each other during this difficult time.",
+        "Alice: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this challenging time.",
+        "You said: I'd like to propose we all share any suspicious behaviors or observations we may have had regarding Diana during the discussion rounds to help us find the truth behind her death. Let's work together...",
+        "Alice: I second Bob's proposal. Let's share any suspicious behaviors or observations we had about Diana to help us find the truth.",
+        "Charlie: I agree with Bob, let's share any suspicious behaviors or observations we had about Diana during the discussion rounds. Let's support each other in finding the truth.",
+        "You said: I remember Diana being unusually quiet during the last game night. Let's discuss if this could be relevant to her sudden passing.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's passing. Let's all support each other during this difficult time.",
+        "Alice: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this challenging time.",
+        "Bob: I'd like to propose we all share any suspicious behaviors or observations we may have had regarding Diana during the discussion rounds to help us find the truth behind her death. Let's work together...",
+        "Alice: I second Bob's proposal. Let's share any suspicious behaviors or observations we had about Diana to help us find the truth.",
+        "You said: I agree with Bob, let's share any suspicious behaviors or observations we had about Diana during the discussion rounds. Let's support each other in finding the truth.",
+        "Bob: I remember Diana being unusually quiet during the last game night. Let's discuss if this could be relevant to her sudden passing.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

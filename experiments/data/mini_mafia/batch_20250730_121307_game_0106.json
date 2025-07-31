@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0106",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 106,
+  "timestamp": "2025-07-30T12:51:18.219881",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's death. Let's all stay calm and focus on finding the real culprit. We need to work together to ensure justice is served. #ForDiana #UnitedWeStand",
+        "You said: I agree with Charlie, let's stay calm and focused. We should share any information we have that might help identify the culprit. #ForDiana #Teamwork",
+        "Bob: Based on my investigation, I believe Charlie is the culprit. Let's vote to arrest him. #JusticeForDiana #ExposeTheMafioso",
+        "Bob: I stand by my statement, there's strong evidence pointing to Charlie as the culprit. Let's act swiftly and vote to arrest him. #JusticeForDiana #ExposeTheMafioso",
+        "Charlie: I'm saddened by Diana's death and I fully support finding the true culprit. Let's not jump to conclusions and trust the investigation process. #JusticeForDiana #StayCalm",
+        "You said: I support Charlie's call for calm and trust in the investigation process. Let's not rush to judgments and give the detective time to gather more information. #ForDiana #StayCalm #TrustTheProcess",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's death. Let's all stay calm and focus on finding the real culprit. We need to work together to ensure justice is served. #ForDiana #UnitedWeStand",
+        "Alice: I agree with Charlie, let's stay calm and focused. We should share any information we have that might help identify the culprit. #ForDiana #Teamwork",
+        "You said: Based on my investigation, I believe Charlie is the culprit. Let's vote to arrest him. #JusticeForDiana #ExposeTheMafioso",
+        "You said: I stand by my statement, there's strong evidence pointing to Charlie as the culprit. Let's act swiftly and vote to arrest him. #JusticeForDiana #ExposeTheMafioso",
+        "Charlie: I'm saddened by Diana's death and I fully support finding the true culprit. Let's not jump to conclusions and trust the investigation process. #JusticeForDiana #StayCalm",
+        "Alice: I support Charlie's call for calm and trust in the investigation process. Let's not rush to judgments and give the detective time to gather more information. #ForDiana #StayCalm #TrustTheProcess",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's death. Let's all stay calm and focus on finding the real culprit. We need to work together to ensure justice is served. #ForDiana #UnitedWeStand",
+        "Alice: I agree with Charlie, let's stay calm and focused. We should share any information we have that might help identify the culprit. #ForDiana #Teamwork",
+        "Bob: Based on my investigation, I believe Charlie is the culprit. Let's vote to arrest him. #JusticeForDiana #ExposeTheMafioso",
+        "Bob: I stand by my statement, there's strong evidence pointing to Charlie as the culprit. Let's act swiftly and vote to arrest him. #JusticeForDiana #ExposeTheMafioso",
+        "You said: I'm saddened by Diana's death and I fully support finding the true culprit. Let's not jump to conclusions and trust the investigation process. #JusticeForDiana #StayCalm",
+        "Alice: I support Charlie's call for calm and trust in the investigation process. Let's not rush to judgments and give the detective time to gather more information. #ForDiana #StayCalm #TrustTheProcess"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

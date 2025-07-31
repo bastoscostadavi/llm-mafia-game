@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0115",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 115,
+  "timestamp": "2025-07-30T16:47:35.520731",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden absence. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Alice, let's stay vigilant. Something seems off about Diana's disappearance.",
+        "Bob: I share Alice and Charlie's concerns about Diana. Let's all be cautious tonight.",
+        "You said: Let's not jump to conclusions, but it's important we keep a close eye on each other tonight following Diana's disappearance.",
+        "Charlie: Let's not forget, Diana's disappearance is suspicious. We should all be cautious tonight.",
+        "Bob: Let's not forget the importance of trust and unity in these uncertain times. We should remain vigilant and work together to uncover any suspicious activities."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden absence. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Alice, let's stay vigilant. Something seems off about Diana's disappearance.",
+        "You said: I share Alice and Charlie's concerns about Diana. Let's all be cautious tonight.",
+        "Alice: Let's not jump to conclusions, but it's important we keep a close eye on each other tonight following Diana's disappearance.",
+        "Charlie: Let's not forget, Diana's disappearance is suspicious. We should all be cautious tonight.",
+        "You said: Let's not forget the importance of trust and unity in these uncertain times. We should remain vigilant and work together to uncover any suspicious activities.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden absence. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Alice, let's stay vigilant. Something seems off about Diana's disappearance.",
+        "Bob: I share Alice and Charlie's concerns about Diana. Let's all be cautious tonight.",
+        "Alice: Let's not jump to conclusions, but it's important we keep a close eye on each other tonight following Diana's disappearance.",
+        "You said: Let's not forget, Diana's disappearance is suspicious. We should all be cautious tonight.",
+        "Bob: Let's not forget the importance of trust and unity in these uncertain times. We should remain vigilant and work together to uncover any suspicious activities.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

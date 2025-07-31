@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0541",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 541,
+  "timestamp": "2025-07-31T02:06:53.496479",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden absence. Let's all keep a close eye on each other tonight.",
+        "Charlie: I agree with Bob, let's be vigilant tonight.",
+        "You said: I'm with you both, let's ensure safety and trust during this critical phase. Let's not jump to conclusions or accuse unnecessarily.",
+        "You said: Let's maintain unity and trust in our group. Vigilance is important, but jumping to conclusions can cause unnecessary tension. Let's focus on open communication.",
+        "Charlie: I share Alice's sentiments about unity and open communication. Let's all work together to ensure everyone's safety.",
+        "Bob: Let's remain vigilant and focus on open communication. Any unusual behavior should be addressed. We can't afford to let our guard down."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden absence. Let's all keep a close eye on each other tonight.",
+        "Charlie: I agree with Bob, let's be vigilant tonight.",
+        "Alice: I'm with you both, let's ensure safety and trust during this critical phase. Let's not jump to conclusions or accuse unnecessarily.",
+        "Alice: Let's maintain unity and trust in our group. Vigilance is important, but jumping to conclusions can cause unnecessary tension. Let's focus on open communication.",
+        "Charlie: I share Alice's sentiments about unity and open communication. Let's all work together to ensure everyone's safety.",
+        "You said: Let's remain vigilant and focus on open communication. Any unusual behavior should be addressed. We can't afford to let our guard down.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden absence. Let's all keep a close eye on each other tonight.",
+        "You said: I agree with Bob, let's be vigilant tonight.",
+        "Alice: I'm with you both, let's ensure safety and trust during this critical phase. Let's not jump to conclusions or accuse unnecessarily.",
+        "Alice: Let's maintain unity and trust in our group. Vigilance is important, but jumping to conclusions can cause unnecessary tension. Let's focus on open communication.",
+        "You said: I share Alice's sentiments about unity and open communication. Let's all work together to ensure everyone's safety.",
+        "Bob: Let's remain vigilant and focus on open communication. Any unusual behavior should be addressed. We can't afford to let our guard down.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

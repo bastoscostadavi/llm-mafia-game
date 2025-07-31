@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0301",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 301,
+  "timestamp": "2025-07-30T17:54:36.192059",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm deeply saddened by Bob's sudden demise. Let's all try to support each other during this trying time. Let's focus on finding the culprit together.",
+        "Diana: I agree with Charlie, let's focus on finding the culprit. My condolences to Bob's family.",
+        "You said: I agree with Charlie and Diana. Let's work together to find the culprit and bring them to justice for Bob's sake.",
+        "Charlie: Let's stay focused on finding the killer. We need to work together to ensure justice for Bob.",
+        "Diana: Let's not jump to conclusions. We need to remain focused on finding the real culprit behind Bob's death. Let's work together.",
+        "You said: Let's not forget that we need to find the truth to bring justice for Bob. We should all share any relevant information we have.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm deeply saddened by Bob's sudden demise. Let's all try to support each other during this trying time. Let's focus on finding the culprit together.",
+        "Diana: I agree with Charlie, let's focus on finding the culprit. My condolences to Bob's family.",
+        "Alice: I agree with Charlie and Diana. Let's work together to find the culprit and bring them to justice for Bob's sake.",
+        "You said: Let's stay focused on finding the killer. We need to work together to ensure justice for Bob.",
+        "Diana: Let's not jump to conclusions. We need to remain focused on finding the real culprit behind Bob's death. Let's work together.",
+        "Alice: Let's not forget that we need to find the truth to bring justice for Bob. We should all share any relevant information we have."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm deeply saddened by Bob's sudden demise. Let's all try to support each other during this trying time. Let's focus on finding the culprit together.",
+        "You said: I agree with Charlie, let's focus on finding the culprit. My condolences to Bob's family.",
+        "Alice: I agree with Charlie and Diana. Let's work together to find the culprit and bring them to justice for Bob's sake.",
+        "Charlie: Let's stay focused on finding the killer. We need to work together to ensure justice for Bob.",
+        "You said: Let's not jump to conclusions. We need to remain focused on finding the real culprit behind Bob's death. Let's work together.",
+        "Alice: Let's not forget that we need to find the truth to bring justice for Bob. We should all share any relevant information we have.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

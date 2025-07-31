@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0328",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 328,
+  "timestamp": "2025-07-29T17:45:17.731901",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's unite and find the real culprit behind this heinous act. #JusticeForAlice #StrengthInUnity",
+        "Diana: I agree with Bob, let's find the real killer. Bob's sentiment seems sincere, but we must stay vigilant. #JusticeForAlice #TrustButVerify",
+        "Charlie: I share Bob's sentiment for Alice. Let's work together to find the true culprit. #JusticeForAlice #UnitedFront",
+        "You said: Let's not jump to conclusions. We need to gather more information to ensure we're making informed decisions. #JusticeForAlice #PatienceIsKey",
+        "Diana: Let's focus on gathering solid evidence to identify the true culprit. We must remain calm and avoid jumping to conclusions. #JusticeForAlice #EvidenceBasedDecisions",
+        "Charlie: Let's not forget that we need to identify the mafioso among us. We should keep an open mind and carefully consider everyone's actions and words. #JusticeForAlice #StayFocused"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's sudden demise. Let's unite and find the real culprit behind this heinous act. #JusticeForAlice #StrengthInUnity",
+        "Diana: I agree with Bob, let's find the real killer. Bob's sentiment seems sincere, but we must stay vigilant. #JusticeForAlice #TrustButVerify",
+        "You said: I share Bob's sentiment for Alice. Let's work together to find the true culprit. #JusticeForAlice #UnitedFront",
+        "Bob: Let's not jump to conclusions. We need to gather more information to ensure we're making informed decisions. #JusticeForAlice #PatienceIsKey",
+        "Diana: Let's focus on gathering solid evidence to identify the true culprit. We must remain calm and avoid jumping to conclusions. #JusticeForAlice #EvidenceBasedDecisions",
+        "You said: Let's not forget that we need to identify the mafioso among us. We should keep an open mind and carefully consider everyone's actions and words. #JusticeForAlice #StayFocused",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's sudden demise. Let's unite and find the real culprit behind this heinous act. #JusticeForAlice #StrengthInUnity",
+        "You said: I agree with Bob, let's find the real killer. Bob's sentiment seems sincere, but we must stay vigilant. #JusticeForAlice #TrustButVerify",
+        "Charlie: I share Bob's sentiment for Alice. Let's work together to find the true culprit. #JusticeForAlice #UnitedFront",
+        "Bob: Let's not jump to conclusions. We need to gather more information to ensure we're making informed decisions. #JusticeForAlice #PatienceIsKey",
+        "You said: Let's focus on gathering solid evidence to identify the true culprit. We must remain calm and avoid jumping to conclusions. #JusticeForAlice #EvidenceBasedDecisions",
+        "Charlie: Let's not forget that we need to identify the mafioso among us. We should keep an open mind and carefully consider everyone's actions and words. #JusticeForAlice #StayFocused",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

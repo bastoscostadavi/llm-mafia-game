@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0853",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 853,
+  "timestamp": "2025-07-31T03:47:56.441914",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's sudden demise. Let's all stay vigilant and united to ensure justice prevails. May Alice's soul rest in peace. #UnitedWeStand.",
+        "You said: I agree, let's all work together to find out who amongst us is responsible for Alice's death. Our unity is our strength in this difficult time. #JusticeForAlice.",
+        "Charlie: I share Diana's and Bob's sentiments. Let's all support each other during this trying time. #StrengthInUnity.",
+        "Charlie: Let's not jump to conclusions. We should remain calm and follow the established procedures for identifying Alice's killer. #PatienceAndJustice.",
+        "Diana: Let's not forget Alice's words - unity and justice. Let's stand together and follow proper procedures to bring Alice's killer to light. #JusticeAndUnity.",
+        "You said: Let's not forget the importance of unity in finding Alice's killer. Stay focused and vigilant. #UnityAndJustice."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's sudden demise. Let's all stay vigilant and united to ensure justice prevails. May Alice's soul rest in peace. #UnitedWeStand.",
+        "Bob: I agree, let's all work together to find out who amongst us is responsible for Alice's death. Our unity is our strength in this difficult time. #JusticeForAlice.",
+        "You said: I share Diana's and Bob's sentiments. Let's all support each other during this trying time. #StrengthInUnity.",
+        "You said: Let's not jump to conclusions. We should remain calm and follow the established procedures for identifying Alice's killer. #PatienceAndJustice.",
+        "Diana: Let's not forget Alice's words - unity and justice. Let's stand together and follow proper procedures to bring Alice's killer to light. #JusticeAndUnity.",
+        "Bob: Let's not forget the importance of unity in finding Alice's killer. Stay focused and vigilant. #UnityAndJustice.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm saddened by Alice's sudden demise. Let's all stay vigilant and united to ensure justice prevails. May Alice's soul rest in peace. #UnitedWeStand.",
+        "Bob: I agree, let's all work together to find out who amongst us is responsible for Alice's death. Our unity is our strength in this difficult time. #JusticeForAlice.",
+        "Charlie: I share Diana's and Bob's sentiments. Let's all support each other during this trying time. #StrengthInUnity.",
+        "Charlie: Let's not jump to conclusions. We should remain calm and follow the established procedures for identifying Alice's killer. #PatienceAndJustice.",
+        "You said: Let's not forget Alice's words - unity and justice. Let's stand together and follow proper procedures to bring Alice's killer to light. #JusticeAndUnity.",
+        "Bob: Let's not forget the importance of unity in finding Alice's killer. Stay focused and vigilant. #UnityAndJustice.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0156",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 156,
+  "timestamp": "2025-07-30T13:10:29.932164",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding out who did this and bringing them to justice.",
+        "Diana: I agree, let's work together to find out who is responsible for Alice's death. It's important that we stay vigilant and not jump to conclusions based on rumors or speculation. Let's focus on...",
+        "Charlie: I agree with Bob, let's focus on finding out who is responsible for Alice's death. I have some suspicions and will share them during the voting phase.",
+        "Charlie: Based on my investigation, I suspect Diana may be involved in Alice's death. Let's consider her role in the events that transpired last night.",
+        "Diana: I was deeply saddened by Alice's passing and want to help bring the perpetrator to justice. Let's focus on the facts and avoid jumping to conclusions. We should trust the investigation and voting...",
+        "You said: I support Diana's call for focusing on facts and avoiding speculation. Let's work together to bring the perpetrator to justice. #Teamwork #JusticeForAlice",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding out who did this and bringing them to justice.",
+        "Diana: I agree, let's work together to find out who is responsible for Alice's death. It's important that we stay vigilant and not jump to conclusions based on rumors or speculation. Let's focus on...",
+        "You said: I agree with Bob, let's focus on finding out who is responsible for Alice's death. I have some suspicions and will share them during the voting phase.",
+        "You said: Based on my investigation, I suspect Diana may be involved in Alice's death. Let's consider her role in the events that transpired last night.",
+        "Diana: I was deeply saddened by Alice's passing and want to help bring the perpetrator to justice. Let's focus on the facts and avoid jumping to conclusions. We should trust the investigation and voting...",
+        "Bob: I support Diana's call for focusing on facts and avoiding speculation. Let's work together to bring the perpetrator to justice. #Teamwork #JusticeForAlice",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding out who did this and bringing them to justice.",
+        "You said: I agree, let's work together to find out who is responsible for Alice's death. It's important that we stay vigilant and not jump to conclusions based on rumors or speculation. Let's focus on...",
+        "Charlie: I agree with Bob, let's focus on finding out who is responsible for Alice's death. I have some suspicions and will share them during the voting phase.",
+        "Charlie: Based on my investigation, I suspect Diana may be involved in Alice's death. Let's consider her role in the events that transpired last night.",
+        "You said: I was deeply saddened by Alice's passing and want to help bring the perpetrator to justice. Let's focus on the facts and avoid jumping to conclusions. We should trust the investigation and voting...",
+        "Bob: I support Diana's call for focusing on facts and avoiding speculation. Let's work together to bring the perpetrator to justice. #Teamwork #JusticeForAlice"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0216",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 216,
+  "timestamp": "2025-07-30T17:22:48.599997",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden departure. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I'm saddened by Diana's passing. Let's work together to ensure justice is served and the truth is revealed.",
+        "Bob: I agree with Alice and Charlie, let's support each other and find out what happened to Diana.",
+        "Charlie: I'm confident we'll uncover the truth about Diana's death together. Let's remain vigilant and trust in the power of our collective intelligence.",
+        "You said: I'd like to suggest we focus on finding clues about Diana's death. Let's share any suspicious observations or findings we may have. Together, we can unravel the mystery.",
+        "Bob: Let's continue our investigation into Diana's death, sharing any new information or suspicions we may have. Together, we can uncover the truth."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked about Diana's sudden departure. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I'm saddened by Diana's passing. Let's work together to ensure justice is served and the truth is revealed.",
+        "You said: I agree with Alice and Charlie, let's support each other and find out what happened to Diana.",
+        "Charlie: I'm confident we'll uncover the truth about Diana's death together. Let's remain vigilant and trust in the power of our collective intelligence.",
+        "Alice: I'd like to suggest we focus on finding clues about Diana's death. Let's share any suspicious observations or findings we may have. Together, we can unravel the mystery.",
+        "You said: Let's continue our investigation into Diana's death, sharing any new information or suspicions we may have. Together, we can uncover the truth.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked about Diana's sudden departure. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Diana's passing. Let's work together to ensure justice is served and the truth is revealed.",
+        "Bob: I agree with Alice and Charlie, let's support each other and find out what happened to Diana.",
+        "You said: I'm confident we'll uncover the truth about Diana's death together. Let's remain vigilant and trust in the power of our collective intelligence.",
+        "Alice: I'd like to suggest we focus on finding clues about Diana's death. Let's share any suspicious observations or findings we may have. Together, we can unravel the mystery.",
+        "Bob: Let's continue our investigation into Diana's death, sharing any new information or suspicions we may have. Together, we can uncover the truth.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0330",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 330,
+  "timestamp": "2025-07-30T18:04:53.290546",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Diana's concerns. Let's be vigilant and ensure everyone's safety.",
+        "Diana: Let's not jump to conclusions, but we should remain vigilant and report any suspicious behavior.",
+        "You said: Let's not forget Alice's sudden disappearance. We must remain vigilant.",
+        "Charlie: Let's not forget Alice's sudden disappearance. We should all remain vigilant and report any suspicious behavior."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I share Diana's concerns. Let's be vigilant and ensure everyone's safety.",
+        "Diana: Let's not jump to conclusions, but we should remain vigilant and report any suspicious behavior.",
+        "Bob: Let's not forget Alice's sudden disappearance. We must remain vigilant.",
+        "You said: Let's not forget Alice's sudden disappearance. We should all remain vigilant and report any suspicious behavior.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana. Let's all keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I share Diana's concerns. Let's be vigilant and ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant and report any suspicious behavior.",
+        "Bob: Let's not forget Alice's sudden disappearance. We must remain vigilant.",
+        "Charlie: Let's not forget Alice's sudden disappearance. We should all remain vigilant and report any suspicious behavior.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

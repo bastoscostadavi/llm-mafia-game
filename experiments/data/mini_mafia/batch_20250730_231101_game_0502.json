@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0502",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 502,
+  "timestamp": "2025-07-31T01:54:24.284030",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. We should all be on high alert and work together to figure out who could have done this.",
+        "Bob: I agree with Alice, let's work together to uncover the truth behind Charlie's death. We need to stay vigilant and not jump to conclusions based on assumptions.",
+        "Diana: Let's focus on identifying the cause of Charlie's death. We should share any relevant information we may have. Let's work together to ensure justice is served.",
+        "Diana: Let's share any potential clues about Charlie's death. Together, we can identify the culprit and bring justice. Stay focused and vigilant.",
+        "You said: Let's not speculate, but gather facts to help investigate Charlie's death. Our collective efforts will bring us closer to the truth. Stay focused and vigilant.",
+        "Bob: Let's not rush to judgments. Focusing on facts and working together will help us uncover the truth behind Charlie's death.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. We should all be on high alert and work together to figure out who could have done this.",
+        "You said: I agree with Alice, let's work together to uncover the truth behind Charlie's death. We need to stay vigilant and not jump to conclusions based on assumptions.",
+        "Diana: Let's focus on identifying the cause of Charlie's death. We should share any relevant information we may have. Let's work together to ensure justice is served.",
+        "Diana: Let's share any potential clues about Charlie's death. Together, we can identify the culprit and bring justice. Stay focused and vigilant.",
+        "Alice: Let's not speculate, but gather facts to help investigate Charlie's death. Our collective efforts will bring us closer to the truth. Stay focused and vigilant.",
+        "You said: Let's not rush to judgments. Focusing on facts and working together will help us uncover the truth behind Charlie's death."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. We should all be on high alert and work together to figure out who could have done this.",
+        "Bob: I agree with Alice, let's work together to uncover the truth behind Charlie's death. We need to stay vigilant and not jump to conclusions based on assumptions.",
+        "You said: Let's focus on identifying the cause of Charlie's death. We should share any relevant information we may have. Let's work together to ensure justice is served.",
+        "You said: Let's share any potential clues about Charlie's death. Together, we can identify the culprit and bring justice. Stay focused and vigilant.",
+        "Alice: Let's not speculate, but gather facts to help investigate Charlie's death. Our collective efforts will bring us closer to the truth. Stay focused and vigilant.",
+        "Bob: Let's not rush to judgments. Focusing on facts and working together will help us uncover the truth behind Charlie's death.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

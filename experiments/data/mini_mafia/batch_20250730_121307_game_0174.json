@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0174",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 174,
+  "timestamp": "2025-07-30T13:17:16.632685",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during this tough time.",
+        "You said: I agree with Bob. Let's support each other during this difficult time. Let's also try to figure out who could have done this to Charlie. We need to stay vigilant.",
+        "Diana: I agree with Alice and Bob. Let's stay vigilant and support each other during this difficult time. However, I'm concerned about Bob's unexpected reaction to Charlie's death. It's unusual for an...",
+        "Bob: I'm deeply saddened by Charlie's passing. Let's work together to find out who did this and bring them to justice. Our solidarity is crucial during these trying times. #SupportForCharlie...",
+        "Diana: I'm concerned about Bob's reaction to Charlie's death. Let's keep a close eye on him. #StayVigilant",
+        "You said: I share Diana's concerns about Bob's reaction. Let's keep a close eye on each other to ensure safety. #StayVigilant #SupportForCharlie",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during this tough time.",
+        "Alice: I agree with Bob. Let's support each other during this difficult time. Let's also try to figure out who could have done this to Charlie. We need to stay vigilant.",
+        "Diana: I agree with Alice and Bob. Let's stay vigilant and support each other during this difficult time. However, I'm concerned about Bob's unexpected reaction to Charlie's death. It's unusual for an...",
+        "You said: I'm deeply saddened by Charlie's passing. Let's work together to find out who did this and bring them to justice. Our solidarity is crucial during these trying times. #SupportForCharlie...",
+        "Diana: I'm concerned about Bob's reaction to Charlie's death. Let's keep a close eye on him. #StayVigilant",
+        "Alice: I share Diana's concerns about Bob's reaction. Let's keep a close eye on each other to ensure safety. #StayVigilant #SupportForCharlie"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during this tough time.",
+        "Alice: I agree with Bob. Let's support each other during this difficult time. Let's also try to figure out who could have done this to Charlie. We need to stay vigilant.",
+        "You said: I agree with Alice and Bob. Let's stay vigilant and support each other during this difficult time. However, I'm concerned about Bob's unexpected reaction to Charlie's death. It's unusual for an...",
+        "Bob: I'm deeply saddened by Charlie's passing. Let's work together to find out who did this and bring them to justice. Our solidarity is crucial during these trying times. #SupportForCharlie...",
+        "You said: I'm concerned about Bob's reaction to Charlie's death. Let's keep a close eye on him. #StayVigilant",
+        "Alice: I share Diana's concerns about Bob's reaction. Let's keep a close eye on each other to ensure safety. #StayVigilant #SupportForCharlie",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

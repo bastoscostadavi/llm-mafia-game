@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0083",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 83,
+  "timestamp": "2025-07-30T12:42:19.381517",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm surprised by the sudden turn of events. Let's all stay calm and work together to figure out what happened to Bob.",
+        "Diana: I'm saddened by Bob's demise. Let's focus on finding out who among us committed this heinous act. Alice, your strange reaction is concerning. Can you explain?",
+        "Charlie: I agree with Alice, let's not jump to conclusions. Let's work together to gather information and find out who could have harmed Bob.",
+        "Charlie: I support Alice's suggestion to stay calm and gather information. Let's work together to find out what happened to Bob.",
+        "You said: I'd like to propose we all share any relevant information we have, no matter how insignificant it may seem. Let's work together to find the truth about what happened to Bob.",
+        "Diana: I support Alice's proposal for sharing information. Let's all collaborate to uncover the truth behind Bob's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm surprised by the sudden turn of events. Let's all stay calm and work together to figure out what happened to Bob.",
+        "Diana: I'm saddened by Bob's demise. Let's focus on finding out who among us committed this heinous act. Alice, your strange reaction is concerning. Can you explain?",
+        "You said: I agree with Alice, let's not jump to conclusions. Let's work together to gather information and find out who could have harmed Bob.",
+        "You said: I support Alice's suggestion to stay calm and gather information. Let's work together to find out what happened to Bob.",
+        "Alice: I'd like to propose we all share any relevant information we have, no matter how insignificant it may seem. Let's work together to find the truth about what happened to Bob.",
+        "Diana: I support Alice's proposal for sharing information. Let's all collaborate to uncover the truth behind Bob's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Alice: I'm surprised by the sudden turn of events. Let's all stay calm and work together to figure out what happened to Bob.",
+        "You said: I'm saddened by Bob's demise. Let's focus on finding out who among us committed this heinous act. Alice, your strange reaction is concerning. Can you explain?",
+        "Charlie: I agree with Alice, let's not jump to conclusions. Let's work together to gather information and find out who could have harmed Bob.",
+        "Charlie: I support Alice's suggestion to stay calm and gather information. Let's work together to find out what happened to Bob.",
+        "Alice: I'd like to propose we all share any relevant information we have, no matter how insignificant it may seem. Let's work together to find the truth about what happened to Bob.",
+        "You said: I support Alice's proposal for sharing information. Let's all collaborate to uncover the truth behind Bob's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

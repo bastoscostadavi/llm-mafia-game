@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0231",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 231,
+  "timestamp": "2025-07-31T00:26:21.518097",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm saddened by Alice's sudden departure. Let's focus on finding out who did this and bring them to justice.",
+        "Charlie: Based on my investigation, I believe Diana might have crucial information regarding Alice's death. Let's keep a close eye on her actions and statements.",
+        "Diana: I agree with Charlie, let's focus on uncovering the truth behind Alice's death. I have nothing to hide.",
+        "You said: Let's stay focused on finding the truth behind Alice's death and bring the perpetrator to justice.",
+        "Diana: I support Charlie's suggestion to investigate thoroughly and find the truth behind Alice's death. Let's work together to bring justice.",
+        "Charlie: Let's all focus our efforts on uncovering the truth behind Alice's death and bringing the perpetrator to justice.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm saddened by Alice's sudden departure. Let's focus on finding out who did this and bring them to justice.",
+        "You said: Based on my investigation, I believe Diana might have crucial information regarding Alice's death. Let's keep a close eye on her actions and statements.",
+        "Diana: I agree with Charlie, let's focus on uncovering the truth behind Alice's death. I have nothing to hide.",
+        "Bob: Let's stay focused on finding the truth behind Alice's death and bring the perpetrator to justice.",
+        "Diana: I support Charlie's suggestion to investigate thoroughly and find the truth behind Alice's death. Let's work together to bring justice.",
+        "You said: Let's all focus our efforts on uncovering the truth behind Alice's death and bringing the perpetrator to justice."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm saddened by Alice's sudden departure. Let's focus on finding out who did this and bring them to justice.",
+        "Charlie: Based on my investigation, I believe Diana might have crucial information regarding Alice's death. Let's keep a close eye on her actions and statements.",
+        "You said: I agree with Charlie, let's focus on uncovering the truth behind Alice's death. I have nothing to hide.",
+        "Bob: Let's stay focused on finding the truth behind Alice's death and bring the perpetrator to justice.",
+        "You said: I support Charlie's suggestion to investigate thoroughly and find the truth behind Alice's death. Let's work together to bring justice.",
+        "Charlie: Let's all focus our efforts on uncovering the truth behind Alice's death and bringing the perpetrator to justice.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

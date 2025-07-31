@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0599",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 599,
+  "timestamp": "2025-07-31T02:25:34.342868",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all stay vigilant and support each other during this difficult time. But we must also remember that one of us is a mafioso. Let's be cautious with our words and actions.",
+        "Charlie: I agree with Alice, let's stay vigilant. But we should also remember that grief can make people act irrationally. Let's try to support each other and keep a level head.",
+        "You said: Let's not forget that one of us is a mafioso. We need to be cautious and supportive, but also vigilant.",
+        "Charlie: Let's focus on finding Diana's killer. Our support for each other should not blind us to the need for justice. Remember, one of us is not to be trusted.",
+        "Bob: Let's not jump to conclusions. We need to focus on gathering more information to ensure we're making informed decisions. Let's work together to find Diana's killer while also supporting each other.",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all stay vigilant and support each other during this difficult time. But we must also remember that one of us is a mafioso. Let's be cautious with our words and actions.",
+        "Charlie: I agree with Alice, let's stay vigilant. But we should also remember that grief can make people act irrationally. Let's try to support each other and keep a level head.",
+        "Alice: Let's not forget that one of us is a mafioso. We need to be cautious and supportive, but also vigilant.",
+        "Charlie: Let's focus on finding Diana's killer. Our support for each other should not blind us to the need for justice. Remember, one of us is not to be trusted.",
+        "You said: Let's not jump to conclusions. We need to focus on gathering more information to ensure we're making informed decisions. Let's work together to find Diana's killer while also supporting each other.",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all stay vigilant and support each other during this difficult time. But we must also remember that one of us is a mafioso. Let's be cautious with our words and actions.",
+        "You said: I agree with Alice, let's stay vigilant. But we should also remember that grief can make people act irrationally. Let's try to support each other and keep a level head.",
+        "Alice: Let's not forget that one of us is a mafioso. We need to be cautious and supportive, but also vigilant.",
+        "You said: Let's focus on finding Diana's killer. Our support for each other should not blind us to the need for justice. Remember, one of us is not to be trusted.",
+        "Bob: Let's not jump to conclusions. We need to focus on gathering more information to ensure we're making informed decisions. Let's work together to find Diana's killer while also supporting each other."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

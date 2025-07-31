@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0394",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 394,
+  "timestamp": "2025-07-30T18:28:12.273840",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden demise. Let's stay vigilant and support each other through this difficult time.",
+        "You said: I'm saddened by Diana's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Charlie: I'm concerned about the sudden turn of events. Let's keep our guard up and share any suspicious information we have.",
+        "You said: I believe we should share any potential clues we may have to help understand what happened to Diana. Let's work together to ensure everyone's safety.",
+        "Charlie: I'd like to share a concerning detail: Bob's statement about being shocked about Diana's death seems insincere. Let's keep a close eye on him.",
+        "Bob: I share Charlie's concerns and agree that we should keep a close eye on unusual behavior. Let's stay united in our investigation.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden demise. Let's stay vigilant and support each other through this difficult time.",
+        "Alice: I'm saddened by Diana's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Charlie: I'm concerned about the sudden turn of events. Let's keep our guard up and share any suspicious information we have.",
+        "Alice: I believe we should share any potential clues we may have to help understand what happened to Diana. Let's work together to ensure everyone's safety.",
+        "Charlie: I'd like to share a concerning detail: Bob's statement about being shocked about Diana's death seems insincere. Let's keep a close eye on him.",
+        "You said: I share Charlie's concerns and agree that we should keep a close eye on unusual behavior. Let's stay united in our investigation."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden demise. Let's stay vigilant and support each other through this difficult time.",
+        "Alice: I'm saddened by Diana's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "You said: I'm concerned about the sudden turn of events. Let's keep our guard up and share any suspicious information we have.",
+        "Alice: I believe we should share any potential clues we may have to help understand what happened to Diana. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to share a concerning detail: Bob's statement about being shocked about Diana's death seems insincere. Let's keep a close eye on him.",
+        "Bob: I share Charlie's concerns and agree that we should keep a close eye on unusual behavior. Let's stay united in our investigation.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

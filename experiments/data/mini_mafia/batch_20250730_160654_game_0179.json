@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0179",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 179,
+  "timestamp": "2025-07-30T17:09:41.552005",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden passing. Let's work together to find out what happened.\n\nYou're now free to share any other messages or remain silent. I'll keep an eye on the discussion and update you...",
+        "Diana: I'm deeply saddened by Alice's death. Let's all stay focused on finding out what happened to her. We need to work together to ensure justice is served.",
+        "You said: I agree, let's work together to find out what happened to Alice. We need to ensure justice is served.",
+        "Diana: Let's not jump to conclusions. We should gather more information before making any accusations. The truth will help bring justice for Alice.",
+        "You said: Let's not forget that we need to find out who is responsible for Alice's death. We should remain focused on gathering information to ensure justice is served.",
+        "Charlie: I agree, let's stay focused on gathering information to uncover the truth behind Alice's death. We must work together to ensure justice is served."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden passing. Let's work together to find out what happened.\n\nYou're now free to share any other messages or remain silent. I'll keep an eye on the discussion and update you...",
+        "Diana: I'm deeply saddened by Alice's death. Let's all stay focused on finding out what happened to her. We need to work together to ensure justice is served.",
+        "Bob: I agree, let's work together to find out what happened to Alice. We need to ensure justice is served.",
+        "Diana: Let's not jump to conclusions. We should gather more information before making any accusations. The truth will help bring justice for Alice.",
+        "Bob: Let's not forget that we need to find out who is responsible for Alice's death. We should remain focused on gathering information to ensure justice is served.",
+        "You said: I agree, let's stay focused on gathering information to uncover the truth behind Alice's death. We must work together to ensure justice is served.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden passing. Let's work together to find out what happened.\n\nYou're now free to share any other messages or remain silent. I'll keep an eye on the discussion and update you...",
+        "You said: I'm deeply saddened by Alice's death. Let's all stay focused on finding out what happened to her. We need to work together to ensure justice is served.",
+        "Bob: I agree, let's work together to find out what happened to Alice. We need to ensure justice is served.",
+        "You said: Let's not jump to conclusions. We should gather more information before making any accusations. The truth will help bring justice for Alice.",
+        "Bob: Let's not forget that we need to find out who is responsible for Alice's death. We should remain focused on gathering information to ensure justice is served.",
+        "Charlie: I agree, let's stay focused on gathering information to uncover the truth behind Alice's death. We must work together to ensure justice is served.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

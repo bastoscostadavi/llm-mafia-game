@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0371",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 371,
+  "timestamp": "2025-07-30T14:32:46.917158",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm surprised by this turn of events. Let's all stay focused and work together to find out what happened.",
+        "Charlie: I agree with Bob, let's work together to uncover the truth behind Alice's death. Let's keep an open mind and share any suspicious information we might have.",
+        "Diana: I'm shocked by Alice's sudden death. Let's support each other during this difficult time and work together to find the truth.",
+        "Charlie: Based on my investigation, I believe Bob's surprise statement is suspicious. Let's consider the possibility that he may have had a role in Alice's death. We should keep this in mind during our...",
+        "Diana: I find Bob's surprise disturbing. Let's keep a close eye on him during our investigation.",
+        "You said: I'm saddened by Alice's death and want to help find the truth. Let's all share any relevant information we have. My surprise earlier was genuine."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm surprised by this turn of events. Let's all stay focused and work together to find out what happened.",
+        "You said: I agree with Bob, let's work together to uncover the truth behind Alice's death. Let's keep an open mind and share any suspicious information we might have.",
+        "Diana: I'm shocked by Alice's sudden death. Let's support each other during this difficult time and work together to find the truth.",
+        "You said: Based on my investigation, I believe Bob's surprise statement is suspicious. Let's consider the possibility that he may have had a role in Alice's death. We should keep this in mind during our...",
+        "Diana: I find Bob's surprise disturbing. Let's keep a close eye on him during our investigation.",
+        "Bob: I'm saddened by Alice's death and want to help find the truth. Let's all share any relevant information we have. My surprise earlier was genuine.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm surprised by this turn of events. Let's all stay focused and work together to find out what happened.",
+        "Charlie: I agree with Bob, let's work together to uncover the truth behind Alice's death. Let's keep an open mind and share any suspicious information we might have.",
+        "You said: I'm shocked by Alice's sudden death. Let's support each other during this difficult time and work together to find the truth.",
+        "Charlie: Based on my investigation, I believe Bob's surprise statement is suspicious. Let's consider the possibility that he may have had a role in Alice's death. We should keep this in mind during our...",
+        "You said: I find Bob's surprise disturbing. Let's keep a close eye on him during our investigation.",
+        "Bob: I'm saddened by Alice's death and want to help find the truth. Let's all share any relevant information we have. My surprise earlier was genuine.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

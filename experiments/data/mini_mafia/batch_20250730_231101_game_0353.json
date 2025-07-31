@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0353",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 353,
+  "timestamp": "2025-07-31T01:05:45.452625",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden absence. Let's all keep a close eye on each other tonight.",
+        "Charlie: I agree with Alice, let's be vigilant tonight.",
+        "Bob: I share Alice and Charlie's concerns about Diana's disappearance. Let's all stay alert tonight.",
+        "Charlie: I'd like to echo Alice and Bob's sentiments, let's all stay vigilant tonight in light of Diana's disappearance.",
+        "Bob: Let's continue our vigilance tonight to ensure everyone's safety following Diana's disappearance.",
+        "You said: Let's continue our vigilance tonight to ensure everyone's safety following Diana's disappearance. Any suspicious activities should be reported immediately.",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden absence. Let's all keep a close eye on each other tonight.",
+        "Charlie: I agree with Alice, let's be vigilant tonight.",
+        "You said: I share Alice and Charlie's concerns about Diana's disappearance. Let's all stay alert tonight.",
+        "Charlie: I'd like to echo Alice and Bob's sentiments, let's all stay vigilant tonight in light of Diana's disappearance.",
+        "You said: Let's continue our vigilance tonight to ensure everyone's safety following Diana's disappearance.",
+        "Alice: Let's continue our vigilance tonight to ensure everyone's safety following Diana's disappearance. Any suspicious activities should be reported immediately.",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden absence. Let's all keep a close eye on each other tonight.",
+        "You said: I agree with Alice, let's be vigilant tonight.",
+        "Bob: I share Alice and Charlie's concerns about Diana's disappearance. Let's all stay alert tonight.",
+        "You said: I'd like to echo Alice and Bob's sentiments, let's all stay vigilant tonight in light of Diana's disappearance.",
+        "Bob: Let's continue our vigilance tonight to ensure everyone's safety following Diana's disappearance.",
+        "Alice: Let's continue our vigilance tonight to ensure everyone's safety following Diana's disappearance. Any suspicious activities should be reported immediately."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

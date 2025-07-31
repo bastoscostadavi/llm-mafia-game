@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0927",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 927,
+  "timestamp": "2025-07-30T21:36:10.914836",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. We should all be more cautious now.",
+        "You said: I agree with Charlie, let's all be cautious. I'm suspicious of Diana's reaction to Bob's death.",
+        "Diana: I share Charlie's concern for our safety. Let's work together to uncover the truth behind Bob's death.",
+        "Charlie: I urge everyone to stay vigilant and communicate openly to ensure our safety following Bob's death. Let's work together to uncover the truth.",
+        "Diana: I agree with Charlie and Alice, let's stay vigilant and work together to uncover the truth behind Bob's death.",
+        "You said: I find Diana's reaction to Bob's death suspicious. Let's keep a close eye on her actions."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden death. We should all be more cautious now.",
+        "Alice: I agree with Charlie, let's all be cautious. I'm suspicious of Diana's reaction to Bob's death.",
+        "Diana: I share Charlie's concern for our safety. Let's work together to uncover the truth behind Bob's death.",
+        "You said: I urge everyone to stay vigilant and communicate openly to ensure our safety following Bob's death. Let's work together to uncover the truth.",
+        "Diana: I agree with Charlie and Alice, let's stay vigilant and work together to uncover the truth behind Bob's death.",
+        "Alice: I find Diana's reaction to Bob's death suspicious. Let's keep a close eye on her actions.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. We should all be more cautious now.",
+        "Alice: I agree with Charlie, let's all be cautious. I'm suspicious of Diana's reaction to Bob's death.",
+        "You said: I share Charlie's concern for our safety. Let's work together to uncover the truth behind Bob's death.",
+        "Charlie: I urge everyone to stay vigilant and communicate openly to ensure our safety following Bob's death. Let's work together to uncover the truth.",
+        "You said: I agree with Charlie and Alice, let's stay vigilant and work together to uncover the truth behind Bob's death.",
+        "Alice: I find Diana's reaction to Bob's death suspicious. Let's keep a close eye on her actions.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

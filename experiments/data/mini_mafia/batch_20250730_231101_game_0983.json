@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0983",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 983,
+  "timestamp": "2025-07-31T04:29:50.418092",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden passing. Let's all try to stay strong and support each other during this difficult time.",
+        "Charlie: I agree, this is a sad day. Let's support each other and try to uncover what happened to Alice together.",
+        "Diana: I'd like to suggest we focus our discussion on possible clues related to Alice's death. Let's share any suspicious observations or experiences we might have had with her.",
+        "Charlie: I support Diana's suggestion. Let's focus on discussing any potential clues regarding Alice's death.",
+        "Diana: Let's continue our investigation into Alice's death by discussing any potential clues or suspicious occurrences. We may uncover valuable information together.",
+        "You said: Let's not jump to conclusions. We should keep an open mind and consider all possibilities regarding Alice's death.",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden passing. Let's all try to stay strong and support each other during this difficult time.",
+        "You said: I agree, this is a sad day. Let's support each other and try to uncover what happened to Alice together.",
+        "Diana: I'd like to suggest we focus our discussion on possible clues related to Alice's death. Let's share any suspicious observations or experiences we might have had with her.",
+        "You said: I support Diana's suggestion. Let's focus on discussing any potential clues regarding Alice's death.",
+        "Diana: Let's continue our investigation into Alice's death by discussing any potential clues or suspicious occurrences. We may uncover valuable information together.",
+        "Bob: Let's not jump to conclusions. We should keep an open mind and consider all possibilities regarding Alice's death."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden passing. Let's all try to stay strong and support each other during this difficult time.",
+        "Charlie: I agree, this is a sad day. Let's support each other and try to uncover what happened to Alice together.",
+        "You said: I'd like to suggest we focus our discussion on possible clues related to Alice's death. Let's share any suspicious observations or experiences we might have had with her.",
+        "Charlie: I support Diana's suggestion. Let's focus on discussing any potential clues regarding Alice's death.",
+        "You said: Let's continue our investigation into Alice's death by discussing any potential clues or suspicious occurrences. We may uncover valuable information together.",
+        "Bob: Let's not jump to conclusions. We should keep an open mind and consider all possibilities regarding Alice's death.",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

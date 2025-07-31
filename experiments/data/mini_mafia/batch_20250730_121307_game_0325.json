@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0325",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 325,
+  "timestamp": "2025-07-30T14:14:22.509564",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden absence. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's be cautious and keep an eye out for any suspicious behavior.",
+        "You said: I agree with Diana and Charlie, let's all be vigilant and keep an eye out for any suspicious behavior. It's important that we work together as a team to ensure everyone's safety.",
+        "Diana: Let's continue being vigilant and report any suspicious activities or behaviors. Together, we can ensure everyone's safety and increase the chances of identifying the mafioso among us.",
+        "Charlie: I noticed Bob's absence during the discussion earlier. Let's remember to stay vigilant and report any unusual behaviors.",
+        "You said: I'd like to echo Diana and Charlie's words, let's all stay vigilant and report any suspicious activities. It's crucial we work together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden absence. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's be cautious and keep an eye out for any suspicious behavior.",
+        "Alice: I agree with Diana and Charlie, let's all be vigilant and keep an eye out for any suspicious behavior. It's important that we work together as a team to ensure everyone's safety.",
+        "Diana: Let's continue being vigilant and report any suspicious activities or behaviors. Together, we can ensure everyone's safety and increase the chances of identifying the mafioso among us.",
+        "You said: I noticed Bob's absence during the discussion earlier. Let's remember to stay vigilant and report any unusual behaviors.",
+        "Alice: I'd like to echo Diana and Charlie's words, let's all stay vigilant and report any suspicious activities. It's crucial we work together to ensure everyone's safety.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden absence. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's be cautious and keep an eye out for any suspicious behavior.",
+        "Alice: I agree with Diana and Charlie, let's all be vigilant and keep an eye out for any suspicious behavior. It's important that we work together as a team to ensure everyone's safety.",
+        "You said: Let's continue being vigilant and report any suspicious activities or behaviors. Together, we can ensure everyone's safety and increase the chances of identifying the mafioso among us.",
+        "Charlie: I noticed Bob's absence during the discussion earlier. Let's remember to stay vigilant and report any unusual behaviors.",
+        "Alice: I'd like to echo Diana and Charlie's words, let's all stay vigilant and report any suspicious activities. It's crucial we work together to ensure everyone's safety.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

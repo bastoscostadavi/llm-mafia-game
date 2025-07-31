@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0688",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 688,
+  "timestamp": "2025-07-31T02:54:32.031888",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Diana: I agree with Bob, let's stay united and be cautious. However, I'm concerned about Charlie's sudden silence last night. Let's keep a close eye on him.",
+        "Charlie: I share Diana's concerns and agree we should stay vigilant. Let's not jump to conclusions yet, though. Let's continue our discussions and work together to uncover the truth.",
+        "You said: Let's not let fear divide us. We should keep an open mind and trust each other until we have solid evidence. Let's work together to uncover the truth behind Alice's death.",
+        "Charlie: Let's not speculate or accuse without solid evidence. We should focus on working together to uncover the truth behind Alice's death.",
+        "Diana: Let's not forget that we need to trust but verify. While we support unity, let's also remain observant of each other's actions and communications.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Diana: I agree with Bob, let's stay united and be cautious. However, I'm concerned about Charlie's sudden silence last night. Let's keep a close eye on him.",
+        "You said: I share Diana's concerns and agree we should stay vigilant. Let's not jump to conclusions yet, though. Let's continue our discussions and work together to uncover the truth.",
+        "Bob: Let's not let fear divide us. We should keep an open mind and trust each other until we have solid evidence. Let's work together to uncover the truth behind Alice's death.",
+        "You said: Let's not speculate or accuse without solid evidence. We should focus on working together to uncover the truth behind Alice's death.",
+        "Diana: Let's not forget that we need to trust but verify. While we support unity, let's also remain observant of each other's actions and communications.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "You said: I agree with Bob, let's stay united and be cautious. However, I'm concerned about Charlie's sudden silence last night. Let's keep a close eye on him.",
+        "Charlie: I share Diana's concerns and agree we should stay vigilant. Let's not jump to conclusions yet, though. Let's continue our discussions and work together to uncover the truth.",
+        "Bob: Let's not let fear divide us. We should keep an open mind and trust each other until we have solid evidence. Let's work together to uncover the truth behind Alice's death.",
+        "Charlie: Let's not speculate or accuse without solid evidence. We should focus on working together to uncover the truth behind Alice's death.",
+        "You said: Let's not forget that we need to trust but verify. While we support unity, let's also remain observant of each other's actions and communications."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

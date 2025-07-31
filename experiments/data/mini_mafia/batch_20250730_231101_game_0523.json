@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0523",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 523,
+  "timestamp": "2025-07-31T02:01:17.240794",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "You said: I share Diana's sentiments. Let's work together to find the culprit behind Charlie's death.",
+        "Bob: I agree with Diana, let's stay vigilant and support each other. But I'm particularly concerned about last night's events. We need to identify who had the opportunity to visit Charlie during the night.",
+        "You said: I support Bob's suggestion to identify the visitor of Charlie's hut last night. Let's share any relevant information we have.",
+        "Diana: I support Bob's suggestion to identify the visitor of Charlie's hut last night. Let's work together to gather information.",
+        "Bob: Let's focus on identifying Charlie's nighttime visitor to ensure justice for him. We can share any suspicious activities or observations."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Alice: I share Diana's sentiments. Let's work together to find the culprit behind Charlie's death.",
+        "You said: I agree with Diana, let's stay vigilant and support each other. But I'm particularly concerned about last night's events. We need to identify who had the opportunity to visit Charlie during the night.",
+        "Alice: I support Bob's suggestion to identify the visitor of Charlie's hut last night. Let's share any relevant information we have.",
+        "Diana: I support Bob's suggestion to identify the visitor of Charlie's hut last night. Let's work together to gather information.",
+        "You said: Let's focus on identifying Charlie's nighttime visitor to ensure justice for him. We can share any suspicious activities or observations.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Alice: I share Diana's sentiments. Let's work together to find the culprit behind Charlie's death.",
+        "Bob: I agree with Diana, let's stay vigilant and support each other. But I'm particularly concerned about last night's events. We need to identify who had the opportunity to visit Charlie during the night.",
+        "Alice: I support Bob's suggestion to identify the visitor of Charlie's hut last night. Let's share any relevant information we have.",
+        "You said: I support Bob's suggestion to identify the visitor of Charlie's hut last night. Let's work together to gather information.",
+        "Bob: Let's focus on identifying Charlie's nighttime visitor to ensure justice for him. We can share any suspicious activities or observations.",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0522",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 522,
+  "timestamp": "2025-07-30T19:17:58.811751",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other during the day.",
+        "Bob: I agree with Alice, let's all stay vigilant today. It's important we work together to ensure everyone's safety.",
+        "Charlie: I support Alice and Bob's suggestion for staying vigilant today. Let's keep an open communication and work together as a team.",
+        "Charlie: I agree with Alice and Bob's suggestions for staying vigilant and keeping open communication today. Let's all work together as a team.",
+        "Bob: Let's remain focused and vigilant during this critical day phase. We must work together to ensure everyone's safety. Suspicions should be voiced respectfully for the greater good.",
+        "You said: I'm troubled by Diana's disappearance and urge everyone to remain vigilant. Let's work together to ensure safety for all.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other during the day.",
+        "You said: I agree with Alice, let's all stay vigilant today. It's important we work together to ensure everyone's safety.",
+        "Charlie: I support Alice and Bob's suggestion for staying vigilant today. Let's keep an open communication and work together as a team.",
+        "Charlie: I agree with Alice and Bob's suggestions for staying vigilant and keeping open communication today. Let's all work together as a team.",
+        "You said: Let's remain focused and vigilant during this critical day phase. We must work together to ensure everyone's safety. Suspicions should be voiced respectfully for the greater good.",
+        "Alice: I'm troubled by Diana's disappearance and urge everyone to remain vigilant. Let's work together to ensure safety for all."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other during the day.",
+        "Bob: I agree with Alice, let's all stay vigilant today. It's important we work together to ensure everyone's safety.",
+        "You said: I support Alice and Bob's suggestion for staying vigilant today. Let's keep an open communication and work together as a team.",
+        "You said: I agree with Alice and Bob's suggestions for staying vigilant and keeping open communication today. Let's all work together as a team.",
+        "Bob: Let's remain focused and vigilant during this critical day phase. We must work together to ensure everyone's safety. Suspicions should be voiced respectfully for the greater good.",
+        "Alice: I'm troubled by Diana's disappearance and urge everyone to remain vigilant. Let's work together to ensure safety for all.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

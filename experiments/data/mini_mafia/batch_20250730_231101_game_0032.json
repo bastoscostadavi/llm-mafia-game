@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0032",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 32,
+  "timestamp": "2025-07-30T23:21:40.177729",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's stay vigilant.",
+        "Diana: I agree with Alice, let's all keep an eye out for anything suspicious.",
+        "Charlie: I'm reassured that we all share a sense of vigilance. Let's trust the process and focus on maintaining our unity as a team.",
+        "Diana: Let's not jump to conclusions based on assumptions. We should trust the investigation process and communicate openly as a team.",
+        "You said: I'd like to remind everyone to remain vigilant and report any suspicious behavior. Let's work together to ensure the safety of our team.",
+        "Charlie: Let's not let fear and suspicion divide us. We should trust one another and focus on our team's unity. Let's continue communicating openly and working together.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance. Let's stay vigilant.",
+        "Diana: I agree with Alice, let's all keep an eye out for anything suspicious.",
+        "You said: I'm reassured that we all share a sense of vigilance. Let's trust the process and focus on maintaining our unity as a team.",
+        "Diana: Let's not jump to conclusions based on assumptions. We should trust the investigation process and communicate openly as a team.",
+        "Alice: I'd like to remind everyone to remain vigilant and report any suspicious behavior. Let's work together to ensure the safety of our team.",
+        "You said: Let's not let fear and suspicion divide us. We should trust one another and focus on our team's unity. Let's continue communicating openly and working together."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance. Let's stay vigilant.",
+        "You said: I agree with Alice, let's all keep an eye out for anything suspicious.",
+        "Charlie: I'm reassured that we all share a sense of vigilance. Let's trust the process and focus on maintaining our unity as a team.",
+        "You said: Let's not jump to conclusions based on assumptions. We should trust the investigation process and communicate openly as a team.",
+        "Alice: I'd like to remind everyone to remain vigilant and report any suspicious behavior. Let's work together to ensure the safety of our team.",
+        "Charlie: Let's not let fear and suspicion divide us. We should trust one another and focus on our team's unity. Let's continue communicating openly and working together.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

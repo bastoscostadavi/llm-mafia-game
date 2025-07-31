@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0580",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 580,
+  "timestamp": "2025-07-30T19:39:46.725231",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I'm saddened by Alice's passing. Let's all work together to uncover the truth behind her death.",
+        "You said: I agree with Diana and Charlie. Let's all work together to support each other during this difficult time and uncover the truth behind Alice's death.",
+        "You said: Let's not jump to conclusions. We should all focus on finding Alice's killer and supporting each other during this time of grief.",
+        "Charlie: Let's not forget Alice's last words and focus on uncovering the truth together. We owe it to her memory.",
+        "Diana: Let's not let fear divide us. Let's continue to support each other and work together to find Alice's killer."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Alice's passing. Let's all work together to uncover the truth behind her death.",
+        "Bob: I agree with Diana and Charlie. Let's all work together to support each other during this difficult time and uncover the truth behind Alice's death.",
+        "Bob: Let's not jump to conclusions. We should all focus on finding Alice's killer and supporting each other during this time of grief.",
+        "You said: Let's not forget Alice's last words and focus on uncovering the truth together. We owe it to her memory.",
+        "Diana: Let's not let fear divide us. Let's continue to support each other and work together to find Alice's killer.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I'm saddened by Alice's passing. Let's all work together to uncover the truth behind her death.",
+        "Bob: I agree with Diana and Charlie. Let's all work together to support each other during this difficult time and uncover the truth behind Alice's death.",
+        "Bob: Let's not jump to conclusions. We should all focus on finding Alice's killer and supporting each other during this time of grief.",
+        "Charlie: Let's not forget Alice's last words and focus on uncovering the truth together. We owe it to her memory.",
+        "You said: Let's not let fear divide us. Let's continue to support each other and work together to find Alice's killer.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

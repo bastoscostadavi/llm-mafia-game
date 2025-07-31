@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0281",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 281,
+  "timestamp": "2025-07-30T13:56:53.360494",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm surprised by Charlie's sudden demise. It's a reminder that we should all be careful and look out for each other in these uncertain times.",
+        "Diana: I agree with Alice, let's stay vigilant and support each other. But I'm particularly worried about Charlie's sudden absence. Let's make sure we're all accounted for during the night.",
+        "Bob: I share Alice and Diana's concerns. Let's make sure we all check in with each other during the night to ensure everyone's safety.",
+        "You said: I'd like to echo Diana's sentiments about staying vigilant and checking in with each other during the night. Let's make sure we all prioritize safety and trust in our community.",
+        "Bob: Let's all ensure we check in with each other during the night for safety, as suggested earlier. Stay vigilant, team.",
+        "Diana: Let's all be extra cautious tonight and check in with each other to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm surprised by Charlie's sudden demise. It's a reminder that we should all be careful and look out for each other in these uncertain times.",
+        "Diana: I agree with Alice, let's stay vigilant and support each other. But I'm particularly worried about Charlie's sudden absence. Let's make sure we're all accounted for during the night.",
+        "You said: I share Alice and Diana's concerns. Let's make sure we all check in with each other during the night to ensure everyone's safety.",
+        "Alice: I'd like to echo Diana's sentiments about staying vigilant and checking in with each other during the night. Let's make sure we all prioritize safety and trust in our community.",
+        "You said: Let's all ensure we check in with each other during the night for safety, as suggested earlier. Stay vigilant, team.",
+        "Diana: Let's all be extra cautious tonight and check in with each other to ensure everyone's safety.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm surprised by Charlie's sudden demise. It's a reminder that we should all be careful and look out for each other in these uncertain times.",
+        "You said: I agree with Alice, let's stay vigilant and support each other. But I'm particularly worried about Charlie's sudden absence. Let's make sure we're all accounted for during the night.",
+        "Bob: I share Alice and Diana's concerns. Let's make sure we all check in with each other during the night to ensure everyone's safety.",
+        "Alice: I'd like to echo Diana's sentiments about staying vigilant and checking in with each other during the night. Let's make sure we all prioritize safety and trust in our community.",
+        "Bob: Let's all ensure we check in with each other during the night for safety, as suggested earlier. Stay vigilant, team.",
+        "You said: Let's all be extra cautious tonight and check in with each other to ensure everyone's safety.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

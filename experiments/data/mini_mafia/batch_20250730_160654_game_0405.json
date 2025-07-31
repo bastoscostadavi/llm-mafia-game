@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0405",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 405,
+  "timestamp": "2025-07-30T18:37:04.936261",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree, let's support each other during this sad time. But let's also keep an eye out for any suspicious behavior. Rest in peace, Alice.",
+        "Charlie: I agree with Bob, let's support each other. But I also think it's important to remember Alice's last words and stay vigilant.",
+        "Charlie: Let's remember Alice's words and stay vigilant during this difficult time. Rest in peace, Alice.",
+        "Diana: Let's not jump to conclusions, but let's remain vigilant and support each other during this difficult time. Rest in peace, Alice.",
+        "You said: Let's not forget the importance of trust and unity during this challenging time. Alice's memory deserves our respect and care. #StayStrongTogether #RIPAlice.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree, let's support each other during this sad time. But let's also keep an eye out for any suspicious behavior. Rest in peace, Alice.",
+        "You said: I agree with Bob, let's support each other. But I also think it's important to remember Alice's last words and stay vigilant.",
+        "You said: Let's remember Alice's words and stay vigilant during this difficult time. Rest in peace, Alice.",
+        "Diana: Let's not jump to conclusions, but let's remain vigilant and support each other during this difficult time. Rest in peace, Alice.",
+        "Bob: Let's not forget the importance of trust and unity during this challenging time. Alice's memory deserves our respect and care. #StayStrongTogether #RIPAlice."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's support each other during this sad time. But let's also keep an eye out for any suspicious behavior. Rest in peace, Alice.",
+        "Charlie: I agree with Bob, let's support each other. But I also think it's important to remember Alice's last words and stay vigilant.",
+        "Charlie: Let's remember Alice's words and stay vigilant during this difficult time. Rest in peace, Alice.",
+        "You said: Let's not jump to conclusions, but let's remain vigilant and support each other during this difficult time. Rest in peace, Alice.",
+        "Bob: Let's not forget the importance of trust and unity during this challenging time. Alice's memory deserves our respect and care. #StayStrongTogether #RIPAlice.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

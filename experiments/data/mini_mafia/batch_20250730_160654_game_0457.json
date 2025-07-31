@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0457",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 457,
+  "timestamp": "2025-07-30T18:55:11.922434",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "Bob: I'm saddened by Diana's passing and urge everyone to stay calm and focused during this investigation. Let's work together to find out what happened.",
+        "Charlie: I agree with Alice and Bob, let's all stay calm and focused during this investigation to find the truth about Diana's death.",
+        "Bob: Let's not jump to conclusions based on emotions. We need to remain calm and focused to find the truth behind Diana's death.",
+        "You said: Let's not forget that we need to focus on finding the truth about Diana's death. We should remain calm and open-minded during our discussions.",
+        "Charlie: Let's not forget the importance of trust and communication in our investigation. We should share any relevant information we have to help find the truth about Diana's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked about Diana's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Diana's passing and urge everyone to stay calm and focused during this investigation. Let's work together to find out what happened.",
+        "Charlie: I agree with Alice and Bob, let's all stay calm and focused during this investigation to find the truth about Diana's death.",
+        "You said: Let's not jump to conclusions based on emotions. We need to remain calm and focused to find the truth behind Diana's death.",
+        "Alice: Let's not forget that we need to focus on finding the truth about Diana's death. We should remain calm and open-minded during our discussions.",
+        "Charlie: Let's not forget the importance of trust and communication in our investigation. We should share any relevant information we have to help find the truth about Diana's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked about Diana's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "Bob: I'm saddened by Diana's passing and urge everyone to stay calm and focused during this investigation. Let's work together to find out what happened.",
+        "You said: I agree with Alice and Bob, let's all stay calm and focused during this investigation to find the truth about Diana's death.",
+        "Bob: Let's not jump to conclusions based on emotions. We need to remain calm and focused to find the truth behind Diana's death.",
+        "Alice: Let's not forget that we need to focus on finding the truth about Diana's death. We should remain calm and open-minded during our discussions.",
+        "You said: Let's not forget the importance of trust and communication in our investigation. We should share any relevant information we have to help find the truth about Diana's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

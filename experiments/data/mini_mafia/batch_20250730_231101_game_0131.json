@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0131",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 131,
+  "timestamp": "2025-07-30T23:53:40.119632",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all work together to find out what happened.",
+        "Bob: I agree with Alice, let's work together. I'm saddened by Charlie's passing. Hope we can find answers.",
+        "Diana: I agree with Alice, let's stay focused and investigate Charlie's death together. We must find the truth.",
+        "You said: Let's not jump to conclusions. We should gather more information before making any accusations. We're all in this together.",
+        "Bob: Let's not forget that we're grieving for Charlie. Let's keep a calm head and work together for the truth.",
+        "Diana: Let's not lose focus, we need to investigate Charlie's death thoroughly. We must find the truth together."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's all work together to find out what happened.",
+        "You said: I agree with Alice, let's work together. I'm saddened by Charlie's passing. Hope we can find answers.",
+        "Diana: I agree with Alice, let's stay focused and investigate Charlie's death together. We must find the truth.",
+        "Alice: Let's not jump to conclusions. We should gather more information before making any accusations. We're all in this together.",
+        "You said: Let's not forget that we're grieving for Charlie. Let's keep a calm head and work together for the truth.",
+        "Diana: Let's not lose focus, we need to investigate Charlie's death thoroughly. We must find the truth together.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's all work together to find out what happened.",
+        "Bob: I agree with Alice, let's work together. I'm saddened by Charlie's passing. Hope we can find answers.",
+        "You said: I agree with Alice, let's stay focused and investigate Charlie's death together. We must find the truth.",
+        "Alice: Let's not jump to conclusions. We should gather more information before making any accusations. We're all in this together.",
+        "Bob: Let's not forget that we're grieving for Charlie. Let's keep a calm head and work together for the truth.",
+        "You said: Let's not lose focus, we need to investigate Charlie's death thoroughly. We must find the truth together.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0030",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 30,
+  "timestamp": "2025-07-30T23:21:01.985536",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all support each other during this sad time. However, we must also remember that the mafia may still be among us. Let's keep a close eye on each other.",
+        "You said: I agree with Bob, let's support each other during this difficult time. But we should also be on high alert and trust no one unconditionally.",
+        "Charlie: Let's not jump to conclusions based on Diana's death. We should all focus on working together and trusting each other until we have solid evidence.",
+        "Bob: Let's not forget that Diana's death is a tragic loss for all of us. We should stick together and trust each other, but remain vigilant to ensure the mafia doesn't strike again.",
+        "You said: Let's remember to stay vigilant and trust but verify during this challenging time. We owe it to Diana and ourselves to ensure the mafia is not among us.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all support each other during this sad time. However, we must also remember that the mafia may still be among us. Let's keep a close eye on each other.",
+        "Alice: I agree with Bob, let's support each other during this difficult time. But we should also be on high alert and trust no one unconditionally.",
+        "Charlie: Let's not jump to conclusions based on Diana's death. We should all focus on working together and trusting each other until we have solid evidence.",
+        "You said: Let's not forget that Diana's death is a tragic loss for all of us. We should stick together and trust each other, but remain vigilant to ensure the mafia doesn't strike again.",
+        "Alice: Let's remember to stay vigilant and trust but verify during this challenging time. We owe it to Diana and ourselves to ensure the mafia is not among us.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all support each other during this sad time. However, we must also remember that the mafia may still be among us. Let's keep a close eye on each other.",
+        "Alice: I agree with Bob, let's support each other during this difficult time. But we should also be on high alert and trust no one unconditionally.",
+        "You said: Let's not jump to conclusions based on Diana's death. We should all focus on working together and trusting each other until we have solid evidence.",
+        "Bob: Let's not forget that Diana's death is a tragic loss for all of us. We should stick together and trust each other, but remain vigilant to ensure the mafia doesn't strike again.",
+        "Alice: Let's remember to stay vigilant and trust but verify during this challenging time. We owe it to Diana and ourselves to ensure the mafia is not among us."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

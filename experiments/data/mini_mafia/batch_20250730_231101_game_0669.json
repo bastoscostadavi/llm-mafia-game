@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0669",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 669,
+  "timestamp": "2025-07-31T02:48:15.884496",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all be careful and try to uncover the truth behind it.",
+        "You said: I agree with Bob, we should all be cautious. Let's work together to uncover the truth behind Charlie's death.",
+        "Diana: I share Bob's sentiments. Let's be vigilant and work together to uncover the truth behind Charlie's death.",
+        "You said: I'd like to propose we focus on identifying the cause of Charlie's death. Let's share any suspicions or concerns we may have to help us uncover the truth.",
+        "Diana: I support Alice's proposal to focus on identifying the cause of Charlie's death. Let's share any information or suspicions we have to help uncover the truth.",
+        "Bob: I'd like to add to Alice's proposal, let's also consider if there are any patterns or inconsistencies in our observations or interactions that could help us identify the cause of Charlie's death....",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all be careful and try to uncover the truth behind it.",
+        "Alice: I agree with Bob, we should all be cautious. Let's work together to uncover the truth behind Charlie's death.",
+        "Diana: I share Bob's sentiments. Let's be vigilant and work together to uncover the truth behind Charlie's death.",
+        "Alice: I'd like to propose we focus on identifying the cause of Charlie's death. Let's share any suspicions or concerns we may have to help us uncover the truth.",
+        "Diana: I support Alice's proposal to focus on identifying the cause of Charlie's death. Let's share any information or suspicions we have to help uncover the truth.",
+        "You said: I'd like to add to Alice's proposal, let's also consider if there are any patterns or inconsistencies in our observations or interactions that could help us identify the cause of Charlie's death....",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all be careful and try to uncover the truth behind it.",
+        "Alice: I agree with Bob, we should all be cautious. Let's work together to uncover the truth behind Charlie's death.",
+        "You said: I share Bob's sentiments. Let's be vigilant and work together to uncover the truth behind Charlie's death.",
+        "Alice: I'd like to propose we focus on identifying the cause of Charlie's death. Let's share any suspicions or concerns we may have to help us uncover the truth.",
+        "You said: I support Alice's proposal to focus on identifying the cause of Charlie's death. Let's share any information or suspicions we have to help uncover the truth.",
+        "Bob: I'd like to add to Alice's proposal, let's also consider if there are any patterns or inconsistencies in our observations or interactions that could help us identify the cause of Charlie's death...."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

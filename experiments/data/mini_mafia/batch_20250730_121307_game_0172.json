@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0172",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 172,
+  "timestamp": "2025-07-30T13:16:28.541135",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's work together to find out what happened.\n\n[Or, if you want to keep things more neutral]: MESSAGE: Let's discuss what we can do to ensure everyone's safety...",
+        "Bob: I agree with Charlie, let's all work together to find out what happened to Diana. It's important we ensure everyone's safety.",
+        "You said: I noticed something unusual last night. Bob, were you near Diana during the night phase?",
+        "You said: I'd like to bring up the unusual occurrence I noticed last night. Bob, could you share your whereabouts during the night phase? This is crucial for everyone's safety.",
+        "Bob: I assure everyone that I had nothing to do with Diana's death. Let's focus on finding the real culprit together.",
+        "Charlie: Let's stay focused on finding Diana's killer. I believe in our ability to work together and uncover the truth."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's work together to find out what happened.\n\n[Or, if you want to keep things more neutral]: MESSAGE: Let's discuss what we can do to ensure everyone's safety...",
+        "You said: I agree with Charlie, let's all work together to find out what happened to Diana. It's important we ensure everyone's safety.",
+        "Alice: I noticed something unusual last night. Bob, were you near Diana during the night phase?",
+        "Alice: I'd like to bring up the unusual occurrence I noticed last night. Bob, could you share your whereabouts during the night phase? This is crucial for everyone's safety.",
+        "You said: I assure everyone that I had nothing to do with Diana's death. Let's focus on finding the real culprit together.",
+        "Charlie: Let's stay focused on finding Diana's killer. I believe in our ability to work together and uncover the truth.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's work together to find out what happened.\n\n[Or, if you want to keep things more neutral]: MESSAGE: Let's discuss what we can do to ensure everyone's safety...",
+        "Bob: I agree with Charlie, let's all work together to find out what happened to Diana. It's important we ensure everyone's safety.",
+        "Alice: I noticed something unusual last night. Bob, were you near Diana during the night phase?",
+        "Alice: I'd like to bring up the unusual occurrence I noticed last night. Bob, could you share your whereabouts during the night phase? This is crucial for everyone's safety.",
+        "Bob: I assure everyone that I had nothing to do with Diana's death. Let's focus on finding the real culprit together.",
+        "You said: Let's stay focused on finding Diana's killer. I believe in our ability to work together and uncover the truth.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

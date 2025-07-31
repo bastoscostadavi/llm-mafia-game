@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0099",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 99,
+  "timestamp": "2025-07-30T12:48:35.066082",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time. But remember, we need to find out what happened to her to ensure everyone's safety....",
+        "Charlie: I agree with Bob, let's work together to find out what happened to Diana. My thoughts are with her family during this difficult time.",
+        "You said: I agree with Bob and Charlie, let's work together to find out what happened to Diana. If anyone has any information or suspicions, please share them now. We're all in this together.",
+        "Charlie: I'm saddened by Diana's passing and support our collective effort to uncover the truth. Let's remain vigilant, but not jump to conclusions. We'll get through this together.",
+        "You said: I have no specific information to share, but I'm confident that we'll find the truth together. Let's remain open-minded and supportive of each other during this investigation.",
+        "Bob: Let's not forget, the mafioso is among us. We need to be cautious and share any suspicious observations or behaviors. We're all in this together, but let's work smartly to keep everyone safe.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time. But remember, we need to find out what happened to her to ensure everyone's safety....",
+        "Charlie: I agree with Bob, let's work together to find out what happened to Diana. My thoughts are with her family during this difficult time.",
+        "Alice: I agree with Bob and Charlie, let's work together to find out what happened to Diana. If anyone has any information or suspicions, please share them now. We're all in this together.",
+        "Charlie: I'm saddened by Diana's passing and support our collective effort to uncover the truth. Let's remain vigilant, but not jump to conclusions. We'll get through this together.",
+        "Alice: I have no specific information to share, but I'm confident that we'll find the truth together. Let's remain open-minded and supportive of each other during this investigation.",
+        "You said: Let's not forget, the mafioso is among us. We need to be cautious and share any suspicious observations or behaviors. We're all in this together, but let's work smartly to keep everyone safe."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time. But remember, we need to find out what happened to her to ensure everyone's safety....",
+        "You said: I agree with Bob, let's work together to find out what happened to Diana. My thoughts are with her family during this difficult time.",
+        "Alice: I agree with Bob and Charlie, let's work together to find out what happened to Diana. If anyone has any information or suspicions, please share them now. We're all in this together.",
+        "You said: I'm saddened by Diana's passing and support our collective effort to uncover the truth. Let's remain vigilant, but not jump to conclusions. We'll get through this together.",
+        "Alice: I have no specific information to share, but I'm confident that we'll find the truth together. Let's remain open-minded and supportive of each other during this investigation.",
+        "Bob: Let's not forget, the mafioso is among us. We need to be cautious and share any suspicious observations or behaviors. We're all in this together, but let's work smartly to keep everyone safe.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0285",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 285,
+  "timestamp": "2025-07-31T00:43:50.631626",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Charlie, let's stay vigilant and look out for each other.",
+        "Bob: I share Charlie and Alice's concerns for everyone's safety. Let's work together to ensure a peaceful game for all.",
+        "You said: Let's not jump to conclusions based on Diana's unfortunate incident. We should trust and communicate openly with each other to ensure a fair game for all.",
+        "Charlie: Let's not forget the importance of open communication and trust in this game. We should all strive to work together to ensure a fair game for all. Let's remain vigilant and keep an open dialogue to...",
+        "Bob: Let's continue our efforts to maintain open communication and trust, ensuring a fair game for all. Our focus should be on working together to identify potential threats and ensure everyone's safety.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Charlie, let's stay vigilant and look out for each other.",
+        "You said: I share Charlie and Alice's concerns for everyone's safety. Let's work together to ensure a peaceful game for all.",
+        "Alice: Let's not jump to conclusions based on Diana's unfortunate incident. We should trust and communicate openly with each other to ensure a fair game for all.",
+        "Charlie: Let's not forget the importance of open communication and trust in this game. We should all strive to work together to ensure a fair game for all. Let's remain vigilant and keep an open dialogue to...",
+        "You said: Let's continue our efforts to maintain open communication and trust, ensuring a fair game for all. Our focus should be on working together to identify potential threats and ensure everyone's safety.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Charlie, let's stay vigilant and look out for each other.",
+        "Bob: I share Charlie and Alice's concerns for everyone's safety. Let's work together to ensure a peaceful game for all.",
+        "Alice: Let's not jump to conclusions based on Diana's unfortunate incident. We should trust and communicate openly with each other to ensure a fair game for all.",
+        "You said: Let's not forget the importance of open communication and trust in this game. We should all strive to work together to ensure a fair game for all. Let's remain vigilant and keep an open dialogue to...",
+        "Bob: Let's continue our efforts to maintain open communication and trust, ensuring a fair game for all. Our focus should be on working together to identify potential threats and ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

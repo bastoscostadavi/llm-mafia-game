@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0432",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 432,
+  "timestamp": "2025-07-31T01:31:46.136638",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other during this critical phase.",
+        "Charlie: I agree with Diana, let's stay vigilant and keep an eye on each other. Alice's sudden disappearance is concerning.",
+        "You said: I agree with both Alice and Charlie, let's keep a close eye on each other to ensure everyone's safety. The sudden disappearance of Alice is concerning.",
+        "Diana: Let's not jump to conclusions based on Alice's disappearance. We should remain vigilant and trust no one blindly.",
+        "Charlie: Let's not overlook the importance of trust in our group. We should all share our concerns and work together to ensure everyone's safety. Alice's disappearance is a reminder that we need to be...",
+        "You said: Let's not forget that trust is crucial in our group. Let's work together to ensure everyone's safety and investigate Alice's disappearance carefully.",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other during this critical phase.",
+        "You said: I agree with Diana, let's stay vigilant and keep an eye on each other. Alice's sudden disappearance is concerning.",
+        "Bob: I agree with both Alice and Charlie, let's keep a close eye on each other to ensure everyone's safety. The sudden disappearance of Alice is concerning.",
+        "Diana: Let's not jump to conclusions based on Alice's disappearance. We should remain vigilant and trust no one blindly.",
+        "You said: Let's not overlook the importance of trust in our group. We should all share our concerns and work together to ensure everyone's safety. Alice's disappearance is a reminder that we need to be...",
+        "Bob: Let's not forget that trust is crucial in our group. Let's work together to ensure everyone's safety and investigate Alice's disappearance carefully.",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other during this critical phase.",
+        "Charlie: I agree with Diana, let's stay vigilant and keep an eye on each other. Alice's sudden disappearance is concerning.",
+        "Bob: I agree with both Alice and Charlie, let's keep a close eye on each other to ensure everyone's safety. The sudden disappearance of Alice is concerning.",
+        "You said: Let's not jump to conclusions based on Alice's disappearance. We should remain vigilant and trust no one blindly.",
+        "Charlie: Let's not overlook the importance of trust in our group. We should all share our concerns and work together to ensure everyone's safety. Alice's disappearance is a reminder that we need to be...",
+        "Bob: Let's not forget that trust is crucial in our group. Let's work together to ensure everyone's safety and investigate Alice's disappearance carefully."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

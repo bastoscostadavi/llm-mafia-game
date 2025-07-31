@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0314",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 314,
+  "timestamp": "2025-07-30T14:10:15.153313",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time. Let's also remember to communicate openly and honestly to help us understand what happened....",
+        "Diana: I agree with Charlie, let's all stay united and communicate openly to find out what happened to Alice. Our thoughts are with her family and friends during this tough time.",
+        "You said: I agree with Charlie and Diana, let's stay united and communicate openly to find out what happened to Alice. Our thoughts are with her family and friends during this tough time. However, I can't...",
+        "Charlie: I believe it's important that we all share any information we have about Alice's death to help bring clarity and bring justice. Let's work together as a team.",
+        "Diana: I support Charlie's suggestion for open communication. Let's all share any relevant information we may have about Alice's death to help bring clarity and justice. Our thoughts are with her family...",
+        "You said: I support open communication to find the truth about Alice's death. Let's work together as a team.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time. Let's also remember to communicate openly and honestly to help us understand what happened....",
+        "Diana: I agree with Charlie, let's all stay united and communicate openly to find out what happened to Alice. Our thoughts are with her family and friends during this tough time.",
+        "Bob: I agree with Charlie and Diana, let's stay united and communicate openly to find out what happened to Alice. Our thoughts are with her family and friends during this tough time. However, I can't...",
+        "You said: I believe it's important that we all share any information we have about Alice's death to help bring clarity and bring justice. Let's work together as a team.",
+        "Diana: I support Charlie's suggestion for open communication. Let's all share any relevant information we may have about Alice's death to help bring clarity and justice. Our thoughts are with her family...",
+        "Bob: I support open communication to find the truth about Alice's death. Let's work together as a team."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time. Let's also remember to communicate openly and honestly to help us understand what happened....",
+        "You said: I agree with Charlie, let's all stay united and communicate openly to find out what happened to Alice. Our thoughts are with her family and friends during this tough time.",
+        "Bob: I agree with Charlie and Diana, let's stay united and communicate openly to find out what happened to Alice. Our thoughts are with her family and friends during this tough time. However, I can't...",
+        "Charlie: I believe it's important that we all share any information we have about Alice's death to help bring clarity and bring justice. Let's work together as a team.",
+        "You said: I support Charlie's suggestion for open communication. Let's all share any relevant information we may have about Alice's death to help bring clarity and justice. Our thoughts are with her family...",
+        "Bob: I support open communication to find the truth about Alice's death. Let's work together as a team.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

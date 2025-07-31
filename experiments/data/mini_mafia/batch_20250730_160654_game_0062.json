@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0062",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 62,
+  "timestamp": "2025-07-30T16:28:45.741645",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked and saddened by Charlie's sudden death. Let's all support each other during this difficult time.",
+        "Diana: I agree with Alice, let's support each other during this sad time. However, I cannot help but feel uneasy about Charlie's sudden death. We must remain vigilant and look out for each other.",
+        "Bob: I agree with Alice and Diana. Let's support each other during this sad time. It's important we stay united.",
+        "Diana: Let's not forget the importance of trust and unity in these trying times. We must remain vigilant, but also support each other. Rest in peace, Charlie.",
+        "You said: Let us all remember Charlie's positive contributions to our group. We should continue to support each other through this difficult time. #unity #remembrance.",
+        "Bob: Let's continue to support each other during this difficult time, as Charlie would have wanted. #unity #remembrance.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked and saddened by Charlie's sudden death. Let's all support each other during this difficult time.",
+        "Diana: I agree with Alice, let's support each other during this sad time. However, I cannot help but feel uneasy about Charlie's sudden death. We must remain vigilant and look out for each other.",
+        "You said: I agree with Alice and Diana. Let's support each other during this sad time. It's important we stay united.",
+        "Diana: Let's not forget the importance of trust and unity in these trying times. We must remain vigilant, but also support each other. Rest in peace, Charlie.",
+        "Alice: Let us all remember Charlie's positive contributions to our group. We should continue to support each other through this difficult time. #unity #remembrance.",
+        "You said: Let's continue to support each other during this difficult time, as Charlie would have wanted. #unity #remembrance."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked and saddened by Charlie's sudden death. Let's all support each other during this difficult time.",
+        "You said: I agree with Alice, let's support each other during this sad time. However, I cannot help but feel uneasy about Charlie's sudden death. We must remain vigilant and look out for each other.",
+        "Bob: I agree with Alice and Diana. Let's support each other during this sad time. It's important we stay united.",
+        "You said: Let's not forget the importance of trust and unity in these trying times. We must remain vigilant, but also support each other. Rest in peace, Charlie.",
+        "Alice: Let us all remember Charlie's positive contributions to our group. We should continue to support each other through this difficult time. #unity #remembrance.",
+        "Bob: Let's continue to support each other during this difficult time, as Charlie would have wanted. #unity #remembrance.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0492",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 492,
+  "timestamp": "2025-07-30T19:07:22.288295",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all try to figure out who could have done this.",
+        "Bob: I'm saddened by Charlie's passing. Let's work together to find the truth behind this unfortunate event.",
+        "You said: I'm deeply troubled by Charlie's death. Let's focus on uncovering the truth behind this. Bob, can you share any unusual activities or interactions you had with Charlie during the night?",
+        "Bob: I was deeply saddened by Charlie's passing and have nothing to hide. Let's work together to find the truth.",
+        "Diana: I share Bob's sentiment and let's continue our investigation to uncover the truth behind Charlie's death.",
+        "You said: Let's stay focused on finding clues to uncover the truth behind Charlie's death. Bob, any unusual interactions with Charlie during the night?"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all try to figure out who could have done this.",
+        "You said: I'm saddened by Charlie's passing. Let's work together to find the truth behind this unfortunate event.",
+        "Alice: I'm deeply troubled by Charlie's death. Let's focus on uncovering the truth behind this. Bob, can you share any unusual activities or interactions you had with Charlie during the night?",
+        "You said: I was deeply saddened by Charlie's passing and have nothing to hide. Let's work together to find the truth.",
+        "Diana: I share Bob's sentiment and let's continue our investigation to uncover the truth behind Charlie's death.",
+        "Alice: Let's stay focused on finding clues to uncover the truth behind Charlie's death. Bob, any unusual interactions with Charlie during the night?",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all try to figure out who could have done this.",
+        "Bob: I'm saddened by Charlie's passing. Let's work together to find the truth behind this unfortunate event.",
+        "Alice: I'm deeply troubled by Charlie's death. Let's focus on uncovering the truth behind this. Bob, can you share any unusual activities or interactions you had with Charlie during the night?",
+        "Bob: I was deeply saddened by Charlie's passing and have nothing to hide. Let's work together to find the truth.",
+        "You said: I share Bob's sentiment and let's continue our investigation to uncover the truth behind Charlie's death.",
+        "Alice: Let's stay focused on finding clues to uncover the truth behind Charlie's death. Bob, any unusual interactions with Charlie during the night?",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

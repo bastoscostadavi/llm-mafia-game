@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0405",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 405,
+  "timestamp": "2025-07-29T18:13:51.675385",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with Diana, let's be vigilant. Alice's disappearance is troubling.",
+        "Charlie: I agree with Diana and Bob, let's be vigilant and keep an eye out for any suspicious behavior. Alice's safety and ours is important.",
+        "Diana: I'm still worried about Alice's sudden disappearance. Let's stay vigilant and look out for each other.",
+        "You said: I share Diana's concern for Alice's sudden disappearance. Let's remain vigilant and support each other during this time.",
+        "Charlie: Let's not jump to conclusions, but we should remain vigilant and support each other following Alice's disappearance."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I agree with Diana, let's be vigilant. Alice's disappearance is troubling.",
+        "You said: I agree with Diana and Bob, let's be vigilant and keep an eye out for any suspicious behavior. Alice's safety and ours is important.",
+        "Diana: I'm still worried about Alice's sudden disappearance. Let's stay vigilant and look out for each other.",
+        "Bob: I share Diana's concern for Alice's sudden disappearance. Let's remain vigilant and support each other during this time.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant and support each other following Alice's disappearance.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I agree with Diana, let's be vigilant. Alice's disappearance is troubling.",
+        "Charlie: I agree with Diana and Bob, let's be vigilant and keep an eye out for any suspicious behavior. Alice's safety and ours is important.",
+        "You said: I'm still worried about Alice's sudden disappearance. Let's stay vigilant and look out for each other.",
+        "Bob: I share Diana's concern for Alice's sudden disappearance. Let's remain vigilant and support each other during this time.",
+        "Charlie: Let's not jump to conclusions, but we should remain vigilant and support each other following Alice's disappearance.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

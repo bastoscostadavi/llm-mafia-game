@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0304",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 304,
+  "timestamp": "2025-07-30T14:06:33.529123",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm surprised by the sudden turn of events. We should all be careful and watch each other closely. Let's not jump to conclusions based on speculation.",
+        "Diana: I agree with Charlie, let's not rush to judgments. Let's focus on gathering more information to ensure the safety of our group.",
+        "You said: I agree with Charlie and Diana that we should be cautious and gather more information before making any judgments. Let's work together to ensure the safety of our group.",
+        "Diana: Let's continue our efforts to gather information and maintain a calm atmosphere in our group. We'll make informed decisions together.",
+        "Charlie: Let's stay focused on gathering information to ensure the safety of our group. We'll make informed decisions together.",
+        "You said: Let's continue our investigation and gather more information to ensure the safety of our group. We'll make informed decisions together."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm surprised by the sudden turn of events. We should all be careful and watch each other closely. Let's not jump to conclusions based on speculation.",
+        "Diana: I agree with Charlie, let's not rush to judgments. Let's focus on gathering more information to ensure the safety of our group.",
+        "Bob: I agree with Charlie and Diana that we should be cautious and gather more information before making any judgments. Let's work together to ensure the safety of our group.",
+        "Diana: Let's continue our efforts to gather information and maintain a calm atmosphere in our group. We'll make informed decisions together.",
+        "You said: Let's stay focused on gathering information to ensure the safety of our group. We'll make informed decisions together.",
+        "Bob: Let's continue our investigation and gather more information to ensure the safety of our group. We'll make informed decisions together.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm surprised by the sudden turn of events. We should all be careful and watch each other closely. Let's not jump to conclusions based on speculation.",
+        "You said: I agree with Charlie, let's not rush to judgments. Let's focus on gathering more information to ensure the safety of our group.",
+        "Bob: I agree with Charlie and Diana that we should be cautious and gather more information before making any judgments. Let's work together to ensure the safety of our group.",
+        "You said: Let's continue our efforts to gather information and maintain a calm atmosphere in our group. We'll make informed decisions together.",
+        "Charlie: Let's stay focused on gathering information to ensure the safety of our group. We'll make informed decisions together.",
+        "Bob: Let's continue our investigation and gather more information to ensure the safety of our group. We'll make informed decisions together.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

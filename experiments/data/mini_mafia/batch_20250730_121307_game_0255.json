@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0255",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 255,
+  "timestamp": "2025-07-30T13:47:19.383623",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm suspicious of Bob's behavior last night. Let's keep a close eye on him tonight.",
+        "Bob: I find it odd that Diana passed away so suddenly. Let's all make sure we look out for each other tonight.",
+        "Charlie: I agree with Alice, let's keep a watchful eye on Bob tonight. It's important we ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions, but we should remain vigilant for everyone's safety tonight.",
+        "You said: Let's stay vigilant and keep a close eye on Bob tonight for everyone's safety.",
+        "Bob: I find it strange that Diana passed away suddenly. Let's make sure we all stay vigilant tonight for everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm suspicious of Bob's behavior last night. Let's keep a close eye on him tonight.",
+        "You said: I find it odd that Diana passed away so suddenly. Let's all make sure we look out for each other tonight.",
+        "Charlie: I agree with Alice, let's keep a watchful eye on Bob tonight. It's important we ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions, but we should remain vigilant for everyone's safety tonight.",
+        "Alice: Let's stay vigilant and keep a close eye on Bob tonight for everyone's safety.",
+        "You said: I find it strange that Diana passed away suddenly. Let's make sure we all stay vigilant tonight for everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm suspicious of Bob's behavior last night. Let's keep a close eye on him tonight.",
+        "Bob: I find it odd that Diana passed away so suddenly. Let's all make sure we look out for each other tonight.",
+        "You said: I agree with Alice, let's keep a watchful eye on Bob tonight. It's important we ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant for everyone's safety tonight.",
+        "Alice: Let's stay vigilant and keep a close eye on Bob tonight for everyone's safety.",
+        "Bob: I find it strange that Diana passed away suddenly. Let's make sure we all stay vigilant tonight for everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

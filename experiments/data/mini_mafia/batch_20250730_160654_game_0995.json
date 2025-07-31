@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0995",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 995,
+  "timestamp": "2025-07-30T21:58:32.568640",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's all stay vigilant. I have a bad feeling about this.",
+        "Bob: I agree with Alice and Charlie, let's stay vigilant. Diana's sudden disappearance is concerning.",
+        "Bob: Let's not jump to conclusions yet. We need to remain calm and gather more information before we point fingers.",
+        "Charlie: Let's continue our investigation into Diana's disappearance. We should share any suspicious information we have. Stay vigilant, team.",
+        "You said: Let's not forget Diana's sudden disappearance last night. We should keep a close eye on each other."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's all stay vigilant. I have a bad feeling about this.",
+        "You said: I agree with Alice and Charlie, let's stay vigilant. Diana's sudden disappearance is concerning.",
+        "You said: Let's not jump to conclusions yet. We need to remain calm and gather more information before we point fingers.",
+        "Charlie: Let's continue our investigation into Diana's disappearance. We should share any suspicious information we have. Stay vigilant, team.",
+        "Alice: Let's not forget Diana's sudden disappearance last night. We should keep a close eye on each other.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's all stay vigilant. I have a bad feeling about this.",
+        "Bob: I agree with Alice and Charlie, let's stay vigilant. Diana's sudden disappearance is concerning.",
+        "Bob: Let's not jump to conclusions yet. We need to remain calm and gather more information before we point fingers.",
+        "You said: Let's continue our investigation into Diana's disappearance. We should share any suspicious information we have. Stay vigilant, team.",
+        "Alice: Let's not forget Diana's sudden disappearance last night. We should keep a close eye on each other.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

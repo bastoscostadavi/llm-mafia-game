@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0649",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 649,
+  "timestamp": "2025-07-30T20:03:19.215789",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's passing. We should all take this time to reflect and support each other during this difficult moment. #PrayForCharlie",
+        "Diana: I agree with Alice, let's come together to support each other during this sad time. #SupportEachOther #RestInPeaceCharlie",
+        "Bob: I agree with Alice and Diana, let's support each other during this sad time. #SupportEachOther #RestInPeaceCharlie\n\n(Note: I cannot know who killed Charlie during the night phase as a detective, so...",
+        "Diana: Let's remain vigilant and ensure we identify the perpetrator behind Charlie's tragic death. #JusticeForCharlie)",
+        "You said: Let's not jump to conclusions. We need to keep an open mind and trust that the investigation will reveal the truth about Charlie's death. #TrustTheProcess #JusticeForCharlie",
+        "Bob: Let's not forget the importance of trust and unity during this trying time. We should continue to support each other and trust the investigation process. #StrengthInUnity #JusticeForCharlie"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's passing. We should all take this time to reflect and support each other during this difficult moment. #PrayForCharlie",
+        "Diana: I agree with Alice, let's come together to support each other during this sad time. #SupportEachOther #RestInPeaceCharlie",
+        "You said: I agree with Alice and Diana, let's support each other during this sad time. #SupportEachOther #RestInPeaceCharlie\n\n(Note: I cannot know who killed Charlie during the night phase as a detective, so...",
+        "Diana: Let's remain vigilant and ensure we identify the perpetrator behind Charlie's tragic death. #JusticeForCharlie)",
+        "Alice: Let's not jump to conclusions. We need to keep an open mind and trust that the investigation will reveal the truth about Charlie's death. #TrustTheProcess #JusticeForCharlie",
+        "You said: Let's not forget the importance of trust and unity during this trying time. We should continue to support each other and trust the investigation process. #StrengthInUnity #JusticeForCharlie",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's passing. We should all take this time to reflect and support each other during this difficult moment. #PrayForCharlie",
+        "You said: I agree with Alice, let's come together to support each other during this sad time. #SupportEachOther #RestInPeaceCharlie",
+        "Bob: I agree with Alice and Diana, let's support each other during this sad time. #SupportEachOther #RestInPeaceCharlie\n\n(Note: I cannot know who killed Charlie during the night phase as a detective, so...",
+        "You said: Let's remain vigilant and ensure we identify the perpetrator behind Charlie's tragic death. #JusticeForCharlie)",
+        "Alice: Let's not jump to conclusions. We need to keep an open mind and trust that the investigation will reveal the truth about Charlie's death. #TrustTheProcess #JusticeForCharlie",
+        "Bob: Let's not forget the importance of trust and unity during this trying time. We should continue to support each other and trust the investigation process. #StrengthInUnity #JusticeForCharlie",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0169",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 169,
+  "timestamp": "2025-07-31T00:06:15.544629",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. Let's all stay vigilant and work together to uncover the truth. #ForTheVillage",
+        "Diana: I agree with Charlie, let's all stay focused and work together in this difficult time. #ForTheVillage",
+        "You said: I'm troubled by Alice's death and Charlie's unusual reaction. Let's not forget, the mafia might be among us. #StayVigilant",
+        "Charlie: Let's not jump to conclusions. We should all grieve and support each other during this tough time. #HealingTogether",
+        "Diana: I support Charlie's call for unity and ask everyone to focus on finding the truth behind Alice's death. #ForTheVillage",
+        "You said: I'm concerned about Charlie's unusual behavior and Alice's sudden death. Let's not overlook the importance of trust and transparency in our investigation. #StayVigilant"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's all stay vigilant and work together to uncover the truth. #ForTheVillage",
+        "Diana: I agree with Charlie, let's all stay focused and work together in this difficult time. #ForTheVillage",
+        "Bob: I'm troubled by Alice's death and Charlie's unusual reaction. Let's not forget, the mafia might be among us. #StayVigilant",
+        "You said: Let's not jump to conclusions. We should all grieve and support each other during this tough time. #HealingTogether",
+        "Diana: I support Charlie's call for unity and ask everyone to focus on finding the truth behind Alice's death. #ForTheVillage",
+        "Bob: I'm concerned about Charlie's unusual behavior and Alice's sudden death. Let's not overlook the importance of trust and transparency in our investigation. #StayVigilant",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. Let's all stay vigilant and work together to uncover the truth. #ForTheVillage",
+        "You said: I agree with Charlie, let's all stay focused and work together in this difficult time. #ForTheVillage",
+        "Bob: I'm troubled by Alice's death and Charlie's unusual reaction. Let's not forget, the mafia might be among us. #StayVigilant",
+        "Charlie: Let's not jump to conclusions. We should all grieve and support each other during this tough time. #HealingTogether",
+        "You said: I support Charlie's call for unity and ask everyone to focus on finding the truth behind Alice's death. #ForTheVillage",
+        "Bob: I'm concerned about Charlie's unusual behavior and Alice's sudden death. Let's not overlook the importance of trust and transparency in our investigation. #StayVigilant",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

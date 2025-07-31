@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0686",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 686,
+  "timestamp": "2025-07-31T02:53:53.036403",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on everyone's actions and communicate openly.",
+        "You said: I agree with Diana, let's keep the communication open and trust each other to ensure Alice's memory is honored. If anything seems suspicious, please share it with the group. #Transparency #Unity...",
+        "Charlie: I agree with Bob and Diana, let's keep the communication open to honor Alice's memory. If anyone notices anything unusual, please share it with the group. #Vigilance #Solidarity",
+        "You said: Let's not jump to conclusions based on Alice's death. We should remain vigilant and open in our communication to ensure trust and unity in our group. #StayCalm #Cooperation",
+        "Charlie: Let's maintain open communication to honor Alice's memory and ensure trust within our group. If anything unusual is observed, please bring it up. #Vigilance #Unity",
+        "Diana: Let's stay focused and vigilant to ensure the safety of our group. Any unusual behavior should be reported and discussed openly. #SafetyFirst #CommunicationIsKey",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Diana, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on everyone's actions and communicate openly.",
+        "Bob: I agree with Diana, let's keep the communication open and trust each other to ensure Alice's memory is honored. If anything seems suspicious, please share it with the group. #Transparency #Unity...",
+        "You said: I agree with Bob and Diana, let's keep the communication open to honor Alice's memory. If anyone notices anything unusual, please share it with the group. #Vigilance #Solidarity",
+        "Bob: Let's not jump to conclusions based on Alice's death. We should remain vigilant and open in our communication to ensure trust and unity in our group. #StayCalm #Cooperation",
+        "You said: Let's maintain open communication to honor Alice's memory and ensure trust within our group. If anything unusual is observed, please bring it up. #Vigilance #Unity",
+        "Diana: Let's stay focused and vigilant to ensure the safety of our group. Any unusual behavior should be reported and discussed openly. #SafetyFirst #CommunicationIsKey",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Diana, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on everyone's actions and communicate openly.",
+        "Bob: I agree with Diana, let's keep the communication open and trust each other to ensure Alice's memory is honored. If anything seems suspicious, please share it with the group. #Transparency #Unity...",
+        "Charlie: I agree with Bob and Diana, let's keep the communication open to honor Alice's memory. If anyone notices anything unusual, please share it with the group. #Vigilance #Solidarity",
+        "Bob: Let's not jump to conclusions based on Alice's death. We should remain vigilant and open in our communication to ensure trust and unity in our group. #StayCalm #Cooperation",
+        "Charlie: Let's maintain open communication to honor Alice's memory and ensure trust within our group. If anything unusual is observed, please bring it up. #Vigilance #Unity",
+        "You said: Let's stay focused and vigilant to ensure the safety of our group. Any unusual behavior should be reported and discussed openly. #SafetyFirst #CommunicationIsKey"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

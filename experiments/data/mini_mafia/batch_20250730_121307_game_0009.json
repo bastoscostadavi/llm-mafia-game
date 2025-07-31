@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0009",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 9,
+  "timestamp": "2025-07-30T12:16:19.509146",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm suspicious of Diana's sudden absence last night. Let's keep a close eye on her actions today.",
+        "You said: I agree with Charlie, let's keep an eye on Diana's actions today. It's unusual for her to be absent last night.",
+        "Diana: I'll be here, nothing to hide. Let's focus on finding the real killer.",
+        "Diana: I find it odd that Alice was found dead and no one seems to have a solid alibi for last night. Let's make sure we're all accounted for and focus on finding the real killer.",
+        "You said: I find Diana's sudden concern for finding the real killer suspicious. Let's focus on our own whereabouts last night for now.",
+        "Charlie: I find it odd that Diana seemed overly concerned about finding the real killer during the day phase despite her absence during the night. Let's focus on investigating further.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm suspicious of Diana's sudden absence last night. Let's keep a close eye on her actions today.",
+        "Bob: I agree with Charlie, let's keep an eye on Diana's actions today. It's unusual for her to be absent last night.",
+        "Diana: I'll be here, nothing to hide. Let's focus on finding the real killer.",
+        "Diana: I find it odd that Alice was found dead and no one seems to have a solid alibi for last night. Let's make sure we're all accounted for and focus on finding the real killer.",
+        "Bob: I find Diana's sudden concern for finding the real killer suspicious. Let's focus on our own whereabouts last night for now.",
+        "You said: I find it odd that Diana seemed overly concerned about finding the real killer during the day phase despite her absence during the night. Let's focus on investigating further.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm suspicious of Diana's sudden absence last night. Let's keep a close eye on her actions today.",
+        "Bob: I agree with Charlie, let's keep an eye on Diana's actions today. It's unusual for her to be absent last night.",
+        "You said: I'll be here, nothing to hide. Let's focus on finding the real killer.",
+        "You said: I find it odd that Alice was found dead and no one seems to have a solid alibi for last night. Let's make sure we're all accounted for and focus on finding the real killer.",
+        "Bob: I find Diana's sudden concern for finding the real killer suspicious. Let's focus on our own whereabouts last night for now.",
+        "Charlie: I find it odd that Diana seemed overly concerned about finding the real killer during the day phase despite her absence during the night. Let's focus on investigating further."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

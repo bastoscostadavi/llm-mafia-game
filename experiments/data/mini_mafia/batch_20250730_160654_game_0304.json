@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0304",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 304,
+  "timestamp": "2025-07-30T17:55:39.539953",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's unexpected passing. Let's all take a moment to remember her fondly. Let's focus on finding the culprit together. #UnitedWeStand",
+        "You said: I agree with Charlie, let's work together to find the culprit. Diana was a cherished member of our community. #JusticeForDiana",
+        "Bob: I'm confident we'll find the truth together. Let's keep an open mind and consider all possibilities. #TruthPrevails",
+        "Bob: Based on investigation results, I believe Charlie's statement is inconsistent with the facts. Let's question him further. #FollowTheClues",
+        "You said: I support Bob's call for further investigation on Charlie. Let's uncover the truth behind Diana's death together. #TruthForDiana",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's not jump to conclusions and give the investigation enough time to uncover the truth. #PatienceIsAVirtue #FairPlay",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's unexpected passing. Let's all take a moment to remember her fondly. Let's focus on finding the culprit together. #UnitedWeStand",
+        "Alice: I agree with Charlie, let's work together to find the culprit. Diana was a cherished member of our community. #JusticeForDiana",
+        "You said: I'm confident we'll find the truth together. Let's keep an open mind and consider all possibilities. #TruthPrevails",
+        "You said: Based on investigation results, I believe Charlie's statement is inconsistent with the facts. Let's question him further. #FollowTheClues",
+        "Alice: I support Bob's call for further investigation on Charlie. Let's uncover the truth behind Diana's death together. #TruthForDiana",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's not jump to conclusions and give the investigation enough time to uncover the truth. #PatienceIsAVirtue #FairPlay",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's unexpected passing. Let's all take a moment to remember her fondly. Let's focus on finding the culprit together. #UnitedWeStand",
+        "Alice: I agree with Charlie, let's work together to find the culprit. Diana was a cherished member of our community. #JusticeForDiana",
+        "Bob: I'm confident we'll find the truth together. Let's keep an open mind and consider all possibilities. #TruthPrevails",
+        "Bob: Based on investigation results, I believe Charlie's statement is inconsistent with the facts. Let's question him further. #FollowTheClues",
+        "Alice: I support Bob's call for further investigation on Charlie. Let's uncover the truth behind Diana's death together. #TruthForDiana",
+        "You said: I'm shocked by Diana's sudden demise. Let's not jump to conclusions and give the investigation enough time to uncover the truth. #PatienceIsAVirtue #FairPlay"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

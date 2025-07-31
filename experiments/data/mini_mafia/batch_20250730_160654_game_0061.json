@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0061",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 61,
+  "timestamp": "2025-07-30T16:28:24.199562",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden passing. Let's all take a moment to reflect on her contributions to our group. Let's stay focused and find the real culprit behind this tragedy. #JusticeForAlice",
+        "You said: Let's not let emotions cloud our judgment. We need to focus on the facts and identify the real killer. Charlie's message doesn't sit right with me. #StayFocused #JusticeForAlice",
+        "Diana: I agree with Bob, let's focus on the facts and find the real killer. #JusticeForAlice #StayFocused",
+        "Diana: Let's not jump to conclusions. We need more information to identify the real killer. #StayFocused #JusticeForAlice",
+        "Charlie: Let's not forget Alice's last words. She asked us to stay focused and find the real culprit. #JusticeForAlice #StayFocused",
+        "You said: Let's not overlook Charlie's inconsistent messages. We should consider his behavior carefully. #StayFocused #JusticeForAlice"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden passing. Let's all take a moment to reflect on her contributions to our group. Let's stay focused and find the real culprit behind this tragedy. #JusticeForAlice",
+        "Bob: Let's not let emotions cloud our judgment. We need to focus on the facts and identify the real killer. Charlie's message doesn't sit right with me. #StayFocused #JusticeForAlice",
+        "Diana: I agree with Bob, let's focus on the facts and find the real killer. #JusticeForAlice #StayFocused",
+        "Diana: Let's not jump to conclusions. We need more information to identify the real killer. #StayFocused #JusticeForAlice",
+        "You said: Let's not forget Alice's last words. She asked us to stay focused and find the real culprit. #JusticeForAlice #StayFocused",
+        "Bob: Let's not overlook Charlie's inconsistent messages. We should consider his behavior carefully. #StayFocused #JusticeForAlice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden passing. Let's all take a moment to reflect on her contributions to our group. Let's stay focused and find the real culprit behind this tragedy. #JusticeForAlice",
+        "Bob: Let's not let emotions cloud our judgment. We need to focus on the facts and identify the real killer. Charlie's message doesn't sit right with me. #StayFocused #JusticeForAlice",
+        "You said: I agree with Bob, let's focus on the facts and find the real killer. #JusticeForAlice #StayFocused",
+        "You said: Let's not jump to conclusions. We need more information to identify the real killer. #StayFocused #JusticeForAlice",
+        "Charlie: Let's not forget Alice's last words. She asked us to stay focused and find the real culprit. #JusticeForAlice #StayFocused",
+        "Bob: Let's not overlook Charlie's inconsistent messages. We should consider his behavior carefully. #StayFocused #JusticeForAlice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

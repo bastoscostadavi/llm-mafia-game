@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0042",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 42,
+  "timestamp": "2025-07-30T23:24:50.393000",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on everyone's actions today.",
+        "Bob: I agree with Diana. Let's be vigilant today. If anything seems off, let us know.",
+        "You said: I share Diana's concerns about Charlie's sudden disappearance. Let's all stay vigilant today.",
+        "You said: Let's not jump to conclusions just yet. We should all focus on our tasks today.",
+        "Bob: Let's not forget, we've lost a valuable team member. Let's work together to uncover the truth behind Charlie's death. Stay focused and vigilant.",
+        "Diana: Let's not overlook the unusual nature of Charlie's disappearance. We must remain vigilant and report any suspicious behavior.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on everyone's actions today.",
+        "You said: I agree with Diana. Let's be vigilant today. If anything seems off, let us know.",
+        "Alice: I share Diana's concerns about Charlie's sudden disappearance. Let's all stay vigilant today.",
+        "Alice: Let's not jump to conclusions just yet. We should all focus on our tasks today.",
+        "You said: Let's not forget, we've lost a valuable team member. Let's work together to uncover the truth behind Charlie's death. Stay focused and vigilant.",
+        "Diana: Let's not overlook the unusual nature of Charlie's disappearance. We must remain vigilant and report any suspicious behavior.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on everyone's actions today.",
+        "Bob: I agree with Diana. Let's be vigilant today. If anything seems off, let us know.",
+        "Alice: I share Diana's concerns about Charlie's sudden disappearance. Let's all stay vigilant today.",
+        "Alice: Let's not jump to conclusions just yet. We should all focus on our tasks today.",
+        "Bob: Let's not forget, we've lost a valuable team member. Let's work together to uncover the truth behind Charlie's death. Stay focused and vigilant.",
+        "You said: Let's not overlook the unusual nature of Charlie's disappearance. We must remain vigilant and report any suspicious behavior."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

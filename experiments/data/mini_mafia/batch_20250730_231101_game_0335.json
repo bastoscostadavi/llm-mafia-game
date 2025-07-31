@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0335",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 335,
+  "timestamp": "2025-07-31T01:00:03.658300",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all stay vigilant and try to figure out who did this.",
+        "You said: Based on the investigation results, I believe Charlie should be our prime suspect. Let's keep a close eye on him.",
+        "Charlie: I agree with Alice, let's keep a close eye on each other to ensure safety and prevent any further unfortunate incidents.",
+        "You said: Let's focus our investigation on Charlie, given the recent discovery and Alice's findings. Vigilance is key to ensuring safety.",
+        "Charlie: I'd like to echo Alice's sentiments about staying vigilant. Let's all work together to ensure the safety of our group.",
+        "Bob: I support Alice's suggestion to closely monitor Charlie. Let's all work together to ensure safety and uncover the truth.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's all stay vigilant and try to figure out who did this.",
+        "Alice: Based on the investigation results, I believe Charlie should be our prime suspect. Let's keep a close eye on him.",
+        "Charlie: I agree with Alice, let's keep a close eye on each other to ensure safety and prevent any further unfortunate incidents.",
+        "Alice: Let's focus our investigation on Charlie, given the recent discovery and Alice's findings. Vigilance is key to ensuring safety.",
+        "Charlie: I'd like to echo Alice's sentiments about staying vigilant. Let's all work together to ensure the safety of our group.",
+        "You said: I support Alice's suggestion to closely monitor Charlie. Let's all work together to ensure safety and uncover the truth.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all stay vigilant and try to figure out who did this.",
+        "Alice: Based on the investigation results, I believe Charlie should be our prime suspect. Let's keep a close eye on him.",
+        "You said: I agree with Alice, let's keep a close eye on each other to ensure safety and prevent any further unfortunate incidents.",
+        "Alice: Let's focus our investigation on Charlie, given the recent discovery and Alice's findings. Vigilance is key to ensuring safety.",
+        "You said: I'd like to echo Alice's sentiments about staying vigilant. Let's all work together to ensure the safety of our group.",
+        "Bob: I support Alice's suggestion to closely monitor Charlie. Let's all work together to ensure safety and uncover the truth."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

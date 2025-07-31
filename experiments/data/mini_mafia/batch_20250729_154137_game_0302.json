@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0302",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 302,
+  "timestamp": "2025-07-29T17:35:42.458306",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all stay vigilant to ensure justice prevails. #UnitedWeStand #JusticeForCharlie",
+        "You said: I'm saddened by Charlie's passing. Let's work together to find out who did this and bring them to justice. #JusticeForCharlie #UnitedWeStand",
+        "Bob: I agree with Alice and Diana, let's work together to find the truth behind Charlie's death. #JusticeForCharlie #UnitedWeStand",
+        "Bob: I believe we should focus on finding clues to identify the mafioso among us. Let's not jump to conclusions based on emotions. #JusticeForCharlie #VigilanceIsKey",
+        "You said: Let's not forget, we need solid evidence to identify the mafioso. Let's focus on gathering information during this discussion. #JusticeForCharlie #EvidenceMatters",
+        "Diana: I support our efforts to find the truth behind Charlie's death. Let's remain focused and vigilant. #JusticeForCharlie #VigilanceIsKey",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all stay vigilant to ensure justice prevails. #UnitedWeStand #JusticeForCharlie",
+        "Alice: I'm saddened by Charlie's passing. Let's work together to find out who did this and bring them to justice. #JusticeForCharlie #UnitedWeStand",
+        "You said: I agree with Alice and Diana, let's work together to find the truth behind Charlie's death. #JusticeForCharlie #UnitedWeStand",
+        "You said: I believe we should focus on finding clues to identify the mafioso among us. Let's not jump to conclusions based on emotions. #JusticeForCharlie #VigilanceIsKey",
+        "Alice: Let's not forget, we need solid evidence to identify the mafioso. Let's focus on gathering information during this discussion. #JusticeForCharlie #EvidenceMatters",
+        "Diana: I support our efforts to find the truth behind Charlie's death. Let's remain focused and vigilant. #JusticeForCharlie #VigilanceIsKey",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant to ensure justice prevails. #UnitedWeStand #JusticeForCharlie",
+        "Alice: I'm saddened by Charlie's passing. Let's work together to find out who did this and bring them to justice. #JusticeForCharlie #UnitedWeStand",
+        "Bob: I agree with Alice and Diana, let's work together to find the truth behind Charlie's death. #JusticeForCharlie #UnitedWeStand",
+        "Bob: I believe we should focus on finding clues to identify the mafioso among us. Let's not jump to conclusions based on emotions. #JusticeForCharlie #VigilanceIsKey",
+        "Alice: Let's not forget, we need solid evidence to identify the mafioso. Let's focus on gathering information during this discussion. #JusticeForCharlie #EvidenceMatters",
+        "You said: I support our efforts to find the truth behind Charlie's death. Let's remain focused and vigilant. #JusticeForCharlie #VigilanceIsKey"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

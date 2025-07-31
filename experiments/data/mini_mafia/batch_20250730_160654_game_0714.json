@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0714",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 714,
+  "timestamp": "2025-07-30T20:24:59.178800",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Bob, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I agree with both Bob and Charlie, let's all stay vigilant and keep an eye out for any unusual activities.",
+        "You said: Let's all try to calm our nerves and focus on the discussion. Remember, accusations without solid evidence can create unnecessary suspicion and panic. Let's work together to uncover the truth.",
+        "Charlie: I'd like to echo Alice's words and focus on working together to uncover any unusual activities. Let's be cautious and avoid jumping to conclusions.",
+        "Bob: Let's continue our vigilance and report any suspicious activities or behaviors we notice. Together, we can uncover the truth and ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Bob, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "Alice: I agree with both Bob and Charlie, let's all stay vigilant and keep an eye out for any unusual activities.",
+        "Alice: Let's all try to calm our nerves and focus on the discussion. Remember, accusations without solid evidence can create unnecessary suspicion and panic. Let's work together to uncover the truth.",
+        "Charlie: I'd like to echo Alice's words and focus on working together to uncover any unusual activities. Let's be cautious and avoid jumping to conclusions.",
+        "You said: Let's continue our vigilance and report any suspicious activities or behaviors we notice. Together, we can uncover the truth and ensure everyone's safety.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Bob, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "Alice: I agree with both Bob and Charlie, let's all stay vigilant and keep an eye out for any unusual activities.",
+        "Alice: Let's all try to calm our nerves and focus on the discussion. Remember, accusations without solid evidence can create unnecessary suspicion and panic. Let's work together to uncover the truth.",
+        "You said: I'd like to echo Alice's words and focus on working together to uncover any unusual activities. Let's be cautious and avoid jumping to conclusions.",
+        "Bob: Let's continue our vigilance and report any suspicious activities or behaviors we notice. Together, we can uncover the truth and ensure everyone's safety.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

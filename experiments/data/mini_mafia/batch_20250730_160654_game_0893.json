@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0893",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 893,
+  "timestamp": "2025-07-30T21:24:43.495325",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's all keep a close eye on each other. It's important we ensure everyone's safety.",
+        "You said: I'm saddened by Bob's sudden departure. Let's all try to support each other during this difficult time.",
+        "You said: Let's continue to support each other during this challenging time. We must remain united and vigilant.",
+        "Diana: I'm still worried about Bob's sudden disappearance. Let's continue to be vigilant and support each other during this time.",
+        "Charlie: I'd like to express my condolences for Bob's loss. Let's all try to support each other during this difficult time.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all keep a close eye on each other. It's important we ensure everyone's safety.",
+        "Alice: I'm saddened by Bob's sudden departure. Let's all try to support each other during this difficult time.",
+        "Alice: Let's continue to support each other during this challenging time. We must remain united and vigilant.",
+        "Diana: I'm still worried about Bob's sudden disappearance. Let's continue to be vigilant and support each other during this time.",
+        "You said: I'd like to express my condolences for Bob's loss. Let's all try to support each other during this difficult time."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's all keep a close eye on each other. It's important we ensure everyone's safety.",
+        "Alice: I'm saddened by Bob's sudden departure. Let's all try to support each other during this difficult time.",
+        "Alice: Let's continue to support each other during this challenging time. We must remain united and vigilant.",
+        "You said: I'm still worried about Bob's sudden disappearance. Let's continue to be vigilant and support each other during this time.",
+        "Charlie: I'd like to express my condolences for Bob's loss. Let's all try to support each other during this difficult time.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0685",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 685,
+  "timestamp": "2025-07-30T20:15:29.968900",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's untimely death. Let's all try to support each other during this difficult time. But be vigilant, as we still have a mafioso among us. Rest in peace, Alice....",
+        "Charlie: I agree with Diana. Let's all support each other during this sad time. We must remain vigilant, but remember, it's important to keep the peace and trust within the group. #solidarity #grief...",
+        "You said: I echo Diana and Charlie's sentiments. Let's all support each other during this trying time. We must remain vigilant, but trust is crucial for our group's survival. #healing #community #solidarity",
+        "You said: Let's not jump to conclusions. We've lost a valuable member, but we mustn't let fear cloud our judgement. Let's focus on finding the mafia and maintaining trust within our group. #united #justice",
+        "Diana: Let's not forget that we've lost a player. Let's focus on finding the mafia and maintaining trust within our group. #united #justice",
+        "Charlie: Let's continue our efforts to find the mafia and support each other during this challenging time. #healing #solidarity #united",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's untimely death. Let's all try to support each other during this difficult time. But be vigilant, as we still have a mafioso among us. Rest in peace, Alice....",
+        "You said: I agree with Diana. Let's all support each other during this sad time. We must remain vigilant, but remember, it's important to keep the peace and trust within the group. #solidarity #grief...",
+        "Bob: I echo Diana and Charlie's sentiments. Let's all support each other during this trying time. We must remain vigilant, but trust is crucial for our group's survival. #healing #community #solidarity",
+        "Bob: Let's not jump to conclusions. We've lost a valuable member, but we mustn't let fear cloud our judgement. Let's focus on finding the mafia and maintaining trust within our group. #united #justice",
+        "Diana: Let's not forget that we've lost a player. Let's focus on finding the mafia and maintaining trust within our group. #united #justice",
+        "You said: Let's continue our efforts to find the mafia and support each other during this challenging time. #healing #solidarity #united"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely death. Let's all try to support each other during this difficult time. But be vigilant, as we still have a mafioso among us. Rest in peace, Alice....",
+        "Charlie: I agree with Diana. Let's all support each other during this sad time. We must remain vigilant, but remember, it's important to keep the peace and trust within the group. #solidarity #grief...",
+        "Bob: I echo Diana and Charlie's sentiments. Let's all support each other during this trying time. We must remain vigilant, but trust is crucial for our group's survival. #healing #community #solidarity",
+        "Bob: Let's not jump to conclusions. We've lost a valuable member, but we mustn't let fear cloud our judgement. Let's focus on finding the mafia and maintaining trust within our group. #united #justice",
+        "You said: Let's not forget that we've lost a player. Let's focus on finding the mafia and maintaining trust within our group. #united #justice",
+        "Charlie: Let's continue our efforts to find the mafia and support each other during this challenging time. #healing #solidarity #united",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

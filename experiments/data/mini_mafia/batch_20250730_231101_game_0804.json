@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0804",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 804,
+  "timestamp": "2025-07-31T03:31:56.398507",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all be vigilant to ensure justice is served.",
+        "Diana: I'm shocked by Charlie's death and believe it's crucial we work together to find the culprit. Let's all share any suspicions or concerns we have.",
+        "Bob: I agree with Alice and Diana, let's all be vigilant and share any information we might have. Let's work together to uncover the truth.",
+        "Diana: I'd like to remind everyone that transparency and open communication are key in discovering the truth about Charlie's death. Let's continue sharing any suspicions or concerns.",
+        "You said: I'm equally shocked and saddened by Charlie's death. Let's all stay focused and vigilant to ensure we find the truth.",
+        "Bob: I have no specific suspicions at the moment, but I'll be paying close attention to everyone's actions and words. Let's all stay united in our quest for the truth."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's sudden demise. Let's all be vigilant to ensure justice is served.",
+        "Diana: I'm shocked by Charlie's death and believe it's crucial we work together to find the culprit. Let's all share any suspicions or concerns we have.",
+        "You said: I agree with Alice and Diana, let's all be vigilant and share any information we might have. Let's work together to uncover the truth.",
+        "Diana: I'd like to remind everyone that transparency and open communication are key in discovering the truth about Charlie's death. Let's continue sharing any suspicions or concerns.",
+        "Alice: I'm equally shocked and saddened by Charlie's death. Let's all stay focused and vigilant to ensure we find the truth.",
+        "You said: I have no specific suspicions at the moment, but I'll be paying close attention to everyone's actions and words. Let's all stay united in our quest for the truth.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's sudden demise. Let's all be vigilant to ensure justice is served.",
+        "You said: I'm shocked by Charlie's death and believe it's crucial we work together to find the culprit. Let's all share any suspicions or concerns we have.",
+        "Bob: I agree with Alice and Diana, let's all be vigilant and share any information we might have. Let's work together to uncover the truth.",
+        "You said: I'd like to remind everyone that transparency and open communication are key in discovering the truth about Charlie's death. Let's continue sharing any suspicions or concerns.",
+        "Alice: I'm equally shocked and saddened by Charlie's death. Let's all stay focused and vigilant to ensure we find the truth.",
+        "Bob: I have no specific suspicions at the moment, but I'll be paying close attention to everyone's actions and words. Let's all stay united in our quest for the truth.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

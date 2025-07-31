@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0770",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 770,
+  "timestamp": "2025-07-31T03:21:07.972567",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all focus on finding the person responsible and bringing them to justice. #UnitedWeStand #JusticeForAlice",
+        "Diana: I agree, let's work together to find the person responsible for Alice's death. #JusticeForAlice #UnitedWeStand",
+        "You said: Let's stay focused on finding the culprit behind Alice's death. We can't let them get away. #JusticeForAlice #UnitedWeStand",
+        "You said: Let's not jump to conclusions. We need solid evidence to identify the true culprit. #JusticeForAlice #StayFocused #NoRashActions",
+        "Charlie: I share the sentiment of finding justice for Alice. Let's cooperate and gather facts to uncover the truth. #JusticeForAlice #UnitedWeStand",
+        "Diana: Let's not forget that we need concrete evidence to identify the real culprit. Let's focus on gathering facts and working together. #JusticeForAlice #StayFocused"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all focus on finding the person responsible and bringing them to justice. #UnitedWeStand #JusticeForAlice",
+        "Diana: I agree, let's work together to find the person responsible for Alice's death. #JusticeForAlice #UnitedWeStand",
+        "Bob: Let's stay focused on finding the culprit behind Alice's death. We can't let them get away. #JusticeForAlice #UnitedWeStand",
+        "Bob: Let's not jump to conclusions. We need solid evidence to identify the true culprit. #JusticeForAlice #StayFocused #NoRashActions",
+        "You said: I share the sentiment of finding justice for Alice. Let's cooperate and gather facts to uncover the truth. #JusticeForAlice #UnitedWeStand",
+        "Diana: Let's not forget that we need concrete evidence to identify the real culprit. Let's focus on gathering facts and working together. #JusticeForAlice #StayFocused",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all focus on finding the person responsible and bringing them to justice. #UnitedWeStand #JusticeForAlice",
+        "You said: I agree, let's work together to find the person responsible for Alice's death. #JusticeForAlice #UnitedWeStand",
+        "Bob: Let's stay focused on finding the culprit behind Alice's death. We can't let them get away. #JusticeForAlice #UnitedWeStand",
+        "Bob: Let's not jump to conclusions. We need solid evidence to identify the true culprit. #JusticeForAlice #StayFocused #NoRashActions",
+        "Charlie: I share the sentiment of finding justice for Alice. Let's cooperate and gather facts to uncover the truth. #JusticeForAlice #UnitedWeStand",
+        "You said: Let's not forget that we need concrete evidence to identify the real culprit. Let's focus on gathering facts and working together. #JusticeForAlice #StayFocused",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

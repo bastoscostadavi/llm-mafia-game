@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0254",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 254,
+  "timestamp": "2025-07-31T00:33:40.254664",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's all remain vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process. #UnitedWeStand...",
+        "You said: I agree with Charlie, let's remain calm and trust the investigation process. Our thoughts are with Diana and her family. #HealingTogether",
+        "Bob: Let's stay focused and not let emotions cloud our judgement. We need to find out who killed Diana and bring them to justice. #JusticeForDiana",
+        "Bob: Let's keep our focus on finding Diana's killer. Any new information or suspicions? #JusticeForDiana",
+        "Charlie: Let's not forget that we need to trust the investigation process. We should not make hasty assumptions based on emotions. #TrustTheProcess #JusticeForDiana",
+        "You said: I'd like to add that we should all share any relevant information we might have, no matter how small. Let's work together to uncover the truth. #UnityAndTransparency #JusticeForDiana"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's all remain vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process. #UnitedWeStand...",
+        "Alice: I agree with Charlie, let's remain calm and trust the investigation process. Our thoughts are with Diana and her family. #HealingTogether",
+        "You said: Let's stay focused and not let emotions cloud our judgement. We need to find out who killed Diana and bring them to justice. #JusticeForDiana",
+        "You said: Let's keep our focus on finding Diana's killer. Any new information or suspicions? #JusticeForDiana",
+        "Charlie: Let's not forget that we need to trust the investigation process. We should not make hasty assumptions based on emotions. #TrustTheProcess #JusticeForDiana",
+        "Alice: I'd like to add that we should all share any relevant information we might have, no matter how small. Let's work together to uncover the truth. #UnityAndTransparency #JusticeForDiana",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's all remain vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process. #UnitedWeStand...",
+        "Alice: I agree with Charlie, let's remain calm and trust the investigation process. Our thoughts are with Diana and her family. #HealingTogether",
+        "Bob: Let's stay focused and not let emotions cloud our judgement. We need to find out who killed Diana and bring them to justice. #JusticeForDiana",
+        "Bob: Let's keep our focus on finding Diana's killer. Any new information or suspicions? #JusticeForDiana",
+        "You said: Let's not forget that we need to trust the investigation process. We should not make hasty assumptions based on emotions. #TrustTheProcess #JusticeForDiana",
+        "Alice: I'd like to add that we should all share any relevant information we might have, no matter how small. Let's work together to uncover the truth. #UnityAndTransparency #JusticeForDiana",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

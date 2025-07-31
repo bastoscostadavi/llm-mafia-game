@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0646",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 646,
+  "timestamp": "2025-07-31T02:40:48.647930",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's keep an eye out for any suspicious behavior.",
+        "You said: I share Diana's concerns, let's all be cautious during this crucial phase of the game.",
+        "Diana: Let's not jump to conclusions based on assumptions. We should focus on observing each other's behaviors to ensure a fair game.",
+        "Charlie: I support Diana's suggestion to stay vigilant and observe each other's actions carefully. Let's ensure a fair game for everyone.",
+        "You said: I'd like to echo Diana and Charlie's sentiments, let's remain vigilant and observe each other's actions to ensure a fair game."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's keep an eye out for any suspicious behavior.",
+        "Alice: I share Diana's concerns, let's all be cautious during this crucial phase of the game.",
+        "Diana: Let's not jump to conclusions based on assumptions. We should focus on observing each other's behaviors to ensure a fair game.",
+        "You said: I support Diana's suggestion to stay vigilant and observe each other's actions carefully. Let's ensure a fair game for everyone.",
+        "Alice: I'd like to echo Diana and Charlie's sentiments, let's remain vigilant and observe each other's actions to ensure a fair game.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's keep an eye out for any suspicious behavior.",
+        "Alice: I share Diana's concerns, let's all be cautious during this crucial phase of the game.",
+        "You said: Let's not jump to conclusions based on assumptions. We should focus on observing each other's behaviors to ensure a fair game.",
+        "Charlie: I support Diana's suggestion to stay vigilant and observe each other's actions carefully. Let's ensure a fair game for everyone.",
+        "Alice: I'd like to echo Diana and Charlie's sentiments, let's remain vigilant and observe each other's actions to ensure a fair game.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

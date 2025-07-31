@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0005",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 5,
+  "timestamp": "2025-07-30T16:08:48.345847",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to find out who did this and bring them to justice.",
+        "You said: I agree, let's work together to find out who is responsible for Alice's death and bring them to justice.",
+        "Diana: Based on my investigation, I believe Bob's alibi is suspicious. Let's keep an eye on him.",
+        "Diana: Based on my investigation, I find Bob's alibi suspicious. Let's stay vigilant.",
+        "Charlie: I'm saddened by Alice's passing and I believe we should all work together to ensure justice is served. Let's focus on gathering facts and staying vigilant.",
+        "You said: I join Charlie in expressing my sadness over Alice's passing and agree that we must work together to uncover the truth. Let's focus on gathering facts and staying vigilant."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to find out who did this and bring them to justice.",
+        "Bob: I agree, let's work together to find out who is responsible for Alice's death and bring them to justice.",
+        "Diana: Based on my investigation, I believe Bob's alibi is suspicious. Let's keep an eye on him.",
+        "Diana: Based on my investigation, I find Bob's alibi suspicious. Let's stay vigilant.",
+        "You said: I'm saddened by Alice's passing and I believe we should all work together to ensure justice is served. Let's focus on gathering facts and staying vigilant.",
+        "Bob: I join Charlie in expressing my sadness over Alice's passing and agree that we must work together to uncover the truth. Let's focus on gathering facts and staying vigilant.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to find out who did this and bring them to justice.",
+        "Bob: I agree, let's work together to find out who is responsible for Alice's death and bring them to justice.",
+        "You said: Based on my investigation, I believe Bob's alibi is suspicious. Let's keep an eye on him.",
+        "You said: Based on my investigation, I find Bob's alibi suspicious. Let's stay vigilant.",
+        "Charlie: I'm saddened by Alice's passing and I believe we should all work together to ensure justice is served. Let's focus on gathering facts and staying vigilant.",
+        "Bob: I join Charlie in expressing my sadness over Alice's passing and agree that we must work together to uncover the truth. Let's focus on gathering facts and staying vigilant.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

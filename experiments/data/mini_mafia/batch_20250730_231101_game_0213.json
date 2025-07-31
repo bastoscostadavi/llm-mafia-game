@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0213",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 213,
+  "timestamp": "2025-07-31T00:20:40.236477",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden passing. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree with Bob, let's support each other. But we should also remember that one of us is a mafioso. We need to be extra cautious.",
+        "You said: I echo Diana's words about staying vigilant. Let's all support each other during this trying time. However, we must also remember that trust must be earned, not assumed.",
+        "Bob: Let's focus on finding the mafioso among us. We can't let them continue their destructive actions. Support and communication are crucial in this challenging situation.",
+        "You said: Let us not jump to conclusions. We should continue to communicate openly and trust each other until proven otherwise. Support and vigilance are key.",
+        "Diana: Let's not forget that one of us is a mafioso. We need to stay vigilant and communicate openly to find them. Support is essential, but we must prioritize safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden passing. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree with Bob, let's support each other. But we should also remember that one of us is a mafioso. We need to be extra cautious.",
+        "Alice: I echo Diana's words about staying vigilant. Let's all support each other during this trying time. However, we must also remember that trust must be earned, not assumed.",
+        "You said: Let's focus on finding the mafioso among us. We can't let them continue their destructive actions. Support and communication are crucial in this challenging situation.",
+        "Alice: Let us not jump to conclusions. We should continue to communicate openly and trust each other until proven otherwise. Support and vigilance are key.",
+        "Diana: Let's not forget that one of us is a mafioso. We need to stay vigilant and communicate openly to find them. Support is essential, but we must prioritize safety.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden passing. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Bob, let's support each other. But we should also remember that one of us is a mafioso. We need to be extra cautious.",
+        "Alice: I echo Diana's words about staying vigilant. Let's all support each other during this trying time. However, we must also remember that trust must be earned, not assumed.",
+        "Bob: Let's focus on finding the mafioso among us. We can't let them continue their destructive actions. Support and communication are crucial in this challenging situation.",
+        "Alice: Let us not jump to conclusions. We should continue to communicate openly and trust each other until proven otherwise. Support and vigilance are key.",
+        "You said: Let's not forget that one of us is a mafioso. We need to stay vigilant and communicate openly to find them. Support is essential, but we must prioritize safety.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

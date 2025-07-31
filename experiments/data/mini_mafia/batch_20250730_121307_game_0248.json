@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0248",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 248,
+  "timestamp": "2025-07-30T13:44:48.467433",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's try to figure out who could have done this.",
+        "You said: I agree, this is a tragic loss. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I'm saddened by Diana's death and believe we should focus on finding out who did this. Alice's reaction seems unusual to me. Let's stay vigilant.",
+        "Bob: I'd like to propose we focus on finding clues to help solve the mystery of Diana's death. Let's share any information we may have. Stay vigilant, everyone.",
+        "Charlie: I propose we share any suspicious information we may have about Alice's behavior last night. Let's stay focused on finding the truth.",
+        "You said: I'd like to offer my condolences to Diana's family and friends during this difficult time. Let's all remain focused on finding clues to solve this tragedy."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's try to figure out who could have done this.",
+        "Alice: I agree, this is a tragic loss. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I'm saddened by Diana's death and believe we should focus on finding out who did this. Alice's reaction seems unusual to me. Let's stay vigilant.",
+        "You said: I'd like to propose we focus on finding clues to help solve the mystery of Diana's death. Let's share any information we may have. Stay vigilant, everyone.",
+        "Charlie: I propose we share any suspicious information we may have about Alice's behavior last night. Let's stay focused on finding the truth.",
+        "Alice: I'd like to offer my condolences to Diana's family and friends during this difficult time. Let's all remain focused on finding clues to solve this tragedy.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's try to figure out who could have done this.",
+        "Alice: I agree, this is a tragic loss. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Diana's death and believe we should focus on finding out who did this. Alice's reaction seems unusual to me. Let's stay vigilant.",
+        "Bob: I'd like to propose we focus on finding clues to help solve the mystery of Diana's death. Let's share any information we may have. Stay vigilant, everyone.",
+        "You said: I propose we share any suspicious information we may have about Alice's behavior last night. Let's stay focused on finding the truth.",
+        "Alice: I'd like to offer my condolences to Diana's family and friends during this difficult time. Let's all remain focused on finding clues to solve this tragedy.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0841",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 841,
+  "timestamp": "2025-07-30T21:07:23.906229",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. Let's all take a moment to remember her. Let's focus on finding the culprit together.",
+        "Diana: I agree with Charlie, let's focus on finding Alice's killer. My thoughts are with her family and friends during this difficult time.",
+        "You said: I agree with Charlie and Diana, let's find Alice's killer together. Our focus should be on solving this mystery.",
+        "Charlie: Let's stay focused on identifying Alice's killer. We need to work together to ensure justice is served and the guilty party is brought to light.",
+        "You said: Let's not jump to conclusions. We should gather more information before voting. Alice's death is a tragedy, but we must remain calm and logical to find the truth.",
+        "Diana: Let's not rush to judgments. We should gather more information before voting. Alice's death is a tragedy, and we must stay focused on finding the truth together.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's all take a moment to remember her. Let's focus on finding the culprit together.",
+        "Diana: I agree with Charlie, let's focus on finding Alice's killer. My thoughts are with her family and friends during this difficult time.",
+        "Bob: I agree with Charlie and Diana, let's find Alice's killer together. Our focus should be on solving this mystery.",
+        "You said: Let's stay focused on identifying Alice's killer. We need to work together to ensure justice is served and the guilty party is brought to light.",
+        "Bob: Let's not jump to conclusions. We should gather more information before voting. Alice's death is a tragedy, but we must remain calm and logical to find the truth.",
+        "Diana: Let's not rush to judgments. We should gather more information before voting. Alice's death is a tragedy, and we must stay focused on finding the truth together."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. Let's all take a moment to remember her. Let's focus on finding the culprit together.",
+        "You said: I agree with Charlie, let's focus on finding Alice's killer. My thoughts are with her family and friends during this difficult time.",
+        "Bob: I agree with Charlie and Diana, let's find Alice's killer together. Our focus should be on solving this mystery.",
+        "Charlie: Let's stay focused on identifying Alice's killer. We need to work together to ensure justice is served and the guilty party is brought to light.",
+        "Bob: Let's not jump to conclusions. We should gather more information before voting. Alice's death is a tragedy, but we must remain calm and logical to find the truth.",
+        "You said: Let's not rush to judgments. We should gather more information before voting. Alice's death is a tragedy, and we must stay focused on finding the truth together.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

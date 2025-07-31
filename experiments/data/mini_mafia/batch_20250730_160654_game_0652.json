@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0652",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 652,
+  "timestamp": "2025-07-30T20:04:18.738647",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked and saddened by Alice's sudden demise. We need to stay vigilant to ensure the mafia doesn't strike again.",
+        "Charlie: I agree with Diana. Let's all keep a close eye on each other to prevent any further harm.",
+        "You said: I agree with Diana and Charlie. Let's work together to ensure safety in our community.",
+        "Charlie: Let's not jump to conclusions. We should focus on gathering more information before making any decisions.",
+        "You said: Let's remain calm and focused during this difficult time. We should work together to find out who was behind Alice's death.",
+        "Diana: Let's not forget, the mafia may be among us. We should be cautious and trust no one until we have more information."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked and saddened by Alice's sudden demise. We need to stay vigilant to ensure the mafia doesn't strike again.",
+        "You said: I agree with Diana. Let's all keep a close eye on each other to prevent any further harm.",
+        "Bob: I agree with Diana and Charlie. Let's work together to ensure safety in our community.",
+        "You said: Let's not jump to conclusions. We should focus on gathering more information before making any decisions.",
+        "Bob: Let's remain calm and focused during this difficult time. We should work together to find out who was behind Alice's death.",
+        "Diana: Let's not forget, the mafia may be among us. We should be cautious and trust no one until we have more information.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked and saddened by Alice's sudden demise. We need to stay vigilant to ensure the mafia doesn't strike again.",
+        "Charlie: I agree with Diana. Let's all keep a close eye on each other to prevent any further harm.",
+        "Bob: I agree with Diana and Charlie. Let's work together to ensure safety in our community.",
+        "Charlie: Let's not jump to conclusions. We should focus on gathering more information before making any decisions.",
+        "Bob: Let's remain calm and focused during this difficult time. We should work together to find out who was behind Alice's death.",
+        "You said: Let's not forget, the mafia may be among us. We should be cautious and trust no one until we have more information.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

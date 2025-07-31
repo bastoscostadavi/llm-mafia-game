@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0314",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 314,
+  "timestamp": "2025-07-30T17:59:12.799776",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance last night. Let's keep a close eye on each other tonight.",
+        "Diana: I agree with Bob, let's stay vigilant tonight. Alice's disappearance is worrying.",
+        "Charlie: I agree with both Bob and Diana, let's make sure we all stay safe tonight. It's important we keep a close eye on any suspicious activity.",
+        "Diana: Let's not jump to conclusions. We need to remain calm and gather more information before we accuse anyone. Alice's disappearance is a concern, but it's important we don't let fear cloud our judgement.",
+        "You said: I'd like to propose that we all share any unusual occurrences or suspicions we might have had last night. Let's work together to ensure everyone's safety.",
+        "Charlie: I had a strange dream last night, but it's probably nothing. Let's all try to get some rest and focus on the day ahead.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance last night. Let's keep a close eye on each other tonight.",
+        "Diana: I agree with Bob, let's stay vigilant tonight. Alice's disappearance is worrying.",
+        "You said: I agree with both Bob and Diana, let's make sure we all stay safe tonight. It's important we keep a close eye on any suspicious activity.",
+        "Diana: Let's not jump to conclusions. We need to remain calm and gather more information before we accuse anyone. Alice's disappearance is a concern, but it's important we don't let fear cloud our judgement.",
+        "Bob: I'd like to propose that we all share any unusual occurrences or suspicions we might have had last night. Let's work together to ensure everyone's safety.",
+        "You said: I had a strange dream last night, but it's probably nothing. Let's all try to get some rest and focus on the day ahead.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance last night. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Bob, let's stay vigilant tonight. Alice's disappearance is worrying.",
+        "Charlie: I agree with both Bob and Diana, let's make sure we all stay safe tonight. It's important we keep a close eye on any suspicious activity.",
+        "You said: Let's not jump to conclusions. We need to remain calm and gather more information before we accuse anyone. Alice's disappearance is a concern, but it's important we don't let fear cloud our judgement.",
+        "Bob: I'd like to propose that we all share any unusual occurrences or suspicions we might have had last night. Let's work together to ensure everyone's safety.",
+        "Charlie: I had a strange dream last night, but it's probably nothing. Let's all try to get some rest and focus on the day ahead."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

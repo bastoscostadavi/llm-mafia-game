@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0761",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 761,
+  "timestamp": "2025-07-31T03:18:13.073640",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. We should all be more careful.",
+        "Diana: I'm saddened by Bob's passing. Let's work together to ensure safety and find the culprit.",
+        "You said: I agree with Diana. Let's stay vigilant and work together to find the culprit behind Bob's death.",
+        "Diana: Let's not jump to conclusions. We need to work together to gather more information and ensure everyone's safety.",
+        "You said: Let's remain focused on gathering info to find the culprit behind Bob's death. Suspicion shouldn't divide us. We need unity to ensure everyone's safety.",
+        "Charlie: I share the grief over Bob's loss. Let's stay united and focused on identifying the perpetrator.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden demise. We should all be more careful.",
+        "Diana: I'm saddened by Bob's passing. Let's work together to ensure safety and find the culprit.",
+        "Alice: I agree with Diana. Let's stay vigilant and work together to find the culprit behind Bob's death.",
+        "Diana: Let's not jump to conclusions. We need to work together to gather more information and ensure everyone's safety.",
+        "Alice: Let's remain focused on gathering info to find the culprit behind Bob's death. Suspicion shouldn't divide us. We need unity to ensure everyone's safety.",
+        "You said: I share the grief over Bob's loss. Let's stay united and focused on identifying the perpetrator."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. We should all be more careful.",
+        "You said: I'm saddened by Bob's passing. Let's work together to ensure safety and find the culprit.",
+        "Alice: I agree with Diana. Let's stay vigilant and work together to find the culprit behind Bob's death.",
+        "You said: Let's not jump to conclusions. We need to work together to gather more information and ensure everyone's safety.",
+        "Alice: Let's remain focused on gathering info to find the culprit behind Bob's death. Suspicion shouldn't divide us. We need unity to ensure everyone's safety.",
+        "Charlie: I share the grief over Bob's loss. Let's stay united and focused on identifying the perpetrator.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0493",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 493,
+  "timestamp": "2025-07-30T15:19:09.803548",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I'm saddened by Charlie's death. Let's work together to ensure the mafioso among us is identified and brought to justice. Bob's recent message is suspicious, but we need solid evidence before...",
+        "You said: I agree with Diana, let's focus on finding the mafioso and ensuring everyone's safety. The important thing is to remain calm and work together during this difficult time.",
+        "Diana: Let's not jump to conclusions, but remain vigilant and support each other during this challenging time. Let's work together to identify the mafioso and ensure everyone's safety.",
+        "Bob: I'm deeply saddened by Charlie's tragic demise. Let's all unite and support each other during this trying time. Together, we can ensure justice prevails and the mafioso is identified....",
+        "You said: Let's not forget the importance of trust and communication in identifying the mafioso. Let's share any suspicious behavior or information we might have. Together, we can ensure everyone's safety...",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I'm saddened by Charlie's death. Let's work together to ensure the mafioso among us is identified and brought to justice. Bob's recent message is suspicious, but we need solid evidence before...",
+        "Alice: I agree with Diana, let's focus on finding the mafioso and ensuring everyone's safety. The important thing is to remain calm and work together during this difficult time.",
+        "Diana: Let's not jump to conclusions, but remain vigilant and support each other during this challenging time. Let's work together to identify the mafioso and ensure everyone's safety.",
+        "You said: I'm deeply saddened by Charlie's tragic demise. Let's all unite and support each other during this trying time. Together, we can ensure justice prevails and the mafioso is identified....",
+        "Alice: Let's not forget the importance of trust and communication in identifying the mafioso. Let's share any suspicious behavior or information we might have. Together, we can ensure everyone's safety...",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Charlie's death. Let's work together to ensure the mafioso among us is identified and brought to justice. Bob's recent message is suspicious, but we need solid evidence before...",
+        "Alice: I agree with Diana, let's focus on finding the mafioso and ensuring everyone's safety. The important thing is to remain calm and work together during this difficult time.",
+        "You said: Let's not jump to conclusions, but remain vigilant and support each other during this challenging time. Let's work together to identify the mafioso and ensure everyone's safety.",
+        "Bob: I'm deeply saddened by Charlie's tragic demise. Let's all unite and support each other during this trying time. Together, we can ensure justice prevails and the mafioso is identified....",
+        "Alice: Let's not forget the importance of trust and communication in identifying the mafioso. Let's share any suspicious behavior or information we might have. Together, we can ensure everyone's safety..."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

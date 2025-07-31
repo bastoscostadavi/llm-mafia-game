@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0057",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 57,
+  "timestamp": "2025-07-30T12:32:49.281802",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm deeply saddened by Charlie's sudden demise. Let's all try to support each other through this difficult time. Let's also stay vigilant and ensure we identify the true culprit behind this tragedy.",
+        "Bob: I share Diana's sentiments about Charlie. Let's all work together to find the truth.",
+        "You said: I agree with Diana and Bob, let's all cooperate to find the truth and bring justice for Charlie.",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any decisions. Let's all stay calm and cooperate to find the truth.",
+        "You said: I suggest we focus on gathering more information about Charlie's death before making any decisions. Let's work together to uncover the truth.",
+        "Bob: I support Diana and Alice's call for cooperation to find the truth. Let's remain vigilant, but not jump to conclusions. We can work together to gather more information about Charlie's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm deeply saddened by Charlie's sudden demise. Let's all try to support each other through this difficult time. Let's also stay vigilant and ensure we identify the true culprit behind this tragedy.",
+        "You said: I share Diana's sentiments about Charlie. Let's all work together to find the truth.",
+        "Alice: I agree with Diana and Bob, let's all cooperate to find the truth and bring justice for Charlie.",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any decisions. Let's all stay calm and cooperate to find the truth.",
+        "Alice: I suggest we focus on gathering more information about Charlie's death before making any decisions. Let's work together to uncover the truth.",
+        "You said: I support Diana and Alice's call for cooperation to find the truth. Let's remain vigilant, but not jump to conclusions. We can work together to gather more information about Charlie's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all try to support each other through this difficult time. Let's also stay vigilant and ensure we identify the true culprit behind this tragedy.",
+        "Bob: I share Diana's sentiments about Charlie. Let's all work together to find the truth.",
+        "Alice: I agree with Diana and Bob, let's all cooperate to find the truth and bring justice for Charlie.",
+        "You said: Let's not jump to conclusions. We need to gather more information before making any decisions. Let's all stay calm and cooperate to find the truth.",
+        "Alice: I suggest we focus on gathering more information about Charlie's death before making any decisions. Let's work together to uncover the truth.",
+        "Bob: I support Diana and Alice's call for cooperation to find the truth. Let's remain vigilant, but not jump to conclusions. We can work together to gather more information about Charlie's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

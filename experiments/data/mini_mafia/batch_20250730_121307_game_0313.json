@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0313",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 313,
+  "timestamp": "2025-07-30T14:09:52.187360",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's work together to find out what happened and bring the culprit to justice.",
+        "You said: I agree, let's work together to find out what happened to Diana. I have a feeling something is off about the circumstances surrounding her death.",
+        "Charlie: I have some concerns about Alice's behavior last night. Let's keep an eye on her actions during the day.",
+        "Charlie: I'd like to propose we keep a close eye on Alice's actions today. Her behavior last night raised some concerns for me. Let's work together to ensure justice is served. #SuspiciousDetective...",
+        "Bob: I agree with Charlie's suggestion to keep a close eye on Alice's actions today. Let's all work together to ensure justice is served. #TeamworkAndJustice.",
+        "You said: I'm saddened by Diana's passing and want to help in any way I can to ensure justice is served. Let's all remain vigilant and support each other during this challenging time. #UnitedFront."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's work together to find out what happened and bring the culprit to justice.",
+        "Alice: I agree, let's work together to find out what happened to Diana. I have a feeling something is off about the circumstances surrounding her death.",
+        "Charlie: I have some concerns about Alice's behavior last night. Let's keep an eye on her actions during the day.",
+        "Charlie: I'd like to propose we keep a close eye on Alice's actions today. Her behavior last night raised some concerns for me. Let's work together to ensure justice is served. #SuspiciousDetective...",
+        "You said: I agree with Charlie's suggestion to keep a close eye on Alice's actions today. Let's all work together to ensure justice is served. #TeamworkAndJustice.",
+        "Alice: I'm saddened by Diana's passing and want to help in any way I can to ensure justice is served. Let's all remain vigilant and support each other during this challenging time. #UnitedFront.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's work together to find out what happened and bring the culprit to justice.",
+        "Alice: I agree, let's work together to find out what happened to Diana. I have a feeling something is off about the circumstances surrounding her death.",
+        "You said: I have some concerns about Alice's behavior last night. Let's keep an eye on her actions during the day.",
+        "You said: I'd like to propose we keep a close eye on Alice's actions today. Her behavior last night raised some concerns for me. Let's work together to ensure justice is served. #SuspiciousDetective...",
+        "Bob: I agree with Charlie's suggestion to keep a close eye on Alice's actions today. Let's all work together to ensure justice is served. #TeamworkAndJustice.",
+        "Alice: I'm saddened by Diana's passing and want to help in any way I can to ensure justice is served. Let's all remain vigilant and support each other during this challenging time. #UnitedFront.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

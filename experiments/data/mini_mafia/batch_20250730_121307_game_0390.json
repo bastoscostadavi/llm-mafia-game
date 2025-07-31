@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0390",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 390,
+  "timestamp": "2025-07-30T14:39:55.146423",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I agree with both Alice and Charlie, let's keep a close eye on each other to ensure everyone's safety. However, I am particularly concerned about the strange circumstances surrounding Diana's...",
+        "Charlie: Let's not jump to conclusions, but we should stay alert and communicate openly to ensure everyone's safety.",
+        "Bob: I'm worried about Diana's sudden disappearance. Let's remain vigilant and communicate openly to ensure everyone's safety.",
+        "You said: I'm uneasy about Diana's sudden absence. Let's all be vigilant and open in our communication to ensure everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I agree with both Alice and Charlie, let's keep a close eye on each other to ensure everyone's safety. However, I am particularly concerned about the strange circumstances surrounding Diana's...",
+        "Charlie: Let's not jump to conclusions, but we should stay alert and communicate openly to ensure everyone's safety.",
+        "You said: I'm worried about Diana's sudden disappearance. Let's remain vigilant and communicate openly to ensure everyone's safety.",
+        "Alice: I'm uneasy about Diana's sudden absence. Let's all be vigilant and open in our communication to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I agree with both Alice and Charlie, let's keep a close eye on each other to ensure everyone's safety. However, I am particularly concerned about the strange circumstances surrounding Diana's...",
+        "You said: Let's not jump to conclusions, but we should stay alert and communicate openly to ensure everyone's safety.",
+        "Bob: I'm worried about Diana's sudden disappearance. Let's remain vigilant and communicate openly to ensure everyone's safety.",
+        "Alice: I'm uneasy about Diana's sudden absence. Let's all be vigilant and open in our communication to ensure everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

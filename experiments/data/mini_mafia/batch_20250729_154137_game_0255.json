@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0255",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 255,
+  "timestamp": "2025-07-29T17:18:28.853373",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm surprised by the turn of events. Let's focus on finding out who among us is the real mafioso. We should cooperate to ensure the safety of our group.",
+        "You said: I agree with Charlie. We should work together to uncover the truth and keep our group safe. Let's share any suspicious observations or behaviors we've noticed.",
+        "Diana: I've noticed Charlie acting suspiciously during the day phases. Let's keep a close eye on him tonight.",
+        "You said: Let's not jump to conclusions. We should remain calm and gather more information before making any accusations. We're all in this together.",
+        "Diana: Let's stay vigilant and share any suspicious observations or behaviors we notice. Trust but verify.",
+        "Charlie: Let's not forget the importance of trust and cooperation. We all have a role to play in keeping our group safe. Let's focus on gathering information and building trust with each other."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm surprised by the turn of events. Let's focus on finding out who among us is the real mafioso. We should cooperate to ensure the safety of our group.",
+        "Bob: I agree with Charlie. We should work together to uncover the truth and keep our group safe. Let's share any suspicious observations or behaviors we've noticed.",
+        "Diana: I've noticed Charlie acting suspiciously during the day phases. Let's keep a close eye on him tonight.",
+        "Bob: Let's not jump to conclusions. We should remain calm and gather more information before making any accusations. We're all in this together.",
+        "Diana: Let's stay vigilant and share any suspicious observations or behaviors we notice. Trust but verify.",
+        "You said: Let's not forget the importance of trust and cooperation. We all have a role to play in keeping our group safe. Let's focus on gathering information and building trust with each other.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm surprised by the turn of events. Let's focus on finding out who among us is the real mafioso. We should cooperate to ensure the safety of our group.",
+        "Bob: I agree with Charlie. We should work together to uncover the truth and keep our group safe. Let's share any suspicious observations or behaviors we've noticed.",
+        "You said: I've noticed Charlie acting suspiciously during the day phases. Let's keep a close eye on him tonight.",
+        "Bob: Let's not jump to conclusions. We should remain calm and gather more information before making any accusations. We're all in this together.",
+        "You said: Let's stay vigilant and share any suspicious observations or behaviors we notice. Trust but verify.",
+        "Charlie: Let's not forget the importance of trust and cooperation. We all have a role to play in keeping our group safe. Let's focus on gathering information and building trust with each other.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

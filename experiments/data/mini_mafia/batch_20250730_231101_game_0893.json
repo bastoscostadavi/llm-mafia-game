@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0893",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 893,
+  "timestamp": "2025-07-31T04:00:59.246549",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's sudden demise. Let's unite to find the truth behind this tragic event. #JusticeForAlice",
+        "Charlie: I'm shocked and saddened by Alice's death. Let's work together to ensure justice is served. #JusticeForAlice",
+        "You said: I'm concerned about Alice's sudden demise and believe it's crucial we all cooperate to uncover the truth. Let's remain vigilant and share any suspicious observations. #JusticeForAlice",
+        "You said: I agree with the sentiment of unity and justice for Alice. Let's continue to share any new information or suspicions we may have. #JusticeForAlice",
+        "Charlie: I echo everyone's sentiments for Alice and believe we should all cooperate to uncover the truth behind her death. Let's remain vigilant and share any new information. #JusticeForAlice",
+        "Diana: Let's not jump to conclusions. We should keep an open mind and allow all evidence to come to light before making any assumptions. #UnityAndJustice.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's sudden demise. Let's unite to find the truth behind this tragic event. #JusticeForAlice",
+        "You said: I'm shocked and saddened by Alice's death. Let's work together to ensure justice is served. #JusticeForAlice",
+        "Bob: I'm concerned about Alice's sudden demise and believe it's crucial we all cooperate to uncover the truth. Let's remain vigilant and share any suspicious observations. #JusticeForAlice",
+        "Bob: I agree with the sentiment of unity and justice for Alice. Let's continue to share any new information or suspicions we may have. #JusticeForAlice",
+        "You said: I echo everyone's sentiments for Alice and believe we should all cooperate to uncover the truth behind her death. Let's remain vigilant and share any new information. #JusticeForAlice",
+        "Diana: Let's not jump to conclusions. We should keep an open mind and allow all evidence to come to light before making any assumptions. #UnityAndJustice.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's unite to find the truth behind this tragic event. #JusticeForAlice",
+        "Charlie: I'm shocked and saddened by Alice's death. Let's work together to ensure justice is served. #JusticeForAlice",
+        "Bob: I'm concerned about Alice's sudden demise and believe it's crucial we all cooperate to uncover the truth. Let's remain vigilant and share any suspicious observations. #JusticeForAlice",
+        "Bob: I agree with the sentiment of unity and justice for Alice. Let's continue to share any new information or suspicions we may have. #JusticeForAlice",
+        "Charlie: I echo everyone's sentiments for Alice and believe we should all cooperate to uncover the truth behind her death. Let's remain vigilant and share any new information. #JusticeForAlice",
+        "You said: Let's not jump to conclusions. We should keep an open mind and allow all evidence to come to light before making any assumptions. #UnityAndJustice."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

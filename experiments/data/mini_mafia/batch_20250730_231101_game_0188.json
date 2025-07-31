@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0188",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 188,
+  "timestamp": "2025-07-31T00:12:36.379227",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden demise. Let's all try to find out who did this heinous deed. Rest in peace, Charlie. #justiceforCharlie",
+        "Diana: I agree, we need to find out who was responsible for Charlie's death. Let's stay focused and share any suspicious information we have. #justiceforCharlie",
+        "Bob: I share Alice's sentiment towards Charlie's passing. Let's trust the investigation will lead us to the truth. #justiceforCharlie",
+        "Bob: I'd like to propose we focus on identifying the cause of Charlie's death rather than pointing fingers. Let's work together to uncover any useful information. #justiceforCharlie",
+        "Diana: Let's not forget that we're trying to find the person responsible for Charlie's death. Any new information could potentially help in our investigation. #justiceforCharlie",
+        "You said: I've noticed a pattern in our discussions. Let's keep our focus on gathering information, not on assumptions or emotions. #stayfocused #justiceforCharlie"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm saddened by Charlie's sudden demise. Let's all try to find out who did this heinous deed. Rest in peace, Charlie. #justiceforCharlie",
+        "Diana: I agree, we need to find out who was responsible for Charlie's death. Let's stay focused and share any suspicious information we have. #justiceforCharlie",
+        "You said: I share Alice's sentiment towards Charlie's passing. Let's trust the investigation will lead us to the truth. #justiceforCharlie",
+        "You said: I'd like to propose we focus on identifying the cause of Charlie's death rather than pointing fingers. Let's work together to uncover any useful information. #justiceforCharlie",
+        "Diana: Let's not forget that we're trying to find the person responsible for Charlie's death. Any new information could potentially help in our investigation. #justiceforCharlie",
+        "Alice: I've noticed a pattern in our discussions. Let's keep our focus on gathering information, not on assumptions or emotions. #stayfocused #justiceforCharlie",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm saddened by Charlie's sudden demise. Let's all try to find out who did this heinous deed. Rest in peace, Charlie. #justiceforCharlie",
+        "You said: I agree, we need to find out who was responsible for Charlie's death. Let's stay focused and share any suspicious information we have. #justiceforCharlie",
+        "Bob: I share Alice's sentiment towards Charlie's passing. Let's trust the investigation will lead us to the truth. #justiceforCharlie",
+        "Bob: I'd like to propose we focus on identifying the cause of Charlie's death rather than pointing fingers. Let's work together to uncover any useful information. #justiceforCharlie",
+        "You said: Let's not forget that we're trying to find the person responsible for Charlie's death. Any new information could potentially help in our investigation. #justiceforCharlie",
+        "Alice: I've noticed a pattern in our discussions. Let's keep our focus on gathering information, not on assumptions or emotions. #stayfocused #justiceforCharlie",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

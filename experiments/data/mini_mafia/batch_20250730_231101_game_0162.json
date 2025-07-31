@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0162",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 162,
+  "timestamp": "2025-07-31T00:03:48.954679",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's remain vigilant to ensure justice is served.",
+        "You said: I agree with Charlie, let's stay vigilant and focus on identifying the mafioso among us. Our investigation should be thorough to ensure justice prevails.",
+        "Diana: I'm saddened by Alice's passing. Let's all work together to ensure the mafia doesn't strike again. We need to stay focused and vigilant.",
+        "Diana: Let's not jump to conclusions. We should all work together and trust each other to ensure the mafia doesn't have a chance to strike again.",
+        "Charlie: Let's not forget Alice's tragic fate. We must unite and closely examine each other to root out the mafia. Vigilance is key.",
+        "You said: Let's not overlook the suspicious pattern of events. We must examine Diana's statements carefully and consider her involvement in Alice's death. Vigilance and thorough investigation are our best...",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Charlie, Charlie voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's remain vigilant to ensure justice is served.",
+        "Bob: I agree with Charlie, let's stay vigilant and focus on identifying the mafioso among us. Our investigation should be thorough to ensure justice prevails.",
+        "Diana: I'm saddened by Alice's passing. Let's all work together to ensure the mafia doesn't strike again. We need to stay focused and vigilant.",
+        "Diana: Let's not jump to conclusions. We should all work together and trust each other to ensure the mafia doesn't have a chance to strike again.",
+        "You said: Let's not forget Alice's tragic fate. We must unite and closely examine each other to root out the mafia. Vigilance is key.",
+        "Bob: Let's not overlook the suspicious pattern of events. We must examine Diana's statements carefully and consider her involvement in Alice's death. Vigilance and thorough investigation are our best...",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Charlie, Charlie voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's remain vigilant to ensure justice is served.",
+        "Bob: I agree with Charlie, let's stay vigilant and focus on identifying the mafioso among us. Our investigation should be thorough to ensure justice prevails.",
+        "You said: I'm saddened by Alice's passing. Let's all work together to ensure the mafia doesn't strike again. We need to stay focused and vigilant.",
+        "You said: Let's not jump to conclusions. We should all work together and trust each other to ensure the mafia doesn't have a chance to strike again.",
+        "Charlie: Let's not forget Alice's tragic fate. We must unite and closely examine each other to root out the mafia. Vigilance is key.",
+        "Bob: Let's not overlook the suspicious pattern of events. We must examine Diana's statements carefully and consider her involvement in Alice's death. Vigilance and thorough investigation are our best..."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

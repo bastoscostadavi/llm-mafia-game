@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0707",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 707,
+  "timestamp": "2025-07-30T20:22:50.261891",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Diana's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Bob: I agree with Alice, let's work together to find out what happened to Diana. Our safety depends on it.",
+        "Bob: Let's not jump to conclusions based on assumptions. We need solid evidence to ensure justice for Diana. Let's focus on gathering information.",
+        "Charlie: Let's not forget that we need to support each other during this time. Let's focus on finding the truth together, but let's also show compassion and understanding. We're in this together.",
+        "You said: Let's not forget that Diana was a valuable member of our group. Let's work together to find out who is responsible for her death and bring them to justice. Our safety depends on it. #JusticeForDiana...",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Diana's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "You said: I agree with Alice, let's work together to find out what happened to Diana. Our safety depends on it.",
+        "You said: Let's not jump to conclusions based on assumptions. We need solid evidence to ensure justice for Diana. Let's focus on gathering information.",
+        "Charlie: Let's not forget that we need to support each other during this time. Let's focus on finding the truth together, but let's also show compassion and understanding. We're in this together.",
+        "Alice: Let's not forget that Diana was a valuable member of our group. Let's work together to find out who is responsible for her death and bring them to justice. Our safety depends on it. #JusticeForDiana..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Diana's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Bob: I agree with Alice, let's work together to find out what happened to Diana. Our safety depends on it.",
+        "Bob: Let's not jump to conclusions based on assumptions. We need solid evidence to ensure justice for Diana. Let's focus on gathering information.",
+        "You said: Let's not forget that we need to support each other during this time. Let's focus on finding the truth together, but let's also show compassion and understanding. We're in this together.",
+        "Alice: Let's not forget that Diana was a valuable member of our group. Let's work together to find out who is responsible for her death and bring them to justice. Our safety depends on it. #JusticeForDiana...",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

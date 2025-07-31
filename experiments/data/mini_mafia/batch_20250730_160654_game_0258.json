@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0258",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 258,
+  "timestamp": "2025-07-30T17:37:45.988485",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's passing. Let's all take a moment to remember her. We need to find who did this and bring them to justice. Let's work together and share any clues we have....",
+        "Charlie: I agree, let's work together to find the culprit and bring them to justice. My condolences to Diana's family.",
+        "You said: I agree, let's work together to find the culprit and bring them to justice. My thoughts are with Diana and her family during this difficult time.",
+        "Charlie: I support our efforts to find the culprit behind Diana's death. Let's stay focused and share any relevant information we have.",
+        "You said: Let's not jump to conclusions. We should gather more information before making any accusations. The culprit may be among us, but let's not let fear cloud our judgement. Let's work together and share...",
+        "Bob: Let's keep our focus on finding Diana's killer. Any new information or clues, no matter how small, could help us bring justice. Let's continue our investigation together.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's passing. Let's all take a moment to remember her. We need to find who did this and bring them to justice. Let's work together and share any clues we have....",
+        "Charlie: I agree, let's work together to find the culprit and bring them to justice. My condolences to Diana's family.",
+        "Alice: I agree, let's work together to find the culprit and bring them to justice. My thoughts are with Diana and her family during this difficult time.",
+        "Charlie: I support our efforts to find the culprit behind Diana's death. Let's stay focused and share any relevant information we have.",
+        "Alice: Let's not jump to conclusions. We should gather more information before making any accusations. The culprit may be among us, but let's not let fear cloud our judgement. Let's work together and share...",
+        "You said: Let's keep our focus on finding Diana's killer. Any new information or clues, no matter how small, could help us bring justice. Let's continue our investigation together."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's passing. Let's all take a moment to remember her. We need to find who did this and bring them to justice. Let's work together and share any clues we have....",
+        "You said: I agree, let's work together to find the culprit and bring them to justice. My condolences to Diana's family.",
+        "Alice: I agree, let's work together to find the culprit and bring them to justice. My thoughts are with Diana and her family during this difficult time.",
+        "You said: I support our efforts to find the culprit behind Diana's death. Let's stay focused and share any relevant information we have.",
+        "Alice: Let's not jump to conclusions. We should gather more information before making any accusations. The culprit may be among us, but let's not let fear cloud our judgement. Let's work together and share...",
+        "Bob: Let's keep our focus on finding Diana's killer. Any new information or clues, no matter how small, could help us bring justice. Let's continue our investigation together.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

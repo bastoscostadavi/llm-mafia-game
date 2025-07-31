@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0275",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 275,
+  "timestamp": "2025-07-30T13:54:42.892266",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Diana, let's be vigilant tonight. We should all keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Alice and Diana, let's be cautious tonight. However, I'm particularly concerned about the moon's phase affecting our investigation. What do you all think?",
+        "Bob: I'd like to suggest we discuss the possible impact of the moon's phase on our investigation. Let's share our thoughts.",
+        "You said: I think the moon's phase could potentially affect our investigation, but we should focus on observing each other's behavior as well. Let's work together to ensure everyone's safety tonight.",
+        "Diana: I'd like to reiterate the importance of keeping a close eye on each other's behavior tonight, given the potential impact of the moon's phase on our investigation. Let's stay vigilant.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "Alice: I agree with Diana, let's be vigilant tonight. We should all keep an eye out for any suspicious behavior.",
+        "You said: I agree with Alice and Diana, let's be cautious tonight. However, I'm particularly concerned about the moon's phase affecting our investigation. What do you all think?",
+        "You said: I'd like to suggest we discuss the possible impact of the moon's phase on our investigation. Let's share our thoughts.",
+        "Alice: I think the moon's phase could potentially affect our investigation, but we should focus on observing each other's behavior as well. Let's work together to ensure everyone's safety tonight.",
+        "Diana: I'd like to reiterate the importance of keeping a close eye on each other's behavior tonight, given the potential impact of the moon's phase on our investigation. Let's stay vigilant."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "Alice: I agree with Diana, let's be vigilant tonight. We should all keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Alice and Diana, let's be cautious tonight. However, I'm particularly concerned about the moon's phase affecting our investigation. What do you all think?",
+        "Bob: I'd like to suggest we discuss the possible impact of the moon's phase on our investigation. Let's share our thoughts.",
+        "Alice: I think the moon's phase could potentially affect our investigation, but we should focus on observing each other's behavior as well. Let's work together to ensure everyone's safety tonight.",
+        "You said: I'd like to reiterate the importance of keeping a close eye on each other's behavior tonight, given the potential impact of the moon's phase on our investigation. Let's stay vigilant.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

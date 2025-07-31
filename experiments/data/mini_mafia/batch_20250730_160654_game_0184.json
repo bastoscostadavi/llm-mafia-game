@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0184",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 184,
+  "timestamp": "2025-07-30T17:11:27.483988",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to figure out what happened.",
+        "Charlie: I'm saddened by Alice's death. Let's focus on finding out who did this to ensure justice is served. Bob, do you have an alibi for last night?",
+        "You said: I'm deeply saddened by Alice's passing. Let's all work together to ensure justice is served and find out who did this.",
+        "Charlie: Let's remain focused on uncovering the truth about Alice's death. Bob, can you provide an alibi for last night?",
+        "Diana: Let's not jump to conclusions. We need to remain calm and focused on gathering information to uncover the truth about Alice's death.",
+        "You said: I agree with Diana. Let's stay focused and calm to ensure we gather all necessary information for solving this tragic mystery."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to figure out what happened.",
+        "You said: I'm saddened by Alice's death. Let's focus on finding out who did this to ensure justice is served. Bob, do you have an alibi for last night?",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all work together to ensure justice is served and find out who did this.",
+        "You said: Let's remain focused on uncovering the truth about Alice's death. Bob, can you provide an alibi for last night?",
+        "Diana: Let's not jump to conclusions. We need to remain calm and focused on gathering information to uncover the truth about Alice's death.",
+        "Bob: I agree with Diana. Let's stay focused and calm to ensure we gather all necessary information for solving this tragic mystery.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to figure out what happened.",
+        "Charlie: I'm saddened by Alice's death. Let's focus on finding out who did this to ensure justice is served. Bob, do you have an alibi for last night?",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all work together to ensure justice is served and find out who did this.",
+        "Charlie: Let's remain focused on uncovering the truth about Alice's death. Bob, can you provide an alibi for last night?",
+        "You said: Let's not jump to conclusions. We need to remain calm and focused on gathering information to uncover the truth about Alice's death.",
+        "Bob: I agree with Diana. Let's stay focused and calm to ensure we gather all necessary information for solving this tragic mystery.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

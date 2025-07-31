@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0496",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 496,
+  "timestamp": "2025-07-31T01:52:24.896587",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Charlie, let's all stay vigilant. The sudden disappearance of Diana is concerning.",
+        "You said: I share Charlie and Bob's concerns about Diana's sudden disappearance. Let's work together to uncover the truth.",
+        "Bob: Let's not jump to conclusions, but we should remain vigilant following Diana's disappearance.",
+        "Charlie: Let's not overlook the fact that Diana is missing. We need to investigate thoroughly to ensure everyone's safety.",
+        "You said: Let's not forget the importance of trust and cooperation in our investigation. We should discuss any suspicious behavior and work together to uncover the truth behind Diana's disappearance.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Charlie, let's all stay vigilant. The sudden disappearance of Diana is concerning.",
+        "Alice: I share Charlie and Bob's concerns about Diana's sudden disappearance. Let's work together to uncover the truth.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant following Diana's disappearance.",
+        "Charlie: Let's not overlook the fact that Diana is missing. We need to investigate thoroughly to ensure everyone's safety.",
+        "Alice: Let's not forget the importance of trust and cooperation in our investigation. We should discuss any suspicious behavior and work together to uncover the truth behind Diana's disappearance.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Charlie, let's all stay vigilant. The sudden disappearance of Diana is concerning.",
+        "Alice: I share Charlie and Bob's concerns about Diana's sudden disappearance. Let's work together to uncover the truth.",
+        "Bob: Let's not jump to conclusions, but we should remain vigilant following Diana's disappearance.",
+        "You said: Let's not overlook the fact that Diana is missing. We need to investigate thoroughly to ensure everyone's safety.",
+        "Alice: Let's not forget the importance of trust and cooperation in our investigation. We should discuss any suspicious behavior and work together to uncover the truth behind Diana's disappearance."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

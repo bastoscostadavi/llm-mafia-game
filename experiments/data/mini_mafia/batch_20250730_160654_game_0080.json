@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0080",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 80,
+  "timestamp": "2025-07-30T16:35:01.680224",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. We should all stay vigilant and try to figure out what happened.",
+        "Charlie: I agree with Alice, let's all work together to uncover the truth behind Diana's death. If anyone has any information, please share it now.",
+        "Bob: I'm saddened by Diana's passing and urge everyone to share any suspicious activities or information they may have witnessed. Let's work together to bring justice for Diana.",
+        "Charlie: I share Alice's sentiments and urge us all to remain vigilant in our search for the truth behind Diana's death. Let's work together to uncover any clues or information that may help us understand...",
+        "You said: Let's not jump to conclusions. We need to gather more information before making any accusations.",
+        "Bob: Let's not forget that we have valuable information about a suspected mafioso in our midst. We should consider this seriously to ensure everyone's safety.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. We should all stay vigilant and try to figure out what happened.",
+        "Charlie: I agree with Alice, let's all work together to uncover the truth behind Diana's death. If anyone has any information, please share it now.",
+        "You said: I'm saddened by Diana's passing and urge everyone to share any suspicious activities or information they may have witnessed. Let's work together to bring justice for Diana.",
+        "Charlie: I share Alice's sentiments and urge us all to remain vigilant in our search for the truth behind Diana's death. Let's work together to uncover any clues or information that may help us understand...",
+        "Alice: Let's not jump to conclusions. We need to gather more information before making any accusations.",
+        "You said: Let's not forget that we have valuable information about a suspected mafioso in our midst. We should consider this seriously to ensure everyone's safety.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. We should all stay vigilant and try to figure out what happened.",
+        "You said: I agree with Alice, let's all work together to uncover the truth behind Diana's death. If anyone has any information, please share it now.",
+        "Bob: I'm saddened by Diana's passing and urge everyone to share any suspicious activities or information they may have witnessed. Let's work together to bring justice for Diana.",
+        "You said: I share Alice's sentiments and urge us all to remain vigilant in our search for the truth behind Diana's death. Let's work together to uncover any clues or information that may help us understand...",
+        "Alice: Let's not jump to conclusions. We need to gather more information before making any accusations.",
+        "Bob: Let's not forget that we have valuable information about a suspected mafioso in our midst. We should consider this seriously to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

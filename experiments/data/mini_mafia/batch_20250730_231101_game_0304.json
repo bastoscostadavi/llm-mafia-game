@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0304",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 304,
+  "timestamp": "2025-07-31T00:50:04.136698",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden passing. Let's all be cautious and support each other during this difficult time.",
+        "Diana: I agree with Charlie, let's support each other during this sad time. But let's also stay vigilant and keep an eye on any suspicious behavior.",
+        "You said: I echo Charlie and Diana's sentiments. Let's come together during this tough time. But remember, we cannot let our guard down. Rest in peace, Alice. #Support #Vigilance",
+        "Charlie: Let's continue our support for each other during this trying time, while maintaining vigilance. #Unity #Caution",
+        "Diana: Let's not forget the importance of vigilance amidst our support and unity. We must stay observant to ensure Alice's death isn't in vain. #Vigilance #JusticeForAlice",
+        "You said: Let's not forget the importance of unity in times of sorrow and adversity. Let's continue our support for each other while staying vigilant. Rest in peace, Alice. #Unity #Vigilance"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden passing. Let's all be cautious and support each other during this difficult time.",
+        "Diana: I agree with Charlie, let's support each other during this sad time. But let's also stay vigilant and keep an eye on any suspicious behavior.",
+        "Bob: I echo Charlie and Diana's sentiments. Let's come together during this tough time. But remember, we cannot let our guard down. Rest in peace, Alice. #Support #Vigilance",
+        "You said: Let's continue our support for each other during this trying time, while maintaining vigilance. #Unity #Caution",
+        "Diana: Let's not forget the importance of vigilance amidst our support and unity. We must stay observant to ensure Alice's death isn't in vain. #Vigilance #JusticeForAlice",
+        "Bob: Let's not forget the importance of unity in times of sorrow and adversity. Let's continue our support for each other while staying vigilant. Rest in peace, Alice. #Unity #Vigilance",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden passing. Let's all be cautious and support each other during this difficult time.",
+        "You said: I agree with Charlie, let's support each other during this sad time. But let's also stay vigilant and keep an eye on any suspicious behavior.",
+        "Bob: I echo Charlie and Diana's sentiments. Let's come together during this tough time. But remember, we cannot let our guard down. Rest in peace, Alice. #Support #Vigilance",
+        "Charlie: Let's continue our support for each other during this trying time, while maintaining vigilance. #Unity #Caution",
+        "You said: Let's not forget the importance of vigilance amidst our support and unity. We must stay observant to ensure Alice's death isn't in vain. #Vigilance #JusticeForAlice",
+        "Bob: Let's not forget the importance of unity in times of sorrow and adversity. Let's continue our support for each other while staying vigilant. Rest in peace, Alice. #Unity #Vigilance",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

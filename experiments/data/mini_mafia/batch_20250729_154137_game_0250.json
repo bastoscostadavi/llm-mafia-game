@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0250",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 250,
+  "timestamp": "2025-07-29T17:16:36.596394",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's work together to find out what happened.\n\n(This message is intended to encourage discussion and collaboration among the players. It's important to keep in...",
+        "You said: I'm saddened by Alice's passing. Let's all remain vigilant during this investigation to ensure justice is served.",
+        "Diana: I agree with Charlie, let's work together to uncover the truth behind Alice's death. My condolences to everyone.",
+        "You said: I'd like to offer my assistance in the investigation, let's work together to uncover the truth behind Alice's death. May her memory be a blessing to us all.",
+        "Charlie: I'd like to suggest focusing our discussion on potential leads or clues related to Alice's death. Let's stay calm and methodical in our investigation.",
+        "Diana: Let's keep our focus on potential clues and leads related to Alice's death. Our collaboration is key to finding the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's work together to find out what happened.\n\n(This message is intended to encourage discussion and collaboration among the players. It's important to keep in...",
+        "Bob: I'm saddened by Alice's passing. Let's all remain vigilant during this investigation to ensure justice is served.",
+        "Diana: I agree with Charlie, let's work together to uncover the truth behind Alice's death. My condolences to everyone.",
+        "Bob: I'd like to offer my assistance in the investigation, let's work together to uncover the truth behind Alice's death. May her memory be a blessing to us all.",
+        "You said: I'd like to suggest focusing our discussion on potential leads or clues related to Alice's death. Let's stay calm and methodical in our investigation.",
+        "Diana: Let's keep our focus on potential clues and leads related to Alice's death. Our collaboration is key to finding the truth.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's work together to find out what happened.\n\n(This message is intended to encourage discussion and collaboration among the players. It's important to keep in...",
+        "Bob: I'm saddened by Alice's passing. Let's all remain vigilant during this investigation to ensure justice is served.",
+        "You said: I agree with Charlie, let's work together to uncover the truth behind Alice's death. My condolences to everyone.",
+        "Bob: I'd like to offer my assistance in the investigation, let's work together to uncover the truth behind Alice's death. May her memory be a blessing to us all.",
+        "Charlie: I'd like to suggest focusing our discussion on potential leads or clues related to Alice's death. Let's stay calm and methodical in our investigation.",
+        "You said: Let's keep our focus on potential clues and leads related to Alice's death. Our collaboration is key to finding the truth.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0119",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 119,
+  "timestamp": "2025-07-30T23:49:51.456375",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm surprised by the sudden turn of events. Let's all stay focused and try to uncover the truth behind Alice's death.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's work together to find out what happened and ensure justice is served.",
+        "You said: I'm saddened by Alice's death. Let's all remain calm and work together to find out who among us is responsible for this heinous act.",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any accusations.",
+        "You said: Let's not forget the importance of communication and cooperation in solving this mystery. We all need to share any relevant information we have.",
+        "Charlie: Let's not forget that the detective has important information. We should consider their investigation results carefully.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm surprised by the sudden turn of events. Let's all stay focused and try to uncover the truth behind Alice's death.",
+        "You said: I'm shocked by Alice's sudden death. Let's work together to find out what happened and ensure justice is served.",
+        "Bob: I'm saddened by Alice's death. Let's all remain calm and work together to find out who among us is responsible for this heinous act.",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any accusations.",
+        "Bob: Let's not forget the importance of communication and cooperation in solving this mystery. We all need to share any relevant information we have.",
+        "You said: Let's not forget that the detective has important information. We should consider their investigation results carefully.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm surprised by the sudden turn of events. Let's all stay focused and try to uncover the truth behind Alice's death.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's work together to find out what happened and ensure justice is served.",
+        "Bob: I'm saddened by Alice's death. Let's all remain calm and work together to find out who among us is responsible for this heinous act.",
+        "You said: Let's not jump to conclusions. We need to gather more information before making any accusations.",
+        "Bob: Let's not forget the importance of communication and cooperation in solving this mystery. We all need to share any relevant information we have.",
+        "Charlie: Let's not forget that the detective has important information. We should consider their investigation results carefully."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

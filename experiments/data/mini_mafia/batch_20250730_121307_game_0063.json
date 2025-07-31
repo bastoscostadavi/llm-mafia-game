@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0063",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 63,
+  "timestamp": "2025-07-30T12:34:59.612302",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I agree with Diana, let's support each other during this difficult time. Let's also keep an eye out for any suspicious behavior.",
+        "Bob: I'm saddened by Charlie's death and agree with Diana and Alice about staying vigilant and supporting each other. However, let's be extra cautious during the night phase.",
+        "You said: I'd like to propose that we form a tight-knit group to protect each other during the night phase. Let's discuss potential strategies and show solidarity. #teamwork #safetyfirst",
+        "Bob: I support Alice's proposal for a tight-knit group during the night phase. Let's work together to ensure everyone's safety. #safetyfirst #teamwork",
+        "Diana: I echo Alice and Bob's sentiments about staying vigilant and supporting each other. Let's work together to uncover the truth behind Charlie's death. #justiceforcharlie #unitedwestand"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Alice: I agree with Diana, let's support each other during this difficult time. Let's also keep an eye out for any suspicious behavior.",
+        "You said: I'm saddened by Charlie's death and agree with Diana and Alice about staying vigilant and supporting each other. However, let's be extra cautious during the night phase.",
+        "Alice: I'd like to propose that we form a tight-knit group to protect each other during the night phase. Let's discuss potential strategies and show solidarity. #teamwork #safetyfirst",
+        "You said: I support Alice's proposal for a tight-knit group during the night phase. Let's work together to ensure everyone's safety. #safetyfirst #teamwork",
+        "Diana: I echo Alice and Bob's sentiments about staying vigilant and supporting each other. Let's work together to uncover the truth behind Charlie's death. #justiceforcharlie #unitedwestand",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Alice: I agree with Diana, let's support each other during this difficult time. Let's also keep an eye out for any suspicious behavior.",
+        "Bob: I'm saddened by Charlie's death and agree with Diana and Alice about staying vigilant and supporting each other. However, let's be extra cautious during the night phase.",
+        "Alice: I'd like to propose that we form a tight-knit group to protect each other during the night phase. Let's discuss potential strategies and show solidarity. #teamwork #safetyfirst",
+        "Bob: I support Alice's proposal for a tight-knit group during the night phase. Let's work together to ensure everyone's safety. #safetyfirst #teamwork",
+        "You said: I echo Alice and Bob's sentiments about staying vigilant and supporting each other. Let's work together to uncover the truth behind Charlie's death. #justiceforcharlie #unitedwestand",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

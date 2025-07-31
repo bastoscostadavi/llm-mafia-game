@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0612",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 612,
+  "timestamp": "2025-07-31T02:29:41.288464",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's sudden passing. Let's all try to support each other during this difficult time.",
+        "Bob: I'm deeply saddened by Charlie's death and would like to express my condolences to his family. Let's be vigilant and ensure justice is served.",
+        "You said: I join you all in mourning Charlie's loss. Let's keep our spirits high and remember the good times we had with him.",
+        "Diana: I agree with Bob, let's stay vigilant and ensure justice is served for Charlie.",
+        "Bob: Let's not let Charlie's death distract us from our mission. We need to stay focused and find the mafioso among us. Our silence is a tribute to Charlie, but our actions will bring justice.",
+        "You said: I agree with Bob, let's stay focused and find the mafioso among us. Our condolences to Charlie's family."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's sudden passing. Let's all try to support each other during this difficult time.",
+        "You said: I'm deeply saddened by Charlie's death and would like to express my condolences to his family. Let's be vigilant and ensure justice is served.",
+        "Alice: I join you all in mourning Charlie's loss. Let's keep our spirits high and remember the good times we had with him.",
+        "Diana: I agree with Bob, let's stay vigilant and ensure justice is served for Charlie.",
+        "You said: Let's not let Charlie's death distract us from our mission. We need to stay focused and find the mafioso among us. Our silence is a tribute to Charlie, but our actions will bring justice.",
+        "Alice: I agree with Bob, let's stay focused and find the mafioso among us. Our condolences to Charlie's family.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden passing. Let's all try to support each other during this difficult time.",
+        "Bob: I'm deeply saddened by Charlie's death and would like to express my condolences to his family. Let's be vigilant and ensure justice is served.",
+        "Alice: I join you all in mourning Charlie's loss. Let's keep our spirits high and remember the good times we had with him.",
+        "You said: I agree with Bob, let's stay vigilant and ensure justice is served for Charlie.",
+        "Bob: Let's not let Charlie's death distract us from our mission. We need to stay focused and find the mafioso among us. Our silence is a tribute to Charlie, but our actions will bring justice.",
+        "Alice: I agree with Bob, let's stay focused and find the mafioso among us. Our condolences to Charlie's family.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

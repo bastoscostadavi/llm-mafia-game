@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0247",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 247,
+  "timestamp": "2025-07-31T00:31:33.000383",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep a close eye on each other.",
+        "Charlie: I agree with Diana, let's all keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Diana and Charlie's concerns. Let's work together to ensure everyone's safety and find out what happened to Alice.",
+        "Diana: Let's not jump to conclusions, but remain vigilant and continue our investigation into Alice's disappearance. We should all trust but verify.",
+        "You said: Let's continue our investigation into Alice's disappearance and maintain vigilance as a team. We cannot let our guard down. #SafetyFirst #JusticeForAlice",
+        "Charlie: I'd like to add that we should all remain calm and collected in our investigation. Let's not let fear or suspicion cloud our judgment. #StayFocused #JusticeForAlice",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep a close eye on each other.",
+        "You said: I agree with Diana, let's all keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I share Diana and Charlie's concerns. Let's work together to ensure everyone's safety and find out what happened to Alice.",
+        "Diana: Let's not jump to conclusions, but remain vigilant and continue our investigation into Alice's disappearance. We should all trust but verify.",
+        "Bob: Let's continue our investigation into Alice's disappearance and maintain vigilance as a team. We cannot let our guard down. #SafetyFirst #JusticeForAlice",
+        "You said: I'd like to add that we should all remain calm and collected in our investigation. Let's not let fear or suspicion cloud our judgment. #StayFocused #JusticeForAlice",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep a close eye on each other.",
+        "Charlie: I agree with Diana, let's all keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I share Diana and Charlie's concerns. Let's work together to ensure everyone's safety and find out what happened to Alice.",
+        "You said: Let's not jump to conclusions, but remain vigilant and continue our investigation into Alice's disappearance. We should all trust but verify.",
+        "Bob: Let's continue our investigation into Alice's disappearance and maintain vigilance as a team. We cannot let our guard down. #SafetyFirst #JusticeForAlice",
+        "Charlie: I'd like to add that we should all remain calm and collected in our investigation. Let's not let fear or suspicion cloud our judgment. #StayFocused #JusticeForAlice"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

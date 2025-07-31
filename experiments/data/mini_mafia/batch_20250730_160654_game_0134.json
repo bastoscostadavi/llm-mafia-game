@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0134",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 134,
+  "timestamp": "2025-07-30T16:54:01.449278",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's stay vigilant and discuss any suspicious behavior we notice.",
+        "Diana: I agree with Alice, let's keep a close eye on any unusual activities. Rest in peace, Charlie.",
+        "Bob: I share Diana's sentiments about Charlie. Let's all remember him fondly and stay focused on the task at hand.",
+        "Diana: Let's not jump to conclusions, but let's remain vigilant and observe any unusual behavior. Our thoughts are with Charlie.",
+        "Bob: Let's honor Charlie's memory and stay focused on our mission. Any unusual behavior should be reported. R.I.P Charlie.",
+        "You said: Let's not overlook Bob's suspicious behavior towards Charlie. We should consider him a potential suspect. Stay vigilant, team.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's stay vigilant and discuss any suspicious behavior we notice.",
+        "Diana: I agree with Alice, let's keep a close eye on any unusual activities. Rest in peace, Charlie.",
+        "You said: I share Diana's sentiments about Charlie. Let's all remember him fondly and stay focused on the task at hand.",
+        "Diana: Let's not jump to conclusions, but let's remain vigilant and observe any unusual behavior. Our thoughts are with Charlie.",
+        "You said: Let's honor Charlie's memory and stay focused on our mission. Any unusual behavior should be reported. R.I.P Charlie.",
+        "Alice: Let's not overlook Bob's suspicious behavior towards Charlie. We should consider him a potential suspect. Stay vigilant, team."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's stay vigilant and discuss any suspicious behavior we notice.",
+        "You said: I agree with Alice, let's keep a close eye on any unusual activities. Rest in peace, Charlie.",
+        "Bob: I share Diana's sentiments about Charlie. Let's all remember him fondly and stay focused on the task at hand.",
+        "You said: Let's not jump to conclusions, but let's remain vigilant and observe any unusual behavior. Our thoughts are with Charlie.",
+        "Bob: Let's honor Charlie's memory and stay focused on our mission. Any unusual behavior should be reported. R.I.P Charlie.",
+        "Alice: Let's not overlook Bob's suspicious behavior towards Charlie. We should consider him a potential suspect. Stay vigilant, team.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0750",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 750,
+  "timestamp": "2025-07-31T03:14:31.682289",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's be extra vigilant tonight.",
+        "Diana: I agree with Bob, let's all stay alert tonight. We should ensure the safety of our group.",
+        "You said: \"I support the idea of staying alert tonight. Let's work together to ensure everyone's safety.\"",
+        "You said: Let's all remain calm and focused. Vigilance is key to ensuring everyone's safety.",
+        "Diana: Let's maintain our vigilance tonight. Safety should be our top priority.",
+        "Bob: Let's continue our vigilance tonight to ensure everyone's safety. Suspicious activities should be reported.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Bob, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's be extra vigilant tonight.",
+        "Diana: I agree with Bob, let's all stay alert tonight. We should ensure the safety of our group.",
+        "Alice: \"I support the idea of staying alert tonight. Let's work together to ensure everyone's safety.\"",
+        "Alice: Let's all remain calm and focused. Vigilance is key to ensuring everyone's safety.",
+        "Diana: Let's maintain our vigilance tonight. Safety should be our top priority.",
+        "You said: Let's continue our vigilance tonight to ensure everyone's safety. Suspicious activities should be reported.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Bob, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's be extra vigilant tonight.",
+        "You said: I agree with Bob, let's all stay alert tonight. We should ensure the safety of our group.",
+        "Alice: \"I support the idea of staying alert tonight. Let's work together to ensure everyone's safety.\"",
+        "Alice: Let's all remain calm and focused. Vigilance is key to ensuring everyone's safety.",
+        "You said: Let's maintain our vigilance tonight. Safety should be our top priority.",
+        "Bob: Let's continue our vigilance tonight to ensure everyone's safety. Suspicious activities should be reported."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

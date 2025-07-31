@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0966",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 966,
+  "timestamp": "2025-07-30T21:48:54.950060",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all stay vigilant. There's something strange about Alice's disappearance.",
+        "Charlie: I also find Alice's disappearance strange and concerning. Let's work together to uncover what happened.",
+        "Charlie: I'm worried about Alice's sudden disappearance and think we should all share any suspicious observations or concerns. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to remind everyone that we should all share any suspicious observations or concerns we have to ensure everyone's safety. Let's work together to uncover the truth about Alice's disappearance.",
+        "You said: I'm also worried about Alice's sudden disappearance and think we should all share any suspicious observations or concerns. Let's work together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all stay vigilant. There's something strange about Alice's disappearance.",
+        "You said: I also find Alice's disappearance strange and concerning. Let's work together to uncover what happened.",
+        "You said: I'm worried about Alice's sudden disappearance and think we should all share any suspicious observations or concerns. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to remind everyone that we should all share any suspicious observations or concerns we have to ensure everyone's safety. Let's work together to uncover the truth about Alice's disappearance.",
+        "Bob: I'm also worried about Alice's sudden disappearance and think we should all share any suspicious observations or concerns. Let's work together to ensure everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all stay vigilant. There's something strange about Alice's disappearance.",
+        "Charlie: I also find Alice's disappearance strange and concerning. Let's work together to uncover what happened.",
+        "Charlie: I'm worried about Alice's sudden disappearance and think we should all share any suspicious observations or concerns. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to remind everyone that we should all share any suspicious observations or concerns we have to ensure everyone's safety. Let's work together to uncover the truth about Alice's disappearance.",
+        "Bob: I'm also worried about Alice's sudden disappearance and think we should all share any suspicious observations or concerns. Let's work together to ensure everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

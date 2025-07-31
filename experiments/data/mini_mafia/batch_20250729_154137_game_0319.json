@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0319",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 319,
+  "timestamp": "2025-07-29T17:41:57.735680",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's sudden demise. Let's all try to support each other during this difficult time. But be vigilant, as we don't know who could be behind this. Bob, if you have any...",
+        "Bob: I agree with Alice, let's support each other during this sad time. But we must also remain vigilant. Remember, anyone could be capable of such a heinous act.",
+        "Charlie: I agree with Alice and Bob, let's support each other during this sad time. But we must also remain vigilant and keep an eye out for any suspicious behavior.",
+        "You said: Let's stay united and find out who among us is responsible for Diana's death. Vigilance is key.",
+        "Charlie: Let's not jump to conclusions. We need to remain calm and collected to ensure we make the right decisions. We must work together to uncover the truth behind Diana's death.",
+        "Bob: Let's not forget that we've lost a valuable member of our group. Let's focus on supporting each other during this time while keeping a watchful eye for any suspicious activity."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm deeply saddened by Diana's sudden demise. Let's all try to support each other during this difficult time. But be vigilant, as we don't know who could be behind this. Bob, if you have any...",
+        "You said: I agree with Alice, let's support each other during this sad time. But we must also remain vigilant. Remember, anyone could be capable of such a heinous act.",
+        "Charlie: I agree with Alice and Bob, let's support each other during this sad time. But we must also remain vigilant and keep an eye out for any suspicious behavior.",
+        "Alice: Let's stay united and find out who among us is responsible for Diana's death. Vigilance is key.",
+        "Charlie: Let's not jump to conclusions. We need to remain calm and collected to ensure we make the right decisions. We must work together to uncover the truth behind Diana's death.",
+        "You said: Let's not forget that we've lost a valuable member of our group. Let's focus on supporting each other during this time while keeping a watchful eye for any suspicious activity.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm deeply saddened by Diana's sudden demise. Let's all try to support each other during this difficult time. But be vigilant, as we don't know who could be behind this. Bob, if you have any...",
+        "Bob: I agree with Alice, let's support each other during this sad time. But we must also remain vigilant. Remember, anyone could be capable of such a heinous act.",
+        "You said: I agree with Alice and Bob, let's support each other during this sad time. But we must also remain vigilant and keep an eye out for any suspicious behavior.",
+        "Alice: Let's stay united and find out who among us is responsible for Diana's death. Vigilance is key.",
+        "You said: Let's not jump to conclusions. We need to remain calm and collected to ensure we make the right decisions. We must work together to uncover the truth behind Diana's death.",
+        "Bob: Let's not forget that we've lost a valuable member of our group. Let's focus on supporting each other during this time while keeping a watchful eye for any suspicious activity.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0375",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 375,
+  "timestamp": "2025-07-31T01:13:13.803605",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden passing. Let's all try to support each other during this difficult time.",
+        "You said: I second Diana's words. Let's support each other during this tough time. However, I'm concerned about Charlie's reaction to Alice's death. Let's keep a close eye on him.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all come together during this trying time. #solidarity #support #grief #healing #prayersforAlice",
+        "You said: I share in everyone's grief over Alice's passing. Let's continue to support each other during this challenging time. However, let's also keep a close eye on Charlie's behavior to ensure everyone's...",
+        "Charlie: I'd like to express my condolences to everyone on Alice's passing. Let's continue to support each other during this time of grief. #solidarity #support #grief #healing #prayersforAlice",
+        "Diana: I agree with Bob, let's all stay vigilant and support each other during this time. But we must not let our guard down. #stayalert #grief #support"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden passing. Let's all try to support each other during this difficult time.",
+        "Bob: I second Diana's words. Let's support each other during this tough time. However, I'm concerned about Charlie's reaction to Alice's death. Let's keep a close eye on him.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all come together during this trying time. #solidarity #support #grief #healing #prayersforAlice",
+        "Bob: I share in everyone's grief over Alice's passing. Let's continue to support each other during this challenging time. However, let's also keep a close eye on Charlie's behavior to ensure everyone's...",
+        "You said: I'd like to express my condolences to everyone on Alice's passing. Let's continue to support each other during this time of grief. #solidarity #support #grief #healing #prayersforAlice",
+        "Diana: I agree with Bob, let's all stay vigilant and support each other during this time. But we must not let our guard down. #stayalert #grief #support",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden passing. Let's all try to support each other during this difficult time.",
+        "Bob: I second Diana's words. Let's support each other during this tough time. However, I'm concerned about Charlie's reaction to Alice's death. Let's keep a close eye on him.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all come together during this trying time. #solidarity #support #grief #healing #prayersforAlice",
+        "Bob: I share in everyone's grief over Alice's passing. Let's continue to support each other during this challenging time. However, let's also keep a close eye on Charlie's behavior to ensure everyone's...",
+        "Charlie: I'd like to express my condolences to everyone on Alice's passing. Let's continue to support each other during this time of grief. #solidarity #support #grief #healing #prayersforAlice",
+        "You said: I agree with Bob, let's all stay vigilant and support each other during this time. But we must not let our guard down. #stayalert #grief #support",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

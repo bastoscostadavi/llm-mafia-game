@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0814",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 814,
+  "timestamp": "2025-07-31T03:35:10.504579",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant to ensure justice prevails.",
+        "Diana: I'd like to suggest focusing our investigation on Bob, given the unfortunate turn of events. Let's work together to unmask the mafia among us. #JusticeForCharlie",
+        "Bob: I agree with Diana that we should focus our investigation on the suspicious activities. Let's work together to uncover the truth behind Charlie's death. #JusticeForCharlie",
+        "Bob: Let's not jump to conclusions. We should consider all possibilities before making any decisions. #JusticeForCharlie #StayVigilant",
+        "Diana: Let's not forget that we've lost a valuable member of our group. Let's focus on finding the truth and bringing justice to Charlie. #JusticeForCharlie #StayVigilant",
+        "You said: Let's not forget that Diana and I are grieving the loss of a valued friend. Let's work together to ensure justice is served and prevent any further tragedies. #JusticeForCharlie #StayVigilant",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden demise. Let's all stay vigilant to ensure justice prevails.",
+        "Diana: I'd like to suggest focusing our investigation on Bob, given the unfortunate turn of events. Let's work together to unmask the mafia among us. #JusticeForCharlie",
+        "You said: I agree with Diana that we should focus our investigation on the suspicious activities. Let's work together to uncover the truth behind Charlie's death. #JusticeForCharlie",
+        "You said: Let's not jump to conclusions. We should consider all possibilities before making any decisions. #JusticeForCharlie #StayVigilant",
+        "Diana: Let's not forget that we've lost a valuable member of our group. Let's focus on finding the truth and bringing justice to Charlie. #JusticeForCharlie #StayVigilant",
+        "Alice: Let's not forget that Diana and I are grieving the loss of a valued friend. Let's work together to ensure justice is served and prevent any further tragedies. #JusticeForCharlie #StayVigilant",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden demise. Let's all stay vigilant to ensure justice prevails.",
+        "You said: I'd like to suggest focusing our investigation on Bob, given the unfortunate turn of events. Let's work together to unmask the mafia among us. #JusticeForCharlie",
+        "Bob: I agree with Diana that we should focus our investigation on the suspicious activities. Let's work together to uncover the truth behind Charlie's death. #JusticeForCharlie",
+        "Bob: Let's not jump to conclusions. We should consider all possibilities before making any decisions. #JusticeForCharlie #StayVigilant",
+        "You said: Let's not forget that we've lost a valuable member of our group. Let's focus on finding the truth and bringing justice to Charlie. #JusticeForCharlie #StayVigilant",
+        "Alice: Let's not forget that Diana and I are grieving the loss of a valued friend. Let's work together to ensure justice is served and prevent any further tragedies. #JusticeForCharlie #StayVigilant"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

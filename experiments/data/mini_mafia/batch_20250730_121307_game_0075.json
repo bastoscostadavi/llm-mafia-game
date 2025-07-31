@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0075",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 75,
+  "timestamp": "2025-07-30T12:39:18.967237",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm surprised by Alice's sudden departure. Let's all stay vigilant and work together to uncover the truth.",
+        "You said: I agree with Diana, let's keep an open communication and work together to find out what happened to Alice.",
+        "Charlie: I'm concerned about Alice's sudden departure and agree we need to stay vigilant. Let's trust but verify, and share any suspicious observations.",
+        "You said: I echo Charlie and Diana's sentiments. Let's remain vigilant and share any unusual observations we may have. Rest assured, I have none as of now.",
+        "Charlie: I'd like to share my concern about Alice's sudden departure and encourage everyone to remain vigilant. Let's trust but verify and communicate openly.",
+        "Diana: I'd like to add that we should all keep an open mind and consider the possibility of an external threat. Let's remain vigilant and communicate effectively.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm surprised by Alice's sudden departure. Let's all stay vigilant and work together to uncover the truth.",
+        "Bob: I agree with Diana, let's keep an open communication and work together to find out what happened to Alice.",
+        "You said: I'm concerned about Alice's sudden departure and agree we need to stay vigilant. Let's trust but verify, and share any suspicious observations.",
+        "Bob: I echo Charlie and Diana's sentiments. Let's remain vigilant and share any unusual observations we may have. Rest assured, I have none as of now.",
+        "You said: I'd like to share my concern about Alice's sudden departure and encourage everyone to remain vigilant. Let's trust but verify and communicate openly.",
+        "Diana: I'd like to add that we should all keep an open mind and consider the possibility of an external threat. Let's remain vigilant and communicate effectively."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm surprised by Alice's sudden departure. Let's all stay vigilant and work together to uncover the truth.",
+        "Bob: I agree with Diana, let's keep an open communication and work together to find out what happened to Alice.",
+        "Charlie: I'm concerned about Alice's sudden departure and agree we need to stay vigilant. Let's trust but verify, and share any suspicious observations.",
+        "Bob: I echo Charlie and Diana's sentiments. Let's remain vigilant and share any unusual observations we may have. Rest assured, I have none as of now.",
+        "Charlie: I'd like to share my concern about Alice's sudden departure and encourage everyone to remain vigilant. Let's trust but verify and communicate openly.",
+        "You said: I'd like to add that we should all keep an open mind and consider the possibility of an external threat. Let's remain vigilant and communicate effectively.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

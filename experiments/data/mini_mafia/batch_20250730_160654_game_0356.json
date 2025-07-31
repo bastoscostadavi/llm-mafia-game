@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0356",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 356,
+  "timestamp": "2025-07-30T18:13:38.848235",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other.",
+        "You said: I agree, let's be vigilant. It's important we ensure the safety of our group.",
+        "Charlie: I'm saddened by Alice's unexpected departure. Let's support each other during this difficult time and work together for our group's safety.",
+        "Charlie: Let's stay united and support each other during this trying time. We must remain vigilant to ensure Alice's passing is not in vain. #solidarity #villagerstrong.",
+        "You said: Let's not jump to conclusions. We should all mourn Alice's loss and focus on keeping our group strong. #solidarity #healing.",
+        "Diana: Let's not overlook the unusual circumstances surrounding Alice's departure. We must remain vigilant and support each other, but also ensure the safety of our group. #villagersafety #stayalert."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other.",
+        "Bob: I agree, let's be vigilant. It's important we ensure the safety of our group.",
+        "You said: I'm saddened by Alice's unexpected departure. Let's support each other during this difficult time and work together for our group's safety.",
+        "You said: Let's stay united and support each other during this trying time. We must remain vigilant to ensure Alice's passing is not in vain. #solidarity #villagerstrong.",
+        "Bob: Let's not jump to conclusions. We should all mourn Alice's loss and focus on keeping our group strong. #solidarity #healing.",
+        "Diana: Let's not overlook the unusual circumstances surrounding Alice's departure. We must remain vigilant and support each other, but also ensure the safety of our group. #villagersafety #stayalert.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other.",
+        "Bob: I agree, let's be vigilant. It's important we ensure the safety of our group.",
+        "Charlie: I'm saddened by Alice's unexpected departure. Let's support each other during this difficult time and work together for our group's safety.",
+        "Charlie: Let's stay united and support each other during this trying time. We must remain vigilant to ensure Alice's passing is not in vain. #solidarity #villagerstrong.",
+        "Bob: Let's not jump to conclusions. We should all mourn Alice's loss and focus on keeping our group strong. #solidarity #healing.",
+        "You said: Let's not overlook the unusual circumstances surrounding Alice's departure. We must remain vigilant and support each other, but also ensure the safety of our group. #villagersafety #stayalert.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

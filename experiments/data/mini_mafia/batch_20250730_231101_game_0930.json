@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0930",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 930,
+  "timestamp": "2025-07-31T04:13:05.883157",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. Let's all stay vigilant and support Diana in her investigation.",
+        "You said: I agree with Charlie, let's support Diana in her investigation. Let's also stay vigilant and keep an eye on each other's actions.",
+        "Diana: I'd like to propose focusing on Charlie's unusual reaction to Bob's death. Let's keep our eyes on him during this investigation.",
+        "You said: Let's not jump to conclusions based on reactions alone. We should focus on gathering more information during the investigation. Stay vigilant, everyone.",
+        "Charlie: Let's not forget that we need to trust each other to solve this mystery. We should focus on gathering information and avoid jumping to conclusions based on emotions.",
+        "Diana: Let's not overlook the consistency in Charlie's statements since Bob's death. We should keep a close eye on his actions.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden death. Let's all stay vigilant and support Diana in her investigation.",
+        "Alice: I agree with Charlie, let's support Diana in her investigation. Let's also stay vigilant and keep an eye on each other's actions.",
+        "Diana: I'd like to propose focusing on Charlie's unusual reaction to Bob's death. Let's keep our eyes on him during this investigation.",
+        "Alice: Let's not jump to conclusions based on reactions alone. We should focus on gathering more information during the investigation. Stay vigilant, everyone.",
+        "You said: Let's not forget that we need to trust each other to solve this mystery. We should focus on gathering information and avoid jumping to conclusions based on emotions.",
+        "Diana: Let's not overlook the consistency in Charlie's statements since Bob's death. We should keep a close eye on his actions."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. Let's all stay vigilant and support Diana in her investigation.",
+        "Alice: I agree with Charlie, let's support Diana in her investigation. Let's also stay vigilant and keep an eye on each other's actions.",
+        "You said: I'd like to propose focusing on Charlie's unusual reaction to Bob's death. Let's keep our eyes on him during this investigation.",
+        "Alice: Let's not jump to conclusions based on reactions alone. We should focus on gathering more information during the investigation. Stay vigilant, everyone.",
+        "Charlie: Let's not forget that we need to trust each other to solve this mystery. We should focus on gathering information and avoid jumping to conclusions based on emotions.",
+        "You said: Let's not overlook the consistency in Charlie's statements since Bob's death. We should keep a close eye on his actions.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

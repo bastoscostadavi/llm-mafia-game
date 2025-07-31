@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0117",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 117,
+  "timestamp": "2025-07-30T12:55:36.768150",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I agree, this is a sad turn of events. Let's all stay focused and ensure Alice's death doesn't go in vain. We must find the real culprit together. #UnitedWeStand",
+        "Diana: I'm saddened by Alice's passing. Let's not forget that we must remain vigilant and ensure the killer is brought to justice. Bob, your sudden concern is troubling.",
+        "Diana: I find Bob's sudden show of concern suspicious. Let's investigate further. #StayVigilant",
+        "You said: I share Diana's concerns and agree that we should remain vigilant to ensure justice is served. Let's work together to find the true culprit. #JusticeForAlice",
+        "Charlie: I support Diana's call for vigilance. Let's not jump to conclusions and work together to uncover the truth about Alice's death. #JusticeForAlice #StayVigilantButFair"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Bob: I agree, this is a sad turn of events. Let's all stay focused and ensure Alice's death doesn't go in vain. We must find the real culprit together. #UnitedWeStand",
+        "Diana: I'm saddened by Alice's passing. Let's not forget that we must remain vigilant and ensure the killer is brought to justice. Bob, your sudden concern is troubling.",
+        "Diana: I find Bob's sudden show of concern suspicious. Let's investigate further. #StayVigilant",
+        "Bob: I share Diana's concerns and agree that we should remain vigilant to ensure justice is served. Let's work together to find the true culprit. #JusticeForAlice",
+        "You said: I support Diana's call for vigilance. Let's not jump to conclusions and work together to uncover the truth about Alice's death. #JusticeForAlice #StayVigilantButFair",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Bob: I agree, this is a sad turn of events. Let's all stay focused and ensure Alice's death doesn't go in vain. We must find the real culprit together. #UnitedWeStand",
+        "You said: I'm saddened by Alice's passing. Let's not forget that we must remain vigilant and ensure the killer is brought to justice. Bob, your sudden concern is troubling.",
+        "You said: I find Bob's sudden show of concern suspicious. Let's investigate further. #StayVigilant",
+        "Bob: I share Diana's concerns and agree that we should remain vigilant to ensure justice is served. Let's work together to find the true culprit. #JusticeForAlice",
+        "Charlie: I support Diana's call for vigilance. Let's not jump to conclusions and work together to uncover the truth about Alice's death. #JusticeForAlice #StayVigilantButFair",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

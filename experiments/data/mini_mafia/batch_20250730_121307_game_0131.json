@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0131",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 131,
+  "timestamp": "2025-07-30T13:00:46.732165",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's all remain vigilant during this difficult time.",
+        "Diana: I'm saddened by Charlie's passing. Let's all work together to find out what happened.",
+        "Bob: I'm deeply saddened by Charlie's passing. Let's focus on finding the truth behind this tragic event. Alice's sudden display of grief is concerning. We need to be vigilant.",
+        "Diana: I agree with Bob, let's focus on finding the truth behind Charlie's death. We should remain vigilant and work together.",
+        "You said: Let's not jump to conclusions. We should all focus on finding the truth behind Charlie's death, as Bob suggested. We need to work together during this difficult time.",
+        "Bob: Let's not forget that we need to focus on finding the truth behind Charlie's death. We should remain vigilant and work together. Alice's sudden display of grief is concerning, but we must keep an..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's all remain vigilant during this difficult time.",
+        "Diana: I'm saddened by Charlie's passing. Let's all work together to find out what happened.",
+        "You said: I'm deeply saddened by Charlie's passing. Let's focus on finding the truth behind this tragic event. Alice's sudden display of grief is concerning. We need to be vigilant.",
+        "Diana: I agree with Bob, let's focus on finding the truth behind Charlie's death. We should remain vigilant and work together.",
+        "Alice: Let's not jump to conclusions. We should all focus on finding the truth behind Charlie's death, as Bob suggested. We need to work together during this difficult time.",
+        "You said: Let's not forget that we need to focus on finding the truth behind Charlie's death. We should remain vigilant and work together. Alice's sudden display of grief is concerning, but we must keep an...",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's all remain vigilant during this difficult time.",
+        "You said: I'm saddened by Charlie's passing. Let's all work together to find out what happened.",
+        "Bob: I'm deeply saddened by Charlie's passing. Let's focus on finding the truth behind this tragic event. Alice's sudden display of grief is concerning. We need to be vigilant.",
+        "You said: I agree with Bob, let's focus on finding the truth behind Charlie's death. We should remain vigilant and work together.",
+        "Alice: Let's not jump to conclusions. We should all focus on finding the truth behind Charlie's death, as Bob suggested. We need to work together during this difficult time.",
+        "Bob: Let's not forget that we need to focus on finding the truth behind Charlie's death. We should remain vigilant and work together. Alice's sudden display of grief is concerning, but we must keep an...",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

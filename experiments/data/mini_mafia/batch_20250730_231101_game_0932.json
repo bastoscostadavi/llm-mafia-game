@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0932",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 932,
+  "timestamp": "2025-07-31T04:13:39.580220",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden departure. Let's all stay vigilant and work together to ensure justice prevails.",
+        "Diana: I agree, let's all work together in this difficult time. Our focus should be on identifying the culprit behind Alice's death.",
+        "You said: I'm saddened by Alice's passing. Let's keep an open mind and consider all possible leads to find the truth.",
+        "You said: Let's not jump to conclusions. We need to remain diligent and consider all possibilities to find the truth behind Alice's death.",
+        "Diana: Let's not forget Alice's words to stay united and focused on finding the truth. Let's work together diligently to identify the culprit behind her death.",
+        "Charlie: Let's not forget Alice's words to stay focused on finding the truth. We should collaborate and consider all possibilities to identify the culprit."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden departure. Let's all stay vigilant and work together to ensure justice prevails.",
+        "Diana: I agree, let's all work together in this difficult time. Our focus should be on identifying the culprit behind Alice's death.",
+        "Bob: I'm saddened by Alice's passing. Let's keep an open mind and consider all possible leads to find the truth.",
+        "Bob: Let's not jump to conclusions. We need to remain diligent and consider all possibilities to find the truth behind Alice's death.",
+        "Diana: Let's not forget Alice's words to stay united and focused on finding the truth. Let's work together diligently to identify the culprit behind her death.",
+        "You said: Let's not forget Alice's words to stay focused on finding the truth. We should collaborate and consider all possibilities to identify the culprit.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden departure. Let's all stay vigilant and work together to ensure justice prevails.",
+        "You said: I agree, let's all work together in this difficult time. Our focus should be on identifying the culprit behind Alice's death.",
+        "Bob: I'm saddened by Alice's passing. Let's keep an open mind and consider all possible leads to find the truth.",
+        "Bob: Let's not jump to conclusions. We need to remain diligent and consider all possibilities to find the truth behind Alice's death.",
+        "You said: Let's not forget Alice's words to stay united and focused on finding the truth. Let's work together diligently to identify the culprit behind her death.",
+        "Charlie: Let's not forget Alice's words to stay focused on finding the truth. We should collaborate and consider all possibilities to identify the culprit.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

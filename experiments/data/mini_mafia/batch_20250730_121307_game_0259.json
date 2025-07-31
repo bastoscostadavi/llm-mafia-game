@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0259",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 259,
+  "timestamp": "2025-07-30T13:48:44.865515",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all support each other during this tough time. But remember, we need to stay vigilant. Alice's death is a harsh reminder of the danger lurking among us.",
+        "You said: I agree with Diana, let's support each other during this difficult time. But let's also remember to stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: Let's all express our condolences for Alice and remain vigilant during this challenging time. Suspicious behavior should be reported.",
+        "Charlie: Let's not jump to conclusions, but we must stay vigilant and support each other during this trying time. Suspicious behavior should be reported to the group.",
+        "Diana: Let's continue supporting each other and stay vigilant. Remember, reporting suspicious behavior is crucial for our safety. #UnitedWeStand",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all support each other during this tough time. But remember, we need to stay vigilant. Alice's death is a harsh reminder of the danger lurking among us.",
+        "Bob: I agree with Diana, let's support each other during this difficult time. But let's also remember to stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: Let's all express our condolences for Alice and remain vigilant during this challenging time. Suspicious behavior should be reported.",
+        "You said: Let's not jump to conclusions, but we must stay vigilant and support each other during this trying time. Suspicious behavior should be reported to the group.",
+        "Diana: Let's continue supporting each other and stay vigilant. Remember, reporting suspicious behavior is crucial for our safety. #UnitedWeStand"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all support each other during this tough time. But remember, we need to stay vigilant. Alice's death is a harsh reminder of the danger lurking among us.",
+        "Bob: I agree with Diana, let's support each other during this difficult time. But let's also remember to stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: Let's all express our condolences for Alice and remain vigilant during this challenging time. Suspicious behavior should be reported.",
+        "Charlie: Let's not jump to conclusions, but we must stay vigilant and support each other during this trying time. Suspicious behavior should be reported to the group.",
+        "You said: Let's continue supporting each other and stay vigilant. Remember, reporting suspicious behavior is crucial for our safety. #UnitedWeStand",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

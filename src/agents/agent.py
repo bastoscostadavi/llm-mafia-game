@@ -15,13 +15,6 @@ class MafiaAgent:
         self.memory = []  # List of all messages and events
         self.debug_prompts = debug_prompts
         
-    def get_role_rules(self, discussion_rounds=2) -> str:
-        rules = {
-            "assassin": f"You're an assassin. Night: assassins vote to kill. Day: discuss for {discussion_rounds} rounds and then vote to arrest. Win: kill all good players.",
-            "detective": f"You're a detective. Night: investigate someone (learn if good/evil). Day: discuss for {discussion_rounds} rounds and then vote to arrest. Win: arrest all assassins.",
-            "villager": f"You're a villager. Day: discuss for {discussion_rounds} rounds and then vote to arrest. Win: arrest all assassins."
-        }
-        return rules.get(self.role, rules["villager"])
     
     def remember(self, event: str):
         """Add event to memory"""
@@ -35,49 +28,44 @@ class MafiaAgent:
     
     def get_general_game_explanation(self) -> str:
         """Detailed general explanation of Mafia game"""
-        return """Mafia is a social deduction game where players have secret roles and assymetric information. Detectives and villagers are the good players; assassins are the evil players. The game alternates between night phases and day phases until one side wins.
+        return """Mafia is a social deduction game with secret roles and asymmetric information. The evil mafia competes against the good villagers and detectives. The game alternates between night and day phases until one side wins.
 
 Night Phase: 
-- Assassination: Each assassin independently casts a vote to kill one player. The player who receives the most assassin votes is killed. If assassin votes tie, a tied player is killed at random.
-- Investigation: Each detective independetly investigates one player to learn if they are an assassin. The detective receives this information privately.
+- Assassination: Each night, one mafioso is randomly selected to choose a player to kill. The chosen player is killed.
+- Investigation: Each detective independently investigates one player to learn if they are a mafioso. This information is received privately.
 
 Day Phase:
-- Discussion: Players are prompted to talk in an order that is set at random each round. Each player can send messages or remain silent. Messages are visible to everyone along with the player's name.
-- Voting: All living players vote to arrest one player. Each player casts one vote. The player who receives the most votes is arrested. If there is a tie, a tied player is arrested at random.
+- Discussion: Players speak in a randomly determined order. Each may send a message or remain silent. All messages are public and attributed by name.
+- Voting: All players vote to arrest someone. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.
 
 Game Mechanics:
 - Night actions are secret.
-- All information disclosed to agents appears under Memory: in chronological order.
-- At the beginning of the game, the assassins learn each other's identities.
+- The arrested and killed players do not participate in the game anymore.
+- All information disclosed to agents appears under "Memory:" in chronological order.
+- At the beginning of the game, the mafiosos learn each other's identities.  
+- Night deaths and daytime votes are publicly announced.
+- The only communication channel is the public discussion during the day.
 
 Win Conditions:
-- Good players win by arresting all assassins.
-- Evil players win by killing all good players."""
+- Good players: arrest all mafiosos.
+- Evil players: kill all good players."""
     
-    def get_game_composition(self, all_players) -> str:
-        """Specific composition for this game instance"""
-        if hasattr(self, 'game_composition'):
-            return self.game_composition
+    def get_game_composition(self, game_state) -> str:
+        """Get the game composition formatted for prompts"""
+        role_counts = game_state.composition
         
-        # Count roles from all players (including dead ones)
-        from collections import Counter
+        # Build description from stored data
+        parts = []
+        for role in ['mafioso', 'detective', 'villager']:
+            count = role_counts.get(role, 0)
+            if count > 0:
+                role_word = role + ('s' if count > 1 else '')
+                parts.append(f"{count} {role_word}")
         
-        # We need to get the actual agents to count roles
-        # This is a bit of a hack, but we'll count based on typical game setups
-        total_players = len(all_players)
-        
-        if total_players == 3:  # Mini game after 1 death
-            return "In the game you're playing there are: 1 assassin, 1 detective, and 1 villager."
-        elif total_players == 4:  # Mini game before death
-            return "In the game you're playing there are: 1 assassin, 1 detective, and 2 villagers."
-        elif total_players == 6:  # Classic game
-            return "In the game you're playing there are: 2 assassins, 1 detective, and 3 villagers."
-        else:
-            # Generic fallback
-            return f"In the game you're playing there are {total_players} players with various roles."
+        return f"In the game you're playing there are: {', and '.join(parts)}."
 
-    def decide_action(self, alive_players: List[str], round_num: int, all_players: List[str] = None, discussion_rounds: int = 2) -> Dict:
-        """Get public message from agent"""
+    def get_discussion_message(self, alive_players: List[str], round_num: int, all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> Dict:
+        """Get public discussion message from agent"""
         if all_players is None:
             all_players = alive_players
             
@@ -87,19 +75,18 @@ Win Conditions:
 
 {self.get_general_game_explanation()}
 
-{self.get_game_composition(all_players)}
+{self.get_game_composition(game_state)}
 
 Memory:
 {self.get_memory_context()}
 
-Discussion round: {round_num}/{discussion_rounds}
+DISCUSSION TIME {round_num}/{discussion_rounds}: What message do you want to say to everyone? 
 
-What do you want to say publicly to everyone? Start your response with "MESSAGE: " followed by what you want to say.
+Be strategic and consider what you've learned. Your response must contain "MESSAGE: " followed by the message you want to say.
 
 IMPORTANT: 
-- Your message must be {MESSAGE_LIMIT} characters or less (excluding "MESSAGE: ")
-- If your response doesn't start with "MESSAGE: ", the message "{self.name} remained silent" will be shared with other players.
-- Messages longer than {MESSAGE_LIMIT} characters will be truncated
+- Your message must be {MESSAGE_LIMIT} characters or less, and it will be truncated if longer.
+- If your response doesn't contain "MESSAGE: ", the message "{self.name} remained silent." will be shared with other players.
 
 [/INST]"""
 
@@ -112,33 +99,41 @@ IMPORTANT:
         
         response = self.llm.generate(prompt, max_tokens=100)
         
-        # Parse simple MESSAGE: format
-        if response and response.strip().startswith("MESSAGE:"):
-            # Extract everything after "MESSAGE:"
-            message = response.strip()[8:].strip()  # Remove "MESSAGE:" and whitespace
+        if self.debug_prompts:
+            print(f"\n{'='*60}")
+            print(f"RESPONSE FROM {self.name} (DISCUSSION):")
+            print(f"{'='*60}")
+            print(repr(response))
+            print(f"{'='*60}")
+        
+        # Parse MESSAGE: format (can appear anywhere in response)
+        if response and "MESSAGE:" in response.upper():
+            # Find the part after "MESSAGE:"
+            message_index = response.upper().find("MESSAGE:")
+            message = response[message_index + 8:].strip()  # Get everything after "MESSAGE:"
             
             # Enforce message length limit
             if len(message) > MESSAGE_LIMIT:
                 message = message[:MESSAGE_LIMIT].rstrip()  # Truncate and remove trailing whitespace
-                # Try to truncate at word boundary if possible
-                if not message.endswith('.') and not message.endswith('!') and not message.endswith('?'):
-                    last_space = message.rfind(' ')
-                    if last_space > MESSAGE_LIMIT * 0.8:  # Only truncate at word if we don't lose too much
-                        message = message[:last_space]
-                message += "..."  # Indicate truncation
+                message += "..." 
+            
+            if self.debug_prompts:
+                print(f"[DEBUG] {self.name} parsed message: '{message}'")
             
             return {
-                "action": "message", 
-                "message": message
+                "type": "message", 
+                "content": message
             }
         
         # If format doesn't match, remain silent
+        if self.debug_prompts:
+            print(f"[DEBUG] {self.name} failed to parse MESSAGE: format, remaining silent")
         return {
-            "action": "message", 
-            "message": ""
+            "type": "message", 
+            "content": f"{self.name} remained silent."
         }
     
-    def vote(self, candidates: List[str], all_players: List[str] = None, discussion_rounds: int = 2) -> str:
+    def vote(self, candidates: List[str], all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> str:
         """Vote for someone based on memory"""
         if all_players is None:
             all_players = candidates
@@ -149,16 +144,19 @@ IMPORTANT:
 
 {self.get_general_game_explanation()}
 
-{self.get_game_composition(all_players)}
+{self.get_game_composition(game_state)}
 
 Memory:
 {self.get_memory_context()}
 
-VOTING TIME: Vote to arrest ONE person from: {', '.join(candidates)}
+VOTING TIME: Vote to arrest one person from: {', '.join(candidates)}
 
-IMPORTANT: Reply with just the name. If you don't follow this format, a random vote will be cast for you.
+Be strategic and consider what you've learned. Your response must contain "VOTE: " followed by the name of the person you want to vote for.
 
-Consider what you've learned. Reply with just the name: [/INST]"""
+IMPORTANT: 
+- If your response doesn't contain "VOTE: " followed by the name of the person you want to vote for, the vote will be cast for a random person.
+
+[/INST]"""
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -167,13 +165,26 @@ Consider what you've learned. Reply with just the name: [/INST]"""
             print(prompt)
             print(f"{'='*60}")
         
-        response = self.llm.generate(prompt, max_tokens=10)
+        response = self.llm.generate(prompt, max_tokens=100)
         
-        # Extract name
+        if self.debug_prompts:
+            print(f"\n{'='*60}")
+            print(f"RESPONSE FROM {self.name} (VOTING):")
+            print(f"{'='*60}")
+            print(repr(response))
+            print(f"{'='*60}")
+        
+        # Extract vote using "VOTE: player_name" format
         for candidate in candidates:
-            if candidate.lower() in response.lower():
+            vote_pattern = f"VOTE: {candidate}"
+            if vote_pattern.upper() in response.upper():
+                if self.debug_prompts:
+                    print(f"[DEBUG] {self.name} voted for {candidate} using pattern '{vote_pattern}'")
                 return candidate
         
-        # If no valid name found, cast random vote
+        # If no valid "VOTE: name" found, cast random vote
         import random
-        return random.choice(candidates)
+        random_vote = random.choice(candidates)
+        if self.debug_prompts:
+            print(f"[DEBUG] {self.name} failed to parse VOTE: format, random vote: {random_vote}")
+        return random_vote

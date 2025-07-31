@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0428",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 428,
+  "timestamp": "2025-07-30T14:53:58.756344",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's rally together to ensure justice is served and the killer is brought to light. Let's not let fear or suspicion divide us. #JusticeForAlice...",
+        "Diana: I agree with Bob, let's work together to find the culprit and bring them to justice. #JusticeForAlice",
+        "Charlie: I also share the sentiment of justice for Alice. Let's focus on finding clues that could lead us to the killer. #JusticeForAlice #TogetherWeCanFindAnswer\n\n(Note: This message is intended to not...",
+        "Diana: Let's not jump to conclusions, we need to gather more information before we point fingers. #PatienceIsKey #JusticeForAlice",
+        "Charlie: Let's not rush into conclusions. We should gather more information before making any accusations. #PatienceIsKey #JusticeForAlice",
+        "You said: Let's stay focused on finding clues to solve this mystery together. #JusticeForAlice #TeamworkIsKey",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's rally together to ensure justice is served and the killer is brought to light. Let's not let fear or suspicion divide us. #JusticeForAlice...",
+        "Diana: I agree with Bob, let's work together to find the culprit and bring them to justice. #JusticeForAlice",
+        "You said: I also share the sentiment of justice for Alice. Let's focus on finding clues that could lead us to the killer. #JusticeForAlice #TogetherWeCanFindAnswer\n\n(Note: This message is intended to not...",
+        "Diana: Let's not jump to conclusions, we need to gather more information before we point fingers. #PatienceIsKey #JusticeForAlice",
+        "You said: Let's not rush into conclusions. We should gather more information before making any accusations. #PatienceIsKey #JusticeForAlice",
+        "Bob: Let's stay focused on finding clues to solve this mystery together. #JusticeForAlice #TeamworkIsKey",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's rally together to ensure justice is served and the killer is brought to light. Let's not let fear or suspicion divide us. #JusticeForAlice...",
+        "You said: I agree with Bob, let's work together to find the culprit and bring them to justice. #JusticeForAlice",
+        "Charlie: I also share the sentiment of justice for Alice. Let's focus on finding clues that could lead us to the killer. #JusticeForAlice #TogetherWeCanFindAnswer\n\n(Note: This message is intended to not...",
+        "You said: Let's not jump to conclusions, we need to gather more information before we point fingers. #PatienceIsKey #JusticeForAlice",
+        "Charlie: Let's not rush into conclusions. We should gather more information before making any accusations. #PatienceIsKey #JusticeForAlice",
+        "Bob: Let's stay focused on finding clues to solve this mystery together. #JusticeForAlice #TeamworkIsKey"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

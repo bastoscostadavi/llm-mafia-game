@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0450",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 450,
+  "timestamp": "2025-07-30T15:02:04.968379",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all stay vigilant and support each other during this difficult time. But I cannot shake off the feeling that something is amiss. Let's be extra cautious tonight.",
+        "Diana: I agree with Charlie, let's all stay extra cautious tonight. It's important we support each other during this difficult time. However, I also can't help but wonder what could have led to Alice's...",
+        "Charlie: I'm concerned about Alice's sudden death and the unusual turn of events. We must remain extra cautious tonight.",
+        "Diana: I share Charlie's concerns about the recent turn of events. Let's ensure we all stay cautious tonight.",
+        "You said: I'd like to echo Charlie and Diana's sentiments about staying vigilant tonight. Let's support each other during this challenging time. But we must also investigate Alice's death to ensure our safety.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all stay vigilant and support each other during this difficult time. But I cannot shake off the feeling that something is amiss. Let's be extra cautious tonight.",
+        "Diana: I agree with Charlie, let's all stay extra cautious tonight. It's important we support each other during this difficult time. However, I also can't help but wonder what could have led to Alice's...",
+        "You said: I'm concerned about Alice's sudden death and the unusual turn of events. We must remain extra cautious tonight.",
+        "Diana: I share Charlie's concerns about the recent turn of events. Let's ensure we all stay cautious tonight.",
+        "Bob: I'd like to echo Charlie and Diana's sentiments about staying vigilant tonight. Let's support each other during this challenging time. But we must also investigate Alice's death to ensure our safety.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all stay vigilant and support each other during this difficult time. But I cannot shake off the feeling that something is amiss. Let's be extra cautious tonight.",
+        "You said: I agree with Charlie, let's all stay extra cautious tonight. It's important we support each other during this difficult time. However, I also can't help but wonder what could have led to Alice's...",
+        "Charlie: I'm concerned about Alice's sudden death and the unusual turn of events. We must remain extra cautious tonight.",
+        "You said: I share Charlie's concerns about the recent turn of events. Let's ensure we all stay cautious tonight.",
+        "Bob: I'd like to echo Charlie and Diana's sentiments about staying vigilant tonight. Let's support each other during this challenging time. But we must also investigate Alice's death to ensure our safety."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

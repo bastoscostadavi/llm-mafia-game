@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0017",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 17,
+  "timestamp": "2025-07-30T12:18:54.554989",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's work together to figure out what happened and ensure the safety of our group.",
+        "Diana: I agree with Bob, let's work together to ensure our safety. I have some concerns about the sudden death of Charlie, let's discuss possible causes.",
+        "You said: I'm troubled by Charlie's death. Let's focus on identifying the cause and ensuring everyone's safety. I'll use my investigative ability tonight to learn more.",
+        "You said: I support Bob's suggestion to work together and identify the cause of Charlie's death. Let's keep an open mind and share any concerns or suspicions we may have.",
+        "Bob: Let's stay focused on identifying the cause of Charlie's death and ensuring our safety. Any new information or suspicions are valuable.",
+        "Diana: I share Bob's concerns and agree with Alice's plan to investigate Charlie's death. Let's collaborate to ensure our safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's work together to figure out what happened and ensure the safety of our group.",
+        "Diana: I agree with Bob, let's work together to ensure our safety. I have some concerns about the sudden death of Charlie, let's discuss possible causes.",
+        "Alice: I'm troubled by Charlie's death. Let's focus on identifying the cause and ensuring everyone's safety. I'll use my investigative ability tonight to learn more.",
+        "Alice: I support Bob's suggestion to work together and identify the cause of Charlie's death. Let's keep an open mind and share any concerns or suspicions we may have.",
+        "You said: Let's stay focused on identifying the cause of Charlie's death and ensuring our safety. Any new information or suspicions are valuable.",
+        "Diana: I share Bob's concerns and agree with Alice's plan to investigate Charlie's death. Let's collaborate to ensure our safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's work together to figure out what happened and ensure the safety of our group.",
+        "You said: I agree with Bob, let's work together to ensure our safety. I have some concerns about the sudden death of Charlie, let's discuss possible causes.",
+        "Alice: I'm troubled by Charlie's death. Let's focus on identifying the cause and ensuring everyone's safety. I'll use my investigative ability tonight to learn more.",
+        "Alice: I support Bob's suggestion to work together and identify the cause of Charlie's death. Let's keep an open mind and share any concerns or suspicions we may have.",
+        "Bob: Let's stay focused on identifying the cause of Charlie's death and ensuring our safety. Any new information or suspicions are valuable.",
+        "You said: I share Bob's concerns and agree with Alice's plan to investigate Charlie's death. Let's collaborate to ensure our safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

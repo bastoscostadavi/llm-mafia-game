@@ -31,12 +31,12 @@ class DayPhase:
             for agent in agents_order:
                 # Agent sends a public message
                 all_player_names = [a.name for a in self.state.agents]
-                action = agent.decide_action(alive_names, round_num, all_player_names, self.state.discussion_rounds)
-                self._process_message(agent, action, alive)
+                message_response = agent.get_discussion_message(alive_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
+                self._process_message(agent, message_response, alive)
     
-    def _process_message(self, sender, action, alive_players):
+    def _process_message(self, sender, message_response, alive_players):
         """Process and distribute a message (public only)"""
-        message = action.get("message", "")
+        message = message_response.get("content", "")
         
         # Only allow public messages
         if message.strip():
@@ -66,7 +66,7 @@ class DayPhase:
         for agent in voting_order:
             candidates = [a.name for a in alive if a != agent]
             all_player_names = [a.name for a in self.state.agents]
-            vote = agent.vote(candidates, all_player_names, self.state.discussion_rounds)
+            vote = agent.vote(candidates, all_player_names, self.state.discussion_rounds, self.state)
             votes[agent.name] = vote
             print(f"{agent.name} votes for {vote}")
         
@@ -95,14 +95,16 @@ class DayPhase:
         arrested_agent = self.state.get_agent_by_name(arrested)
         arrested_agent.imprisoned = True
         
-        self.display.show_arrest(arrested, arrested_agent.role)
+        # Show arrest without revealing role
+        print(f"\n{arrested} has been arrested!")
         
-        # Create announcement for memory
-        if arrested_agent.role == "assassin":
-            announcement = f"Day {self.state.round}: {arrested} was arrested (assassin)"
-        else:
-            announcement = f"Day {self.state.round}: {arrested} was arrested (innocent)"
+        # Create vote summary for memory (show all votes to everyone)
+        vote_summary = f"Day {self.state.round} votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
         
-        # Everyone remembers the arrest
+        # Create arrest announcement for memory (without role)
+        arrest_announcement = f"Day {self.state.round}: {arrested} was arrested"
+        
+        # Everyone remembers both the votes and the arrest
         for agent in self.state.get_alive_players():
-            agent.remember(announcement)
+            agent.remember(vote_summary)
+            agent.remember(arrest_announcement)

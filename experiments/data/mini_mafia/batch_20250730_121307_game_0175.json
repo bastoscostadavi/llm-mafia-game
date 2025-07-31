@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0175",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 175,
+  "timestamp": "2025-07-30T13:17:41.839458",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked to hear about Charlie's passing. Let's try to support each other during this difficult time.",
+        "Bob: I agree with Alice, let's support each other during this sad time. However, I cannot shake off the feeling that something is amiss. We must be vigilant.",
+        "Diana: I'd like to join Alice and Bob in expressing our condolences for Charlie. Let's stay strong for each other during this trying time. However, I can't help but feel uneasy as well. Let's keep a close...",
+        "You said: I'd like to express my condolences once again for Charlie's passing. Let's continue supporting each other during this tough time. However, I can't shake off a strange feeling. Let's remain vigilant.",
+        "Bob: I share the sentiment of staying strong and supporting each other during this sad time. However, let's also keep a watchful eye to ensure Charlie's passing is not in vain.",
+        "Diana: Let's continue to support each other during this difficult time for Charlie. However, we must also remain vigilant to ensure justice is served.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked to hear about Charlie's passing. Let's try to support each other during this difficult time.",
+        "You said: I agree with Alice, let's support each other during this sad time. However, I cannot shake off the feeling that something is amiss. We must be vigilant.",
+        "Diana: I'd like to join Alice and Bob in expressing our condolences for Charlie. Let's stay strong for each other during this trying time. However, I can't help but feel uneasy as well. Let's keep a close...",
+        "Alice: I'd like to express my condolences once again for Charlie's passing. Let's continue supporting each other during this tough time. However, I can't shake off a strange feeling. Let's remain vigilant.",
+        "You said: I share the sentiment of staying strong and supporting each other during this sad time. However, let's also keep a watchful eye to ensure Charlie's passing is not in vain.",
+        "Diana: Let's continue to support each other during this difficult time for Charlie. However, we must also remain vigilant to ensure justice is served."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked to hear about Charlie's passing. Let's try to support each other during this difficult time.",
+        "Bob: I agree with Alice, let's support each other during this sad time. However, I cannot shake off the feeling that something is amiss. We must be vigilant.",
+        "You said: I'd like to join Alice and Bob in expressing our condolences for Charlie. Let's stay strong for each other during this trying time. However, I can't help but feel uneasy as well. Let's keep a close...",
+        "Alice: I'd like to express my condolences once again for Charlie's passing. Let's continue supporting each other during this tough time. However, I can't shake off a strange feeling. Let's remain vigilant.",
+        "Bob: I share the sentiment of staying strong and supporting each other during this sad time. However, let's also keep a watchful eye to ensure Charlie's passing is not in vain.",
+        "You said: Let's continue to support each other during this difficult time for Charlie. However, we must also remain vigilant to ensure justice is served.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0735",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 735,
+  "timestamp": "2025-07-30T20:31:55.048071",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm deeply saddened by Charlie's sudden demise. Let's all support each other during this difficult time.",
+        "You said: I'm shocked by Charlie's death and would like to express my condolences to his family. Let's all stay vigilant to ensure justice is served.",
+        "Bob: I share Alice's sentiments of shock and condolences for Charlie's untimely passing. Let's remain focused on finding the truth behind his death.",
+        "Bob: I'd like to propose we focus on the details surrounding Charlie's death to help guide our investigation. Let's share any relevant information we may have.",
+        "Diana: I agree with Bob, let's focus on the details surrounding Charlie's death to help find answers.",
+        "You said: I support Bob's suggestion to focus on the details surrounding Charlie's death. Let's work together to uncover the truth.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm deeply saddened by Charlie's sudden demise. Let's all support each other during this difficult time.",
+        "Alice: I'm shocked by Charlie's death and would like to express my condolences to his family. Let's all stay vigilant to ensure justice is served.",
+        "You said: I share Alice's sentiments of shock and condolences for Charlie's untimely passing. Let's remain focused on finding the truth behind his death.",
+        "You said: I'd like to propose we focus on the details surrounding Charlie's death to help guide our investigation. Let's share any relevant information we may have.",
+        "Diana: I agree with Bob, let's focus on the details surrounding Charlie's death to help find answers.",
+        "Alice: I support Bob's suggestion to focus on the details surrounding Charlie's death. Let's work together to uncover the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all support each other during this difficult time.",
+        "Alice: I'm shocked by Charlie's death and would like to express my condolences to his family. Let's all stay vigilant to ensure justice is served.",
+        "Bob: I share Alice's sentiments of shock and condolences for Charlie's untimely passing. Let's remain focused on finding the truth behind his death.",
+        "Bob: I'd like to propose we focus on the details surrounding Charlie's death to help guide our investigation. Let's share any relevant information we may have.",
+        "You said: I agree with Bob, let's focus on the details surrounding Charlie's death to help find answers.",
+        "Alice: I support Bob's suggestion to focus on the details surrounding Charlie's death. Let's work together to uncover the truth.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0089",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 89,
+  "timestamp": "2025-07-30T23:40:11.577882",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's all try to remain calm and focused during this difficult time. We need to find out who did this and bring them to justice. Let's discuss any clues or...",
+        "Charlie: I agree with Alice, let's stay focused and try to gather information to solve this mystery. If anyone has any clues or suspicions, please share them publicly.",
+        "Bob: Based on the investigation results, I believe Charlie's behavior is suspicious. Let's keep a close eye on him.",
+        "Charlie: I find it strange that Bob mentioned my name in relation to the investigation. Let's keep an open mind and consider all possibilities before jumping to conclusions.",
+        "Bob: I'd like to bring up Charlie's inconsistent behavior and the suspicious timing of Diana's death. Let's keep a close eye on him.",
+        "You said: I'd like to reiterate the importance of keeping an open mind and gathering as much information as possible before jumping to conclusions. Let's stay focused and work together to uncover the truth.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all try to remain calm and focused during this difficult time. We need to find out who did this and bring them to justice. Let's discuss any clues or...",
+        "Charlie: I agree with Alice, let's stay focused and try to gather information to solve this mystery. If anyone has any clues or suspicions, please share them publicly.",
+        "You said: Based on the investigation results, I believe Charlie's behavior is suspicious. Let's keep a close eye on him.",
+        "Charlie: I find it strange that Bob mentioned my name in relation to the investigation. Let's keep an open mind and consider all possibilities before jumping to conclusions.",
+        "You said: I'd like to bring up Charlie's inconsistent behavior and the suspicious timing of Diana's death. Let's keep a close eye on him.",
+        "Alice: I'd like to reiterate the importance of keeping an open mind and gathering as much information as possible before jumping to conclusions. Let's stay focused and work together to uncover the truth.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all try to remain calm and focused during this difficult time. We need to find out who did this and bring them to justice. Let's discuss any clues or...",
+        "You said: I agree with Alice, let's stay focused and try to gather information to solve this mystery. If anyone has any clues or suspicions, please share them publicly.",
+        "Bob: Based on the investigation results, I believe Charlie's behavior is suspicious. Let's keep a close eye on him.",
+        "You said: I find it strange that Bob mentioned my name in relation to the investigation. Let's keep an open mind and consider all possibilities before jumping to conclusions.",
+        "Bob: I'd like to bring up Charlie's inconsistent behavior and the suspicious timing of Diana's death. Let's keep a close eye on him.",
+        "Alice: I'd like to reiterate the importance of keeping an open mind and gathering as much information as possible before jumping to conclusions. Let's stay focused and work together to uncover the truth."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

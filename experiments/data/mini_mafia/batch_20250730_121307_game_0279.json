@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0279",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 279,
+  "timestamp": "2025-07-30T13:56:07.014035",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Bob: I'm saddened by Diana's passing. Let's all stay vigilant and support each other during this difficult time. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Charlie: Based on my investigation, I believe Bob is the mafioso. Let's be cautious and apprehend him before he strikes again.",
+        "Bob: I agree with Charlie's concerns and support his call for caution. Let's all work together to ensure everyone's safety during this trying time.",
+        "Charlie: Let's not forget that we've lost a member of our group. We need to focus on finding out who committed this heinous act and bring them to justice. Let's remain vigilant and support each other during...",
+        "You said: I agree with Bob, let's stay united and support each other during this sad time. Let's also keep an open mind and carefully consider any information before making any accusations.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "You said: I'm saddened by Diana's passing. Let's all stay vigilant and support each other during this difficult time. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "Charlie: Based on my investigation, I believe Bob is the mafioso. Let's be cautious and apprehend him before he strikes again.",
+        "You said: I agree with Charlie's concerns and support his call for caution. Let's all work together to ensure everyone's safety during this trying time.",
+        "Charlie: Let's not forget that we've lost a member of our group. We need to focus on finding out who committed this heinous act and bring them to justice. Let's remain vigilant and support each other during...",
+        "Alice: I agree with Bob, let's stay united and support each other during this sad time. Let's also keep an open mind and carefully consider any information before making any accusations."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Bob: I'm saddened by Diana's passing. Let's all stay vigilant and support each other during this difficult time. Let's not jump to conclusions or accuse anyone without solid evidence.",
+        "You said: Based on my investigation, I believe Bob is the mafioso. Let's be cautious and apprehend him before he strikes again.",
+        "Bob: I agree with Charlie's concerns and support his call for caution. Let's all work together to ensure everyone's safety during this trying time.",
+        "You said: Let's not forget that we've lost a member of our group. We need to focus on finding out who committed this heinous act and bring them to justice. Let's remain vigilant and support each other during...",
+        "Alice: I agree with Bob, let's stay united and support each other during this sad time. Let's also keep an open mind and carefully consider any information before making any accusations.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

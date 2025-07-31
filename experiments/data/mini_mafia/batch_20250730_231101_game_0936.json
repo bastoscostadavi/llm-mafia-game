@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0936",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 936,
+  "timestamp": "2025-07-31T04:14:56.834144",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, this is a sad turn of events. Let's all try to stay focused and help each other through this. But remember, we must also remain vigilant.",
+        "Diana: I'm deeply saddened by Alice's passing. Let's all cooperate and share any relevant information to ensure her killer is brought to justice.",
+        "You said: Let's not jump to conclusions. We need to keep working together and share any new information to ensure justice is served.",
+        "Charlie: Let's not forget the importance of vigilance in these trying times. Let's all share any suspicious observations to help bring Alice's killer to light.",
+        "Diana: Based on the available information, it seems crucial that we share any suspicious observations to aid in the investigation of Alice's death. Let's work together to ensure justice is served.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, this is a sad turn of events. Let's all try to stay focused and help each other through this. But remember, we must also remain vigilant.",
+        "Diana: I'm deeply saddened by Alice's passing. Let's all cooperate and share any relevant information to ensure her killer is brought to justice.",
+        "Bob: Let's not jump to conclusions. We need to keep working together and share any new information to ensure justice is served.",
+        "You said: Let's not forget the importance of vigilance in these trying times. Let's all share any suspicious observations to help bring Alice's killer to light.",
+        "Diana: Based on the available information, it seems crucial that we share any suspicious observations to aid in the investigation of Alice's death. Let's work together to ensure justice is served.",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, this is a sad turn of events. Let's all try to stay focused and help each other through this. But remember, we must also remain vigilant.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all cooperate and share any relevant information to ensure her killer is brought to justice.",
+        "Bob: Let's not jump to conclusions. We need to keep working together and share any new information to ensure justice is served.",
+        "Charlie: Let's not forget the importance of vigilance in these trying times. Let's all share any suspicious observations to help bring Alice's killer to light.",
+        "You said: Based on the available information, it seems crucial that we share any suspicious observations to aid in the investigation of Alice's death. Let's work together to ensure justice is served."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0699",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 699,
+  "timestamp": "2025-07-30T20:20:15.065556",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other during this round.",
+        "You said: I agree with Diana, let's stay vigilant and look out for any suspicious behavior. Rest in peace, Charlie.",
+        "Bob: I'd like to join Diana and Alice in honoring Charlie's memory. Let's all work together to ensure justice is served in this round. Rest in peace, dear friend.",
+        "Bob: Let us remember Charlie's kind spirit and strive for unity in this round. Rest in peace, dear friend. #CharlieMemorial #Unity.",
+        "Diana: Let us not let Charlie's death divide us. We must remain united and vigilant to ensure the true culprit is brought to justice. #Unity #JusticeForCharlie",
+        "You said: Let's continue our discussion on ensuring unity and justice in memory of Charlie. Any suspicious behavior or concerns, please share. #Unity #JusticeForCharlie",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other during this round.",
+        "Alice: I agree with Diana, let's stay vigilant and look out for any suspicious behavior. Rest in peace, Charlie.",
+        "You said: I'd like to join Diana and Alice in honoring Charlie's memory. Let's all work together to ensure justice is served in this round. Rest in peace, dear friend.",
+        "You said: Let us remember Charlie's kind spirit and strive for unity in this round. Rest in peace, dear friend. #CharlieMemorial #Unity.",
+        "Diana: Let us not let Charlie's death divide us. We must remain united and vigilant to ensure the true culprit is brought to justice. #Unity #JusticeForCharlie",
+        "Alice: Let's continue our discussion on ensuring unity and justice in memory of Charlie. Any suspicious behavior or concerns, please share. #Unity #JusticeForCharlie"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other during this round.",
+        "Alice: I agree with Diana, let's stay vigilant and look out for any suspicious behavior. Rest in peace, Charlie.",
+        "Bob: I'd like to join Diana and Alice in honoring Charlie's memory. Let's all work together to ensure justice is served in this round. Rest in peace, dear friend.",
+        "Bob: Let us remember Charlie's kind spirit and strive for unity in this round. Rest in peace, dear friend. #CharlieMemorial #Unity.",
+        "You said: Let us not let Charlie's death divide us. We must remain united and vigilant to ensure the true culprit is brought to justice. #Unity #JusticeForCharlie",
+        "Alice: Let's continue our discussion on ensuring unity and justice in memory of Charlie. Any suspicious behavior or concerns, please share. #Unity #JusticeForCharlie",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

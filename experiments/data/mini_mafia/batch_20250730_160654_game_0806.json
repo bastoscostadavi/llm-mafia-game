@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0806",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 806,
+  "timestamp": "2025-07-30T20:55:45.773676",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Diana: I'm saddened by Charlie's death and I believe we should all cooperate to find out what happened. Let's be vigilant and pay close attention to each other's actions.",
+        "Bob: I agree with Alice and Diana. Let's work together to find out who is behind this. I have a bad feeling about this...",
+        "Bob: Let's stay focused and share any suspicious observations or actions we notice. We must work together to uncover the truth behind Charlie's death.",
+        "Diana: Let's not jump to conclusions and focus on gathering information. We need to work together to uncover the truth behind Charlie's death. Stay vigilant and communicate any suspicious observations.",
+        "You said: Let's continue our investigation and share any new information we find. We must work together to bring Charlie's killer to justice. Stay focused and vigilant.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Diana: I'm saddened by Charlie's death and I believe we should all cooperate to find out what happened. Let's be vigilant and pay close attention to each other's actions.",
+        "You said: I agree with Alice and Diana. Let's work together to find out who is behind this. I have a bad feeling about this...",
+        "You said: Let's stay focused and share any suspicious observations or actions we notice. We must work together to uncover the truth behind Charlie's death.",
+        "Diana: Let's not jump to conclusions and focus on gathering information. We need to work together to uncover the truth behind Charlie's death. Stay vigilant and communicate any suspicious observations.",
+        "Alice: Let's continue our investigation and share any new information we find. We must work together to bring Charlie's killer to justice. Stay focused and vigilant.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "You said: I'm saddened by Charlie's death and I believe we should all cooperate to find out what happened. Let's be vigilant and pay close attention to each other's actions.",
+        "Bob: I agree with Alice and Diana. Let's work together to find out who is behind this. I have a bad feeling about this...",
+        "Bob: Let's stay focused and share any suspicious observations or actions we notice. We must work together to uncover the truth behind Charlie's death.",
+        "You said: Let's not jump to conclusions and focus on gathering information. We need to work together to uncover the truth behind Charlie's death. Stay vigilant and communicate any suspicious observations.",
+        "Alice: Let's continue our investigation and share any new information we find. We must work together to bring Charlie's killer to justice. Stay focused and vigilant."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

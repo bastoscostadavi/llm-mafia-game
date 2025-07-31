@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0802",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 802,
+  "timestamp": "2025-07-30T20:54:25.009330",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding the real culprit and bringing them to justice. #solidarity #justiceforDiana",
+        "You said: I agree with Charlie, we need to find the real culprit behind Diana's death. Let's stay focused and support each other during this trying time. #justiceforDiana #solidarity",
+        "Bob: I second the call for unity and finding the real culprit behind Diana's death. Let's support each other during this difficult time. #justiceforDiana #solidarity",
+        "Charlie: Let's not jump to conclusions. We should allow the investigation to proceed and trust our detective to find the truth. #trusttheprocess #justiceforDiana",
+        "Bob: Let's not forget, Charlie was the one who initiated the call for unity right after Diana's death. Be wary, friends. #stayvigilant #justiceforDiana",
+        "You said: I support Charlie's call for unity and trust in the investigation process. Let's remain focused on finding the truth behind Diana's death. #justiceforDiana #solidarity #trusttheprocess",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding the real culprit and bringing them to justice. #solidarity #justiceforDiana",
+        "Alice: I agree with Charlie, we need to find the real culprit behind Diana's death. Let's stay focused and support each other during this trying time. #justiceforDiana #solidarity",
+        "You said: I second the call for unity and finding the real culprit behind Diana's death. Let's support each other during this difficult time. #justiceforDiana #solidarity",
+        "Charlie: Let's not jump to conclusions. We should allow the investigation to proceed and trust our detective to find the truth. #trusttheprocess #justiceforDiana",
+        "You said: Let's not forget, Charlie was the one who initiated the call for unity right after Diana's death. Be wary, friends. #stayvigilant #justiceforDiana",
+        "Alice: I support Charlie's call for unity and trust in the investigation process. Let's remain focused on finding the truth behind Diana's death. #justiceforDiana #solidarity #trusttheprocess",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding the real culprit and bringing them to justice. #solidarity #justiceforDiana",
+        "Alice: I agree with Charlie, we need to find the real culprit behind Diana's death. Let's stay focused and support each other during this trying time. #justiceforDiana #solidarity",
+        "Bob: I second the call for unity and finding the real culprit behind Diana's death. Let's support each other during this difficult time. #justiceforDiana #solidarity",
+        "You said: Let's not jump to conclusions. We should allow the investigation to proceed and trust our detective to find the truth. #trusttheprocess #justiceforDiana",
+        "Bob: Let's not forget, Charlie was the one who initiated the call for unity right after Diana's death. Be wary, friends. #stayvigilant #justiceforDiana",
+        "Alice: I support Charlie's call for unity and trust in the investigation process. Let's remain focused on finding the truth behind Diana's death. #justiceforDiana #solidarity #trusttheprocess"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

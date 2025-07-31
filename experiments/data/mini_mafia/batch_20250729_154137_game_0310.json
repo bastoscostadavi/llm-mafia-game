@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0310",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 310,
+  "timestamp": "2025-07-29T17:38:36.372705",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Diana, let's support each other during this unfortunate time. Let's also stay alert and ensure we trust only those we know are trustworthy.",
+        "Bob: I second Alice's words about staying alert and supporting each other. Let's work together to uncover the truth behind Charlie's death.",
+        "Bob: I'd like to propose we closely examine Diana's statement about staying alert. Let's discuss if her words yesterday could hold any hidden meaning.",
+        "You said: I support Bob's suggestion to scrutinize Diana's previous statement. Let's not overlook any potential clues in our quest for the truth.",
+        "Diana: I join Alice and Bob in calling for vigilance and unity during this trying time. Let's trust and support each other as we search for the truth behind Charlie's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Diana, let's support each other during this unfortunate time. Let's also stay alert and ensure we trust only those we know are trustworthy.",
+        "You said: I second Alice's words about staying alert and supporting each other. Let's work together to uncover the truth behind Charlie's death.",
+        "You said: I'd like to propose we closely examine Diana's statement about staying alert. Let's discuss if her words yesterday could hold any hidden meaning.",
+        "Alice: I support Bob's suggestion to scrutinize Diana's previous statement. Let's not overlook any potential clues in our quest for the truth.",
+        "Diana: I join Alice and Bob in calling for vigilance and unity during this trying time. Let's trust and support each other as we search for the truth behind Charlie's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Diana, let's support each other during this unfortunate time. Let's also stay alert and ensure we trust only those we know are trustworthy.",
+        "Bob: I second Alice's words about staying alert and supporting each other. Let's work together to uncover the truth behind Charlie's death.",
+        "Bob: I'd like to propose we closely examine Diana's statement about staying alert. Let's discuss if her words yesterday could hold any hidden meaning.",
+        "Alice: I support Bob's suggestion to scrutinize Diana's previous statement. Let's not overlook any potential clues in our quest for the truth.",
+        "You said: I join Alice and Bob in calling for vigilance and unity during this trying time. Let's trust and support each other as we search for the truth behind Charlie's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0029",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 29,
+  "timestamp": "2025-07-30T12:22:55.642345",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden death. Let's be cautious and support each other during this difficult time. Alice, could you share your memories of Charlie?",
+        "You said: I'm saddened by Charlie's passing. Let's all try to stay strong and united during this tough time.",
+        "Diana: I agree with Bob, let's all support each other during this sad time. Alice, do you have any specific memories of Charlie that you'd like to share?",
+        "Diana: I'd like to share a fond memory of Charlie. He had a great laugh and always brightened up the room. Let's remember him fondly during this difficult time.",
+        "Bob: Let's stay focused and support each other during this tragic time. We need to find the person responsible for Charlie's death. Alice, any memories that could help in our investigation?",
+        "You said: I'd like to add that Charlie was a valuable member of our group. Let's work together to ensure justice is served and the person responsible for his death is brought to light...."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's be cautious and support each other during this difficult time. Alice, could you share your memories of Charlie?",
+        "Alice: I'm saddened by Charlie's passing. Let's all try to stay strong and united during this tough time.",
+        "Diana: I agree with Bob, let's all support each other during this sad time. Alice, do you have any specific memories of Charlie that you'd like to share?",
+        "Diana: I'd like to share a fond memory of Charlie. He had a great laugh and always brightened up the room. Let's remember him fondly during this difficult time.",
+        "You said: Let's stay focused and support each other during this tragic time. We need to find the person responsible for Charlie's death. Alice, any memories that could help in our investigation?",
+        "Alice: I'd like to add that Charlie was a valuable member of our group. Let's work together to ensure justice is served and the person responsible for his death is brought to light....",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden death. Let's be cautious and support each other during this difficult time. Alice, could you share your memories of Charlie?",
+        "Alice: I'm saddened by Charlie's passing. Let's all try to stay strong and united during this tough time.",
+        "You said: I agree with Bob, let's all support each other during this sad time. Alice, do you have any specific memories of Charlie that you'd like to share?",
+        "You said: I'd like to share a fond memory of Charlie. He had a great laugh and always brightened up the room. Let's remember him fondly during this difficult time.",
+        "Bob: Let's stay focused and support each other during this tragic time. We need to find the person responsible for Charlie's death. Alice, any memories that could help in our investigation?",
+        "Alice: I'd like to add that Charlie was a valuable member of our group. Let's work together to ensure justice is served and the person responsible for his death is brought to light....",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0331",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 331,
+  "timestamp": "2025-07-31T00:58:49.445691",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's stay vigilant to ensure the mafia doesn't strike again.",
+        "Diana: I'm saddened by Alice's demise. Let's focus on ensuring justice is served.",
+        "Charlie: I agree with Bob, let's stay vigilant and ensure the mafia doesn't strike again. Our focus should be on identifying and arresting the mafioso among us.",
+        "Diana: I echo Charlie's sentiment, let's all remain vigilant and work together to identify and arrest the mafioso among us. Justice for Alice.",
+        "You said: Let's not jump to conclusions. We need to focus on gathering more information and working together to identify the mafioso. Alice's death is a reminder of the importance of unity and vigilance.",
+        "Charlie: Let's not forget, Diana was close to Alice. We should be wary and consider her involvement in Alice's death. Vigilance is key.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's stay vigilant to ensure the mafia doesn't strike again.",
+        "Diana: I'm saddened by Alice's demise. Let's focus on ensuring justice is served.",
+        "You said: I agree with Bob, let's stay vigilant and ensure the mafia doesn't strike again. Our focus should be on identifying and arresting the mafioso among us.",
+        "Diana: I echo Charlie's sentiment, let's all remain vigilant and work together to identify and arrest the mafioso among us. Justice for Alice.",
+        "Bob: Let's not jump to conclusions. We need to focus on gathering more information and working together to identify the mafioso. Alice's death is a reminder of the importance of unity and vigilance.",
+        "You said: Let's not forget, Diana was close to Alice. We should be wary and consider her involvement in Alice's death. Vigilance is key."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's stay vigilant to ensure the mafia doesn't strike again.",
+        "You said: I'm saddened by Alice's demise. Let's focus on ensuring justice is served.",
+        "Charlie: I agree with Bob, let's stay vigilant and ensure the mafia doesn't strike again. Our focus should be on identifying and arresting the mafioso among us.",
+        "You said: I echo Charlie's sentiment, let's all remain vigilant and work together to identify and arrest the mafioso among us. Justice for Alice.",
+        "Bob: Let's not jump to conclusions. We need to focus on gathering more information and working together to identify the mafioso. Alice's death is a reminder of the importance of unity and vigilance.",
+        "Charlie: Let's not forget, Diana was close to Alice. We should be wary and consider her involvement in Alice's death. Vigilance is key.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

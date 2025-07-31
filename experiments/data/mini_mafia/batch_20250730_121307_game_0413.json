@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0413",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 413,
+  "timestamp": "2025-07-30T14:48:19.057313",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's all work together to find out who did this.",
+        "Diana: Alice, your reaction seems suspicious. Let's focus on finding the real killer.",
+        "Bob: I agree with Diana. Let's focus on finding the real killer. There's no room for suspicion or accusations at this point. We need to work together to ensure justice is served.",
+        "Bob: Let's stay focused on identifying the real killer and bring justice for Charlie. No room for accusations or suspicion at this point.",
+        "Diana: Let's not jump to conclusions or suspect each other. Our focus should be on identifying the real killer who took Charlie's life. Let's work together and share any relevant information.",
+        "You said: I'm deeply saddened by Charlie's death. Let's work together to find the real killer and bring them to justice."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's all work together to find out who did this.",
+        "Diana: Alice, your reaction seems suspicious. Let's focus on finding the real killer.",
+        "You said: I agree with Diana. Let's focus on finding the real killer. There's no room for suspicion or accusations at this point. We need to work together to ensure justice is served.",
+        "You said: Let's stay focused on identifying the real killer and bring justice for Charlie. No room for accusations or suspicion at this point.",
+        "Diana: Let's not jump to conclusions or suspect each other. Our focus should be on identifying the real killer who took Charlie's life. Let's work together and share any relevant information.",
+        "Alice: I'm deeply saddened by Charlie's death. Let's work together to find the real killer and bring them to justice.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's all work together to find out who did this.",
+        "You said: Alice, your reaction seems suspicious. Let's focus on finding the real killer.",
+        "Bob: I agree with Diana. Let's focus on finding the real killer. There's no room for suspicion or accusations at this point. We need to work together to ensure justice is served.",
+        "Bob: Let's stay focused on identifying the real killer and bring justice for Charlie. No room for accusations or suspicion at this point.",
+        "You said: Let's not jump to conclusions or suspect each other. Our focus should be on identifying the real killer who took Charlie's life. Let's work together and share any relevant information.",
+        "Alice: I'm deeply saddened by Charlie's death. Let's work together to find the real killer and bring them to justice.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

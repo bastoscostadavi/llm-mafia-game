@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0213",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 213,
+  "timestamp": "2025-07-30T17:21:47.467744",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other.",
+        "Bob: I agree with Diana, let's be vigilant. Charlie's absence is concerning.",
+        "You said: I share Diana and Bob's concerns about Charlie's sudden absence. Let's work together to ensure everyone's safety.",
+        "Diana: Let's remain vigilant and keep an open communication to ensure everyone's safety. We miss Charlie and want to find out what happened to him.",
+        "You said: Let's continue our discussion on ensuring everyone's safety following Charlie's sudden absence. We should stay vigilant and open in our communication.",
+        "Bob: Let's not jump to conclusions about Charlie's absence. We should focus on ensuring everyone's safety during this difficult time.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other.",
+        "You said: I agree with Diana, let's be vigilant. Charlie's absence is concerning.",
+        "Alice: I share Diana and Bob's concerns about Charlie's sudden absence. Let's work together to ensure everyone's safety.",
+        "Diana: Let's remain vigilant and keep an open communication to ensure everyone's safety. We miss Charlie and want to find out what happened to him.",
+        "Alice: Let's continue our discussion on ensuring everyone's safety following Charlie's sudden absence. We should stay vigilant and open in our communication.",
+        "You said: Let's not jump to conclusions about Charlie's absence. We should focus on ensuring everyone's safety during this difficult time."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other.",
+        "Bob: I agree with Diana, let's be vigilant. Charlie's absence is concerning.",
+        "Alice: I share Diana and Bob's concerns about Charlie's sudden absence. Let's work together to ensure everyone's safety.",
+        "You said: Let's remain vigilant and keep an open communication to ensure everyone's safety. We miss Charlie and want to find out what happened to him.",
+        "Alice: Let's continue our discussion on ensuring everyone's safety following Charlie's sudden absence. We should stay vigilant and open in our communication.",
+        "Bob: Let's not jump to conclusions about Charlie's absence. We should focus on ensuring everyone's safety during this difficult time.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

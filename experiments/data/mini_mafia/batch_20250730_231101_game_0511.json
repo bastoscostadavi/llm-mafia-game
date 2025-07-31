@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0511",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 511,
+  "timestamp": "2025-07-31T01:57:21.553523",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to reflect and share our memories of him. This could be crucial for our investigation.",
+        "You said: I also share Bob's sentiment about Charlie. Let's work together to uncover the truth behind his death.",
+        "Diana: I share the sorrow for Charlie's passing. Let's focus on finding the truth. We can't afford to let our emotions cloud our judgment.",
+        "You said: Let's stay focused on finding clues and cooperate during the discussion and voting phases. We can honor Charlie's memory best by solving this mystery together.",
+        "Diana: Let's not jump to conclusions based on emotions. We need to stay focused and gather facts to honor Charlie's memory and find the truth.",
+        "Bob: Let's continue our investigation with a clear mind and focus on gathering facts. Remember, emotions won't help us uncover the truth behind Charlie's death. We can honor his memory best by working...",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Diana, Alice voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to reflect and share our memories of him. This could be crucial for our investigation.",
+        "Alice: I also share Bob's sentiment about Charlie. Let's work together to uncover the truth behind his death.",
+        "Diana: I share the sorrow for Charlie's passing. Let's focus on finding the truth. We can't afford to let our emotions cloud our judgment.",
+        "Alice: Let's stay focused on finding clues and cooperate during the discussion and voting phases. We can honor Charlie's memory best by solving this mystery together.",
+        "Diana: Let's not jump to conclusions based on emotions. We need to stay focused and gather facts to honor Charlie's memory and find the truth.",
+        "You said: Let's continue our investigation with a clear mind and focus on gathering facts. Remember, emotions won't help us uncover the truth behind Charlie's death. We can honor his memory best by working...",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Diana, Alice voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to reflect and share our memories of him. This could be crucial for our investigation.",
+        "Alice: I also share Bob's sentiment about Charlie. Let's work together to uncover the truth behind his death.",
+        "You said: I share the sorrow for Charlie's passing. Let's focus on finding the truth. We can't afford to let our emotions cloud our judgment.",
+        "Alice: Let's stay focused on finding clues and cooperate during the discussion and voting phases. We can honor Charlie's memory best by solving this mystery together.",
+        "You said: Let's not jump to conclusions based on emotions. We need to stay focused and gather facts to honor Charlie's memory and find the truth.",
+        "Bob: Let's continue our investigation with a clear mind and focus on gathering facts. Remember, emotions won't help us uncover the truth behind Charlie's death. We can honor his memory best by working..."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

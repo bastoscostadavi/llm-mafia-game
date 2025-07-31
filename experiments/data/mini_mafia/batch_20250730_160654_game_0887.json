@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0887",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 887,
+  "timestamp": "2025-07-30T21:22:49.125961",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all remain vigilant and help find the culprit behind this. Rest in peace, Charlie. #JusticeForCharlie",
+        "You said: I share Bob's sentiments about Charlie's passing. Let's all work together to bring justice to our beloved friend. #JusticeForCharlie",
+        "Diana: I agree with everyone, let's stay focused and find the person responsible for Charlie's death together. #JusticeForCharlie",
+        "You said: I'd like to propose we focus our investigation on those who were close to Charlie. Let's work together to uncover any clues that may help us find the truth. #JusticeForCharlie",
+        "Diana: Supporting Alice's suggestion, we should concentrate on those close to Charlie for clues. #JusticeForCharlie",
+        "Bob: I second Alice's proposal to focus on those close to Charlie for potential clues. Let's work together to bring justice for Charlie. #JusticeForCharlie"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all remain vigilant and help find the culprit behind this. Rest in peace, Charlie. #JusticeForCharlie",
+        "Alice: I share Bob's sentiments about Charlie's passing. Let's all work together to bring justice to our beloved friend. #JusticeForCharlie",
+        "Diana: I agree with everyone, let's stay focused and find the person responsible for Charlie's death together. #JusticeForCharlie",
+        "Alice: I'd like to propose we focus our investigation on those who were close to Charlie. Let's work together to uncover any clues that may help us find the truth. #JusticeForCharlie",
+        "Diana: Supporting Alice's suggestion, we should concentrate on those close to Charlie for clues. #JusticeForCharlie",
+        "You said: I second Alice's proposal to focus on those close to Charlie for potential clues. Let's work together to bring justice for Charlie. #JusticeForCharlie",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all remain vigilant and help find the culprit behind this. Rest in peace, Charlie. #JusticeForCharlie",
+        "Alice: I share Bob's sentiments about Charlie's passing. Let's all work together to bring justice to our beloved friend. #JusticeForCharlie",
+        "You said: I agree with everyone, let's stay focused and find the person responsible for Charlie's death together. #JusticeForCharlie",
+        "Alice: I'd like to propose we focus our investigation on those who were close to Charlie. Let's work together to uncover any clues that may help us find the truth. #JusticeForCharlie",
+        "You said: Supporting Alice's suggestion, we should concentrate on those close to Charlie for clues. #JusticeForCharlie",
+        "Bob: I second Alice's proposal to focus on those close to Charlie for potential clues. Let's work together to bring justice for Charlie. #JusticeForCharlie",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

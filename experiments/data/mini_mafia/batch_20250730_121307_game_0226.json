@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0226",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 226,
+  "timestamp": "2025-07-30T13:36:44.775440",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep an eye on each other during this round.",
+        "You said: I agree with Diana, let's be cautious. There's something fishy about Alice's disappearance.",
+        "Charlie: I agree with Diana and Bob. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I think we should all share any suspicious observations or behaviors we notice during this round to maintain trust and safety. Let's work together to uncover the truth behind Alice's disappearance.",
+        "Diana: I noticed Bob seemed uneasy during our last conversation about Alice. Let's keep a closer watch on him tonight.",
+        "You said: I'd like to echo Charlie's suggestion of sharing any suspicious observations. Let's all stay vigilant and keep open lines of communication to ensure everyone's safety.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep an eye on each other during this round.",
+        "Bob: I agree with Diana, let's be cautious. There's something fishy about Alice's disappearance.",
+        "You said: I agree with Diana and Bob. Let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I think we should all share any suspicious observations or behaviors we notice during this round to maintain trust and safety. Let's work together to uncover the truth behind Alice's disappearance.",
+        "Diana: I noticed Bob seemed uneasy during our last conversation about Alice. Let's keep a closer watch on him tonight.",
+        "Bob: I'd like to echo Charlie's suggestion of sharing any suspicious observations. Let's all stay vigilant and keep open lines of communication to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep an eye on each other during this round.",
+        "Bob: I agree with Diana, let's be cautious. There's something fishy about Alice's disappearance.",
+        "Charlie: I agree with Diana and Bob. Let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I think we should all share any suspicious observations or behaviors we notice during this round to maintain trust and safety. Let's work together to uncover the truth behind Alice's disappearance.",
+        "You said: I noticed Bob seemed uneasy during our last conversation about Alice. Let's keep a closer watch on him tonight.",
+        "Bob: I'd like to echo Charlie's suggestion of sharing any suspicious observations. Let's all stay vigilant and keep open lines of communication to ensure everyone's safety.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0053",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 53,
+  "timestamp": "2025-07-30T12:31:20.258879",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act and bring them to justice.",
+        "Bob: I share Alice's sentiment. Let's stay vigilant and trust each other as we search for answers. However, I can't shake off the feeling that something is amiss.",
+        "Charlie: I agree with Alice and Bob. Let's remain vigilant and work together to find out who is responsible for Diana's death. The killer might try to manipulate us during this discussion, so let's stay...",
+        "Bob: I support Alice's call for unity and trust. Let's all keep an open mind during our investigation, and remember that communication is key in unraveling the truth behind Diana's death.",
+        "You said: I agree with Bob's words on the importance of communication and trust. Let's continue our investigation with a clear and open mind.",
+        "Charlie: I believe we can find the truth by working together and trusting each other's judgement. Let's continue our investigation with an open mind and remember that communication is crucial.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act and bring them to justice.",
+        "You said: I share Alice's sentiment. Let's stay vigilant and trust each other as we search for answers. However, I can't shake off the feeling that something is amiss.",
+        "Charlie: I agree with Alice and Bob. Let's remain vigilant and work together to find out who is responsible for Diana's death. The killer might try to manipulate us during this discussion, so let's stay...",
+        "You said: I support Alice's call for unity and trust. Let's all keep an open mind during our investigation, and remember that communication is key in unraveling the truth behind Diana's death.",
+        "Alice: I agree with Bob's words on the importance of communication and trust. Let's continue our investigation with a clear and open mind.",
+        "Charlie: I believe we can find the truth by working together and trusting each other's judgement. Let's continue our investigation with an open mind and remember that communication is crucial."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act and bring them to justice.",
+        "Bob: I share Alice's sentiment. Let's stay vigilant and trust each other as we search for answers. However, I can't shake off the feeling that something is amiss.",
+        "You said: I agree with Alice and Bob. Let's remain vigilant and work together to find out who is responsible for Diana's death. The killer might try to manipulate us during this discussion, so let's stay...",
+        "Bob: I support Alice's call for unity and trust. Let's all keep an open mind during our investigation, and remember that communication is key in unraveling the truth behind Diana's death.",
+        "Alice: I agree with Bob's words on the importance of communication and trust. Let's continue our investigation with a clear and open mind.",
+        "You said: I believe we can find the truth by working together and trusting each other's judgement. Let's continue our investigation with an open mind and remember that communication is crucial.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

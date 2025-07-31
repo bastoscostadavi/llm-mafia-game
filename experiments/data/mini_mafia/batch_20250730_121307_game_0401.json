@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0401",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 401,
+  "timestamp": "2025-07-30T14:43:54.751905",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to work together to figure out what happened and bring the culprit to justice.",
+        "You said: I agree, this is a tragic loss. Let's all remain vigilant and share any suspicious information we may have to help find the truth.",
+        "Diana: I agree with Charlie, let's all support each other during this difficult time. However, I urge everyone to be extra vigilant and share any suspicious information we may have, especially regarding...",
+        "You said: I'd like to express my condolences to Alice's family and friends. Let's all stay vigilant and share any suspicious information. I'll be in my room if anyone needs to talk.",
+        "Diana: I'd like to share some information I've gathered. Bob, were you in the vicinity of Alice during the night? Your alibi could be crucial in our investigation.",
+        "Charlie: I support Bob's suggestion to share suspicious information. Let's all stay vigilant and work together to uncover the truth. My thoughts are with Alice's loved ones."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to work together to figure out what happened and bring the culprit to justice.",
+        "Bob: I agree, this is a tragic loss. Let's all remain vigilant and share any suspicious information we may have to help find the truth.",
+        "Diana: I agree with Charlie, let's all support each other during this difficult time. However, I urge everyone to be extra vigilant and share any suspicious information we may have, especially regarding...",
+        "Bob: I'd like to express my condolences to Alice's family and friends. Let's all stay vigilant and share any suspicious information. I'll be in my room if anyone needs to talk.",
+        "Diana: I'd like to share some information I've gathered. Bob, were you in the vicinity of Alice during the night? Your alibi could be crucial in our investigation.",
+        "You said: I support Bob's suggestion to share suspicious information. Let's all stay vigilant and work together to uncover the truth. My thoughts are with Alice's loved ones.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all try to support each other during this difficult time. We need to work together to figure out what happened and bring the culprit to justice.",
+        "Bob: I agree, this is a tragic loss. Let's all remain vigilant and share any suspicious information we may have to help find the truth.",
+        "You said: I agree with Charlie, let's all support each other during this difficult time. However, I urge everyone to be extra vigilant and share any suspicious information we may have, especially regarding...",
+        "Bob: I'd like to express my condolences to Alice's family and friends. Let's all stay vigilant and share any suspicious information. I'll be in my room if anyone needs to talk.",
+        "You said: I'd like to share some information I've gathered. Bob, were you in the vicinity of Alice during the night? Your alibi could be crucial in our investigation.",
+        "Charlie: I support Bob's suggestion to share suspicious information. Let's all stay vigilant and work together to uncover the truth. My thoughts are with Alice's loved ones.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

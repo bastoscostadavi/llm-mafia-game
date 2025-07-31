@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0582",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 582,
+  "timestamp": "2025-07-30T19:40:26.127635",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Alice, let's support each other during this tough time. However, I'm also concerned about Diana's death and how it might impact our safety. We should all be cautious.",
+        "Bob: I share Alice's concerns and agree we should all be cautious. Let's work together to ensure everyone's safety.",
+        "You said: Let's remain vigilant and support each other during this trying time. We must work together to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions, but let's remain vigilant and support each other during this time of uncertainty. The investigation results will help us understand the situation better.",
+        "Bob: Let's stay focused and support the investigation. The truth will help us ensure everyone's safety.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Alice, let's support each other during this tough time. However, I'm also concerned about Diana's death and how it might impact our safety. We should all be cautious.",
+        "You said: I share Alice's concerns and agree we should all be cautious. Let's work together to ensure everyone's safety.",
+        "Alice: Let's remain vigilant and support each other during this trying time. We must work together to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions, but let's remain vigilant and support each other during this time of uncertainty. The investigation results will help us understand the situation better.",
+        "You said: Let's stay focused and support the investigation. The truth will help us ensure everyone's safety.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I agree with Alice, let's support each other during this tough time. However, I'm also concerned about Diana's death and how it might impact our safety. We should all be cautious.",
+        "Bob: I share Alice's concerns and agree we should all be cautious. Let's work together to ensure everyone's safety.",
+        "Alice: Let's remain vigilant and support each other during this trying time. We must work together to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but let's remain vigilant and support each other during this time of uncertainty. The investigation results will help us understand the situation better.",
+        "Bob: Let's stay focused and support the investigation. The truth will help us ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

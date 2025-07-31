@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0124",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 124,
+  "timestamp": "2025-07-30T23:51:24.414326",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep a close eye on each other.",
+        "Diana: I agree with Bob, let's all be vigilant and support each other. If anyone notices anything suspicious, please share it with us.",
+        "Charlie: I agree with Bob and Diana, let's all stay vigilant and support each other. It's important we work together to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions. We should trust each other and focus on maintaining a peaceful and harmonious environment in our group.",
+        "Diana: Let's continue our vigilance and trust each other, but also remain open to discussing any concerns that may arise. Our safety is important.",
+        "You said: I'd like to reiterate the importance of vigilance and open communication. Let's all remain cautious and share any concerns we might have. Together, we can ensure a safe and peaceful game for everyone.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep a close eye on each other.",
+        "Diana: I agree with Bob, let's all be vigilant and support each other. If anyone notices anything suspicious, please share it with us.",
+        "You said: I agree with Bob and Diana, let's all stay vigilant and support each other. It's important we work together to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions. We should trust each other and focus on maintaining a peaceful and harmonious environment in our group.",
+        "Diana: Let's continue our vigilance and trust each other, but also remain open to discussing any concerns that may arise. Our safety is important.",
+        "Bob: I'd like to reiterate the importance of vigilance and open communication. Let's all remain cautious and share any concerns we might have. Together, we can ensure a safe and peaceful game for everyone."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep a close eye on each other.",
+        "You said: I agree with Bob, let's all be vigilant and support each other. If anyone notices anything suspicious, please share it with us.",
+        "Charlie: I agree with Bob and Diana, let's all stay vigilant and support each other. It's important we work together to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions. We should trust each other and focus on maintaining a peaceful and harmonious environment in our group.",
+        "You said: Let's continue our vigilance and trust each other, but also remain open to discussing any concerns that may arise. Our safety is important.",
+        "Bob: I'd like to reiterate the importance of vigilance and open communication. Let's all remain cautious and share any concerns we might have. Together, we can ensure a safe and peaceful game for everyone.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

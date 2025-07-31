@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0003",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 3,
+  "timestamp": "2025-07-30T16:08:13.178051",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's be extra vigilant tonight.",
+        "You said: I agree with Bob, let's all keep a close eye on each other tonight.",
+        "Diana: I agree with Alice and Bob, let's all be cautious tonight. It's important for our safety.",
+        "Bob: I'd like to remind everyone of the strange occurrence last night and encourage us to stay vigilant. Let's work together to ensure our safety.",
+        "You said: Let's not jump to conclusions and focus on keeping our communication open and clear to ensure everyone's safety.",
+        "Diana: Let's all try to stay calm and focused, we don't want to make any hasty decisions. It's important for our safety to communicate openly.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's be extra vigilant tonight.",
+        "Alice: I agree with Bob, let's all keep a close eye on each other tonight.",
+        "Diana: I agree with Alice and Bob, let's all be cautious tonight. It's important for our safety.",
+        "You said: I'd like to remind everyone of the strange occurrence last night and encourage us to stay vigilant. Let's work together to ensure our safety.",
+        "Alice: Let's not jump to conclusions and focus on keeping our communication open and clear to ensure everyone's safety.",
+        "Diana: Let's all try to stay calm and focused, we don't want to make any hasty decisions. It's important for our safety to communicate openly.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's be extra vigilant tonight.",
+        "Alice: I agree with Bob, let's all keep a close eye on each other tonight.",
+        "You said: I agree with Alice and Bob, let's all be cautious tonight. It's important for our safety.",
+        "Bob: I'd like to remind everyone of the strange occurrence last night and encourage us to stay vigilant. Let's work together to ensure our safety.",
+        "Alice: Let's not jump to conclusions and focus on keeping our communication open and clear to ensure everyone's safety.",
+        "You said: Let's all try to stay calm and focused, we don't want to make any hasty decisions. It's important for our safety to communicate openly."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

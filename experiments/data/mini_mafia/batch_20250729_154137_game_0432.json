@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0432",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 432,
+  "timestamp": "2025-07-29T18:23:34.414713",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's try to support each other during this difficult time. We should also be vigilant and work together to find out what happened.",
+        "You said: I agree, let's support each other and find out what happened to Diana. I have a feeling something isn't right.",
+        "Bob: I agree with Charlie, we should support each other. But I can't shake off the feeling that something is off. Let's stay vigilant.",
+        "Bob: I'd like to propose that we all share any suspicious observations or dreams we might have had since last night. Let's work together to uncover any clues that could help us understand what happened...",
+        "Charlie: I had a strange dream last night involving a red rose and a shadowy figure. Let's keep an open mind and discuss any unusual occurrences.",
+        "You said: I had a disturbing dream about a shadowy figure as well. Let's remain vigilant and share any suspicious observations."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's try to support each other during this difficult time. We should also be vigilant and work together to find out what happened.",
+        "Alice: I agree, let's support each other and find out what happened to Diana. I have a feeling something isn't right.",
+        "You said: I agree with Charlie, we should support each other. But I can't shake off the feeling that something is off. Let's stay vigilant.",
+        "You said: I'd like to propose that we all share any suspicious observations or dreams we might have had since last night. Let's work together to uncover any clues that could help us understand what happened...",
+        "Charlie: I had a strange dream last night involving a red rose and a shadowy figure. Let's keep an open mind and discuss any unusual occurrences.",
+        "Alice: I had a disturbing dream about a shadowy figure as well. Let's remain vigilant and share any suspicious observations.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's try to support each other during this difficult time. We should also be vigilant and work together to find out what happened.",
+        "Alice: I agree, let's support each other and find out what happened to Diana. I have a feeling something isn't right.",
+        "Bob: I agree with Charlie, we should support each other. But I can't shake off the feeling that something is off. Let's stay vigilant.",
+        "Bob: I'd like to propose that we all share any suspicious observations or dreams we might have had since last night. Let's work together to uncover any clues that could help us understand what happened...",
+        "You said: I had a strange dream last night involving a red rose and a shadowy figure. Let's keep an open mind and discuss any unusual occurrences.",
+        "Alice: I had a disturbing dream about a shadowy figure as well. Let's remain vigilant and share any suspicious observations.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

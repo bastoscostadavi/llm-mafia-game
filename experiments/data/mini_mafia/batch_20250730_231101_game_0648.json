@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0648",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 648,
+  "timestamp": "2025-07-31T02:41:25.362969",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant.",
+        "Diana: I agree with Bob, let's all keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Bob and Diana's concerns for everyone's safety. Let's all be vigilant.",
+        "You said: Let's not jump to conclusions based on Charlie's death. We should continue being vigilant and trust each other until we have solid evidence.",
+        "Bob: I'd like to propose that we focus on maintaining trust and unity among us, especially in these trying times. Let's continue being vigilant, but let's also remember the importance of open...",
+        "Diana: Let's not forget that open communication and trust are essential in our current situation. We should continue being vigilant but also maintain unity.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant.",
+        "Diana: I agree with Bob, let's all keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I share Bob and Diana's concerns for everyone's safety. Let's all be vigilant.",
+        "Alice: Let's not jump to conclusions based on Charlie's death. We should continue being vigilant and trust each other until we have solid evidence.",
+        "You said: I'd like to propose that we focus on maintaining trust and unity among us, especially in these trying times. Let's continue being vigilant, but let's also remember the importance of open...",
+        "Diana: Let's not forget that open communication and trust are essential in our current situation. We should continue being vigilant but also maintain unity."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant.",
+        "You said: I agree with Bob, let's all keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I share Bob and Diana's concerns for everyone's safety. Let's all be vigilant.",
+        "Alice: Let's not jump to conclusions based on Charlie's death. We should continue being vigilant and trust each other until we have solid evidence.",
+        "Bob: I'd like to propose that we focus on maintaining trust and unity among us, especially in these trying times. Let's continue being vigilant, but let's also remember the importance of open...",
+        "You said: Let's not forget that open communication and trust are essential in our current situation. We should continue being vigilant but also maintain unity.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

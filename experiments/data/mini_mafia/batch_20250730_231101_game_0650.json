@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0650",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 650,
+  "timestamp": "2025-07-31T02:42:06.780134",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden demise. Let's all try to support each other during these trying times.",
+        "Bob: I agree, Alice. Let's all come together during this unfortunate time. But remember, we must also remain vigilant and ensure the truth comes to light. Rest in peace, Charlie.",
+        "Diana: I share Alice's sentiments, but let's not forget the importance of unity and transparency in our investigation. Let's work together to uncover the truth behind Charlie's death.",
+        "Diana: Let's focus on uncovering the truth about Charlie's death. Vigilance and transparency are key to ensuring justice. #ForCharlie.",
+        "Bob: Let's not jump to conclusions, we need to work together to find the truth behind Charlie's death. Our unity is key to justice. #ForCharlie.",
+        "You said: Let us continue our efforts in uncovering the truth behind Charlie's death, while keeping our unity strong. #ForCharlie.",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm saddened by Charlie's sudden demise. Let's all try to support each other during these trying times.",
+        "You said: I agree, Alice. Let's all come together during this unfortunate time. But remember, we must also remain vigilant and ensure the truth comes to light. Rest in peace, Charlie.",
+        "Diana: I share Alice's sentiments, but let's not forget the importance of unity and transparency in our investigation. Let's work together to uncover the truth behind Charlie's death.",
+        "Diana: Let's focus on uncovering the truth about Charlie's death. Vigilance and transparency are key to ensuring justice. #ForCharlie.",
+        "You said: Let's not jump to conclusions, we need to work together to find the truth behind Charlie's death. Our unity is key to justice. #ForCharlie.",
+        "Alice: Let us continue our efforts in uncovering the truth behind Charlie's death, while keeping our unity strong. #ForCharlie."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm saddened by Charlie's sudden demise. Let's all try to support each other during these trying times.",
+        "Bob: I agree, Alice. Let's all come together during this unfortunate time. But remember, we must also remain vigilant and ensure the truth comes to light. Rest in peace, Charlie.",
+        "You said: I share Alice's sentiments, but let's not forget the importance of unity and transparency in our investigation. Let's work together to uncover the truth behind Charlie's death.",
+        "You said: Let's focus on uncovering the truth about Charlie's death. Vigilance and transparency are key to ensuring justice. #ForCharlie.",
+        "Bob: Let's not jump to conclusions, we need to work together to find the truth behind Charlie's death. Our unity is key to justice. #ForCharlie.",
+        "Alice: Let us continue our efforts in uncovering the truth behind Charlie's death, while keeping our unity strong. #ForCharlie.",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

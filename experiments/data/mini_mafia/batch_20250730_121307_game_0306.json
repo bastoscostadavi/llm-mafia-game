@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0306",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 306,
+  "timestamp": "2025-07-30T14:07:17.539748",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Diana's passing. Let's work together to ensure safety and trust within our group.",
+        "Charlie: I agree with Alice, let's all support each other and ensure safety within our group. But I'm particularly concerned about Bob's strange behavior and sudden show of sympathy for Diana. We should keep...",
+        "Charlie: I'd like to echo Alice's sentiments about unity and support during this tough time. However, I'm concerned about recent events and will be keeping a close eye on everyone's actions. Let's all work...",
+        "Bob: I share the concerns of keeping our group safe. Let's all work together during this difficult time.",
+        "You said: I'd like to emphasize the importance of trust and unity within our group during this challenging time. Let's support each other and work together for safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Diana's passing. Let's work together to ensure safety and trust within our group.",
+        "Charlie: I agree with Alice, let's all support each other and ensure safety within our group. But I'm particularly concerned about Bob's strange behavior and sudden show of sympathy for Diana. We should keep...",
+        "Charlie: I'd like to echo Alice's sentiments about unity and support during this tough time. However, I'm concerned about recent events and will be keeping a close eye on everyone's actions. Let's all work...",
+        "You said: I share the concerns of keeping our group safe. Let's all work together during this difficult time.",
+        "Alice: I'd like to emphasize the importance of trust and unity within our group during this challenging time. Let's support each other and work together for safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Diana's passing. Let's work together to ensure safety and trust within our group.",
+        "You said: I agree with Alice, let's all support each other and ensure safety within our group. But I'm particularly concerned about Bob's strange behavior and sudden show of sympathy for Diana. We should keep...",
+        "You said: I'd like to echo Alice's sentiments about unity and support during this tough time. However, I'm concerned about recent events and will be keeping a close eye on everyone's actions. Let's all work...",
+        "Bob: I share the concerns of keeping our group safe. Let's all work together during this difficult time.",
+        "Alice: I'd like to emphasize the importance of trust and unity within our group during this challenging time. Let's support each other and work together for safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

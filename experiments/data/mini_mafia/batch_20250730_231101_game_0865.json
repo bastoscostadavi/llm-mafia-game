@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0865",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 865,
+  "timestamp": "2025-07-31T03:51:56.916715",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during this trying time.",
+        "Charlie: I agree, let's all stay strong during this difficult time. Let's not jump to conclusions and trust each other until we have enough evidence.",
+        "Diana: I agree with Bob, let's support each other during this difficult time. However, we must also remain vigilant and keep an open mind. Let's remember that trust should be earned and not given lightly.",
+        "You said: Let's not forget that open communication and trust are essential for survival in this game. Let's work together and share any suspicious observations to increase our chances of winning.",
+        "Diana: Let's not forget that open communication and trust are crucial, but we must also remain vigilant. Let's work together and share any suspicious observations to increase our chances of survival.",
+        "Charlie: Let's all express our condolences for Alice and focus on finding the true culprit behind her death. Let's avoid jumping to conclusions and work together as a team.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during this trying time.",
+        "You said: I agree, let's all stay strong during this difficult time. Let's not jump to conclusions and trust each other until we have enough evidence.",
+        "Diana: I agree with Bob, let's support each other during this difficult time. However, we must also remain vigilant and keep an open mind. Let's remember that trust should be earned and not given lightly.",
+        "Bob: Let's not forget that open communication and trust are essential for survival in this game. Let's work together and share any suspicious observations to increase our chances of winning.",
+        "Diana: Let's not forget that open communication and trust are crucial, but we must also remain vigilant. Let's work together and share any suspicious observations to increase our chances of survival.",
+        "You said: Let's all express our condolences for Alice and focus on finding the true culprit behind her death. Let's avoid jumping to conclusions and work together as a team."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during this trying time.",
+        "Charlie: I agree, let's all stay strong during this difficult time. Let's not jump to conclusions and trust each other until we have enough evidence.",
+        "You said: I agree with Bob, let's support each other during this difficult time. However, we must also remain vigilant and keep an open mind. Let's remember that trust should be earned and not given lightly.",
+        "Bob: Let's not forget that open communication and trust are essential for survival in this game. Let's work together and share any suspicious observations to increase our chances of winning.",
+        "You said: Let's not forget that open communication and trust are crucial, but we must also remain vigilant. Let's work together and share any suspicious observations to increase our chances of survival.",
+        "Charlie: Let's all express our condolences for Alice and focus on finding the true culprit behind her death. Let's avoid jumping to conclusions and work together as a team.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

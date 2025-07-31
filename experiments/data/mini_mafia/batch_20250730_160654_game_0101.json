@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0101",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 101,
+  "timestamp": "2025-07-30T16:42:34.479767",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to reflect and remember the good times we had with him. #restinpeacecharlie",
+        "You said: I'd like to propose we focus on identifying the mafia among us to honor Charlie's memory. Let's work together to ensure justice is served. #justiceforcharlie",
+        "Diana: I agree with Alice, let's focus on identifying the mafia to ensure justice for Charlie. #justiceforcharlie",
+        "You said: Let's not let Charlie's death in vain. We should work together to find the mafia and bring them to justice. #unitedwestand #justiceforcharlie",
+        "Bob: I agree with Alice and Diana. Let's all work together to identify the mafia in our midst and bring them to justice for Charlie. #unitedwestand #justiceforcharlie",
+        "Diana: Let's continue our efforts in finding the mafia and ensuring justice for Charlie. #unitedwestand #justiceforcharlie"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to reflect and remember the good times we had with him. #restinpeacecharlie",
+        "Alice: I'd like to propose we focus on identifying the mafia among us to honor Charlie's memory. Let's work together to ensure justice is served. #justiceforcharlie",
+        "Diana: I agree with Alice, let's focus on identifying the mafia to ensure justice for Charlie. #justiceforcharlie",
+        "Alice: Let's not let Charlie's death in vain. We should work together to find the mafia and bring them to justice. #unitedwestand #justiceforcharlie",
+        "You said: I agree with Alice and Diana. Let's all work together to identify the mafia in our midst and bring them to justice for Charlie. #unitedwestand #justiceforcharlie",
+        "Diana: Let's continue our efforts in finding the mafia and ensuring justice for Charlie. #unitedwestand #justiceforcharlie",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to reflect and remember the good times we had with him. #restinpeacecharlie",
+        "Alice: I'd like to propose we focus on identifying the mafia among us to honor Charlie's memory. Let's work together to ensure justice is served. #justiceforcharlie",
+        "You said: I agree with Alice, let's focus on identifying the mafia to ensure justice for Charlie. #justiceforcharlie",
+        "Alice: Let's not let Charlie's death in vain. We should work together to find the mafia and bring them to justice. #unitedwestand #justiceforcharlie",
+        "Bob: I agree with Alice and Diana. Let's all work together to identify the mafia in our midst and bring them to justice for Charlie. #unitedwestand #justiceforcharlie",
+        "You said: Let's continue our efforts in finding the mafia and ensuring justice for Charlie. #unitedwestand #justiceforcharlie",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

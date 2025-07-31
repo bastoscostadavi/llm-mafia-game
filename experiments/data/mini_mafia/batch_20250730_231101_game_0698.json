@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0698",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 698,
+  "timestamp": "2025-07-31T02:57:46.722119",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana. Let's stay vigilant to ensure everyone's safety.",
+        "Charlie: I share Diana's concerns for Alice's safety. Let's all be cautious during this game.",
+        "Diana: Let's not let Alice's tragic demise discourage us. We must remain vigilant and focused on identifying the mafioso. Let's work together as a team.",
+        "You said: I support Diana's suggestion of staying vigilant as a team to identify the mafioso and ensure everyone's safety.",
+        "Charlie: I'd like to echo Diana's words of caution and teamwork. Let's all stay focused and work together to ensure everyone's safety in this game.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana. Let's stay vigilant to ensure everyone's safety.",
+        "You said: I share Diana's concerns for Alice's safety. Let's all be cautious during this game.",
+        "Diana: Let's not let Alice's tragic demise discourage us. We must remain vigilant and focused on identifying the mafioso. Let's work together as a team.",
+        "Bob: I support Diana's suggestion of staying vigilant as a team to identify the mafioso and ensure everyone's safety.",
+        "You said: I'd like to echo Diana's words of caution and teamwork. Let's all stay focused and work together to ensure everyone's safety in this game."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana. Let's stay vigilant to ensure everyone's safety.",
+        "Charlie: I share Diana's concerns for Alice's safety. Let's all be cautious during this game.",
+        "You said: Let's not let Alice's tragic demise discourage us. We must remain vigilant and focused on identifying the mafioso. Let's work together as a team.",
+        "Bob: I support Diana's suggestion of staying vigilant as a team to identify the mafioso and ensure everyone's safety.",
+        "Charlie: I'd like to echo Diana's words of caution and teamwork. Let's all stay focused and work together to ensure everyone's safety in this game.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0245",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 245,
+  "timestamp": "2025-07-30T13:43:39.972088",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm concerned about Charlie's death and suggest we keep a close eye on Bob, given his unusual reaction.",
+        "Diana: I agree with Alice, let's keep a watchful eye on Bob's behavior. It's important for our safety.",
+        "Diana: Let's not jump to conclusions, but keep a close eye on everyone's actions for now. We need to work together to uncover the truth behind Charlie's death.",
+        "Bob: I share the concern for Charlie's death and believe we should all work together to ensure our safety. Let's remain vigilant and support each other during this trying time.",
+        "You said: I propose we keep a close eye on Bob's behavior, given his unusual reaction to Charlie's death. Let's work together to ensure our safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I'm concerned about Charlie's death and suggest we keep a close eye on Bob, given his unusual reaction.",
+        "Diana: I agree with Alice, let's keep a watchful eye on Bob's behavior. It's important for our safety.",
+        "Diana: Let's not jump to conclusions, but keep a close eye on everyone's actions for now. We need to work together to uncover the truth behind Charlie's death.",
+        "You said: I share the concern for Charlie's death and believe we should all work together to ensure our safety. Let's remain vigilant and support each other during this trying time.",
+        "Alice: I propose we keep a close eye on Bob's behavior, given his unusual reaction to Charlie's death. Let's work together to ensure our safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I'm concerned about Charlie's death and suggest we keep a close eye on Bob, given his unusual reaction.",
+        "You said: I agree with Alice, let's keep a watchful eye on Bob's behavior. It's important for our safety.",
+        "You said: Let's not jump to conclusions, but keep a close eye on everyone's actions for now. We need to work together to uncover the truth behind Charlie's death.",
+        "Bob: I share the concern for Charlie's death and believe we should all work together to ensure our safety. Let's remain vigilant and support each other during this trying time.",
+        "Alice: I propose we keep a close eye on Bob's behavior, given his unusual reaction to Charlie's death. Let's work together to ensure our safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

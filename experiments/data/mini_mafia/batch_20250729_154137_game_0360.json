@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0360",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 360,
+  "timestamp": "2025-07-29T17:57:07.124063",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's ensure we bring the culprit to justice. #JusticeForAlice",
+        "Diana: I'm shocked by Alice's passing. Let's support each other during this difficult time and work together to find the truth. #JusticeForAlice #StrengthInUnity",
+        "Charlie: Based on my investigation, I believe Bob's grief might be a cover. Let's stay vigilant. #JusticeForAlice #FollowTheClues",
+        "Diana: I'm troubled by Charlie's accusation against Bob. Let's consider all possibilities before jumping to conclusions. #JusticeForAlice #FairInvestigation",
+        "You said: Let's not jump to conclusions. Alice's death is a tragedy, and we should work together to find the truth. #JusticeForAlice #UnitedFront",
+        "Charlie: Let's not let emotions cloud our judgment. I still believe we should investigate further before making any arrests. #JusticeForAlice #ThoroughInvestigation"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's ensure we bring the culprit to justice. #JusticeForAlice",
+        "Diana: I'm shocked by Alice's passing. Let's support each other during this difficult time and work together to find the truth. #JusticeForAlice #StrengthInUnity",
+        "You said: Based on my investigation, I believe Bob's grief might be a cover. Let's stay vigilant. #JusticeForAlice #FollowTheClues",
+        "Diana: I'm troubled by Charlie's accusation against Bob. Let's consider all possibilities before jumping to conclusions. #JusticeForAlice #FairInvestigation",
+        "Bob: Let's not jump to conclusions. Alice's death is a tragedy, and we should work together to find the truth. #JusticeForAlice #UnitedFront",
+        "You said: Let's not let emotions cloud our judgment. I still believe we should investigate further before making any arrests. #JusticeForAlice #ThoroughInvestigation",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's ensure we bring the culprit to justice. #JusticeForAlice",
+        "You said: I'm shocked by Alice's passing. Let's support each other during this difficult time and work together to find the truth. #JusticeForAlice #StrengthInUnity",
+        "Charlie: Based on my investigation, I believe Bob's grief might be a cover. Let's stay vigilant. #JusticeForAlice #FollowTheClues",
+        "You said: I'm troubled by Charlie's accusation against Bob. Let's consider all possibilities before jumping to conclusions. #JusticeForAlice #FairInvestigation",
+        "Bob: Let's not jump to conclusions. Alice's death is a tragedy, and we should work together to find the truth. #JusticeForAlice #UnitedFront",
+        "Charlie: Let's not let emotions cloud our judgment. I still believe we should investigate further before making any arrests. #JusticeForAlice #ThoroughInvestigation",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

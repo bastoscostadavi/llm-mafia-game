@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0500",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 500,
+  "timestamp": "2025-07-30T19:10:09.249539",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all pull together and figure out who did this heinous deed. #solidarity #justiceforAlice",
+        "Charlie: I agree, let's work together to find the truth behind Alice's death. Bob, do you have any information that might help in our investigation? #justiceforAlice #stayfocused",
+        "Diana: I agree with Charlie and Bob, let's work together to find the truth behind Alice's death. I have no information to share at the moment. #justiceforAlice #stayfocused",
+        "Charlie: Let's not jump to conclusions. We need to stay focused and gather all information before making any accusations. #stayfocused #justiceforAlice",
+        "You said: I'm saddened by Alice's death. Let's all remain calm and focused to ensure justice is served. #justiceforAlice #staycalm",
+        "Diana: I support our efforts to find the truth about Alice's death. Let's keep working together and stay focused. #justiceforAlice #stayfocused"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden demise. Let's all pull together and figure out who did this heinous deed. #solidarity #justiceforAlice",
+        "You said: I agree, let's work together to find the truth behind Alice's death. Bob, do you have any information that might help in our investigation? #justiceforAlice #stayfocused",
+        "Diana: I agree with Charlie and Bob, let's work together to find the truth behind Alice's death. I have no information to share at the moment. #justiceforAlice #stayfocused",
+        "You said: Let's not jump to conclusions. We need to stay focused and gather all information before making any accusations. #stayfocused #justiceforAlice",
+        "Bob: I'm saddened by Alice's death. Let's all remain calm and focused to ensure justice is served. #justiceforAlice #staycalm",
+        "Diana: I support our efforts to find the truth about Alice's death. Let's keep working together and stay focused. #justiceforAlice #stayfocused",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden demise. Let's all pull together and figure out who did this heinous deed. #solidarity #justiceforAlice",
+        "Charlie: I agree, let's work together to find the truth behind Alice's death. Bob, do you have any information that might help in our investigation? #justiceforAlice #stayfocused",
+        "You said: I agree with Charlie and Bob, let's work together to find the truth behind Alice's death. I have no information to share at the moment. #justiceforAlice #stayfocused",
+        "Charlie: Let's not jump to conclusions. We need to stay focused and gather all information before making any accusations. #stayfocused #justiceforAlice",
+        "Bob: I'm saddened by Alice's death. Let's all remain calm and focused to ensure justice is served. #justiceforAlice #staycalm",
+        "You said: I support our efforts to find the truth about Alice's death. Let's keep working together and stay focused. #justiceforAlice #stayfocused",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

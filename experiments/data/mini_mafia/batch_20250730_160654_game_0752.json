@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0752",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 752,
+  "timestamp": "2025-07-30T20:37:36.286921",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden absence. Let's keep a close eye on each other.",
+        "You said: I agree with Bob, let's stay vigilant.",
+        "Charlie: I agree with Bob and Alice, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: Let's not jump to conclusions. We should maintain our vigilance and trust each other until we have solid evidence.",
+        "You said: Let's continue our vigilance and trust each other, but keep an extra-close eye on any unusual behavior.",
+        "Charlie: Let's continue our vigilance and trust each other, but keep a close eye on any unusual behavior.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden absence. Let's keep a close eye on each other.",
+        "Alice: I agree with Bob, let's stay vigilant.",
+        "Charlie: I agree with Bob and Alice, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: Let's not jump to conclusions. We should maintain our vigilance and trust each other until we have solid evidence.",
+        "Alice: Let's continue our vigilance and trust each other, but keep an extra-close eye on any unusual behavior.",
+        "Charlie: Let's continue our vigilance and trust each other, but keep a close eye on any unusual behavior."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden absence. Let's keep a close eye on each other.",
+        "Alice: I agree with Bob, let's stay vigilant.",
+        "You said: I agree with Bob and Alice, let's all stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: Let's not jump to conclusions. We should maintain our vigilance and trust each other until we have solid evidence.",
+        "Alice: Let's continue our vigilance and trust each other, but keep an extra-close eye on any unusual behavior.",
+        "You said: Let's continue our vigilance and trust each other, but keep a close eye on any unusual behavior.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

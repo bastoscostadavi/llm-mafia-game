@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0652",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 652,
+  "timestamp": "2025-07-31T02:42:46.016074",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's untimely demise. We must band together to find who did this heinous deed. Let's not point fingers, but work together to uncover the truth.",
+        "Diana: I share Bob's sentiment about Charlie's death. Let's focus on identifying the culprit and bring justice.",
+        "You said: Let's not jump to conclusions, we should consider all possibilities and gather more information before making accusations.",
+        "Bob: Let's stay focused on finding the truth behind Charlie's death. We should consider all possibilities and work together to bring justice.",
+        "You said: Let's continue our investigation with an open mind and thorough discussion. We should consider all possible leads to find the truth behind Charlie's death.",
+        "Diana: Let's continue our investigation with a focused approach. We should consider all potential clues and collaborate to uncover the truth behind Charlie's death.",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's untimely demise. We must band together to find who did this heinous deed. Let's not point fingers, but work together to uncover the truth.",
+        "Diana: I share Bob's sentiment about Charlie's death. Let's focus on identifying the culprit and bring justice.",
+        "Alice: Let's not jump to conclusions, we should consider all possibilities and gather more information before making accusations.",
+        "You said: Let's stay focused on finding the truth behind Charlie's death. We should consider all possibilities and work together to bring justice.",
+        "Alice: Let's continue our investigation with an open mind and thorough discussion. We should consider all possible leads to find the truth behind Charlie's death.",
+        "Diana: Let's continue our investigation with a focused approach. We should consider all potential clues and collaborate to uncover the truth behind Charlie's death."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's untimely demise. We must band together to find who did this heinous deed. Let's not point fingers, but work together to uncover the truth.",
+        "You said: I share Bob's sentiment about Charlie's death. Let's focus on identifying the culprit and bring justice.",
+        "Alice: Let's not jump to conclusions, we should consider all possibilities and gather more information before making accusations.",
+        "Bob: Let's stay focused on finding the truth behind Charlie's death. We should consider all possibilities and work together to bring justice.",
+        "Alice: Let's continue our investigation with an open mind and thorough discussion. We should consider all possible leads to find the truth behind Charlie's death.",
+        "You said: Let's continue our investigation with a focused approach. We should consider all potential clues and collaborate to uncover the truth behind Charlie's death.",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

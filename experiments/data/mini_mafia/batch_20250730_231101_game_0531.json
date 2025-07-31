@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0531",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 531,
+  "timestamp": "2025-07-31T02:03:47.825218",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all support each other during this unfortunate time. But let's also keep an eye out for any suspicious behavior.",
+        "Charlie: I'd like to suggest we remain vigilant and keep an open dialogue during this difficult time. Let's trust but verify, and share any concerns or suspicions we may have.",
+        "Charlie: Let's not jump to conclusions based on assumptions. We should continue to trust each other and share information openly. Remember, mafiosos win when they eliminate all good players. Let's stay...",
+        "You said: Let's continue our open dialogue and support each other through this tragedy. However, we must also remain vigilant and report any suspicious behavior.",
+        "Bob: Let's continue our open dialogue and support each other during this tough time. We should remain vigilant, but not let fear or suspicion cloud our judgement.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all support each other during this unfortunate time. But let's also keep an eye out for any suspicious behavior.",
+        "Charlie: I'd like to suggest we remain vigilant and keep an open dialogue during this difficult time. Let's trust but verify, and share any concerns or suspicions we may have.",
+        "Charlie: Let's not jump to conclusions based on assumptions. We should continue to trust each other and share information openly. Remember, mafiosos win when they eliminate all good players. Let's stay...",
+        "Alice: Let's continue our open dialogue and support each other through this tragedy. However, we must also remain vigilant and report any suspicious behavior.",
+        "You said: Let's continue our open dialogue and support each other during this tough time. We should remain vigilant, but not let fear or suspicion cloud our judgement.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all support each other during this unfortunate time. But let's also keep an eye out for any suspicious behavior.",
+        "You said: I'd like to suggest we remain vigilant and keep an open dialogue during this difficult time. Let's trust but verify, and share any concerns or suspicions we may have.",
+        "You said: Let's not jump to conclusions based on assumptions. We should continue to trust each other and share information openly. Remember, mafiosos win when they eliminate all good players. Let's stay...",
+        "Alice: Let's continue our open dialogue and support each other through this tragedy. However, we must also remain vigilant and report any suspicious behavior.",
+        "Bob: Let's continue our open dialogue and support each other during this tough time. We should remain vigilant, but not let fear or suspicion cloud our judgement."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

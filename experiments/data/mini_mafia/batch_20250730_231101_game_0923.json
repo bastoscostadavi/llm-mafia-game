@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0923",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 923,
+  "timestamp": "2025-07-31T04:10:51.755405",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "You said: I echo Diana's words, let's stay united in this unfortunate situation. However, let's also remember that we must be cautious and observe each other closely. Rest in peace, Charlie. #solidarity...",
+        "Bob: I share Diana's sentiments, let's stay united and vigilant. But let's also remember the importance of open communication in identifying the culprit behind Charlie's death. Let's discuss any...",
+        "You said: Let us not jump to conclusions, let's focus on open communication to uncover the truth behind Charlie's death. Our solidarity is crucial, but so is our pursuit for justice. #transparency.",
+        "Diana: Let's not forget the importance of trust and unity in our small community. We should continue to support each other and maintain open communication to ensure the truth prevails. #trust #unity",
+        "Bob: Let's continue our open communication to identify the truth behind Charlie's death and ensure justice is served. We should trust each other, but also remain vigilant. #trust #justice"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Alice: I echo Diana's words, let's stay united in this unfortunate situation. However, let's also remember that we must be cautious and observe each other closely. Rest in peace, Charlie. #solidarity...",
+        "You said: I share Diana's sentiments, let's stay united and vigilant. But let's also remember the importance of open communication in identifying the culprit behind Charlie's death. Let's discuss any...",
+        "Alice: Let us not jump to conclusions, let's focus on open communication to uncover the truth behind Charlie's death. Our solidarity is crucial, but so is our pursuit for justice. #transparency.",
+        "Diana: Let's not forget the importance of trust and unity in our small community. We should continue to support each other and maintain open communication to ensure the truth prevails. #trust #unity",
+        "You said: Let's continue our open communication to identify the truth behind Charlie's death and ensure justice is served. We should trust each other, but also remain vigilant. #trust #justice",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Alice: I echo Diana's words, let's stay united in this unfortunate situation. However, let's also remember that we must be cautious and observe each other closely. Rest in peace, Charlie. #solidarity...",
+        "Bob: I share Diana's sentiments, let's stay united and vigilant. But let's also remember the importance of open communication in identifying the culprit behind Charlie's death. Let's discuss any...",
+        "Alice: Let us not jump to conclusions, let's focus on open communication to uncover the truth behind Charlie's death. Our solidarity is crucial, but so is our pursuit for justice. #transparency.",
+        "You said: Let's not forget the importance of trust and unity in our small community. We should continue to support each other and maintain open communication to ensure the truth prevails. #trust #unity",
+        "Bob: Let's continue our open communication to identify the truth behind Charlie's death and ensure justice is served. We should trust each other, but also remain vigilant. #trust #justice",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

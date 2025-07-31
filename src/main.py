@@ -61,9 +61,8 @@ class Display:
     def show_voting_start(self):
         print(f"\nVOTING:")
     
-    def show_arrest(self, player_name, role):
+    def show_arrest(self, player_name):
         print(f"\n{player_name} has been arrested!")
-        print(f"They were {role.upper()}!")
     
     def show_no_consensus(self):
         print(f"\nNo consensus reached. No one was arrested.")
@@ -136,7 +135,7 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
     Example:
         players = [
             {'name': 'Alice', 'role': 'detective', 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-            {'name': 'Bob', 'role': 'assassin', 'llm': {'type': 'openai', 'model': 'gpt-3.5-turbo'}},
+            {'name': 'Bob', 'role': 'mafioso', 'llm': {'type': 'openai', 'model': 'gpt-3.5-turbo'}},
             {'name': 'Charlie', 'role': 'villager', 'llm': {'type': 'anthropic', 'model': 'claude-3-haiku'}}
         ]
     """
@@ -162,6 +161,9 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
             self.message_log = []
             # Use first agent's LLM as fallback for phases that expect state.llm
             self.llm = agents[0].llm if agents else None
+            # Calculate and store game composition once  
+            from collections import Counter
+            self.composition = Counter(agent.role for agent in agents)
         
         def get_alive_players(self):
             return [a for a in self.agents if a.alive and not a.imprisoned]
@@ -171,6 +173,7 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
         
         def get_alive_names(self):
             return [a.name for a in self.get_alive_players()]
+        
     
     # Create game components
     state = GameState(agents, discussion_rounds)
@@ -179,11 +182,11 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
     night_phase = NightPhase(state, display)
     
     # Game setup: Assassins know each other
-    assassins = [a for a in agents if a.role == "assassin"]
-    if len(assassins) > 1:
-        for assassin in assassins:
-            other_assassins = [a.name for a in assassins if a != assassin]
-            assassin.remember(f"Your fellow assassins are: {', '.join(other_assassins)}.")
+    mafiosos = [a for a in agents if a.role == "mafioso"]
+    if len(mafiosos) > 1:
+        for mafioso in mafiosos:
+            other_mafiosos = [a.name for a in mafiosos if a != mafioso]
+            mafioso.remember(f"Your fellow mafiosos are: {', '.join(other_mafiosos)}.")
     
     # Game object
     class Game:
@@ -230,18 +233,11 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
             """Check win conditions"""
             alive = self.state.get_alive_players()
             
-            if len(alive) == 0:
-                return "Everyone is dead! Nobody wins!"
+            mafiosos = sum(1 for a in alive if a.role == "mafioso")
+            good = sum(1 for a in alive if a.role not in ["mafioso"])
             
-            if len(alive) == 1:
-                winner = alive[0]
-                return f"{winner.name} survives! But at what cost..."
-            
-            assassins = sum(1 for a in alive if a.role == "assassin")
-            good = sum(1 for a in alive if a.role not in ["assassin"])
-            
-            if assassins == 0:
-                return "GOOD WINS! All assassins arrested!"
+            if mafiosos == 0:
+                return "GOOD WINS! All mafiosos arrested!"
             elif good == 0:
                 return "EVIL WINS! All good players killed!"
             

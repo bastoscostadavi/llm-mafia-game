@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0736",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 736,
+  "timestamp": "2025-07-31T03:10:07.220136",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other during this critical phase of the game.",
+        "Bob: I agree with Diana. Let's stay vigilant and keep an open line of communication. It's important we work together to ensure everyone's safety.",
+        "You said: I share Diana's concerns. Let's all be transparent and open during this discussion round to maintain trust and safety within our group.",
+        "Bob: Let's continue our open communication and trust each other during this critical phase. We can only ensure everyone's safety by working together.",
+        "You said: Let's continue our open dialogue and trust one another. We can only ensure our safety by working together in this critical phase.",
+        "Diana: Let's maintain open communication and trust each other to ensure everyone's safety in this critical phase. We must work together to uncover any potential threats.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other during this critical phase of the game.",
+        "You said: I agree with Diana. Let's stay vigilant and keep an open line of communication. It's important we work together to ensure everyone's safety.",
+        "Alice: I share Diana's concerns. Let's all be transparent and open during this discussion round to maintain trust and safety within our group.",
+        "You said: Let's continue our open communication and trust each other during this critical phase. We can only ensure everyone's safety by working together.",
+        "Alice: Let's continue our open dialogue and trust one another. We can only ensure our safety by working together in this critical phase.",
+        "Diana: Let's maintain open communication and trust each other to ensure everyone's safety in this critical phase. We must work together to uncover any potential threats.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other during this critical phase of the game.",
+        "Bob: I agree with Diana. Let's stay vigilant and keep an open line of communication. It's important we work together to ensure everyone's safety.",
+        "Alice: I share Diana's concerns. Let's all be transparent and open during this discussion round to maintain trust and safety within our group.",
+        "Bob: Let's continue our open communication and trust each other during this critical phase. We can only ensure everyone's safety by working together.",
+        "Alice: Let's continue our open dialogue and trust one another. We can only ensure our safety by working together in this critical phase.",
+        "You said: Let's maintain open communication and trust each other to ensure everyone's safety in this critical phase. We must work together to uncover any potential threats."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

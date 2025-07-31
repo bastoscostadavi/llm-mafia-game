@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0363",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 363,
+  "timestamp": "2025-07-30T14:29:50.366420",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm surprised by Diana's sudden demise. Let's all be cautious and try to figure out what might have happened.",
+        "Bob: I agree with Alice, let's be cautious. I'm concerned about Diana's death and would like to discuss potential leads or suspicions.",
+        "Charlie: I'm saddened by Diana's death and agree we should be cautious. Let's work together to find out what happened.",
+        "Charlie: Let's not jump to conclusions. We should consider all possibilities and work together to gather more information.",
+        "You said: Let's remain vigilant and continue our investigation into Diana's death. We should all share any potential leads or suspicions.",
+        "Bob: Let's keep the communication open and focused on gathering information about Diana's death. We should all share any potential leads or suspicions.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm surprised by Diana's sudden demise. Let's all be cautious and try to figure out what might have happened.",
+        "You said: I agree with Alice, let's be cautious. I'm concerned about Diana's death and would like to discuss potential leads or suspicions.",
+        "Charlie: I'm saddened by Diana's death and agree we should be cautious. Let's work together to find out what happened.",
+        "Charlie: Let's not jump to conclusions. We should consider all possibilities and work together to gather more information.",
+        "Alice: Let's remain vigilant and continue our investigation into Diana's death. We should all share any potential leads or suspicions.",
+        "You said: Let's keep the communication open and focused on gathering information about Diana's death. We should all share any potential leads or suspicions."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm surprised by Diana's sudden demise. Let's all be cautious and try to figure out what might have happened.",
+        "Bob: I agree with Alice, let's be cautious. I'm concerned about Diana's death and would like to discuss potential leads or suspicions.",
+        "You said: I'm saddened by Diana's death and agree we should be cautious. Let's work together to find out what happened.",
+        "You said: Let's not jump to conclusions. We should consider all possibilities and work together to gather more information.",
+        "Alice: Let's remain vigilant and continue our investigation into Diana's death. We should all share any potential leads or suspicions.",
+        "Bob: Let's keep the communication open and focused on gathering information about Diana's death. We should all share any potential leads or suspicions.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

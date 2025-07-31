@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0491",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 491,
+  "timestamp": "2025-07-30T19:07:01.896292",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden demise. Let's all work together to find out who did this heinous deed.",
+        "Charlie: I'm saddened by Bob's death. We should all share any information we have to help find the culprit.",
+        "Diana: I'm troubled by Bob's death. Let's all be vigilant and share any suspicious activity or information we have.",
+        "You said: I agree with Diana, let's all be vigilant and share any suspicious activity or information we have to help solve this case.",
+        "Charlie: I remember Bob being friendly and outgoing. Let's keep an eye out for any unusual behavior or secretive conversations.",
+        "Diana: Let's remain vigilant and report any suspicious activity or unusual behavior to help find the culprit behind Bob's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden demise. Let's all work together to find out who did this heinous deed.",
+        "You said: I'm saddened by Bob's death. We should all share any information we have to help find the culprit.",
+        "Diana: I'm troubled by Bob's death. Let's all be vigilant and share any suspicious activity or information we have.",
+        "Alice: I agree with Diana, let's all be vigilant and share any suspicious activity or information we have to help solve this case.",
+        "You said: I remember Bob being friendly and outgoing. Let's keep an eye out for any unusual behavior or secretive conversations.",
+        "Diana: Let's remain vigilant and report any suspicious activity or unusual behavior to help find the culprit behind Bob's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden demise. Let's all work together to find out who did this heinous deed.",
+        "Charlie: I'm saddened by Bob's death. We should all share any information we have to help find the culprit.",
+        "You said: I'm troubled by Bob's death. Let's all be vigilant and share any suspicious activity or information we have.",
+        "Alice: I agree with Diana, let's all be vigilant and share any suspicious activity or information we have to help solve this case.",
+        "Charlie: I remember Bob being friendly and outgoing. Let's keep an eye out for any unusual behavior or secretive conversations.",
+        "You said: Let's remain vigilant and report any suspicious activity or unusual behavior to help find the culprit behind Bob's death.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

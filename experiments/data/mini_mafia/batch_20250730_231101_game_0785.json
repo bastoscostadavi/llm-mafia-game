@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0785",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 785,
+  "timestamp": "2025-07-31T03:26:02.741740",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Diana's concerns. Let's all be vigilant to ensure the safety of our group.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant. Bob's disappearance is troubling, but it's essential we trust the investigation process and communicate openly with each other.",
+        "Diana: Let's not forget about the importance of open communication. We should continue sharing any concerns or suspicions we may have to ensure the safety of our group.",
+        "Charlie: Let's not forget the importance of open communication and trust in the investigation process. We should all share any concerns or suspicions we may have to ensure the safety of our group. Let's stay..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I share Diana's concerns. Let's all be vigilant to ensure the safety of our group.",
+        "Alice: Let's not jump to conclusions, but we should remain vigilant. Bob's disappearance is troubling, but it's essential we trust the investigation process and communicate openly with each other.",
+        "Diana: Let's not forget about the importance of open communication. We should continue sharing any concerns or suspicions we may have to ensure the safety of our group.",
+        "You said: Let's not forget the importance of open communication and trust in the investigation process. We should all share any concerns or suspicions we may have to ensure the safety of our group. Let's stay...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.",
+        "Alice: I share Diana's concerns. Let's all be vigilant to ensure the safety of our group.",
+        "Alice: Let's not jump to conclusions, but we should remain vigilant. Bob's disappearance is troubling, but it's essential we trust the investigation process and communicate openly with each other.",
+        "You said: Let's not forget about the importance of open communication. We should continue sharing any concerns or suspicions we may have to ensure the safety of our group.",
+        "Charlie: Let's not forget the importance of open communication and trust in the investigation process. We should all share any concerns or suspicions we may have to ensure the safety of our group. Let's stay...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

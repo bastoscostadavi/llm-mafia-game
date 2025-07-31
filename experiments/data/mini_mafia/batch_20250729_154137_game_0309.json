@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0309",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 309,
+  "timestamp": "2025-07-29T17:38:16.798541",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's untimely demise. Let's work together to uncover the truth behind this tragedy and bring justice to her memory. Bob, could you share any information you might have...",
+        "You said: I share in the grief over Alice's passing. Let's all be vigilant and support each other during this difficult time. If anyone notices anything unusual, please speak up.",
+        "Diana: I agree with Charlie, let's stay focused and work together to find out what happened to Alice. If anyone notices anything suspicious, please share it with the group.",
+        "Diana: I noticed something strange last night. Charlie, did you see Alice anywhere outside after the day phase ended?",
+        "You said: I'm sorry for Alice's loss. Let's remain focused and support each other during this time. No suspicious activities noticed by me.",
+        "Charlie: I'd like to remind everyone that we should share any information that might help us uncover the truth about Alice's death. Let's stay focused and support each other during this investigation.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's work together to uncover the truth behind this tragedy and bring justice to her memory. Bob, could you share any information you might have...",
+        "Bob: I share in the grief over Alice's passing. Let's all be vigilant and support each other during this difficult time. If anyone notices anything unusual, please speak up.",
+        "Diana: I agree with Charlie, let's stay focused and work together to find out what happened to Alice. If anyone notices anything suspicious, please share it with the group.",
+        "Diana: I noticed something strange last night. Charlie, did you see Alice anywhere outside after the day phase ended?",
+        "Bob: I'm sorry for Alice's loss. Let's remain focused and support each other during this time. No suspicious activities noticed by me.",
+        "You said: I'd like to remind everyone that we should share any information that might help us uncover the truth about Alice's death. Let's stay focused and support each other during this investigation."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's untimely demise. Let's work together to uncover the truth behind this tragedy and bring justice to her memory. Bob, could you share any information you might have...",
+        "Bob: I share in the grief over Alice's passing. Let's all be vigilant and support each other during this difficult time. If anyone notices anything unusual, please speak up.",
+        "You said: I agree with Charlie, let's stay focused and work together to find out what happened to Alice. If anyone notices anything suspicious, please share it with the group.",
+        "You said: I noticed something strange last night. Charlie, did you see Alice anywhere outside after the day phase ended?",
+        "Bob: I'm sorry for Alice's loss. Let's remain focused and support each other during this time. No suspicious activities noticed by me.",
+        "Charlie: I'd like to remind everyone that we should share any information that might help us uncover the truth about Alice's death. Let's stay focused and support each other during this investigation.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

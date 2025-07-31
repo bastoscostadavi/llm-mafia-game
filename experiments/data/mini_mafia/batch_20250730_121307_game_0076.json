@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0076",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 76,
+  "timestamp": "2025-07-30T12:39:41.713281",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Diana: I agree with Charlie, let's support each other during this difficult time. Alice was a valuable member of our group and her loss is deeply felt. Let's work together to ensure the safety of our...",
+        "You said: I share Charlie and Diana's sentiments about Alice. Let's remain vigilant and support each other during this difficult time. However, I urge everyone to be truthful and transparent in our...",
+        "Charlie: Let's continue supporting each other during this sad time. We must remain vigilant to ensure Alice's killer is brought to justice. #JusticeForAlice",
+        "You said: I urge everyone to remain vigilant and truthful during this difficult time. Let's work together to ensure Alice's killer is brought to justice. #JusticeForAlice",
+        "Diana: Let's continue our efforts to find Alice's killer and bring them to justice. We must all stay vigilant and support each other during this difficult time. #JusticeForAlice."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Diana: I agree with Charlie, let's support each other during this difficult time. Alice was a valuable member of our group and her loss is deeply felt. Let's work together to ensure the safety of our...",
+        "Bob: I share Charlie and Diana's sentiments about Alice. Let's remain vigilant and support each other during this difficult time. However, I urge everyone to be truthful and transparent in our...",
+        "You said: Let's continue supporting each other during this sad time. We must remain vigilant to ensure Alice's killer is brought to justice. #JusticeForAlice",
+        "Bob: I urge everyone to remain vigilant and truthful during this difficult time. Let's work together to ensure Alice's killer is brought to justice. #JusticeForAlice",
+        "Diana: Let's continue our efforts to find Alice's killer and bring them to justice. We must all stay vigilant and support each other during this difficult time. #JusticeForAlice.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I agree with Charlie, let's support each other during this difficult time. Alice was a valuable member of our group and her loss is deeply felt. Let's work together to ensure the safety of our...",
+        "Bob: I share Charlie and Diana's sentiments about Alice. Let's remain vigilant and support each other during this difficult time. However, I urge everyone to be truthful and transparent in our...",
+        "Charlie: Let's continue supporting each other during this sad time. We must remain vigilant to ensure Alice's killer is brought to justice. #JusticeForAlice",
+        "Bob: I urge everyone to remain vigilant and truthful during this difficult time. Let's work together to ensure Alice's killer is brought to justice. #JusticeForAlice",
+        "You said: Let's continue our efforts to find Alice's killer and bring them to justice. We must all stay vigilant and support each other during this difficult time. #JusticeForAlice.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

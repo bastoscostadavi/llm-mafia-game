@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0909",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 909,
+  "timestamp": "2025-07-31T04:06:01.875521",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Charlie: I agree with Bob, let's stay united and supportive during this unfortunate time. Our thoughts are with Diana and her family.",
+        "You said: I'd like to propose we keep a close eye on Bob, given the unfortunate turn of events. Let's not forget that he's the only one among us who has direct contact with the mafia every night.",
+        "Charlie: I support Alice's suggestion to monitor Bob closely. We must ensure the safety and trust within our group. Let's all stay focused.",
+        "Bob: I share Alice and Charlie's concerns for our group's safety. Let's keep a watchful eye on each other during this challenging phase. Together, we can ensure a peaceful resolution.",
+        "You said: Let's not overlook the importance of keeping a close eye on Bob, especially given the recent events. Our group's safety depends on it."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "Charlie: I agree with Bob, let's stay united and supportive during this unfortunate time. Our thoughts are with Diana and her family.",
+        "Alice: I'd like to propose we keep a close eye on Bob, given the unfortunate turn of events. Let's not forget that he's the only one among us who has direct contact with the mafia every night.",
+        "Charlie: I support Alice's suggestion to monitor Bob closely. We must ensure the safety and trust within our group. Let's all stay focused.",
+        "You said: I share Alice and Charlie's concerns for our group's safety. Let's keep a watchful eye on each other during this challenging phase. Together, we can ensure a peaceful resolution.",
+        "Alice: Let's not overlook the importance of keeping a close eye on Bob, especially given the recent events. Our group's safety depends on it.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden demise. Let's all remain vigilant and support each other during these trying times.",
+        "You said: I agree with Bob, let's stay united and supportive during this unfortunate time. Our thoughts are with Diana and her family.",
+        "Alice: I'd like to propose we keep a close eye on Bob, given the unfortunate turn of events. Let's not forget that he's the only one among us who has direct contact with the mafia every night.",
+        "You said: I support Alice's suggestion to monitor Bob closely. We must ensure the safety and trust within our group. Let's all stay focused.",
+        "Bob: I share Alice and Charlie's concerns for our group's safety. Let's keep a watchful eye on each other during this challenging phase. Together, we can ensure a peaceful resolution.",
+        "Alice: Let's not overlook the importance of keeping a close eye on Bob, especially given the recent events. Our group's safety depends on it.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

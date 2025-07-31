@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0942",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 942,
+  "timestamp": "2025-07-30T21:41:05.208042",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's support each other during this difficult time. However, we must also remain vigilant. Rest in peace, Diana.",
+        "You said: I'm saddened by Diana's passing. Let's remember to stay vigilant during these trying times. Charlie, can you share any clues about what might have happened?",
+        "You said: I'd like to suggest we keep a close eye on Charlie's behavior tonight. Let's remember, we're playing Mafia here. Rest in peace, Diana.",
+        "Charlie: I share Alice's sentiments and offer my condolences to Diana's family. Let's all work together to uncover the truth behind her tragic death.",
+        "Bob: Let's not jump to conclusions, but let's remain vigilant and supportive during this time. Our thoughts are with Diana's family."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's support each other during this difficult time. However, we must also remain vigilant. Rest in peace, Diana.",
+        "Alice: I'm saddened by Diana's passing. Let's remember to stay vigilant during these trying times. Charlie, can you share any clues about what might have happened?",
+        "Alice: I'd like to suggest we keep a close eye on Charlie's behavior tonight. Let's remember, we're playing Mafia here. Rest in peace, Diana.",
+        "Charlie: I share Alice's sentiments and offer my condolences to Diana's family. Let's all work together to uncover the truth behind her tragic death.",
+        "You said: Let's not jump to conclusions, but let's remain vigilant and supportive during this time. Our thoughts are with Diana's family.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's support each other during this difficult time. However, we must also remain vigilant. Rest in peace, Diana.",
+        "Alice: I'm saddened by Diana's passing. Let's remember to stay vigilant during these trying times. Charlie, can you share any clues about what might have happened?",
+        "Alice: I'd like to suggest we keep a close eye on Charlie's behavior tonight. Let's remember, we're playing Mafia here. Rest in peace, Diana.",
+        "You said: I share Alice's sentiments and offer my condolences to Diana's family. Let's all work together to uncover the truth behind her tragic death.",
+        "Bob: Let's not jump to conclusions, but let's remain vigilant and supportive during this time. Our thoughts are with Diana's family.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

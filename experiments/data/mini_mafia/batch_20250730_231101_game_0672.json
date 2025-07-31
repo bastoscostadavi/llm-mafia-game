@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0672",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 672,
+  "timestamp": "2025-07-31T02:49:13.672463",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Charlie, let's stay vigilant and support each other. But we must also remember to be cautious during the daytime discussions and votes. Let's not jump to conclusions based on emotions...",
+        "Bob: I agree with Alice and Charlie, let's be cautious and support each other during this difficult time. However, it's important to remember that we must also remain vigilant and consider all...",
+        "Charlie: Let's continue our support for each other during this challenging time. Stay vigilant and cautious in our discussions.",
+        "Bob: Let's continue our support for each other during this challenging time. Remember, it's important to remain vigilant and cautious in our discussions.",
+        "You said: Let's not rush into hasty decisions. Let's continue supporting each other while staying vigilant during discussions and votes.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Charlie, let's stay vigilant and support each other. But we must also remember to be cautious during the daytime discussions and votes. Let's not jump to conclusions based on emotions...",
+        "You said: I agree with Alice and Charlie, let's be cautious and support each other during this difficult time. However, it's important to remember that we must also remain vigilant and consider all...",
+        "Charlie: Let's continue our support for each other during this challenging time. Stay vigilant and cautious in our discussions.",
+        "You said: Let's continue our support for each other during this challenging time. Remember, it's important to remain vigilant and cautious in our discussions.",
+        "Alice: Let's not rush into hasty decisions. Let's continue supporting each other while staying vigilant during discussions and votes.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: I agree with Charlie, let's stay vigilant and support each other. But we must also remember to be cautious during the daytime discussions and votes. Let's not jump to conclusions based on emotions...",
+        "Bob: I agree with Alice and Charlie, let's be cautious and support each other during this difficult time. However, it's important to remember that we must also remain vigilant and consider all...",
+        "You said: Let's continue our support for each other during this challenging time. Stay vigilant and cautious in our discussions.",
+        "Bob: Let's continue our support for each other during this challenging time. Remember, it's important to remain vigilant and cautious in our discussions.",
+        "Alice: Let's not rush into hasty decisions. Let's continue supporting each other while staying vigilant during discussions and votes."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

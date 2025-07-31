@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0738",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 738,
+  "timestamp": "2025-07-30T20:32:50.026851",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all keep a close eye on each other tonight.",
+        "Diana: I agree with Alice, let's be vigilant tonight. Charlie's sudden disappearance is troubling.",
+        "Bob: I agree with Alice and Diana, let's be cautious tonight. The unexpected disappearance of Charlie is concerning.",
+        "Bob: Let's not jump to conclusions. We need to remain calm and collected to ensure everyone's safety tonight. The unexpected disappearance of Charlie is indeed concerning, but we should avoid suspicion...",
+        "Diana: I'd like to reiterate the importance of staying vigilant tonight in light of Charlie's disappearance. Let's work together to ensure everyone's safety.",
+        "You said: Let's not forget the importance of vigilance tonight following Charlie's disappearance. We should all keep a close eye on each other."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all keep a close eye on each other tonight.",
+        "Diana: I agree with Alice, let's be vigilant tonight. Charlie's sudden disappearance is troubling.",
+        "You said: I agree with Alice and Diana, let's be cautious tonight. The unexpected disappearance of Charlie is concerning.",
+        "You said: Let's not jump to conclusions. We need to remain calm and collected to ensure everyone's safety tonight. The unexpected disappearance of Charlie is indeed concerning, but we should avoid suspicion...",
+        "Diana: I'd like to reiterate the importance of staying vigilant tonight in light of Charlie's disappearance. Let's work together to ensure everyone's safety.",
+        "Alice: Let's not forget the importance of vigilance tonight following Charlie's disappearance. We should all keep a close eye on each other.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all keep a close eye on each other tonight.",
+        "You said: I agree with Alice, let's be vigilant tonight. Charlie's sudden disappearance is troubling.",
+        "Bob: I agree with Alice and Diana, let's be cautious tonight. The unexpected disappearance of Charlie is concerning.",
+        "Bob: Let's not jump to conclusions. We need to remain calm and collected to ensure everyone's safety tonight. The unexpected disappearance of Charlie is indeed concerning, but we should avoid suspicion...",
+        "You said: I'd like to reiterate the importance of staying vigilant tonight in light of Charlie's disappearance. Let's work together to ensure everyone's safety.",
+        "Alice: Let's not forget the importance of vigilance tonight following Charlie's disappearance. We should all keep a close eye on each other.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

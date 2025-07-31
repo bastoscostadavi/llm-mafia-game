@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0182",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 182,
+  "timestamp": "2025-07-30T13:20:24.740584",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Diana: I agree with Bob, let's work together to find out what happened to Charlie. We should be cautious but not jump to conclusions.",
+        "You said: I'm saddened by Charlie's death and agree we should work together to find out what happened. However, let's be cautious and not jump to conclusions based on speculation. We need facts to make...",
+        "Bob: Let's focus on finding clues to solve Charlie's mysterious death. We should avoid jumping to conclusions and work together as a team.",
+        "Diana: Let's not forget that we need to remain calm and focused during this investigation. We should gather facts before jumping to any conclusions.",
+        "You said: Let's continue our investigation with a clear mind and focus on gathering facts. We should avoid jumping to conclusions based on speculation. Together, we can uncover the truth behind Charlie's death.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Diana: I agree with Bob, let's work together to find out what happened to Charlie. We should be cautious but not jump to conclusions.",
+        "Alice: I'm saddened by Charlie's death and agree we should work together to find out what happened. However, let's be cautious and not jump to conclusions based on speculation. We need facts to make...",
+        "You said: Let's focus on finding clues to solve Charlie's mysterious death. We should avoid jumping to conclusions and work together as a team.",
+        "Diana: Let's not forget that we need to remain calm and focused during this investigation. We should gather facts before jumping to any conclusions.",
+        "Alice: Let's continue our investigation with a clear mind and focus on gathering facts. We should avoid jumping to conclusions based on speculation. Together, we can uncover the truth behind Charlie's death."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "You said: I agree with Bob, let's work together to find out what happened to Charlie. We should be cautious but not jump to conclusions.",
+        "Alice: I'm saddened by Charlie's death and agree we should work together to find out what happened. However, let's be cautious and not jump to conclusions based on speculation. We need facts to make...",
+        "Bob: Let's focus on finding clues to solve Charlie's mysterious death. We should avoid jumping to conclusions and work together as a team.",
+        "You said: Let's not forget that we need to remain calm and focused during this investigation. We should gather facts before jumping to any conclusions.",
+        "Alice: Let's continue our investigation with a clear mind and focus on gathering facts. We should avoid jumping to conclusions based on speculation. Together, we can uncover the truth behind Charlie's death.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

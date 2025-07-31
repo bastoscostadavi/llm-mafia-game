@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0390",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 390,
+  "timestamp": "2025-07-31T01:18:00.325769",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Diana, let's stay vigilant and support each other. However, I'm particularly concerned about Bob's reaction to Alice's death. Let's keep a close eye on him.",
+        "You said: I share Diana's sentiments and offer my condolences to Alice's loved ones. Let's trust in the system to ensure justice is served.",
+        "You said: I'd like to echo Charlie's sentiments, let's remain vigilant and support each other during this trying time. Our thoughts are with Alice's loved ones.",
+        "Charlie: I'd like to reiterate the importance of staying vigilant and supporting each other during this difficult time. Let's keep a close eye on any suspicious behavior, especially from those closest to...",
+        "Diana: Let's continue our efforts to stay vigilant and support each other during this challenging time. We must work together to ensure justice is served for Alice."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I agree with Diana, let's stay vigilant and support each other. However, I'm particularly concerned about Bob's reaction to Alice's death. Let's keep a close eye on him.",
+        "Bob: I share Diana's sentiments and offer my condolences to Alice's loved ones. Let's trust in the system to ensure justice is served.",
+        "Bob: I'd like to echo Charlie's sentiments, let's remain vigilant and support each other during this trying time. Our thoughts are with Alice's loved ones.",
+        "You said: I'd like to reiterate the importance of staying vigilant and supporting each other during this difficult time. Let's keep a close eye on any suspicious behavior, especially from those closest to...",
+        "Diana: Let's continue our efforts to stay vigilant and support each other during this challenging time. We must work together to ensure justice is served for Alice.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Diana, let's stay vigilant and support each other. However, I'm particularly concerned about Bob's reaction to Alice's death. Let's keep a close eye on him.",
+        "Bob: I share Diana's sentiments and offer my condolences to Alice's loved ones. Let's trust in the system to ensure justice is served.",
+        "Bob: I'd like to echo Charlie's sentiments, let's remain vigilant and support each other during this trying time. Our thoughts are with Alice's loved ones.",
+        "Charlie: I'd like to reiterate the importance of staying vigilant and supporting each other during this difficult time. Let's keep a close eye on any suspicious behavior, especially from those closest to...",
+        "You said: Let's continue our efforts to stay vigilant and support each other during this challenging time. We must work together to ensure justice is served for Alice.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

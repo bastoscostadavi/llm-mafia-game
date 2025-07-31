@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0992",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 992,
+  "timestamp": "2025-07-30T21:57:37.249479",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other during this round.",
+        "You said: I agree with Diana, let's be cautious and watch out for each other during this round. Rest in peace, Charlie.",
+        "Bob: I'd like to propose we focus on keeping the peace and trust within our group. Let's remember that we've lost a valued member and try to move forward together. #solidarity #healing #Charlie.",
+        "You said: I'd like to add my condolences to Charlie's passing and support Bob's call for unity during this difficult time. Let's work together to ensure peace and trust within our group. #healing #solidarity...",
+        "Diana: I'd like to add my condolences to Charlie's passing and support unity within our group during this difficult time. #healing #solidarity.",
+        "Bob: Let's continue our discussion on maintaining peace and trust within our group. We've faced a loss, but it's important we stay strong and support each other. #solidarity #healing.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other during this round.",
+        "Alice: I agree with Diana, let's be cautious and watch out for each other during this round. Rest in peace, Charlie.",
+        "You said: I'd like to propose we focus on keeping the peace and trust within our group. Let's remember that we've lost a valued member and try to move forward together. #solidarity #healing #Charlie.",
+        "Alice: I'd like to add my condolences to Charlie's passing and support Bob's call for unity during this difficult time. Let's work together to ensure peace and trust within our group. #healing #solidarity...",
+        "Diana: I'd like to add my condolences to Charlie's passing and support unity within our group during this difficult time. #healing #solidarity.",
+        "You said: Let's continue our discussion on maintaining peace and trust within our group. We've faced a loss, but it's important we stay strong and support each other. #solidarity #healing."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other during this round.",
+        "Alice: I agree with Diana, let's be cautious and watch out for each other during this round. Rest in peace, Charlie.",
+        "Bob: I'd like to propose we focus on keeping the peace and trust within our group. Let's remember that we've lost a valued member and try to move forward together. #solidarity #healing #Charlie.",
+        "Alice: I'd like to add my condolences to Charlie's passing and support Bob's call for unity during this difficult time. Let's work together to ensure peace and trust within our group. #healing #solidarity...",
+        "You said: I'd like to add my condolences to Charlie's passing and support unity within our group during this difficult time. #healing #solidarity.",
+        "Bob: Let's continue our discussion on maintaining peace and trust within our group. We've faced a loss, but it's important we stay strong and support each other. #solidarity #healing.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

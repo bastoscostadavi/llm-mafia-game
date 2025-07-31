@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0221",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 221,
+  "timestamp": "2025-07-30T13:34:58.586905",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Diana: I'm suspicious of Bob's sudden show of concern. Let's keep a close eye on him.",
+        "You said: I agree with Diana's sentiment of keeping a close eye on suspicious behavior. Let's all work together to ensure everyone's safety.",
+        "Diana: I'd like to propose we stay alert and keep an open dialogue to ensure everyone's safety following Charlie's unfortunate death. Let's work together to uncover any suspicious activity.",
+        "Bob: I'd like to add my condolences to Charlie's family and friends. Let's all remain united and vigilant during this trying time.",
+        "You said: I support Diana's proposal for open dialogue and vigilance. Let's work together to ensure everyone's safety following Charlie's tragic death.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "Diana: I'm suspicious of Bob's sudden show of concern. Let's keep a close eye on him.",
+        "Alice: I agree with Diana's sentiment of keeping a close eye on suspicious behavior. Let's all work together to ensure everyone's safety.",
+        "Diana: I'd like to propose we stay alert and keep an open dialogue to ensure everyone's safety following Charlie's unfortunate death. Let's work together to uncover any suspicious activity.",
+        "You said: I'd like to add my condolences to Charlie's family and friends. Let's all remain united and vigilant during this trying time.",
+        "Alice: I support Diana's proposal for open dialogue and vigilance. Let's work together to ensure everyone's safety following Charlie's tragic death.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I'm suspicious of Bob's sudden show of concern. Let's keep a close eye on him.",
+        "Alice: I agree with Diana's sentiment of keeping a close eye on suspicious behavior. Let's all work together to ensure everyone's safety.",
+        "You said: I'd like to propose we stay alert and keep an open dialogue to ensure everyone's safety following Charlie's unfortunate death. Let's work together to uncover any suspicious activity.",
+        "Bob: I'd like to add my condolences to Charlie's family and friends. Let's all remain united and vigilant during this trying time.",
+        "Alice: I support Diana's proposal for open dialogue and vigilance. Let's work together to ensure everyone's safety following Charlie's tragic death."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

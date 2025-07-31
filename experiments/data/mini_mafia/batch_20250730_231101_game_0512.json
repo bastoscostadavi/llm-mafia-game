@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0512",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 512,
+  "timestamp": "2025-07-31T01:57:42.130242",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Diana: I agree with Bob, let's stay vigilant and work together to find out who killed Alice. As a detective, I will do my best to gather information and share it with all of you.",
+        "Charlie: I'm saddened by Alice's passing. Let's not jump to conclusions and give Diana the space she needs to investigate effectively. We should all stay calm and focused.",
+        "Diana: Based on my investigation, I believe Charlie's statement is suspicious. Let's keep an eye on him.",
+        "You said: Let's not forget that we need to trust each other to solve this mystery. We should focus on gathering information and working together, rather than pointing fingers.",
+        "Charlie: I'd like to express my condolences to Alice's family and friends. Let's continue to work together and support Diana in her investigation. Trust is crucial in these situations.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Diana: I agree with Bob, let's stay vigilant and work together to find out who killed Alice. As a detective, I will do my best to gather information and share it with all of you.",
+        "You said: I'm saddened by Alice's passing. Let's not jump to conclusions and give Diana the space she needs to investigate effectively. We should all stay calm and focused.",
+        "Diana: Based on my investigation, I believe Charlie's statement is suspicious. Let's keep an eye on him.",
+        "Bob: Let's not forget that we need to trust each other to solve this mystery. We should focus on gathering information and working together, rather than pointing fingers.",
+        "You said: I'd like to express my condolences to Alice's family and friends. Let's continue to work together and support Diana in her investigation. Trust is crucial in these situations.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "You said: I agree with Bob, let's stay vigilant and work together to find out who killed Alice. As a detective, I will do my best to gather information and share it with all of you.",
+        "Charlie: I'm saddened by Alice's passing. Let's not jump to conclusions and give Diana the space she needs to investigate effectively. We should all stay calm and focused.",
+        "You said: Based on my investigation, I believe Charlie's statement is suspicious. Let's keep an eye on him.",
+        "Bob: Let's not forget that we need to trust each other to solve this mystery. We should focus on gathering information and working together, rather than pointing fingers.",
+        "Charlie: I'd like to express my condolences to Alice's family and friends. Let's continue to work together and support Diana in her investigation. Trust is crucial in these situations."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

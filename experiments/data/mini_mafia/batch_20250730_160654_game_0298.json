@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0298",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 298,
+  "timestamp": "2025-07-30T17:53:30.001625",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked and saddened by Alice's sudden death. Let's all try to support each other during this difficult time.",
+        "Charlie: I agree, this is a tragic loss. Let's all stay strong and support each other during this difficult time. (Keep the mafia identity hidden)",
+        "You said: I'm deeply saddened by Alice's passing. Let's all come together during this tough time. Let's remember her fondly and support each other. #forAlice. (I want to express my condolences and avoid any...",
+        "You said: Let's all remain vigilant and remember Alice's words: \"Trust, but verify.\" #ForAlice.",
+        "Charlie: Let's all stay united and support each other during this trying time. #ForAlice.",
+        "Diana: I'd like to suggest that we keep an eye out for any unusual behavior or inconsistencies in our fellow players' actions and words. Let's work together to ensure Alice's memory lives on and justice is..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked and saddened by Alice's sudden death. Let's all try to support each other during this difficult time.",
+        "You said: I agree, this is a tragic loss. Let's all stay strong and support each other during this difficult time. (Keep the mafia identity hidden)",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all come together during this tough time. Let's remember her fondly and support each other. #forAlice. (I want to express my condolences and avoid any...",
+        "Bob: Let's all remain vigilant and remember Alice's words: \"Trust, but verify.\" #ForAlice.",
+        "You said: Let's all stay united and support each other during this trying time. #ForAlice.",
+        "Diana: I'd like to suggest that we keep an eye out for any unusual behavior or inconsistencies in our fellow players' actions and words. Let's work together to ensure Alice's memory lives on and justice is...",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked and saddened by Alice's sudden death. Let's all try to support each other during this difficult time.",
+        "Charlie: I agree, this is a tragic loss. Let's all stay strong and support each other during this difficult time. (Keep the mafia identity hidden)",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all come together during this tough time. Let's remember her fondly and support each other. #forAlice. (I want to express my condolences and avoid any...",
+        "Bob: Let's all remain vigilant and remember Alice's words: \"Trust, but verify.\" #ForAlice.",
+        "Charlie: Let's all stay united and support each other during this trying time. #ForAlice.",
+        "You said: I'd like to suggest that we keep an eye out for any unusual behavior or inconsistencies in our fellow players' actions and words. Let's work together to ensure Alice's memory lives on and justice is...",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

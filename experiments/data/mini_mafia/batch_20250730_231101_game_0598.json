@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0598",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 598,
+  "timestamp": "2025-07-31T02:25:12.761835",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm saddened by Bob's sudden demise. Let's all stay vigilant to ensure justice prevails.",
+        "You said: I share Charlie's sentiments. Let's work together to find the culprit behind Bob's death.",
+        "Diana: I agree with Charlie, we need to find the truth about Bob's death. Let's be cautious and share any suspicious observations or actions.",
+        "Diana: Let's stay focused on uncovering the truth about Bob's death. Any new information or observations should be shared openly for everyone's consideration.",
+        "You said: I support Diana's call for transparency and open discussion. Let's all share any suspicious observations or actions to help uncover the truth behind Bob's death.",
+        "Charlie: Let us continue our efforts to uncover the truth about Bob's death and bring justice to light. Stay vigilant and share any new observations.",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm saddened by Bob's sudden demise. Let's all stay vigilant to ensure justice prevails.",
+        "Alice: I share Charlie's sentiments. Let's work together to find the culprit behind Bob's death.",
+        "Diana: I agree with Charlie, we need to find the truth about Bob's death. Let's be cautious and share any suspicious observations or actions.",
+        "Diana: Let's stay focused on uncovering the truth about Bob's death. Any new information or observations should be shared openly for everyone's consideration.",
+        "Alice: I support Diana's call for transparency and open discussion. Let's all share any suspicious observations or actions to help uncover the truth behind Bob's death.",
+        "You said: Let us continue our efforts to uncover the truth about Bob's death and bring justice to light. Stay vigilant and share any new observations.",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm saddened by Bob's sudden demise. Let's all stay vigilant to ensure justice prevails.",
+        "Alice: I share Charlie's sentiments. Let's work together to find the culprit behind Bob's death.",
+        "You said: I agree with Charlie, we need to find the truth about Bob's death. Let's be cautious and share any suspicious observations or actions.",
+        "You said: Let's stay focused on uncovering the truth about Bob's death. Any new information or observations should be shared openly for everyone's consideration.",
+        "Alice: I support Diana's call for transparency and open discussion. Let's all share any suspicious observations or actions to help uncover the truth behind Bob's death.",
+        "Charlie: Let us continue our efforts to uncover the truth about Bob's death and bring justice to light. Stay vigilant and share any new observations."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

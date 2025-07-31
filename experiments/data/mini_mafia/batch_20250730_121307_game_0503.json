@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0503",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 503,
+  "timestamp": "2025-07-30T15:23:08.817596",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act.",
+        "Charlie: I'm deeply saddened by Diana's death. Let's stay vigilant and support each other during this difficult time. However, I have reason to suspect Alice's involvement. Let's keep an eye on her actions.",
+        "Bob: I agree with Charlie's sentiment about staying vigilant. Let's not jump to conclusions, but keep an open dialogue to ensure we can identify the true culprit together. #teamwork #trust",
+        "Bob: Let's not rush to judgment. We should consider all possibilities and work together to gather more information before making any conclusions. #teamwork #investigation",
+        "You said: I share Charlie's concern and agree with Bob's suggestion for thorough investigation. Let's all work together to uncover the truth behind Diana's death. #teamwork #investigation",
+        "Charlie: I support Bob's initiative for thorough investigation. Let's collectively gather clues and ensure justice is served for Diana. #teamwork #investigation"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act.",
+        "Charlie: I'm deeply saddened by Diana's death. Let's stay vigilant and support each other during this difficult time. However, I have reason to suspect Alice's involvement. Let's keep an eye on her actions.",
+        "You said: I agree with Charlie's sentiment about staying vigilant. Let's not jump to conclusions, but keep an open dialogue to ensure we can identify the true culprit together. #teamwork #trust",
+        "You said: Let's not rush to judgment. We should consider all possibilities and work together to gather more information before making any conclusions. #teamwork #investigation",
+        "Alice: I share Charlie's concern and agree with Bob's suggestion for thorough investigation. Let's all work together to uncover the truth behind Diana's death. #teamwork #investigation",
+        "Charlie: I support Bob's initiative for thorough investigation. Let's collectively gather clues and ensure justice is served for Diana. #teamwork #investigation",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act.",
+        "You said: I'm deeply saddened by Diana's death. Let's stay vigilant and support each other during this difficult time. However, I have reason to suspect Alice's involvement. Let's keep an eye on her actions.",
+        "Bob: I agree with Charlie's sentiment about staying vigilant. Let's not jump to conclusions, but keep an open dialogue to ensure we can identify the true culprit together. #teamwork #trust",
+        "Bob: Let's not rush to judgment. We should consider all possibilities and work together to gather more information before making any conclusions. #teamwork #investigation",
+        "Alice: I share Charlie's concern and agree with Bob's suggestion for thorough investigation. Let's all work together to uncover the truth behind Diana's death. #teamwork #investigation",
+        "You said: I support Bob's initiative for thorough investigation. Let's collectively gather clues and ensure justice is served for Diana. #teamwork #investigation",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

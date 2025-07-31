@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0348",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 348,
+  "timestamp": "2025-07-30T14:22:49.184114",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. Let's all support Diana during this difficult time. We must unite to find out who did this heinous act.",
+        "Diana: I'd like to suggest we focus on discussing potential leads and alibis for last night. Let's work together to find out who could have committed this tragic crime.",
+        "You said: I agree with Diana, let's focus on discussing potential leads and alibis for last night. We need to find out who could have committed this tragic crime.",
+        "Charlie: I'd like to express my condolences for Alice's loss. Let's work together to find the truth. I have no information regarding last night's events.",
+        "You said: I support Diana's suggestion to discuss potential leads and alibis. We must stay focused on finding the truth about Alice's death.",
+        "Diana: Let's continue discussing potential leads and alibis for last night. We must stay focused on finding the truth about Alice's death.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's all support Diana during this difficult time. We must unite to find out who did this heinous act.",
+        "Diana: I'd like to suggest we focus on discussing potential leads and alibis for last night. Let's work together to find out who could have committed this tragic crime.",
+        "Bob: I agree with Diana, let's focus on discussing potential leads and alibis for last night. We need to find out who could have committed this tragic crime.",
+        "You said: I'd like to express my condolences for Alice's loss. Let's work together to find the truth. I have no information regarding last night's events.",
+        "Bob: I support Diana's suggestion to discuss potential leads and alibis. We must stay focused on finding the truth about Alice's death.",
+        "Diana: Let's continue discussing potential leads and alibis for last night. We must stay focused on finding the truth about Alice's death."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. Let's all support Diana during this difficult time. We must unite to find out who did this heinous act.",
+        "You said: I'd like to suggest we focus on discussing potential leads and alibis for last night. Let's work together to find out who could have committed this tragic crime.",
+        "Bob: I agree with Diana, let's focus on discussing potential leads and alibis for last night. We need to find out who could have committed this tragic crime.",
+        "Charlie: I'd like to express my condolences for Alice's loss. Let's work together to find the truth. I have no information regarding last night's events.",
+        "Bob: I support Diana's suggestion to discuss potential leads and alibis. We must stay focused on finding the truth about Alice's death.",
+        "You said: Let's continue discussing potential leads and alibis for last night. We must stay focused on finding the truth about Alice's death.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0124",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 124,
+  "timestamp": "2025-07-30T16:50:36.446454",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's try to find out who did this heinous act. We should all cooperate to ensure justice is served.",
+        "You said: I agree with Charlie, let's work together to find out who killed Diana. As a detective, I'll do my best to gather information and share it with all of you. Let's keep an open mind and trust each...",
+        "Bob: I agree with Charlie, let's work together to find out who killed Diana. I have no information to share at the moment.",
+        "Bob: I support finding the truth about Diana's death. Let's work together to uncover any clues that may help us in our investigation.",
+        "You said: Based on my investigation, I suspect Bob might have valuable information about Diana's death. It's important we keep an open dialogue and share all relevant information for the sake of finding the...",
+        "Charlie: Let's continue our investigation into Diana's death with dedication and cooperation. Any new information is crucial."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden demise. Let's try to find out who did this heinous act. We should all cooperate to ensure justice is served.",
+        "Alice: I agree with Charlie, let's work together to find out who killed Diana. As a detective, I'll do my best to gather information and share it with all of you. Let's keep an open mind and trust each...",
+        "You said: I agree with Charlie, let's work together to find out who killed Diana. I have no information to share at the moment.",
+        "You said: I support finding the truth about Diana's death. Let's work together to uncover any clues that may help us in our investigation.",
+        "Alice: Based on my investigation, I suspect Bob might have valuable information about Diana's death. It's important we keep an open dialogue and share all relevant information for the sake of finding the...",
+        "Charlie: Let's continue our investigation into Diana's death with dedication and cooperation. Any new information is crucial.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's try to find out who did this heinous act. We should all cooperate to ensure justice is served.",
+        "Alice: I agree with Charlie, let's work together to find out who killed Diana. As a detective, I'll do my best to gather information and share it with all of you. Let's keep an open mind and trust each...",
+        "Bob: I agree with Charlie, let's work together to find out who killed Diana. I have no information to share at the moment.",
+        "Bob: I support finding the truth about Diana's death. Let's work together to uncover any clues that may help us in our investigation.",
+        "Alice: Based on my investigation, I suspect Bob might have valuable information about Diana's death. It's important we keep an open dialogue and share all relevant information for the sake of finding the...",
+        "You said: Let's continue our investigation into Diana's death with dedication and cooperation. Any new information is crucial.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

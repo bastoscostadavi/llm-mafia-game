@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0000",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 0,
+  "timestamp": "2025-07-30T23:11:20.768498",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I echo Alice and Charlie's sentiments about staying vigilant. Let's all keep an open line of communication to ensure safety for all.",
+        "Charlie: Let's all cooperate to ensure everyone's safety in these uncertain times. We need transparency and trust to uncover any potential threats.",
+        "You said: I'm still worried about Diana's sudden disappearance. Let's continue to stay vigilant and communicate openly.",
+        "Bob: Let's maintain open communication and trust to ensure safety for all. Any unusual behavior should be reported. #StayVigilant #TrustBuilding #MafiaGame"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Charlie: I agree with Alice, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I echo Alice and Charlie's sentiments about staying vigilant. Let's all keep an open line of communication to ensure safety for all.",
+        "Charlie: Let's all cooperate to ensure everyone's safety in these uncertain times. We need transparency and trust to uncover any potential threats.",
+        "Alice: I'm still worried about Diana's sudden disappearance. Let's continue to stay vigilant and communicate openly.",
+        "You said: Let's maintain open communication and trust to ensure safety for all. Any unusual behavior should be reported. #StayVigilant #TrustBuilding #MafiaGame",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I echo Alice and Charlie's sentiments about staying vigilant. Let's all keep an open line of communication to ensure safety for all.",
+        "You said: Let's all cooperate to ensure everyone's safety in these uncertain times. We need transparency and trust to uncover any potential threats.",
+        "Alice: I'm still worried about Diana's sudden disappearance. Let's continue to stay vigilant and communicate openly.",
+        "Bob: Let's maintain open communication and trust to ensure safety for all. Any unusual behavior should be reported. #StayVigilant #TrustBuilding #MafiaGame",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

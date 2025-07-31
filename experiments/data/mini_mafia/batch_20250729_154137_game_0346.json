@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0346",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 346,
+  "timestamp": "2025-07-29T17:51:56.784452",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Diana, let's be vigilant tonight.",
+        "Charlie: I agree with Diana and Bob, let's be cautious tonight.",
+        "Diana: I'm still worried about Alice's disappearance. Let's stay alert and trust no one but each other tonight.",
+        "You said: I share Diana's concerns and would like to remind everyone to be vigilant tonight. Let's keep a close eye on any suspicious behavior.",
+        "Charlie: I'm saddened by Alice's disappearance. Let's work together to ensure everyone's safety tonight."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other tonight.",
+        "Bob: I agree with Diana, let's be vigilant tonight.",
+        "You said: I agree with Diana and Bob, let's be cautious tonight.",
+        "Diana: I'm still worried about Alice's disappearance. Let's stay alert and trust no one but each other tonight.",
+        "Bob: I share Diana's concerns and would like to remind everyone to be vigilant tonight. Let's keep a close eye on any suspicious behavior.",
+        "You said: I'm saddened by Alice's disappearance. Let's work together to ensure everyone's safety tonight.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other tonight.",
+        "Bob: I agree with Diana, let's be vigilant tonight.",
+        "Charlie: I agree with Diana and Bob, let's be cautious tonight.",
+        "You said: I'm still worried about Alice's disappearance. Let's stay alert and trust no one but each other tonight.",
+        "Bob: I share Diana's concerns and would like to remind everyone to be vigilant tonight. Let's keep a close eye on any suspicious behavior.",
+        "Charlie: I'm saddened by Alice's disappearance. Let's work together to ensure everyone's safety tonight.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

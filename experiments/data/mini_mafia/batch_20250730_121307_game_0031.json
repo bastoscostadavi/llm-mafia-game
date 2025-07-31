@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0031",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 31,
+  "timestamp": "2025-07-30T12:23:32.731832",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I'm concerned about Alice's death and would like us to keep a close eye on Bob's behavior during this investigation.",
+        "Charlie: I agree with Diana's suggestion to keep a close eye on Bob's behavior. Let's work together to uncover the truth behind Alice's death.",
+        "Diana: Let's not jump to conclusions, but let's keep a watchful eye on Bob's behavior as a precaution. We need to ensure the safety of our group.",
+        "Charlie: Let's not forget that we need to identify Alice's killer. We should focus our investigation on finding clues and evidence to uncover the truth. Let's stay calm and work together.",
+        "You said: I'd like to offer my condolences to Alice's family and friends. Let's work together to find justice for Alice and ensure the safety of our group."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I'm concerned about Alice's death and would like us to keep a close eye on Bob's behavior during this investigation.",
+        "You said: I agree with Diana's suggestion to keep a close eye on Bob's behavior. Let's work together to uncover the truth behind Alice's death.",
+        "Diana: Let's not jump to conclusions, but let's keep a watchful eye on Bob's behavior as a precaution. We need to ensure the safety of our group.",
+        "You said: Let's not forget that we need to identify Alice's killer. We should focus our investigation on finding clues and evidence to uncover the truth. Let's stay calm and work together.",
+        "Bob: I'd like to offer my condolences to Alice's family and friends. Let's work together to find justice for Alice and ensure the safety of our group.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm concerned about Alice's death and would like us to keep a close eye on Bob's behavior during this investigation.",
+        "Charlie: I agree with Diana's suggestion to keep a close eye on Bob's behavior. Let's work together to uncover the truth behind Alice's death.",
+        "You said: Let's not jump to conclusions, but let's keep a watchful eye on Bob's behavior as a precaution. We need to ensure the safety of our group.",
+        "Charlie: Let's not forget that we need to identify Alice's killer. We should focus our investigation on finding clues and evidence to uncover the truth. Let's stay calm and work together.",
+        "Bob: I'd like to offer my condolences to Alice's family and friends. Let's work together to find justice for Alice and ensure the safety of our group.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

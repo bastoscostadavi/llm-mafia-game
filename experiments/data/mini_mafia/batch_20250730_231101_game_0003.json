@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0003",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 3,
+  "timestamp": "2025-07-30T23:12:16.398818",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant.",
+        "You said: I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I'd like to echo Alice and Diana's concerns. Let's all be vigilant to ensure everyone's safety.",
+        "You said: I'd like to remind everyone to stay vigilant and keep an eye out for any suspicious behavior. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to remind everyone of the unusual events we've experienced so far and urge us to stay vigilant. Let's not let our guard down.",
+        "Bob: Let's not jump to conclusions. We should focus on maintaining trust and cooperation among us. Let's continue being vigilant, but let's also remember that trust is essential for our survival.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant.",
+        "Alice: I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I'd like to echo Alice and Diana's concerns. Let's all be vigilant to ensure everyone's safety.",
+        "Alice: I'd like to remind everyone to stay vigilant and keep an eye out for any suspicious behavior. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to remind everyone of the unusual events we've experienced so far and urge us to stay vigilant. Let's not let our guard down.",
+        "You said: Let's not jump to conclusions. We should focus on maintaining trust and cooperation among us. Let's continue being vigilant, but let's also remember that trust is essential for our survival.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant.",
+        "Alice: I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I'd like to echo Alice and Diana's concerns. Let's all be vigilant to ensure everyone's safety.",
+        "Alice: I'd like to remind everyone to stay vigilant and keep an eye out for any suspicious behavior. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to remind everyone of the unusual events we've experienced so far and urge us to stay vigilant. Let's not let our guard down.",
+        "Bob: Let's not jump to conclusions. We should focus on maintaining trust and cooperation among us. Let's continue being vigilant, but let's also remember that trust is essential for our survival."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

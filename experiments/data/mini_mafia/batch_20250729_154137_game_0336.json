@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0336",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 336,
+  "timestamp": "2025-07-29T17:48:14.661417",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and make sure everyone is safe tonight.",
+        "You said: I agree with Diana, let's keep an eye out for any suspicious activity tonight.",
+        "Bob: I share Diana's concerns and agree we should all stay alert during this night phase. Let's work together to ensure everyone's safety.",
+        "Diana: Let's stay vigilant and report any unusual behavior or suspicious actions. We must work together to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but it's important to stay alert and report any suspicious activity.",
+        "Bob: Let's remain calm and focused during this discussion round. We should share any suspicious observations, but avoid accusations. Safety first."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and make sure everyone is safe tonight.",
+        "Alice: I agree with Diana, let's keep an eye out for any suspicious activity tonight.",
+        "You said: I share Diana's concerns and agree we should all stay alert during this night phase. Let's work together to ensure everyone's safety.",
+        "Diana: Let's stay vigilant and report any unusual behavior or suspicious actions. We must work together to ensure everyone's safety.",
+        "Alice: Let's not jump to conclusions, but it's important to stay alert and report any suspicious activity.",
+        "You said: Let's remain calm and focused during this discussion round. We should share any suspicious observations, but avoid accusations. Safety first.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance last night. Let's be vigilant and make sure everyone is safe tonight.",
+        "Alice: I agree with Diana, let's keep an eye out for any suspicious activity tonight.",
+        "Bob: I share Diana's concerns and agree we should all stay alert during this night phase. Let's work together to ensure everyone's safety.",
+        "You said: Let's stay vigilant and report any unusual behavior or suspicious actions. We must work together to ensure everyone's safety.",
+        "Alice: Let's not jump to conclusions, but it's important to stay alert and report any suspicious activity.",
+        "Bob: Let's remain calm and focused during this discussion round. We should share any suspicious observations, but avoid accusations. Safety first.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0198",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 198,
+  "timestamp": "2025-07-30T13:26:19.406564",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's all try to figure out who could have done this. We need to work together to ensure safety in our group.",
+        "Bob: Diana, your alibi for last night doesn't add up. Let's discuss it openly.",
+        "Diana: I share Bob's concern about last night. Let's focus on finding the truth to ensure everyone's safety. I have nothing to hide.",
+        "Diana: I support Bob's call for transparency. Let's discuss any suspicious activities or alibis from last night. I have nothing to hide.",
+        "You said: I agree with Bob and Diana, let's discuss last night's events openly to ensure everyone's safety. I have nothing to hide.",
+        "Bob: I'd like to bring up the inconsistencies in Diana's alibi from last night. Let's discuss this openly to ensure everyone's safety.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's all try to figure out who could have done this. We need to work together to ensure safety in our group.",
+        "You said: Diana, your alibi for last night doesn't add up. Let's discuss it openly.",
+        "Diana: I share Bob's concern about last night. Let's focus on finding the truth to ensure everyone's safety. I have nothing to hide.",
+        "Diana: I support Bob's call for transparency. Let's discuss any suspicious activities or alibis from last night. I have nothing to hide.",
+        "Alice: I agree with Bob and Diana, let's discuss last night's events openly to ensure everyone's safety. I have nothing to hide.",
+        "You said: I'd like to bring up the inconsistencies in Diana's alibi from last night. Let's discuss this openly to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's all try to figure out who could have done this. We need to work together to ensure safety in our group.",
+        "Bob: Diana, your alibi for last night doesn't add up. Let's discuss it openly.",
+        "You said: I share Bob's concern about last night. Let's focus on finding the truth to ensure everyone's safety. I have nothing to hide.",
+        "You said: I support Bob's call for transparency. Let's discuss any suspicious activities or alibis from last night. I have nothing to hide.",
+        "Alice: I agree with Bob and Diana, let's discuss last night's events openly to ensure everyone's safety. I have nothing to hide.",
+        "Bob: I'd like to bring up the inconsistencies in Diana's alibi from last night. Let's discuss this openly to ensure everyone's safety.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0348",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 348,
+  "timestamp": "2025-07-29T17:52:42.596163",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked and saddened by Alice's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Diana: I'm deeply saddened by Alice's passing. Let's focus on identifying the culprit behind this heinous act. I have faith in our ability to bring justice to Alice and ensure the safety of our group....",
+        "You said: I agree with Charlie and Diana, let's work together to find the culprit behind Alice's death. My thoughts are with her family and friends during this difficult time.",
+        "You said: I'd like to offer my condolences to Alice's loved ones during this trying time. Let's all work together to find the truth behind her untimely demise.",
+        "Diana: I'd like to propose a thorough investigation into Alice's death to uncover any leads and bring the culprit to justice. Let's all remain vigilant and support each other during this difficult time.",
+        "Charlie: I support Diana's proposal for a thorough investigation into Alice's death. Let's all stay focused and work together to uncover any clues that may lead us to the culprit.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked and saddened by Alice's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Diana: I'm deeply saddened by Alice's passing. Let's focus on identifying the culprit behind this heinous act. I have faith in our ability to bring justice to Alice and ensure the safety of our group....",
+        "Bob: I agree with Charlie and Diana, let's work together to find the culprit behind Alice's death. My thoughts are with her family and friends during this difficult time.",
+        "Bob: I'd like to offer my condolences to Alice's loved ones during this trying time. Let's all work together to find the truth behind her untimely demise.",
+        "Diana: I'd like to propose a thorough investigation into Alice's death to uncover any leads and bring the culprit to justice. Let's all remain vigilant and support each other during this difficult time.",
+        "You said: I support Diana's proposal for a thorough investigation into Alice's death. Let's all stay focused and work together to uncover any clues that may lead us to the culprit.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked and saddened by Alice's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "You said: I'm deeply saddened by Alice's passing. Let's focus on identifying the culprit behind this heinous act. I have faith in our ability to bring justice to Alice and ensure the safety of our group....",
+        "Bob: I agree with Charlie and Diana, let's work together to find the culprit behind Alice's death. My thoughts are with her family and friends during this difficult time.",
+        "Bob: I'd like to offer my condolences to Alice's loved ones during this trying time. Let's all work together to find the truth behind her untimely demise.",
+        "You said: I'd like to propose a thorough investigation into Alice's death to uncover any leads and bring the culprit to justice. Let's all remain vigilant and support each other during this difficult time.",
+        "Charlie: I support Diana's proposal for a thorough investigation into Alice's death. Let's all stay focused and work together to uncover any clues that may lead us to the culprit."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

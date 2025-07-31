@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0462",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 462,
+  "timestamp": "2025-07-31T01:41:25.989492",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm deeply saddened by Charlie's passing. Let's work together to find the truth behind this tragic event.",
+        "Bob: I agree with Alice, let's work together to find the truth. My thoughts are with Charlie's family during this difficult time.",
+        "Diana: I'm deeply concerned about the recent turn of events. Let's focus on finding the truth together.",
+        "Bob: I support Alice's proposal to work together in finding the truth behind Charlie's death. Let's stay focused and vigilant. Our thoughts are with Charlie's family during this trying time.",
+        "You said: Let's keep our investigation focused and thorough. Any new insights or information should be shared openly. Together, we can bring justice for Charlie.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I'm deeply saddened by Charlie's passing. Let's work together to find the truth behind this tragic event.",
+        "You said: I agree with Alice, let's work together to find the truth. My thoughts are with Charlie's family during this difficult time.",
+        "Diana: I'm deeply concerned about the recent turn of events. Let's focus on finding the truth together.",
+        "You said: I support Alice's proposal to work together in finding the truth behind Charlie's death. Let's stay focused and vigilant. Our thoughts are with Charlie's family during this trying time.",
+        "Alice: Let's keep our investigation focused and thorough. Any new insights or information should be shared openly. Together, we can bring justice for Charlie.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I'm deeply saddened by Charlie's passing. Let's work together to find the truth behind this tragic event.",
+        "Bob: I agree with Alice, let's work together to find the truth. My thoughts are with Charlie's family during this difficult time.",
+        "You said: I'm deeply concerned about the recent turn of events. Let's focus on finding the truth together.",
+        "Bob: I support Alice's proposal to work together in finding the truth behind Charlie's death. Let's stay focused and vigilant. Our thoughts are with Charlie's family during this trying time.",
+        "Alice: Let's keep our investigation focused and thorough. Any new insights or information should be shared openly. Together, we can bring justice for Charlie."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

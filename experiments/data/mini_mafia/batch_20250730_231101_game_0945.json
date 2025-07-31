@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0945",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 945,
+  "timestamp": "2025-07-31T04:17:59.254893",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm saddened by Charlie's sudden departure. Let's all work together to find out who did this heinous act.",
+        "Diana: I agree with Bob, let's work together to find out who killed Charlie. As a detective, I'll do my best to gather information that could help us find the truth.",
+        "You said: I share Bob's sentiment of finding justice for Charlie. Let's trust the investigation process and support Diana in her efforts to uncover the truth.",
+        "Diana: Let's keep focusing on finding clues about Charlie's killer. As a team, we can piece together the information to bring justice to Charlie.",
+        "You said: I support Diana's investigation efforts and encourage everyone to share any information that could help bring justice for Charlie. Let's work together to uncover the truth.",
+        "Bob: I'd like to share a theory based on Charlie's recent behavior. Let's discuss if it holds any weight."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's sudden departure. Let's all work together to find out who did this heinous act.",
+        "Diana: I agree with Bob, let's work together to find out who killed Charlie. As a detective, I'll do my best to gather information that could help us find the truth.",
+        "Alice: I share Bob's sentiment of finding justice for Charlie. Let's trust the investigation process and support Diana in her efforts to uncover the truth.",
+        "Diana: Let's keep focusing on finding clues about Charlie's killer. As a team, we can piece together the information to bring justice to Charlie.",
+        "Alice: I support Diana's investigation efforts and encourage everyone to share any information that could help bring justice for Charlie. Let's work together to uncover the truth.",
+        "You said: I'd like to share a theory based on Charlie's recent behavior. Let's discuss if it holds any weight.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm saddened by Charlie's sudden departure. Let's all work together to find out who did this heinous act.",
+        "You said: I agree with Bob, let's work together to find out who killed Charlie. As a detective, I'll do my best to gather information that could help us find the truth.",
+        "Alice: I share Bob's sentiment of finding justice for Charlie. Let's trust the investigation process and support Diana in her efforts to uncover the truth.",
+        "You said: Let's keep focusing on finding clues about Charlie's killer. As a team, we can piece together the information to bring justice to Charlie.",
+        "Alice: I support Diana's investigation efforts and encourage everyone to share any information that could help bring justice for Charlie. Let's work together to uncover the truth.",
+        "Bob: I'd like to share a theory based on Charlie's recent behavior. Let's discuss if it holds any weight.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

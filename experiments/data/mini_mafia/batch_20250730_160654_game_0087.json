@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0087",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 87,
+  "timestamp": "2025-07-30T16:37:27.083655",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's stay vigilant. There's something fishy going on.",
+        "You said: I agree with Diana and Charlie, let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions. It's important to maintain trust within our group to ensure everyone's safety. Let's focus on open communication and keeping a watchful eye on any suspicious behavior.",
+        "You said: Let's not forget, we need to trust each other to maintain our group's safety. Let's focus on open communication and keeping an eye out for any suspicious behavior.",
+        "Diana: Let's not forget, we need to trust each other to maintain our group's safety. Let's continue our open communication and keep a watchful eye on any suspicious behavior.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's stay vigilant. There's something fishy going on.",
+        "Bob: I agree with Diana and Charlie, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions. It's important to maintain trust within our group to ensure everyone's safety. Let's focus on open communication and keeping a watchful eye on any suspicious behavior.",
+        "Bob: Let's not forget, we need to trust each other to maintain our group's safety. Let's focus on open communication and keeping an eye out for any suspicious behavior.",
+        "Diana: Let's not forget, we need to trust each other to maintain our group's safety. Let's continue our open communication and keep a watchful eye on any suspicious behavior."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance last night. Let's be vigilant and keep an eye on each other.",
+        "Charlie: I agree with Diana, let's stay vigilant. There's something fishy going on.",
+        "Bob: I agree with Diana and Charlie, let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions. It's important to maintain trust within our group to ensure everyone's safety. Let's focus on open communication and keeping a watchful eye on any suspicious behavior.",
+        "Bob: Let's not forget, we need to trust each other to maintain our group's safety. Let's focus on open communication and keeping an eye out for any suspicious behavior.",
+        "You said: Let's not forget, we need to trust each other to maintain our group's safety. Let's continue our open communication and keep a watchful eye on any suspicious behavior.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

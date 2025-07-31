@@ -6,7 +6,7 @@ Runs N mini-mafia games and saves the results for analysis.
 Each game follows the same format as preset_games.mini_mafia_game():
 - 4 players initially (Alice, Bob, Charlie, Diana with random roles)
 - 1 villager killed randomly before day phase
-- Detective and assassin know each other
+- Detective and mafioso know each other
 - Single day phase to determine winner
 """
 
@@ -81,11 +81,9 @@ def determine_winner(agents):
     """Determine who won the game"""
     arrested = next((a for a in agents if a.imprisoned), None)
     if arrested:
-        if arrested.role == "assassin":
+        if arrested.role == "mafioso":
             return "good"
-        elif arrested.role == "detective":
-            return "evil"
-        else:  # villager arrested
+        else:  # villager or detective arrested
             return "evil"
     return "unknown"
 

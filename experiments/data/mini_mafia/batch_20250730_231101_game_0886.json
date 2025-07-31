@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0886",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 886,
+  "timestamp": "2025-07-31T03:58:44.439998",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant.",
+        "You said: I agree with Diana, let's all keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I share Diana's concerns about Bob's disappearance. Let's all work together to ensure our safety.",
+        "Charlie: I'd like to echo Alice and Diana's concerns about Bob's sudden disappearance. Let's remain vigilant as a team.",
+        "Diana: I'm still troubled by Bob's disappearance. Let's continue to be vigilant and watch each other closely.",
+        "You said: I'm worried about Bob's sudden disappearance and suggest we all keep a closer eye on each other for everyone's safety.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant.",
+        "Alice: I agree with Diana, let's all keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Diana's concerns about Bob's disappearance. Let's all work together to ensure our safety.",
+        "You said: I'd like to echo Alice and Diana's concerns about Bob's sudden disappearance. Let's remain vigilant as a team.",
+        "Diana: I'm still troubled by Bob's disappearance. Let's continue to be vigilant and watch each other closely.",
+        "Alice: I'm worried about Bob's sudden disappearance and suggest we all keep a closer eye on each other for everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's stay vigilant.",
+        "Alice: I agree with Diana, let's all keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I share Diana's concerns about Bob's disappearance. Let's all work together to ensure our safety.",
+        "Charlie: I'd like to echo Alice and Diana's concerns about Bob's sudden disappearance. Let's remain vigilant as a team.",
+        "You said: I'm still troubled by Bob's disappearance. Let's continue to be vigilant and watch each other closely.",
+        "Alice: I'm worried about Bob's sudden disappearance and suggest we all keep a closer eye on each other for everyone's safety.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

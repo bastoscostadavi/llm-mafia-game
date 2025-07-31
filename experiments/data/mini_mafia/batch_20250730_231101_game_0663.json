@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0663",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 663,
+  "timestamp": "2025-07-31T02:46:15.918741",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all support each other during this sad time. However, let's also keep an eye out for any suspicious behavior. Rest in peace, Bob.",
+        "Diana: Let's not forget that we need to stay focused and identify the mafioso among us. Bob's death is a reminder of the importance of vigilance. Let's work together to ensure justice is served....",
+        "You said: Let's not jump to conclusions. Let's focus on our discussions and ensure we make informed decisions based on all available information. Bob's death is a reminder of the importance of working together....",
+        "Diana: Let's not forget our primary goal: identifying the mafioso among us. Bob's death is a reminder of the importance of unity and vigilance. Let's work together.",
+        "Charlie: Let's not forget that we need to stay focused on identifying the mafioso among us. Bob's death is a reminder of the importance of unity and vigilance. Let's work together to ensure justice is served."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all support each other during this sad time. However, let's also keep an eye out for any suspicious behavior. Rest in peace, Bob.",
+        "Diana: Let's not forget that we need to stay focused and identify the mafioso among us. Bob's death is a reminder of the importance of vigilance. Let's work together to ensure justice is served....",
+        "Alice: Let's not jump to conclusions. Let's focus on our discussions and ensure we make informed decisions based on all available information. Bob's death is a reminder of the importance of working together....",
+        "Diana: Let's not forget our primary goal: identifying the mafioso among us. Bob's death is a reminder of the importance of unity and vigilance. Let's work together.",
+        "You said: Let's not forget that we need to stay focused on identifying the mafioso among us. Bob's death is a reminder of the importance of unity and vigilance. Let's work together to ensure justice is served.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Alice: I agree, let's all support each other during this sad time. However, let's also keep an eye out for any suspicious behavior. Rest in peace, Bob.",
+        "You said: Let's not forget that we need to stay focused and identify the mafioso among us. Bob's death is a reminder of the importance of vigilance. Let's work together to ensure justice is served....",
+        "Alice: Let's not jump to conclusions. Let's focus on our discussions and ensure we make informed decisions based on all available information. Bob's death is a reminder of the importance of working together....",
+        "You said: Let's not forget our primary goal: identifying the mafioso among us. Bob's death is a reminder of the importance of unity and vigilance. Let's work together.",
+        "Charlie: Let's not forget that we need to stay focused on identifying the mafioso among us. Bob's death is a reminder of the importance of unity and vigilance. Let's work together to ensure justice is served.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

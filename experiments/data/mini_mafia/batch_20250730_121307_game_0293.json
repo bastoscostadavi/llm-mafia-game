@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0293",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 293,
+  "timestamp": "2025-07-30T14:02:34.556161",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Diana, let's be vigilant tonight.",
+        "You said: I agree with Diana and Charlie, let's stay alert tonight. It's important we keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Diana and Charlie's concerns. Let's all stay vigilant tonight.",
+        "Charlie: I think we should all express any concerns or suspicions we have tonight to help maintain trust and transparency within our group. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to reiterate the importance of trust and transparency in our group. Let's all share any concerns or suspicions we have, and work together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Diana, let's be vigilant tonight.",
+        "Bob: I agree with Diana and Charlie, let's stay alert tonight. It's important we keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I share Diana and Charlie's concerns. Let's all stay vigilant tonight.",
+        "You said: I think we should all express any concerns or suspicions we have tonight to help maintain trust and transparency within our group. Let's work together to ensure everyone's safety.",
+        "Diana: I'd like to reiterate the importance of trust and transparency in our group. Let's all share any concerns or suspicions we have, and work together to ensure everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Diana, let's be vigilant tonight.",
+        "Bob: I agree with Diana and Charlie, let's stay alert tonight. It's important we keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I share Diana and Charlie's concerns. Let's all stay vigilant tonight.",
+        "Charlie: I think we should all express any concerns or suspicions we have tonight to help maintain trust and transparency within our group. Let's work together to ensure everyone's safety.",
+        "You said: I'd like to reiterate the importance of trust and transparency in our group. Let's all share any concerns or suspicions we have, and work together to ensure everyone's safety.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

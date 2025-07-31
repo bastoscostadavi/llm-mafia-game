@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0172",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 172,
+  "timestamp": "2025-07-30T17:07:17.399024",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all take a moment to reflect on her contributions to our group. Let's stay focused on finding the true culprit behind this tragedy.",
+        "Diana: I agree with Bob, let's focus on finding Alice's killer. My condolences to her family. However, I'm concerned about Bob's reaction to Alice's death. Let's remain vigilant.",
+        "Charlie: I agree with Diana, let's keep a close eye on suspicious behavior. Alice's death is a grim reminder of the importance of trust and unity in our group.",
+        "Diana: Let's not jump to conclusions. We need to stay focused and work together to find Alice's killer. Bob's reaction doesn't prove anything yet. Let's keep an open mind.",
+        "You said: Let's not forget that we need to identify Alice's killer to bring justice. We should focus on the facts and not jump to conclusions based on emotions. Let's stay united and work together to find the...",
+        "Charlie: Let's not forget the importance of trust and unity in our group during this difficult time. We must work together to find Alice's killer."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all take a moment to reflect on her contributions to our group. Let's stay focused on finding the true culprit behind this tragedy.",
+        "Diana: I agree with Bob, let's focus on finding Alice's killer. My condolences to her family. However, I'm concerned about Bob's reaction to Alice's death. Let's remain vigilant.",
+        "You said: I agree with Diana, let's keep a close eye on suspicious behavior. Alice's death is a grim reminder of the importance of trust and unity in our group.",
+        "Diana: Let's not jump to conclusions. We need to stay focused and work together to find Alice's killer. Bob's reaction doesn't prove anything yet. Let's keep an open mind.",
+        "Bob: Let's not forget that we need to identify Alice's killer to bring justice. We should focus on the facts and not jump to conclusions based on emotions. Let's stay united and work together to find the...",
+        "You said: Let's not forget the importance of trust and unity in our group during this difficult time. We must work together to find Alice's killer.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all take a moment to reflect on her contributions to our group. Let's stay focused on finding the true culprit behind this tragedy.",
+        "You said: I agree with Bob, let's focus on finding Alice's killer. My condolences to her family. However, I'm concerned about Bob's reaction to Alice's death. Let's remain vigilant.",
+        "Charlie: I agree with Diana, let's keep a close eye on suspicious behavior. Alice's death is a grim reminder of the importance of trust and unity in our group.",
+        "You said: Let's not jump to conclusions. We need to stay focused and work together to find Alice's killer. Bob's reaction doesn't prove anything yet. Let's keep an open mind.",
+        "Bob: Let's not forget that we need to identify Alice's killer to bring justice. We should focus on the facts and not jump to conclusions based on emotions. Let's stay united and work together to find the...",
+        "Charlie: Let's not forget the importance of trust and unity in our group during this difficult time. We must work together to find Alice's killer.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

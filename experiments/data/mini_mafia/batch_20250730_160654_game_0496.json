@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0496",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 496,
+  "timestamp": "2025-07-30T19:08:46.646107",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's sudden demise. Let's all support each other during this difficult time. Let's focus on identifying the real culprit and bringing them to justice. #JusticeForDiana....",
+        "Bob: I agree with Charlie, we need to find the true culprit behind Diana's death. Let's work together and share any relevant information we may have. #JusticeForDiana",
+        "You said: I support #JusticeForDiana and trust everyone's commitment to finding the real culprit. Let's be vigilant and share any suspicious information.",
+        "Charlie: Let's stay united in our quest for justice. Any new leads or clues should be shared openly. #JusticeForDiana",
+        "You said: I have noticed Charlie's unusual behavior and suggest we keep a close eye on him during this investigation. Let's all stay focused and share any new information. #JusticeForDiana.",
+        "Bob: I've noticed Alice's concern about Charlie's behavior. Let's not jump to conclusions and maintain an open dialogue. We should trust each other during this investigation. #JusticeForDiana"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's sudden demise. Let's all support each other during this difficult time. Let's focus on identifying the real culprit and bringing them to justice. #JusticeForDiana....",
+        "You said: I agree with Charlie, we need to find the true culprit behind Diana's death. Let's work together and share any relevant information we may have. #JusticeForDiana",
+        "Alice: I support #JusticeForDiana and trust everyone's commitment to finding the real culprit. Let's be vigilant and share any suspicious information.",
+        "Charlie: Let's stay united in our quest for justice. Any new leads or clues should be shared openly. #JusticeForDiana",
+        "Alice: I have noticed Charlie's unusual behavior and suggest we keep a close eye on him during this investigation. Let's all stay focused and share any new information. #JusticeForDiana.",
+        "You said: I've noticed Alice's concern about Charlie's behavior. Let's not jump to conclusions and maintain an open dialogue. We should trust each other during this investigation. #JusticeForDiana",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's sudden demise. Let's all support each other during this difficult time. Let's focus on identifying the real culprit and bringing them to justice. #JusticeForDiana....",
+        "Bob: I agree with Charlie, we need to find the true culprit behind Diana's death. Let's work together and share any relevant information we may have. #JusticeForDiana",
+        "Alice: I support #JusticeForDiana and trust everyone's commitment to finding the real culprit. Let's be vigilant and share any suspicious information.",
+        "You said: Let's stay united in our quest for justice. Any new leads or clues should be shared openly. #JusticeForDiana",
+        "Alice: I have noticed Charlie's unusual behavior and suggest we keep a close eye on him during this investigation. Let's all stay focused and share any new information. #JusticeForDiana.",
+        "Bob: I've noticed Alice's concern about Charlie's behavior. Let's not jump to conclusions and maintain an open dialogue. We should trust each other during this investigation. #JusticeForDiana",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0799",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 799,
+  "timestamp": "2025-07-31T03:30:27.191488",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance last night. Let's be vigilant and keep an eye on each other during the day.",
+        "Diana: I agree with Alice, let's stay vigilant today.",
+        "Charlie: I agree with Diana and Alice, let's stay vigilant today. (trying to blend in)",
+        "Charlie: Let's not jump to conclusions. We have no proof yet that Bob was killed by a mafioso. Let's focus on staying vigilant and keeping the discussion open.",
+        "Diana: Let's keep our discussions open and focused on staying vigilant. We need to work together to ensure everyone's safety in this game.",
+        "You said: Let's not forget the importance of staying vigilant and keeping open communications. We need to work together to ensure everyone's safety.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance last night. Let's be vigilant and keep an eye on each other during the day.",
+        "Diana: I agree with Alice, let's stay vigilant today.",
+        "You said: I agree with Diana and Alice, let's stay vigilant today. (trying to blend in)",
+        "You said: Let's not jump to conclusions. We have no proof yet that Bob was killed by a mafioso. Let's focus on staying vigilant and keeping the discussion open.",
+        "Diana: Let's keep our discussions open and focused on staying vigilant. We need to work together to ensure everyone's safety in this game.",
+        "Alice: Let's not forget the importance of staying vigilant and keeping open communications. We need to work together to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "Alice: I'm concerned about Bob's sudden disappearance last night. Let's be vigilant and keep an eye on each other during the day.",
+        "You said: I agree with Alice, let's stay vigilant today.",
+        "Charlie: I agree with Diana and Alice, let's stay vigilant today. (trying to blend in)",
+        "Charlie: Let's not jump to conclusions. We have no proof yet that Bob was killed by a mafioso. Let's focus on staying vigilant and keeping the discussion open.",
+        "You said: Let's keep our discussions open and focused on staying vigilant. We need to work together to ensure everyone's safety in this game.",
+        "Alice: Let's not forget the importance of staying vigilant and keeping open communications. We need to work together to ensure everyone's safety.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

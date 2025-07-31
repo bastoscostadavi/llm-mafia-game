@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0726",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 726,
+  "timestamp": "2025-07-30T20:28:52.347437",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "You said: I agree with Bob, let's not jump to conclusions and trust the investigation process. Our thoughts are with Diana's family during this difficult time.",
+        "Charlie: I'd like to propose that we keep an eye on each other during this discussion round to ensure everyone's safety following Diana's passing. Let's remember to trust the investigation process as well....",
+        "Charlie: I'd like to suggest we remain vigilant and keep an eye on each other during this discussion round to ensure everyone's safety following Diana's passing. Trust but verify.",
+        "Bob: Let's continue to support each other during this trying time and trust the investigation process. Our focus should be on Diana's memory.",
+        "You said: Let's continue to show respect for Diana's memory and trust the investigation process. Our focus should be on supporting each other during this difficult time.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "Alice: I agree with Bob, let's not jump to conclusions and trust the investigation process. Our thoughts are with Diana's family during this difficult time.",
+        "Charlie: I'd like to propose that we keep an eye on each other during this discussion round to ensure everyone's safety following Diana's passing. Let's remember to trust the investigation process as well....",
+        "Charlie: I'd like to suggest we remain vigilant and keep an eye on each other during this discussion round to ensure everyone's safety following Diana's passing. Trust but verify.",
+        "You said: Let's continue to support each other during this trying time and trust the investigation process. Our focus should be on Diana's memory.",
+        "Alice: Let's continue to show respect for Diana's memory and trust the investigation process. Our focus should be on supporting each other during this difficult time."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "Alice: I agree with Bob, let's not jump to conclusions and trust the investigation process. Our thoughts are with Diana's family during this difficult time.",
+        "You said: I'd like to propose that we keep an eye on each other during this discussion round to ensure everyone's safety following Diana's passing. Let's remember to trust the investigation process as well....",
+        "You said: I'd like to suggest we remain vigilant and keep an eye on each other during this discussion round to ensure everyone's safety following Diana's passing. Trust but verify.",
+        "Bob: Let's continue to support each other during this trying time and trust the investigation process. Our focus should be on Diana's memory.",
+        "Alice: Let's continue to show respect for Diana's memory and trust the investigation process. Our focus should be on supporting each other during this difficult time.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

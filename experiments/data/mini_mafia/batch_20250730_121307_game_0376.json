@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0376",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 376,
+  "timestamp": "2025-07-30T14:34:47.545204",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Bob, let's support each other during this tough time. My thoughts are with Alice's family.",
+        "Diana: I agree with both Bob and Charlie. Let's support each other during this difficult time and ensure Alice's memory is honored. However, I urge everyone to remain vigilant. We must find out who took...",
+        "You said: I'd like to echo Diana's sentiments about staying vigilant. Let's all work together to find out what happened to Alice and ensure her memory is honored.",
+        "Diana: Let's not forget Alice's memory during this discussion. We must remain vigilant and work together to uncover the truth behind her death.",
+        "Charlie: Let's not forget the importance of supporting each other during this challenging time. We must also remain vigilant to ensure justice for Alice. #SupportAndVigilance #HonorAlice'sMemory #MafiaGame2023"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Bob, let's support each other during this tough time. My thoughts are with Alice's family.",
+        "Diana: I agree with both Bob and Charlie. Let's support each other during this difficult time and ensure Alice's memory is honored. However, I urge everyone to remain vigilant. We must find out who took...",
+        "Bob: I'd like to echo Diana's sentiments about staying vigilant. Let's all work together to find out what happened to Alice and ensure her memory is honored.",
+        "Diana: Let's not forget Alice's memory during this discussion. We must remain vigilant and work together to uncover the truth behind her death.",
+        "You said: Let's not forget the importance of supporting each other during this challenging time. We must also remain vigilant to ensure justice for Alice. #SupportAndVigilance #HonorAlice'sMemory #MafiaGame2023",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Bob, let's support each other during this tough time. My thoughts are with Alice's family.",
+        "You said: I agree with both Bob and Charlie. Let's support each other during this difficult time and ensure Alice's memory is honored. However, I urge everyone to remain vigilant. We must find out who took...",
+        "Bob: I'd like to echo Diana's sentiments about staying vigilant. Let's all work together to find out what happened to Alice and ensure her memory is honored.",
+        "You said: Let's not forget Alice's memory during this discussion. We must remain vigilant and work together to uncover the truth behind her death.",
+        "Charlie: Let's not forget the importance of supporting each other during this challenging time. We must also remain vigilant to ensure justice for Alice. #SupportAndVigilance #HonorAlice'sMemory #MafiaGame2023",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

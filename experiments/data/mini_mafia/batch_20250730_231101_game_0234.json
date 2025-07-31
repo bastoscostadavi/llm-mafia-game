@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0234",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 234,
+  "timestamp": "2025-07-31T00:27:17.995577",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Diana: I'm saddened by Alice's passing. Let's ensure we cooperate and share information to keep our group safe. Charlie, can you share any details about the last time you saw Alice or any unusual behavior...",
+        "You said: I agree with Charlie and Diana. Let's work together to ensure everyone's safety. I last saw Alice yesterday afternoon, and she seemed fine. No unusual behavior was noticed.",
+        "Diana: Let's continue collaborating to ensure everyone's safety. Any new information, Charlie, about Alice's last moments?",
+        "You said: Let's keep our spirits high and continue collaborating for safety. No new information about Alice's last moments.",
+        "Charlie: Let's not jump to conclusions. We should continue collaborating and trust each other during this difficult time. Our priority is ensuring everyone's safety.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Diana: I'm saddened by Alice's passing. Let's ensure we cooperate and share information to keep our group safe. Charlie, can you share any details about the last time you saw Alice or any unusual behavior...",
+        "Bob: I agree with Charlie and Diana. Let's work together to ensure everyone's safety. I last saw Alice yesterday afternoon, and she seemed fine. No unusual behavior was noticed.",
+        "Diana: Let's continue collaborating to ensure everyone's safety. Any new information, Charlie, about Alice's last moments?",
+        "Bob: Let's keep our spirits high and continue collaborating for safety. No new information about Alice's last moments.",
+        "You said: Let's not jump to conclusions. We should continue collaborating and trust each other during this difficult time. Our priority is ensuring everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I'm saddened by Alice's passing. Let's ensure we cooperate and share information to keep our group safe. Charlie, can you share any details about the last time you saw Alice or any unusual behavior...",
+        "Bob: I agree with Charlie and Diana. Let's work together to ensure everyone's safety. I last saw Alice yesterday afternoon, and she seemed fine. No unusual behavior was noticed.",
+        "You said: Let's continue collaborating to ensure everyone's safety. Any new information, Charlie, about Alice's last moments?",
+        "Bob: Let's keep our spirits high and continue collaborating for safety. No new information about Alice's last moments.",
+        "Charlie: Let's not jump to conclusions. We should continue collaborating and trust each other during this difficult time. Our priority is ensuring everyone's safety.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0372",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 372,
+  "timestamp": "2025-07-29T18:01:30.762287",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and keep an eye on each other to ensure everyone's safety.",
+        "You said: I agree with Bob, let's stay alert and keep an eye out for any suspicious behavior.",
+        "Diana: I echo Bob and Alice's sentiments. Let's all be vigilant and watch out for any unusual behavior. We must stick together as a team to ensure everyone's safety.",
+        "Diana: I suggest we focus on identifying the culprit behind Charlie's death. Let's share any suspicious observations or actions we've noticed. We must work together to keep our team safe and uncover the...",
+        "You said: I'm saddened by Charlie's death. Let's work together to uncover the truth and ensure everyone's safety.",
+        "Bob: I've noticed Alice seemed uneasy during our last discussion. Let's keep a close eye on her actions.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and keep an eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Bob, let's stay alert and keep an eye out for any suspicious behavior.",
+        "Diana: I echo Bob and Alice's sentiments. Let's all be vigilant and watch out for any unusual behavior. We must stick together as a team to ensure everyone's safety.",
+        "Diana: I suggest we focus on identifying the culprit behind Charlie's death. Let's share any suspicious observations or actions we've noticed. We must work together to keep our team safe and uncover the...",
+        "Alice: I'm saddened by Charlie's death. Let's work together to uncover the truth and ensure everyone's safety.",
+        "You said: I've noticed Alice seemed uneasy during our last discussion. Let's keep a close eye on her actions."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and keep an eye on each other to ensure everyone's safety.",
+        "Alice: I agree with Bob, let's stay alert and keep an eye out for any suspicious behavior.",
+        "You said: I echo Bob and Alice's sentiments. Let's all be vigilant and watch out for any unusual behavior. We must stick together as a team to ensure everyone's safety.",
+        "You said: I suggest we focus on identifying the culprit behind Charlie's death. Let's share any suspicious observations or actions we've noticed. We must work together to keep our team safe and uncover the...",
+        "Alice: I'm saddened by Charlie's death. Let's work together to uncover the truth and ensure everyone's safety.",
+        "Bob: I've noticed Alice seemed uneasy during our last discussion. Let's keep a close eye on her actions.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0707",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 707,
+  "timestamp": "2025-07-31T03:00:39.472067",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and ensure the safety of our village.",
+        "Bob: I agree with Alice, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "Diana: I share Alice and Bob's concerns for our village's safety. Let's work together to identify any unusual activities.",
+        "Bob: Let's not jump to conclusions. We should focus on identifying any unusual activities that could threaten our village's safety.",
+        "Diana: Let's remain focused on identifying any unusual activities for the safety of our village.",
+        "You said: Let's remain vigilant and report any unusual activities for the safety of our village.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and ensure the safety of our village.",
+        "You said: I agree with Alice, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "Diana: I share Alice and Bob's concerns for our village's safety. Let's work together to identify any unusual activities.",
+        "You said: Let's not jump to conclusions. We should focus on identifying any unusual activities that could threaten our village's safety.",
+        "Diana: Let's remain focused on identifying any unusual activities for the safety of our village.",
+        "Alice: Let's remain vigilant and report any unusual activities for the safety of our village.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and ensure the safety of our village.",
+        "Bob: I agree with Alice, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I share Alice and Bob's concerns for our village's safety. Let's work together to identify any unusual activities.",
+        "Bob: Let's not jump to conclusions. We should focus on identifying any unusual activities that could threaten our village's safety.",
+        "You said: Let's remain focused on identifying any unusual activities for the safety of our village.",
+        "Alice: Let's remain vigilant and report any unusual activities for the safety of our village."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

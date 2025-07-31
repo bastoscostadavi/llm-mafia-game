@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0400",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 400,
+  "timestamp": "2025-07-31T01:21:19.295933",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other and discuss any suspicious behavior.",
+        "Charlie: I agree with Diana, let's stay vigilant and keep an eye out for any unusual behavior.",
+        "You said: I agree with Diana and Charlie, let's keep a close eye on each other and ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions. We should continue observing each other's behavior and communicate openly.",
+        "You said: Let's all remain calm and continue observing each other's behavior for any signs of suspicion. We should keep the communication open and transparent.",
+        "Diana: Let's maintain open communication and keep an eye out for any unusual behavior. We must work together to ensure everyone's safety.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other and discuss any suspicious behavior.",
+        "You said: I agree with Diana, let's stay vigilant and keep an eye out for any unusual behavior.",
+        "Bob: I agree with Diana and Charlie, let's keep a close eye on each other and ensure everyone's safety.",
+        "You said: Let's not jump to conclusions. We should continue observing each other's behavior and communicate openly.",
+        "Bob: Let's all remain calm and continue observing each other's behavior for any signs of suspicion. We should keep the communication open and transparent.",
+        "Diana: Let's maintain open communication and keep an eye out for any unusual behavior. We must work together to ensure everyone's safety.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden absence. Let's keep a close eye on each other and discuss any suspicious behavior.",
+        "Charlie: I agree with Diana, let's stay vigilant and keep an eye out for any unusual behavior.",
+        "Bob: I agree with Diana and Charlie, let's keep a close eye on each other and ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions. We should continue observing each other's behavior and communicate openly.",
+        "Bob: Let's all remain calm and continue observing each other's behavior for any signs of suspicion. We should keep the communication open and transparent.",
+        "You said: Let's maintain open communication and keep an eye out for any unusual behavior. We must work together to ensure everyone's safety."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0425",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 425,
+  "timestamp": "2025-07-29T18:21:07.051327",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Charlie: I'm saddened by Bob's passing. Let's all stand together during this difficult time.",
+        "You said: I'm deeply concerned about Bob's death and urge everyone to be cautious. Let's not forget Charlie's unusual statement during the discussion earlier.",
+        "Charlie: I share Alice's concerns and offer my condolences to Bob's family. Let's work together to ensure safety for all.",
+        "Diana: I agree with Alice, let's not overlook the unusual statement from Charlie earlier. We should explore that further to ensure everyone's safety.",
+        "You said: Let's not overlook the inconsistency in Charlie's statements regarding Bob's death. We should investigate further to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I'm saddened by Bob's passing. Let's all stand together during this difficult time.",
+        "Alice: I'm deeply concerned about Bob's death and urge everyone to be cautious. Let's not forget Charlie's unusual statement during the discussion earlier.",
+        "You said: I share Alice's concerns and offer my condolences to Bob's family. Let's work together to ensure safety for all.",
+        "Diana: I agree with Alice, let's not overlook the unusual statement from Charlie earlier. We should explore that further to ensure everyone's safety.",
+        "Alice: Let's not overlook the inconsistency in Charlie's statements regarding Bob's death. We should investigate further to ensure everyone's safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Charlie: I'm saddened by Bob's passing. Let's all stand together during this difficult time.",
+        "Alice: I'm deeply concerned about Bob's death and urge everyone to be cautious. Let's not forget Charlie's unusual statement during the discussion earlier.",
+        "Charlie: I share Alice's concerns and offer my condolences to Bob's family. Let's work together to ensure safety for all.",
+        "You said: I agree with Alice, let's not overlook the unusual statement from Charlie earlier. We should explore that further to ensure everyone's safety.",
+        "Alice: Let's not overlook the inconsistency in Charlie's statements regarding Bob's death. We should investigate further to ensure everyone's safety.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

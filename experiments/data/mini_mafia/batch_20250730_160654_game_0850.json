@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0850",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 850,
+  "timestamp": "2025-07-30T21:10:15.095994",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I agree with Bob, let's support each other and stay vigilant. Let's not jump to conclusions based on suspicion alone.",
+        "Diana: I agree with Alice and Bob, let's stay vigilant and support each other. Let's not jump to conclusions based on suspicion alone. But I'm keeping a close eye on things.",
+        "Diana: Let's continue our discussion and support each other. We should remain vigilant and not jump to conclusions.",
+        "You said: Let us continue to support each other and stay vigilant. We should not jump to conclusions based on suspicion alone.",
+        "Bob: Let us continue to support each other and stay vigilant during these trying times. Our solidarity is our strength.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Alice: I agree with Bob, let's support each other and stay vigilant. Let's not jump to conclusions based on suspicion alone.",
+        "Diana: I agree with Alice and Bob, let's stay vigilant and support each other. Let's not jump to conclusions based on suspicion alone. But I'm keeping a close eye on things.",
+        "Diana: Let's continue our discussion and support each other. We should remain vigilant and not jump to conclusions.",
+        "Alice: Let us continue to support each other and stay vigilant. We should not jump to conclusions based on suspicion alone.",
+        "You said: Let us continue to support each other and stay vigilant during these trying times. Our solidarity is our strength."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Alice: I agree with Bob, let's support each other and stay vigilant. Let's not jump to conclusions based on suspicion alone.",
+        "You said: I agree with Alice and Bob, let's stay vigilant and support each other. Let's not jump to conclusions based on suspicion alone. But I'm keeping a close eye on things.",
+        "You said: Let's continue our discussion and support each other. We should remain vigilant and not jump to conclusions.",
+        "Alice: Let us continue to support each other and stay vigilant. We should not jump to conclusions based on suspicion alone.",
+        "Bob: Let us continue to support each other and stay vigilant during these trying times. Our solidarity is our strength.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

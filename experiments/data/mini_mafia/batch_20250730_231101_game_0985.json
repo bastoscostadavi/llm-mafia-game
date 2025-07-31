@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0985",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 985,
+  "timestamp": "2025-07-31T04:30:30.719150",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's sudden demise. Let's work together to find out who did this heinous act. My condolences to her family. #justiceforAlice",
+        "Charlie: I'd like to express my sympathy for Alice's tragic loss. Let's all be vigilant and cooperate in identifying the perpetrator. #justiceforAlice #stayvigilant",
+        "You said: I'm shocked by Alice's death and agree with the need for cooperation to find the culprit. Let's be cautious and trust no one until we have solid evidence. #stayvigilant #justiceforAlice",
+        "You said: Let's not jump to conclusions based on emotions. We need to gather evidence and work together to find the real culprit. #justiceforAlice #stayfocused #teamwork",
+        "Diana: Let's not forget that we need to trust each other to find the truth. I believe in our ability to work together and uncover the truth behind Alice's death. #trust #teamwork #justiceforAlice",
+        "Charlie: Let's keep our focus on finding Alice's killer. Trust but verify, teamwork is crucial. #stayfocused #teamwork #justiceforAlice"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's sudden demise. Let's work together to find out who did this heinous act. My condolences to her family. #justiceforAlice",
+        "You said: I'd like to express my sympathy for Alice's tragic loss. Let's all be vigilant and cooperate in identifying the perpetrator. #justiceforAlice #stayvigilant",
+        "Bob: I'm shocked by Alice's death and agree with the need for cooperation to find the culprit. Let's be cautious and trust no one until we have solid evidence. #stayvigilant #justiceforAlice",
+        "Bob: Let's not jump to conclusions based on emotions. We need to gather evidence and work together to find the real culprit. #justiceforAlice #stayfocused #teamwork",
+        "Diana: Let's not forget that we need to trust each other to find the truth. I believe in our ability to work together and uncover the truth behind Alice's death. #trust #teamwork #justiceforAlice",
+        "You said: Let's keep our focus on finding Alice's killer. Trust but verify, teamwork is crucial. #stayfocused #teamwork #justiceforAlice",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm saddened by Alice's sudden demise. Let's work together to find out who did this heinous act. My condolences to her family. #justiceforAlice",
+        "Charlie: I'd like to express my sympathy for Alice's tragic loss. Let's all be vigilant and cooperate in identifying the perpetrator. #justiceforAlice #stayvigilant",
+        "Bob: I'm shocked by Alice's death and agree with the need for cooperation to find the culprit. Let's be cautious and trust no one until we have solid evidence. #stayvigilant #justiceforAlice",
+        "Bob: Let's not jump to conclusions based on emotions. We need to gather evidence and work together to find the real culprit. #justiceforAlice #stayfocused #teamwork",
+        "You said: Let's not forget that we need to trust each other to find the truth. I believe in our ability to work together and uncover the truth behind Alice's death. #trust #teamwork #justiceforAlice",
+        "Charlie: Let's keep our focus on finding Alice's killer. Trust but verify, teamwork is crucial. #stayfocused #teamwork #justiceforAlice",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

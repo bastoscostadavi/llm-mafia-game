@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0217",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 217,
+  "timestamp": "2025-07-31T00:21:53.807560",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Diana: I'm saddened by Alice's demise. Let's support Bob in his investigation to ensure justice is served.",
+        "You said: Based on my investigation, I believe Diana might be involved in Alice's death. Let's focus our discussion on her role in this tragedy.",
+        "Charlie: Let's not jump to conclusions. We should consider all possible angles before accusing anyone based on limited information.",
+        "You said: Let's keep the focus on Diana's potential involvement in Alice's death. We need to ensure justice is served for Alice.",
+        "Diana: Let's not rush to judgment. We should allow Bob to continue his investigation for the sake of justice and clarity.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Diana: I'm saddened by Alice's demise. Let's support Bob in his investigation to ensure justice is served.",
+        "Bob: Based on my investigation, I believe Diana might be involved in Alice's death. Let's focus our discussion on her role in this tragedy.",
+        "You said: Let's not jump to conclusions. We should consider all possible angles before accusing anyone based on limited information.",
+        "Bob: Let's keep the focus on Diana's potential involvement in Alice's death. We need to ensure justice is served for Alice.",
+        "Diana: Let's not rush to judgment. We should allow Bob to continue his investigation for the sake of justice and clarity.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "You said: I'm saddened by Alice's demise. Let's support Bob in his investigation to ensure justice is served.",
+        "Bob: Based on my investigation, I believe Diana might be involved in Alice's death. Let's focus our discussion on her role in this tragedy.",
+        "Charlie: Let's not jump to conclusions. We should consider all possible angles before accusing anyone based on limited information.",
+        "Bob: Let's keep the focus on Diana's potential involvement in Alice's death. We need to ensure justice is served for Alice.",
+        "You said: Let's not rush to judgment. We should allow Bob to continue his investigation for the sake of justice and clarity."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

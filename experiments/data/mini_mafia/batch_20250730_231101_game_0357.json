@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0357",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 357,
+  "timestamp": "2025-07-31T01:07:06.851450",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm saddened by Diana's passing. Let's all try to figure out who among us could have done such a thing. We need to ensure safety for all in our village.",
+        "Bob: I agree with Alice. Let's work together to uncover the truth behind Diana's death. Our village's safety is at stake.",
+        "Charlie: I'm deeply troubled by Diana's sudden demise. Let's collectively share any relevant information we might have to help uncover the truth behind this tragedy. Our village's peace depends on it.",
+        "Bob: Let's not jump to conclusions. We should consider all possible leads before making any accusations. Our primary goal is to ensure safety and justice in our village.",
+        "Charlie: Let's stay focused on finding clues to solve the mystery of Diana's death. We must not let our emotions cloud our judgment.",
+        "You said: Let's continue our investigation with clear minds and open hearts. Let's not let fear or speculation cloud our judgement. Together, we can uncover the truth and ensure our village's safety."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm saddened by Diana's passing. Let's all try to figure out who among us could have done such a thing. We need to ensure safety for all in our village.",
+        "You said: I agree with Alice. Let's work together to uncover the truth behind Diana's death. Our village's safety is at stake.",
+        "Charlie: I'm deeply troubled by Diana's sudden demise. Let's collectively share any relevant information we might have to help uncover the truth behind this tragedy. Our village's peace depends on it.",
+        "You said: Let's not jump to conclusions. We should consider all possible leads before making any accusations. Our primary goal is to ensure safety and justice in our village.",
+        "Charlie: Let's stay focused on finding clues to solve the mystery of Diana's death. We must not let our emotions cloud our judgment.",
+        "Alice: Let's continue our investigation with clear minds and open hearts. Let's not let fear or speculation cloud our judgement. Together, we can uncover the truth and ensure our village's safety.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Bob, Bob voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm saddened by Diana's passing. Let's all try to figure out who among us could have done such a thing. We need to ensure safety for all in our village.",
+        "Bob: I agree with Alice. Let's work together to uncover the truth behind Diana's death. Our village's safety is at stake.",
+        "You said: I'm deeply troubled by Diana's sudden demise. Let's collectively share any relevant information we might have to help uncover the truth behind this tragedy. Our village's peace depends on it.",
+        "Bob: Let's not jump to conclusions. We should consider all possible leads before making any accusations. Our primary goal is to ensure safety and justice in our village.",
+        "You said: Let's stay focused on finding clues to solve the mystery of Diana's death. We must not let our emotions cloud our judgment.",
+        "Alice: Let's continue our investigation with clear minds and open hearts. Let's not let fear or speculation cloud our judgement. Together, we can uncover the truth and ensure our village's safety.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Bob, Bob voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0347",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 347,
+  "timestamp": "2025-07-30T14:22:27.795739",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during these trying times.",
+        "Charlie: I agree with Bob, let's all stay united and support each other during this unfortunate time.",
+        "Diana: I agree with Bob and Charlie, let's support each other during this difficult time. However, I urge everyone to be extra cautious and watchful for any suspicious behavior.",
+        "You said: Let's all express our condolences for Alice's loss and remain cautious to ensure Diana's investigation doesn't unfairly target anyone.",
+        "Charlie: Let's continue our support for each other during this difficult time, while remaining vigilant and cautious.",
+        "Diana: I echo the sentiments of unity and support expressed by Bob and Charlie. Let's stay vigilant together to ensure the safety of our group."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I agree with Bob, let's all stay united and support each other during this unfortunate time.",
+        "Diana: I agree with Bob and Charlie, let's support each other during this difficult time. However, I urge everyone to be extra cautious and watchful for any suspicious behavior.",
+        "Bob: Let's all express our condolences for Alice's loss and remain cautious to ensure Diana's investigation doesn't unfairly target anyone.",
+        "You said: Let's continue our support for each other during this difficult time, while remaining vigilant and cautious.",
+        "Diana: I echo the sentiments of unity and support expressed by Bob and Charlie. Let's stay vigilant together to ensure the safety of our group.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during these trying times.",
+        "Charlie: I agree with Bob, let's all stay united and support each other during this unfortunate time.",
+        "You said: I agree with Bob and Charlie, let's support each other during this difficult time. However, I urge everyone to be extra cautious and watchful for any suspicious behavior.",
+        "Bob: Let's all express our condolences for Alice's loss and remain cautious to ensure Diana's investigation doesn't unfairly target anyone.",
+        "Charlie: Let's continue our support for each other during this difficult time, while remaining vigilant and cautious.",
+        "You said: I echo the sentiments of unity and support expressed by Bob and Charlie. Let's stay vigilant together to ensure the safety of our group.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

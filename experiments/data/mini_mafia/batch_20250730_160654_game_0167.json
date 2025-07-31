@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0167",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 167,
+  "timestamp": "2025-07-30T17:05:16.843709",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden passing. Let's all keep a close eye on each other during this trying time.",
+        "Charlie: I agree with Alice, let's support each other during this difficult time. However, I'm also keeping a close eye on everyone, especially Bob, knowing he's the detective.",
+        "Bob: I'm saddened by Diana's death. Let's work together to ensure justice is served. If anyone has any information, please share it openly.",
+        "Bob: Let's remain vigilant and share any suspicious activities or information we may have to honor Diana's memory and ensure justice is served.",
+        "You said: Let's stay united in our grief and suspicion. We need to work together to find out what happened to Diana.",
+        "Charlie: Let's not jump to conclusions. We need to remain calm and collected to honor Diana's memory and ensure justice is served.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden passing. Let's all keep a close eye on each other during this trying time.",
+        "Charlie: I agree with Alice, let's support each other during this difficult time. However, I'm also keeping a close eye on everyone, especially Bob, knowing he's the detective.",
+        "You said: I'm saddened by Diana's death. Let's work together to ensure justice is served. If anyone has any information, please share it openly.",
+        "You said: Let's remain vigilant and share any suspicious activities or information we may have to honor Diana's memory and ensure justice is served.",
+        "Alice: Let's stay united in our grief and suspicion. We need to work together to find out what happened to Diana.",
+        "Charlie: Let's not jump to conclusions. We need to remain calm and collected to honor Diana's memory and ensure justice is served.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden passing. Let's all keep a close eye on each other during this trying time.",
+        "You said: I agree with Alice, let's support each other during this difficult time. However, I'm also keeping a close eye on everyone, especially Bob, knowing he's the detective.",
+        "Bob: I'm saddened by Diana's death. Let's work together to ensure justice is served. If anyone has any information, please share it openly.",
+        "Bob: Let's remain vigilant and share any suspicious activities or information we may have to honor Diana's memory and ensure justice is served.",
+        "Alice: Let's stay united in our grief and suspicion. We need to work together to find out what happened to Diana.",
+        "You said: Let's not jump to conclusions. We need to remain calm and collected to honor Diana's memory and ensure justice is served."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

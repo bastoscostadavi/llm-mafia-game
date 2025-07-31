@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0380",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 380,
+  "timestamp": "2025-07-30T14:36:16.693451",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding out who did this heinous act and bring them to justice together.",
+        "You said: I agree with Bob, let's work together to find out who is responsible for Diana's death and bring them to justice.",
+        "Charlie: I support our friends in this difficult time. Let's focus on finding out who is responsible for Diana's death and bring them to justice. However, I have reason to suspect Bob based on my...",
+        "Charlie: I echo the sentiments of my friends, we must find justice for Diana. However, I cannot shake off the unease I feel towards Bob. Let's keep an open communication and share any suspicious observations.",
+        "Bob: I'd like to express my deep sadness over Diana's passing and my commitment to working together with all of you to bring the perpetrator to justice. Let's keep open lines of communication.",
+        "You said: I share Charlie's concern and agree that we should keep open communication. Let's be vigilant and support each other in finding the truth."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding out who did this heinous act and bring them to justice together.",
+        "Alice: I agree with Bob, let's work together to find out who is responsible for Diana's death and bring them to justice.",
+        "Charlie: I support our friends in this difficult time. Let's focus on finding out who is responsible for Diana's death and bring them to justice. However, I have reason to suspect Bob based on my...",
+        "Charlie: I echo the sentiments of my friends, we must find justice for Diana. However, I cannot shake off the unease I feel towards Bob. Let's keep an open communication and share any suspicious observations.",
+        "You said: I'd like to express my deep sadness over Diana's passing and my commitment to working together with all of you to bring the perpetrator to justice. Let's keep open lines of communication.",
+        "Alice: I share Charlie's concern and agree that we should keep open communication. Let's be vigilant and support each other in finding the truth.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all try to support each other during this difficult time. Let's focus on finding out who did this heinous act and bring them to justice together.",
+        "Alice: I agree with Bob, let's work together to find out who is responsible for Diana's death and bring them to justice.",
+        "You said: I support our friends in this difficult time. Let's focus on finding out who is responsible for Diana's death and bring them to justice. However, I have reason to suspect Bob based on my...",
+        "You said: I echo the sentiments of my friends, we must find justice for Diana. However, I cannot shake off the unease I feel towards Bob. Let's keep an open communication and share any suspicious observations.",
+        "Bob: I'd like to express my deep sadness over Diana's passing and my commitment to working together with all of you to bring the perpetrator to justice. Let's keep open lines of communication.",
+        "Alice: I share Charlie's concern and agree that we should keep open communication. Let's be vigilant and support each other in finding the truth.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0516",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 516,
+  "timestamp": "2025-07-30T15:27:53.322174",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. Let's try to figure out what happened.\n\n(Note: This message is just an example and doesn't contain any crucial information. It's important to keep your...",
+        "Diana: I'm deeply saddened by Alice's passing. Let's work together to ensure justice is served and find out who among us is the mafioso.",
+        "You said: I'm shocked by Alice's death too. Let's stay vigilant and trust no one until we uncover the truth.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all remain vigilant and support Diana in her investigation.",
+        "Charlie: I agree with Diana, let's support her investigation and stay vigilant. Let's work together to uncover the truth behind Alice's death.",
+        "Diana: Let's not jump to conclusions. We should all cooperate in Diana's investigation to ensure we uncover the truth behind Alice's death. Stay vigilant and trust each other.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's try to figure out what happened.\n\n(Note: This message is just an example and doesn't contain any crucial information. It's important to keep your...",
+        "Diana: I'm deeply saddened by Alice's passing. Let's work together to ensure justice is served and find out who among us is the mafioso.",
+        "Bob: I'm shocked by Alice's death too. Let's stay vigilant and trust no one until we uncover the truth.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all remain vigilant and support Diana in her investigation.",
+        "You said: I agree with Diana, let's support her investigation and stay vigilant. Let's work together to uncover the truth behind Alice's death.",
+        "Diana: Let's not jump to conclusions. We should all cooperate in Diana's investigation to ensure we uncover the truth behind Alice's death. Stay vigilant and trust each other.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked about Alice's sudden death. Let's try to figure out what happened.\n\n(Note: This message is just an example and doesn't contain any crucial information. It's important to keep your...",
+        "You said: I'm deeply saddened by Alice's passing. Let's work together to ensure justice is served and find out who among us is the mafioso.",
+        "Bob: I'm shocked by Alice's death too. Let's stay vigilant and trust no one until we uncover the truth.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all remain vigilant and support Diana in her investigation.",
+        "Charlie: I agree with Diana, let's support her investigation and stay vigilant. Let's work together to uncover the truth behind Alice's death.",
+        "You said: Let's not jump to conclusions. We should all cooperate in Diana's investigation to ensure we uncover the truth behind Alice's death. Stay vigilant and trust each other."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

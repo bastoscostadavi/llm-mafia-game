@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0037",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 37,
+  "timestamp": "2025-07-30T16:19:37.359752",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's sudden death. Let's all take a moment to remember her. In honor of Alice, let's work together to find out who among us is responsible for this heinous act.",
+        "You said: I agree with Diana. Let's work together to find the culprit. My condolences to Alice's family.",
+        "Charlie: I share Diana's sentiment and agree we should find Alice's killer. Let's be vigilant and open to sharing information.",
+        "Diana: Let's not jump to conclusions. We should focus on gathering information and collaborate to uncover the truth behind Alice's death.",
+        "Charlie: Let's stay focused on gathering information to find Alice's killer. We can't let emotions cloud our judgment.",
+        "You said: Let's not forget that we need to gather information to find Alice's killer. Let's keep an open mind and work together. Our emotions should not cloud our judgment."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm deeply saddened by Alice's sudden death. Let's all take a moment to remember her. In honor of Alice, let's work together to find out who among us is responsible for this heinous act.",
+        "Bob: I agree with Diana. Let's work together to find the culprit. My condolences to Alice's family.",
+        "You said: I share Diana's sentiment and agree we should find Alice's killer. Let's be vigilant and open to sharing information.",
+        "Diana: Let's not jump to conclusions. We should focus on gathering information and collaborate to uncover the truth behind Alice's death.",
+        "You said: Let's stay focused on gathering information to find Alice's killer. We can't let emotions cloud our judgment.",
+        "Bob: Let's not forget that we need to gather information to find Alice's killer. Let's keep an open mind and work together. Our emotions should not cloud our judgment.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden death. Let's all take a moment to remember her. In honor of Alice, let's work together to find out who among us is responsible for this heinous act.",
+        "Bob: I agree with Diana. Let's work together to find the culprit. My condolences to Alice's family.",
+        "Charlie: I share Diana's sentiment and agree we should find Alice's killer. Let's be vigilant and open to sharing information.",
+        "You said: Let's not jump to conclusions. We should focus on gathering information and collaborate to uncover the truth behind Alice's death.",
+        "Charlie: Let's stay focused on gathering information to find Alice's killer. We can't let emotions cloud our judgment.",
+        "Bob: Let's not forget that we need to gather information to find Alice's killer. Let's keep an open mind and work together. Our emotions should not cloud our judgment.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

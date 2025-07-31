@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0290",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 290,
+  "timestamp": "2025-07-30T17:50:26.187875",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden passing. Let's all support Alice during this difficult time. We should focus on finding the real culprit behind this tragedy.",
+        "You said: I'm concerned about Diana's death and believe we should all cooperate to uncover the truth. Let's focus our discussion on potential clues and suspects.",
+        "Bob: Let's not jump to conclusions. We should discuss potential suspects and clues to ensure we find the real culprit.",
+        "Bob: Let's not overlook any potential clues. We should discuss all possibilities to ensure justice is served.",
+        "Charlie: Let's stay focused on finding the real culprit behind Diana's death. We should discuss all possibilities to ensure justice is served.",
+        "You said: Let's examine potential clues and suspects together to uncover the truth behind Diana's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden passing. Let's all support Alice during this difficult time. We should focus on finding the real culprit behind this tragedy.",
+        "Alice: I'm concerned about Diana's death and believe we should all cooperate to uncover the truth. Let's focus our discussion on potential clues and suspects.",
+        "You said: Let's not jump to conclusions. We should discuss potential suspects and clues to ensure we find the real culprit.",
+        "You said: Let's not overlook any potential clues. We should discuss all possibilities to ensure justice is served.",
+        "Charlie: Let's stay focused on finding the real culprit behind Diana's death. We should discuss all possibilities to ensure justice is served.",
+        "Alice: Let's examine potential clues and suspects together to uncover the truth behind Diana's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden passing. Let's all support Alice during this difficult time. We should focus on finding the real culprit behind this tragedy.",
+        "Alice: I'm concerned about Diana's death and believe we should all cooperate to uncover the truth. Let's focus our discussion on potential clues and suspects.",
+        "Bob: Let's not jump to conclusions. We should discuss potential suspects and clues to ensure we find the real culprit.",
+        "Bob: Let's not overlook any potential clues. We should discuss all possibilities to ensure justice is served.",
+        "You said: Let's stay focused on finding the real culprit behind Diana's death. We should discuss all possibilities to ensure justice is served.",
+        "Alice: Let's examine potential clues and suspects together to uncover the truth behind Diana's death.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

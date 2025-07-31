@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0440",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 440,
+  "timestamp": "2025-07-30T14:58:22.776033",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. We should all work together to find out who did this and bring them to justice. Let's not jump to conclusions.",
+        "Diana: I agree with Alice, let's work together to find out what happened to Charlie. I'll share any relevant information I have as a detective.",
+        "Bob: I'm saddened by Charlie's death. Let's trust the investigation process and support Diana as she works to uncover the truth.",
+        "Bob: I support Diana's investigation efforts and trust the process to uncover the truth about Charlie's death. Let's stay united and focused on finding answers. #Teamwork #JusticeForCharlie",
+        "Diana: Let's stay focused on finding out the truth about Charlie's death. I trust the investigation process and support Diana's efforts. #JusticeForCharlie",
+        "You said: I'd like to reiterate the importance of staying focused and working together to find the truth about Charlie's death. Let's trust the investigation process and support Diana's efforts. #Teamwork...",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. We should all work together to find out who did this and bring them to justice. Let's not jump to conclusions.",
+        "Diana: I agree with Alice, let's work together to find out what happened to Charlie. I'll share any relevant information I have as a detective.",
+        "You said: I'm saddened by Charlie's death. Let's trust the investigation process and support Diana as she works to uncover the truth.",
+        "You said: I support Diana's investigation efforts and trust the process to uncover the truth about Charlie's death. Let's stay united and focused on finding answers. #Teamwork #JusticeForCharlie",
+        "Diana: Let's stay focused on finding out the truth about Charlie's death. I trust the investigation process and support Diana's efforts. #JusticeForCharlie",
+        "Alice: I'd like to reiterate the importance of staying focused and working together to find the truth about Charlie's death. Let's trust the investigation process and support Diana's efforts. #Teamwork..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. We should all work together to find out who did this and bring them to justice. Let's not jump to conclusions.",
+        "You said: I agree with Alice, let's work together to find out what happened to Charlie. I'll share any relevant information I have as a detective.",
+        "Bob: I'm saddened by Charlie's death. Let's trust the investigation process and support Diana as she works to uncover the truth.",
+        "Bob: I support Diana's investigation efforts and trust the process to uncover the truth about Charlie's death. Let's stay united and focused on finding answers. #Teamwork #JusticeForCharlie",
+        "You said: Let's stay focused on finding out the truth about Charlie's death. I trust the investigation process and support Diana's efforts. #JusticeForCharlie",
+        "Alice: I'd like to reiterate the importance of staying focused and working together to find the truth about Charlie's death. Let's trust the investigation process and support Diana's efforts. #Teamwork...",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

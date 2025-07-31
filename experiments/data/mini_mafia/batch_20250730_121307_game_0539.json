@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0539",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 539,
+  "timestamp": "2025-07-30T15:36:15.996313",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all work together to find out who did this.",
+        "Diana: I'm deeply saddened by Charlie's death. Let's try to stay focused and share any relevant information we have. Alice, I find it strange that you're so shocked. Were you close to Charlie?",
+        "Bob: I'm equally shocked by Charlie's sudden demise. Let's not jump to conclusions and give the investigation enough time.",
+        "You said: I'm truly devastated by Charlie's passing. Let's unite to ensure justice is served and the perpetrator is brought to light.",
+        "Diana: I'm concerned about Alice's unusual reaction to Charlie's death. Let's keep an eye on her actions and words.",
+        "Bob: I share Diana's concerns about Alice's reaction. Let's keep a close eye on her actions and words during the investigation. We must ensure justice is served for Charlie."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's all work together to find out who did this.",
+        "Diana: I'm deeply saddened by Charlie's death. Let's try to stay focused and share any relevant information we have. Alice, I find it strange that you're so shocked. Were you close to Charlie?",
+        "You said: I'm equally shocked by Charlie's sudden demise. Let's not jump to conclusions and give the investigation enough time.",
+        "Alice: I'm truly devastated by Charlie's passing. Let's unite to ensure justice is served and the perpetrator is brought to light.",
+        "Diana: I'm concerned about Alice's unusual reaction to Charlie's death. Let's keep an eye on her actions and words.",
+        "You said: I share Diana's concerns about Alice's reaction. Let's keep a close eye on her actions and words during the investigation. We must ensure justice is served for Charlie.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's all work together to find out who did this.",
+        "You said: I'm deeply saddened by Charlie's death. Let's try to stay focused and share any relevant information we have. Alice, I find it strange that you're so shocked. Were you close to Charlie?",
+        "Bob: I'm equally shocked by Charlie's sudden demise. Let's not jump to conclusions and give the investigation enough time.",
+        "Alice: I'm truly devastated by Charlie's passing. Let's unite to ensure justice is served and the perpetrator is brought to light.",
+        "You said: I'm concerned about Alice's unusual reaction to Charlie's death. Let's keep an eye on her actions and words.",
+        "Bob: I share Diana's concerns about Alice's reaction. Let's keep a close eye on her actions and words during the investigation. We must ensure justice is served for Charlie.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

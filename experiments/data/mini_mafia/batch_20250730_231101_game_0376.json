@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0376",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 376,
+  "timestamp": "2025-07-31T01:13:31.201032",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden passing. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Diana. Let's all support each other during this sad time. (Keep a low profile to not arouse suspicion)",
+        "You said: I'd like to propose that we keep a close eye on Charlie during this difficult time. It's important we ensure justice prevails and Alice's death is not in vain.",
+        "Diana: Let's not jump to conclusions. We should continue supporting each other during this tough time and trust the investigation process.",
+        "You said: Let's not forget Alice's sudden demise and stay vigilant. We should trust the investigation process and ensure justice prevails.",
+        "Charlie: I'd like to echo Diana's words, let's continue supporting each other during this difficult time. Let's trust the investigation process and remember Alice's legacy.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden passing. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Diana. Let's all support each other during this sad time. (Keep a low profile to not arouse suspicion)",
+        "Bob: I'd like to propose that we keep a close eye on Charlie during this difficult time. It's important we ensure justice prevails and Alice's death is not in vain.",
+        "Diana: Let's not jump to conclusions. We should continue supporting each other during this tough time and trust the investigation process.",
+        "Bob: Let's not forget Alice's sudden demise and stay vigilant. We should trust the investigation process and ensure justice prevails.",
+        "You said: I'd like to echo Diana's words, let's continue supporting each other during this difficult time. Let's trust the investigation process and remember Alice's legacy."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden passing. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree with Diana. Let's all support each other during this sad time. (Keep a low profile to not arouse suspicion)",
+        "Bob: I'd like to propose that we keep a close eye on Charlie during this difficult time. It's important we ensure justice prevails and Alice's death is not in vain.",
+        "You said: Let's not jump to conclusions. We should continue supporting each other during this tough time and trust the investigation process.",
+        "Bob: Let's not forget Alice's sudden demise and stay vigilant. We should trust the investigation process and ensure justice prevails.",
+        "Charlie: I'd like to echo Diana's words, let's continue supporting each other during this difficult time. Let's trust the investigation process and remember Alice's legacy.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

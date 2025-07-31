@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0036",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 36,
+  "timestamp": "2025-07-30T16:19:16.337729",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's untimely demise. Let's all take a moment to remember her fondly. Let the investigation proceed unhindered. #forDiana #restinpeace",
+        "Charlie: I agree with Alice, let's support each other during this difficult time. Let's also stay focused on finding the truth about who is responsible for Diana's death. #forDiana #justiceforDiana",
+        "Bob: Let us not let our emotions cloud our judgment. We must remain focused on finding the truth behind Diana's death. #justiceforDiana #stayfocused",
+        "Charlie: Let us remain united in our search for the truth. Any information that could help us find Diana's killer is valuable. #justiceforDiana #togetherwecanfindthetruth",
+        "You said: Let's not jump to conclusions. We should allow the investigation to continue thoroughly before making any rash decisions. #justiceforDiana #staycalm",
+        "Bob: Let us not forget that finding the truth is our top priority. Let's continue the investigation with clear minds and open communication. #justiceforDiana #stayfocused"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm deeply saddened by Diana's untimely demise. Let's all take a moment to remember her fondly. Let the investigation proceed unhindered. #forDiana #restinpeace",
+        "Charlie: I agree with Alice, let's support each other during this difficult time. Let's also stay focused on finding the truth about who is responsible for Diana's death. #forDiana #justiceforDiana",
+        "You said: Let us not let our emotions cloud our judgment. We must remain focused on finding the truth behind Diana's death. #justiceforDiana #stayfocused",
+        "Charlie: Let us remain united in our search for the truth. Any information that could help us find Diana's killer is valuable. #justiceforDiana #togetherwecanfindthetruth",
+        "Alice: Let's not jump to conclusions. We should allow the investigation to continue thoroughly before making any rash decisions. #justiceforDiana #staycalm",
+        "You said: Let us not forget that finding the truth is our top priority. Let's continue the investigation with clear minds and open communication. #justiceforDiana #stayfocused",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm deeply saddened by Diana's untimely demise. Let's all take a moment to remember her fondly. Let the investigation proceed unhindered. #forDiana #restinpeace",
+        "You said: I agree with Alice, let's support each other during this difficult time. Let's also stay focused on finding the truth about who is responsible for Diana's death. #forDiana #justiceforDiana",
+        "Bob: Let us not let our emotions cloud our judgment. We must remain focused on finding the truth behind Diana's death. #justiceforDiana #stayfocused",
+        "You said: Let us remain united in our search for the truth. Any information that could help us find Diana's killer is valuable. #justiceforDiana #togetherwecanfindthetruth",
+        "Alice: Let's not jump to conclusions. We should allow the investigation to continue thoroughly before making any rash decisions. #justiceforDiana #staycalm",
+        "Bob: Let us not forget that finding the truth is our top priority. Let's continue the investigation with clear minds and open communication. #justiceforDiana #stayfocused",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0120",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 120,
+  "timestamp": "2025-07-30T16:49:17.390198",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance last night. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Diana, let's be vigilant tonight.",
+        "You said: I agree with Diana and Charlie, let's all stay alert tonight. It's important we keep our guard up to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions, but we should remain vigilant as a precaution.",
+        "You said: Let's not forget that we need to trust each other to ensure everyone's safety. We shouldn't jump to conclusions based on recent events. Let's continue working together as a team.",
+        "Diana: Let's all remember to stay vigilant tonight, given the recent events. Trust but verify."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm concerned about Alice's sudden disappearance last night. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Diana, let's be vigilant tonight.",
+        "Bob: I agree with Diana and Charlie, let's all stay alert tonight. It's important we keep our guard up to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant as a precaution.",
+        "Bob: Let's not forget that we need to trust each other to ensure everyone's safety. We shouldn't jump to conclusions based on recent events. Let's continue working together as a team.",
+        "Diana: Let's all remember to stay vigilant tonight, given the recent events. Trust but verify.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance last night. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Diana, let's be vigilant tonight.",
+        "Bob: I agree with Diana and Charlie, let's all stay alert tonight. It's important we keep our guard up to ensure everyone's safety.",
+        "Charlie: Let's not jump to conclusions, but we should remain vigilant as a precaution.",
+        "Bob: Let's not forget that we need to trust each other to ensure everyone's safety. We shouldn't jump to conclusions based on recent events. Let's continue working together as a team.",
+        "You said: Let's all remember to stay vigilant tonight, given the recent events. Trust but verify.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

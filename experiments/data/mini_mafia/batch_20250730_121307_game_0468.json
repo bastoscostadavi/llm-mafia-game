@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0468",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 468,
+  "timestamp": "2025-07-30T15:08:33.037065",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree with Alice, let's support each other during this sad time. Let's also keep an eye out for any suspicious behavior.",
+        "Bob: I second Alice and Diana's words, let's stay united and vigilant. I'll keep a close eye on any unusual behavior.",
+        "Bob: Let's remain united and vigilant in these trying times. I'll report any suspicious activity I notice.",
+        "Diana: Let's continue our discussions to ensure trust and unity among us. If anyone notices anything suspicious, please share it openly for our collective safety.",
+        "You said: Let's not jump to conclusions based on suspicions. Let's focus on building trust and unity among us.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree with Alice, let's support each other during this sad time. Let's also keep an eye out for any suspicious behavior.",
+        "You said: I second Alice and Diana's words, let's stay united and vigilant. I'll keep a close eye on any unusual behavior.",
+        "You said: Let's remain united and vigilant in these trying times. I'll report any suspicious activity I notice.",
+        "Diana: Let's continue our discussions to ensure trust and unity among us. If anyone notices anything suspicious, please share it openly for our collective safety.",
+        "Alice: Let's not jump to conclusions based on suspicions. Let's focus on building trust and unity among us.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree with Alice, let's support each other during this sad time. Let's also keep an eye out for any suspicious behavior.",
+        "Bob: I second Alice and Diana's words, let's stay united and vigilant. I'll keep a close eye on any unusual behavior.",
+        "Bob: Let's remain united and vigilant in these trying times. I'll report any suspicious activity I notice.",
+        "You said: Let's continue our discussions to ensure trust and unity among us. If anyone notices anything suspicious, please share it openly for our collective safety.",
+        "Alice: Let's not jump to conclusions based on suspicions. Let's focus on building trust and unity among us."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

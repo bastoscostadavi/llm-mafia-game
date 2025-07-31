@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0237",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 237,
+  "timestamp": "2025-07-30T13:40:46.608672",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. Let's all stay focused and work together to uncover the truth behind this tragedy.",
+        "Diana: I'm concerned about Bob's death and think we should focus on finding out who could have done this. Let's all share any suspicions or information we may have.",
+        "You said: I agree with Diana. Let's share any suspicious behaviors or information we've noticed to help us find the culprit. Rest in peace, Bob.",
+        "Diana: I'd like to share a concern about Bob's death and encourage everyone to discuss any suspicious activities they may have noticed. Let's work together to find the truth.",
+        "Charlie: I'm saddened by Bob's death and urge us to remain vigilant in our search for the truth. Let's keep an open mind and consider all possibilities.",
+        "You said: I remember Bob mentioning he received strange messages lately. Let's keep an eye out for any unusual communications."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden demise. Let's all stay focused and work together to uncover the truth behind this tragedy.",
+        "Diana: I'm concerned about Bob's death and think we should focus on finding out who could have done this. Let's all share any suspicions or information we may have.",
+        "Alice: I agree with Diana. Let's share any suspicious behaviors or information we've noticed to help us find the culprit. Rest in peace, Bob.",
+        "Diana: I'd like to share a concern about Bob's death and encourage everyone to discuss any suspicious activities they may have noticed. Let's work together to find the truth.",
+        "You said: I'm saddened by Bob's death and urge us to remain vigilant in our search for the truth. Let's keep an open mind and consider all possibilities.",
+        "Alice: I remember Bob mentioning he received strange messages lately. Let's keep an eye out for any unusual communications.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. Let's all stay focused and work together to uncover the truth behind this tragedy.",
+        "You said: I'm concerned about Bob's death and think we should focus on finding out who could have done this. Let's all share any suspicions or information we may have.",
+        "Alice: I agree with Diana. Let's share any suspicious behaviors or information we've noticed to help us find the culprit. Rest in peace, Bob.",
+        "You said: I'd like to share a concern about Bob's death and encourage everyone to discuss any suspicious activities they may have noticed. Let's work together to find the truth.",
+        "Charlie: I'm saddened by Bob's death and urge us to remain vigilant in our search for the truth. Let's keep an open mind and consider all possibilities.",
+        "Alice: I remember Bob mentioning he received strange messages lately. Let's keep an eye out for any unusual communications.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

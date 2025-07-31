@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0063",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 63,
+  "timestamp": "2025-07-30T23:31:37.605358",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other during this critical phase of the game.",
+        "Charlie: I agree with Alice. Let's stay vigilant and support each other during this crucial phase.",
+        "Bob: I'm surprised by Diana's sudden disappearance. Let's all remain vigilant during this crucial phase of the game.",
+        "Charlie: I'd like to echo everyone's sentiments about staying vigilant during this crucial phase. Let's work together to ensure the safety of our group.",
+        "Bob: Let's not jump to conclusions about Diana. We should focus on maintaining trust within our group and working together for our common goal.",
+        "You said: Let's not forget the importance of trust and unity in our group. Let's continue to support each other and stay vigilant during this critical phase.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other during this critical phase of the game.",
+        "Charlie: I agree with Alice. Let's stay vigilant and support each other during this crucial phase.",
+        "You said: I'm surprised by Diana's sudden disappearance. Let's all remain vigilant during this crucial phase of the game.",
+        "Charlie: I'd like to echo everyone's sentiments about staying vigilant during this crucial phase. Let's work together to ensure the safety of our group.",
+        "You said: Let's not jump to conclusions about Diana. We should focus on maintaining trust within our group and working together for our common goal.",
+        "Alice: Let's not forget the importance of trust and unity in our group. Let's continue to support each other and stay vigilant during this critical phase.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other during this critical phase of the game.",
+        "You said: I agree with Alice. Let's stay vigilant and support each other during this crucial phase.",
+        "Bob: I'm surprised by Diana's sudden disappearance. Let's all remain vigilant during this crucial phase of the game.",
+        "You said: I'd like to echo everyone's sentiments about staying vigilant during this crucial phase. Let's work together to ensure the safety of our group.",
+        "Bob: Let's not jump to conclusions about Diana. We should focus on maintaining trust within our group and working together for our common goal.",
+        "Alice: Let's not forget the importance of trust and unity in our group. Let's continue to support each other and stay vigilant during this critical phase."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

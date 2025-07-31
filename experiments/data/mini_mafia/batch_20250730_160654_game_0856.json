@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0856",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 856,
+  "timestamp": "2025-07-30T21:12:12.006294",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden departure. Let's all support Diana in her investigation. We should stay focused and not jump to conclusions.",
+        "You said: I agree with Bob, let's support Diana in her investigation and keep an open mind. Let's not jump to conclusions based on this unfortunate event.",
+        "Diana: Let's not jump to conclusions based on Charlie's death. We should support Diana's investigation and trust the process.",
+        "Bob: Let's continue to support Diana in her investigation and trust the process. We'll find the truth together.",
+        "Diana: Let's continue to support Diana's investigation and trust the process. We'll find the truth together.",
+        "You said: Let's continue to support Diana's investigation and trust the process. We'll find the truth together.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden departure. Let's all support Diana in her investigation. We should stay focused and not jump to conclusions.",
+        "Alice: I agree with Bob, let's support Diana in her investigation and keep an open mind. Let's not jump to conclusions based on this unfortunate event.",
+        "Diana: Let's not jump to conclusions based on Charlie's death. We should support Diana's investigation and trust the process.",
+        "You said: Let's continue to support Diana in her investigation and trust the process. We'll find the truth together.",
+        "Diana: Let's continue to support Diana's investigation and trust the process. We'll find the truth together.",
+        "Alice: Let's continue to support Diana's investigation and trust the process. We'll find the truth together."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden departure. Let's all support Diana in her investigation. We should stay focused and not jump to conclusions.",
+        "Alice: I agree with Bob, let's support Diana in her investigation and keep an open mind. Let's not jump to conclusions based on this unfortunate event.",
+        "You said: Let's not jump to conclusions based on Charlie's death. We should support Diana's investigation and trust the process.",
+        "Bob: Let's continue to support Diana in her investigation and trust the process. We'll find the truth together.",
+        "You said: Let's continue to support Diana's investigation and trust the process. We'll find the truth together.",
+        "Alice: Let's continue to support Diana's investigation and trust the process. We'll find the truth together.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

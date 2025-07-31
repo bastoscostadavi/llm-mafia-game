@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0026",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 26,
+  "timestamp": "2025-07-30T12:21:52.208178",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's work together to find out what happened and ensure everyone's safety. Bob, your statement is suspicious.",
+        "Diana: I agree with Charlie, let's remain vigilant and keep an open communication to ensure everyone's safety. Bob, your statement did raise some concerns, could you please clarify?",
+        "Diana: Let's not jump to conclusions, we need to stay united and trust each other during this investigation. Bob, your statement earlier made me a bit uneasy, could you please explain?",
+        "Charlie: I'd like to echo Diana's words about staying united and trusting each other during this investigation. Let's work together to uncover the truth behind Alice's death. Bob, could you please clarify...",
+        "You said: I'd like to add my condolences to Alice's passing and echo the importance of staying united and trusting each other during this investigation. I have no involvement in her death and am committed to..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm deeply saddened by Alice's passing. Let's work together to find out what happened and ensure everyone's safety. Bob, your statement is suspicious.",
+        "Diana: I agree with Charlie, let's remain vigilant and keep an open communication to ensure everyone's safety. Bob, your statement did raise some concerns, could you please clarify?",
+        "Diana: Let's not jump to conclusions, we need to stay united and trust each other during this investigation. Bob, your statement earlier made me a bit uneasy, could you please explain?",
+        "You said: I'd like to echo Diana's words about staying united and trusting each other during this investigation. Let's work together to uncover the truth behind Alice's death. Bob, could you please clarify...",
+        "Bob: I'd like to add my condolences to Alice's passing and echo the importance of staying united and trusting each other during this investigation. I have no involvement in her death and am committed to...",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's work together to find out what happened and ensure everyone's safety. Bob, your statement is suspicious.",
+        "You said: I agree with Charlie, let's remain vigilant and keep an open communication to ensure everyone's safety. Bob, your statement did raise some concerns, could you please clarify?",
+        "You said: Let's not jump to conclusions, we need to stay united and trust each other during this investigation. Bob, your statement earlier made me a bit uneasy, could you please explain?",
+        "Charlie: I'd like to echo Diana's words about staying united and trusting each other during this investigation. Let's work together to uncover the truth behind Alice's death. Bob, could you please clarify...",
+        "Bob: I'd like to add my condolences to Alice's passing and echo the importance of staying united and trusting each other during this investigation. I have no involvement in her death and am committed to...",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0422",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 422,
+  "timestamp": "2025-07-31T01:28:25.754526",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all be vigilant and try to figure out what happened.",
+        "You said: I agree with Bob, let's stay vigilant and investigate thoroughly. I'm particularly concerned about Charlie's whereabouts last night.",
+        "Charlie: I share the concern for Diana's death and agree we should remain vigilant. Let's not jump to conclusions and focus on gathering information to ensure everyone's safety.",
+        "Charlie: Let's not make hasty assumptions. We need to stay focused on gathering information to ensure everyone's safety.",
+        "Bob: Let's not forget, we need to focus on gathering information to ensure everyone's safety. We should remain vigilant and work together to uncover the truth behind Diana's death.",
+        "You said: Let's not overlook the fact that Charlie was the last one with Diana before her death. We should explore this lead further.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all be vigilant and try to figure out what happened.",
+        "Alice: I agree with Bob, let's stay vigilant and investigate thoroughly. I'm particularly concerned about Charlie's whereabouts last night.",
+        "Charlie: I share the concern for Diana's death and agree we should remain vigilant. Let's not jump to conclusions and focus on gathering information to ensure everyone's safety.",
+        "Charlie: Let's not make hasty assumptions. We need to stay focused on gathering information to ensure everyone's safety.",
+        "You said: Let's not forget, we need to focus on gathering information to ensure everyone's safety. We should remain vigilant and work together to uncover the truth behind Diana's death.",
+        "Alice: Let's not overlook the fact that Charlie was the last one with Diana before her death. We should explore this lead further.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's all be vigilant and try to figure out what happened.",
+        "Alice: I agree with Bob, let's stay vigilant and investigate thoroughly. I'm particularly concerned about Charlie's whereabouts last night.",
+        "You said: I share the concern for Diana's death and agree we should remain vigilant. Let's not jump to conclusions and focus on gathering information to ensure everyone's safety.",
+        "You said: Let's not make hasty assumptions. We need to stay focused on gathering information to ensure everyone's safety.",
+        "Bob: Let's not forget, we need to focus on gathering information to ensure everyone's safety. We should remain vigilant and work together to uncover the truth behind Diana's death.",
+        "Alice: Let's not overlook the fact that Charlie was the last one with Diana before her death. We should explore this lead further."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

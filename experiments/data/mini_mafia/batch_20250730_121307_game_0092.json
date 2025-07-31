@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0092",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 92,
+  "timestamp": "2025-07-30T12:45:55.875512",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Charlie's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Bob: I agree with Alice, let's work together to uncover the truth behind Charlie's death. Our solidarity is key to ensuring everyone's safety.",
+        "Diana: I'm deeply saddened by Charlie's death. Let's all stay focused and united in our search for the truth.",
+        "Bob: I suggest we focus on the clues and remain vigilant. Diana's reaction seems unusual to me. Let's keep an open mind.",
+        "You said: Let's not jump to conclusions. We should carefully consider all information before making decisions. I believe in our ability to work together and uncover the truth.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked about Charlie's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Charlie's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "You said: I agree with Alice, let's work together to uncover the truth behind Charlie's death. Our solidarity is key to ensuring everyone's safety.",
+        "Diana: I'm deeply saddened by Charlie's death. Let's all stay focused and united in our search for the truth.",
+        "You said: I suggest we focus on the clues and remain vigilant. Diana's reaction seems unusual to me. Let's keep an open mind.",
+        "Alice: Let's not jump to conclusions. We should carefully consider all information before making decisions. I believe in our ability to work together and uncover the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all remain vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Charlie's passing. Let's work together to find out what happened and ensure everyone's safety.",
+        "Bob: I agree with Alice, let's work together to uncover the truth behind Charlie's death. Our solidarity is key to ensuring everyone's safety.",
+        "You said: I'm deeply saddened by Charlie's death. Let's all stay focused and united in our search for the truth.",
+        "Bob: I suggest we focus on the clues and remain vigilant. Diana's reaction seems unusual to me. Let's keep an open mind.",
+        "Alice: Let's not jump to conclusions. We should carefully consider all information before making decisions. I believe in our ability to work together and uncover the truth.",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

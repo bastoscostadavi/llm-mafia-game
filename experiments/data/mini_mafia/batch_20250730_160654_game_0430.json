@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0430",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 430,
+  "timestamp": "2025-07-30T18:45:52.402611",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's unite to find the truth behind this tragedy. #JusticeForAlice",
+        "You said: I'm saddened by Alice's death. Let's work together to ensure justice is served and the truth is revealed. #JusticeForAlice #StayVigilant",
+        "Diana: I agree, let's work together to uncover the truth behind Alice's death. #JusticeForAlice #StayVigilant",
+        "Charlie: I'd like to propose that we all share any suspicious activities or unusual occurrences we've noticed since the last discussion. Let's work together to ensure Alice's death isn't in vain. #Vigilance...",
+        "You said: I've noticed some unusual patterns in Charlie's behavior since the last discussion. Let's keep a close eye on him. #StayVigilant",
+        "Diana: I support Charlie's proposal and share Bob's concern about unusual behavior. Let's remain vigilant and work together to uncover the truth. #JusticeForAlice #StayVigilant"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's unite to find the truth behind this tragedy. #JusticeForAlice",
+        "Bob: I'm saddened by Alice's death. Let's work together to ensure justice is served and the truth is revealed. #JusticeForAlice #StayVigilant",
+        "Diana: I agree, let's work together to uncover the truth behind Alice's death. #JusticeForAlice #StayVigilant",
+        "You said: I'd like to propose that we all share any suspicious activities or unusual occurrences we've noticed since the last discussion. Let's work together to ensure Alice's death isn't in vain. #Vigilance...",
+        "Bob: I've noticed some unusual patterns in Charlie's behavior since the last discussion. Let's keep a close eye on him. #StayVigilant",
+        "Diana: I support Charlie's proposal and share Bob's concern about unusual behavior. Let's remain vigilant and work together to uncover the truth. #JusticeForAlice #StayVigilant",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's unite to find the truth behind this tragedy. #JusticeForAlice",
+        "Bob: I'm saddened by Alice's death. Let's work together to ensure justice is served and the truth is revealed. #JusticeForAlice #StayVigilant",
+        "You said: I agree, let's work together to uncover the truth behind Alice's death. #JusticeForAlice #StayVigilant",
+        "Charlie: I'd like to propose that we all share any suspicious activities or unusual occurrences we've noticed since the last discussion. Let's work together to ensure Alice's death isn't in vain. #Vigilance...",
+        "Bob: I've noticed some unusual patterns in Charlie's behavior since the last discussion. Let's keep a close eye on him. #StayVigilant",
+        "You said: I support Charlie's proposal and share Bob's concern about unusual behavior. Let's remain vigilant and work together to uncover the truth. #JusticeForAlice #StayVigilant",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

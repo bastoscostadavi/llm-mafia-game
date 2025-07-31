@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0988",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 988,
+  "timestamp": "2025-07-31T04:31:24.737901",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm saddened by Diana's untimely demise. Let's work together to uncover the truth and ensure justice is served.",
+        "Bob: I share Alice's sentiments. Let's stay focused on finding the truth behind Diana's death.",
+        "Charlie: Let's not jump to conclusions. We need solid evidence to uncover the truth behind Diana's death. Let's work together to gather information during this discussion phase.",
+        "Charlie: Let's share any relevant information we have about Diana's death. We need to stay focused on uncovering the truth.",
+        "Bob: Let's not forget that we need to identify the culprit behind Diana's death. We should all share any suspicious observations or interactions we had with Diana during the game.",
+        "You said: I agree with Charlie and Bob, let's focus on gathering information and identifying any suspicious activities related to Diana's death. Let's work together to uncover the truth.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Bob, Alice voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm saddened by Diana's untimely demise. Let's work together to uncover the truth and ensure justice is served.",
+        "You said: I share Alice's sentiments. Let's stay focused on finding the truth behind Diana's death.",
+        "Charlie: Let's not jump to conclusions. We need solid evidence to uncover the truth behind Diana's death. Let's work together to gather information during this discussion phase.",
+        "Charlie: Let's share any relevant information we have about Diana's death. We need to stay focused on uncovering the truth.",
+        "You said: Let's not forget that we need to identify the culprit behind Diana's death. We should all share any suspicious observations or interactions we had with Diana during the game.",
+        "Alice: I agree with Charlie and Bob, let's focus on gathering information and identifying any suspicious activities related to Diana's death. Let's work together to uncover the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm saddened by Diana's untimely demise. Let's work together to uncover the truth and ensure justice is served.",
+        "Bob: I share Alice's sentiments. Let's stay focused on finding the truth behind Diana's death.",
+        "You said: Let's not jump to conclusions. We need solid evidence to uncover the truth behind Diana's death. Let's work together to gather information during this discussion phase.",
+        "You said: Let's share any relevant information we have about Diana's death. We need to stay focused on uncovering the truth.",
+        "Bob: Let's not forget that we need to identify the culprit behind Diana's death. We should all share any suspicious observations or interactions we had with Diana during the game.",
+        "Alice: I agree with Charlie and Bob, let's focus on gathering information and identifying any suspicious activities related to Diana's death. Let's work together to uncover the truth.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Bob, Alice voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

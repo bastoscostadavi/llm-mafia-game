@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0343",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 343,
+  "timestamp": "2025-07-30T18:09:14.309589",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I'm saddened by Alice's passing. Let's work together to find out what happened and bring justice. Bob, could you share any details about Alice's last moments?",
+        "You said: I'm deeply saddened by Alice's passing. Let's all work together to support each other during this difficult time. I have no information about her last moments.",
+        "Charlie: I'd like to suggest we focus on finding out who killed Alice and bring them to justice. Let's all share any information we have.",
+        "Diana: Let's remain focused on finding Alice's killer. I have reason to suspect Bob's involvement. Let's discuss further.",
+        "You said: I agree with Charlie, let's focus on finding Alice's killer. I have no information to share at this moment.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I'm saddened by Alice's passing. Let's work together to find out what happened and bring justice. Bob, could you share any details about Alice's last moments?",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all work together to support each other during this difficult time. I have no information about her last moments.",
+        "You said: I'd like to suggest we focus on finding out who killed Alice and bring them to justice. Let's all share any information we have.",
+        "Diana: Let's remain focused on finding Alice's killer. I have reason to suspect Bob's involvement. Let's discuss further.",
+        "Bob: I agree with Charlie, let's focus on finding Alice's killer. I have no information to share at this moment.",
+        "Day 1: Diana was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Alice's passing. Let's work together to find out what happened and bring justice. Bob, could you share any details about Alice's last moments?",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all work together to support each other during this difficult time. I have no information about her last moments.",
+        "Charlie: I'd like to suggest we focus on finding out who killed Alice and bring them to justice. Let's all share any information we have.",
+        "You said: Let's remain focused on finding Alice's killer. I have reason to suspect Bob's involvement. Let's discuss further.",
+        "Bob: I agree with Charlie, let's focus on finding Alice's killer. I have no information to share at this moment."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

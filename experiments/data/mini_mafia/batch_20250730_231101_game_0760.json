@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0760",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 760,
+  "timestamp": "2025-07-31T03:17:54.436087",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all come together to find out who did this heinous deed. We need closure for her family and friends. #JusticeForAlice. #PeacefulGame. #UnitedFront....",
+        "Charlie: I agree with Bob, let's work together to find out who is responsible for Alice's death. #JusticeForAlice #PeacefulGame #UnitedFront",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any accusations. #PatienceIsKey #GatherInfo #PeacefulGame.",
+        "Charlie: Let's not forget that we're here to uncover the truth together. We should all share any relevant information we have to help in the investigation. #TransparencyIsKey #GatherInfo #PeacefulGame",
+        "Diana: Let's stay focused on gathering information to bring the truth to light. We must remain calm and composed during this investigation. #InvestigationFirst #StayCalm #PeacefulGame",
+        "You said: Let's not forget that the truth often reveals itself during the investigation. Let's stay focused and keep an open mind. #TruthWillOut #GatherInfo #PeacefulGame"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all come together to find out who did this heinous deed. We need closure for her family and friends. #JusticeForAlice. #PeacefulGame. #UnitedFront....",
+        "You said: I agree with Bob, let's work together to find out who is responsible for Alice's death. #JusticeForAlice #PeacefulGame #UnitedFront",
+        "Diana: Let's not jump to conclusions. We need to gather more information before making any accusations. #PatienceIsKey #GatherInfo #PeacefulGame.",
+        "You said: Let's not forget that we're here to uncover the truth together. We should all share any relevant information we have to help in the investigation. #TransparencyIsKey #GatherInfo #PeacefulGame",
+        "Diana: Let's stay focused on gathering information to bring the truth to light. We must remain calm and composed during this investigation. #InvestigationFirst #StayCalm #PeacefulGame",
+        "Bob: Let's not forget that the truth often reveals itself during the investigation. Let's stay focused and keep an open mind. #TruthWillOut #GatherInfo #PeacefulGame",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's all come together to find out who did this heinous deed. We need closure for her family and friends. #JusticeForAlice. #PeacefulGame. #UnitedFront....",
+        "Charlie: I agree with Bob, let's work together to find out who is responsible for Alice's death. #JusticeForAlice #PeacefulGame #UnitedFront",
+        "You said: Let's not jump to conclusions. We need to gather more information before making any accusations. #PatienceIsKey #GatherInfo #PeacefulGame.",
+        "Charlie: Let's not forget that we're here to uncover the truth together. We should all share any relevant information we have to help in the investigation. #TransparencyIsKey #GatherInfo #PeacefulGame",
+        "You said: Let's stay focused on gathering information to bring the truth to light. We must remain calm and composed during this investigation. #InvestigationFirst #StayCalm #PeacefulGame",
+        "Bob: Let's not forget that the truth often reveals itself during the investigation. Let's stay focused and keep an open mind. #TruthWillOut #GatherInfo #PeacefulGame",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

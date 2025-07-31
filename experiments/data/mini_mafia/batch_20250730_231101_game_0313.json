@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0313",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 313,
+  "timestamp": "2025-07-31T00:53:03.897438",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree, let's all stay vigilant and support each other during this difficult time. However, we should also remember that Alice's death is a reminder of the importance of identifying the mafia in...",
+        "Charlie: I also agree with staying vigilant and supporting each other. Let's work together to find out what happened to Alice.",
+        "You said: Let's not jump to conclusions based on Alice's death. We should focus on working together to ensure everyone's safety.",
+        "Diana: Let us not forget the importance of identifying the mafia in our midst following Alice's tragic death. We must stay vigilant and work together to ensure everyone's safety.",
+        "Charlie: Let's not overlook the significance of Alice's death. We need to work together to uncover the truth and ensure the safety of our group.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Diana: I agree, let's all stay vigilant and support each other during this difficult time. However, we should also remember that Alice's death is a reminder of the importance of identifying the mafia in...",
+        "You said: I also agree with staying vigilant and supporting each other. Let's work together to find out what happened to Alice.",
+        "Bob: Let's not jump to conclusions based on Alice's death. We should focus on working together to ensure everyone's safety.",
+        "Diana: Let us not forget the importance of identifying the mafia in our midst following Alice's tragic death. We must stay vigilant and work together to ensure everyone's safety.",
+        "You said: Let's not overlook the significance of Alice's death. We need to work together to uncover the truth and ensure the safety of our group."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all stay vigilant and support each other during this difficult time. However, we should also remember that Alice's death is a reminder of the importance of identifying the mafia in...",
+        "Charlie: I also agree with staying vigilant and supporting each other. Let's work together to find out what happened to Alice.",
+        "Bob: Let's not jump to conclusions based on Alice's death. We should focus on working together to ensure everyone's safety.",
+        "You said: Let us not forget the importance of identifying the mafia in our midst following Alice's tragic death. We must stay vigilant and work together to ensure everyone's safety.",
+        "Charlie: Let's not overlook the significance of Alice's death. We need to work together to uncover the truth and ensure the safety of our group.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

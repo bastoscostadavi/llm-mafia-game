@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0812",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 812,
+  "timestamp": "2025-07-30T20:57:47.367936",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Charlie's passing. Let's all stay focused and work together to find out what happened.",
+        "Diana: I agree with Bob and Alice, let's support each other and stay focused on finding out what happened to Charlie.",
+        "Bob: Let's not jump to conclusions. We need to remain calm and focused on finding out what happened to Charlie. We can't let our emotions cloud our judgement.",
+        "You said: Let's not forget that we need to stay focused on finding out who killed Charlie. We should all share any relevant information we have. Let's work together to bring justice for Charlie.",
+        "Diana: I have a theory about Charlie's death. Let's consider the last place he was seen before his death and any unusual activities that night. We might find a lead."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Charlie's passing. Let's all stay focused and work together to find out what happened.",
+        "Diana: I agree with Bob and Alice, let's support each other and stay focused on finding out what happened to Charlie.",
+        "You said: Let's not jump to conclusions. We need to remain calm and focused on finding out what happened to Charlie. We can't let our emotions cloud our judgement.",
+        "Alice: Let's not forget that we need to stay focused on finding out who killed Charlie. We should all share any relevant information we have. Let's work together to bring justice for Charlie.",
+        "Diana: I have a theory about Charlie's death. Let's consider the last place he was seen before his death and any unusual activities that night. We might find a lead.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Alice: I'm saddened by Charlie's passing. Let's all stay focused and work together to find out what happened.",
+        "You said: I agree with Bob and Alice, let's support each other and stay focused on finding out what happened to Charlie.",
+        "Bob: Let's not jump to conclusions. We need to remain calm and focused on finding out what happened to Charlie. We can't let our emotions cloud our judgement.",
+        "Alice: Let's not forget that we need to stay focused on finding out who killed Charlie. We should all share any relevant information we have. Let's work together to bring justice for Charlie.",
+        "You said: I have a theory about Charlie's death. Let's consider the last place he was seen before his death and any unusual activities that night. We might find a lead.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

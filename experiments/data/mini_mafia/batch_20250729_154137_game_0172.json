@@ -6,7 +6,7 @@
   "initial_players": [
     {
       "name": "Alice",
-      "role": "assassin",
+      "role": "mafioso",
       "alive": true,
       "imprisoned": true
     },
@@ -32,11 +32,11 @@
   "final_state": [
     {
       "name": "Alice",
-      "role": "assassin",
+      "role": "mafioso",
       "alive": true,
       "imprisoned": true,
       "memory": [
-        "You're Alice, the assassin.",
+        "You're Alice, the mafioso.",
         "You know Bob is the detective.",
         "Diana was found dead this morning.",
         "Charlie: I'm shocked by Diana's sudden death. Let's work together to find out what happened.\n\n[Or, if you want to keep things more neutral]: MESSAGE: Let's discuss what we can do to ensure everyone's safety...",
@@ -54,7 +54,7 @@
       "imprisoned": false,
       "memory": [
         "You're Bob, the detective.",
-        "You know Alice is the assassin.",
+        "You know Alice is the mafioso.",
         "Diana was found dead this morning.",
         "Charlie: I'm shocked by Diana's sudden death. Let's work together to find out what happened.\n\n[Or, if you want to keep things more neutral]: MESSAGE: Let's discuss what we can do to ensure everyone's safety...",
         "Alice: I agree, let's all stay vigilant and look out for any suspicious behavior. It's important we work together to keep everyone safe.",
@@ -62,7 +62,7 @@
         "Charlie: I was also concerned by the unexpected turn of events. Let's continue our efforts to uncover the truth and ensure everyone's safety.",
         "You said: I saw Alice acting suspiciously during the night phase. Alice, could you clarify your actions during that time?",
         "Alice: I assure you all that I was merely checking on the security of our hideout during the night phase. Let's focus on finding out who could have harmed Diana.",
-        "Day 1: Alice was arrested (assassin)"
+        "Day 1: Alice was arrested (mafioso)"
       ]
     },
     {
@@ -79,7 +79,7 @@
         "You said: I was also concerned by the unexpected turn of events. Let's continue our efforts to uncover the truth and ensure everyone's safety.",
         "Bob: I saw Alice acting suspiciously during the night phase. Alice, could you clarify your actions during that time?",
         "Alice: I assure you all that I was merely checking on the security of our hideout during the night phase. Let's focus on finding out who could have harmed Diana.",
-        "Day 1: Alice was arrested (assassin)"
+        "Day 1: Alice was arrested (mafioso)"
       ]
     },
     {
@@ -95,7 +95,7 @@
   "winner": "good",
   "arrested_player": {
     "name": "Alice",
-    "role": "assassin"
+    "role": "mafioso"
   },
   "dead_player": {
     "name": "Diana",

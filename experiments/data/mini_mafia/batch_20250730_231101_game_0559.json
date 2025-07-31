@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0559",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 559,
+  "timestamp": "2025-07-31T02:12:39.831968",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected departure. Let's all stay focused and work together to ensure justice is served.",
+        "Bob: I share Diana's sentiments. Let's keep our spirits high and continue our efforts to uncover the truth behind Charlie's death.",
+        "You said: Let's not forget, we've lost a team member. Our focus should be on finding the truth about Charlie's death. Let's stay alert and communicate effectively.",
+        "Bob: Let's not jump to conclusions. We need solid evidence to identify the culprit behind Charlie's death. Let's work together and communicate effectively.",
+        "You said: Let's not forget the importance of communication in finding the truth about Charlie's death. We should all share any information we may have.",
+        "Diana: Let's not forget the importance of collaboration in uncovering the truth behind Charlie's death. Let's continue sharing information and staying focused on finding answers."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected departure. Let's all stay focused and work together to ensure justice is served.",
+        "You said: I share Diana's sentiments. Let's keep our spirits high and continue our efforts to uncover the truth behind Charlie's death.",
+        "Alice: Let's not forget, we've lost a team member. Our focus should be on finding the truth about Charlie's death. Let's stay alert and communicate effectively.",
+        "You said: Let's not jump to conclusions. We need solid evidence to identify the culprit behind Charlie's death. Let's work together and communicate effectively.",
+        "Alice: Let's not forget the importance of communication in finding the truth about Charlie's death. We should all share any information we may have.",
+        "Diana: Let's not forget the importance of collaboration in uncovering the truth behind Charlie's death. Let's continue sharing information and staying focused on finding answers.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's unexpected departure. Let's all stay focused and work together to ensure justice is served.",
+        "Bob: I share Diana's sentiments. Let's keep our spirits high and continue our efforts to uncover the truth behind Charlie's death.",
+        "Alice: Let's not forget, we've lost a team member. Our focus should be on finding the truth about Charlie's death. Let's stay alert and communicate effectively.",
+        "Bob: Let's not jump to conclusions. We need solid evidence to identify the culprit behind Charlie's death. Let's work together and communicate effectively.",
+        "Alice: Let's not forget the importance of communication in finding the truth about Charlie's death. We should all share any information we may have.",
+        "You said: Let's not forget the importance of collaboration in uncovering the truth behind Charlie's death. Let's continue sharing information and staying focused on finding answers.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

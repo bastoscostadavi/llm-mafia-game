@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0236",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 236,
+  "timestamp": "2025-07-31T00:27:58.037251",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's sudden demise. Let's all support each other during these trying times. Let's focus on finding the real culprit behind this heinous act.",
+        "Charlie: I agree with Bob, we should focus on finding the true culprit behind Diana's death. Let's work together to uncover any clues and bring justice.",
+        "You said: Let's not jump to conclusions, we need to gather more information before making any accusations. Our focus should be on finding clues that could lead us to the real culprit.",
+        "Bob: Let's not forget that Diana was a valued member of our community. Let's keep an open mind and work together to find the true culprit behind her tragic demise.",
+        "You said: Let's not overlook potential leads. We should discuss any suspicious behaviors or patterns that could point to the culprit. Our unity and diligence will help us uncover the truth.",
+        "Charlie: Let us continue our efforts to find the true culprit behind Diana's death. Any new leads or suspicious activities should be shared openly for the benefit of the group. Let's stay focused and united...",
+        "Day 1 votes: Bob voted for Charlie, Alice voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's sudden demise. Let's all support each other during these trying times. Let's focus on finding the real culprit behind this heinous act.",
+        "Charlie: I agree with Bob, we should focus on finding the true culprit behind Diana's death. Let's work together to uncover any clues and bring justice.",
+        "Alice: Let's not jump to conclusions, we need to gather more information before making any accusations. Our focus should be on finding clues that could lead us to the real culprit.",
+        "You said: Let's not forget that Diana was a valued member of our community. Let's keep an open mind and work together to find the true culprit behind her tragic demise.",
+        "Alice: Let's not overlook potential leads. We should discuss any suspicious behaviors or patterns that could point to the culprit. Our unity and diligence will help us uncover the truth.",
+        "Charlie: Let us continue our efforts to find the true culprit behind Diana's death. Any new leads or suspicious activities should be shared openly for the benefit of the group. Let's stay focused and united..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's sudden demise. Let's all support each other during these trying times. Let's focus on finding the real culprit behind this heinous act.",
+        "You said: I agree with Bob, we should focus on finding the true culprit behind Diana's death. Let's work together to uncover any clues and bring justice.",
+        "Alice: Let's not jump to conclusions, we need to gather more information before making any accusations. Our focus should be on finding clues that could lead us to the real culprit.",
+        "Bob: Let's not forget that Diana was a valued member of our community. Let's keep an open mind and work together to find the true culprit behind her tragic demise.",
+        "Alice: Let's not overlook potential leads. We should discuss any suspicious behaviors or patterns that could point to the culprit. Our unity and diligence will help us uncover the truth.",
+        "You said: Let us continue our efforts to find the true culprit behind Diana's death. Any new leads or suspicious activities should be shared openly for the benefit of the group. Let's stay focused and united...",
+        "Day 1 votes: Bob voted for Charlie, Alice voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

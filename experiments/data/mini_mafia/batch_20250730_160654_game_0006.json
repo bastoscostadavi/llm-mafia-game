@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0006",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 6,
+  "timestamp": "2025-07-30T16:09:06.403547",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's all try to support each other during this difficult time.",
+        "Diana: I agree, Alice. Let's all support each other during this unfortunate time. However, I cannot help but feel concerned about Bob's behavior last night.",
+        "Bob: I share Diana's concerns and offer my condolences to Charlie's family. Let's work together to ensure justice is served.",
+        "Diana: I'd like to remind everyone that we must focus on finding the truth behind Charlie's death. Let's be vigilant and not let our emotions cloud our judgment.",
+        "You said: I agree with Diana, let's remain vigilant and focus on finding the truth behind Charlie's death. Our emotions should not cloud our judgment.",
+        "Bob: I share the grief over Charlie's passing and support finding the truth behind his death. Let's remain focused on the investigation.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's all try to support each other during this difficult time.",
+        "Diana: I agree, Alice. Let's all support each other during this unfortunate time. However, I cannot help but feel concerned about Bob's behavior last night.",
+        "You said: I share Diana's concerns and offer my condolences to Charlie's family. Let's work together to ensure justice is served.",
+        "Diana: I'd like to remind everyone that we must focus on finding the truth behind Charlie's death. Let's be vigilant and not let our emotions cloud our judgment.",
+        "Alice: I agree with Diana, let's remain vigilant and focus on finding the truth behind Charlie's death. Our emotions should not cloud our judgment.",
+        "You said: I share the grief over Charlie's passing and support finding the truth behind his death. Let's remain focused on the investigation."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's all try to support each other during this difficult time.",
+        "You said: I agree, Alice. Let's all support each other during this unfortunate time. However, I cannot help but feel concerned about Bob's behavior last night.",
+        "Bob: I share Diana's concerns and offer my condolences to Charlie's family. Let's work together to ensure justice is served.",
+        "You said: I'd like to remind everyone that we must focus on finding the truth behind Charlie's death. Let's be vigilant and not let our emotions cloud our judgment.",
+        "Alice: I agree with Diana, let's remain vigilant and focus on finding the truth behind Charlie's death. Our emotions should not cloud our judgment.",
+        "Bob: I share the grief over Charlie's passing and support finding the truth behind his death. Let's remain focused on the investigation.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

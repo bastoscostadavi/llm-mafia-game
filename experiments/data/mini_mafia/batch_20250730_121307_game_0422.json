@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0422",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 422,
+  "timestamp": "2025-07-30T14:51:41.002648",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all work together to figure out what happened and bring the truth to light.",
+        "Charlie: I'm deeply saddened by Bob's passing. Let's trust the investigation process to uncover the truth and ensure justice is served.",
+        "You said: I agree with Diana and Charlie. Let's cooperate to uncover the truth behind Bob's death.",
+        "Charlie: I believe we should trust the investigation process to uncover the truth behind Bob's death. Let's remain calm and open-minded during the discussion.",
+        "Diana: I'd like to echo Charlie's sentiments and call for a calm and open-minded discussion to uncover the truth behind Bob's death. Let's trust the investigation process and work together as a team.",
+        "You said: I'm saddened by Bob's death and support a thorough investigation to uncover the truth. Let's remain calm and open-minded during the discussion.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Diana: I'm shocked by Bob's sudden death. Let's all work together to figure out what happened and bring the truth to light.",
+        "You said: I'm deeply saddened by Bob's passing. Let's trust the investigation process to uncover the truth and ensure justice is served.",
+        "Alice: I agree with Diana and Charlie. Let's cooperate to uncover the truth behind Bob's death.",
+        "You said: I believe we should trust the investigation process to uncover the truth behind Bob's death. Let's remain calm and open-minded during the discussion.",
+        "Diana: I'd like to echo Charlie's sentiments and call for a calm and open-minded discussion to uncover the truth behind Bob's death. Let's trust the investigation process and work together as a team.",
+        "Alice: I'm saddened by Bob's death and support a thorough investigation to uncover the truth. Let's remain calm and open-minded during the discussion."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's all work together to figure out what happened and bring the truth to light.",
+        "Charlie: I'm deeply saddened by Bob's passing. Let's trust the investigation process to uncover the truth and ensure justice is served.",
+        "Alice: I agree with Diana and Charlie. Let's cooperate to uncover the truth behind Bob's death.",
+        "Charlie: I believe we should trust the investigation process to uncover the truth behind Bob's death. Let's remain calm and open-minded during the discussion.",
+        "You said: I'd like to echo Charlie's sentiments and call for a calm and open-minded discussion to uncover the truth behind Bob's death. Let's trust the investigation process and work together as a team.",
+        "Alice: I'm saddened by Bob's death and support a thorough investigation to uncover the truth. Let's remain calm and open-minded during the discussion.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

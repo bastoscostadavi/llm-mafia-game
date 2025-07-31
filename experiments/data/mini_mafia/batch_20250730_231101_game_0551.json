@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0551",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 551,
+  "timestamp": "2025-07-31T02:10:08.804159",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely death. Let's focus on finding out who did this to her and bring them to justice.",
+        "Charlie: I share Bob's sentiment towards Alice's death. Let's work together to find the truth behind this tragedy.",
+        "Diana: I agree with both Bob and Charlie, let's work together to uncover the truth behind Alice's death.",
+        "You said: Let's not jump to conclusions based on assumptions. We should focus on gathering facts and working together to uncover the truth behind Alice's death.",
+        "Diana: Let's not forget that we're trying to find out who's responsible for Alice's death. We should stay focused and work together to gather more information.",
+        "Charlie: Let's not forget that Alice's death is a tragedy for all of us. We should work together to ensure justice is served and the perpetrator is brought to light."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely death. Let's focus on finding out who did this to her and bring them to justice.",
+        "You said: I share Bob's sentiment towards Alice's death. Let's work together to find the truth behind this tragedy.",
+        "Diana: I agree with both Bob and Charlie, let's work together to uncover the truth behind Alice's death.",
+        "Bob: Let's not jump to conclusions based on assumptions. We should focus on gathering facts and working together to uncover the truth behind Alice's death.",
+        "Diana: Let's not forget that we're trying to find out who's responsible for Alice's death. We should stay focused and work together to gather more information.",
+        "You said: Let's not forget that Alice's death is a tragedy for all of us. We should work together to ensure justice is served and the perpetrator is brought to light.",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely death. Let's focus on finding out who did this to her and bring them to justice.",
+        "Charlie: I share Bob's sentiment towards Alice's death. Let's work together to find the truth behind this tragedy.",
+        "You said: I agree with both Bob and Charlie, let's work together to uncover the truth behind Alice's death.",
+        "Bob: Let's not jump to conclusions based on assumptions. We should focus on gathering facts and working together to uncover the truth behind Alice's death.",
+        "You said: Let's not forget that we're trying to find out who's responsible for Alice's death. We should stay focused and work together to gather more information.",
+        "Charlie: Let's not forget that Alice's death is a tragedy for all of us. We should work together to ensure justice is served and the perpetrator is brought to light.",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

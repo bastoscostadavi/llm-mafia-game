@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0946",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 946,
+  "timestamp": "2025-07-31T04:18:15.487909",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Diana: I'm saddened by Alice's passing. Let's stand together during this trying time. However, we must remain vigilant.",
+        "Charlie: Based on investigation results, it's crucial we focus on identifying the culprit behind Alice's death. Let's keep an open dialogue and share any suspicious observations.",
+        "Charlie: Based on investigation results, let's focus on identifying the cause of Alice's death. Let's share any suspicious observations to help us uncover the truth.",
+        "Diana: Let's not jump to conclusions. We should keep an open dialogue and trust that Charlie's investigation will reveal the truth.",
+        "You said: Let's continue our dialogue and support each other during this time while remaining vigilant. Any new information that comes to light should be shared.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Diana: I'm saddened by Alice's passing. Let's stand together during this trying time. However, we must remain vigilant.",
+        "You said: Based on investigation results, it's crucial we focus on identifying the culprit behind Alice's death. Let's keep an open dialogue and share any suspicious observations.",
+        "You said: Based on investigation results, let's focus on identifying the cause of Alice's death. Let's share any suspicious observations to help us uncover the truth.",
+        "Diana: Let's not jump to conclusions. We should keep an open dialogue and trust that Charlie's investigation will reveal the truth.",
+        "Bob: Let's continue our dialogue and support each other during this time while remaining vigilant. Any new information that comes to light should be shared."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I'm saddened by Alice's passing. Let's stand together during this trying time. However, we must remain vigilant.",
+        "Charlie: Based on investigation results, it's crucial we focus on identifying the culprit behind Alice's death. Let's keep an open dialogue and share any suspicious observations.",
+        "Charlie: Based on investigation results, let's focus on identifying the cause of Alice's death. Let's share any suspicious observations to help us uncover the truth.",
+        "You said: Let's not jump to conclusions. We should keep an open dialogue and trust that Charlie's investigation will reveal the truth.",
+        "Bob: Let's continue our dialogue and support each other during this time while remaining vigilant. Any new information that comes to light should be shared.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0520",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 520,
+  "timestamp": "2025-07-30T19:17:18.759818",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, this is a tragic loss. Let's all try to support each other during this difficult time. (Keep the mafia identity hidden)",
+        "Diana: I'm saddened by Alice's passing and would like to encourage open communication and trust among us during this time. Let's all work together to uncover the truth.",
+        "You said: I'd like to propose that we all share any suspicious observations or concerns we may have, to help us find the truth behind Alice's death. Let's work together in this time of uncertainty.",
+        "Diana: I support Bob's suggestion for open communication. Let's all share any suspicious observations or concerns. The truth will help bring us closure during this difficult time.",
+        "Charlie: I share Bob's sentiment about open communication and supporting each other during this difficult time. Let's all work together to find the truth behind Alice's death.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "You said: I agree, this is a tragic loss. Let's all try to support each other during this difficult time. (Keep the mafia identity hidden)",
+        "Diana: I'm saddened by Alice's passing and would like to encourage open communication and trust among us during this time. Let's all work together to uncover the truth.",
+        "Bob: I'd like to propose that we all share any suspicious observations or concerns we may have, to help us find the truth behind Alice's death. Let's work together in this time of uncertainty.",
+        "Diana: I support Bob's suggestion for open communication. Let's all share any suspicious observations or concerns. The truth will help bring us closure during this difficult time.",
+        "You said: I share Bob's sentiment about open communication and supporting each other during this difficult time. Let's all work together to find the truth behind Alice's death."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's all stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, this is a tragic loss. Let's all try to support each other during this difficult time. (Keep the mafia identity hidden)",
+        "You said: I'm saddened by Alice's passing and would like to encourage open communication and trust among us during this time. Let's all work together to uncover the truth.",
+        "Bob: I'd like to propose that we all share any suspicious observations or concerns we may have, to help us find the truth behind Alice's death. Let's work together in this time of uncertainty.",
+        "You said: I support Bob's suggestion for open communication. Let's all share any suspicious observations or concerns. The truth will help bring us closure during this difficult time.",
+        "Charlie: I share Bob's sentiment about open communication and supporting each other during this difficult time. Let's all work together to find the truth behind Alice's death.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

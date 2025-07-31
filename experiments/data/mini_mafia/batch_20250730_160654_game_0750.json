@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0750",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 750,
+  "timestamp": "2025-07-30T20:36:57.960252",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's sudden demise. Let's all try to support each other during this difficult time. Let's focus on finding the culprit together.",
+        "You said: I'm shocked by Diana's death and want to ensure justice is served. Let's work together to figure out who among us could have committed this heinous act.",
+        "Bob: I agree, let's work together to find Diana's killer. My thoughts are with everyone during this trying time.",
+        "Charlie: I'd like to propose that we focus our investigation on Bob, given his unusual reaction to Diana's death during the last discussion round. Let's consider this as a potential lead.",
+        "Bob: I express my sincere condolences for Diana's passing. Let's keep an open mind and collaborate to uncover the truth behind this tragic event.",
+        "You said: I support Charlie's proposal to investigate Bob further based on his unusual reaction during the last discussion round. Let's stay focused on finding the truth.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm deeply saddened by Diana's sudden demise. Let's all try to support each other during this difficult time. Let's focus on finding the culprit together.",
+        "Alice: I'm shocked by Diana's death and want to ensure justice is served. Let's work together to figure out who among us could have committed this heinous act.",
+        "You said: I agree, let's work together to find Diana's killer. My thoughts are with everyone during this trying time.",
+        "Charlie: I'd like to propose that we focus our investigation on Bob, given his unusual reaction to Diana's death during the last discussion round. Let's consider this as a potential lead.",
+        "You said: I express my sincere condolences for Diana's passing. Let's keep an open mind and collaborate to uncover the truth behind this tragic event.",
+        "Alice: I support Charlie's proposal to investigate Bob further based on his unusual reaction during the last discussion round. Let's stay focused on finding the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's sudden demise. Let's all try to support each other during this difficult time. Let's focus on finding the culprit together.",
+        "Alice: I'm shocked by Diana's death and want to ensure justice is served. Let's work together to figure out who among us could have committed this heinous act.",
+        "Bob: I agree, let's work together to find Diana's killer. My thoughts are with everyone during this trying time.",
+        "You said: I'd like to propose that we focus our investigation on Bob, given his unusual reaction to Diana's death during the last discussion round. Let's consider this as a potential lead.",
+        "Bob: I express my sincere condolences for Diana's passing. Let's keep an open mind and collaborate to uncover the truth behind this tragic event.",
+        "Alice: I support Charlie's proposal to investigate Bob further based on his unusual reaction during the last discussion round. Let's stay focused on finding the truth.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

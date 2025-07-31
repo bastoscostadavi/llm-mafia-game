@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0929",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 929,
+  "timestamp": "2025-07-30T21:36:53.020720",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm saddened by Bob's unexpected departure. Let's all take a moment to remember him. Let's focus on finding the real culprit behind this. #justiceforbob",
+        "Charlie: I agree, let's focus on finding the real culprit behind Bob's death. Diana's statement is suspicious, but we need more evidence before making any accusations. #justiceforbob",
+        "You said: I agree with Charlie, let's focus on finding the real culprit behind Bob's death. We need solid evidence to make any accusations. #justiceforbob",
+        "Diana: Let's not jump to conclusions. We should all work together to find the real culprit behind Bob's death. #justiceforbob",
+        "You said: Let's not forget that we need solid evidence to make accusations. We should work together to uncover the truth behind Bob's death. #justiceforbob",
+        "Charlie: Let's not overlook the significance of Diana's emotional response to Bob's death. We should consider it as a potential clue. #justiceforbob",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Diana is the mafioso.",
+        "Bob was found dead this morning.",
+        "Diana: I'm saddened by Bob's unexpected departure. Let's all take a moment to remember him. Let's focus on finding the real culprit behind this. #justiceforbob",
+        "You said: I agree, let's focus on finding the real culprit behind Bob's death. Diana's statement is suspicious, but we need more evidence before making any accusations. #justiceforbob",
+        "Alice: I agree with Charlie, let's focus on finding the real culprit behind Bob's death. We need solid evidence to make any accusations. #justiceforbob",
+        "Diana: Let's not jump to conclusions. We should all work together to find the real culprit behind Bob's death. #justiceforbob",
+        "Alice: Let's not forget that we need solid evidence to make accusations. We should work together to uncover the truth behind Bob's death. #justiceforbob",
+        "You said: Let's not overlook the significance of Diana's emotional response to Bob's death. We should consider it as a potential clue. #justiceforbob"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Charlie is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm saddened by Bob's unexpected departure. Let's all take a moment to remember him. Let's focus on finding the real culprit behind this. #justiceforbob",
+        "Charlie: I agree, let's focus on finding the real culprit behind Bob's death. Diana's statement is suspicious, but we need more evidence before making any accusations. #justiceforbob",
+        "Alice: I agree with Charlie, let's focus on finding the real culprit behind Bob's death. We need solid evidence to make any accusations. #justiceforbob",
+        "You said: Let's not jump to conclusions. We should all work together to find the real culprit behind Bob's death. #justiceforbob",
+        "Alice: Let's not forget that we need solid evidence to make accusations. We should work together to uncover the truth behind Bob's death. #justiceforbob",
+        "Charlie: Let's not overlook the significance of Diana's emotional response to Bob's death. We should consider it as a potential clue. #justiceforbob",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

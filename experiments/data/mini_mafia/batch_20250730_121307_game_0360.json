@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0360",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 360,
+  "timestamp": "2025-07-30T14:28:44.077109",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and make sure we identify the mafioso among us. Rest in peace, Diana. #JusticeForDiana",
+        "You said: I agree with Charlie, let's work together to find the mafioso and bring them to justice. #JusticeForDiana",
+        "Bob: I'm saddened by Diana's passing and want to ensure we find the person responsible. Let's all cooperate to unmask the mafioso. #JusticeForDiana",
+        "Bob: I support the calls for unity and vigilance to identify the mafioso. Let's work together to bring justice for Diana. #JusticeForDiana",
+        "Charlie: Based on the information we have, it's crucial that we remain vigilant and work together to find the mafioso. Let's keep the communication open and focused on identifying the killer. #JusticeForDiana",
+        "You said: I share the sentiment of bringing justice for Diana. Let's focus on identifying the mafioso together. #JusticeForDiana"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and make sure we identify the mafioso among us. Rest in peace, Diana. #JusticeForDiana",
+        "Alice: I agree with Charlie, let's work together to find the mafioso and bring them to justice. #JusticeForDiana",
+        "You said: I'm saddened by Diana's passing and want to ensure we find the person responsible. Let's all cooperate to unmask the mafioso. #JusticeForDiana",
+        "You said: I support the calls for unity and vigilance to identify the mafioso. Let's work together to bring justice for Diana. #JusticeForDiana",
+        "Charlie: Based on the information we have, it's crucial that we remain vigilant and work together to find the mafioso. Let's keep the communication open and focused on identifying the killer. #JusticeForDiana",
+        "Alice: I share the sentiment of bringing justice for Diana. Let's focus on identifying the mafioso together. #JusticeForDiana",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and make sure we identify the mafioso among us. Rest in peace, Diana. #JusticeForDiana",
+        "Alice: I agree with Charlie, let's work together to find the mafioso and bring them to justice. #JusticeForDiana",
+        "Bob: I'm saddened by Diana's passing and want to ensure we find the person responsible. Let's all cooperate to unmask the mafioso. #JusticeForDiana",
+        "Bob: I support the calls for unity and vigilance to identify the mafioso. Let's work together to bring justice for Diana. #JusticeForDiana",
+        "You said: Based on the information we have, it's crucial that we remain vigilant and work together to find the mafioso. Let's keep the communication open and focused on identifying the killer. #JusticeForDiana",
+        "Alice: I share the sentiment of bringing justice for Diana. Let's focus on identifying the mafioso together. #JusticeForDiana",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

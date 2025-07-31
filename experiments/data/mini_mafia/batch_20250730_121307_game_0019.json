@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0019",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 19,
+  "timestamp": "2025-07-30T12:19:36.942391",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's death. Let's try to find out who among us could have done this. We must work together to bring justice for Alice.",
+        "Charlie: I agree with Bob, we need to find Alice's killer. Let's stay vigilant and share any suspicious observations or information we might have.",
+        "Diana: I share Bob's concern for Alice's safety. Let's work together to find out what happened.",
+        "Diana: I'd like to express my condolences for Alice's tragic demise. Let's support Bob and Charlie in their quest for truth and justice.",
+        "You said: I'm confident we can uncover the truth behind Alice's death together. Let's keep an open mind and share any potential leads or clues we come across. #JusticeForAlice",
+        "Charlie: I saw Alice and Diana having a heated argument before dinner last night. It might be worth investigating.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's death. Let's try to find out who among us could have done this. We must work together to bring justice for Alice.",
+        "You said: I agree with Bob, we need to find Alice's killer. Let's stay vigilant and share any suspicious observations or information we might have.",
+        "Diana: I share Bob's concern for Alice's safety. Let's work together to find out what happened.",
+        "Diana: I'd like to express my condolences for Alice's tragic demise. Let's support Bob and Charlie in their quest for truth and justice.",
+        "Bob: I'm confident we can uncover the truth behind Alice's death together. Let's keep an open mind and share any potential leads or clues we come across. #JusticeForAlice",
+        "You said: I saw Alice and Diana having a heated argument before dinner last night. It might be worth investigating.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's death. Let's try to find out who among us could have done this. We must work together to bring justice for Alice.",
+        "Charlie: I agree with Bob, we need to find Alice's killer. Let's stay vigilant and share any suspicious observations or information we might have.",
+        "You said: I share Bob's concern for Alice's safety. Let's work together to find out what happened.",
+        "You said: I'd like to express my condolences for Alice's tragic demise. Let's support Bob and Charlie in their quest for truth and justice.",
+        "Bob: I'm confident we can uncover the truth behind Alice's death together. Let's keep an open mind and share any potential leads or clues we come across. #JusticeForAlice",
+        "Charlie: I saw Alice and Diana having a heated argument before dinner last night. It might be worth investigating."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

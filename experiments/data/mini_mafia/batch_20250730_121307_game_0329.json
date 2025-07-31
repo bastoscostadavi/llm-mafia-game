@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0329",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 329,
+  "timestamp": "2025-07-30T14:15:51.379927",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's all be vigilant and ensure we protect each other from further harm. Let's not let fear divide us. We must trust and work together to uncover the...",
+        "Charlie: I echo Bob's sentiments and offer my condolences to Alice's loved ones. Let's remain united in our quest for truth.",
+        "Diana: I agree with Bob and Charlie, let's stay united and vigilant in this trying time. Our thoughts are with Alice's family. Let's trust each other and work together to uncover the truth. #solidarity...",
+        "Diana: Let's not jump to conclusions. We need to stay calm and work together to find the truth behind Alice's death. #unitedwestand",
+        "Charlie: I share Bob and Diana's sentiments and express my condolences to Alice's loved ones. Let's work together to uncover the truth behind her death.",
+        "You said: I urge everyone to stay focused and vigilant. Let's work together to identify the culprit behind Alice's death. We must not let fear or mistrust cloud our judgement. #justiceforalice"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's all be vigilant and ensure we protect each other from further harm. Let's not let fear divide us. We must trust and work together to uncover the...",
+        "You said: I echo Bob's sentiments and offer my condolences to Alice's loved ones. Let's remain united in our quest for truth.",
+        "Diana: I agree with Bob and Charlie, let's stay united and vigilant in this trying time. Our thoughts are with Alice's family. Let's trust each other and work together to uncover the truth. #solidarity...",
+        "Diana: Let's not jump to conclusions. We need to stay calm and work together to find the truth behind Alice's death. #unitedwestand",
+        "You said: I share Bob and Diana's sentiments and express my condolences to Alice's loved ones. Let's work together to uncover the truth behind her death.",
+        "Bob: I urge everyone to stay focused and vigilant. Let's work together to identify the culprit behind Alice's death. We must not let fear or mistrust cloud our judgement. #justiceforalice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's all be vigilant and ensure we protect each other from further harm. Let's not let fear divide us. We must trust and work together to uncover the...",
+        "Charlie: I echo Bob's sentiments and offer my condolences to Alice's loved ones. Let's remain united in our quest for truth.",
+        "You said: I agree with Bob and Charlie, let's stay united and vigilant in this trying time. Our thoughts are with Alice's family. Let's trust each other and work together to uncover the truth. #solidarity...",
+        "You said: Let's not jump to conclusions. We need to stay calm and work together to find the truth behind Alice's death. #unitedwestand",
+        "Charlie: I share Bob and Diana's sentiments and express my condolences to Alice's loved ones. Let's work together to uncover the truth behind her death.",
+        "Bob: I urge everyone to stay focused and vigilant. Let's work together to identify the culprit behind Alice's death. We must not let fear or mistrust cloud our judgement. #justiceforalice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

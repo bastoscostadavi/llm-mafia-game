@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250729_154137_game_0340",
+  "batch_id": "batch_20250729_154137",
+  "game_number": 340,
+  "timestamp": "2025-07-29T17:49:47.326415",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Diana: I'm saddened by Charlie's death. Let's all work together to find out what happened and ensure everyone's safety. Bob's shocking reaction is concerning to me.",
+        "You said: I agree with Diana, let's work together to find out what happened to Charlie and ensure everyone's safety. Bob's reaction was unexpected, but we shouldn't jump to conclusions based on that alone.",
+        "Bob: Let's focus on finding out what happened to Charlie and ensuring everyone's safety. Bob's reaction was unexpected, but we should keep an open mind.",
+        "You said: I support Bob's call for staying vigilant and working together to find out what happened to Charlie. Let's focus on gathering information and ensuring everyone's safety.",
+        "Diana: Let's stay focused on gathering information about Charlie's death and ensuring everyone's safety. Bob's reaction was unexpected, but we should remain open-minded and work together.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "Diana: I'm saddened by Charlie's death. Let's all work together to find out what happened and ensure everyone's safety. Bob's shocking reaction is concerning to me.",
+        "Alice: I agree with Diana, let's work together to find out what happened to Charlie and ensure everyone's safety. Bob's reaction was unexpected, but we shouldn't jump to conclusions based on that alone.",
+        "You said: Let's focus on finding out what happened to Charlie and ensuring everyone's safety. Bob's reaction was unexpected, but we should keep an open mind.",
+        "Alice: I support Bob's call for staying vigilant and working together to find out what happened to Charlie. Let's focus on gathering information and ensuring everyone's safety.",
+        "Diana: Let's stay focused on gathering information about Charlie's death and ensuring everyone's safety. Bob's reaction was unexpected, but we should remain open-minded and work together."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked about Charlie's sudden demise. Let's all stay vigilant and support each other during these trying times.",
+        "You said: I'm saddened by Charlie's death. Let's all work together to find out what happened and ensure everyone's safety. Bob's shocking reaction is concerning to me.",
+        "Alice: I agree with Diana, let's work together to find out what happened to Charlie and ensure everyone's safety. Bob's reaction was unexpected, but we shouldn't jump to conclusions based on that alone.",
+        "Bob: Let's focus on finding out what happened to Charlie and ensuring everyone's safety. Bob's reaction was unexpected, but we should keep an open mind.",
+        "Alice: I support Bob's call for staying vigilant and working together to find out what happened to Charlie. Let's focus on gathering information and ensuring everyone's safety.",
+        "You said: Let's stay focused on gathering information about Charlie's death and ensuring everyone's safety. Bob's reaction was unexpected, but we should remain open-minded and work together.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

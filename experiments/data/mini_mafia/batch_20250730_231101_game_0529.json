@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0529",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 529,
+  "timestamp": "2025-07-31T02:03:06.454133",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to find out who did this.",
+        "You said: I'm saddened by Alice's death. Let's all focus on finding clues to uncover the truth.",
+        "Charlie: Let's not jump to conclusions. We should gather more information before making any accusations.",
+        "Diana: Let's not forget, we need to find the cause of Alice's death. Stay focused on the investigation.",
+        "You said: Let's not overlook crucial information. Let's work together to piece together the clues and uncover the truth behind Alice's death.",
+        "Charlie: Let's not rush into accusations. Let's focus on gathering more information to ensure justice is served.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to find out who did this.",
+        "Bob: I'm saddened by Alice's death. Let's all focus on finding clues to uncover the truth.",
+        "You said: Let's not jump to conclusions. We should gather more information before making any accusations.",
+        "Diana: Let's not forget, we need to find the cause of Alice's death. Stay focused on the investigation.",
+        "Bob: Let's not overlook crucial information. Let's work together to piece together the clues and uncover the truth behind Alice's death.",
+        "You said: Let's not rush into accusations. Let's focus on gathering more information to ensure justice is served.",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to find out who did this.",
+        "Bob: I'm saddened by Alice's death. Let's all focus on finding clues to uncover the truth.",
+        "Charlie: Let's not jump to conclusions. We should gather more information before making any accusations.",
+        "You said: Let's not forget, we need to find the cause of Alice's death. Stay focused on the investigation.",
+        "Bob: Let's not overlook crucial information. Let's work together to piece together the clues and uncover the truth behind Alice's death.",
+        "Charlie: Let's not rush into accusations. Let's focus on gathering more information to ensure justice is served."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

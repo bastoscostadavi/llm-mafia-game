@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0518",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 518,
+  "timestamp": "2025-07-31T01:59:42.989121",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked to hear about Charlie's sudden demise. Let's all try to stay focused and find out who did this heinous act.",
+        "You said: I'm saddened by Charlie's passing and hope we can find the truth behind this. Let's work together to uncover the culprit.",
+        "Diana: Let's not jump to conclusions. We need to stay calm and gather more information before pointing fingers. Bob, your reaction was quite unexpected. Let's focus on finding the truth.",
+        "Bob: I agree with Diana. Let's remain calm and gather more information before making any accusations. This tragedy calls for unity and careful investigation.",
+        "You said: Let's not forget the importance of trust in our investigation. We should consider everyone's statements and actions carefully before making any conclusions.",
+        "Diana: Let's not forget the significance of trust and unity in our investigation. We should carefully consider everyone's actions and statements before making any conclusions.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked to hear about Charlie's sudden demise. Let's all try to stay focused and find out who did this heinous act.",
+        "Alice: I'm saddened by Charlie's passing and hope we can find the truth behind this. Let's work together to uncover the culprit.",
+        "Diana: Let's not jump to conclusions. We need to stay calm and gather more information before pointing fingers. Bob, your reaction was quite unexpected. Let's focus on finding the truth.",
+        "You said: I agree with Diana. Let's remain calm and gather more information before making any accusations. This tragedy calls for unity and careful investigation.",
+        "Alice: Let's not forget the importance of trust in our investigation. We should consider everyone's statements and actions carefully before making any conclusions.",
+        "Diana: Let's not forget the significance of trust and unity in our investigation. We should carefully consider everyone's actions and statements before making any conclusions."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm shocked to hear about Charlie's sudden demise. Let's all try to stay focused and find out who did this heinous act.",
+        "Alice: I'm saddened by Charlie's passing and hope we can find the truth behind this. Let's work together to uncover the culprit.",
+        "You said: Let's not jump to conclusions. We need to stay calm and gather more information before pointing fingers. Bob, your reaction was quite unexpected. Let's focus on finding the truth.",
+        "Bob: I agree with Diana. Let's remain calm and gather more information before making any accusations. This tragedy calls for unity and careful investigation.",
+        "Alice: Let's not forget the importance of trust in our investigation. We should consider everyone's statements and actions carefully before making any conclusions.",
+        "You said: Let's not forget the significance of trust and unity in our investigation. We should carefully consider everyone's actions and statements before making any conclusions.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

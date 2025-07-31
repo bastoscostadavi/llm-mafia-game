@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0980",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 980,
+  "timestamp": "2025-07-30T21:53:40.224694",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's all stay vigilant and keep an eye on each other.",
+        "Bob: I agree, Alice's discovery is concerning. Let's all work together to ensure everyone's safety.",
+        "Diana: I share Alice's concerns and agree with Bob, let's remain vigilant and work together to ensure everyone's safety. Let's not jump to conclusions yet.",
+        "Bob: Let's not forget that we need to trust each other to ensure everyone's safety. Let's focus on collaboration and maintaining a calm atmosphere in the group.",
+        "You said: Let's not overlook the importance of communication and transparency in our group. We should share any concerns or suspicions we have to ensure everyone's safety.",
+        "Diana: Let's continue our efforts to ensure everyone's safety by staying vigilant and maintaining open communication. Let's not jump to conclusions or accuse anyone without solid evidence. Together, we can..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's all stay vigilant and keep an eye on each other.",
+        "You said: I agree, Alice's discovery is concerning. Let's all work together to ensure everyone's safety.",
+        "Diana: I share Alice's concerns and agree with Bob, let's remain vigilant and work together to ensure everyone's safety. Let's not jump to conclusions yet.",
+        "You said: Let's not forget that we need to trust each other to ensure everyone's safety. Let's focus on collaboration and maintaining a calm atmosphere in the group.",
+        "Alice: Let's not overlook the importance of communication and transparency in our group. We should share any concerns or suspicions we have to ensure everyone's safety.",
+        "Diana: Let's continue our efforts to ensure everyone's safety by staying vigilant and maintaining open communication. Let's not jump to conclusions or accuse anyone without solid evidence. Together, we can...",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's all stay vigilant and keep an eye on each other.",
+        "Bob: I agree, Alice's discovery is concerning. Let's all work together to ensure everyone's safety.",
+        "You said: I share Alice's concerns and agree with Bob, let's remain vigilant and work together to ensure everyone's safety. Let's not jump to conclusions yet.",
+        "Bob: Let's not forget that we need to trust each other to ensure everyone's safety. Let's focus on collaboration and maintaining a calm atmosphere in the group.",
+        "Alice: Let's not overlook the importance of communication and transparency in our group. We should share any concerns or suspicions we have to ensure everyone's safety.",
+        "You said: Let's continue our efforts to ensure everyone's safety by staying vigilant and maintaining open communication. Let's not jump to conclusions or accuse anyone without solid evidence. Together, we can...",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

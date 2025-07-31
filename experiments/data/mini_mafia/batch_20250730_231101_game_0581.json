@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0581",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 581,
+  "timestamp": "2025-07-31T02:19:46.449976",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's sudden demise. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I share Diana's sentiments. Let's remember Alice's kindness and support each other through this loss. However, we must also ensure justice is served. Let's be vigilant.",
+        "You said: I agree with Diana and Charlie, let's support each other during this tough time. But we must also remember Alice's last words and be vigilant.",
+        "You said: Let's not forget Alice's words of vigilance amidst our grief. We must support each other, but remain cautious as well.",
+        "Charlie: Let's honor Alice's memory by staying vigilant and supporting each other. We must ensure justice is served. #JusticeForAlice",
+        "Diana: Let's continue our support for each other during this challenging time, while also staying vigilant to ensure justice is served. #JusticeForAlice #SupportAndVigilance",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's sudden demise. Let's all be vigilant and support each other during this difficult time.",
+        "You said: I share Diana's sentiments. Let's remember Alice's kindness and support each other through this loss. However, we must also ensure justice is served. Let's be vigilant.",
+        "Bob: I agree with Diana and Charlie, let's support each other during this tough time. But we must also remember Alice's last words and be vigilant.",
+        "Bob: Let's not forget Alice's words of vigilance amidst our grief. We must support each other, but remain cautious as well.",
+        "You said: Let's honor Alice's memory by staying vigilant and supporting each other. We must ensure justice is served. #JusticeForAlice",
+        "Diana: Let's continue our support for each other during this challenging time, while also staying vigilant to ensure justice is served. #JusticeForAlice #SupportAndVigilance"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm saddened by Alice's sudden demise. Let's all be vigilant and support each other during this difficult time.",
+        "Charlie: I share Diana's sentiments. Let's remember Alice's kindness and support each other through this loss. However, we must also ensure justice is served. Let's be vigilant.",
+        "Bob: I agree with Diana and Charlie, let's support each other during this tough time. But we must also remember Alice's last words and be vigilant.",
+        "Bob: Let's not forget Alice's words of vigilance amidst our grief. We must support each other, but remain cautious as well.",
+        "Charlie: Let's honor Alice's memory by staying vigilant and supporting each other. We must ensure justice is served. #JusticeForAlice",
+        "You said: Let's continue our support for each other during this challenging time, while also staying vigilant to ensure justice is served. #JusticeForAlice #SupportAndVigilance",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

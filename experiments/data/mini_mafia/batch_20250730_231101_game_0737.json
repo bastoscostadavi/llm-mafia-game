@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0737",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 737,
+  "timestamp": "2025-07-31T03:10:26.695547",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and work together to uncover the truth.",
+        "You said: I'm saddened by Diana's passing. Let's trust that justice will prevail and support each other during this difficult time.",
+        "Bob: I agree with Charlie, let's all work together to find out who was behind Diana's death. We must stay vigilant and not let fear or sadness cloud our judgment.",
+        "Bob: Let's focus on gathering facts, not speculation. We can only uncover the truth by working together and sharing information. Let's keep an open mind and listen closely to each other.",
+        "Charlie: Let's not jump to conclusions. We need to focus on gathering facts and remain open-minded to all possibilities. Together, we can uncover the truth.",
+        "You said: I echo Charlie and Bob's sentiments. Let's work together to uncover the truth and remember, even in the face of tragedy, justice must prevail."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm shocked by Diana's sudden death. Let's all stay vigilant and work together to uncover the truth.",
+        "Alice: I'm saddened by Diana's passing. Let's trust that justice will prevail and support each other during this difficult time.",
+        "You said: I agree with Charlie, let's all work together to find out who was behind Diana's death. We must stay vigilant and not let fear or sadness cloud our judgment.",
+        "You said: Let's focus on gathering facts, not speculation. We can only uncover the truth by working together and sharing information. Let's keep an open mind and listen closely to each other.",
+        "Charlie: Let's not jump to conclusions. We need to focus on gathering facts and remain open-minded to all possibilities. Together, we can uncover the truth.",
+        "Alice: I echo Charlie and Bob's sentiments. Let's work together to uncover the truth and remember, even in the face of tragedy, justice must prevail.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all stay vigilant and work together to uncover the truth.",
+        "Alice: I'm saddened by Diana's passing. Let's trust that justice will prevail and support each other during this difficult time.",
+        "Bob: I agree with Charlie, let's all work together to find out who was behind Diana's death. We must stay vigilant and not let fear or sadness cloud our judgment.",
+        "Bob: Let's focus on gathering facts, not speculation. We can only uncover the truth by working together and sharing information. Let's keep an open mind and listen closely to each other.",
+        "You said: Let's not jump to conclusions. We need to focus on gathering facts and remain open-minded to all possibilities. Together, we can uncover the truth.",
+        "Alice: I echo Charlie and Bob's sentiments. Let's work together to uncover the truth and remember, even in the face of tragedy, justice must prevail.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

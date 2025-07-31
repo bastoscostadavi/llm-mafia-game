@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0358",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 358,
+  "timestamp": "2025-07-31T01:07:24.751163",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all stay strong during this unfortunate time. Our focus should be on finding Alice's killer.",
+        "You said: I'm deeply saddened by Alice's passing. Let's work together to find the truth and bring justice.",
+        "You said: I'd like to propose a vote for Charlie tonight. Let's work together to uncover the truth and bring Alice's killer to justice.",
+        "Diana: I support Bob's proposal for a vote tonight. Let's work together to bring Alice's killer to justice.",
+        "Charlie: I'm saddened by Alice's death. Let's all work together to find the truth and bring her killer to justice.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "You said: I agree, let's all stay strong during this unfortunate time. Our focus should be on finding Alice's killer.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's work together to find the truth and bring justice.",
+        "Bob: I'd like to propose a vote for Charlie tonight. Let's work together to uncover the truth and bring Alice's killer to justice.",
+        "Diana: I support Bob's proposal for a vote tonight. Let's work together to bring Alice's killer to justice.",
+        "You said: I'm saddened by Alice's death. Let's all work together to find the truth and bring her killer to justice."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time.",
+        "Charlie: I agree, let's all stay strong during this unfortunate time. Our focus should be on finding Alice's killer.",
+        "Bob: I'm deeply saddened by Alice's passing. Let's work together to find the truth and bring justice.",
+        "Bob: I'd like to propose a vote for Charlie tonight. Let's work together to uncover the truth and bring Alice's killer to justice.",
+        "You said: I support Bob's proposal for a vote tonight. Let's work together to bring Alice's killer to justice.",
+        "Charlie: I'm saddened by Alice's death. Let's all work together to find the truth and bring her killer to justice.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0832",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 832,
+  "timestamp": "2025-07-30T21:04:26.515192",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. We must ensure justice is served. Let's stay vigilant and cooperate to find the culprit.",
+        "Diana: I agree with Charlie, let's work together to find the person responsible for Alice's death. Our focus should be on cooperation and communication.",
+        "You said: I'm shocked by Alice's passing. Let's all stay focused on finding the truth and bring justice to her memory.",
+        "You said: Let's not jump to conclusions. We need to keep an open mind and gather all the information before making any accusations. Alice's memory deserves our diligence and respect.",
+        "Diana: Let's not forget Alice's kindness and warmth. Let's channel our grief into finding the truth together. We can't let her down.",
+        "Charlie: Let's not lose focus. We need to find the killer to honor Alice's memory. I believe in our ability to work together and uncover the truth."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. We must ensure justice is served. Let's stay vigilant and cooperate to find the culprit.",
+        "Diana: I agree with Charlie, let's work together to find the person responsible for Alice's death. Our focus should be on cooperation and communication.",
+        "Bob: I'm shocked by Alice's passing. Let's all stay focused on finding the truth and bring justice to her memory.",
+        "Bob: Let's not jump to conclusions. We need to keep an open mind and gather all the information before making any accusations. Alice's memory deserves our diligence and respect.",
+        "Diana: Let's not forget Alice's kindness and warmth. Let's channel our grief into finding the truth together. We can't let her down.",
+        "You said: Let's not lose focus. We need to find the killer to honor Alice's memory. I believe in our ability to work together and uncover the truth.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. We must ensure justice is served. Let's stay vigilant and cooperate to find the culprit.",
+        "You said: I agree with Charlie, let's work together to find the person responsible for Alice's death. Our focus should be on cooperation and communication.",
+        "Bob: I'm shocked by Alice's passing. Let's all stay focused on finding the truth and bring justice to her memory.",
+        "Bob: Let's not jump to conclusions. We need to keep an open mind and gather all the information before making any accusations. Alice's memory deserves our diligence and respect.",
+        "You said: Let's not forget Alice's kindness and warmth. Let's channel our grief into finding the truth together. We can't let her down.",
+        "Charlie: Let's not lose focus. We need to find the killer to honor Alice's memory. I believe in our ability to work together and uncover the truth.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0812",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 812,
+  "timestamp": "2025-07-31T03:34:30.461665",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm saddened by Bob's sudden departure. Let's all try to work together to uncover the truth. Rest in peace, Bob.",
+        "You said: I agree with Charlie, let's work together to find out who among us is the mafioso. Rest assured, I have no involvement in Bob's death.",
+        "Diana: I'm concerned about Bob's death and urge us all to remain vigilant. Let's focus on finding out who among us could have committed this heinous act.",
+        "Charlie: Let's not jump to conclusions based on Bob's death. We should focus on working together to uncover the truth and maintain trust within our group.",
+        "Diana: Let's stay focused on identifying the mafioso. I'm confident we can work together to uncover the truth and bring justice for Bob.",
+        "You said: Let's not forget that we need to maintain trust and unity in our group. Let's focus on working together to uncover any suspicious activity and ensure that justice is served for Bob.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "You said: I'm saddened by Bob's sudden departure. Let's all try to work together to uncover the truth. Rest in peace, Bob.",
+        "Alice: I agree with Charlie, let's work together to find out who among us is the mafioso. Rest assured, I have no involvement in Bob's death.",
+        "Diana: I'm concerned about Bob's death and urge us all to remain vigilant. Let's focus on finding out who among us could have committed this heinous act.",
+        "You said: Let's not jump to conclusions based on Bob's death. We should focus on working together to uncover the truth and maintain trust within our group.",
+        "Diana: Let's stay focused on identifying the mafioso. I'm confident we can work together to uncover the truth and bring justice for Bob.",
+        "Alice: Let's not forget that we need to maintain trust and unity in our group. Let's focus on working together to uncover any suspicious activity and ensure that justice is served for Bob.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm saddened by Bob's sudden departure. Let's all try to work together to uncover the truth. Rest in peace, Bob.",
+        "Alice: I agree with Charlie, let's work together to find out who among us is the mafioso. Rest assured, I have no involvement in Bob's death.",
+        "You said: I'm concerned about Bob's death and urge us all to remain vigilant. Let's focus on finding out who among us could have committed this heinous act.",
+        "Charlie: Let's not jump to conclusions based on Bob's death. We should focus on working together to uncover the truth and maintain trust within our group.",
+        "You said: Let's stay focused on identifying the mafioso. I'm confident we can work together to uncover the truth and bring justice for Bob.",
+        "Alice: Let's not forget that we need to maintain trust and unity in our group. Let's focus on working together to uncover any suspicious activity and ensure that justice is served for Bob."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0682",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 682,
+  "timestamp": "2025-07-30T20:14:23.922811",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Alice, let's all be cautious and watch each other closely.",
+        "Diana: I share Alice and Bob's concerns. Let's remember to communicate openly and cooperate to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions, but we should remain vigilant and open about our actions.",
+        "You said: Let's not forget that we've lost a player already. We need to work together and trust each other to ensure everyone's safety.",
+        "Diana: Let's continue our efforts to communicate openly and cooperate to ensure everyone's safety. We must remember that trust and teamwork are essential for victory. #TeamworkMakesTheDreamWork...",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's all be cautious and watch each other closely.",
+        "Diana: I share Alice and Bob's concerns. Let's remember to communicate openly and cooperate to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but we should remain vigilant and open about our actions.",
+        "Alice: Let's not forget that we've lost a player already. We need to work together and trust each other to ensure everyone's safety.",
+        "Diana: Let's continue our efforts to communicate openly and cooperate to ensure everyone's safety. We must remember that trust and teamwork are essential for victory. #TeamworkMakesTheDreamWork..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Alice, let's all be cautious and watch each other closely.",
+        "You said: I share Alice and Bob's concerns. Let's remember to communicate openly and cooperate to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions, but we should remain vigilant and open about our actions.",
+        "Alice: Let's not forget that we've lost a player already. We need to work together and trust each other to ensure everyone's safety.",
+        "You said: Let's continue our efforts to communicate openly and cooperate to ensure everyone's safety. We must remember that trust and teamwork are essential for victory. #TeamworkMakesTheDreamWork...",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

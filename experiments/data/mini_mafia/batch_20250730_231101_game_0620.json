@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0620",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 620,
+  "timestamp": "2025-07-31T02:32:19.763249",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm surprised by Alice's sudden disappearance. Let's all stay vigilant and keep an eye on each other during this critical time.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's all be cautious and share any suspicious activities or observations.",
+        "Diana: I agree with Charlie and Bob. Let's be vigilant and share any suspicious activities or observations we have. Alice's sudden disappearance is concerning.",
+        "You said: I'd like to remind everyone of the importance of vigilance and communication following Alice's disappearance. Let's share any suspicious activities or observations we have.",
+        "Diana: I've noticed that Bob and Charlie have both expressed concern about Alice's disappearance. Let's work together to identify any unusual activities or observations.",
+        "Charlie: I'm saddened by Alice's disappearance. Let's remain focused on finding answers and ensuring everyone's safety.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm surprised by Alice's sudden disappearance. Let's all stay vigilant and keep an eye on each other during this critical time.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's all be cautious and share any suspicious activities or observations.",
+        "Diana: I agree with Charlie and Bob. Let's be vigilant and share any suspicious activities or observations we have. Alice's sudden disappearance is concerning.",
+        "Bob: I'd like to remind everyone of the importance of vigilance and communication following Alice's disappearance. Let's share any suspicious activities or observations we have.",
+        "Diana: I've noticed that Bob and Charlie have both expressed concern about Alice's disappearance. Let's work together to identify any unusual activities or observations.",
+        "You said: I'm saddened by Alice's disappearance. Let's remain focused on finding answers and ensuring everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm surprised by Alice's sudden disappearance. Let's all stay vigilant and keep an eye on each other during this critical time.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's all be cautious and share any suspicious activities or observations.",
+        "You said: I agree with Charlie and Bob. Let's be vigilant and share any suspicious activities or observations we have. Alice's sudden disappearance is concerning.",
+        "Bob: I'd like to remind everyone of the importance of vigilance and communication following Alice's disappearance. Let's share any suspicious activities or observations we have.",
+        "You said: I've noticed that Bob and Charlie have both expressed concern about Alice's disappearance. Let's work together to identify any unusual activities or observations.",
+        "Charlie: I'm saddened by Alice's disappearance. Let's remain focused on finding answers and ensuring everyone's safety.",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

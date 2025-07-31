@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0810",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 810,
+  "timestamp": "2025-07-30T20:57:04.190247",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. Let's all be vigilant and support each other during this difficult time. Let's not let fear and suspicion cloud our judgement. #UnitedWeStand...",
+        "You said: I agree with Charlie, let's stay united and support Alice's memory. #HealingTogether",
+        "Diana: I agree with Charlie and Bob, let's come together during this time of grief. We should focus on supporting each other and not let fear or suspicion take over. #HealingTogether #UnitedWeStand",
+        "Diana: Let's continue our support for each other during this difficult time. We must stay united and not let fear or suspicion divide us. #HealingTogether #UnitedWeStand",
+        "You said: Let's continue our show of unity and support during this challenging time. #HealingTogether #UnitedWeStand",
+        "Charlie: Let's continue our efforts to support each other during this trying time. We must stay united and focused on healing together. #HealingTogether #UnitedWeStand"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's all be vigilant and support each other during this difficult time. Let's not let fear and suspicion cloud our judgement. #UnitedWeStand...",
+        "Bob: I agree with Charlie, let's stay united and support Alice's memory. #HealingTogether",
+        "Diana: I agree with Charlie and Bob, let's come together during this time of grief. We should focus on supporting each other and not let fear or suspicion take over. #HealingTogether #UnitedWeStand",
+        "Diana: Let's continue our support for each other during this difficult time. We must stay united and not let fear or suspicion divide us. #HealingTogether #UnitedWeStand",
+        "Bob: Let's continue our show of unity and support during this challenging time. #HealingTogether #UnitedWeStand",
+        "You said: Let's continue our efforts to support each other during this trying time. We must stay united and focused on healing together. #HealingTogether #UnitedWeStand",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden demise. Let's all be vigilant and support each other during this difficult time. Let's not let fear and suspicion cloud our judgement. #UnitedWeStand...",
+        "Bob: I agree with Charlie, let's stay united and support Alice's memory. #HealingTogether",
+        "You said: I agree with Charlie and Bob, let's come together during this time of grief. We should focus on supporting each other and not let fear or suspicion take over. #HealingTogether #UnitedWeStand",
+        "You said: Let's continue our support for each other during this difficult time. We must stay united and not let fear or suspicion divide us. #HealingTogether #UnitedWeStand",
+        "Bob: Let's continue our show of unity and support during this challenging time. #HealingTogether #UnitedWeStand",
+        "Charlie: Let's continue our efforts to support each other during this trying time. We must stay united and focused on healing together. #HealingTogether #UnitedWeStand",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

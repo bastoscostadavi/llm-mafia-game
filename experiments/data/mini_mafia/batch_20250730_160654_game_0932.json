@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0932",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 932,
+  "timestamp": "2025-07-30T21:37:53.303496",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden passing. Let's all take a moment to remember her fondly. #restinpeaceAlice",
+        "You said: I'd like to propose that we focus our discussion on Charlie's strange behavior last night. Let's not let Alice's passing distract us from our mission to uncover the truth. #justiceforAlice",
+        "Diana: I agree with Bob, let's focus on the unusual behavior last night to honor Alice's memory and bring justice. #justiceforAlice",
+        "Charlie: I understand the importance of focusing on last night's events in honor of Alice. Let's work together to uncover the truth. #justiceforAlice",
+        "Diana: Let's stay focused and investigate Charlie's strange behavior last night to bring justice for Alice. #justiceforAlice",
+        "You said: Let's not forget the unusual events of last night. Focusing on the truth will bring justice for Alice. #justiceforAlice"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden passing. Let's all take a moment to remember her fondly. #restinpeaceAlice",
+        "Bob: I'd like to propose that we focus our discussion on Charlie's strange behavior last night. Let's not let Alice's passing distract us from our mission to uncover the truth. #justiceforAlice",
+        "Diana: I agree with Bob, let's focus on the unusual behavior last night to honor Alice's memory and bring justice. #justiceforAlice",
+        "You said: I understand the importance of focusing on last night's events in honor of Alice. Let's work together to uncover the truth. #justiceforAlice",
+        "Diana: Let's stay focused and investigate Charlie's strange behavior last night to bring justice for Alice. #justiceforAlice",
+        "Bob: Let's not forget the unusual events of last night. Focusing on the truth will bring justice for Alice. #justiceforAlice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's sudden passing. Let's all take a moment to remember her fondly. #restinpeaceAlice",
+        "Bob: I'd like to propose that we focus our discussion on Charlie's strange behavior last night. Let's not let Alice's passing distract us from our mission to uncover the truth. #justiceforAlice",
+        "You said: I agree with Bob, let's focus on the unusual behavior last night to honor Alice's memory and bring justice. #justiceforAlice",
+        "Charlie: I understand the importance of focusing on last night's events in honor of Alice. Let's work together to uncover the truth. #justiceforAlice",
+        "You said: Let's stay focused and investigate Charlie's strange behavior last night to bring justice for Alice. #justiceforAlice",
+        "Bob: Let's not forget the unusual events of last night. Focusing on the truth will bring justice for Alice. #justiceforAlice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

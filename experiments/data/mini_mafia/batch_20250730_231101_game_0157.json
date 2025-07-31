@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0157",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 157,
+  "timestamp": "2025-07-31T00:02:09.075934",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all be cautious and watch out for each other. The unexpected loss of Charlie is concerning.",
+        "You said: I share Diana's concerns about Charlie's sudden disappearance. Let's all be cautious and keep a close eye on each other.",
+        "Diana: Let's not jump to conclusions, but we should all stay vigilant and keep an open communication to ensure the safety of our group. The loss of Charlie is a reminder of the importance of trust and...",
+        "You said: I'd like to echo Diana's sentiments of staying vigilant and maintaining open communication to ensure our group's safety in these uncertain times. Let's all work together to uncover any potential...",
+        "Bob: Let's not let fear divide us. We've lost a valuable member, but we mustn't let that make us suspicious of each other. Let's focus on finding the real culprit and keeping our group strong."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's all be cautious and watch out for each other. The unexpected loss of Charlie is concerning.",
+        "Alice: I share Diana's concerns about Charlie's sudden disappearance. Let's all be cautious and keep a close eye on each other.",
+        "Diana: Let's not jump to conclusions, but we should all stay vigilant and keep an open communication to ensure the safety of our group. The loss of Charlie is a reminder of the importance of trust and...",
+        "Alice: I'd like to echo Diana's sentiments of staying vigilant and maintaining open communication to ensure our group's safety in these uncertain times. Let's all work together to uncover any potential...",
+        "You said: Let's not let fear divide us. We've lost a valuable member, but we mustn't let that make us suspicious of each other. Let's focus on finding the real culprit and keeping our group strong.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's all be cautious and watch out for each other. The unexpected loss of Charlie is concerning.",
+        "Alice: I share Diana's concerns about Charlie's sudden disappearance. Let's all be cautious and keep a close eye on each other.",
+        "You said: Let's not jump to conclusions, but we should all stay vigilant and keep an open communication to ensure the safety of our group. The loss of Charlie is a reminder of the importance of trust and...",
+        "Alice: I'd like to echo Diana's sentiments of staying vigilant and maintaining open communication to ensure our group's safety in these uncertain times. Let's all work together to uncover any potential...",
+        "Bob: Let's not let fear divide us. We've lost a valuable member, but we mustn't let that make us suspicious of each other. Let's focus on finding the real culprit and keeping our group strong.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

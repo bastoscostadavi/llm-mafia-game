@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0656",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 656,
+  "timestamp": "2025-07-31T02:44:03.808328",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's untimely demise. Let's all support each other during these trying times.",
+        "Bob: I'd like to express my condolences to Charlie's family and friends. Let's all remain vigilant during these uncertain times.",
+        "Diana: I'd like to propose we focus our discussions on potential mafia members based on their actions and words. Let's work together to ensure justice prevails.",
+        "You said: I agree with Diana, let's focus our discussions on suspicious actions and words. Let's work together to uncover the truth.",
+        "Diana: Let's keep our focus on uncovering suspicious actions and words to ensure justice prevails. Together, we can identify the mafia and bring them to light.",
+        "Bob: Let's not jump to conclusions based on emotions. Let's focus on identifying suspicious actions and words to ensure justice prevails.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's untimely demise. Let's all support each other during these trying times.",
+        "You said: I'd like to express my condolences to Charlie's family and friends. Let's all remain vigilant during these uncertain times.",
+        "Diana: I'd like to propose we focus our discussions on potential mafia members based on their actions and words. Let's work together to ensure justice prevails.",
+        "Alice: I agree with Diana, let's focus our discussions on suspicious actions and words. Let's work together to uncover the truth.",
+        "Diana: Let's keep our focus on uncovering suspicious actions and words to ensure justice prevails. Together, we can identify the mafia and bring them to light.",
+        "You said: Let's not jump to conclusions based on emotions. Let's focus on identifying suspicious actions and words to ensure justice prevails.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's untimely demise. Let's all support each other during these trying times.",
+        "Bob: I'd like to express my condolences to Charlie's family and friends. Let's all remain vigilant during these uncertain times.",
+        "You said: I'd like to propose we focus our discussions on potential mafia members based on their actions and words. Let's work together to ensure justice prevails.",
+        "Alice: I agree with Diana, let's focus our discussions on suspicious actions and words. Let's work together to uncover the truth.",
+        "You said: Let's keep our focus on uncovering suspicious actions and words to ensure justice prevails. Together, we can identify the mafia and bring them to light.",
+        "Bob: Let's not jump to conclusions based on emotions. Let's focus on identifying suspicious actions and words to ensure justice prevails."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

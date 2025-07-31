@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0098",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 98,
+  "timestamp": "2025-07-30T16:41:25.801758",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's all try to support each other during this difficult time. #solidarity #healingprocess",
+        "Diana: I'd like to propose that we focus on identifying the culprit behind Alice's death to bring justice and closure. Let's share any suspicious activity or observations we've noticed. #justiceforalice",
+        "Charlie: I agree with Diana. Let's work together to uncover the truth behind Alice's death. #justiceforalice",
+        "You said: I support the call for justice and will share any relevant information I have. #justiceforalice #solidarity #healingprocess",
+        "Diana: Let's continue discussing suspicious activities related to Alice's death. Any new information could help bring the culprit to light. #justiceforalice",
+        "Charlie: I recall seeing Alice talking with Bob in the park yesterday. They seemed to be having a heated argument. #suspiciousactivity"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's all try to support each other during this difficult time. #solidarity #healingprocess",
+        "Diana: I'd like to propose that we focus on identifying the culprit behind Alice's death to bring justice and closure. Let's share any suspicious activity or observations we've noticed. #justiceforalice",
+        "You said: I agree with Diana. Let's work together to uncover the truth behind Alice's death. #justiceforalice",
+        "Bob: I support the call for justice and will share any relevant information I have. #justiceforalice #solidarity #healingprocess",
+        "Diana: Let's continue discussing suspicious activities related to Alice's death. Any new information could help bring the culprit to light. #justiceforalice",
+        "You said: I recall seeing Alice talking with Bob in the park yesterday. They seemed to be having a heated argument. #suspiciousactivity",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's all try to support each other during this difficult time. #solidarity #healingprocess",
+        "You said: I'd like to propose that we focus on identifying the culprit behind Alice's death to bring justice and closure. Let's share any suspicious activity or observations we've noticed. #justiceforalice",
+        "Charlie: I agree with Diana. Let's work together to uncover the truth behind Alice's death. #justiceforalice",
+        "Bob: I support the call for justice and will share any relevant information I have. #justiceforalice #solidarity #healingprocess",
+        "You said: Let's continue discussing suspicious activities related to Alice's death. Any new information could help bring the culprit to light. #justiceforalice",
+        "Charlie: I recall seeing Alice talking with Bob in the park yesterday. They seemed to be having a heated argument. #suspiciousactivity",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

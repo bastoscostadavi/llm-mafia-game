@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0473",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 473,
+  "timestamp": "2025-07-30T19:00:53.722589",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden passing. Let's all support each other during this difficult time.",
+        "Charlie: I agree, this is a tragic loss. Let's all try to stay strong and support each other.",
+        "Diana: I'm saddened by Alice's passing. Let's stay vigilant to ensure justice is served.\n\n(Note: In this situation, Diana should try to subtly hint to the other villager or detective about her suspicion...",
+        "Diana: I'd like to propose a moment of silence to honor Alice's memory. Let's take a moment to reflect on the good times we had with her.\n\nAdditionally, let's all stay vigilant and keep an eye out for any...",
+        "Charlie: I'd like to propose a moment of silence to honor Alice's memory. Let's take a moment to reflect on the good times we had with her.\n\n(Note: In this situation, it's important to not reveal any...",
+        "You said: I'd like to remind everyone to stay focused and support each other during this time of grief. Let's work together to uncover the truth behind Alice's death.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden passing. Let's all support each other during this difficult time.",
+        "You said: I agree, this is a tragic loss. Let's all try to stay strong and support each other.",
+        "Diana: I'm saddened by Alice's passing. Let's stay vigilant to ensure justice is served.\n\n(Note: In this situation, Diana should try to subtly hint to the other villager or detective about her suspicion...",
+        "Diana: I'd like to propose a moment of silence to honor Alice's memory. Let's take a moment to reflect on the good times we had with her.\n\nAdditionally, let's all stay vigilant and keep an eye out for any...",
+        "You said: I'd like to propose a moment of silence to honor Alice's memory. Let's take a moment to reflect on the good times we had with her.\n\n(Note: In this situation, it's important to not reveal any...",
+        "Bob: I'd like to remind everyone to stay focused and support each other during this time of grief. Let's work together to uncover the truth behind Alice's death."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden passing. Let's all support each other during this difficult time.",
+        "Charlie: I agree, this is a tragic loss. Let's all try to stay strong and support each other.",
+        "You said: I'm saddened by Alice's passing. Let's stay vigilant to ensure justice is served.\n\n(Note: In this situation, Diana should try to subtly hint to the other villager or detective about her suspicion...",
+        "You said: I'd like to propose a moment of silence to honor Alice's memory. Let's take a moment to reflect on the good times we had with her.\n\nAdditionally, let's all stay vigilant and keep an eye out for any...",
+        "Charlie: I'd like to propose a moment of silence to honor Alice's memory. Let's take a moment to reflect on the good times we had with her.\n\n(Note: In this situation, it's important to not reveal any...",
+        "Bob: I'd like to remind everyone to stay focused and support each other during this time of grief. Let's work together to uncover the truth behind Alice's death.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

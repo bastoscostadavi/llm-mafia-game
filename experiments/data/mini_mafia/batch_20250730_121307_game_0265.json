@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0265",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 265,
+  "timestamp": "2025-07-30T13:51:00.702195",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked about Charlie's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Diana: I'm deeply saddened by Charlie's death. Let's all cooperate to uncover the truth behind this tragedy. If anyone has any information, please share it now.",
+        "Bob: I agree with Alice and Diana, we should work together to find the truth. Let's not jump to conclusions or accuse anyone without solid evidence. Let's keep an open mind and share any suspicious...",
+        "Bob: I'm saddened by Charlie's death and support our efforts to find the truth. Let's be cautious and not jump to conclusions. If anyone notices anything unusual, please share it.",
+        "Diana: I've noticed something unusual about Bob's behavior during the night. He seemed unusually quiet and hesitant during the investigation phase. It's worth considering as a potential lead in our...",
+        "You said: I agree with Diana's observation about Bob's behavior during the night. Let's discuss this further and consider it as a potential lead in our investigation.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "Diana: I'm deeply saddened by Charlie's death. Let's all cooperate to uncover the truth behind this tragedy. If anyone has any information, please share it now.",
+        "You said: I agree with Alice and Diana, we should work together to find the truth. Let's not jump to conclusions or accuse anyone without solid evidence. Let's keep an open mind and share any suspicious...",
+        "You said: I'm saddened by Charlie's death and support our efforts to find the truth. Let's be cautious and not jump to conclusions. If anyone notices anything unusual, please share it.",
+        "Diana: I've noticed something unusual about Bob's behavior during the night. He seemed unusually quiet and hesitant during the investigation phase. It's worth considering as a potential lead in our...",
+        "Alice: I agree with Diana's observation about Bob's behavior during the night. Let's discuss this further and consider it as a potential lead in our investigation."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm shocked about Charlie's sudden death. Let's work together to find out who did this and bring them to justice.",
+        "You said: I'm deeply saddened by Charlie's death. Let's all cooperate to uncover the truth behind this tragedy. If anyone has any information, please share it now.",
+        "Bob: I agree with Alice and Diana, we should work together to find the truth. Let's not jump to conclusions or accuse anyone without solid evidence. Let's keep an open mind and share any suspicious...",
+        "Bob: I'm saddened by Charlie's death and support our efforts to find the truth. Let's be cautious and not jump to conclusions. If anyone notices anything unusual, please share it.",
+        "You said: I've noticed something unusual about Bob's behavior during the night. He seemed unusually quiet and hesitant during the investigation phase. It's worth considering as a potential lead in our...",
+        "Alice: I agree with Diana's observation about Bob's behavior during the night. Let's discuss this further and consider it as a potential lead in our investigation.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

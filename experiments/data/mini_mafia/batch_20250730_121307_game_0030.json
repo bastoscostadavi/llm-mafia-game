@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0030",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 30,
+  "timestamp": "2025-07-30T12:23:13.208991",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Charlie is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Alice, let's stay vigilant tonight.",
+        "Bob: I agree with Alice and Charlie, let's be cautious tonight. It's important we keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I'd like to propose that we all share any suspicious observations or concerns we might have during the discussion phase. This could help us identify any potential threats and work together to...",
+        "You said: I've noticed Charlie and I agreeing on being cautious tonight. Let's keep open communication and share any concerns we have.",
+        "Charlie: I'd like to add that we should all report any unusual behavior or suspicious actions we notice, no matter how insignificant they may seem. It's better to be safe than sorry."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other tonight.",
+        "Charlie: I agree with Alice, let's stay vigilant tonight.",
+        "You said: I agree with Alice and Charlie, let's be cautious tonight. It's important we keep a close eye on each other to ensure everyone's safety.",
+        "You said: I'd like to propose that we all share any suspicious observations or concerns we might have during the discussion phase. This could help us identify any potential threats and work together to...",
+        "Alice: I've noticed Charlie and I agreeing on being cautious tonight. Let's keep open communication and share any concerns we have.",
+        "Charlie: I'd like to add that we should all report any unusual behavior or suspicious actions we notice, no matter how insignificant they may seem. It's better to be safe than sorry.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden disappearance. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Alice, let's stay vigilant tonight.",
+        "Bob: I agree with Alice and Charlie, let's be cautious tonight. It's important we keep a close eye on each other to ensure everyone's safety.",
+        "Bob: I'd like to propose that we all share any suspicious observations or concerns we might have during the discussion phase. This could help us identify any potential threats and work together to...",
+        "Alice: I've noticed Charlie and I agreeing on being cautious tonight. Let's keep open communication and share any concerns we have.",
+        "You said: I'd like to add that we should all report any unusual behavior or suspicious actions we notice, no matter how insignificant they may seem. It's better to be safe than sorry.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0425",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 425,
+  "timestamp": "2025-07-30T14:52:51.531581",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's all try to support each other during this difficult time and work together to uncover the truth.",
+        "Bob: I'm saddened by Diana's passing. Let's all stay strong and work together to find out what happened.",
+        "Charlie: I agree with Alice's sentiment. Let's focus on finding out who killed Diana and bring them to justice together. Bob, do you have any information that could help us?",
+        "Charlie: Let's not speculate or jump to conclusions, but focus on gathering facts to uncover the truth behind Diana's death. Bob, have you noticed anything unusual lately?",
+        "You said: Let's not forget that we need to remain vigilant and work together to uncover any potential clues about Diana's death. We can't afford to let our guard down. Bob, have you seen or heard anything...",
+        "Bob: I share Alice and Charlie's sentiments. Let's remain focused and work together to uncover the truth about Diana's death. I haven't noticed anything unusual.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all try to support each other during this difficult time and work together to uncover the truth.",
+        "You said: I'm saddened by Diana's passing. Let's all stay strong and work together to find out what happened.",
+        "Charlie: I agree with Alice's sentiment. Let's focus on finding out who killed Diana and bring them to justice together. Bob, do you have any information that could help us?",
+        "Charlie: Let's not speculate or jump to conclusions, but focus on gathering facts to uncover the truth behind Diana's death. Bob, have you noticed anything unusual lately?",
+        "Alice: Let's not forget that we need to remain vigilant and work together to uncover any potential clues about Diana's death. We can't afford to let our guard down. Bob, have you seen or heard anything...",
+        "You said: I share Alice and Charlie's sentiments. Let's remain focused and work together to uncover the truth about Diana's death. I haven't noticed anything unusual."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's all try to support each other during this difficult time and work together to uncover the truth.",
+        "Bob: I'm saddened by Diana's passing. Let's all stay strong and work together to find out what happened.",
+        "You said: I agree with Alice's sentiment. Let's focus on finding out who killed Diana and bring them to justice together. Bob, do you have any information that could help us?",
+        "You said: Let's not speculate or jump to conclusions, but focus on gathering facts to uncover the truth behind Diana's death. Bob, have you noticed anything unusual lately?",
+        "Alice: Let's not forget that we need to remain vigilant and work together to uncover any potential clues about Diana's death. We can't afford to let our guard down. Bob, have you seen or heard anything...",
+        "Bob: I share Alice and Charlie's sentiments. Let's remain focused and work together to uncover the truth about Diana's death. I haven't noticed anything unusual.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0293",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 293,
+  "timestamp": "2025-07-30T17:51:50.883078",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden passing. Let's all take a moment to remember her. Let's focus on finding the real culprit and not accuse each other baselessly.",
+        "You said: I agree with Bob, let's focus on finding the real culprit. Our thoughts are with Diana and her family. I will do my best to gather information and share it with the group.",
+        "Charlie: I'll share any relevant information I gather during the investigation. Let's work together to uncover the truth. #teamwork #dianamemorial",
+        "You said: Based on the information I've gathered, I believe it's important we keep an open dialogue and consider all possibilities. Let's try to uncover any inconsistencies or suspicious behavior....",
+        "Bob: I support Alice's call for open dialogue and information sharing. Let's work together to uncover the truth about Diana's death. #justiceforDiana",
+        "Charlie: I've gathered some information during the investigation, let's discuss it openly to find the truth. #transparency #dianainvestigation"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden passing. Let's all take a moment to remember her. Let's focus on finding the real culprit and not accuse each other baselessly.",
+        "Alice: I agree with Bob, let's focus on finding the real culprit. Our thoughts are with Diana and her family. I will do my best to gather information and share it with the group.",
+        "Charlie: I'll share any relevant information I gather during the investigation. Let's work together to uncover the truth. #teamwork #dianamemorial",
+        "Alice: Based on the information I've gathered, I believe it's important we keep an open dialogue and consider all possibilities. Let's try to uncover any inconsistencies or suspicious behavior....",
+        "You said: I support Alice's call for open dialogue and information sharing. Let's work together to uncover the truth about Diana's death. #justiceforDiana",
+        "Charlie: I've gathered some information during the investigation, let's discuss it openly to find the truth. #transparency #dianainvestigation",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm shocked about Diana's sudden passing. Let's all take a moment to remember her. Let's focus on finding the real culprit and not accuse each other baselessly.",
+        "Alice: I agree with Bob, let's focus on finding the real culprit. Our thoughts are with Diana and her family. I will do my best to gather information and share it with the group.",
+        "You said: I'll share any relevant information I gather during the investigation. Let's work together to uncover the truth. #teamwork #dianamemorial",
+        "Alice: Based on the information I've gathered, I believe it's important we keep an open dialogue and consider all possibilities. Let's try to uncover any inconsistencies or suspicious behavior....",
+        "Bob: I support Alice's call for open dialogue and information sharing. Let's work together to uncover the truth about Diana's death. #justiceforDiana",
+        "You said: I've gathered some information during the investigation, let's discuss it openly to find the truth. #transparency #dianainvestigation",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

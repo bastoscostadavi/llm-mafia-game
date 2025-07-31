@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0074",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 74,
+  "timestamp": "2025-07-30T16:32:58.881582",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. Let's all stay vigilant and support Diana in her investigation.",
+        "You said: I'm saddened by Bob's passing. Let's work together to ensure justice is served and the culprit is brought to light. #JusticeForBob. #StayVigilant. #SupportDiana.",
+        "Diana: I'm grateful for your support. Let's focus on identifying the culprit behind Bob's death. #JusticeForBob. #StayVigilant.",
+        "Charlie: I join in the call for justice and vigilance. May we uncover the truth behind Bob's death together. #JusticeForBob. #StayVigilant.",
+        "You said: Let's remain focused on finding the truth about Bob's death. We must work together to ensure the guilty party is brought to justice. #JusticeForBob #StayVigilant.",
+        "Diana: Let's not jump to conclusions. Let's continue our investigation with an open mind and focus on collecting evidence to find the truth about Bob's death. #JusticeForBob #StayVigilant.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden demise. Let's all stay vigilant and support Diana in her investigation.",
+        "Alice: I'm saddened by Bob's passing. Let's work together to ensure justice is served and the culprit is brought to light. #JusticeForBob. #StayVigilant. #SupportDiana.",
+        "Diana: I'm grateful for your support. Let's focus on identifying the culprit behind Bob's death. #JusticeForBob. #StayVigilant.",
+        "You said: I join in the call for justice and vigilance. May we uncover the truth behind Bob's death together. #JusticeForBob. #StayVigilant.",
+        "Alice: Let's remain focused on finding the truth about Bob's death. We must work together to ensure the guilty party is brought to justice. #JusticeForBob #StayVigilant.",
+        "Diana: Let's not jump to conclusions. Let's continue our investigation with an open mind and focus on collecting evidence to find the truth about Bob's death. #JusticeForBob #StayVigilant."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden demise. Let's all stay vigilant and support Diana in her investigation.",
+        "Alice: I'm saddened by Bob's passing. Let's work together to ensure justice is served and the culprit is brought to light. #JusticeForBob. #StayVigilant. #SupportDiana.",
+        "You said: I'm grateful for your support. Let's focus on identifying the culprit behind Bob's death. #JusticeForBob. #StayVigilant.",
+        "Charlie: I join in the call for justice and vigilance. May we uncover the truth behind Bob's death together. #JusticeForBob. #StayVigilant.",
+        "Alice: Let's remain focused on finding the truth about Bob's death. We must work together to ensure the guilty party is brought to justice. #JusticeForBob #StayVigilant.",
+        "You said: Let's not jump to conclusions. Let's continue our investigation with an open mind and focus on collecting evidence to find the truth about Bob's death. #JusticeForBob #StayVigilant.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0638",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 638,
+  "timestamp": "2025-07-31T02:38:18.781320",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's keep a close eye on everyone's actions.",
+        "Charlie: I agree with Diana, let's all stay vigilant to ensure everyone's safety after Bob's unexpected absence.",
+        "You said: I share Diana's concern and agree with her suggestion to stay vigilant. Let's work together to ensure the safety of our community.",
+        "Charlie: Let's remain vigilant and trust no one until we can identify the culprit behind Bob's death. Together, we can ensure the safety of our community.",
+        "Diana: Let's not jump to conclusions based on speculation. We need to stay focused and vigilant to ensure the safety of our community. Let's work together to gather more information before making any...",
+        "You said: I'd like to echo Diana's sentiments and urge us all to remain vigilant in these uncertain times. Let's work together to ensure the safety of our community."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's keep a close eye on everyone's actions.",
+        "You said: I agree with Diana, let's all stay vigilant to ensure everyone's safety after Bob's unexpected absence.",
+        "Alice: I share Diana's concern and agree with her suggestion to stay vigilant. Let's work together to ensure the safety of our community.",
+        "You said: Let's remain vigilant and trust no one until we can identify the culprit behind Bob's death. Together, we can ensure the safety of our community.",
+        "Diana: Let's not jump to conclusions based on speculation. We need to stay focused and vigilant to ensure the safety of our community. Let's work together to gather more information before making any...",
+        "Alice: I'd like to echo Diana's sentiments and urge us all to remain vigilant in these uncertain times. Let's work together to ensure the safety of our community.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's keep a close eye on everyone's actions.",
+        "Charlie: I agree with Diana, let's all stay vigilant to ensure everyone's safety after Bob's unexpected absence.",
+        "Alice: I share Diana's concern and agree with her suggestion to stay vigilant. Let's work together to ensure the safety of our community.",
+        "Charlie: Let's remain vigilant and trust no one until we can identify the culprit behind Bob's death. Together, we can ensure the safety of our community.",
+        "You said: Let's not jump to conclusions based on speculation. We need to stay focused and vigilant to ensure the safety of our community. Let's work together to gather more information before making any...",
+        "Alice: I'd like to echo Diana's sentiments and urge us all to remain vigilant in these uncertain times. Let's work together to ensure the safety of our community.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

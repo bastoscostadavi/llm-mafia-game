@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0891",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 891,
+  "timestamp": "2025-07-30T21:24:08.610330",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's untimely demise. Let's all try to find out who among us could have done this heinous act. We need to bring justice for Diana.",
+        "Charlie: I'm shocked by Diana's passing. Let's stay focused and work together to find the culprit.",
+        "You said: I agree, we should all work together to find the culprit and bring justice for Diana. Let's remain vigilant and share any suspicious information we may have.",
+        "You said: Let's not jump to conclusions. We should share any potential clues we have, but remember, it's important to keep an open mind.",
+        "Charlie: I have no specific clues to share, but I urge everyone to stay focused and work together to find the culprit. Let's not jump to conclusions and keep an open mind.",
+        "Bob: Let's remain focused on gathering information to find Diana's killer. Let's share any clues we have and work together as a team."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm deeply saddened by Diana's untimely demise. Let's all try to find out who among us could have done this heinous act. We need to bring justice for Diana.",
+        "Charlie: I'm shocked by Diana's passing. Let's stay focused and work together to find the culprit.",
+        "Alice: I agree, we should all work together to find the culprit and bring justice for Diana. Let's remain vigilant and share any suspicious information we may have.",
+        "Alice: Let's not jump to conclusions. We should share any potential clues we have, but remember, it's important to keep an open mind.",
+        "Charlie: I have no specific clues to share, but I urge everyone to stay focused and work together to find the culprit. Let's not jump to conclusions and keep an open mind.",
+        "You said: Let's remain focused on gathering information to find Diana's killer. Let's share any clues we have and work together as a team.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm deeply saddened by Diana's untimely demise. Let's all try to find out who among us could have done this heinous act. We need to bring justice for Diana.",
+        "You said: I'm shocked by Diana's passing. Let's stay focused and work together to find the culprit.",
+        "Alice: I agree, we should all work together to find the culprit and bring justice for Diana. Let's remain vigilant and share any suspicious information we may have.",
+        "Alice: Let's not jump to conclusions. We should share any potential clues we have, but remember, it's important to keep an open mind.",
+        "You said: I have no specific clues to share, but I urge everyone to stay focused and work together to find the culprit. Let's not jump to conclusions and keep an open mind.",
+        "Bob: Let's remain focused on gathering information to find Diana's killer. Let's share any clues we have and work together as a team.",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

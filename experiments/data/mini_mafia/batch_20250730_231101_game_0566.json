@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0566",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 566,
+  "timestamp": "2025-07-31T02:14:54.642201",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked and saddened by Alice's sudden passing. Let's stay focused and work together to find out who did this.",
+        "Diana: Based on my investigation, I believe Charlie's behavior is suspicious. Let's keep a close eye on him.",
+        "Charlie: I agree with Diana's assessment. Let's all cooperate to uncover the truth behind Alice's death. Charlie, do you have any information that could help us in this investigation?",
+        "Diana: Let's not forget the inconsistencies in Charlie's story. We should be wary and press for the truth.",
+        "Charlie: I'd like to express my condolences for Alice's tragic loss. Let's all work together to ensure justice is served. I have nothing to hide and am open to any questions or investigations.",
+        "You said: I support Diana's suggestion to keep a close eye on Charlie. Let's work together to uncover the truth behind Alice's death.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked and saddened by Alice's sudden passing. Let's stay focused and work together to find out who did this.",
+        "Diana: Based on my investigation, I believe Charlie's behavior is suspicious. Let's keep a close eye on him.",
+        "You said: I agree with Diana's assessment. Let's all cooperate to uncover the truth behind Alice's death. Charlie, do you have any information that could help us in this investigation?",
+        "Diana: Let's not forget the inconsistencies in Charlie's story. We should be wary and press for the truth.",
+        "You said: I'd like to express my condolences for Alice's tragic loss. Let's all work together to ensure justice is served. I have nothing to hide and am open to any questions or investigations.",
+        "Bob: I support Diana's suggestion to keep a close eye on Charlie. Let's work together to uncover the truth behind Alice's death."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked and saddened by Alice's sudden passing. Let's stay focused and work together to find out who did this.",
+        "You said: Based on my investigation, I believe Charlie's behavior is suspicious. Let's keep a close eye on him.",
+        "Charlie: I agree with Diana's assessment. Let's all cooperate to uncover the truth behind Alice's death. Charlie, do you have any information that could help us in this investigation?",
+        "You said: Let's not forget the inconsistencies in Charlie's story. We should be wary and press for the truth.",
+        "Charlie: I'd like to express my condolences for Alice's tragic loss. Let's all work together to ensure justice is served. I have nothing to hide and am open to any questions or investigations.",
+        "Bob: I support Diana's suggestion to keep a close eye on Charlie. Let's work together to uncover the truth behind Alice's death.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

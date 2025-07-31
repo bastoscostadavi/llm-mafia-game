@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0474",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 474,
+  "timestamp": "2025-07-31T01:45:21.870808",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other and make sure we're all safe.",
+        "Diana: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I share Bob and Diana's concerns for everyone's safety. Let's work together to ensure a peaceful game.",
+        "Charlie: I echo everyone's concerns for safety. Let's be vigilant and work together as a team.",
+        "You said: I'd like to propose we focus on maintaining open communication and trust within our group to ensure everyone's safety. Let's keep an eye out for any unusual behavior.",
+        "Diana: Let's continue focusing on open communication and trust to ensure everyone's safety. If anyone notices anything suspicious, let's discuss it openly."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other and make sure we're all safe.",
+        "Diana: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: I share Bob and Diana's concerns for everyone's safety. Let's work together to ensure a peaceful game.",
+        "You said: I echo everyone's concerns for safety. Let's be vigilant and work together as a team.",
+        "Bob: I'd like to propose we focus on maintaining open communication and trust within our group to ensure everyone's safety. Let's keep an eye out for any unusual behavior.",
+        "Diana: Let's continue focusing on open communication and trust to ensure everyone's safety. If anyone notices anything suspicious, let's discuss it openly.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other and make sure we're all safe.",
+        "You said: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "Charlie: I share Bob and Diana's concerns for everyone's safety. Let's work together to ensure a peaceful game.",
+        "Charlie: I echo everyone's concerns for safety. Let's be vigilant and work together as a team.",
+        "Bob: I'd like to propose we focus on maintaining open communication and trust within our group to ensure everyone's safety. Let's keep an eye out for any unusual behavior.",
+        "You said: Let's continue focusing on open communication and trust to ensure everyone's safety. If anyone notices anything suspicious, let's discuss it openly.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

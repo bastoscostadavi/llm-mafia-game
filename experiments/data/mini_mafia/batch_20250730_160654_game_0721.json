@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0721",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 721,
+  "timestamp": "2025-07-30T20:27:16.281689",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's stay alert and keep an eye out for any suspicious behavior.",
+        "You said: I agree with both Diana and Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions, but let's continue to be vigilant and keep an eye out for any unusual behavior.",
+        "Diana: Let's not forget that we've lost a player already. We need to be extra cautious and trust each other less.",
+        "You said: Let's not forget that we've lost a valuable member of our group. Let's all work together to ensure the safety of our remaining teammates. Trust is important, but so is open communication. Let's keep..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden absence. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Diana, let's stay alert and keep an eye out for any suspicious behavior.",
+        "Alice: I agree with both Diana and Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "You said: Let's not jump to conclusions, but let's continue to be vigilant and keep an eye out for any unusual behavior.",
+        "Diana: Let's not forget that we've lost a player already. We need to be extra cautious and trust each other less.",
+        "Alice: Let's not forget that we've lost a valuable member of our group. Let's all work together to ensure the safety of our remaining teammates. Trust is important, but so is open communication. Let's keep...",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's be vigilant and keep an eye on each other.",
+        "Bob: I agree with Diana, let's stay alert and keep an eye out for any suspicious behavior.",
+        "Alice: I agree with both Diana and Bob, let's keep a close eye on each other to ensure everyone's safety.",
+        "Bob: Let's not jump to conclusions, but let's continue to be vigilant and keep an eye out for any unusual behavior.",
+        "You said: Let's not forget that we've lost a player already. We need to be extra cautious and trust each other less.",
+        "Alice: Let's not forget that we've lost a valuable member of our group. Let's all work together to ensure the safety of our remaining teammates. Trust is important, but so is open communication. Let's keep...",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

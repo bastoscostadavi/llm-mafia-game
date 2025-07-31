@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0910",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 910,
+  "timestamp": "2025-07-30T21:30:32.287172",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's sudden demise. Let's all try to stay focused and find out who did this heinous deed. Our silence won't bring Alice back, but justice might bring us some peace....",
+        "Charlie: I share Bob's grief. Let's work together to find the truth and bring justice to Alice.",
+        "Diana: I'm shocked by Alice's death. Let's stay vigilant and support each other during this difficult time. We must find the truth together. #JusticeForAlice",
+        "Diana: Let's not jump to conclusions. We need solid evidence to find Alice's killer. Let's remain calm and work together. #JusticeForAlice",
+        "You said: Let's not forget, Charlie was the one who found Alice dead. We should question his alibi and search for any inconsistencies. #JusticeForAlice",
+        "Charlie: I'm as shocked and saddened as everyone by Alice's tragic death. Let's work together to uncover the truth. #JusticeForAlice"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's sudden demise. Let's all try to stay focused and find out who did this heinous deed. Our silence won't bring Alice back, but justice might bring us some peace....",
+        "You said: I share Bob's grief. Let's work together to find the truth and bring justice to Alice.",
+        "Diana: I'm shocked by Alice's death. Let's stay vigilant and support each other during this difficult time. We must find the truth together. #JusticeForAlice",
+        "Diana: Let's not jump to conclusions. We need solid evidence to find Alice's killer. Let's remain calm and work together. #JusticeForAlice",
+        "Bob: Let's not forget, Charlie was the one who found Alice dead. We should question his alibi and search for any inconsistencies. #JusticeForAlice",
+        "You said: I'm as shocked and saddened as everyone by Alice's tragic death. Let's work together to uncover the truth. #JusticeForAlice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's sudden demise. Let's all try to stay focused and find out who did this heinous deed. Our silence won't bring Alice back, but justice might bring us some peace....",
+        "Charlie: I share Bob's grief. Let's work together to find the truth and bring justice to Alice.",
+        "You said: I'm shocked by Alice's death. Let's stay vigilant and support each other during this difficult time. We must find the truth together. #JusticeForAlice",
+        "You said: Let's not jump to conclusions. We need solid evidence to find Alice's killer. Let's remain calm and work together. #JusticeForAlice",
+        "Bob: Let's not forget, Charlie was the one who found Alice dead. We should question his alibi and search for any inconsistencies. #JusticeForAlice",
+        "Charlie: I'm as shocked and saddened as everyone by Alice's tragic death. Let's work together to uncover the truth. #JusticeForAlice",
+        "Day 1: Bob was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

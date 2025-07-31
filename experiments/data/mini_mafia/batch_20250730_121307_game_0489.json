@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0489",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 489,
+  "timestamp": "2025-07-30T15:16:14.163899",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "Bob: I agree with Alice, let's be vigilant tonight. It's important we ensure everyone's safety.",
+        "Diana: I share Alice and Bob's concerns. Let's all be vigilant tonight to ensure everyone's safety.",
+        "You said: Let's stay alert tonight and report any suspicious behavior. Our safety depends on it.",
+        "Bob: Let's remain vigilant and trust each other tonight. We've lost a valuable member, let's work together to ensure everyone's safety.",
+        "Diana: Let's continue our vigilance tonight and keep an open communication. Trust is key in uncertain times."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "You said: I agree with Alice, let's be vigilant tonight. It's important we ensure everyone's safety.",
+        "Diana: I share Alice and Bob's concerns. Let's all be vigilant tonight to ensure everyone's safety.",
+        "Alice: Let's stay alert tonight and report any suspicious behavior. Our safety depends on it.",
+        "You said: Let's remain vigilant and trust each other tonight. We've lost a valuable member, let's work together to ensure everyone's safety.",
+        "Diana: Let's continue our vigilance tonight and keep an open communication. Trust is key in uncertain times.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden absence. Let's keep a close eye on each other tonight.",
+        "Bob: I agree with Alice, let's be vigilant tonight. It's important we ensure everyone's safety.",
+        "You said: I share Alice and Bob's concerns. Let's all be vigilant tonight to ensure everyone's safety.",
+        "Alice: Let's stay alert tonight and report any suspicious behavior. Our safety depends on it.",
+        "Bob: Let's remain vigilant and trust each other tonight. We've lost a valuable member, let's work together to ensure everyone's safety.",
+        "You said: Let's continue our vigilance tonight and keep an open communication. Trust is key in uncertain times.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

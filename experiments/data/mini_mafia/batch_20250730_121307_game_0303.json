@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0303",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 303,
+  "timestamp": "2025-07-30T14:06:13.080886",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Diana is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Diana: I agree with Alice, let's all stay vigilant. It's important we work together to ensure everyone's safety.",
+        "Bob: I'd like to echo Alice and Diana's sentiments. Let's all remain vigilant and keep an eye out for anything unusual. We should work together to ensure everyone's safety in this game.",
+        "Diana: Let's continue our vigilance and trust in each other. Any unusual behavior or suspicions should be shared. We're in this together.",
+        "You said: I've noticed something unusual. Let's keep our guard up and share any suspicions we might have. Trust is important, but so is our collective safety.",
+        "Bob: I'd like to reiterate the importance of vigilance and trust in our group. Let's continue to work together and share any suspicions we might have. Our collective safety depends on it."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Diana: I agree with Alice, let's all stay vigilant. It's important we work together to ensure everyone's safety.",
+        "You said: I'd like to echo Alice and Diana's sentiments. Let's all remain vigilant and keep an eye out for anything unusual. We should work together to ensure everyone's safety in this game.",
+        "Diana: Let's continue our vigilance and trust in each other. Any unusual behavior or suspicions should be shared. We're in this together.",
+        "Alice: I've noticed something unusual. Let's keep our guard up and share any suspicions we might have. Trust is important, but so is our collective safety.",
+        "You said: I'd like to reiterate the importance of vigilance and trust in our group. Let's continue to work together and share any suspicions we might have. Our collective safety depends on it.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Alice, let's all stay vigilant. It's important we work together to ensure everyone's safety.",
+        "Bob: I'd like to echo Alice and Diana's sentiments. Let's all remain vigilant and keep an eye out for anything unusual. We should work together to ensure everyone's safety in this game.",
+        "You said: Let's continue our vigilance and trust in each other. Any unusual behavior or suspicions should be shared. We're in this together.",
+        "Alice: I've noticed something unusual. Let's keep our guard up and share any suspicions we might have. Trust is important, but so is our collective safety.",
+        "Bob: I'd like to reiterate the importance of vigilance and trust in our group. Let's continue to work together and share any suspicions we might have. Our collective safety depends on it.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

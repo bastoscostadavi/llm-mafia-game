@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0132",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 132,
+  "timestamp": "2025-07-30T13:01:05.969192",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Bob: I'm thinking about Diana's last words before the night fell. Let's remember them and discuss if they hold any significance.",
+        "You said: Bob, your words about Diana's last words seem suspicious. Let's focus on finding the truth instead.",
+        "Charlie: Let's not jump to conclusions based on assumptions. We should focus on gathering facts to find the truth about Diana's death.",
+        "Charlie: Let's work together to uncover the truth about Diana's death. We should share any relevant information we have. Vigilance and open communication are key.",
+        "Bob: Let's not forget Diana's last words. They might hold a clue to what happened last night. Let's reflect on them together.",
+        "You said: Let's focus on gathering facts to uncover the truth about Diana's death. Let's share any relevant information we have. Vigilance and open communication are key."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Diana was found dead this morning.",
+        "You said: I'm thinking about Diana's last words before the night fell. Let's remember them and discuss if they hold any significance.",
+        "Alice: Bob, your words about Diana's last words seem suspicious. Let's focus on finding the truth instead.",
+        "Charlie: Let's not jump to conclusions based on assumptions. We should focus on gathering facts to find the truth about Diana's death.",
+        "Charlie: Let's work together to uncover the truth about Diana's death. We should share any relevant information we have. Vigilance and open communication are key.",
+        "You said: Let's not forget Diana's last words. They might hold a clue to what happened last night. Let's reflect on them together.",
+        "Alice: Let's focus on gathering facts to uncover the truth about Diana's death. Let's share any relevant information we have. Vigilance and open communication are key.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Diana was found dead this morning.",
+        "Bob: I'm thinking about Diana's last words before the night fell. Let's remember them and discuss if they hold any significance.",
+        "Alice: Bob, your words about Diana's last words seem suspicious. Let's focus on finding the truth instead.",
+        "You said: Let's not jump to conclusions based on assumptions. We should focus on gathering facts to find the truth about Diana's death.",
+        "You said: Let's work together to uncover the truth about Diana's death. We should share any relevant information we have. Vigilance and open communication are key.",
+        "Bob: Let's not forget Diana's last words. They might hold a clue to what happened last night. Let's reflect on them together.",
+        "Alice: Let's focus on gathering facts to uncover the truth about Diana's death. Let's share any relevant information we have. Vigilance and open communication are key.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

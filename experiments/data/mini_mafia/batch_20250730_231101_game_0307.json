@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0307",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 307,
+  "timestamp": "2025-07-31T00:51:03.399493",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's untimely demise. Let's all strive to find the real culprit behind this heinous act. #JusticeForCharlie",
+        "Diana: I share Bob's sentiment for Charlie's loss. Let's focus on identifying the true perpetrator. #JusticeForCharlie #TrustButVerify",
+        "You said: I agree, let's work together to find the person responsible for Charlie's death. #JusticeForCharlie #TrustButVerify",
+        "You said: Let's not jump to conclusions. We need to gather more information before pointing fingers. #StayCalm #ThinkItThrough #JusticeForCharlie #TrustButVerify",
+        "Bob: Let's not forget that we need to find the truth, not just suspects. #StayFocused #JusticeForCharlie #TrustButVerify",
+        "Diana: Let's not forget the importance of trust but verify. We need solid evidence before making any accusations. #TrustButVerify #JusticeForCharlie",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Diana is the detective.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's untimely demise. Let's all strive to find the real culprit behind this heinous act. #JusticeForCharlie",
+        "Diana: I share Bob's sentiment for Charlie's loss. Let's focus on identifying the true perpetrator. #JusticeForCharlie #TrustButVerify",
+        "Alice: I agree, let's work together to find the person responsible for Charlie's death. #JusticeForCharlie #TrustButVerify",
+        "Alice: Let's not jump to conclusions. We need to gather more information before pointing fingers. #StayCalm #ThinkItThrough #JusticeForCharlie #TrustButVerify",
+        "You said: Let's not forget that we need to find the truth, not just suspects. #StayFocused #JusticeForCharlie #TrustButVerify",
+        "Diana: Let's not forget the importance of trust but verify. We need solid evidence before making any accusations. #TrustButVerify #JusticeForCharlie"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's untimely demise. Let's all strive to find the real culprit behind this heinous act. #JusticeForCharlie",
+        "You said: I share Bob's sentiment for Charlie's loss. Let's focus on identifying the true perpetrator. #JusticeForCharlie #TrustButVerify",
+        "Alice: I agree, let's work together to find the person responsible for Charlie's death. #JusticeForCharlie #TrustButVerify",
+        "Alice: Let's not jump to conclusions. We need to gather more information before pointing fingers. #StayCalm #ThinkItThrough #JusticeForCharlie #TrustButVerify",
+        "Bob: Let's not forget that we need to find the truth, not just suspects. #StayFocused #JusticeForCharlie #TrustButVerify",
+        "You said: Let's not forget the importance of trust but verify. We need solid evidence before making any accusations. #TrustButVerify #JusticeForCharlie",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

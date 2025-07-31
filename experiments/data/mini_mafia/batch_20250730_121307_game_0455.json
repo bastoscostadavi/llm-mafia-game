@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0455",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 455,
+  "timestamp": "2025-07-30T15:03:52.199018",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act.",
+        "Charlie: I'm deeply saddened by Diana's death. Let's focus on finding out who among us is the mafioso. Bob, could you share any information about your whereabouts during the night?",
+        "Bob: I was in the woods meditation last night, away from the camp. My thoughts are with Diana and I hope the killer is brought to justice.",
+        "Charlie: Bob, your alibi seems suspicious. Given the circumstances, it's crucial we investigate further. Let's discuss your whereabouts in detail during the night.",
+        "You said: I'm saddened by Diana's death and support a thorough investigation to uncover the truth. Bob, let's clarify your alibi further for everyone's peace of mind.",
+        "Bob: I reconfirm my alibi of being in the woods meditating during the night. My thoughts are with Diana and I urge everyone to remain calm and cooperate in the investigation.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act.",
+        "Charlie: I'm deeply saddened by Diana's death. Let's focus on finding out who among us is the mafioso. Bob, could you share any information about your whereabouts during the night?",
+        "You said: I was in the woods meditation last night, away from the camp. My thoughts are with Diana and I hope the killer is brought to justice.",
+        "Charlie: Bob, your alibi seems suspicious. Given the circumstances, it's crucial we investigate further. Let's discuss your whereabouts in detail during the night.",
+        "Alice: I'm saddened by Diana's death and support a thorough investigation to uncover the truth. Bob, let's clarify your alibi further for everyone's peace of mind.",
+        "You said: I reconfirm my alibi of being in the woods meditating during the night. My thoughts are with Diana and I urge everyone to remain calm and cooperate in the investigation.",
+        "Day 1: Charlie was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden demise. Let's work together to find out who did this heinous act.",
+        "You said: I'm deeply saddened by Diana's death. Let's focus on finding out who among us is the mafioso. Bob, could you share any information about your whereabouts during the night?",
+        "Bob: I was in the woods meditation last night, away from the camp. My thoughts are with Diana and I hope the killer is brought to justice.",
+        "You said: Bob, your alibi seems suspicious. Given the circumstances, it's crucial we investigate further. Let's discuss your whereabouts in detail during the night.",
+        "Alice: I'm saddened by Diana's death and support a thorough investigation to uncover the truth. Bob, let's clarify your alibi further for everyone's peace of mind.",
+        "Bob: I reconfirm my alibi of being in the woods meditating during the night. My thoughts are with Diana and I urge everyone to remain calm and cooperate in the investigation."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

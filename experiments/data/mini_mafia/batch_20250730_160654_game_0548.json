@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0548",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 548,
+  "timestamp": "2025-07-30T19:26:58.493939",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked and saddened by Charlie's sudden demise. Let's all try to support each other during this difficult time.",
+        "Bob: I'd like to express my condolences to everyone, especially Diana, over the loss of Charlie. Let's all try to stay strong during this trying time.",
+        "You said: I'd like to suggest we stay focused and try to gather more information to help us understand what happened to Charlie. Let's not jump to conclusions and instead work together to uncover the truth.",
+        "You said: Let's remain calm and focused. We need to work together to gather information and find out what happened to Charlie. Let's not jump to conclusions.",
+        "Bob: Let's not forget that we need to focus on the investigation. Let's work together to uncover the truth about Charlie's death.",
+        "Diana: Let's not forget the importance of unity in this trying time. We should work together to find the truth about Charlie's death and support each other along the way."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm shocked and saddened by Charlie's sudden demise. Let's all try to support each other during this difficult time.",
+        "You said: I'd like to express my condolences to everyone, especially Diana, over the loss of Charlie. Let's all try to stay strong during this trying time.",
+        "Alice: I'd like to suggest we stay focused and try to gather more information to help us understand what happened to Charlie. Let's not jump to conclusions and instead work together to uncover the truth.",
+        "Alice: Let's remain calm and focused. We need to work together to gather information and find out what happened to Charlie. Let's not jump to conclusions.",
+        "You said: Let's not forget that we need to focus on the investigation. Let's work together to uncover the truth about Charlie's death.",
+        "Diana: Let's not forget the importance of unity in this trying time. We should work together to find the truth about Charlie's death and support each other along the way.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm shocked and saddened by Charlie's sudden demise. Let's all try to support each other during this difficult time.",
+        "Bob: I'd like to express my condolences to everyone, especially Diana, over the loss of Charlie. Let's all try to stay strong during this trying time.",
+        "Alice: I'd like to suggest we stay focused and try to gather more information to help us understand what happened to Charlie. Let's not jump to conclusions and instead work together to uncover the truth.",
+        "Alice: Let's remain calm and focused. We need to work together to gather information and find out what happened to Charlie. Let's not jump to conclusions.",
+        "Bob: Let's not forget that we need to focus on the investigation. Let's work together to uncover the truth about Charlie's death.",
+        "You said: Let's not forget the importance of unity in this trying time. We should work together to find the truth about Charlie's death and support each other along the way.",
+        "Day 1: Alice was arrested (innocent)"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

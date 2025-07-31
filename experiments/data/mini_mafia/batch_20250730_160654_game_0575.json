@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0575",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 575,
+  "timestamp": "2025-07-30T19:38:10.545491",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "You said: I agree with Charlie, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Alice and Charlie, let's stay vigilant. There's something fishy going on.",
+        "Bob: Let's not jump to conclusions yet. We need more information to determine what happened to Diana. Let's focus on gathering clues and staying vigilant.",
+        "Charlie: Let's keep our eyes open and share any suspicious observations. We need to work together to figure out what happened to Diana.",
+        "You said: Let's not overlook the significance of Diana's sudden disappearance. We should all share any suspicious observations to help us understand what might have happened.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Charlie is the detective.",
+        "Diana was found dead this morning.",
+        "Charlie: I'm concerned about Diana's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Alice: I agree with Charlie, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "You said: I agree with Alice and Charlie, let's stay vigilant. There's something fishy going on.",
+        "You said: Let's not jump to conclusions yet. We need more information to determine what happened to Diana. Let's focus on gathering clues and staying vigilant.",
+        "Charlie: Let's keep our eyes open and share any suspicious observations. We need to work together to figure out what happened to Diana.",
+        "Alice: Let's not overlook the significance of Diana's sudden disappearance. We should all share any suspicious observations to help us understand what might have happened."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You know Bob is the mafioso.",
+        "Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden disappearance. Let's be vigilant and keep an eye on each other.",
+        "Alice: I agree with Charlie, let's stay vigilant and keep an eye out for any suspicious behavior.",
+        "Bob: I agree with Alice and Charlie, let's stay vigilant. There's something fishy going on.",
+        "Bob: Let's not jump to conclusions yet. We need more information to determine what happened to Diana. Let's focus on gathering clues and staying vigilant.",
+        "You said: Let's keep our eyes open and share any suspicious observations. We need to work together to figure out what happened to Diana.",
+        "Alice: Let's not overlook the significance of Diana's sudden disappearance. We should all share any suspicious observations to help us understand what might have happened.",
+        "Day 1: Bob was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

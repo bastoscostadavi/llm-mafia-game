@@ -1,0 +1,108 @@
+{
+  "game_id": "batch_20250730_231101_game_0554",
+  "batch_id": "batch_20250730_231101",
+  "game_number": 554,
+  "timestamp": "2025-07-31T02:11:01.037466",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You know Bob is the mafioso.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected demise. Let's focus on finding out who did this and bring them to justice.",
+        "You said: I'm deeply concerned about Charlie's sudden death. Let's work together to uncover the truth. Who had the closest relationship with Charlie?",
+        "Bob: I'm shocked by Charlie's death. Let's not jump to conclusions and give the investigation enough time to uncover the truth.",
+        "Bob: Let's not rush to judgments. We owe it to Charlie to give the investigation a fair chance.",
+        "Diana: Let's not forget, we're all grieving Charlie's loss. Let's keep our focus on finding the truth behind his death. We can't let our emotions cloud our judgement.",
+        "You said: Let's stay focused on the investigation, we've lost a valuable member of our group and it's important we find out who's responsible.",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You know Alice is the detective.",
+        "Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected demise. Let's focus on finding out who did this and bring them to justice.",
+        "Alice: I'm deeply concerned about Charlie's sudden death. Let's work together to uncover the truth. Who had the closest relationship with Charlie?",
+        "You said: I'm shocked by Charlie's death. Let's not jump to conclusions and give the investigation enough time to uncover the truth.",
+        "You said: Let's not rush to judgments. We owe it to Charlie to give the investigation a fair chance.",
+        "Diana: Let's not forget, we're all grieving Charlie's loss. Let's keep our focus on finding the truth behind his death. We can't let our emotions cloud our judgement.",
+        "Alice: Let's stay focused on the investigation, we've lost a valuable member of our group and it's important we find out who's responsible."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's unexpected demise. Let's focus on finding out who did this and bring them to justice.",
+        "Alice: I'm deeply concerned about Charlie's sudden death. Let's work together to uncover the truth. Who had the closest relationship with Charlie?",
+        "Bob: I'm shocked by Charlie's death. Let's not jump to conclusions and give the investigation enough time to uncover the truth.",
+        "Bob: Let's not rush to judgments. We owe it to Charlie to give the investigation a fair chance.",
+        "You said: Let's not forget, we're all grieving Charlie's loss. Let's keep our focus on finding the truth behind his death. We can't let our emotions cloud our judgement.",
+        "Alice: Let's stay focused on the investigation, we've lost a valuable member of our group and it's important we find out who's responsible.",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

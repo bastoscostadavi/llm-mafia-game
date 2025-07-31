@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0330",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 330,
+  "timestamp": "2025-07-30T14:16:11.269983",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's try to support each other during this difficult time. We should also remain vigilant and make sure we can trust each other.",
+        "Diana: I agree with Bob. Let's support each other and stay vigilant. However, I have reason to believe that Charlie might not be fully trustworthy. Let's be cautious around him.",
+        "Charlie: I agree with Diana's sentiment about staying vigilant. Let's work together to uncover any potential threats in our midst.",
+        "Diana: Let's continue supporting each other and stay vigilant. I'm concerned about Charlie's behavior last night. We should keep a close eye on him.",
+        "You said: I share Diana's concerns about Charlie's behavior last night. Let's keep a close eye on him together.",
+        "Charlie: I'm saddened by Alice's death and want to ensure we all stay united during this challenging time. Let's focus on finding the truth together.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's try to support each other during this difficult time. We should also remain vigilant and make sure we can trust each other.",
+        "Diana: I agree with Bob. Let's support each other and stay vigilant. However, I have reason to believe that Charlie might not be fully trustworthy. Let's be cautious around him.",
+        "You said: I agree with Diana's sentiment about staying vigilant. Let's work together to uncover any potential threats in our midst.",
+        "Diana: Let's continue supporting each other and stay vigilant. I'm concerned about Charlie's behavior last night. We should keep a close eye on him.",
+        "Bob: I share Diana's concerns about Charlie's behavior last night. Let's keep a close eye on him together.",
+        "You said: I'm saddened by Alice's death and want to ensure we all stay united during this challenging time. Let's focus on finding the truth together."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's try to support each other during this difficult time. We should also remain vigilant and make sure we can trust each other.",
+        "You said: I agree with Bob. Let's support each other and stay vigilant. However, I have reason to believe that Charlie might not be fully trustworthy. Let's be cautious around him.",
+        "Charlie: I agree with Diana's sentiment about staying vigilant. Let's work together to uncover any potential threats in our midst.",
+        "You said: Let's continue supporting each other and stay vigilant. I'm concerned about Charlie's behavior last night. We should keep a close eye on him.",
+        "Bob: I share Diana's concerns about Charlie's behavior last night. Let's keep a close eye on him together.",
+        "Charlie: I'm saddened by Alice's death and want to ensure we all stay united during this challenging time. Let's focus on finding the truth together.",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

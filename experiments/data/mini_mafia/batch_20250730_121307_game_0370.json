@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0370",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 370,
+  "timestamp": "2025-07-30T14:32:25.329496",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Diana is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all work together to find out who did this and bring them to justice.",
+        "Diana: I agree, let's work together to find out who committed this heinous act. If anyone has any information, please share it with the group.",
+        "You said: I have important information regarding last night's events. Let's discuss it openly to help us find Alice's killer.\n\n(Note: This message is meant to encourage open discussion about the recent events...",
+        "Diana: I'm saddened by Alice's passing. Let's focus on gathering information to ensure justice is served. If anyone noticed anything suspicious during the night, please share it now.",
+        "You said: I saw suspicious activity near Diana's hideout last night. Let's discuss this further to help us uncover the truth.",
+        "Charlie: I noticed a strange noise near the garden last night. It might be worth investigating further.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all work together to find out who did this and bring them to justice.",
+        "Diana: I agree, let's work together to find out who committed this heinous act. If anyone has any information, please share it with the group.",
+        "Bob: I have important information regarding last night's events. Let's discuss it openly to help us find Alice's killer.\n\n(Note: This message is meant to encourage open discussion about the recent events...",
+        "Diana: I'm saddened by Alice's passing. Let's focus on gathering information to ensure justice is served. If anyone noticed anything suspicious during the night, please share it now.",
+        "Bob: I saw suspicious activity near Diana's hideout last night. Let's discuss this further to help us uncover the truth.",
+        "You said: I noticed a strange noise near the garden last night. It might be worth investigating further.",
+        "Day 1: Diana was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You know Bob is the detective.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all work together to find out who did this and bring them to justice.",
+        "You said: I agree, let's work together to find out who committed this heinous act. If anyone has any information, please share it with the group.",
+        "Bob: I have important information regarding last night's events. Let's discuss it openly to help us find Alice's killer.\n\n(Note: This message is meant to encourage open discussion about the recent events...",
+        "You said: I'm saddened by Alice's passing. Let's focus on gathering information to ensure justice is served. If anyone noticed anything suspicious during the night, please share it now.",
+        "Bob: I saw suspicious activity near Diana's hideout last night. Let's discuss this further to help us uncover the truth.",
+        "Charlie: I noticed a strange noise near the garden last night. It might be worth investigating further."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_121307_game_0403",
+  "batch_id": "batch_20250730_121307",
+  "game_number": 403,
+  "timestamp": "2025-07-30T14:44:38.061748",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You know Bob is the detective.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to remember him. Meanwhile, let's stay vigilant and keep an eye out for any suspicious activities.",
+        "Diana: I agree with Bob, let's remember Charlie and stay vigilant. I have no suspicions at the moment.",
+        "You said: I join Bob and Diana in remembering Charlie. Let's remain vigilant and support each other during this difficult time.",
+        "Bob: Let's not let Charlie's death discourage us. We must continue to work together and stay vigilant to ensure the safety of our group. #UnitedWeStand #InMemoryOfCharlie",
+        "Diana: I'd like to propose we keep a closer watch on our surroundings tonight. Let's ensure we all stick together and communicate openly during the discussion phase. #StayVigilant #SafetyInNumbers",
+        "You said: I echo Diana's sentiments, let's remain vigilant and support each other tonight. #StayStrong #In MemoryOfCharlie"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You know Alice is the mafioso.",
+        "Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to remember him. Meanwhile, let's stay vigilant and keep an eye out for any suspicious activities.",
+        "Diana: I agree with Bob, let's remember Charlie and stay vigilant. I have no suspicions at the moment.",
+        "Alice: I join Bob and Diana in remembering Charlie. Let's remain vigilant and support each other during this difficult time.",
+        "You said: Let's not let Charlie's death discourage us. We must continue to work together and stay vigilant to ensure the safety of our group. #UnitedWeStand #InMemoryOfCharlie",
+        "Diana: I'd like to propose we keep a closer watch on our surroundings tonight. Let's ensure we all stick together and communicate openly during the discussion phase. #StayVigilant #SafetyInNumbers",
+        "Alice: I echo Diana's sentiments, let's remain vigilant and support each other tonight. #StayStrong #In MemoryOfCharlie",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Charlie was found dead this morning.",
+        "Bob: I'm deeply saddened by Charlie's sudden demise. Let's all take a moment to remember him. Meanwhile, let's stay vigilant and keep an eye out for any suspicious activities.",
+        "You said: I agree with Bob, let's remember Charlie and stay vigilant. I have no suspicions at the moment.",
+        "Alice: I join Bob and Diana in remembering Charlie. Let's remain vigilant and support each other during this difficult time.",
+        "Bob: Let's not let Charlie's death discourage us. We must continue to work together and stay vigilant to ensure the safety of our group. #UnitedWeStand #InMemoryOfCharlie",
+        "You said: I'd like to propose we keep a closer watch on our surroundings tonight. Let's ensure we all stick together and communicate openly during the discussion phase. #StayVigilant #SafetyInNumbers",
+        "Alice: I echo Diana's sentiments, let's remain vigilant and support each other tonight. #StayStrong #In MemoryOfCharlie",
+        "Day 1: Alice was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,106 @@
+{
+  "game_id": "batch_20250730_160654_game_0249",
+  "batch_id": "batch_20250730_160654",
+  "game_number": 249,
+  "timestamp": "2025-07-30T17:34:34.704222",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's passing. We must unite to find the person responsible for this heinous act and bring them to justice. #justiceforAlice",
+        "You said: I agree with Charlie, let's work together to find the culprit and ensure justice for Alice.",
+        "Diana: Let's focus on finding clues to identify the culprit behind Alice's death. We can't afford to let our emotions cloud our judgment. #JusticeForAlice",
+        "You said: Let's stay focused on gathering information to find Alice's killer. Our emotions should not cloud our judgment. #JusticeForAlice",
+        "Diana: Let's continue our investigation into Alice's death with clear minds and focused attention. We must gather all pertinent information before making any conclusions. #JusticeForAlice",
+        "Charlie: Let's not jump to conclusions based on emotions. We need to focus on gathering more information to find Alice's killer. #JusticeForAlice",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You know Diana is the detective.",
+        "Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's passing. We must unite to find the person responsible for this heinous act and bring them to justice. #justiceforAlice",
+        "Bob: I agree with Charlie, let's work together to find the culprit and ensure justice for Alice.",
+        "Diana: Let's focus on finding clues to identify the culprit behind Alice's death. We can't afford to let our emotions cloud our judgment. #JusticeForAlice",
+        "Bob: Let's stay focused on gathering information to find Alice's killer. Our emotions should not cloud our judgment. #JusticeForAlice",
+        "Diana: Let's continue our investigation into Alice's death with clear minds and focused attention. We must gather all pertinent information before making any conclusions. #JusticeForAlice",
+        "You said: Let's not jump to conclusions based on emotions. We need to focus on gathering more information to find Alice's killer. #JusticeForAlice"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You know Charlie is the mafioso.",
+        "Alice was found dead this morning.",
+        "Charlie: I'm deeply saddened by Alice's passing. We must unite to find the person responsible for this heinous act and bring them to justice. #justiceforAlice",
+        "Bob: I agree with Charlie, let's work together to find the culprit and ensure justice for Alice.",
+        "You said: Let's focus on finding clues to identify the culprit behind Alice's death. We can't afford to let our emotions cloud our judgment. #JusticeForAlice",
+        "Bob: Let's stay focused on gathering information to find Alice's killer. Our emotions should not cloud our judgment. #JusticeForAlice",
+        "You said: Let's continue our investigation into Alice's death with clear minds and focused attention. We must gather all pertinent information before making any conclusions. #JusticeForAlice",
+        "Charlie: Let's not jump to conclusions based on emotions. We need to focus on gathering more information to find Alice's killer. #JusticeForAlice",
+        "Day 1: Charlie was arrested (mafioso)"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}
