@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0082",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 82,
+  "timestamp": "2025-08-04T13:26:15.435102",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Charlie: \"Alice, I'm concerned about Bob's sudden disappearance. Let's keep a close eye on Diana.\"",
+        "Diana: remained silent",
+        "You: \"Charlie, I agree that we should be cautious about Diana. Let's try to gather more information before making any hasty decisions.\"",
+        "Charlie: \"Alice, I'm glad we're on the same page about Diana. Let's not forget that she was the only one who didn't react to Bob's death. Alice and I should investigate her further.\"",
+        "You: remained silent",
+        "Diana: \"Alice, I'm concerned about Charlie's suspicious behavior. Let's focus our investigation on him.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about Bob's sudden disappearance. Let's keep a close eye on Diana.\"",
+        "Diana: remained silent",
+        "Alice: \"Charlie, I agree that we should be cautious about Diana. Let's try to gather more information before making any hasty decisions.\"",
+        "You: \"Alice, I'm glad we're on the same page about Diana. Let's not forget that she was the only one who didn't react to Bob's death. Alice and I should investigate her further.\"",
+        "Alice: remained silent",
+        "Diana: \"Alice, I'm concerned about Charlie's suspicious behavior. Let's focus our investigation on him.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"Alice, I'm concerned about Bob's sudden disappearance. Let's keep a close eye on Diana.\"",
+        "You: remained silent",
+        "Alice: \"Charlie, I agree that we should be cautious about Diana. Let's try to gather more information before making any hasty decisions.\"",
+        "Charlie: \"Alice, I'm glad we're on the same page about Diana. Let's not forget that she was the only one who didn't react to Bob's death. Alice and I should investigate her further.\"",
+        "Alice: remained silent",
+        "You: \"Alice, I'm concerned about Charlie's suspicious behavior. Let's focus our investigation on him.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

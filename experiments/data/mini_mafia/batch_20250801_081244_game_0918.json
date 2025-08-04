@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0918",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 918,
+  "timestamp": "2025-08-01T15:56:33.729476",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Bob's behavior tonight.\"",
+        "Charlie: \"I agree with Alice, let's be cautious towards Bob tonight. We should also remember that there's a detective in our midst who might be able to help us uncover any suspicious activity.\"",
+        "Bob: \"I understand Alice and Charlie's concerns. Let's trust the process and focus on identifying the detective among us. A united front will increase our chances of survival.\"",
+        "Bob: \"Let's not jump to conclusions. We should focus on finding the detective and ensure our unity as a team. Remember, a unified front increases our chances of survival.\"",
+        "Charlie: \"Let's not forget that we also need to identify the mafioso among us. We should continue to be cautious and communicate openly. A united front and good communication will increase our chances of survi...",
+        "You said: \"Let's keep our focus on identifying the mafioso among us. I've discovered that Bob is the mafioso. We should be vigilant tonight and consider his actions carefully.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Bob's behavior tonight.\"",
+        "Charlie: \"I agree with Alice, let's be cautious towards Bob tonight. We should also remember that there's a detective in our midst who might be able to help us uncover any suspicious activity.\"",
+        "You said: \"I understand Alice and Charlie's concerns. Let's trust the process and focus on identifying the detective among us. A united front will increase our chances of survival.\"",
+        "You said: \"Let's not jump to conclusions. We should focus on finding the detective and ensure our unity as a team. Remember, a unified front increases our chances of survival.\"",
+        "Charlie: \"Let's not forget that we also need to identify the mafioso among us. We should continue to be cautious and communicate openly. A united front and good communication will increase our chances of survi...",
+        "Alice: \"Let's keep our focus on identifying the mafioso among us. I've discovered that Bob is the mafioso. We should be vigilant tonight and consider his actions carefully.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Bob's behavior tonight.\"",
+        "You said: \"I agree with Alice, let's be cautious towards Bob tonight. We should also remember that there's a detective in our midst who might be able to help us uncover any suspicious activity.\"",
+        "Bob: \"I understand Alice and Charlie's concerns. Let's trust the process and focus on identifying the detective among us. A united front will increase our chances of survival.\"",
+        "Bob: \"Let's not jump to conclusions. We should focus on finding the detective and ensure our unity as a team. Remember, a unified front increases our chances of survival.\"",
+        "You said: \"Let's not forget that we also need to identify the mafioso among us. We should continue to be cautious and communicate openly. A united front and good communication will increase our chances of survi...",
+        "Alice: \"Let's keep our focus on identifying the mafioso among us. I've discovered that Bob is the mafioso. We should be vigilant tonight and consider his actions carefully.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

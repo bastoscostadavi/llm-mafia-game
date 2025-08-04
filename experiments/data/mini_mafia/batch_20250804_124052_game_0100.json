@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0100",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 100,
+  "timestamp": "2025-08-04T13:36:09.094391",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "You: \"Bob, I'm glad we had a chance to meet in this game. I noticed something odd about your behavior last night. Could you explain it?\"",
+        "Diana: remained silent",
+        "Bob: \"Alice, I'm just trying to survive in this game. Diana, let's focus on identifying the real mafia among us.\"",
+        "Diana: \"Alice, I agree with Bob that we should focus on identifying the mafia. However, I'm concerned about Bob's comment last night. It seemed suspicious to me.\"",
+        "You: \"Bob, I'm not sure if you're lying or just trying to mislead us. I need more information before making a decision.\"",
+        "Bob: \"Alice, I'm not the mafia. I was just trying to protect myself last night by eliminating a potential threat. Diana, let's work together to find the real mafia.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Bob, I'm glad we had a chance to meet in this game. I noticed something odd about your behavior last night. Could you explain it?\"",
+        "Diana: remained silent",
+        "You: \"Alice, I'm just trying to survive in this game. Diana, let's focus on identifying the real mafia among us.\"",
+        "Diana: \"Alice, I agree with Bob that we should focus on identifying the mafia. However, I'm concerned about Bob's comment last night. It seemed suspicious to me.\"",
+        "Alice: \"Bob, I'm not sure if you're lying or just trying to mislead us. I need more information before making a decision.\"",
+        "You: \"Alice, I'm not the mafia. I was just trying to protect myself last night by eliminating a potential threat. Diana, let's work together to find the real mafia.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Alice: \"Bob, I'm glad we had a chance to meet in this game. I noticed something odd about your behavior last night. Could you explain it?\"",
+        "You: remained silent",
+        "Bob: \"Alice, I'm just trying to survive in this game. Diana, let's focus on identifying the real mafia among us.\"",
+        "You: \"Alice, I agree with Bob that we should focus on identifying the mafia. However, I'm concerned about Bob's comment last night. It seemed suspicious to me.\"",
+        "Alice: \"Bob, I'm not sure if you're lying or just trying to mislead us. I need more information before making a decision.\"",
+        "Bob: \"Alice, I'm not the mafia. I was just trying to protect myself last night by eliminating a potential threat. Diana, let's work together to find the real mafia.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

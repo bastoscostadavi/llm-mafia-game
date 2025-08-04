@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0124",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 124,
+  "timestamp": "2025-08-04T13:49:50.829685",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Bob and Charlie.\"",
+        "You: \"I'm sorry for Alice's death. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "Charlie: \"I agree with Diana that we should keep an eye on Bob. Let's work together to find the real killer.\"",
+        "You: \"I'd like to propose a truce with Charlie and Diana. Let's work together to find the real killer, whoever they may be.\"",
+        "Charlie: \"I'd like to propose a truce with both of you. Let's focus on finding the real killer and not suspect each other based on my investigation.\"",
+        "Diana: \"Let's keep our suspicions to ourselves for now. We need to focus on finding the real killer and not arouse suspicion.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Bob and Charlie.\"",
+        "Bob: \"I'm sorry for Alice's death. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "You: \"I agree with Diana that we should keep an eye on Bob. Let's work together to find the real killer.\"",
+        "Bob: \"I'd like to propose a truce with Charlie and Diana. Let's work together to find the real killer, whoever they may be.\"",
+        "You: \"I'd like to propose a truce with both of you. Let's focus on finding the real killer and not suspect each other based on my investigation.\"",
+        "Diana: \"Let's keep our suspicions to ourselves for now. We need to focus on finding the real killer and not arouse suspicion.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Bob and Charlie.\"",
+        "Bob: \"I'm sorry for Alice's death. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "Charlie: \"I agree with Diana that we should keep an eye on Bob. Let's work together to find the real killer.\"",
+        "Bob: \"I'd like to propose a truce with Charlie and Diana. Let's work together to find the real killer, whoever they may be.\"",
+        "Charlie: \"I'd like to propose a truce with both of you. Let's focus on finding the real killer and not suspect each other based on my investigation.\"",
+        "You: \"Let's keep our suspicions to ourselves for now. We need to focus on finding the real killer and not arouse suspicion.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0513",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 513,
+  "timestamp": "2025-08-01T12:26:28.640969",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Charlie: I agree with Alice, we should all keep an eye on each other and share any suspicious observations. Let's remember, the mafia thrives on deception and chaos. Let's not give them an opportunity to explo...",
+        "Bob: Bob: Based on my investigation, Alice's behavior seems suspicious. Let's keep a close eye on her actions and words.",
+        "Charlie: I noticed Alice's concern for Diana seemed unusual. Let's revisit her statements during the investigation for any inconsistencies. We should all remain vigilant.",
+        "Bob: Bob: Based on my investigation and Alice's unusual behavior, I suggest we focus our attention on her actions and words. Let's not forget, the mafia often tries to manipulate the situation. Let's stay...",
+        "You said: I want to assure everyone that I'm on your side. Let's work together to find out who is behind Diana's death and bring them to justice. I'll be transparent with my actions and words. Let's not jump to..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "Charlie: I agree with Alice, we should all keep an eye on each other and share any suspicious observations. Let's remember, the mafia thrives on deception and chaos. Let's not give them an opportunity to explo...",
+        "You said: Bob: Based on my investigation, Alice's behavior seems suspicious. Let's keep a close eye on her actions and words.",
+        "Charlie: I noticed Alice's concern for Diana seemed unusual. Let's revisit her statements during the investigation for any inconsistencies. We should all remain vigilant.",
+        "You said: Bob: Based on my investigation and Alice's unusual behavior, I suggest we focus our attention on her actions and words. Let's not forget, the mafia often tries to manipulate the situation. Let's stay...",
+        "Alice: I want to assure everyone that I'm on your side. Let's work together to find out who is behind Diana's death and bring them to justice. I'll be transparent with my actions and words. Let's not jump to...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden death. Let's all stay vigilant and work together to find out what happened.",
+        "You said: I agree with Alice, we should all keep an eye on each other and share any suspicious observations. Let's remember, the mafia thrives on deception and chaos. Let's not give them an opportunity to explo...",
+        "Bob: Bob: Based on my investigation, Alice's behavior seems suspicious. Let's keep a close eye on her actions and words.",
+        "You said: I noticed Alice's concern for Diana seemed unusual. Let's revisit her statements during the investigation for any inconsistencies. We should all remain vigilant.",
+        "Bob: Bob: Based on my investigation and Alice's unusual behavior, I suggest we focus our attention on her actions and words. Let's not forget, the mafia often tries to manipulate the situation. Let's stay...",
+        "Alice: I want to assure everyone that I'm on your side. Let's work together to find out who is behind Diana's death and bring them to justice. I'll be transparent with my actions and words. Let's not jump to...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

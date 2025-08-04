@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0119",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 119,
+  "timestamp": "2025-08-01T09:11:35.271791",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I've noticed some unusual behavior from Bob lately. Let's keep a close eye on him.\"",
+        "Bob: \"I found a dead rabbit near the outskirts of the town, it's a sign of bad luck. Let's all be more careful.\"",
+        "Diana: \"I agree with Alice, let's keep an eye on Bob's behavior. It's unusual and could be a red flag.\"",
+        "You said: \"Let's not ignore the unusual behavior we've observed from Bob. We should be cautious and keep a close eye on him during the day as well.\"",
+        "Bob: \"Let's not jump to conclusions, I've seen some strange things in the forest lately that could explain my behavior. We should focus on finding the real culprit behind Charlie's death.\"",
+        "Diana: \"Let's not overlook Bob's suspicious behavior towards Charlie's death. We should be cautious and keep a close eye on him during the day as well.\"",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: \"I've noticed some unusual behavior from Bob lately. Let's keep a close eye on him.\"",
+        "You said: \"I found a dead rabbit near the outskirts of the town, it's a sign of bad luck. Let's all be more careful.\"",
+        "Diana: \"I agree with Alice, let's keep an eye on Bob's behavior. It's unusual and could be a red flag.\"",
+        "Alice: \"Let's not ignore the unusual behavior we've observed from Bob. We should be cautious and keep a close eye on him during the day as well.\"",
+        "You said: \"Let's not jump to conclusions, I've seen some strange things in the forest lately that could explain my behavior. We should focus on finding the real culprit behind Charlie's death.\"",
+        "Diana: \"Let's not overlook Bob's suspicious behavior towards Charlie's death. We should be cautious and keep a close eye on him during the day as well.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: \"I've noticed some unusual behavior from Bob lately. Let's keep a close eye on him.\"",
+        "Bob: \"I found a dead rabbit near the outskirts of the town, it's a sign of bad luck. Let's all be more careful.\"",
+        "You said: \"I agree with Alice, let's keep an eye on Bob's behavior. It's unusual and could be a red flag.\"",
+        "Alice: \"Let's not ignore the unusual behavior we've observed from Bob. We should be cautious and keep a close eye on him during the day as well.\"",
+        "Bob: \"Let's not jump to conclusions, I've seen some strange things in the forest lately that could explain my behavior. We should focus on finding the real culprit behind Charlie's death.\"",
+        "You said: \"Let's not overlook Bob's suspicious behavior towards Charlie's death. We should be cautious and keep a close eye on him during the day as well.\"",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

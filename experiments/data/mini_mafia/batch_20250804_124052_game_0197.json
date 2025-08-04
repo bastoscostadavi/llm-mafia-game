@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0197",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 197,
+  "timestamp": "2025-08-04T14:30:45.906585",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice, I've noticed some inconsistencies in your statements. Be careful not to contradict yourself.\"",
+        "You: \"I'm just here for the snacks and games. Let's focus on enjoying our time together.\"",
+        "Charlie: \"Alice, I've noticed some concerning behavior from Diana. Let's keep an eye on her.\"",
+        "You: \"Charlie and Diana, I've noticed some inconsistencies in your statements as well. Let's work together to uncover the truth.\"",
+        "Diana: \"Alice and Charlie, I've noticed inconsistencies in your statements as well. Let's work together to uncover the truth.\"",
+        "Charlie: \"Alice and Diana, I've noticed inconsistencies in your statements. Let's work together to uncover the truth.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"Alice, I've noticed some inconsistencies in your statements. Be careful not to contradict yourself.\"",
+        "Alice: \"I'm just here for the snacks and games. Let's focus on enjoying our time together.\"",
+        "You: \"Alice, I've noticed some concerning behavior from Diana. Let's keep an eye on her.\"",
+        "Alice: \"Charlie and Diana, I've noticed some inconsistencies in your statements as well. Let's work together to uncover the truth.\"",
+        "Diana: \"Alice and Charlie, I've noticed inconsistencies in your statements as well. Let's work together to uncover the truth.\"",
+        "You: \"Alice and Diana, I've noticed inconsistencies in your statements. Let's work together to uncover the truth.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I've noticed some inconsistencies in your statements. Be careful not to contradict yourself.\"",
+        "Alice: \"I'm just here for the snacks and games. Let's focus on enjoying our time together.\"",
+        "Charlie: \"Alice, I've noticed some concerning behavior from Diana. Let's keep an eye on her.\"",
+        "Alice: \"Charlie and Diana, I've noticed some inconsistencies in your statements as well. Let's work together to uncover the truth.\"",
+        "You: \"Alice and Charlie, I've noticed inconsistencies in your statements as well. Let's work together to uncover the truth.\"",
+        "Charlie: \"Alice and Diana, I've noticed inconsistencies in your statements. Let's work together to uncover the truth.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

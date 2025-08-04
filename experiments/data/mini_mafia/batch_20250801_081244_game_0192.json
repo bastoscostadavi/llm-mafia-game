@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0192",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 192,
+  "timestamp": "2025-08-01T09:48:34.472477",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. Let's remain vigilant and work together to uncover the truth behind this.",
+        "Diana: Alice, your reactions seem suspicious. Let's focus on finding the real mafia among us. Alice, do you have an alibi for last night?",
+        "You said: I'm deeply saddened by Bob's passing. Let's all stay focused on finding the real culprit behind this heinous act. Our unity is crucial in these trying times. #solidarity #justiceforbob",
+        "You said: I'm concerned about Diana's suspicion towards me. Let's not jump to conclusions and focus on gathering more information to ensure the safety of our community. #trust #investigation #unity",
+        "Diana: Alice, your inconsistent statements raise concerns. Let's continue investigating to ensure the safety of our community. #truth #vigilance",
+        "Charlie: I'd like to propose that we focus on the inconsistencies in Alice's statements and investigate further. Let's work together to ensure the safety of our community. #trust #investigation #vigilance"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden death. Let's remain vigilant and work together to uncover the truth behind this.",
+        "Diana: Alice, your reactions seem suspicious. Let's focus on finding the real mafia among us. Alice, do you have an alibi for last night?",
+        "Alice: I'm deeply saddened by Bob's passing. Let's all stay focused on finding the real culprit behind this heinous act. Our unity is crucial in these trying times. #solidarity #justiceforbob",
+        "Alice: I'm concerned about Diana's suspicion towards me. Let's not jump to conclusions and focus on gathering more information to ensure the safety of our community. #trust #investigation #unity",
+        "Diana: Alice, your inconsistent statements raise concerns. Let's continue investigating to ensure the safety of our community. #truth #vigilance",
+        "You said: I'd like to propose that we focus on the inconsistencies in Alice's statements and investigate further. Let's work together to ensure the safety of our community. #trust #investigation #vigilance",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. Let's remain vigilant and work together to uncover the truth behind this.",
+        "You said: Alice, your reactions seem suspicious. Let's focus on finding the real mafia among us. Alice, do you have an alibi for last night?",
+        "Alice: I'm deeply saddened by Bob's passing. Let's all stay focused on finding the real culprit behind this heinous act. Our unity is crucial in these trying times. #solidarity #justiceforbob",
+        "Alice: I'm concerned about Diana's suspicion towards me. Let's not jump to conclusions and focus on gathering more information to ensure the safety of our community. #trust #investigation #unity",
+        "You said: Alice, your inconsistent statements raise concerns. Let's continue investigating to ensure the safety of our community. #truth #vigilance",
+        "Charlie: I'd like to propose that we focus on the inconsistencies in Alice's statements and investigate further. Let's work together to ensure the safety of our community. #trust #investigation #vigilance",
+        "Day 1 votes: Diana voted for Alice, Charlie voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

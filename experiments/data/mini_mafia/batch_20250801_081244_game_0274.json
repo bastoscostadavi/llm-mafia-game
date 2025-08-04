@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0274",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 274,
+  "timestamp": "2025-08-01T10:28:47.510874",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm shocked about Alice's sudden death. Let's all stay vigilant and try to figure out who could have done this.",
+        "Charlie: I'm saddened by Alice's passing. Let's focus on finding the truth to ensure such tragedies don't happen again. Let's work together and share any suspicious behaviors or observations.",
+        "Diana: Charlie, I've noticed some inconsistencies in your statements. Let's discuss your whereabouts during the night of Alice's death.",
+        "You said: I'd like to echo Charlie's sentiments about finding the truth. Bob was with Diana during the night of Alice's death. Let's examine the inconsistencies more closely, Diana.",
+        "Diana: Charlie, I've noticed discrepancies in your statements regarding the night of Alice's death. Let's clarify your whereabouts for the benefit of the investigation.",
+        "Charlie: I was deeply saddened by Alice's death and would like to reiterate my commitment to finding the truth. Let's not jump to conclusions and consider all possibilities carefully.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all stay vigilant and try to figure out who could have done this.",
+        "You said: I'm saddened by Alice's passing. Let's focus on finding the truth to ensure such tragedies don't happen again. Let's work together and share any suspicious behaviors or observations.",
+        "Diana: Charlie, I've noticed some inconsistencies in your statements. Let's discuss your whereabouts during the night of Alice's death.",
+        "Bob: I'd like to echo Charlie's sentiments about finding the truth. Bob was with Diana during the night of Alice's death. Let's examine the inconsistencies more closely, Diana.",
+        "Diana: Charlie, I've noticed discrepancies in your statements regarding the night of Alice's death. Let's clarify your whereabouts for the benefit of the investigation.",
+        "You said: I was deeply saddened by Alice's death and would like to reiterate my commitment to finding the truth. Let's not jump to conclusions and consider all possibilities carefully.",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm shocked about Alice's sudden death. Let's all stay vigilant and try to figure out who could have done this.",
+        "Charlie: I'm saddened by Alice's passing. Let's focus on finding the truth to ensure such tragedies don't happen again. Let's work together and share any suspicious behaviors or observations.",
+        "You said: Charlie, I've noticed some inconsistencies in your statements. Let's discuss your whereabouts during the night of Alice's death.",
+        "Bob: I'd like to echo Charlie's sentiments about finding the truth. Bob was with Diana during the night of Alice's death. Let's examine the inconsistencies more closely, Diana.",
+        "You said: Charlie, I've noticed discrepancies in your statements regarding the night of Alice's death. Let's clarify your whereabouts for the benefit of the investigation.",
+        "Charlie: I was deeply saddened by Alice's death and would like to reiterate my commitment to finding the truth. Let's not jump to conclusions and consider all possibilities carefully."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

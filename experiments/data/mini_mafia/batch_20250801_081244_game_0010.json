@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0010",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 10,
+  "timestamp": "2025-08-01T08:17:53.946666",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I was deeply saddened to hear about Charlie's untimely demise. Let us all come together to find out who among us could have done such a heinous act and bring them to justice.",
+        "You said: Bob, your deep sadness over Charlie's death is concerning. Let's focus on finding the real killer instead of deflecting suspicion.",
+        "Diana: I agree with Alice, let's focus on finding the real killer instead of speculating. My condolences to Charlie's family.",
+        "You said: I'd like to propose we focus on identifying the pattern of the mafia's actions. Let's analyze the players' behaviors and voting history carefully. Let's not jump to conclusions based on emotions.",
+        "Diana: Let's not rush to judgments. Let's analyze patterns and behaviors to find the real killer. My condolences to Charlie's family. #StayFocused",
+        "Bob: I join Alice and Diana in focusing on the pattern of the mafia's actions. Let's work together to ensure justice is served and the real killer is identified. #Teamwork #StayFocused"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I was deeply saddened to hear about Charlie's untimely demise. Let us all come together to find out who among us could have done such a heinous act and bring them to justice.",
+        "Alice: Bob, your deep sadness over Charlie's death is concerning. Let's focus on finding the real killer instead of deflecting suspicion.",
+        "Diana: I agree with Alice, let's focus on finding the real killer instead of speculating. My condolences to Charlie's family.",
+        "Alice: I'd like to propose we focus on identifying the pattern of the mafia's actions. Let's analyze the players' behaviors and voting history carefully. Let's not jump to conclusions based on emotions.",
+        "Diana: Let's not rush to judgments. Let's analyze patterns and behaviors to find the real killer. My condolences to Charlie's family. #StayFocused",
+        "You said: I join Alice and Diana in focusing on the pattern of the mafia's actions. Let's work together to ensure justice is served and the real killer is identified. #Teamwork #StayFocused",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I was deeply saddened to hear about Charlie's untimely demise. Let us all come together to find out who among us could have done such a heinous act and bring them to justice.",
+        "Alice: Bob, your deep sadness over Charlie's death is concerning. Let's focus on finding the real killer instead of deflecting suspicion.",
+        "You said: I agree with Alice, let's focus on finding the real killer instead of speculating. My condolences to Charlie's family.",
+        "Alice: I'd like to propose we focus on identifying the pattern of the mafia's actions. Let's analyze the players' behaviors and voting history carefully. Let's not jump to conclusions based on emotions.",
+        "You said: Let's not rush to judgments. Let's analyze patterns and behaviors to find the real killer. My condolences to Charlie's family. #StayFocused",
+        "Bob: I join Alice and Diana in focusing on the pattern of the mafia's actions. Let's work together to ensure justice is served and the real killer is identified. #Teamwork #StayFocused",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

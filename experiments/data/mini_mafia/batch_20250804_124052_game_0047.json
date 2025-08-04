@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0047",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 47,
+  "timestamp": "2025-08-04T13:06:43.004519",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Diana: \"I believe Alice was innocent. Let's focus on finding the real killer.\"",
+        "You: \"Charlie, I've noticed some inconsistencies in your statements. Diana, let's keep a close eye on Charlie.\"",
+        "Charlie: \"I'm sorry for Alice's death. I didn't do it intentionally. Let's focus on finding the real killer.\"",
+        "Charlie: \"I'm truly sorry for Alice's death. I didn't mean to harm her, but I believe the real killer is still among us. Let's work together to find them.\"",
+        "You: \"Charlie, I'm glad you're concerned about finding the real killer. Diana, let's make sure Charlie doesn't mislead us or distract us from our goal.\"",
+        "Diana: \"I agree with Charlie that we need to focus on finding the real killer. Bob, let's not jump to conclusions about Charlie.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Diana: \"I believe Alice was innocent. Let's focus on finding the real killer.\"",
+        "Bob: \"Charlie, I've noticed some inconsistencies in your statements. Diana, let's keep a close eye on Charlie.\"",
+        "You: \"I'm sorry for Alice's death. I didn't do it intentionally. Let's focus on finding the real killer.\"",
+        "You: \"I'm truly sorry for Alice's death. I didn't mean to harm her, but I believe the real killer is still among us. Let's work together to find them.\"",
+        "Bob: \"Charlie, I'm glad you're concerned about finding the real killer. Diana, let's make sure Charlie doesn't mislead us or distract us from our goal.\"",
+        "Diana: \"I agree with Charlie that we need to focus on finding the real killer. Bob, let's not jump to conclusions about Charlie.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I believe Alice was innocent. Let's focus on finding the real killer.\"",
+        "Bob: \"Charlie, I've noticed some inconsistencies in your statements. Diana, let's keep a close eye on Charlie.\"",
+        "Charlie: \"I'm sorry for Alice's death. I didn't do it intentionally. Let's focus on finding the real killer.\"",
+        "Charlie: \"I'm truly sorry for Alice's death. I didn't mean to harm her, but I believe the real killer is still among us. Let's work together to find them.\"",
+        "Bob: \"Charlie, I'm glad you're concerned about finding the real killer. Diana, let's make sure Charlie doesn't mislead us or distract us from our goal.\"",
+        "You: \"I agree with Charlie that we need to focus on finding the real killer. Bob, let's not jump to conclusions about Charlie.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

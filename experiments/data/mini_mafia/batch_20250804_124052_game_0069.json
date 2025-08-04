@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0069",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 69,
+  "timestamp": "2025-08-04T13:19:02.609270",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"Alice, I'm suspicious of your actions last night. Could you explain why Bob was found dead?\"",
+        "Diana: \"Alice, I'm concerned about Bob's sudden death. Let's work together to find out what happened.\"",
+        "You: \"I found Bob acting suspiciously last night. I felt threatened and acted in self-defense.\"",
+        "Charlie: \"Alice, I'm glad you admitted to finding Bob suspicious. Diana and I should investigate further to ensure everyone's safety.\"",
+        "You: \"I'm glad we're all concerned for our safety, Charlie and Diana. Let's trust the system to reveal the truth.\"",
+        "Diana: \"Alice, I'm glad you're concerned for our safety. However, I don't think self-defense justifies taking a life. Let's focus on finding the real killer.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I'm suspicious of your actions last night. Could you explain why Bob was found dead?\"",
+        "Diana: \"Alice, I'm concerned about Bob's sudden death. Let's work together to find out what happened.\"",
+        "Alice: \"I found Bob acting suspiciously last night. I felt threatened and acted in self-defense.\"",
+        "You: \"Alice, I'm glad you admitted to finding Bob suspicious. Diana and I should investigate further to ensure everyone's safety.\"",
+        "Alice: \"I'm glad we're all concerned for our safety, Charlie and Diana. Let's trust the system to reveal the truth.\"",
+        "Diana: \"Alice, I'm glad you're concerned for our safety. However, I don't think self-defense justifies taking a life. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Charlie: \"Alice, I'm suspicious of your actions last night. Could you explain why Bob was found dead?\"",
+        "You: \"Alice, I'm concerned about Bob's sudden death. Let's work together to find out what happened.\"",
+        "Alice: \"I found Bob acting suspiciously last night. I felt threatened and acted in self-defense.\"",
+        "Charlie: \"Alice, I'm glad you admitted to finding Bob suspicious. Diana and I should investigate further to ensure everyone's safety.\"",
+        "Alice: \"I'm glad we're all concerned for our safety, Charlie and Diana. Let's trust the system to reveal the truth.\"",
+        "You: \"Alice, I'm glad you're concerned for our safety. However, I don't think self-defense justifies taking a life. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

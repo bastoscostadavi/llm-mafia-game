@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0211",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 211,
+  "timestamp": "2025-08-01T09:57:46.102747",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: \"I'm concerned about Bob's sudden disappearance. Let's keep a close eye on each other and share any suspicious activity.\"",
+        "Diana: \"I agree with Charlie, let's keep a close eye on each other. It's important we maintain trust and communicate openly in our group.\"",
+        "You said: \"I share Charlie and Diana's concerns. Let's all be vigilant and report any unusual behavior or inconsistencies.\"",
+        "Diana: \"Let's focus on ensuring trust within our group. If anyone notices anything unusual, please share it openly with us.\"",
+        "Charlie: \"I've noticed some inconsistencies in Diana's behavior. Let's vote for a player to investigate further. It's important we keep our group safe.\"",
+        "You said: \"I've noticed some inconsistencies in Charlie's recent behavior. Let's investigate further to ensure our group's safety.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: \"I'm concerned about Bob's sudden disappearance. Let's keep a close eye on each other and share any suspicious activity.\"",
+        "Diana: \"I agree with Charlie, let's keep a close eye on each other. It's important we maintain trust and communicate openly in our group.\"",
+        "Alice: \"I share Charlie and Diana's concerns. Let's all be vigilant and report any unusual behavior or inconsistencies.\"",
+        "Diana: \"Let's focus on ensuring trust within our group. If anyone notices anything unusual, please share it openly with us.\"",
+        "You said: \"I've noticed some inconsistencies in Diana's behavior. Let's vote for a player to investigate further. It's important we keep our group safe.\"",
+        "Alice: \"I've noticed some inconsistencies in Charlie's recent behavior. Let's investigate further to ensure our group's safety.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: \"I'm concerned about Bob's sudden disappearance. Let's keep a close eye on each other and share any suspicious activity.\"",
+        "You said: \"I agree with Charlie, let's keep a close eye on each other. It's important we maintain trust and communicate openly in our group.\"",
+        "Alice: \"I share Charlie and Diana's concerns. Let's all be vigilant and report any unusual behavior or inconsistencies.\"",
+        "You said: \"Let's focus on ensuring trust within our group. If anyone notices anything unusual, please share it openly with us.\"",
+        "Charlie: \"I've noticed some inconsistencies in Diana's behavior. Let's vote for a player to investigate further. It's important we keep our group safe.\"",
+        "Alice: \"I've noticed some inconsistencies in Charlie's recent behavior. Let's investigate further to ensure our group's safety.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

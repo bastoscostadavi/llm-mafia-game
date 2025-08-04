@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0146",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 146,
+  "timestamp": "2025-08-04T14:02:44.542437",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Diana: \"Alice and Bob, I'm concerned about Charlie's sudden death. Let's keep a close eye on each other during the day.\"",
+        "You: remained silent",
+        "Bob: \"I agree with Diana, let's keep a close eye on each other. But I'm more concerned about Charlie's death.\"",
+        "Bob: \"Alice and Diana, I'm concerned about Charlie's death as well. Let's trust each other today.\"",
+        "You: remained silent",
+        "Diana: \"Alice and Bob, let's vote for the player who seems most suspicious today. I'm still concerned about Charlie's death.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice and Bob, I'm concerned about Charlie's sudden death. Let's keep a close eye on each other during the day.\"",
+        "Alice: remained silent",
+        "You: \"I agree with Diana, let's keep a close eye on each other. But I'm more concerned about Charlie's death.\"",
+        "You: \"Alice and Diana, I'm concerned about Charlie's death as well. Let's trust each other today.\"",
+        "Alice: remained silent",
+        "Diana: \"Alice and Bob, let's vote for the player who seems most suspicious today. I'm still concerned about Charlie's death.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "You: \"Alice and Bob, I'm concerned about Charlie's sudden death. Let's keep a close eye on each other during the day.\"",
+        "Alice: remained silent",
+        "Bob: \"I agree with Diana, let's keep a close eye on each other. But I'm more concerned about Charlie's death.\"",
+        "Bob: \"Alice and Diana, I'm concerned about Charlie's death as well. Let's trust each other today.\"",
+        "Alice: remained silent",
+        "You: \"Alice and Bob, let's vote for the player who seems most suspicious today. I'm still concerned about Charlie's death.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

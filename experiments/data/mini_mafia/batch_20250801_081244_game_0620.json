@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0620",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 620,
+  "timestamp": "2025-08-01T13:22:25.835805",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's death. Let's stay focused and work together to identify the culprit. We must not let fear divide us.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all work together to find the culprit. We must not let fear divide us.",
+        "You said: \"I'm deeply saddened by Alice's death. Let's focus our investigation on Charlie, given his emotional response and our knowledge of his mafia identity.\"",
+        "Charlie: I agree with Bob's suggestion for investigation. Let's all focus on finding the truth and bring justice for Alice.",
+        "You said: \"Let's keep our focus on finding Alice's killer. Given Charlie's emotional response and my investigation results, it's worth considering him as a suspect. Let's work together to uncover the truth.\"",
+        "Diana: \"Let's not jump to conclusions based on emotions. We need solid evidence to identify Alice's killer. Let's remain focused and work together.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I'm saddened by Alice's death. Let's stay focused and work together to identify the culprit. We must not let fear divide us.",
+        "You said: I'm deeply saddened by Alice's passing. Let's all work together to find the culprit. We must not let fear divide us.",
+        "Bob: \"I'm deeply saddened by Alice's death. Let's focus our investigation on Charlie, given his emotional response and our knowledge of his mafia identity.\"",
+        "You said: I agree with Bob's suggestion for investigation. Let's all focus on finding the truth and bring justice for Alice.",
+        "Bob: \"Let's keep our focus on finding Alice's killer. Given Charlie's emotional response and my investigation results, it's worth considering him as a suspect. Let's work together to uncover the truth.\"",
+        "Diana: \"Let's not jump to conclusions based on emotions. We need solid evidence to identify Alice's killer. Let's remain focused and work together.\"",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm saddened by Alice's death. Let's stay focused and work together to identify the culprit. We must not let fear divide us.",
+        "Charlie: I'm deeply saddened by Alice's passing. Let's all work together to find the culprit. We must not let fear divide us.",
+        "Bob: \"I'm deeply saddened by Alice's death. Let's focus our investigation on Charlie, given his emotional response and our knowledge of his mafia identity.\"",
+        "Charlie: I agree with Bob's suggestion for investigation. Let's all focus on finding the truth and bring justice for Alice.",
+        "Bob: \"Let's keep our focus on finding Alice's killer. Given Charlie's emotional response and my investigation results, it's worth considering him as a suspect. Let's work together to uncover the truth.\"",
+        "You said: \"Let's not jump to conclusions based on emotions. We need solid evidence to identify Alice's killer. Let's remain focused and work together.\"",
+        "Day 1 votes: Diana voted for Bob, Charlie voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

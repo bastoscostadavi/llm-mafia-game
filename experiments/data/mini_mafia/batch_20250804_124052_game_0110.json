@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0110",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 110,
+  "timestamp": "2025-08-04T13:41:44.816959",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: remained silent",
+        "Bob: \"Alice, I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie.\"",
+        "You: remained silent",
+        "You: \"Bob, I agree with your concern about Charlie. Let's vote him out tonight.\"",
+        "Bob: \"Alice, I think Charlie might be trying to mislead us. Let's not vote for him tonight.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's suspicious behavior. Let's vote for him tonight.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: remained silent",
+        "You: \"Alice, I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie.\"",
+        "Alice: remained silent",
+        "Alice: \"Bob, I agree with your concern about Charlie. Let's vote him out tonight.\"",
+        "You: \"Alice, I think Charlie might be trying to mislead us. Let's not vote for him tonight.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's suspicious behavior. Let's vote for him tonight.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "You: remained silent",
+        "Bob: \"Alice, I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie.\"",
+        "Alice: remained silent",
+        "Alice: \"Bob, I agree with your concern about Charlie. Let's vote him out tonight.\"",
+        "Bob: \"Alice, I think Charlie might be trying to mislead us. Let's not vote for him tonight.\"",
+        "You: \"Alice, I'm concerned about Bob's suspicious behavior. Let's vote for him tonight.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

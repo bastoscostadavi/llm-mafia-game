@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0143",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 143,
+  "timestamp": "2025-08-04T14:01:04.509083",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Charlie: \"Alice and Bob, I'm concerned about Diana's sudden death. Let's keep a close eye on each other during the day.\"",
+        "You: \"Alice: I agree with Charlie, we should keep a close eye on each other during the day.\"",
+        "Bob: \"Bob: I think it's important that we all cooperate to find out who killed Diana. Let's focus on gathering information and sharing it openly.\"",
+        "You: \"Alice: I'd like to propose a truce with Bob and Charlie, let's work together to find the real killer. My suspicion is on the newcomer in town.\"",
+        "Bob: \"Bob: Alice, I believe you're the mafioso. Let's vote for Charlie today.\"",
+        "Charlie: \"Charlie: Alice, I've noticed you're suspicious of me. But I believe you're trying to mislead Bob by suggesting that I'm the mafioso. Let's work together to find the real killer.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Charlie: \"Alice and Bob, I'm concerned about Diana's sudden death. Let's keep a close eye on each other during the day.\"",
+        "Alice: \"Alice: I agree with Charlie, we should keep a close eye on each other during the day.\"",
+        "You: \"Bob: I think it's important that we all cooperate to find out who killed Diana. Let's focus on gathering information and sharing it openly.\"",
+        "Alice: \"Alice: I'd like to propose a truce with Bob and Charlie, let's work together to find the real killer. My suspicion is on the newcomer in town.\"",
+        "You: \"Bob: Alice, I believe you're the mafioso. Let's vote for Charlie today.\"",
+        "Charlie: \"Charlie: Alice, I've noticed you're suspicious of me. But I believe you're trying to mislead Bob by suggesting that I'm the mafioso. Let's work together to find the real killer.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: \"Alice and Bob, I'm concerned about Diana's sudden death. Let's keep a close eye on each other during the day.\"",
+        "Alice: \"Alice: I agree with Charlie, we should keep a close eye on each other during the day.\"",
+        "Bob: \"Bob: I think it's important that we all cooperate to find out who killed Diana. Let's focus on gathering information and sharing it openly.\"",
+        "Alice: \"Alice: I'd like to propose a truce with Bob and Charlie, let's work together to find the real killer. My suspicion is on the newcomer in town.\"",
+        "Bob: \"Bob: Alice, I believe you're the mafioso. Let's vote for Charlie today.\"",
+        "You: \"Charlie: Alice, I've noticed you're suspicious of me. But I believe you're trying to mislead Bob by suggesting that I'm the mafioso. Let's work together to find the real killer.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -124,7 +124,7 @@ The system is designed for research simplicity:
 ## Project Structure
 
 ```
-mafia_game/
+llm-mafia-game/
 ├── run_game.py              # Main entry point
 ├── preset_games.py          # Preset game configurations
 ├── src/main.py              # Core game engine with create_game()

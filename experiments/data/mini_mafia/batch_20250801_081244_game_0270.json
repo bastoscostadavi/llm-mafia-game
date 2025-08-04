@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0270",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 270,
+  "timestamp": "2025-08-01T10:26:54.881227",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all work together to find the real culprit and ensure justice is served.",
+        "Diana: Diana: I'm saddened by Alice's death. Let's keep an open mind during our investigation, and remember, the mafia may try to mislead us. We must work together to uncover the truth.",
+        "You said: \"I agree with Diana. Let's stay focused and keep an eye on Charlie's behavior. Remember, the mafia may try to deceive us with false emotions. We need to work together to ensure justice is served.\"",
+        "You said: \"Let's not jump to conclusions yet. We should focus on gathering more information and keep an eye on Charlie's behavior. Remember, the mafia may try to manipulate our suspicions.\"",
+        "Charlie: I share Bob's concern for uncovering the truth. Let's remain vigilant and not let our emotions cloud our judgment. We must work together to identify the real culprit.",
+        "Diana: Diana: Based on our conversation, let's continue observing Charlie's behavior and keep an open mind. The mafia may try to manipulate our suspicions, but we must stay focused on the truth.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden demise. Let's all work together to find the real culprit and ensure justice is served.",
+        "Diana: Diana: I'm saddened by Alice's death. Let's keep an open mind during our investigation, and remember, the mafia may try to mislead us. We must work together to uncover the truth.",
+        "Bob: \"I agree with Diana. Let's stay focused and keep an eye on Charlie's behavior. Remember, the mafia may try to deceive us with false emotions. We need to work together to ensure justice is served.\"",
+        "Bob: \"Let's not jump to conclusions yet. We should focus on gathering more information and keep an eye on Charlie's behavior. Remember, the mafia may try to manipulate our suspicions.\"",
+        "You said: I share Bob's concern for uncovering the truth. Let's remain vigilant and not let our emotions cloud our judgment. We must work together to identify the real culprit.",
+        "Diana: Diana: Based on our conversation, let's continue observing Charlie's behavior and keep an open mind. The mafia may try to manipulate our suspicions, but we must stay focused on the truth."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: I'm shocked by Alice's sudden demise. Let's all work together to find the real culprit and ensure justice is served.",
+        "You said: Diana: I'm saddened by Alice's death. Let's keep an open mind during our investigation, and remember, the mafia may try to mislead us. We must work together to uncover the truth.",
+        "Bob: \"I agree with Diana. Let's stay focused and keep an eye on Charlie's behavior. Remember, the mafia may try to deceive us with false emotions. We need to work together to ensure justice is served.\"",
+        "Bob: \"Let's not jump to conclusions yet. We should focus on gathering more information and keep an eye on Charlie's behavior. Remember, the mafia may try to manipulate our suspicions.\"",
+        "Charlie: I share Bob's concern for uncovering the truth. Let's remain vigilant and not let our emotions cloud our judgment. We must work together to identify the real culprit.",
+        "You said: Diana: Based on our conversation, let's continue observing Charlie's behavior and keep an open mind. The mafia may try to manipulate our suspicions, but we must stay focused on the truth.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

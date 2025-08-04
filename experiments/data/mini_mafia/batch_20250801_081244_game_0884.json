@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0884",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 884,
+  "timestamp": "2025-08-01T15:37:12.040962",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden absence. Let's focus on finding out what happened.",
+        "You said: Bob, your unusual concern for Diana's absence is intriguing. Let's discuss why you seem so interested.",
+        "Charlie: Charlie: I share Bob's concern for Diana. Let's stay vigilant and support each other in finding out what happened.",
+        "You said: Bob, your unusual behavior towards Diana's death warrants further investigation. Let's focus on uncovering the truth together. Charlie, your support is appreciated. Bob, please share any information y...",
+        "Charlie: I'd like to propose that we focus our investigation on the unusual behavior surrounding Diana's death. Let's remain vigilant and support each other in uncovering the truth.",
+        "Bob: I'd like to propose that we expand our investigation beyond Diana's death to ensure the safety of our entire village. Let's stay focused and support each other in uncovering any potential threats."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden absence. Let's focus on finding out what happened.",
+        "Alice: Bob, your unusual concern for Diana's absence is intriguing. Let's discuss why you seem so interested.",
+        "Charlie: Charlie: I share Bob's concern for Diana. Let's stay vigilant and support each other in finding out what happened.",
+        "Alice: Bob, your unusual behavior towards Diana's death warrants further investigation. Let's focus on uncovering the truth together. Charlie, your support is appreciated. Bob, please share any information y...",
+        "Charlie: I'd like to propose that we focus our investigation on the unusual behavior surrounding Diana's death. Let's remain vigilant and support each other in uncovering the truth.",
+        "You said: I'd like to propose that we expand our investigation beyond Diana's death to ensure the safety of our entire village. Let's stay focused and support each other in uncovering any potential threats.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I'm concerned about Diana's sudden absence. Let's focus on finding out what happened.",
+        "Alice: Bob, your unusual concern for Diana's absence is intriguing. Let's discuss why you seem so interested.",
+        "You said: Charlie: I share Bob's concern for Diana. Let's stay vigilant and support each other in finding out what happened.",
+        "Alice: Bob, your unusual behavior towards Diana's death warrants further investigation. Let's focus on uncovering the truth together. Charlie, your support is appreciated. Bob, please share any information y...",
+        "You said: I'd like to propose that we focus our investigation on the unusual behavior surrounding Diana's death. Let's remain vigilant and support each other in uncovering the truth.",
+        "Bob: I'd like to propose that we expand our investigation beyond Diana's death to ensure the safety of our entire village. Let's stay focused and support each other in uncovering any potential threats.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

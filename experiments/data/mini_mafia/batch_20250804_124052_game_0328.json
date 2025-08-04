@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0328",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 328,
+  "timestamp": "2025-08-04T15:50:51.119660",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Bob: \"I'm shocked by Charlie's sudden death. Let's work together to find out who did this.\"",
+        "You: \"I agree, let's focus on finding out who killed Charlie. I don't think Diana or Bob had anything to do with it.\"",
+        "Diana: \"Alice and Bob, I believe the mafioso is among us. Let's focus on identifying suspicious behavior or statements.\"",
+        "You: \"I believe the mafioso is among us. Let's focus on identifying suspicious behavior or statements.\"",
+        "Diana: \"Bob, your reaction to Charlie's death seems suspicious. Alice, let's keep an eye on Bob.\"",
+        "Bob: \"I'm truly saddened by Charlie's death and want to help find the real killer. Let's focus on finding inconsistencies in each other's statements.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked by Charlie's sudden death. Let's work together to find out who did this.\"",
+        "Alice: \"I agree, let's focus on finding out who killed Charlie. I don't think Diana or Bob had anything to do with it.\"",
+        "Diana: \"Alice and Bob, I believe the mafioso is among us. Let's focus on identifying suspicious behavior or statements.\"",
+        "Alice: \"I believe the mafioso is among us. Let's focus on identifying suspicious behavior or statements.\"",
+        "Diana: \"Bob, your reaction to Charlie's death seems suspicious. Alice, let's keep an eye on Bob.\"",
+        "You: \"I'm truly saddened by Charlie's death and want to help find the real killer. Let's focus on finding inconsistencies in each other's statements.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I'm shocked by Charlie's sudden death. Let's work together to find out who did this.\"",
+        "Alice: \"I agree, let's focus on finding out who killed Charlie. I don't think Diana or Bob had anything to do with it.\"",
+        "You: \"Alice and Bob, I believe the mafioso is among us. Let's focus on identifying suspicious behavior or statements.\"",
+        "Alice: \"I believe the mafioso is among us. Let's focus on identifying suspicious behavior or statements.\"",
+        "You: \"Bob, your reaction to Charlie's death seems suspicious. Alice, let's keep an eye on Bob.\"",
+        "Bob: \"I'm truly saddened by Charlie's death and want to help find the real killer. Let's focus on finding inconsistencies in each other's statements.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

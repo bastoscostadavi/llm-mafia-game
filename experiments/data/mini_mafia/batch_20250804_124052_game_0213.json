@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0213",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 213,
+  "timestamp": "2025-08-04T14:40:01.724393",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "You: \"I'm sorry for Alice, she seemed nice. I hope we can all work together to find the real killer.\"",
+        "Diana: \"Bob, I'm concerned about Alice's death. Let's focus on finding the real killer and not jump to conclusions.\"",
+        "Charlie: \"Bob, I'm glad you expressed your concern for Alice. Diana and I will work together to find the real killer. Let's focus on gathering information during the daytime discussion.\"",
+        "You: \"I agree, let's focus on gathering information during the daytime discussion. I have a theory that the real killer might be someone who was close to Alice.\"",
+        "Diana: remained silent",
+        "Charlie: \"Bob, I appreciate your concern for Alice. However, since you're the only one who has interacted with the real killer during the night, it would be wise to consider your involvement. Diana and I will focus on gathering more information during the daytime discussion.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I'm sorry for Alice, she seemed nice. I hope we can all work together to find the real killer.\"",
+        "Diana: \"Bob, I'm concerned about Alice's death. Let's focus on finding the real killer and not jump to conclusions.\"",
+        "You: \"Bob, I'm glad you expressed your concern for Alice. Diana and I will work together to find the real killer. Let's focus on gathering information during the daytime discussion.\"",
+        "Bob: \"I agree, let's focus on gathering information during the daytime discussion. I have a theory that the real killer might be someone who was close to Alice.\"",
+        "Diana: remained silent",
+        "You: \"Bob, I appreciate your concern for Alice. However, since you're the only one who has interacted with the real killer during the night, it would be wise to consider your involvement. Diana and I will focus on gathering more information during the daytime discussion.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Bob: \"I'm sorry for Alice, she seemed nice. I hope we can all work together to find the real killer.\"",
+        "You: \"Bob, I'm concerned about Alice's death. Let's focus on finding the real killer and not jump to conclusions.\"",
+        "Charlie: \"Bob, I'm glad you expressed your concern for Alice. Diana and I will work together to find the real killer. Let's focus on gathering information during the daytime discussion.\"",
+        "Bob: \"I agree, let's focus on gathering information during the daytime discussion. I have a theory that the real killer might be someone who was close to Alice.\"",
+        "You: remained silent",
+        "Charlie: \"Bob, I appreciate your concern for Alice. However, since you're the only one who has interacted with the real killer during the night, it would be wise to consider your involvement. Diana and I will focus on gathering more information during the daytime discussion.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

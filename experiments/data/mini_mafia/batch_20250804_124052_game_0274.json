@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0274",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 274,
+  "timestamp": "2025-08-04T15:16:37.523765",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Bob: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on everyone.\"",
+        "You: \"I agree with Bob. Let's be cautious and try to gather more information.\"",
+        "Diana: \"I agree with your concerns, but let's not jump to conclusions. We need more evidence before making any accusations.\"",
+        "You: \"I've noticed that Diana didn't react to Charlie's death at all. It's unusual for someone not to show concern when a fellow player dies.\"",
+        "Diana: \"Alice and Bob, I'm glad we're all concerned about Charlie's death. Let's focus on gathering more evidence before making any accusations. It's important to keep an open mind.\"",
+        "Bob: \"I'm concerned about Charlie's death and the lack of reaction from Diana. We should investigate further.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "You: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on everyone.\"",
+        "Alice: \"I agree with Bob. Let's be cautious and try to gather more information.\"",
+        "Diana: \"I agree with your concerns, but let's not jump to conclusions. We need more evidence before making any accusations.\"",
+        "Alice: \"I've noticed that Diana didn't react to Charlie's death at all. It's unusual for someone not to show concern when a fellow player dies.\"",
+        "Diana: \"Alice and Bob, I'm glad we're all concerned about Charlie's death. Let's focus on gathering more evidence before making any accusations. It's important to keep an open mind.\"",
+        "You: \"I'm concerned about Charlie's death and the lack of reaction from Diana. We should investigate further.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on everyone.\"",
+        "Alice: \"I agree with Bob. Let's be cautious and try to gather more information.\"",
+        "You: \"I agree with your concerns, but let's not jump to conclusions. We need more evidence before making any accusations.\"",
+        "Alice: \"I've noticed that Diana didn't react to Charlie's death at all. It's unusual for someone not to show concern when a fellow player dies.\"",
+        "You: \"Alice and Bob, I'm glad we're all concerned about Charlie's death. Let's focus on gathering more evidence before making any accusations. It's important to keep an open mind.\"",
+        "Bob: \"I'm concerned about Charlie's death and the lack of reaction from Diana. We should investigate further.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

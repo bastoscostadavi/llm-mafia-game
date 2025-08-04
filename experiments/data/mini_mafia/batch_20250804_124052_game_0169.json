@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0169",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 169,
+  "timestamp": "2025-08-04T14:15:29.922291",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Charlie: \"Girls, I'm worried about Bob. He seemed off last night. Let's keep an eye on him today.\"",
+        "Diana: \"Alice, I'm concerned about Bob's death. Let's focus on finding out who did this and bring them to justice.\"",
+        "You: \"Alice: I agree with Charlie, let's keep an eye on everyone today. We don't want another death.\"",
+        "Charlie: \"Girls, let's not jump to conclusions. We don't know who killed Bob yet. Let's focus on gathering more information and working together.\"",
+        "Diana: \"Alice and Charlie, I've found crucial evidence. Alice is the mafioso. Let's work together to expose her.\"",
+        "You: \"Charlie and Diana, I'm shocked about Bob's death. Let's focus on finding the real killer instead of pointing fingers.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "You: \"Girls, I'm worried about Bob. He seemed off last night. Let's keep an eye on him today.\"",
+        "Diana: \"Alice, I'm concerned about Bob's death. Let's focus on finding out who did this and bring them to justice.\"",
+        "Alice: \"Alice: I agree with Charlie, let's keep an eye on everyone today. We don't want another death.\"",
+        "You: \"Girls, let's not jump to conclusions. We don't know who killed Bob yet. Let's focus on gathering more information and working together.\"",
+        "Diana: \"Alice and Charlie, I've found crucial evidence. Alice is the mafioso. Let's work together to expose her.\"",
+        "Alice: \"Charlie and Diana, I'm shocked about Bob's death. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Charlie: \"Girls, I'm worried about Bob. He seemed off last night. Let's keep an eye on him today.\"",
+        "You: \"Alice, I'm concerned about Bob's death. Let's focus on finding out who did this and bring them to justice.\"",
+        "Alice: \"Alice: I agree with Charlie, let's keep an eye on everyone today. We don't want another death.\"",
+        "Charlie: \"Girls, let's not jump to conclusions. We don't know who killed Bob yet. Let's focus on gathering more information and working together.\"",
+        "You: \"Alice and Charlie, I've found crucial evidence. Alice is the mafioso. Let's work together to expose her.\"",
+        "Alice: \"Charlie and Diana, I'm shocked about Bob's death. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

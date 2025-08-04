@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0714",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 714,
+  "timestamp": "2025-08-01T14:12:54.847117",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: \"I'm concerned about Bob's sudden death. Let's all keep a close eye on each other tonight.\"",
+        "Diana: \"I agree with Alice, let's be vigilant. I've noticed Charlie seems uneasy lately, could it be a sign of guilt?\"",
+        "Charlie: \"I agree with Diana, let's be extra vigilant tonight. It's crucial we ensure everyone's safety.\"",
+        "Diana: \"I'm worried about Charlie's unusual behavior. Let's consider voting for him tonight to ensure everyone's safety.\"",
+        "Charlie: \"I understand everyone's concerns. Let's not jump to conclusions and trust the investigation process. We should focus on cooperating to uncover the truth.\"",
+        "You said: \"Given the recent events, let's not take any chances. I suggest we all commit to voting for Charlie tonight.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's all keep a close eye on each other tonight.\"",
+        "Diana: \"I agree with Alice, let's be vigilant. I've noticed Charlie seems uneasy lately, could it be a sign of guilt?\"",
+        "You said: \"I agree with Diana, let's be extra vigilant tonight. It's crucial we ensure everyone's safety.\"",
+        "Diana: \"I'm worried about Charlie's unusual behavior. Let's consider voting for him tonight to ensure everyone's safety.\"",
+        "You said: \"I understand everyone's concerns. Let's not jump to conclusions and trust the investigation process. We should focus on cooperating to uncover the truth.\"",
+        "Alice: \"Given the recent events, let's not take any chances. I suggest we all commit to voting for Charlie tonight.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's all keep a close eye on each other tonight.\"",
+        "You said: \"I agree with Alice, let's be vigilant. I've noticed Charlie seems uneasy lately, could it be a sign of guilt?\"",
+        "Charlie: \"I agree with Diana, let's be extra vigilant tonight. It's crucial we ensure everyone's safety.\"",
+        "You said: \"I'm worried about Charlie's unusual behavior. Let's consider voting for him tonight to ensure everyone's safety.\"",
+        "Charlie: \"I understand everyone's concerns. Let's not jump to conclusions and trust the investigation process. We should focus on cooperating to uncover the truth.\"",
+        "Alice: \"Given the recent events, let's not take any chances. I suggest we all commit to voting for Charlie tonight.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

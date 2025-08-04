@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0553",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 553,
+  "timestamp": "2025-08-01T12:47:20.895586",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: Alice's behavior seems suspicious to me. We should keep a close eye on her actions.",
+        "Bob: Bob: I agree with Charlie. Let's keep a close eye on Alice's actions. We need to work together to uncover the truth.",
+        "You said: I found a suspicious object in the woods yesterday. Let's focus our investigation there instead of accusing each other.",
+        "Charlie: Let's not jump to conclusions about Alice. We should investigate the woods as suggested. However, I find Alice's behavior peculiar and believe we should keep an eye on her actions.",
+        "You said: I found something strange in the woods that might be relevant to our investigation. Let's focus our efforts there.",
+        "Bob: Let's not ignore the strange finding in the woods. We should investigate it together to ensure our safety. Let's focus on the facts and avoid accusations for now."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: Alice's behavior seems suspicious to me. We should keep a close eye on her actions.",
+        "You said: Bob: I agree with Charlie. Let's keep a close eye on Alice's actions. We need to work together to uncover the truth.",
+        "Alice: I found a suspicious object in the woods yesterday. Let's focus our investigation there instead of accusing each other.",
+        "Charlie: Let's not jump to conclusions about Alice. We should investigate the woods as suggested. However, I find Alice's behavior peculiar and believe we should keep an eye on her actions.",
+        "Alice: I found something strange in the woods that might be relevant to our investigation. Let's focus our efforts there.",
+        "You said: Let's not ignore the strange finding in the woods. We should investigate it together to ensure our safety. Let's focus on the facts and avoid accusations for now.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: Alice's behavior seems suspicious to me. We should keep a close eye on her actions.",
+        "Bob: Bob: I agree with Charlie. Let's keep a close eye on Alice's actions. We need to work together to uncover the truth.",
+        "Alice: I found a suspicious object in the woods yesterday. Let's focus our investigation there instead of accusing each other.",
+        "You said: Let's not jump to conclusions about Alice. We should investigate the woods as suggested. However, I find Alice's behavior peculiar and believe we should keep an eye on her actions.",
+        "Alice: I found something strange in the woods that might be relevant to our investigation. Let's focus our efforts there.",
+        "Bob: Let's not ignore the strange finding in the woods. We should investigate it together to ensure our safety. Let's focus on the facts and avoid accusations for now.",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

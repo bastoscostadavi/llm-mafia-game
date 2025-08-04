@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0408",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 408,
+  "timestamp": "2025-08-01T11:34:39.335915",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's keep a close eye on each other and make sure no one acts suspiciously.\"",
+        "You said: \"I agree with Charlie. Let's be vigilant and report any unusual behavior or inconsistencies we notice.\"",
+        "Diana: \"I share Charlie and Bob's concerns for Alice's death. Let's all be vigilant and report any unusual behavior or inconsistencies we notice.\"\n\nBy expressing concern and supporting the call for vigilance...",
+        "You said: \"I noticed that Charlie was the one who first mentioned Alice's death and suggested vigilance. Let's keep a special eye on him tonight.\"",
+        "Charlie: \"I've noticed that Diana has been acting suspiciously since Alice's death. Let's keep a close eye on her tonight.\"",
+        "Diana: \"I'm deeply saddened by Alice's death and want to ensure we find the truth. Let's work together and share any suspicious observations we have.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's keep a close eye on each other and make sure no one acts suspiciously.\"",
+        "Bob: \"I agree with Charlie. Let's be vigilant and report any unusual behavior or inconsistencies we notice.\"",
+        "Diana: \"I share Charlie and Bob's concerns for Alice's death. Let's all be vigilant and report any unusual behavior or inconsistencies we notice.\"\n\nBy expressing concern and supporting the call for vigilance...",
+        "Bob: \"I noticed that Charlie was the one who first mentioned Alice's death and suggested vigilance. Let's keep a special eye on him tonight.\"",
+        "You said: \"I've noticed that Diana has been acting suspiciously since Alice's death. Let's keep a close eye on her tonight.\"",
+        "Diana: \"I'm deeply saddened by Alice's death and want to ensure we find the truth. Let's work together and share any suspicious observations we have.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's keep a close eye on each other and make sure no one acts suspiciously.\"",
+        "Bob: \"I agree with Charlie. Let's be vigilant and report any unusual behavior or inconsistencies we notice.\"",
+        "You said: \"I share Charlie and Bob's concerns for Alice's death. Let's all be vigilant and report any unusual behavior or inconsistencies we notice.\"\n\nBy expressing concern and supporting the call for vigilance...",
+        "Bob: \"I noticed that Charlie was the one who first mentioned Alice's death and suggested vigilance. Let's keep a special eye on him tonight.\"",
+        "Charlie: \"I've noticed that Diana has been acting suspiciously since Alice's death. Let's keep a close eye on her tonight.\"",
+        "You said: \"I'm deeply saddened by Alice's death and want to ensure we find the truth. Let's work together and share any suspicious observations we have.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

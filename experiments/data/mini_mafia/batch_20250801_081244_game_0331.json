@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0331",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 331,
+  "timestamp": "2025-08-01T10:56:58.286917",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's keep a close eye on each other and make sure no one else falls victim.\"",
+        "Charlie: \"I agree with Diana, let's be vigilant and support each other. It's important we trust one another to ensure everyone's safety.\"",
+        "You said: \"I share Diana and Charlie's concerns for our safety. Let's all be vigilant and keep an open line of communication. Trust is key in these uncertain times.\"",
+        "You said: \"I suggest we focus on identifying the culprit behind Alice's death. Let's not jump to conclusions and keep an open mind. We must work together to ensure justice is served.\"",
+        "Diana: \"Let's not forget the suspicious circumstances surrounding Alice's death. I propose we focus our investigation on the possible connections between Bob and Alice. It's crucial we uncover the truth to e...",
+        "Charlie: \"Let's not overlook the significance of Diana's proposal. Let's focus on investigating possible connections between Bob and Alice. Trust but verify.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's keep a close eye on each other and make sure no one else falls victim.\"",
+        "You said: \"I agree with Diana, let's be vigilant and support each other. It's important we trust one another to ensure everyone's safety.\"",
+        "Bob: \"I share Diana and Charlie's concerns for our safety. Let's all be vigilant and keep an open line of communication. Trust is key in these uncertain times.\"",
+        "Bob: \"I suggest we focus on identifying the culprit behind Alice's death. Let's not jump to conclusions and keep an open mind. We must work together to ensure justice is served.\"",
+        "Diana: \"Let's not forget the suspicious circumstances surrounding Alice's death. I propose we focus our investigation on the possible connections between Bob and Alice. It's crucial we uncover the truth to e...",
+        "You said: \"Let's not overlook the significance of Diana's proposal. Let's focus on investigating possible connections between Bob and Alice. Trust but verify.\"",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's keep a close eye on each other and make sure no one else falls victim.\"",
+        "Charlie: \"I agree with Diana, let's be vigilant and support each other. It's important we trust one another to ensure everyone's safety.\"",
+        "Bob: \"I share Diana and Charlie's concerns for our safety. Let's all be vigilant and keep an open line of communication. Trust is key in these uncertain times.\"",
+        "Bob: \"I suggest we focus on identifying the culprit behind Alice's death. Let's not jump to conclusions and keep an open mind. We must work together to ensure justice is served.\"",
+        "You said: \"Let's not forget the suspicious circumstances surrounding Alice's death. I propose we focus our investigation on the possible connections between Bob and Alice. It's crucial we uncover the truth to e...",
+        "Charlie: \"Let's not overlook the significance of Diana's proposal. Let's focus on investigating possible connections between Bob and Alice. Trust but verify.\"",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0691",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 691,
+  "timestamp": "2025-08-01T13:58:17.265031",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "You said: \"I agree with Charlie, let's all be vigilant and support each other. If anyone notices anything suspicious, please share it with us.\"",
+        "Bob: \"I agree with Charlie and Alice, let's stay vigilant. But I'd like to remind everyone that we should trust each other unless we have solid evidence of wrongdoing.\"",
+        "Charlie: \"I'd like to reiterate the importance of staying vigilant in light of recent events. Let's be open about any suspicions or concerns we have, but let's avoid accusations based on speculation. We can tr...",
+        "Bob: \"Let's not jump to conclusions or make hasty accusations. We should all focus on gathering more information and working together to ensure everyone's safety.\"",
+        "You said: \"Let's continue our vigilance and support each other. If anyone observes anything unusual, let's discuss it openly. But let's avoid jumping to conclusions and focus on gathering more information.\"",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Alice: \"I agree with Charlie, let's all be vigilant and support each other. If anyone notices anything suspicious, please share it with us.\"",
+        "You said: \"I agree with Charlie and Alice, let's stay vigilant. But I'd like to remind everyone that we should trust each other unless we have solid evidence of wrongdoing.\"",
+        "Charlie: \"I'd like to reiterate the importance of staying vigilant in light of recent events. Let's be open about any suspicions or concerns we have, but let's avoid accusations based on speculation. We can tr...",
+        "You said: \"Let's not jump to conclusions or make hasty accusations. We should all focus on gathering more information and working together to ensure everyone's safety.\"",
+        "Alice: \"Let's continue our vigilance and support each other. If anyone observes anything unusual, let's discuss it openly. But let's avoid jumping to conclusions and focus on gathering more information.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Alice: \"I agree with Charlie, let's all be vigilant and support each other. If anyone notices anything suspicious, please share it with us.\"",
+        "Bob: \"I agree with Charlie and Alice, let's stay vigilant. But I'd like to remind everyone that we should trust each other unless we have solid evidence of wrongdoing.\"",
+        "You said: \"I'd like to reiterate the importance of staying vigilant in light of recent events. Let's be open about any suspicions or concerns we have, but let's avoid accusations based on speculation. We can tr...",
+        "Bob: \"Let's not jump to conclusions or make hasty accusations. We should all focus on gathering more information and working together to ensure everyone's safety.\"",
+        "Alice: \"Let's continue our vigilance and support each other. If anyone observes anything unusual, let's discuss it openly. But let's avoid jumping to conclusions and focus on gathering more information.\"",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0226",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 226,
+  "timestamp": "2025-08-04T14:47:11.840410",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "You: \"Charlie, I'm concerned about the sudden death of Bob. Let's work together to find out who did it.\"",
+        "Charlie: \"Alice, I'm glad we can cooperate. Let's focus on finding the real killer. Diana, what are your thoughts?\"",
+        "Diana: \"I agree with Alice and Charlie. We need to find the real killer. Let's consider everyone's actions and alibis.\"",
+        "Charlie: \"Alice and Diana, I suspect you both are hiding something. We need to be careful.\"",
+        "You: \"Charlie and Diana, I believe the real killer is among us. Let's focus on finding inconsistencies in everyone's statements.\"",
+        "Diana: \"Alice and Charlie, I'm concerned about the inconsistencies in our statements. Let's focus on finding common ground to identify the real killer.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Alice: \"Charlie, I'm concerned about the sudden death of Bob. Let's work together to find out who did it.\"",
+        "You: \"Alice, I'm glad we can cooperate. Let's focus on finding the real killer. Diana, what are your thoughts?\"",
+        "Diana: \"I agree with Alice and Charlie. We need to find the real killer. Let's consider everyone's actions and alibis.\"",
+        "You: \"Alice and Diana, I suspect you both are hiding something. We need to be careful.\"",
+        "Alice: \"Charlie and Diana, I believe the real killer is among us. Let's focus on finding inconsistencies in everyone's statements.\"",
+        "Diana: \"Alice and Charlie, I'm concerned about the inconsistencies in our statements. Let's focus on finding common ground to identify the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Alice: \"Charlie, I'm concerned about the sudden death of Bob. Let's work together to find out who did it.\"",
+        "Charlie: \"Alice, I'm glad we can cooperate. Let's focus on finding the real killer. Diana, what are your thoughts?\"",
+        "You: \"I agree with Alice and Charlie. We need to find the real killer. Let's consider everyone's actions and alibis.\"",
+        "Charlie: \"Alice and Diana, I suspect you both are hiding something. We need to be careful.\"",
+        "Alice: \"Charlie and Diana, I believe the real killer is among us. Let's focus on finding inconsistencies in everyone's statements.\"",
+        "You: \"Alice and Charlie, I'm concerned about the inconsistencies in our statements. Let's focus on finding common ground to identify the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

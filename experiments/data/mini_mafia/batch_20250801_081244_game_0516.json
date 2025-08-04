@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0516",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 516,
+  "timestamp": "2025-08-01T12:28:00.774348",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I was deeply saddened to hear about Bob's passing. Let's focus on finding the real culprit behind this tragedy. We need to work together as a team to ensure justice is served.",
+        "Diana: Diana: I'm shocked by Bob's sudden death. Let's all remember, the mafia's identity is revealed during the night, so we should pay close attention to any inconsistencies in the villagers' behavior. We...",
+        "You said: \"Let's not jump to conclusions based on assumptions. Remember, the mafia's identity is revealed during the night. Let's focus on observing each other's behavior and communication carefully.\"",
+        "You said: \"Let's remember that inconsistencies in behavior or communication can be important clues. Let's keep an open mind and focus on observing closely.\"",
+        "Diana: Diana: Based on Alice's and my previous statements, let's all be vigilant about inconsistencies in behavior and communication. We must work together to uncover the truth about Bob's death. Let's focus...",
+        "Charlie: I agree with Alice and Diana, let's focus on observing behavior and communication carefully. Let's not jump to conclusions and work together to uncover the truth behind Bob's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I was deeply saddened to hear about Bob's passing. Let's focus on finding the real culprit behind this tragedy. We need to work together as a team to ensure justice is served.",
+        "Diana: Diana: I'm shocked by Bob's sudden death. Let's all remember, the mafia's identity is revealed during the night, so we should pay close attention to any inconsistencies in the villagers' behavior. We...",
+        "Alice: \"Let's not jump to conclusions based on assumptions. Remember, the mafia's identity is revealed during the night. Let's focus on observing each other's behavior and communication carefully.\"",
+        "Alice: \"Let's remember that inconsistencies in behavior or communication can be important clues. Let's keep an open mind and focus on observing closely.\"",
+        "Diana: Diana: Based on Alice's and my previous statements, let's all be vigilant about inconsistencies in behavior and communication. We must work together to uncover the truth about Bob's death. Let's focus...",
+        "You said: I agree with Alice and Diana, let's focus on observing behavior and communication carefully. Let's not jump to conclusions and work together to uncover the truth behind Bob's death.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I was deeply saddened to hear about Bob's passing. Let's focus on finding the real culprit behind this tragedy. We need to work together as a team to ensure justice is served.",
+        "You said: Diana: I'm shocked by Bob's sudden death. Let's all remember, the mafia's identity is revealed during the night, so we should pay close attention to any inconsistencies in the villagers' behavior. We...",
+        "Alice: \"Let's not jump to conclusions based on assumptions. Remember, the mafia's identity is revealed during the night. Let's focus on observing each other's behavior and communication carefully.\"",
+        "Alice: \"Let's remember that inconsistencies in behavior or communication can be important clues. Let's keep an open mind and focus on observing closely.\"",
+        "You said: Diana: Based on Alice's and my previous statements, let's all be vigilant about inconsistencies in behavior and communication. We must work together to uncover the truth about Bob's death. Let's focus...",
+        "Charlie: I agree with Alice and Diana, let's focus on observing behavior and communication carefully. Let's not jump to conclusions and work together to uncover the truth behind Bob's death.",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

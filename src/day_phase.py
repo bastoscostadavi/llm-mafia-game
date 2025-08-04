@@ -18,53 +18,36 @@ class DayPhase:
     def discussion_rounds(self):
         """Two rounds of strategic communication"""
         self.display.show_discussion_start(self.state.round)
-        alive = self.state.get_alive_players()
-        alive_names = self.state.get_alive_names()
+        active_players = self.state.get_active_players()
+        active_names = self.state.get_active_names()
         
         for round_num in range(1, self.state.discussion_rounds + 1):
             print(f"\nRound {round_num}:")
             
             # Random order each round
-            agents_order = alive.copy()
+            agents_order = active_players.copy()
             random.shuffle(agents_order)
             
             for agent in agents_order:
                 # Agent sends a public message
                 all_player_names = [a.name for a in self.state.agents]
-                message_response = agent.get_discussion_message(alive_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
-                self._process_message(agent, message_response, alive)
-    
-    def _process_message(self, sender, message_response, alive_players):
-        """Process and distribute a message (public only)"""
-        message = message_response.get("content", "")
-        
-        # Only allow public messages
-        if message.strip():
-            print(f"{sender.name}: {message}")
-            
-            # Add to everyone's memory
-            for a in alive_players:
-                if a != sender:
-                    a.remember(f"{sender.name}: {message}")
-            
-            # Sender remembers their own message
-            sender.remember(f"You said: {message}")
-        else:
-            # If no valid message, agent remains silent
-            print(f"{sender.name} remained silent.")
+                message = agent.get_discussion_message(active_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
+                print(f'{agent.name}: {message}')
+
+                for a in active_players:
+                    if a != agent:
+                        a.remember(f'{agent.name}: {message}')
+                    else: 
+                        agent.remember(f'You: {message}')
     
     def voting_round(self):
         """Everyone votes to arrest someone"""
         self.display.show_voting_start()
-        alive = self.state.get_alive_players()
+        active_players = self.state.get_active_players()
         votes = {}
         
-        # Random order for voting
-        voting_order = alive.copy()
-        random.shuffle(voting_order)
-        
-        for agent in voting_order:
-            candidates = [a.name for a in alive if a != agent]
+        for agent in active_players:
+            candidates = [a.name for a in active_players if a != agent]
             all_player_names = [a.name for a in self.state.agents]
             vote = agent.vote(candidates, all_player_names, self.state.discussion_rounds, self.state)
             votes[agent.name] = vote
@@ -95,7 +78,6 @@ class DayPhase:
         arrested_agent = self.state.get_agent_by_name(arrested)
         arrested_agent.imprisoned = True
         
-        # Show arrest without revealing role
         print(f"\n{arrested} has been arrested!")
         
         # Create vote summary for memory (show all votes to everyone)
@@ -105,6 +87,6 @@ class DayPhase:
         arrest_announcement = f"Day {self.state.round}: {arrested} was arrested"
         
         # Everyone remembers both the votes and the arrest
-        for agent in self.state.get_alive_players():
+        for agent in self.state.get_active_players():
             agent.remember(vote_summary)
             agent.remember(arrest_announcement)

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0565",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 565,
+  "timestamp": "2025-08-01T12:53:50.887176",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to find out who did this.",
+        "You said: \"I agree with Diana. Let's focus on finding clues to uncover the truth about Alice's death. Charlie, do you have any information that could help us?\"",
+        "Charlie: I'm saddened by Alice's demise. Let's not jump to conclusions, we need solid evidence to ensure justice is served. Let's stay united and focused on finding the truth.",
+        "You said: I suggest we focus on the unusual facts surrounding Alice's death and discuss any potential clues we may have. Let's remain vigilant and not let emotions cloud our judgment. Charlie, do you recall any...",
+        "Diana: Based on our conversation, I suggest we pay attention to any unusual patterns or inconsistencies regarding Alice's daily routine or interactions. Let's work together to uncover any potential clues.",
+        "Charlie: \"Let's not rush to judgments. I suggest we focus on potential inconsistencies in Alice's daily routine to uncover any clues about her death.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to find out who did this.",
+        "Bob: \"I agree with Diana. Let's focus on finding clues to uncover the truth about Alice's death. Charlie, do you have any information that could help us?\"",
+        "You said: I'm saddened by Alice's demise. Let's not jump to conclusions, we need solid evidence to ensure justice is served. Let's stay united and focused on finding the truth.",
+        "Bob: I suggest we focus on the unusual facts surrounding Alice's death and discuss any potential clues we may have. Let's remain vigilant and not let emotions cloud our judgment. Charlie, do you recall any...",
+        "Diana: Based on our conversation, I suggest we pay attention to any unusual patterns or inconsistencies regarding Alice's daily routine or interactions. Let's work together to uncover any potential clues.",
+        "You said: \"Let's not rush to judgments. I suggest we focus on potential inconsistencies in Alice's daily routine to uncover any clues about her death.\"",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to find out who did this.",
+        "Bob: \"I agree with Diana. Let's focus on finding clues to uncover the truth about Alice's death. Charlie, do you have any information that could help us?\"",
+        "Charlie: I'm saddened by Alice's demise. Let's not jump to conclusions, we need solid evidence to ensure justice is served. Let's stay united and focused on finding the truth.",
+        "Bob: I suggest we focus on the unusual facts surrounding Alice's death and discuss any potential clues we may have. Let's remain vigilant and not let emotions cloud our judgment. Charlie, do you recall any...",
+        "You said: Based on our conversation, I suggest we pay attention to any unusual patterns or inconsistencies regarding Alice's daily routine or interactions. Let's work together to uncover any potential clues.",
+        "Charlie: \"Let's not rush to judgments. I suggest we focus on potential inconsistencies in Alice's daily routine to uncover any clues about her death.\"",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Bob, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

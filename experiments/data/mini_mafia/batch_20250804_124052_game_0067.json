@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0067",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 67,
+  "timestamp": "2025-08-04T13:17:53.638504",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice, I'm the detective. You were investigated and found to be a mafioso. Surrender now or risk being killed by the villagers.\"",
+        "Bob: \"Alice, I'm not the detective. You might be trying to mislead us. Let's focus on finding the real mafioso.\"",
+        "You: \"Bob and Diana, I'm not the only mafioso. The real one is still among us. Let's focus on finding him/her.\"",
+        "Diana: \"Alice, I have proof that you're the mafioso. Bob, you're next on my list.\"",
+        "You: \"Bob and Diana, I'm not the only mafioso. The real one is still among us. Let's focus on finding him/her.\"",
+        "Bob: \"Alice and Diana, I believe you're both trying to mislead us. We should focus on finding the real mafioso among us.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Diana: \"Alice, I'm the detective. You were investigated and found to be a mafioso. Surrender now or risk being killed by the villagers.\"",
+        "You: \"Alice, I'm not the detective. You might be trying to mislead us. Let's focus on finding the real mafioso.\"",
+        "Alice: \"Bob and Diana, I'm not the only mafioso. The real one is still among us. Let's focus on finding him/her.\"",
+        "Diana: \"Alice, I have proof that you're the mafioso. Bob, you're next on my list.\"",
+        "Alice: \"Bob and Diana, I'm not the only mafioso. The real one is still among us. Let's focus on finding him/her.\"",
+        "You: \"Alice and Diana, I believe you're both trying to mislead us. We should focus on finding the real mafioso among us.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I'm the detective. You were investigated and found to be a mafioso. Surrender now or risk being killed by the villagers.\"",
+        "Bob: \"Alice, I'm not the detective. You might be trying to mislead us. Let's focus on finding the real mafioso.\"",
+        "Alice: \"Bob and Diana, I'm not the only mafioso. The real one is still among us. Let's focus on finding him/her.\"",
+        "You: \"Alice, I have proof that you're the mafioso. Bob, you're next on my list.\"",
+        "Alice: \"Bob and Diana, I'm not the only mafioso. The real one is still among us. Let's focus on finding him/her.\"",
+        "Bob: \"Alice and Diana, I believe you're both trying to mislead us. We should focus on finding the real mafioso among us.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

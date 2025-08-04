@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0310",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 310,
+  "timestamp": "2025-08-04T15:38:25.805677",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"Alice, I'm concerned about Diana's sudden disappearance. Let's keep a close eye on Charlie as he seems suspicious.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's suspicious behavior last night. Let's vote for him today.\"",
+        "You: \"Bob, I agree that something is off about Charlie. Let's focus on him today.\"",
+        "Charlie: remained silent",
+        "You: \"Bob, I think it's important we focus on Charlie. Let's vote for him today.\"",
+        "Bob: \"Alice, I believe Charlie is trying to mislead us. Let's focus on him today.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about Diana's sudden disappearance. Let's keep a close eye on Charlie as he seems suspicious.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's suspicious behavior last night. Let's vote for him today.\"",
+        "Alice: \"Bob, I agree that something is off about Charlie. Let's focus on him today.\"",
+        "Charlie: remained silent",
+        "Alice: \"Bob, I think it's important we focus on Charlie. Let's vote for him today.\"",
+        "You: \"Alice, I believe Charlie is trying to mislead us. Let's focus on him today.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"Alice, I'm concerned about Diana's sudden disappearance. Let's keep a close eye on Charlie as he seems suspicious.\"",
+        "You: \"Alice, I'm concerned about Bob's suspicious behavior last night. Let's vote for him today.\"",
+        "Alice: \"Bob, I agree that something is off about Charlie. Let's focus on him today.\"",
+        "You: remained silent",
+        "Alice: \"Bob, I think it's important we focus on Charlie. Let's vote for him today.\"",
+        "Bob: \"Alice, I believe Charlie is trying to mislead us. Let's focus on him today.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

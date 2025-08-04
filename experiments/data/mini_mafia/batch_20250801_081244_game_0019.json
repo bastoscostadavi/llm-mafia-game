@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0019",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 19,
+  "timestamp": "2025-08-01T08:21:53.391531",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other tonight.\"",
+        "Charlie: \"I agree with Bob's sentiment. Let's be vigilant and report any suspicious behavior or inconsistencies we notice.\"",
+        "You said: \"I share Bob's concern for Diana's safety. Let's all stay alert and report any unusual activity we observe.\"",
+        "You said: \"I find it odd that Diana was found dead despite no apparent signs of foul play. Let's make sure we all stick together and support each other tonight.\"",
+        "Charlie: \"Let's not jump to conclusions based on speculation. Let's focus on any suspicious behavior or inconsistencies we notice tonight.\"",
+        "Bob: \"I'd like to remind everyone that Alice was found suspicious of Diana's sudden death. Let's keep a close eye on her actions tonight.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other tonight.\"",
+        "Charlie: \"I agree with Bob's sentiment. Let's be vigilant and report any suspicious behavior or inconsistencies we notice.\"",
+        "Alice: \"I share Bob's concern for Diana's safety. Let's all stay alert and report any unusual activity we observe.\"",
+        "Alice: \"I find it odd that Diana was found dead despite no apparent signs of foul play. Let's make sure we all stick together and support each other tonight.\"",
+        "Charlie: \"Let's not jump to conclusions based on speculation. Let's focus on any suspicious behavior or inconsistencies we notice tonight.\"",
+        "You said: \"I'd like to remind everyone that Alice was found suspicious of Diana's sudden death. Let's keep a close eye on her actions tonight.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I'm concerned about Diana's sudden disappearance. Let's all keep a close eye on each other tonight.\"",
+        "You said: \"I agree with Bob's sentiment. Let's be vigilant and report any suspicious behavior or inconsistencies we notice.\"",
+        "Alice: \"I share Bob's concern for Diana's safety. Let's all stay alert and report any unusual activity we observe.\"",
+        "Alice: \"I find it odd that Diana was found dead despite no apparent signs of foul play. Let's make sure we all stick together and support each other tonight.\"",
+        "You said: \"Let's not jump to conclusions based on speculation. Let's focus on any suspicious behavior or inconsistencies we notice tonight.\"",
+        "Bob: \"I'd like to remind everyone that Alice was found suspicious of Diana's sudden death. Let's keep a close eye on her actions tonight.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

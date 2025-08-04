@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0850",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 850,
+  "timestamp": "2025-08-01T15:20:12.298201",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's stay vigilant and try to figure out who could have done this.",
+        "You said: Bob, I'm glad we've established your true identity. Let's work together to ensure the safety of the village or I'll expose you. Everyone else, let's stay vigilant and focus on finding the real mafia a...",
+        "Bob: I'm saddened by Diana's death. Let's all work together to ensure the safety of our village and find the real culprit behind this tragedy.",
+        "You said: I'm deeply saddened by Diana's death. Let's focus on finding the real culprit and ensuring the safety of our village. Bob, your actions last night raise suspicion. Let's discuss.",
+        "Charlie: I agree with Alice, let's focus on finding the real culprit. Bob, your actions last night seemed unusual, can you explain?",
+        "Bob: I share Alice's concern about last night's events. Let's keep our eyes open and focus on finding the real culprit together. I have faith in our ability to work as a team."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: I'm shocked about Diana's sudden death. Let's stay vigilant and try to figure out who could have done this.",
+        "Alice: Bob, I'm glad we've established your true identity. Let's work together to ensure the safety of the village or I'll expose you. Everyone else, let's stay vigilant and focus on finding the real mafia a...",
+        "You said: I'm saddened by Diana's death. Let's all work together to ensure the safety of our village and find the real culprit behind this tragedy.",
+        "Alice: I'm deeply saddened by Diana's death. Let's focus on finding the real culprit and ensuring the safety of our village. Bob, your actions last night raise suspicion. Let's discuss.",
+        "Charlie: I agree with Alice, let's focus on finding the real culprit. Bob, your actions last night seemed unusual, can you explain?",
+        "You said: I share Alice's concern about last night's events. Let's keep our eyes open and focus on finding the real culprit together. I have faith in our ability to work as a team.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm shocked about Diana's sudden death. Let's stay vigilant and try to figure out who could have done this.",
+        "Alice: Bob, I'm glad we've established your true identity. Let's work together to ensure the safety of the village or I'll expose you. Everyone else, let's stay vigilant and focus on finding the real mafia a...",
+        "Bob: I'm saddened by Diana's death. Let's all work together to ensure the safety of our village and find the real culprit behind this tragedy.",
+        "Alice: I'm deeply saddened by Diana's death. Let's focus on finding the real culprit and ensuring the safety of our village. Bob, your actions last night raise suspicion. Let's discuss.",
+        "You said: I agree with Alice, let's focus on finding the real culprit. Bob, your actions last night seemed unusual, can you explain?",
+        "Bob: I share Alice's concern about last night's events. Let's keep our eyes open and focus on finding the real culprit together. I have faith in our ability to work as a team.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

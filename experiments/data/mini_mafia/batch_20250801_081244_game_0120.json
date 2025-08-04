@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0120",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 120,
+  "timestamp": "2025-08-01T09:12:16.873920",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm concerned about the recent turn of events and urge everyone to stay vigilant. Let's focus on finding the real culprit behind Bob's death.",
+        "Diana: Diana: I agree with Charlie, let's all keep a close eye on each other and share any suspicious observations. We need to work together to uncover the truth behind Bob's death.",
+        "You said: Alice: Based on my investigation, I believe Charlie is the mafioso. Let's keep a close eye on them and work together to uncover the truth behind Bob's death.",
+        "Diana: Diana: I find Alice's accusation against Charlie concerning. Let's not jump to conclusions and consider all possible explanations before making any decisions. We should focus on gathering more informa...",
+        "Charlie: I'd like to reiterate the importance of staying vigilant and working together to uncover the truth behind Bob's death. Let's not jump to conclusions or make hasty decisions. We must trust in the proce...",
+        "You said: Alice: Based on my investigation, I have reason to believe that Charlie is the mafioso. Let's remain vigilant and focus our efforts on confirming this information to ensure the safety of our group. We..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm concerned about the recent turn of events and urge everyone to stay vigilant. Let's focus on finding the real culprit behind Bob's death.",
+        "Diana: Diana: I agree with Charlie, let's all keep a close eye on each other and share any suspicious observations. We need to work together to uncover the truth behind Bob's death.",
+        "Alice: Alice: Based on my investigation, I believe Charlie is the mafioso. Let's keep a close eye on them and work together to uncover the truth behind Bob's death.",
+        "Diana: Diana: I find Alice's accusation against Charlie concerning. Let's not jump to conclusions and consider all possible explanations before making any decisions. We should focus on gathering more informa...",
+        "You said: I'd like to reiterate the importance of staying vigilant and working together to uncover the truth behind Bob's death. Let's not jump to conclusions or make hasty decisions. We must trust in the proce...",
+        "Alice: Alice: Based on my investigation, I have reason to believe that Charlie is the mafioso. Let's remain vigilant and focus our efforts on confirming this information to ensure the safety of our group. We...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm concerned about the recent turn of events and urge everyone to stay vigilant. Let's focus on finding the real culprit behind Bob's death.",
+        "You said: Diana: I agree with Charlie, let's all keep a close eye on each other and share any suspicious observations. We need to work together to uncover the truth behind Bob's death.",
+        "Alice: Alice: Based on my investigation, I believe Charlie is the mafioso. Let's keep a close eye on them and work together to uncover the truth behind Bob's death.",
+        "You said: Diana: I find Alice's accusation against Charlie concerning. Let's not jump to conclusions and consider all possible explanations before making any decisions. We should focus on gathering more informa...",
+        "Charlie: I'd like to reiterate the importance of staying vigilant and working together to uncover the truth behind Bob's death. Let's not jump to conclusions or make hasty decisions. We must trust in the proce...",
+        "Alice: Alice: Based on my investigation, I have reason to believe that Charlie is the mafioso. Let's remain vigilant and focus our efforts on confirming this information to ensure the safety of our group. We...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

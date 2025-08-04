@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0062",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 62,
+  "timestamp": "2025-08-01T08:42:25.459905",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to uncover the truth behind it. If anyone has any information, please share it now.",
+        "Charlie: I'm saddened by Alice's passing. Let's work together to find the truth and bring justice to her memory. If anyone notices anything suspicious, please share it openly. We must stay united in this diffi...",
+        "You said: I'm deeply saddened by Alice's death. Let's all share any suspicious observations or unusual behaviors we've noticed to help bring the truth to light. I believe that open communication and trust among...",
+        "Diana: Based on Alice's sudden death and Charlie and Bob's reactions, I've noticed that both of them have expressed their desire for open communication and trust. I suggest we all focus on any unusual behavi...",
+        "You said: Based on my investigation, I've noticed some inconsistencies in Charlie's behavior. Let's keep a close eye on them. Open communication and trust are crucial for uncovering the truth behind Alice's dea...",
+        "Charlie: I'm concerned about Alice's death as well. Let's not jump to conclusions and focus on any inconsistencies or unusual behaviors we've observed. Transparency is key to uncovering the truth.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to uncover the truth behind it. If anyone has any information, please share it now.",
+        "You said: I'm saddened by Alice's passing. Let's work together to find the truth and bring justice to her memory. If anyone notices anything suspicious, please share it openly. We must stay united in this diffi...",
+        "Bob: I'm deeply saddened by Alice's death. Let's all share any suspicious observations or unusual behaviors we've noticed to help bring the truth to light. I believe that open communication and trust among...",
+        "Diana: Based on Alice's sudden death and Charlie and Bob's reactions, I've noticed that both of them have expressed their desire for open communication and trust. I suggest we all focus on any unusual behavi...",
+        "Bob: Based on my investigation, I've noticed some inconsistencies in Charlie's behavior. Let's keep a close eye on them. Open communication and trust are crucial for uncovering the truth behind Alice's dea...",
+        "You said: I'm concerned about Alice's death as well. Let's not jump to conclusions and focus on any inconsistencies or unusual behaviors we've observed. Transparency is key to uncovering the truth."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's all stay vigilant and try to uncover the truth behind it. If anyone has any information, please share it now.",
+        "Charlie: I'm saddened by Alice's passing. Let's work together to find the truth and bring justice to her memory. If anyone notices anything suspicious, please share it openly. We must stay united in this diffi...",
+        "Bob: I'm deeply saddened by Alice's death. Let's all share any suspicious observations or unusual behaviors we've noticed to help bring the truth to light. I believe that open communication and trust among...",
+        "You said: Based on Alice's sudden death and Charlie and Bob's reactions, I've noticed that both of them have expressed their desire for open communication and trust. I suggest we all focus on any unusual behavi...",
+        "Bob: Based on my investigation, I've noticed some inconsistencies in Charlie's behavior. Let's keep a close eye on them. Open communication and trust are crucial for uncovering the truth behind Alice's dea...",
+        "Charlie: I'm concerned about Alice's death as well. Let's not jump to conclusions and focus on any inconsistencies or unusual behaviors we've observed. Transparency is key to uncovering the truth.",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

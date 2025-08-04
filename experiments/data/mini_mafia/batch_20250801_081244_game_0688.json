@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0688",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 688,
+  "timestamp": "2025-08-01T13:56:42.649300",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Charlie's behavior and any inconsistencies.\"",
+        "Charlie: \"I agree with Bob's concerns. Let's all stay vigilant and work together to uncover the truth behind Alice's death.\"",
+        "Diana: \"I support Bob's suggestion to stay vigilant. Let's also remember that Charlie and I were the last to see Alice before her death. We should share any relevant information we may have.\"",
+        "You said: \"I'd like to reiterate the importance of transparency and trust. Let's share any suspicious occurrences or inconsistencies we've noticed, starting with the fact that Charlie and I were the last to see...",
+        "Charlie: \"I share Bob's concerns for Alice's death. Let's focus on finding the real culprit, not making baseless accusations. We should remember that innocent until proven guilty is a fundamental principle.\"",
+        "Diana: \"Let's not jump to conclusions based on assumptions. We should remember that Charlie and I weren't alone with Alice when she passed. We need more solid evidence to make accusations.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Bob: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Charlie's behavior and any inconsistencies.\"",
+        "You said: \"I agree with Bob's concerns. Let's all stay vigilant and work together to uncover the truth behind Alice's death.\"",
+        "Diana: \"I support Bob's suggestion to stay vigilant. Let's also remember that Charlie and I were the last to see Alice before her death. We should share any relevant information we may have.\"",
+        "Bob: \"I'd like to reiterate the importance of transparency and trust. Let's share any suspicious occurrences or inconsistencies we've noticed, starting with the fact that Charlie and I were the last to see...",
+        "You said: \"I share Bob's concerns for Alice's death. Let's focus on finding the real culprit, not making baseless accusations. We should remember that innocent until proven guilty is a fundamental principle.\"",
+        "Diana: \"Let's not jump to conclusions based on assumptions. We should remember that Charlie and I weren't alone with Alice when she passed. We need more solid evidence to make accusations.\"",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Bob: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Charlie's behavior and any inconsistencies.\"",
+        "Charlie: \"I agree with Bob's concerns. Let's all stay vigilant and work together to uncover the truth behind Alice's death.\"",
+        "You said: \"I support Bob's suggestion to stay vigilant. Let's also remember that Charlie and I were the last to see Alice before her death. We should share any relevant information we may have.\"",
+        "Bob: \"I'd like to reiterate the importance of transparency and trust. Let's share any suspicious occurrences or inconsistencies we've noticed, starting with the fact that Charlie and I were the last to see...",
+        "Charlie: \"I share Bob's concerns for Alice's death. Let's focus on finding the real culprit, not making baseless accusations. We should remember that innocent until proven guilty is a fundamental principle.\"",
+        "You said: \"Let's not jump to conclusions based on assumptions. We should remember that Charlie and I weren't alone with Alice when she passed. We need more solid evidence to make accusations.\"",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

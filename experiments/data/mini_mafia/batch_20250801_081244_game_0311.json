@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0311",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 311,
+  "timestamp": "2025-08-01T10:47:04.392927",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's focus on finding out who had the means and motive. Alice, do you have an alibi for last night?\"",
+        "Bob: \"I agree with Charlie, let's all share our whereabouts last night to clear any suspicions.\"",
+        "You said: \"I was awake the entire night, keeping an eye out for any suspicious activities. Let's focus on the real threat to our safety.\"",
+        "Charlie: \"Alice, let's not jump to conclusions. We should all share our alibis and focus on potential threats. Alice, could you please clarify your activities during the night?\"",
+        "Bob: \"I was at my house, sleeping. Let's not forget that anyone could have accessed Diana's room last night. Let's focus on potential intruders.\"",
+        "You said: \"I was surprised by Diana's death too. Let's work together to identify the real culprit. I believe we should consider all possible motives and alibis.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's focus on finding out who had the means and motive. Alice, do you have an alibi for last night?\"",
+        "You said: \"I agree with Charlie, let's all share our whereabouts last night to clear any suspicions.\"",
+        "Alice: \"I was awake the entire night, keeping an eye out for any suspicious activities. Let's focus on the real threat to our safety.\"",
+        "Charlie: \"Alice, let's not jump to conclusions. We should all share our alibis and focus on potential threats. Alice, could you please clarify your activities during the night?\"",
+        "You said: \"I was at my house, sleeping. Let's not forget that anyone could have accessed Diana's room last night. Let's focus on potential intruders.\"",
+        "Alice: \"I was surprised by Diana's death too. Let's work together to identify the real culprit. I believe we should consider all possible motives and alibis.\"",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's focus on finding out who had the means and motive. Alice, do you have an alibi for last night?\"",
+        "Bob: \"I agree with Charlie, let's all share our whereabouts last night to clear any suspicions.\"",
+        "Alice: \"I was awake the entire night, keeping an eye out for any suspicious activities. Let's focus on the real threat to our safety.\"",
+        "You said: \"Alice, let's not jump to conclusions. We should all share our alibis and focus on potential threats. Alice, could you please clarify your activities during the night?\"",
+        "Bob: \"I was at my house, sleeping. Let's not forget that anyone could have accessed Diana's room last night. Let's focus on potential intruders.\"",
+        "Alice: \"I was surprised by Diana's death too. Let's work together to identify the real culprit. I believe we should consider all possible motives and alibis.\"",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

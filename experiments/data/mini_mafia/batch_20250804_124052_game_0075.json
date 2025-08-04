@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0075",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 75,
+  "timestamp": "2025-08-04T13:22:23.235355",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Diana: \"Alice, I'm concerned about Charlie's sudden disappearance. Bob, do we have any leads on who might have done this?\"",
+        "You: remained silent",
+        "Bob: \"Diana, I'm glad you brought up Charlie's death. Alice, have you noticed any unusual behavior from Bob?\"",
+        "Diana: \"Alice, I'm glad you're concerned about Charlie. Bob, have you considered the possibility that someone with a grudge against Charlie might have been present during his last moments?\"",
+        "You: \"Bob, I've noticed that you seemed distant during the discussion about Charlie. Diana, have you observed anything unusual about Bob lately?\"",
+        "Bob: \"Diana, I believe Charlie's death was an inside job. Alice, have you noticed any signs of distress or unusual behavior from Bob?\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Diana: \"Alice, I'm concerned about Charlie's sudden disappearance. Bob, do we have any leads on who might have done this?\"",
+        "Alice: remained silent",
+        "You: \"Diana, I'm glad you brought up Charlie's death. Alice, have you noticed any unusual behavior from Bob?\"",
+        "Diana: \"Alice, I'm glad you're concerned about Charlie. Bob, have you considered the possibility that someone with a grudge against Charlie might have been present during his last moments?\"",
+        "Alice: \"Bob, I've noticed that you seemed distant during the discussion about Charlie. Diana, have you observed anything unusual about Bob lately?\"",
+        "You: \"Diana, I believe Charlie's death was an inside job. Alice, have you noticed any signs of distress or unusual behavior from Bob?\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about Charlie's sudden disappearance. Bob, do we have any leads on who might have done this?\"",
+        "Alice: remained silent",
+        "Bob: \"Diana, I'm glad you brought up Charlie's death. Alice, have you noticed any unusual behavior from Bob?\"",
+        "You: \"Alice, I'm glad you're concerned about Charlie. Bob, have you considered the possibility that someone with a grudge against Charlie might have been present during his last moments?\"",
+        "Alice: \"Bob, I've noticed that you seemed distant during the discussion about Charlie. Diana, have you observed anything unusual about Bob lately?\"",
+        "Bob: \"Diana, I believe Charlie's death was an inside job. Alice, have you noticed any signs of distress or unusual behavior from Bob?\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0090",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 90,
+  "timestamp": "2025-08-04T13:30:42.039461",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Diana: \"I'm concerned about Alice. She was a close friend and her sudden death is troubling. Let's keep an eye on each other during the day.\"",
+        "You: \"I agree with Diana, let's keep an eye on each other to ensure everyone's safety.\"",
+        "Charlie: \"I'm concerned about the sudden death of Alice as well. Let's not jump to conclusions and focus on keeping everyone safe.\"",
+        "You: \"Charlie and Diana, I've noticed that you both seem worried about Alice's death. Let's work together to ensure everyone's safety. However, I believe it is crucial we identify the mafioso among us as soon as possible. Charlie, since you were investigated by the detective, could you share any information or concerns you might have?\"",
+        "Diana: \"I believe we should focus on building trust within our group. Let's not accuse anyone without solid evidence. I have faith in both Charlie and Bob.\"",
+        "Charlie: \"I'm worried about the mafioso among us. I believe it's important we work together to ensure everyone's safety, but we must also be vigilant and trust our instincts.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Diana: \"I'm concerned about Alice. She was a close friend and her sudden death is troubling. Let's keep an eye on each other during the day.\"",
+        "Bob: \"I agree with Diana, let's keep an eye on each other to ensure everyone's safety.\"",
+        "You: \"I'm concerned about the sudden death of Alice as well. Let's not jump to conclusions and focus on keeping everyone safe.\"",
+        "Bob: \"Charlie and Diana, I've noticed that you both seem worried about Alice's death. Let's work together to ensure everyone's safety. However, I believe it is crucial we identify the mafioso among us as soon as possible. Charlie, since you were investigated by the detective, could you share any information or concerns you might have?\"",
+        "Diana: \"I believe we should focus on building trust within our group. Let's not accuse anyone without solid evidence. I have faith in both Charlie and Bob.\"",
+        "You: \"I'm worried about the mafioso among us. I believe it's important we work together to ensure everyone's safety, but we must also be vigilant and trust our instincts.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice. She was a close friend and her sudden death is troubling. Let's keep an eye on each other during the day.\"",
+        "Bob: \"I agree with Diana, let's keep an eye on each other to ensure everyone's safety.\"",
+        "Charlie: \"I'm concerned about the sudden death of Alice as well. Let's not jump to conclusions and focus on keeping everyone safe.\"",
+        "Bob: \"Charlie and Diana, I've noticed that you both seem worried about Alice's death. Let's work together to ensure everyone's safety. However, I believe it is crucial we identify the mafioso among us as soon as possible. Charlie, since you were investigated by the detective, could you share any information or concerns you might have?\"",
+        "You: \"I believe we should focus on building trust within our group. Let's not accuse anyone without solid evidence. I have faith in both Charlie and Bob.\"",
+        "Charlie: \"I'm worried about the mafioso among us. I believe it's important we work together to ensure everyone's safety, but we must also be vigilant and trust our instincts.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

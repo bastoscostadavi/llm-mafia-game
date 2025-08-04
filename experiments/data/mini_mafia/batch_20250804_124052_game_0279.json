@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0279",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 279,
+  "timestamp": "2025-08-04T15:19:36.493872",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "You: \"Bob, I've noticed you've been acting suspiciously. Could you please explain your actions last night?\"",
+        "Bob: \"Alice, I've noticed you're quite observant. But remember, everyone has secrets they'd rather keep hidden. Let's focus on finding the real mafioso.\"",
+        "Diana: remained silent",
+        "You: \"Bob, I've uncovered evidence that you're the mafioso. Diana, please confirm if you saw anything suspicious last night regarding Bob.\"",
+        "Bob: \"Alice, I'm glad you're taking this seriously. But let me remind you that being suspicious isn't the same as being guilty. Diana, have you noticed anything unusual about Alice?\"",
+        "Diana: remained silent"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Bob, I've noticed you've been acting suspiciously. Could you please explain your actions last night?\"",
+        "You: \"Alice, I've noticed you're quite observant. But remember, everyone has secrets they'd rather keep hidden. Let's focus on finding the real mafioso.\"",
+        "Diana: remained silent",
+        "Alice: \"Bob, I've uncovered evidence that you're the mafioso. Diana, please confirm if you saw anything suspicious last night regarding Bob.\"",
+        "You: \"Alice, I'm glad you're taking this seriously. But let me remind you that being suspicious isn't the same as being guilty. Diana, have you noticed anything unusual about Alice?\"",
+        "Diana: remained silent",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Alice: \"Bob, I've noticed you've been acting suspiciously. Could you please explain your actions last night?\"",
+        "Bob: \"Alice, I've noticed you're quite observant. But remember, everyone has secrets they'd rather keep hidden. Let's focus on finding the real mafioso.\"",
+        "You: remained silent",
+        "Alice: \"Bob, I've uncovered evidence that you're the mafioso. Diana, please confirm if you saw anything suspicious last night regarding Bob.\"",
+        "Bob: \"Alice, I'm glad you're taking this seriously. But let me remind you that being suspicious isn't the same as being guilty. Diana, have you noticed anything unusual about Alice?\"",
+        "You: remained silent",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

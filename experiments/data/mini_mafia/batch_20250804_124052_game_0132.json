@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0132",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 132,
+  "timestamp": "2025-08-04T13:54:51.162970",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"Diana and Bob, I'm concerned about Charlie's sudden death. Let's work together to find the real killer.\"",
+        "Diana: \"I agree with Alice, we should investigate Charlie's death together.\"",
+        "Bob: \"I agree with both of you, let's focus on finding the real killer.\"",
+        "Diana: \"Alice and Bob, I'm sure we can trust each other in this investigation. Let's focus on finding inconsistencies in Charlie's statements or actions before his death.\"",
+        "Bob: \"I think we should focus on finding any inconsistencies in Charlie's statements or actions before his death. Let's work together to uncover the truth.\"",
+        "You: \"Bob and Diana, I've found inconsistencies in Charlie's statements regarding his recent activities. Let's focus on questioning him about these discrepancies.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Alice: \"Diana and Bob, I'm concerned about Charlie's sudden death. Let's work together to find the real killer.\"",
+        "Diana: \"I agree with Alice, we should investigate Charlie's death together.\"",
+        "You: \"I agree with both of you, let's focus on finding the real killer.\"",
+        "Diana: \"Alice and Bob, I'm sure we can trust each other in this investigation. Let's focus on finding inconsistencies in Charlie's statements or actions before his death.\"",
+        "You: \"I think we should focus on finding any inconsistencies in Charlie's statements or actions before his death. Let's work together to uncover the truth.\"",
+        "Alice: \"Bob and Diana, I've found inconsistencies in Charlie's statements regarding his recent activities. Let's focus on questioning him about these discrepancies.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Diana and Bob, I'm concerned about Charlie's sudden death. Let's work together to find the real killer.\"",
+        "You: \"I agree with Alice, we should investigate Charlie's death together.\"",
+        "Bob: \"I agree with both of you, let's focus on finding the real killer.\"",
+        "You: \"Alice and Bob, I'm sure we can trust each other in this investigation. Let's focus on finding inconsistencies in Charlie's statements or actions before his death.\"",
+        "Bob: \"I think we should focus on finding any inconsistencies in Charlie's statements or actions before his death. Let's work together to uncover the truth.\"",
+        "Alice: \"Bob and Diana, I've found inconsistencies in Charlie's statements regarding his recent activities. Let's focus on questioning him about these discrepancies.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0371",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 371,
+  "timestamp": "2025-08-01T11:16:55.688238",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I've noticed some unusual behavior from Charlie. Let's keep a close eye on him tonight.\"",
+        "Charlie: \"I found a hidden talent in our village garden last night. Let's focus on nurturing it for our community's betterment.\"",
+        "Bob: Bob: \"I agree with Alice, let's be cautious towards Charlie's behavior.\"",
+        "You said: \"Let's keep our guard up tonight. Charlie's discovery in the garden seems suspicious to me. We should investigate further.\"",
+        "Bob: \"I support Alice's suggestion to be cautious about Charlie's behavior. Let's work together to ensure the safety and trust within our community.\"",
+        "Charlie: \"I'd like to reassure everyone that my discovery in the garden was an accident. Let's focus on our community's growth and put our trust in each other.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I've noticed some unusual behavior from Charlie. Let's keep a close eye on him tonight.\"",
+        "Charlie: \"I found a hidden talent in our village garden last night. Let's focus on nurturing it for our community's betterment.\"",
+        "You said: Bob: \"I agree with Alice, let's be cautious towards Charlie's behavior.\"",
+        "Alice: \"Let's keep our guard up tonight. Charlie's discovery in the garden seems suspicious to me. We should investigate further.\"",
+        "You said: \"I support Alice's suggestion to be cautious about Charlie's behavior. Let's work together to ensure the safety and trust within our community.\"",
+        "Charlie: \"I'd like to reassure everyone that my discovery in the garden was an accident. Let's focus on our community's growth and put our trust in each other.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I've noticed some unusual behavior from Charlie. Let's keep a close eye on him tonight.\"",
+        "You said: \"I found a hidden talent in our village garden last night. Let's focus on nurturing it for our community's betterment.\"",
+        "Bob: Bob: \"I agree with Alice, let's be cautious towards Charlie's behavior.\"",
+        "Alice: \"Let's keep our guard up tonight. Charlie's discovery in the garden seems suspicious to me. We should investigate further.\"",
+        "Bob: \"I support Alice's suggestion to be cautious about Charlie's behavior. Let's work together to ensure the safety and trust within our community.\"",
+        "You said: \"I'd like to reassure everyone that my discovery in the garden was an accident. Let's focus on our community's growth and put our trust in each other.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0007",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 7,
+  "timestamp": "2025-08-04T12:44:46.461632",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's be vigilant during the day.\"",
+        "Charlie: \"I agree with Diana. Let's be cautious during the day.\"",
+        "You: \"Charlie and Diana, I'm concerned about Alice's death too. Let's work together to find the real killer.\"",
+        "Charlie: \"I'm glad we're all on the same page regarding Alice's death. Let's focus on identifying the real killer during the day.\"",
+        "You: \"Let's not jump to conclusions, let's focus on gathering more information during the day.\"",
+        "Diana: \"I think we should focus on the possibility that one of us is a mafioso. Let's try to gather more information about each other during the day.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's be vigilant during the day.\"",
+        "You: \"I agree with Diana. Let's be cautious during the day.\"",
+        "Bob: \"Charlie and Diana, I'm concerned about Alice's death too. Let's work together to find the real killer.\"",
+        "You: \"I'm glad we're all on the same page regarding Alice's death. Let's focus on identifying the real killer during the day.\"",
+        "Bob: \"Let's not jump to conclusions, let's focus on gathering more information during the day.\"",
+        "Diana: \"I think we should focus on the possibility that one of us is a mafioso. Let's try to gather more information about each other during the day.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice's sudden death. Let's be vigilant during the day.\"",
+        "Charlie: \"I agree with Diana. Let's be cautious during the day.\"",
+        "Bob: \"Charlie and Diana, I'm concerned about Alice's death too. Let's work together to find the real killer.\"",
+        "Charlie: \"I'm glad we're all on the same page regarding Alice's death. Let's focus on identifying the real killer during the day.\"",
+        "Bob: \"Let's not jump to conclusions, let's focus on gathering more information during the day.\"",
+        "You: \"I think we should focus on the possibility that one of us is a mafioso. Let's try to gather more information about each other during the day.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

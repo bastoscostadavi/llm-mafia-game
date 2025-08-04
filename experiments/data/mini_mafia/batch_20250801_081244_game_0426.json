@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0426",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 426,
+  "timestamp": "2025-08-01T11:43:44.464265",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I was up late last night, couldn't sleep. Anyone else having trouble resting? Let's focus on finding the real culprit behind Charlie's death.\"",
+        "You said: \"Bob, I noticed you had trouble sleeping last night. It's important we find the real culprit behind Charlie's death. Let's focus our investigation on the suspicious activities during the night.\"",
+        "Diana: Diana: \"I agree with both Bob and Alice, we need to focus on the suspicious activities during the night. Let's work together to gather more information and find the real culprit.\"",
+        "Bob: \"Let's not jump to conclusions, we still need to consider all possibilities. I suggest we focus on potential clues and suspicious behaviors during the day as well.\"",
+        "You said: \"Let's not overlook the significance of Bob's restless night. We should focus on any potential connections between Bob and the recent events.\"",
+        "Diana: \"Let's not forget the strange behavior of the detective during the night. Alice, why were you up checking on Charlie when the rest of us were sleeping?\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I was up late last night, couldn't sleep. Anyone else having trouble resting? Let's focus on finding the real culprit behind Charlie's death.\"",
+        "Alice: \"Bob, I noticed you had trouble sleeping last night. It's important we find the real culprit behind Charlie's death. Let's focus our investigation on the suspicious activities during the night.\"",
+        "Diana: Diana: \"I agree with both Bob and Alice, we need to focus on the suspicious activities during the night. Let's work together to gather more information and find the real culprit.\"",
+        "You said: \"Let's not jump to conclusions, we still need to consider all possibilities. I suggest we focus on potential clues and suspicious behaviors during the day as well.\"",
+        "Alice: \"Let's not overlook the significance of Bob's restless night. We should focus on any potential connections between Bob and the recent events.\"",
+        "Diana: \"Let's not forget the strange behavior of the detective during the night. Alice, why were you up checking on Charlie when the rest of us were sleeping?\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I was up late last night, couldn't sleep. Anyone else having trouble resting? Let's focus on finding the real culprit behind Charlie's death.\"",
+        "Alice: \"Bob, I noticed you had trouble sleeping last night. It's important we find the real culprit behind Charlie's death. Let's focus our investigation on the suspicious activities during the night.\"",
+        "You said: Diana: \"I agree with both Bob and Alice, we need to focus on the suspicious activities during the night. Let's work together to gather more information and find the real culprit.\"",
+        "Bob: \"Let's not jump to conclusions, we still need to consider all possibilities. I suggest we focus on potential clues and suspicious behaviors during the day as well.\"",
+        "Alice: \"Let's not overlook the significance of Bob's restless night. We should focus on any potential connections between Bob and the recent events.\"",
+        "You said: \"Let's not forget the strange behavior of the detective during the night. Alice, why were you up checking on Charlie when the rest of us were sleeping?\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

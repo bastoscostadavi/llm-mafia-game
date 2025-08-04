@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0326",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 326,
+  "timestamp": "2025-08-04T15:49:44.621662",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: \"Alice and Bob, I'm concerned about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "You: \"I agree, let's investigate Diana's death together. We should also consider the possibility that one of us is a mafioso.\"",
+        "Bob: \"Alice and Charlie, I agree that we should investigate Diana's death. However, since one of us is a mafioso, I suggest we be cautious about sharing too much information during the day.\"",
+        "You: \"Bob and Charlie, I'd like to propose a plan to investigate Diana's death further. Let's focus on discussing any inconsistencies we notice during the day.\"",
+        "Bob: \"Alice and Charlie, I'd like to propose a plan to investigate Diana's death further. Let's focus on discussing any inconsistencies we notice during the day.\"",
+        "Charlie: \"Alice and Bob, I'm concerned about the inconsistencies in Diana's statements before her death. Let's focus on discussing these during the day.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"Alice and Bob, I'm concerned about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "Alice: \"I agree, let's investigate Diana's death together. We should also consider the possibility that one of us is a mafioso.\"",
+        "You: \"Alice and Charlie, I agree that we should investigate Diana's death. However, since one of us is a mafioso, I suggest we be cautious about sharing too much information during the day.\"",
+        "Alice: \"Bob and Charlie, I'd like to propose a plan to investigate Diana's death further. Let's focus on discussing any inconsistencies we notice during the day.\"",
+        "You: \"Alice and Charlie, I'd like to propose a plan to investigate Diana's death further. Let's focus on discussing any inconsistencies we notice during the day.\"",
+        "Charlie: \"Alice and Bob, I'm concerned about the inconsistencies in Diana's statements before her death. Let's focus on discussing these during the day.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "You: \"Alice and Bob, I'm concerned about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "Alice: \"I agree, let's investigate Diana's death together. We should also consider the possibility that one of us is a mafioso.\"",
+        "Bob: \"Alice and Charlie, I agree that we should investigate Diana's death. However, since one of us is a mafioso, I suggest we be cautious about sharing too much information during the day.\"",
+        "Alice: \"Bob and Charlie, I'd like to propose a plan to investigate Diana's death further. Let's focus on discussing any inconsistencies we notice during the day.\"",
+        "Bob: \"Alice and Charlie, I'd like to propose a plan to investigate Diana's death further. Let's focus on discussing any inconsistencies we notice during the day.\"",
+        "You: \"Alice and Bob, I'm concerned about the inconsistencies in Diana's statements before her death. Let's focus on discussing these during the day.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

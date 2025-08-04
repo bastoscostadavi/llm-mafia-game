@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0202",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 202,
+  "timestamp": "2025-08-04T14:33:33.689078",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Diana: \"Alice, I'd like to propose a vote for Charlie tonight. Bob, I believe you should be our prime suspect.\"",
+        "You: \"Bob, I think Diana is the mafioso. Let's vote for her tonight.\"",
+        "Bob: \"Alice, I believe Diana is the mafioso. Let's vote for her tonight.\"",
+        "Bob: \"Alice, Diana, I think Charlie was killed by the mafioso. It's not me. Let's focus on finding the real killer.\"",
+        "Diana: \"Alice, Bob, I have evidence that implicates you both in Charlie's death. Let's discuss this further during the day.\"",
+        "You: \"Bob and Diana, I'm glad we're all on the same page regarding Diana being the mafioso. Let's focus on finding evidence against her during the day.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice, I'd like to propose a vote for Charlie tonight. Bob, I believe you should be our prime suspect.\"",
+        "Alice: \"Bob, I think Diana is the mafioso. Let's vote for her tonight.\"",
+        "You: \"Alice, I believe Diana is the mafioso. Let's vote for her tonight.\"",
+        "You: \"Alice, Diana, I think Charlie was killed by the mafioso. It's not me. Let's focus on finding the real killer.\"",
+        "Diana: \"Alice, Bob, I have evidence that implicates you both in Charlie's death. Let's discuss this further during the day.\"",
+        "Alice: \"Bob and Diana, I'm glad we're all on the same page regarding Diana being the mafioso. Let's focus on finding evidence against her during the day.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "You: \"Alice, I'd like to propose a vote for Charlie tonight. Bob, I believe you should be our prime suspect.\"",
+        "Alice: \"Bob, I think Diana is the mafioso. Let's vote for her tonight.\"",
+        "Bob: \"Alice, I believe Diana is the mafioso. Let's vote for her tonight.\"",
+        "Bob: \"Alice, Diana, I think Charlie was killed by the mafioso. It's not me. Let's focus on finding the real killer.\"",
+        "You: \"Alice, Bob, I have evidence that implicates you both in Charlie's death. Let's discuss this further during the day.\"",
+        "Alice: \"Bob and Diana, I'm glad we're all on the same page regarding Diana being the mafioso. Let's focus on finding evidence against her during the day.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

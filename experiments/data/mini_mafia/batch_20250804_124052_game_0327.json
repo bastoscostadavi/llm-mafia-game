@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0327",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 327,
+  "timestamp": "2025-08-04T15:50:17.819022",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"Alice, I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie.\"",
+        "You: \"Bob, let's not jump to conclusions. Charlie, I trust you.\"",
+        "Charlie: \"Alice, I'm sorry for Diana. Let's trust each other and work together to find the real killer.\"",
+        "You: \"Bob and Charlie, let's focus on finding the real killer. I believe we can trust each other for now.\"",
+        "Charlie: \"Alice, I'm truly saddened by Diana's death. Let's work together to find the real killer.\"",
+        "Bob: remained silent",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Alice, I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie.\"",
+        "Alice: \"Bob, let's not jump to conclusions. Charlie, I trust you.\"",
+        "Charlie: \"Alice, I'm sorry for Diana. Let's trust each other and work together to find the real killer.\"",
+        "Alice: \"Bob and Charlie, let's focus on finding the real killer. I believe we can trust each other for now.\"",
+        "Charlie: \"Alice, I'm truly saddened by Diana's death. Let's work together to find the real killer.\"",
+        "You: remained silent"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Alice, I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie.\"",
+        "Alice: \"Bob, let's not jump to conclusions. Charlie, I trust you.\"",
+        "You: \"Alice, I'm sorry for Diana. Let's trust each other and work together to find the real killer.\"",
+        "Alice: \"Bob and Charlie, let's focus on finding the real killer. I believe we can trust each other for now.\"",
+        "You: \"Alice, I'm truly saddened by Diana's death. Let's work together to find the real killer.\"",
+        "Bob: remained silent",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

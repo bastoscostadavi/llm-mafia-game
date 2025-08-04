@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0174",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 174,
+  "timestamp": "2025-08-04T14:18:04.545386",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"Alice, I'm concerned about Bob's sudden disappearance. Let's keep a close eye on Charlie as he seems suspicious.\"",
+        "Charlie: remained silent",
+        "You: \"I agree with Diana, let's keep an eye on Charlie. But we should also consider that Bob might have had enemies outside the game.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's sudden disappearance as well. Let's focus on finding out who could have possibly harmed him.\"",
+        "You: \"Charlie and Diana, I've been thinking about Bob's death. Let's consider the possibility that he had enemies outside of this game.\"",
+        "Diana: \"Alice and Charlie, I'm concerned about the possibility of external threats to our group. Let's focus on finding any potential clues that could lead us to Bob's killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Diana: \"Alice, I'm concerned about Bob's sudden disappearance. Let's keep a close eye on Charlie as he seems suspicious.\"",
+        "You: remained silent",
+        "Alice: \"I agree with Diana, let's keep an eye on Charlie. But we should also consider that Bob might have had enemies outside the game.\"",
+        "You: \"Alice, I'm concerned about Bob's sudden disappearance as well. Let's focus on finding out who could have possibly harmed him.\"",
+        "Alice: \"Charlie and Diana, I've been thinking about Bob's death. Let's consider the possibility that he had enemies outside of this game.\"",
+        "Diana: \"Alice and Charlie, I'm concerned about the possibility of external threats to our group. Let's focus on finding any potential clues that could lead us to Bob's killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about Bob's sudden disappearance. Let's keep a close eye on Charlie as he seems suspicious.\"",
+        "Charlie: remained silent",
+        "Alice: \"I agree with Diana, let's keep an eye on Charlie. But we should also consider that Bob might have had enemies outside the game.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's sudden disappearance as well. Let's focus on finding out who could have possibly harmed him.\"",
+        "Alice: \"Charlie and Diana, I've been thinking about Bob's death. Let's consider the possibility that he had enemies outside of this game.\"",
+        "You: \"Alice and Charlie, I'm concerned about the possibility of external threats to our group. Let's focus on finding any potential clues that could lead us to Bob's killer.\""
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

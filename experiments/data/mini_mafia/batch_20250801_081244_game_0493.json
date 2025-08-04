@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0493",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 493,
+  "timestamp": "2025-08-01T12:16:41.378766",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and focus on finding out what happened.",
+        "Diana: \"I agree with Charlie, we should be on high alert. Let's discuss any suspicious behavior or inconsistencies we've noticed.\"",
+        "You said: \"I noticed Alice was always close to Charlie during our meetings. Let's keep an eye on his interactions with the group.\"",
+        "You said: I remember Alice spending a lot of time with Charlie. Let's keep an eye on his actions and interactions during our discussions.",
+        "Diana: \"Let's not jump to conclusions, but we should be wary of Charlie's close relationship with Alice. We need to gather more information before taking any action.\"",
+        "Charlie: I'm worried about Alice's sudden disappearance. Let's all share any unusual observations or behaviors we've noticed to ensure everyone's safety.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and focus on finding out what happened.",
+        "Diana: \"I agree with Charlie, we should be on high alert. Let's discuss any suspicious behavior or inconsistencies we've noticed.\"",
+        "Bob: \"I noticed Alice was always close to Charlie during our meetings. Let's keep an eye on his interactions with the group.\"",
+        "Bob: I remember Alice spending a lot of time with Charlie. Let's keep an eye on his actions and interactions during our discussions.",
+        "Diana: \"Let's not jump to conclusions, but we should be wary of Charlie's close relationship with Alice. We need to gather more information before taking any action.\"",
+        "You said: I'm worried about Alice's sudden disappearance. Let's all share any unusual observations or behaviors we've noticed to ensure everyone's safety."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and focus on finding out what happened.",
+        "You said: \"I agree with Charlie, we should be on high alert. Let's discuss any suspicious behavior or inconsistencies we've noticed.\"",
+        "Bob: \"I noticed Alice was always close to Charlie during our meetings. Let's keep an eye on his interactions with the group.\"",
+        "Bob: I remember Alice spending a lot of time with Charlie. Let's keep an eye on his actions and interactions during our discussions.",
+        "You said: \"Let's not jump to conclusions, but we should be wary of Charlie's close relationship with Alice. We need to gather more information before taking any action.\"",
+        "Charlie: I'm worried about Alice's sudden disappearance. Let's all share any unusual observations or behaviors we've noticed to ensure everyone's safety.",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

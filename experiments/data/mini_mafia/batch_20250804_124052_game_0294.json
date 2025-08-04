@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0294",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 294,
+  "timestamp": "2025-08-04T15:27:57.393385",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Charlie: \"Bob and Diana, I'm concerned about Alice's sudden death. Let's be vigilant during this investigation.\"",
+        "Diana: \"Bob, I agree with Charlie that we need to be careful during this investigation.\"",
+        "You: \"Charlie and Diana, I'm glad we're all on the same page regarding Alice's death. Let's focus our investigation on any inconsistencies or suspicious behavior.\"",
+        "Diana: remained silent",
+        "You: \"Charlie and Diana, I think it's important that we don't jump to conclusions. Let's focus on gathering information before making any assumptions.\"",
+        "Charlie: \"Bob and Diana, I'm glad we're all focused on Alice's death. Let's remember that mafiosos have a tendency to lie. I suggest we pay close attention to their words and actions.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"Bob and Diana, I'm concerned about Alice's sudden death. Let's be vigilant during this investigation.\"",
+        "Diana: \"Bob, I agree with Charlie that we need to be careful during this investigation.\"",
+        "Bob: \"Charlie and Diana, I'm glad we're all on the same page regarding Alice's death. Let's focus our investigation on any inconsistencies or suspicious behavior.\"",
+        "Diana: remained silent",
+        "Bob: \"Charlie and Diana, I think it's important that we don't jump to conclusions. Let's focus on gathering information before making any assumptions.\"",
+        "You: \"Bob and Diana, I'm glad we're all focused on Alice's death. Let's remember that mafiosos have a tendency to lie. I suggest we pay close attention to their words and actions.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"Bob and Diana, I'm concerned about Alice's sudden death. Let's be vigilant during this investigation.\"",
+        "You: \"Bob, I agree with Charlie that we need to be careful during this investigation.\"",
+        "Bob: \"Charlie and Diana, I'm glad we're all on the same page regarding Alice's death. Let's focus our investigation on any inconsistencies or suspicious behavior.\"",
+        "You: remained silent",
+        "Bob: \"Charlie and Diana, I think it's important that we don't jump to conclusions. Let's focus on gathering information before making any assumptions.\"",
+        "Charlie: \"Bob and Diana, I'm glad we're all focused on Alice's death. Let's remember that mafiosos have a tendency to lie. I suggest we pay close attention to their words and actions.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

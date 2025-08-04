@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0151",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 151,
+  "timestamp": "2025-08-01T09:28:20.854914",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden death. Let's work together to find out who could have done this and bring them to justice.",
+        "You said: I'm saddened by Bob's passing. Let's focus on finding the truth to bring justice for him. Let's not jump to conclusions.",
+        "Diana: \"I agree with Charlie, let's focus on finding the truth behind Bob's death. I've noticed Alice's reaction and find it unusual. Let's keep a close eye on her actions.\"",
+        "You said: I'm deeply saddened by Bob's death and urge us to stay focused on finding the truth. Let's not jump to conclusions, as Alice suggested. Let's work together to bring justice for Bob.",
+        "Charlie: I'm concerned about Alice's unusual reaction during Bob's death. Let's keep a close eye on her actions for the sake of justice.",
+        "Diana: \"Let's not forget Alice's unusual reaction during Bob's death. We should keep a close eye on her actions to ensure justice for Bob.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's work together to find out who could have done this and bring them to justice.",
+        "Alice: I'm saddened by Bob's passing. Let's focus on finding the truth to bring justice for him. Let's not jump to conclusions.",
+        "Diana: \"I agree with Charlie, let's focus on finding the truth behind Bob's death. I've noticed Alice's reaction and find it unusual. Let's keep a close eye on her actions.\"",
+        "Alice: I'm deeply saddened by Bob's death and urge us to stay focused on finding the truth. Let's not jump to conclusions, as Alice suggested. Let's work together to bring justice for Bob.",
+        "You said: I'm concerned about Alice's unusual reaction during Bob's death. Let's keep a close eye on her actions for the sake of justice.",
+        "Diana: \"Let's not forget Alice's unusual reaction during Bob's death. We should keep a close eye on her actions to ensure justice for Bob.\"",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden death. Let's work together to find out who could have done this and bring them to justice.",
+        "Alice: I'm saddened by Bob's passing. Let's focus on finding the truth to bring justice for him. Let's not jump to conclusions.",
+        "You said: \"I agree with Charlie, let's focus on finding the truth behind Bob's death. I've noticed Alice's reaction and find it unusual. Let's keep a close eye on her actions.\"",
+        "Alice: I'm deeply saddened by Bob's death and urge us to stay focused on finding the truth. Let's not jump to conclusions, as Alice suggested. Let's work together to bring justice for Bob.",
+        "Charlie: I'm concerned about Alice's unusual reaction during Bob's death. Let's keep a close eye on her actions for the sake of justice.",
+        "You said: \"Let's not forget Alice's unusual reaction during Bob's death. We should keep a close eye on her actions to ensure justice for Bob.\"",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

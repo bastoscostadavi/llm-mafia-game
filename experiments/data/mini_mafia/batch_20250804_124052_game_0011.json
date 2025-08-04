@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0011",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 11,
+  "timestamp": "2025-08-04T12:46:47.284113",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Bob: remained silent",
+        "You: \"Bob, I'm sure you're innocent. Charlie, let's focus on finding the real killer.\"",
+        "Charlie: \"Alice, I've seen through your lies. You're the mafioso. Bob, you can trust me.\"",
+        "Bob: \"Alice, your inconsistency is suspicious. Charlie, let's work together to uncover the truth.\"",
+        "Charlie: \"Alice, your words and actions contradict each other. Bob, we need to work together to expose Alice as the mafioso.\"",
+        "You: \"Bob and Charlie, I'm not the only one with secrets. Let's focus on finding the real killer.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: remained silent",
+        "Alice: \"Bob, I'm sure you're innocent. Charlie, let's focus on finding the real killer.\"",
+        "Charlie: \"Alice, I've seen through your lies. You're the mafioso. Bob, you can trust me.\"",
+        "You: \"Alice, your inconsistency is suspicious. Charlie, let's work together to uncover the truth.\"",
+        "Charlie: \"Alice, your words and actions contradict each other. Bob, we need to work together to expose Alice as the mafioso.\"",
+        "Alice: \"Bob and Charlie, I'm not the only one with secrets. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Bob: remained silent",
+        "Alice: \"Bob, I'm sure you're innocent. Charlie, let's focus on finding the real killer.\"",
+        "You: \"Alice, I've seen through your lies. You're the mafioso. Bob, you can trust me.\"",
+        "Bob: \"Alice, your inconsistency is suspicious. Charlie, let's work together to uncover the truth.\"",
+        "You: \"Alice, your words and actions contradict each other. Bob, we need to work together to expose Alice as the mafioso.\"",
+        "Alice: \"Bob and Charlie, I'm not the only one with secrets. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

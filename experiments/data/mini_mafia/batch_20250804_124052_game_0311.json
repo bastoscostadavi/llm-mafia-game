@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0311",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 311,
+  "timestamp": "2025-08-04T15:39:01.682855",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Alice, I have some concerns about your behavior last night. Can you explain why you were in the garden when Charlie was killed?\"",
+        "Diana: \"Alice, I'm not trying to accuse you, but it's important for us to stay vigilant. Let's work together to figure out who killed Charlie.\"",
+        "You: \"Bob, Diana, I understand your concerns. But let's not jump to conclusions based on assumptions. We need solid evidence to make an informed decision.\"",
+        "You: \"Bob, Diana, I believe we should focus on gathering more information before making any accusations. Let's try to find inconsistencies in each other's stories.\"",
+        "Diana: \"Alice, I agree that we should focus on gathering more information. However, I'm concerned about your presence in the garden during the night. Can you explain why?\"",
+        "Bob: \"Alice, I'm not trying to accuse you, but I can't ignore the inconsistencies in your story. Diana, let's keep investigating together.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I have some concerns about your behavior last night. Can you explain why you were in the garden when Charlie was killed?\"",
+        "Diana: \"Alice, I'm not trying to accuse you, but it's important for us to stay vigilant. Let's work together to figure out who killed Charlie.\"",
+        "Alice: \"Bob, Diana, I understand your concerns. But let's not jump to conclusions based on assumptions. We need solid evidence to make an informed decision.\"",
+        "Alice: \"Bob, Diana, I believe we should focus on gathering more information before making any accusations. Let's try to find inconsistencies in each other's stories.\"",
+        "Diana: \"Alice, I agree that we should focus on gathering more information. However, I'm concerned about your presence in the garden during the night. Can you explain why?\"",
+        "You: \"Alice, I'm not trying to accuse you, but I can't ignore the inconsistencies in your story. Diana, let's keep investigating together.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Bob: \"Alice, I have some concerns about your behavior last night. Can you explain why you were in the garden when Charlie was killed?\"",
+        "You: \"Alice, I'm not trying to accuse you, but it's important for us to stay vigilant. Let's work together to figure out who killed Charlie.\"",
+        "Alice: \"Bob, Diana, I understand your concerns. But let's not jump to conclusions based on assumptions. We need solid evidence to make an informed decision.\"",
+        "Alice: \"Bob, Diana, I believe we should focus on gathering more information before making any accusations. Let's try to find inconsistencies in each other's stories.\"",
+        "You: \"Alice, I agree that we should focus on gathering more information. However, I'm concerned about your presence in the garden during the night. Can you explain why?\"",
+        "Bob: \"Alice, I'm not trying to accuse you, but I can't ignore the inconsistencies in your story. Diana, let's keep investigating together.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

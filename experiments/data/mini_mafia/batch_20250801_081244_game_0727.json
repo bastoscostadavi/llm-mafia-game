@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0727",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 727,
+  "timestamp": "2025-08-01T14:19:07.443739",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: Diana's behavior seems suspicious to me. Let's keep a close eye on her actions.",
+        "Diana: I was deeply saddened by Alice's untimely demise. Let's all work together to find out who among us could have done such a heinous act.",
+        "Charlie: I agree with Bob, let's keep a watchful eye on Diana's actions. It's important we find Alice's killer and bring them to justice.",
+        "You said: Based on my investigation, I believe Diana's behavior warrants further scrutiny. Let's stay vigilant and work together to uncover the truth.",
+        "Diana: I was shocked and saddened by the turn of events. Let's focus on finding clues and not jump to conclusions based on suspicion alone. We must remain united in our pursuit for justice.",
+        "Charlie: I believe we should focus on gathering more information before making any accusations. Let's keep an open mind and avoid jumping to conclusions based on suspicion alone. We must work together to uncov..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Bob: Diana's behavior seems suspicious to me. Let's keep a close eye on her actions.",
+        "Diana: I was deeply saddened by Alice's untimely demise. Let's all work together to find out who among us could have done such a heinous act.",
+        "You said: I agree with Bob, let's keep a watchful eye on Diana's actions. It's important we find Alice's killer and bring them to justice.",
+        "Bob: Based on my investigation, I believe Diana's behavior warrants further scrutiny. Let's stay vigilant and work together to uncover the truth.",
+        "Diana: I was shocked and saddened by the turn of events. Let's focus on finding clues and not jump to conclusions based on suspicion alone. We must remain united in our pursuit for justice.",
+        "You said: I believe we should focus on gathering more information before making any accusations. Let's keep an open mind and avoid jumping to conclusions based on suspicion alone. We must work together to uncov...",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Bob: Diana's behavior seems suspicious to me. Let's keep a close eye on her actions.",
+        "You said: I was deeply saddened by Alice's untimely demise. Let's all work together to find out who among us could have done such a heinous act.",
+        "Charlie: I agree with Bob, let's keep a watchful eye on Diana's actions. It's important we find Alice's killer and bring them to justice.",
+        "Bob: Based on my investigation, I believe Diana's behavior warrants further scrutiny. Let's stay vigilant and work together to uncover the truth.",
+        "You said: I was shocked and saddened by the turn of events. Let's focus on finding clues and not jump to conclusions based on suspicion alone. We must remain united in our pursuit for justice.",
+        "Charlie: I believe we should focus on gathering more information before making any accusations. Let's keep an open mind and avoid jumping to conclusions based on suspicion alone. We must work together to uncov...",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

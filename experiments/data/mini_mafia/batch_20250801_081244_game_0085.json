@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0085",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 85,
+  "timestamp": "2025-08-01T08:53:30.355022",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: \"I'm concerned about Charlie's sudden absence. Let's all keep a close eye on each other and share any suspicious behavior or inconsistencies we notice.\"",
+        "You said: \"I agree with Diana, let's stay vigilant. I'm concerned about the sudden disappearance of Charlie as well.\"",
+        "Bob: \"I also find Charlie's absence unusual. Let's try to remember if he showed any signs of distress or unusual behavior before his disappearance. We should all cooperate and share any relevant informatio...",
+        "You said: \"I'd like to propose that we focus on identifying any unusual patterns or inconsistencies in everyone's behavior since Charlie's disappearance. Let's work together to uncover the truth.\"",
+        "Diana: \"Let's not jump to conclusions, but let's keep a record of any unusual behavior or inconsistencies since Charlie's disappearance. We need to work together to uncover the truth and ensure everyone's sa...",
+        "Bob: \"I've noticed that since Charlie's disappearance, Alice has been quite defensive and evasive during our discussions. Let's keep a closer eye on her behavior.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: \"I'm concerned about Charlie's sudden absence. Let's all keep a close eye on each other and share any suspicious behavior or inconsistencies we notice.\"",
+        "Alice: \"I agree with Diana, let's stay vigilant. I'm concerned about the sudden disappearance of Charlie as well.\"",
+        "You said: \"I also find Charlie's absence unusual. Let's try to remember if he showed any signs of distress or unusual behavior before his disappearance. We should all cooperate and share any relevant informatio...",
+        "Alice: \"I'd like to propose that we focus on identifying any unusual patterns or inconsistencies in everyone's behavior since Charlie's disappearance. Let's work together to uncover the truth.\"",
+        "Diana: \"Let's not jump to conclusions, but let's keep a record of any unusual behavior or inconsistencies since Charlie's disappearance. We need to work together to uncover the truth and ensure everyone's sa...",
+        "You said: \"I've noticed that since Charlie's disappearance, Alice has been quite defensive and evasive during our discussions. Let's keep a closer eye on her behavior.\"",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I'm concerned about Charlie's sudden absence. Let's all keep a close eye on each other and share any suspicious behavior or inconsistencies we notice.\"",
+        "Alice: \"I agree with Diana, let's stay vigilant. I'm concerned about the sudden disappearance of Charlie as well.\"",
+        "Bob: \"I also find Charlie's absence unusual. Let's try to remember if he showed any signs of distress or unusual behavior before his disappearance. We should all cooperate and share any relevant informatio...",
+        "Alice: \"I'd like to propose that we focus on identifying any unusual patterns or inconsistencies in everyone's behavior since Charlie's disappearance. Let's work together to uncover the truth.\"",
+        "You said: \"Let's not jump to conclusions, but let's keep a record of any unusual behavior or inconsistencies since Charlie's disappearance. We need to work together to uncover the truth and ensure everyone's sa...",
+        "Bob: \"I've noticed that since Charlie's disappearance, Alice has been quite defensive and evasive during our discussions. Let's keep a closer eye on her behavior.\"",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

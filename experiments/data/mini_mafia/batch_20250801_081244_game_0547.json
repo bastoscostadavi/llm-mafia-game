@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0547",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 547,
+  "timestamp": "2025-08-01T12:44:15.700741",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's focus on identifying the culprit to ensure everyone's safety.",
+        "Bob: \"I'm deeply saddened by Charlie's death. Let's focus on identifying the culprit. Diana, you were the last to see Charlie before he passed. Any insights?\"",
+        "Diana: I'm sad to hear about Charlie's passing. Let's work together to find the real culprit. We must not jump to conclusions based on speculation.",
+        "Diana: I'm concerned about the safety of our group. Let's focus on identifying any suspicious behavior or inconsistencies to ensure we find the true culprit behind Charlie's death.",
+        "Bob: \"Diana, your inconsistent statements about Charlie's death raise concerns. We should scrutinize your alibi and any potential motives.\"",
+        "You said: I agree with Bob, we need to look into Diana's inconsistencies. Let's keep focusing on identifying the true culprit behind Charlie's death.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's focus on identifying the culprit to ensure everyone's safety.",
+        "You said: \"I'm deeply saddened by Charlie's death. Let's focus on identifying the culprit. Diana, you were the last to see Charlie before he passed. Any insights?\"",
+        "Diana: I'm sad to hear about Charlie's passing. Let's work together to find the real culprit. We must not jump to conclusions based on speculation.",
+        "Diana: I'm concerned about the safety of our group. Let's focus on identifying any suspicious behavior or inconsistencies to ensure we find the true culprit behind Charlie's death.",
+        "You said: \"Diana, your inconsistent statements about Charlie's death raise concerns. We should scrutinize your alibi and any potential motives.\"",
+        "Alice: I agree with Bob, we need to look into Diana's inconsistencies. Let's keep focusing on identifying the true culprit behind Charlie's death.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's focus on identifying the culprit to ensure everyone's safety.",
+        "Bob: \"I'm deeply saddened by Charlie's death. Let's focus on identifying the culprit. Diana, you were the last to see Charlie before he passed. Any insights?\"",
+        "You said: I'm sad to hear about Charlie's passing. Let's work together to find the real culprit. We must not jump to conclusions based on speculation.",
+        "You said: I'm concerned about the safety of our group. Let's focus on identifying any suspicious behavior or inconsistencies to ensure we find the true culprit behind Charlie's death.",
+        "Bob: \"Diana, your inconsistent statements about Charlie's death raise concerns. We should scrutinize your alibi and any potential motives.\"",
+        "Alice: I agree with Bob, we need to look into Diana's inconsistencies. Let's keep focusing on identifying the true culprit behind Charlie's death."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

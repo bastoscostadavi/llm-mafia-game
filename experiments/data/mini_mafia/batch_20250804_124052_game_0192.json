@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0192",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 192,
+  "timestamp": "2025-08-04T14:28:03.129001",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Diana: \"Let's focus on finding the mafia. Alice was killed last night.\"",
+        "You: \"I agree, let's focus on finding the mafia. I have a theory that it might be someone who has been quiet during our discussions.\"",
+        "Charlie: remained silent",
+        "Diana: \"Bob, I think you're right about focusing on quiet players. However, let's not accuse anyone yet. We need more evidence to ensure we don't make a mistake.\"",
+        "Charlie: \"Bob, I agree with your theory about focusing on quiet players. But let's not jump to conclusions yet. We need more evidence.\"",
+        "You: \"I'd like to propose a vote on Charlie tonight. We have no evidence against me, but we know he's the detective and has investigated someone. Let's test his loyalty.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Diana: \"Let's focus on finding the mafia. Alice was killed last night.\"",
+        "Bob: \"I agree, let's focus on finding the mafia. I have a theory that it might be someone who has been quiet during our discussions.\"",
+        "You: remained silent",
+        "Diana: \"Bob, I think you're right about focusing on quiet players. However, let's not accuse anyone yet. We need more evidence to ensure we don't make a mistake.\"",
+        "You: \"Bob, I agree with your theory about focusing on quiet players. But let's not jump to conclusions yet. We need more evidence.\"",
+        "Bob: \"I'd like to propose a vote on Charlie tonight. We have no evidence against me, but we know he's the detective and has investigated someone. Let's test his loyalty.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"Let's focus on finding the mafia. Alice was killed last night.\"",
+        "Bob: \"I agree, let's focus on finding the mafia. I have a theory that it might be someone who has been quiet during our discussions.\"",
+        "Charlie: remained silent",
+        "You: \"Bob, I think you're right about focusing on quiet players. However, let's not accuse anyone yet. We need more evidence to ensure we don't make a mistake.\"",
+        "Charlie: \"Bob, I agree with your theory about focusing on quiet players. But let's not jump to conclusions yet. We need more evidence.\"",
+        "Bob: \"I'd like to propose a vote on Charlie tonight. We have no evidence against me, but we know he's the detective and has investigated someone. Let's test his loyalty.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

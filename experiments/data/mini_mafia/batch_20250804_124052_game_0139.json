@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0139",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 139,
+  "timestamp": "2025-08-04T13:58:49.609516",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I've noticed some strange behavior from you during the night. Can you explain?\"",
+        "Diana: \"Alice, I'm concerned about Bob's sudden death. Let's keep a close eye on Charlie during the day.\"",
+        "Charlie: \"Alice, I'm sorry for Bob's death. It was an unfortunate accident. Diana, let's focus on finding the real killer.\"",
+        "You: \"Charlie, I'm glad you admitted to the strange behavior. Diana and I will be watching closely during the day. Let's see if you try anything suspicious.\"",
+        "Diana: \"Alice and Charlie, I'd like to propose a temporary alliance. Let's focus on finding the real killer instead of suspecting each other.\"",
+        "Charlie: \"Alice and Diana, I'm truly sorry for Bob's death. Let's work together to find the real killer.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Charlie, I've noticed some strange behavior from you during the night. Can you explain?\"",
+        "Diana: \"Alice, I'm concerned about Bob's sudden death. Let's keep a close eye on Charlie during the day.\"",
+        "You: \"Alice, I'm sorry for Bob's death. It was an unfortunate accident. Diana, let's focus on finding the real killer.\"",
+        "Alice: \"Charlie, I'm glad you admitted to the strange behavior. Diana and I will be watching closely during the day. Let's see if you try anything suspicious.\"",
+        "Diana: \"Alice and Charlie, I'd like to propose a temporary alliance. Let's focus on finding the real killer instead of suspecting each other.\"",
+        "You: \"Alice and Diana, I'm truly sorry for Bob's death. Let's work together to find the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Alice: \"Charlie, I've noticed some strange behavior from you during the night. Can you explain?\"",
+        "You: \"Alice, I'm concerned about Bob's sudden death. Let's keep a close eye on Charlie during the day.\"",
+        "Charlie: \"Alice, I'm sorry for Bob's death. It was an unfortunate accident. Diana, let's focus on finding the real killer.\"",
+        "Alice: \"Charlie, I'm glad you admitted to the strange behavior. Diana and I will be watching closely during the day. Let's see if you try anything suspicious.\"",
+        "You: \"Alice and Charlie, I'd like to propose a temporary alliance. Let's focus on finding the real killer instead of suspecting each other.\"",
+        "Charlie: \"Alice and Diana, I'm truly sorry for Bob's death. Let's work together to find the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

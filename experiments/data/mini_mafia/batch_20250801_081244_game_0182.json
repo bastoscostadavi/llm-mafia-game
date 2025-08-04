@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0182",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 182,
+  "timestamp": "2025-08-01T09:43:42.693868",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie's behavior tonight.\"",
+        "Bob: \"I agree with Alice, let's be vigilant tonight. We need to ensure Charlie's actions align with our safety.\"",
+        "Charlie: \"I understand the concerns, but let's not jump to conclusions. Let's focus on ensuring everyone's safety tonight and work together as a team.\"",
+        "You said: \"Let's not overlook the unusual circumstances surrounding Diana's death. We should all stay alert and report any suspicious behavior from Charlie tonight.\"",
+        "Charlie: \"Let's not let fear cloud our judgment. I assure you, I have no intention of harming any of you. Let's focus on our shared goal of ensuring everyone's safety and trust each other throughout the game.\"",
+        "Bob: \"Let's not forget that Charlie's behavior seems suspicious to some of us. We should be cautious and keep a close eye on his actions tonight for everyone's safety.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie's behavior tonight.\"",
+        "You said: \"I agree with Alice, let's be vigilant tonight. We need to ensure Charlie's actions align with our safety.\"",
+        "Charlie: \"I understand the concerns, but let's not jump to conclusions. Let's focus on ensuring everyone's safety tonight and work together as a team.\"",
+        "Alice: \"Let's not overlook the unusual circumstances surrounding Diana's death. We should all stay alert and report any suspicious behavior from Charlie tonight.\"",
+        "Charlie: \"Let's not let fear cloud our judgment. I assure you, I have no intention of harming any of you. Let's focus on our shared goal of ensuring everyone's safety and trust each other throughout the game.\"",
+        "You said: \"Let's not forget that Charlie's behavior seems suspicious to some of us. We should be cautious and keep a close eye on his actions tonight for everyone's safety.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie's behavior tonight.\"",
+        "Bob: \"I agree with Alice, let's be vigilant tonight. We need to ensure Charlie's actions align with our safety.\"",
+        "You said: \"I understand the concerns, but let's not jump to conclusions. Let's focus on ensuring everyone's safety tonight and work together as a team.\"",
+        "Alice: \"Let's not overlook the unusual circumstances surrounding Diana's death. We should all stay alert and report any suspicious behavior from Charlie tonight.\"",
+        "You said: \"Let's not let fear cloud our judgment. I assure you, I have no intention of harming any of you. Let's focus on our shared goal of ensuring everyone's safety and trust each other throughout the game.\"",
+        "Bob: \"Let's not forget that Charlie's behavior seems suspicious to some of us. We should be cautious and keep a close eye on his actions tonight for everyone's safety.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

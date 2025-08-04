@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0899",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 899,
+  "timestamp": "2025-08-01T15:47:00.265428",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's focus on finding out who could have possibly harmed her.\"",
+        "Charlie: \"I agree with Diana, let's try to gather information about Alice's movements last night. Anyone notice anything unusual?\"",
+        "You said: \"I'm saddened by Alice's death. Let's not jump to conclusions. We should all cooperate to find the real culprit.\"",
+        "Charlie: \"I'd like to suggest we retrace Alice's steps last night. Anyone who had contact with her before her death, please share the details.\"",
+        "You said: \"Let's not make hasty assumptions. cooperating to find the real culprit is key. I didn't have contact with Alice last night.\"",
+        "Diana: \"Based on my investigation, I believe Bob had contact with Alice last night. Let's focus on questioning him further to get to the truth.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's focus on finding out who could have possibly harmed her.\"",
+        "You said: \"I agree with Diana, let's try to gather information about Alice's movements last night. Anyone notice anything unusual?\"",
+        "Bob: \"I'm saddened by Alice's death. Let's not jump to conclusions. We should all cooperate to find the real culprit.\"",
+        "You said: \"I'd like to suggest we retrace Alice's steps last night. Anyone who had contact with her before her death, please share the details.\"",
+        "Bob: \"Let's not make hasty assumptions. cooperating to find the real culprit is key. I didn't have contact with Alice last night.\"",
+        "Diana: \"Based on my investigation, I believe Bob had contact with Alice last night. Let's focus on questioning him further to get to the truth.\"",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's focus on finding out who could have possibly harmed her.\"",
+        "Charlie: \"I agree with Diana, let's try to gather information about Alice's movements last night. Anyone notice anything unusual?\"",
+        "Bob: \"I'm saddened by Alice's death. Let's not jump to conclusions. We should all cooperate to find the real culprit.\"",
+        "Charlie: \"I'd like to suggest we retrace Alice's steps last night. Anyone who had contact with her before her death, please share the details.\"",
+        "Bob: \"Let's not make hasty assumptions. cooperating to find the real culprit is key. I didn't have contact with Alice last night.\"",
+        "You said: \"Based on my investigation, I believe Bob had contact with Alice last night. Let's focus on questioning him further to get to the truth.\"",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

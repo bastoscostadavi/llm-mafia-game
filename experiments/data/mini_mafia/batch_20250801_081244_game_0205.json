@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0205",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 205,
+  "timestamp": "2025-08-01T09:54:51.570409",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I'm concerned about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "You said: Alice: \"I agree, we need to find out who killed Diana. Let's focus on discussing potential clues and alibis.\"",
+        "Charlie: I remember Diana mentioning she received a threatening note before her death. Let's discuss if anyone else has had similar experiences.",
+        "Charlie: \"I remember Diana mentioning a threatening note before her death. Let's discuss if anyone else has had similar experiences or noticed any unusual behavior.\"",
+        "You said: Alice: \"I've learned that Bob is the mafioso. Let's focus on investigating him further and uncovering the details of Diana's murder.\"",
+        "Bob: \"I'm saddened by Diana's death and support finding the truth. Let's focus on potential suspects and their alibis to uncover the culprit together.\"",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "Alice: Alice: \"I agree, we need to find out who killed Diana. Let's focus on discussing potential clues and alibis.\"",
+        "Charlie: I remember Diana mentioning she received a threatening note before her death. Let's discuss if anyone else has had similar experiences.",
+        "Charlie: \"I remember Diana mentioning a threatening note before her death. Let's discuss if anyone else has had similar experiences or noticed any unusual behavior.\"",
+        "Alice: Alice: \"I've learned that Bob is the mafioso. Let's focus on investigating him further and uncovering the details of Diana's murder.\"",
+        "You said: \"I'm saddened by Diana's death and support finding the truth. Let's focus on potential suspects and their alibis to uncover the culprit together.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I'm concerned about Diana's sudden disappearance. Let's focus on finding out what happened to her.\"",
+        "Alice: Alice: \"I agree, we need to find out who killed Diana. Let's focus on discussing potential clues and alibis.\"",
+        "You said: I remember Diana mentioning she received a threatening note before her death. Let's discuss if anyone else has had similar experiences.",
+        "You said: \"I remember Diana mentioning a threatening note before her death. Let's discuss if anyone else has had similar experiences or noticed any unusual behavior.\"",
+        "Alice: Alice: \"I've learned that Bob is the mafioso. Let's focus on investigating him further and uncovering the details of Diana's murder.\"",
+        "Bob: \"I'm saddened by Diana's death and support finding the truth. Let's focus on potential suspects and their alibis to uncover the culprit together.\"",
+        "Day 1 votes: Bob voted for Alice, Charlie voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

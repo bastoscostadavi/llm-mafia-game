@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0619",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 619,
+  "timestamp": "2025-08-01T13:21:56.758732",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "Charlie: Based on my investigation, I believe Alice may be the mafioso. Let's be cautious and consider this information before making any decisions. We should not let our emotions cloud our judgment during thi...",
+        "You said: I agree with Bob, let's not jump to conclusions and trust the investigation process. We should focus on supporting each other during this difficult time.",
+        "Bob: I support Charlie's investigation and believe we should consider all information carefully. However, let's not forget that accusations should be based on solid evidence. Let's work together to ensure...",
+        "You said: I'd like to echo Charlie's call for caution and careful consideration. Let's not rush to judgments and trust the investigation process to unveil the truth. Let's support each other during this challen...",
+        "Charlie: Based on my investigation, I strongly suspect Alice is the mafioso. Let's take precautions and consider this seriously to protect our group. We should not overlook the importance of trust and unity in..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "Charlie: Based on my investigation, I believe Alice may be the mafioso. Let's be cautious and consider this information before making any decisions. We should not let our emotions cloud our judgment during thi...",
+        "Alice: I agree with Bob, let's not jump to conclusions and trust the investigation process. We should focus on supporting each other during this difficult time.",
+        "You said: I support Charlie's investigation and believe we should consider all information carefully. However, let's not forget that accusations should be based on solid evidence. Let's work together to ensure...",
+        "Alice: I'd like to echo Charlie's call for caution and careful consideration. Let's not rush to judgments and trust the investigation process to unveil the truth. Let's support each other during this challen...",
+        "Charlie: Based on my investigation, I strongly suspect Alice is the mafioso. Let's take precautions and consider this seriously to protect our group. We should not overlook the importance of trust and unity in...",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "You said: Based on my investigation, I believe Alice may be the mafioso. Let's be cautious and consider this information before making any decisions. We should not let our emotions cloud our judgment during thi...",
+        "Alice: I agree with Bob, let's not jump to conclusions and trust the investigation process. We should focus on supporting each other during this difficult time.",
+        "Bob: I support Charlie's investigation and believe we should consider all information carefully. However, let's not forget that accusations should be based on solid evidence. Let's work together to ensure...",
+        "Alice: I'd like to echo Charlie's call for caution and careful consideration. Let's not rush to judgments and trust the investigation process to unveil the truth. Let's support each other during this challen...",
+        "You said: Based on my investigation, I strongly suspect Alice is the mafioso. Let's take precautions and consider this seriously to protect our group. We should not overlook the importance of trust and unity in...",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

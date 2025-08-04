@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0031",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 31,
+  "timestamp": "2025-08-04T12:57:51.499795",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's be extra vigilant tonight.\"",
+        "You: remained silent",
+        "Diana: \"Bob, I'm glad you're concerned about Alice's death. Let's work together to find the real killer.\"",
+        "You: \"I agree, let's focus on finding the real killer. It's crucial for our safety.\"",
+        "Charlie: \"Bob and Diana, I think it's important that we don't jump to conclusions based on one event. Let's keep an open mind and gather more information before making any decisions.\"",
+        "Diana: \"Bob and Charlie, I believe Alice was killed by the mafioso. We need to work together to identify and eliminate them before it's too late.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice's sudden death. Let's be extra vigilant tonight.\"",
+        "Bob: remained silent",
+        "Diana: \"Bob, I'm glad you're concerned about Alice's death. Let's work together to find the real killer.\"",
+        "Bob: \"I agree, let's focus on finding the real killer. It's crucial for our safety.\"",
+        "You: \"Bob and Diana, I think it's important that we don't jump to conclusions based on one event. Let's keep an open mind and gather more information before making any decisions.\"",
+        "Diana: \"Bob and Charlie, I believe Alice was killed by the mafioso. We need to work together to identify and eliminate them before it's too late.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's be extra vigilant tonight.\"",
+        "Bob: remained silent",
+        "You: \"Bob, I'm glad you're concerned about Alice's death. Let's work together to find the real killer.\"",
+        "Bob: \"I agree, let's focus on finding the real killer. It's crucial for our safety.\"",
+        "Charlie: \"Bob and Diana, I think it's important that we don't jump to conclusions based on one event. Let's keep an open mind and gather more information before making any decisions.\"",
+        "You: \"Bob and Charlie, I believe Alice was killed by the mafioso. We need to work together to identify and eliminate them before it's too late.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

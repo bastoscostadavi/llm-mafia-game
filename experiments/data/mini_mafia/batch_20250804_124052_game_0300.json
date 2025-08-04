@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0300",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 300,
+  "timestamp": "2025-08-04T15:31:59.840335",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Diana: \"Charlie, I'm concerned about Alice's sudden death. Let's work together to ensure no more villagers are hurt.\"",
+        "You: \"I agree with Diana, let's focus on finding out who killed Alice. Charlie and I will investigate separately.\"",
+        "Charlie: \"I agree with Diana, let's focus on finding out who killed Alice. I have some leads and will investigate thoroughly.\"",
+        "You: \"I've found no concrete evidence yet, but I believe we should focus on Charlie as a suspect due to his 'concerns about Alice' and 'having leads.' Let's discuss this further.\"",
+        "Charlie: remained silent",
+        "Diana: \"Bob, I believe Charlie's silence is suspicious. Let's focus our investigation on him.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Charlie, I'm concerned about Alice's sudden death. Let's work together to ensure no more villagers are hurt.\"",
+        "Bob: \"I agree with Diana, let's focus on finding out who killed Alice. Charlie and I will investigate separately.\"",
+        "You: \"I agree with Diana, let's focus on finding out who killed Alice. I have some leads and will investigate thoroughly.\"",
+        "Bob: \"I've found no concrete evidence yet, but I believe we should focus on Charlie as a suspect due to his 'concerns about Alice' and 'having leads.' Let's discuss this further.\"",
+        "You: remained silent",
+        "Diana: \"Bob, I believe Charlie's silence is suspicious. Let's focus our investigation on him.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I'm concerned about Alice's sudden death. Let's work together to ensure no more villagers are hurt.\"",
+        "Bob: \"I agree with Diana, let's focus on finding out who killed Alice. Charlie and I will investigate separately.\"",
+        "Charlie: \"I agree with Diana, let's focus on finding out who killed Alice. I have some leads and will investigate thoroughly.\"",
+        "Bob: \"I've found no concrete evidence yet, but I believe we should focus on Charlie as a suspect due to his 'concerns about Alice' and 'having leads.' Let's discuss this further.\"",
+        "Charlie: remained silent",
+        "You: \"Bob, I believe Charlie's silence is suspicious. Let's focus our investigation on him.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

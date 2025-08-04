@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0099",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 99,
+  "timestamp": "2025-08-01T09:00:43.498403",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I was deeply saddened to wake up to the news of Charlie's sudden passing. We must all come together and support each other during this difficult time. Let's focus on finding out who could have done th...",
+        "Diana: Bob's reaction to Charlie's death seems unusual. Let's stay focused on identifying the culprit.",
+        "You said: I agree with Diana. Let's focus on identifying the culprit behind Charlie's death. This is a time for vigilance and unity. We can't let the guilty party go unpunished. #JusticeForCharlie.",
+        "Diana: Based on my investigation, I believe Bob's unusual reaction to Charlie's death warrants further scrutiny. Let's keep a close eye on him and work together to unmask the true culprit. #JusticeForCharlie...",
+        "Bob: I was deeply moved by Charlie's passing and I'm committed to helping find the truth. Let's keep an open mind and focus on the facts. #JusticeForCharlie.",
+        "You said: Based on the public information, let's not jump to conclusions. We should consider all possibilities and focus on gathering more facts before making any accusations. #JusticeForCharlie.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I was deeply saddened to wake up to the news of Charlie's sudden passing. We must all come together and support each other during this difficult time. Let's focus on finding out who could have done th...",
+        "Diana: Bob's reaction to Charlie's death seems unusual. Let's stay focused on identifying the culprit.",
+        "Alice: I agree with Diana. Let's focus on identifying the culprit behind Charlie's death. This is a time for vigilance and unity. We can't let the guilty party go unpunished. #JusticeForCharlie.",
+        "Diana: Based on my investigation, I believe Bob's unusual reaction to Charlie's death warrants further scrutiny. Let's keep a close eye on him and work together to unmask the true culprit. #JusticeForCharlie...",
+        "You said: I was deeply moved by Charlie's passing and I'm committed to helping find the truth. Let's keep an open mind and focus on the facts. #JusticeForCharlie.",
+        "Alice: Based on the public information, let's not jump to conclusions. We should consider all possibilities and focus on gathering more facts before making any accusations. #JusticeForCharlie."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I was deeply saddened to wake up to the news of Charlie's sudden passing. We must all come together and support each other during this difficult time. Let's focus on finding out who could have done th...",
+        "You said: Bob's reaction to Charlie's death seems unusual. Let's stay focused on identifying the culprit.",
+        "Alice: I agree with Diana. Let's focus on identifying the culprit behind Charlie's death. This is a time for vigilance and unity. We can't let the guilty party go unpunished. #JusticeForCharlie.",
+        "You said: Based on my investigation, I believe Bob's unusual reaction to Charlie's death warrants further scrutiny. Let's keep a close eye on him and work together to unmask the true culprit. #JusticeForCharlie...",
+        "Bob: I was deeply moved by Charlie's passing and I'm committed to helping find the truth. Let's keep an open mind and focus on the facts. #JusticeForCharlie.",
+        "Alice: Based on the public information, let's not jump to conclusions. We should consider all possibilities and focus on gathering more facts before making any accusations. #JusticeForCharlie.",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

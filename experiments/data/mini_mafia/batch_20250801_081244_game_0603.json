@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0603",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 603,
+  "timestamp": "2025-08-01T13:14:01.339015",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and try to find out what happened.",
+        "Bob: \"I agree with Diana, we should all be vigilant. Let's pay extra attention to Diana's actions and demeanor tonight.\"",
+        "You said: \"I'd like to propose we focus on Bob's unusual behavior last night. Let's keep a close eye on him tonight.\"",
+        "You said: \"I'd like to reiterate my concern about Bob's behavior last night. Let's make sure we're all cautious and pay close attention to him tonight.\"",
+        "Diana: I'd like to echo Alice's concerns about Bob's behavior last night. Let's stay vigilant and keep a close eye on him tonight.",
+        "Bob: \"I share the concerns about Bob's behavior last night. Let's not overlook any suspicious signs and report anything unusual tonight.\"",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and try to find out what happened.",
+        "You said: \"I agree with Diana, we should all be vigilant. Let's pay extra attention to Diana's actions and demeanor tonight.\"",
+        "Alice: \"I'd like to propose we focus on Bob's unusual behavior last night. Let's keep a close eye on him tonight.\"",
+        "Alice: \"I'd like to reiterate my concern about Bob's behavior last night. Let's make sure we're all cautious and pay close attention to him tonight.\"",
+        "Diana: I'd like to echo Alice's concerns about Bob's behavior last night. Let's stay vigilant and keep a close eye on him tonight.",
+        "You said: \"I share the concerns about Bob's behavior last night. Let's not overlook any suspicious signs and report anything unusual tonight.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all be vigilant and try to find out what happened.",
+        "Bob: \"I agree with Diana, we should all be vigilant. Let's pay extra attention to Diana's actions and demeanor tonight.\"",
+        "Alice: \"I'd like to propose we focus on Bob's unusual behavior last night. Let's keep a close eye on him tonight.\"",
+        "Alice: \"I'd like to reiterate my concern about Bob's behavior last night. Let's make sure we're all cautious and pay close attention to him tonight.\"",
+        "You said: I'd like to echo Alice's concerns about Bob's behavior last night. Let's stay vigilant and keep a close eye on him tonight.",
+        "Bob: \"I share the concerns about Bob's behavior last night. Let's not overlook any suspicious signs and report anything unusual tonight.\"",
+        "Day 1 votes: Bob voted for Diana, Diana voted for Bob, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

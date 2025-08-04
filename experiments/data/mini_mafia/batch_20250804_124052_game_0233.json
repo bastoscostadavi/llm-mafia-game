@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0233",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 233,
+  "timestamp": "2025-08-04T14:51:18.178524",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I'm concerned about Bob's sudden death. Let's work together to ensure the safety of our fellow villagers.\"",
+        "Charlie: remained silent",
+        "Diana: \"Alice and Charlie, I'm worried about Bob's death too. Let's focus on finding the real killer rather than pointing fingers.\"",
+        "Charlie: \"Alice, I agree with your concern for Bob's death and I want to help find the killer. Diana, let's focus on gathering more information before making any accusations.\"",
+        "You: \"Charlie and Diana, I believe we should all be transparent about our actions during the night. Let's share any information we have to help find the real killer.\"",
+        "Diana: \"Alice and Charlie, I've noticed that you both seem concerned about Bob's death. Let's work together to find the real killer by sharing any relevant information we have.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Charlie, I'm concerned about Bob's sudden death. Let's work together to ensure the safety of our fellow villagers.\"",
+        "You: remained silent",
+        "Diana: \"Alice and Charlie, I'm worried about Bob's death too. Let's focus on finding the real killer rather than pointing fingers.\"",
+        "You: \"Alice, I agree with your concern for Bob's death and I want to help find the killer. Diana, let's focus on gathering more information before making any accusations.\"",
+        "Alice: \"Charlie and Diana, I believe we should all be transparent about our actions during the night. Let's share any information we have to help find the real killer.\"",
+        "Diana: \"Alice and Charlie, I've noticed that you both seem concerned about Bob's death. Let's work together to find the real killer by sharing any relevant information we have.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Alice: \"Charlie, I'm concerned about Bob's sudden death. Let's work together to ensure the safety of our fellow villagers.\"",
+        "Charlie: remained silent",
+        "You: \"Alice and Charlie, I'm worried about Bob's death too. Let's focus on finding the real killer rather than pointing fingers.\"",
+        "Charlie: \"Alice, I agree with your concern for Bob's death and I want to help find the killer. Diana, let's focus on gathering more information before making any accusations.\"",
+        "Alice: \"Charlie and Diana, I believe we should all be transparent about our actions during the night. Let's share any information we have to help find the real killer.\"",
+        "You: \"Alice and Charlie, I've noticed that you both seem concerned about Bob's death. Let's work together to find the real killer by sharing any relevant information we have.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

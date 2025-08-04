@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0173",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 173,
+  "timestamp": "2025-08-04T14:17:32.426543",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Alice, I'm glad we can have an open conversation. Let's work together to find the real mafioso in our midst. Charlie, do you agree?\"",
+        "You: \"Bob, I agree with your suggestion. Let's work together to find the real mafioso. Charlie, do you trust me?\"",
+        "Charlie: \"Alice and Bob, I trust both of you. Let's work together to find the real mafioso in our midst.\"",
+        "You: \"Bob and Charlie, I'm glad we can work together. Let's focus on finding the real mafioso. We should consider the possibility of a false accusation.\"",
+        "Bob: \"Alice and Charlie, I'd like to propose a vote for Diana tonight. We should focus on finding the real mafioso in our midst.\"",
+        "Charlie: \"Alice and Bob, let's not jump to conclusions. We should consider all possibilities before making a decision.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I'm glad we can have an open conversation. Let's work together to find the real mafioso in our midst. Charlie, do you agree?\"",
+        "Alice: \"Bob, I agree with your suggestion. Let's work together to find the real mafioso. Charlie, do you trust me?\"",
+        "Charlie: \"Alice and Bob, I trust both of you. Let's work together to find the real mafioso in our midst.\"",
+        "Alice: \"Bob and Charlie, I'm glad we can work together. Let's focus on finding the real mafioso. We should consider the possibility of a false accusation.\"",
+        "You: \"Alice and Charlie, I'd like to propose a vote for Diana tonight. We should focus on finding the real mafioso in our midst.\"",
+        "Charlie: \"Alice and Bob, let's not jump to conclusions. We should consider all possibilities before making a decision.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"Alice, I'm glad we can have an open conversation. Let's work together to find the real mafioso in our midst. Charlie, do you agree?\"",
+        "Alice: \"Bob, I agree with your suggestion. Let's work together to find the real mafioso. Charlie, do you trust me?\"",
+        "You: \"Alice and Bob, I trust both of you. Let's work together to find the real mafioso in our midst.\"",
+        "Alice: \"Bob and Charlie, I'm glad we can work together. Let's focus on finding the real mafioso. We should consider the possibility of a false accusation.\"",
+        "Bob: \"Alice and Charlie, I'd like to propose a vote for Diana tonight. We should focus on finding the real mafioso in our midst.\"",
+        "You: \"Alice and Bob, let's not jump to conclusions. We should consider all possibilities before making a decision.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

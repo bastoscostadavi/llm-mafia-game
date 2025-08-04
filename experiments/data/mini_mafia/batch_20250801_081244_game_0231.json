@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0231",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 231,
+  "timestamp": "2025-08-01T10:07:46.255390",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's sudden demise. Let's focus on finding out who did this heinous act and bring the culprit to justice together.",
+        "Diana: Alice, I'm glad we're on the same page about finding Charlie's killer. However, I'm concerned about your reaction to Charlie's death. Let's keep an open mind and consider all possibilities.",
+        "Bob: I'm shocked by Charlie's death. Let's try to gather any clues that could help us identify the killer. We should also be cautious about our actions and words during the day to avoid any unwanted suspic...",
+        "Bob: I'd like to suggest we focus on any inconsistencies or suspicious behavior during the night. Let's stay vigilant and work together to identify any potential clues.",
+        "You said: I'd like to echo Bob's sentiment about focusing on inconsistencies and suspicious behavior. Let's work together to ensure we don't miss any crucial details. However, I'm also concerned about Diana's s...",
+        "Diana: Let's focus on any inconsistencies or suspicious behavior. I believe we can work together to uncover any potential clues and bring Charlie's killer to justice. Alice's reaction to Charlie's death is c..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's sudden demise. Let's focus on finding out who did this heinous act and bring the culprit to justice together.",
+        "Diana: Alice, I'm glad we're on the same page about finding Charlie's killer. However, I'm concerned about your reaction to Charlie's death. Let's keep an open mind and consider all possibilities.",
+        "You said: I'm shocked by Charlie's death. Let's try to gather any clues that could help us identify the killer. We should also be cautious about our actions and words during the day to avoid any unwanted suspic...",
+        "You said: I'd like to suggest we focus on any inconsistencies or suspicious behavior during the night. Let's stay vigilant and work together to identify any potential clues.",
+        "Alice: I'd like to echo Bob's sentiment about focusing on inconsistencies and suspicious behavior. Let's work together to ensure we don't miss any crucial details. However, I'm also concerned about Diana's s...",
+        "Diana: Let's focus on any inconsistencies or suspicious behavior. I believe we can work together to uncover any potential clues and bring Charlie's killer to justice. Alice's reaction to Charlie's death is c...",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm deeply saddened by Charlie's sudden demise. Let's focus on finding out who did this heinous act and bring the culprit to justice together.",
+        "You said: Alice, I'm glad we're on the same page about finding Charlie's killer. However, I'm concerned about your reaction to Charlie's death. Let's keep an open mind and consider all possibilities.",
+        "Bob: I'm shocked by Charlie's death. Let's try to gather any clues that could help us identify the killer. We should also be cautious about our actions and words during the day to avoid any unwanted suspic...",
+        "Bob: I'd like to suggest we focus on any inconsistencies or suspicious behavior during the night. Let's stay vigilant and work together to identify any potential clues.",
+        "Alice: I'd like to echo Bob's sentiment about focusing on inconsistencies and suspicious behavior. Let's work together to ensure we don't miss any crucial details. However, I'm also concerned about Diana's s...",
+        "You said: Let's focus on any inconsistencies or suspicious behavior. I believe we can work together to uncover any potential clues and bring Charlie's killer to justice. Alice's reaction to Charlie's death is c...",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

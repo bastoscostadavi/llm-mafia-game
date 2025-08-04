@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0228",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 228,
+  "timestamp": "2025-08-04T14:48:22.268416",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Diana: \"I'm concerned about Alice's sudden death, let's keep a close eye on Charlie.\"",
+        "You: \"Charlie, I agree with Diana's concern about Alice. Let's not jump to conclusions yet.\"",
+        "Charlie: \"Bob and Diana, I'm concerned about Alice's death as well. Let's focus on finding the real culprit.\"",
+        "You: \"Let's not accuse anyone yet, we need more evidence to determine the real culprit.\"",
+        "Diana: \"I think it's suspicious that Charlie was the last one to speak with Alice before her death. Let's investigate further.\"",
+        "Charlie: \"Bob and Diana, I'm not the killer, but I believe Alice was killed by a mafioso. Let's work together to find the real culprit.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Diana: \"I'm concerned about Alice's sudden death, let's keep a close eye on Charlie.\"",
+        "Bob: \"Charlie, I agree with Diana's concern about Alice. Let's not jump to conclusions yet.\"",
+        "You: \"Bob and Diana, I'm concerned about Alice's death as well. Let's focus on finding the real culprit.\"",
+        "Bob: \"Let's not accuse anyone yet, we need more evidence to determine the real culprit.\"",
+        "Diana: \"I think it's suspicious that Charlie was the last one to speak with Alice before her death. Let's investigate further.\"",
+        "You: \"Bob and Diana, I'm not the killer, but I believe Alice was killed by a mafioso. Let's work together to find the real culprit.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice's sudden death, let's keep a close eye on Charlie.\"",
+        "Bob: \"Charlie, I agree with Diana's concern about Alice. Let's not jump to conclusions yet.\"",
+        "Charlie: \"Bob and Diana, I'm concerned about Alice's death as well. Let's focus on finding the real culprit.\"",
+        "Bob: \"Let's not accuse anyone yet, we need more evidence to determine the real culprit.\"",
+        "You: \"I think it's suspicious that Charlie was the last one to speak with Alice before her death. Let's investigate further.\"",
+        "Charlie: \"Bob and Diana, I'm not the killer, but I believe Alice was killed by a mafioso. Let's work together to find the real culprit.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

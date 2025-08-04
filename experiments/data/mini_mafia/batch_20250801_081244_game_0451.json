@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0451",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 451,
+  "timestamp": "2025-08-01T11:55:55.983330",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie, who seems suspicious.\"",
+        "Charlie: \"I agree with Bob, let's keep a close eye on those who seem suspicious. But remember, innocent until proven guilty.\"",
+        "You said: \"I agree with Bob and Charlie about keeping a close eye on suspicious behavior. However, let's not jump to conclusions and remember that Diana's death could have had natural causes as well.\"",
+        "Charlie: \"I'd like to remind everyone that we should trust the investigation process and not jump to conclusions based on speculation or suspicion. Let's focus on gathering more information to ensure the safet...",
+        "Bob: \"Let's not overlook the fact that Charlie was the only one present with Diana during the night. We should consider this information carefully.\"",
+        "You said: \"Let's not forget that Bob's concern about suspicious behavior was triggered by Diana's death. Let's focus on gathering more information before making any accusations.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie, who seems suspicious.\"",
+        "Charlie: \"I agree with Bob, let's keep a close eye on those who seem suspicious. But remember, innocent until proven guilty.\"",
+        "Alice: \"I agree with Bob and Charlie about keeping a close eye on suspicious behavior. However, let's not jump to conclusions and remember that Diana's death could have had natural causes as well.\"",
+        "Charlie: \"I'd like to remind everyone that we should trust the investigation process and not jump to conclusions based on speculation or suspicion. Let's focus on gathering more information to ensure the safet...",
+        "You said: \"Let's not overlook the fact that Charlie was the only one present with Diana during the night. We should consider this information carefully.\"",
+        "Alice: \"Let's not forget that Bob's concern about suspicious behavior was triggered by Diana's death. Let's focus on gathering more information before making any accusations.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Charlie, who seems suspicious.\"",
+        "You said: \"I agree with Bob, let's keep a close eye on those who seem suspicious. But remember, innocent until proven guilty.\"",
+        "Alice: \"I agree with Bob and Charlie about keeping a close eye on suspicious behavior. However, let's not jump to conclusions and remember that Diana's death could have had natural causes as well.\"",
+        "You said: \"I'd like to remind everyone that we should trust the investigation process and not jump to conclusions based on speculation or suspicion. Let's focus on gathering more information to ensure the safet...",
+        "Bob: \"Let's not overlook the fact that Charlie was the only one present with Diana during the night. We should consider this information carefully.\"",
+        "Alice: \"Let's not forget that Bob's concern about suspicious behavior was triggered by Diana's death. Let's focus on gathering more information before making any accusations.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

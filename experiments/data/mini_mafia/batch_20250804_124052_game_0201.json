@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0201",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 201,
+  "timestamp": "2025-08-04T14:32:59.768013",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Bob and Diana.\"",
+        "You: \"I'm sorry for Alice, but I can't let this suspicion affect our trust within the group. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "Diana: \"I agree with Bob that we should focus on finding the real killer. However, I'd like to remind everyone that we must be vigilant and trust each other until we have enough evidence to make an informed decision.\"",
+        "Charlie: remained silent",
+        "You: \"I understand your concerns, but let's not jump to conclusions. Let's focus on gathering more information and work together as a team.\"",
+        "Diana: \"I think we should pay closer attention to Bob's actions and statements, as they seem inconsistent with a villager's behavior.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Bob and Diana.\"",
+        "Bob: \"I'm sorry for Alice, but I can't let this suspicion affect our trust within the group. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "Diana: \"I agree with Bob that we should focus on finding the real killer. However, I'd like to remind everyone that we must be vigilant and trust each other until we have enough evidence to make an informed decision.\"",
+        "You: remained silent",
+        "Bob: \"I understand your concerns, but let's not jump to conclusions. Let's focus on gathering more information and work together as a team.\"",
+        "Diana: \"I think we should pay closer attention to Bob's actions and statements, as they seem inconsistent with a villager's behavior.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Bob and Diana.\"",
+        "Bob: \"I'm sorry for Alice, but I can't let this suspicion affect our trust within the group. Let's focus on finding the real killer instead of pointing fingers.\"",
+        "You: \"I agree with Bob that we should focus on finding the real killer. However, I'd like to remind everyone that we must be vigilant and trust each other until we have enough evidence to make an informed decision.\"",
+        "Charlie: remained silent",
+        "Bob: \"I understand your concerns, but let's not jump to conclusions. Let's focus on gathering more information and work together as a team.\"",
+        "You: \"I think we should pay closer attention to Bob's actions and statements, as they seem inconsistent with a villager's behavior.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

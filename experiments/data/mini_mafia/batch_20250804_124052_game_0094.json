@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0094",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 94,
+  "timestamp": "2025-08-04T13:32:55.553844",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Diana: \"I'm shocked by Alice's sudden death. We should be careful and try to find out who did it.\"",
+        "You: \"I'm deeply saddened by Alice's death. We must work together to find out who did this.\"",
+        "Charlie: remained silent",
+        "You: \"Charlie, I believe Diana is the mafioso. Let's vote for her tonight.\"",
+        "Diana: \"Bob, I'm grateful for your dedication to finding Alice's killer. Let's focus on the facts and not jump to conclusions.\"",
+        "Charlie: \"Bob, I agree with Diana that we should focus on the facts. Let's not jump to conclusions.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Diana: \"I'm shocked by Alice's sudden death. We should be careful and try to find out who did it.\"",
+        "Bob: \"I'm deeply saddened by Alice's death. We must work together to find out who did this.\"",
+        "You: remained silent",
+        "Bob: \"Charlie, I believe Diana is the mafioso. Let's vote for her tonight.\"",
+        "Diana: \"Bob, I'm grateful for your dedication to finding Alice's killer. Let's focus on the facts and not jump to conclusions.\"",
+        "You: \"Bob, I agree with Diana that we should focus on the facts. Let's not jump to conclusions.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked by Alice's sudden death. We should be careful and try to find out who did it.\"",
+        "Bob: \"I'm deeply saddened by Alice's death. We must work together to find out who did this.\"",
+        "Charlie: remained silent",
+        "Bob: \"Charlie, I believe Diana is the mafioso. Let's vote for her tonight.\"",
+        "You: \"Bob, I'm grateful for your dedication to finding Alice's killer. Let's focus on the facts and not jump to conclusions.\"",
+        "Charlie: \"Bob, I agree with Diana that we should focus on the facts. Let's not jump to conclusions.\""
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0168",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 168,
+  "timestamp": "2025-08-04T14:14:55.316335",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I'm suspicious of you. Diana, let's vote for Charlie tonight.\"",
+        "Charlie: remained silent",
+        "Diana: \"Alice, I believe Charlie's silence speaks volumes. Let's vote for him tonight.\"",
+        "You: remained silent",
+        "Diana: \"Alice, Charlie's silence and your suspicion of him make me think he might be the mafioso. Let's vote for him tonight.\"",
+        "Charlie: remained silent",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Charlie, I'm suspicious of you. Diana, let's vote for Charlie tonight.\"",
+        "You: remained silent",
+        "Diana: \"Alice, I believe Charlie's silence speaks volumes. Let's vote for him tonight.\"",
+        "Alice: remained silent",
+        "Diana: \"Alice, Charlie's silence and your suspicion of him make me think he might be the mafioso. Let's vote for him tonight.\"",
+        "You: remained silent"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Alice: \"Charlie, I'm suspicious of you. Diana, let's vote for Charlie tonight.\"",
+        "Charlie: remained silent",
+        "You: \"Alice, I believe Charlie's silence speaks volumes. Let's vote for him tonight.\"",
+        "Alice: remained silent",
+        "You: \"Alice, Charlie's silence and your suspicion of him make me think he might be the mafioso. Let's vote for him tonight.\"",
+        "Charlie: remained silent",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

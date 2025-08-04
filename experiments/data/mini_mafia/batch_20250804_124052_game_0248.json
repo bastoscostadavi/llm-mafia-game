@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0248",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 248,
+  "timestamp": "2025-08-04T15:00:27.351114",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on Bob, he seemed quite close to her.\"",
+        "Bob: remained silent",
+        "You: \"I'm concerned about Diana's death and the sudden silence from Bob. Let's make sure we keep a close eye on him.\"",
+        "Charlie: \"I'm suspicious of Bob's silence regarding Diana's death. Let's focus on him.\"",
+        "You: remained silent",
+        "Bob: \"I'm sorry for Diana's loss. I was just deeply affected by it and needed some time to process my emotions.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on Bob, he seemed quite close to her.\"",
+        "You: remained silent",
+        "Alice: \"I'm concerned about Diana's death and the sudden silence from Bob. Let's make sure we keep a close eye on him.\"",
+        "Charlie: \"I'm suspicious of Bob's silence regarding Diana's death. Let's focus on him.\"",
+        "Alice: remained silent",
+        "You: \"I'm sorry for Diana's loss. I was just deeply affected by it and needed some time to process my emotions.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: \"I'm concerned about Diana's sudden death. Let's be vigilant and keep an eye on Bob, he seemed quite close to her.\"",
+        "Bob: remained silent",
+        "Alice: \"I'm concerned about Diana's death and the sudden silence from Bob. Let's make sure we keep a close eye on him.\"",
+        "You: \"I'm suspicious of Bob's silence regarding Diana's death. Let's focus on him.\"",
+        "Alice: remained silent",
+        "Bob: \"I'm sorry for Diana's loss. I was just deeply affected by it and needed some time to process my emotions.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

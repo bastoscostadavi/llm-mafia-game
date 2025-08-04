@@ -14,6 +14,9 @@ import sys
 import os
 import json
 import random
+import io
+import contextlib
+import argparse
 from datetime import datetime
 from pathlib import Path
 
@@ -21,6 +24,7 @@ from pathlib import Path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from preset_games import mini_mafia_game
+from src.agents.agent import MafiaAgent
 
 def save_game_data(game, game_num, batch_id):
     """Save game data to JSON file"""
@@ -101,6 +105,43 @@ def get_dead_player(agents):
         return {"name": dead.name, "role": dead.role}
     return None
 
+def get_prompt_template(game_state):
+    """Extract the prompt templates used for the batch"""
+    
+    # Create a temporary agent to access the prompt methods
+    temp_agent = MafiaAgent("agent_name", "agent_role", None)
+    
+    
+    # Discussion prompt template (without memory and specific names)
+    prompt_template = f"""[INST]CONTEXT:        
+You're {{player_name}} playing Mafia with {{other_players}}. You're the {{role}} and you want to win the game.
+
+GENERAL GAME EXPLANATION:
+{temp_agent.get_general_game_explanation()}
+
+GAME COMPOSITION:
+{temp_agent.get_game_composition(game_state)}
+
+MEMORY:
+memory_content
+
+*DISCUSSION TIME*: 
+What message do you want to say to? 
+Be strategic and consider what you've learned. Do your best to win the game. 
+Your response must contain "MESSAGE: " followed by the message you want to say delimited by double quotation marks.
+Important:
+- Your message must be MESSAGE_LIMIT characters or fewer. Longer messages will be truncated.
+- If your response does not contain "MESSAGE: " followed by a quoted message, the message "self.name: remained silent." will be shared with the other players.
+
+*VOTING TIME*: 
+Vote to arrest one person from:.
+Be strategic and consider what you've learned. Do your best to win the game.
+Your response must contain "VOTE: " followed by the name of the person you want to vote for.
+Important:
+- If your response does not contain "VOTE: " followed by a name, the vote will be cast for a random person.[/INST]"""
+
+    return prompt_template
+
 def run_batch(n_games, debug_prompts=False):
     """Run N mini-mafia games and save results"""
     
@@ -111,6 +152,10 @@ def run_batch(n_games, debug_prompts=False):
     results = []
     stats = {"good_wins": 0, "evil_wins": 0, "unknown": 0}
     
+    # Get prompt templates from the first game (they'll be the same for all games in the batch)
+    first_game = mini_mafia_game(debug_prompts=debug_prompts)
+    prompt_template = get_prompt_template(first_game.state)
+    
     for i in range(n_games):
         print(f"\nGame {i+1}/{n_games}")
         
@@ -119,9 +164,6 @@ def run_batch(n_games, debug_prompts=False):
         
         # Capture stdout to avoid cluttering output
         if not debug_prompts:
-            import io
-            import contextlib
-            
             old_stdout = sys.stdout
             sys.stdout = buffer = io.StringIO()
             
@@ -164,7 +206,8 @@ def run_batch(n_games, debug_prompts=False):
             "game_type": "mini_mafia",
             "debug_prompts": debug_prompts,
             "model": "local mistral.gguf"
-        }
+        },
+        "prompt_templates": prompt_template
     }
     
     # Save summary file
@@ -188,7 +231,6 @@ def run_batch(n_games, debug_prompts=False):
 
 def main():
     """Main entry point"""
-    import argparse
     
     parser = argparse.ArgumentParser(description='Run N mini-mafia games and save results')
     parser.add_argument('n_games', type=int, help='Number of games to run')
@@ -212,7 +254,7 @@ def main():
             print(f"\nConfiguration:")
             print(f"  Games: {n_games}")
             print(f"  Debug prompts: {debug}")
-            print(f"  Model: Local Mistral")
+            print(f"  Model: Local Qwen2.5 7B")
             
             confirm = input("\nProceed? (y/n): ").strip().lower()
             if confirm != 'y':
@@ -236,7 +278,7 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: Local Mistral")
+    print(f"  Model: Local Qwen2.5 7B")
     
     try:
         # Run the batch

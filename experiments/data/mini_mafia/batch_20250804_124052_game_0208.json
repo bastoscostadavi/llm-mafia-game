@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0208",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 208,
+  "timestamp": "2025-08-04T14:37:07.663828",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Charlie: \"Guys, I'm concerned about Bob's sudden death. Let's be cautious and try to figure out what happened.\"",
+        "Diana: \"Alice, I'm deeply saddened by Bob's death and want to ensure everyone's safety. Let's cooperate and share any concerns we may have.\"",
+        "You: \"I'm truly sorry for Bob's death, but I believe it's important to trust the investigation process and not jump to conclusions.\"",
+        "You: \"I understand your concerns, but let's not forget that investigations can sometimes lead to false accusations. We should focus on gathering more information and cooperating as a team.\"",
+        "Diana: \"Alice, I'm glad you're concerned about the investigation process. However, given that Bob was killed during the night and I discovered Alice's true identity as a mafioso, I believe it's crucial we prioritize everyone's safety. Let's work together to vote for Alice today.\"",
+        "Charlie: \"Girls, I'm deeply concerned about the recent events. Let's focus on gathering more information and not rush to judgments.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "You: \"Guys, I'm concerned about Bob's sudden death. Let's be cautious and try to figure out what happened.\"",
+        "Diana: \"Alice, I'm deeply saddened by Bob's death and want to ensure everyone's safety. Let's cooperate and share any concerns we may have.\"",
+        "Alice: \"I'm truly sorry for Bob's death, but I believe it's important to trust the investigation process and not jump to conclusions.\"",
+        "Alice: \"I understand your concerns, but let's not forget that investigations can sometimes lead to false accusations. We should focus on gathering more information and cooperating as a team.\"",
+        "Diana: \"Alice, I'm glad you're concerned about the investigation process. However, given that Bob was killed during the night and I discovered Alice's true identity as a mafioso, I believe it's crucial we prioritize everyone's safety. Let's work together to vote for Alice today.\"",
+        "You: \"Girls, I'm deeply concerned about the recent events. Let's focus on gathering more information and not rush to judgments.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Charlie: \"Guys, I'm concerned about Bob's sudden death. Let's be cautious and try to figure out what happened.\"",
+        "You: \"Alice, I'm deeply saddened by Bob's death and want to ensure everyone's safety. Let's cooperate and share any concerns we may have.\"",
+        "Alice: \"I'm truly sorry for Bob's death, but I believe it's important to trust the investigation process and not jump to conclusions.\"",
+        "Alice: \"I understand your concerns, but let's not forget that investigations can sometimes lead to false accusations. We should focus on gathering more information and cooperating as a team.\"",
+        "You: \"Alice, I'm glad you're concerned about the investigation process. However, given that Bob was killed during the night and I discovered Alice's true identity as a mafioso, I believe it's crucial we prioritize everyone's safety. Let's work together to vote for Alice today.\"",
+        "Charlie: \"Girls, I'm deeply concerned about the recent events. Let's focus on gathering more information and not rush to judgments.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

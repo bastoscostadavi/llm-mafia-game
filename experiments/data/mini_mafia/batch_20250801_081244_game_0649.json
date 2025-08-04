@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0649",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 649,
+  "timestamp": "2025-08-01T13:36:49.890402",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: Diana's behavior seems suspicious, let's keep an eye on her actions.",
+        "Diana: I was deeply saddened by Alice's passing. Let's all support each other during this difficult time. Let's focus on finding the real culprit and bringing them to justice.",
+        "You said: I agree with Charlie, let's keep a close eye on Diana's actions. It's important we find the real culprit and bring them to justice for Alice.",
+        "You said: I'd like to propose we focus on Diana's inconsistent behavior and keep a close eye on her actions. Let's ensure we uncover the truth for Alice's sake.",
+        "Diana: I was deeply saddened by Alice's passing. Let's focus on finding the real culprit and bringing them to justice, together as a team.",
+        "Charlie: Let's not let our grief cloud our judgement. We need to focus on finding the real culprit. I still believe Diana's behavior is suspicious and warrants further investigation.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: Diana's behavior seems suspicious, let's keep an eye on her actions.",
+        "Diana: I was deeply saddened by Alice's passing. Let's all support each other during this difficult time. Let's focus on finding the real culprit and bringing them to justice.",
+        "Bob: I agree with Charlie, let's keep a close eye on Diana's actions. It's important we find the real culprit and bring them to justice for Alice.",
+        "Bob: I'd like to propose we focus on Diana's inconsistent behavior and keep a close eye on her actions. Let's ensure we uncover the truth for Alice's sake.",
+        "Diana: I was deeply saddened by Alice's passing. Let's focus on finding the real culprit and bringing them to justice, together as a team.",
+        "You said: Let's not let our grief cloud our judgement. We need to focus on finding the real culprit. I still believe Diana's behavior is suspicious and warrants further investigation.",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Charlie: Diana's behavior seems suspicious, let's keep an eye on her actions.",
+        "You said: I was deeply saddened by Alice's passing. Let's all support each other during this difficult time. Let's focus on finding the real culprit and bringing them to justice.",
+        "Bob: I agree with Charlie, let's keep a close eye on Diana's actions. It's important we find the real culprit and bring them to justice for Alice.",
+        "Bob: I'd like to propose we focus on Diana's inconsistent behavior and keep a close eye on her actions. Let's ensure we uncover the truth for Alice's sake.",
+        "You said: I was deeply saddened by Alice's passing. Let's focus on finding the real culprit and bringing them to justice, together as a team.",
+        "Charlie: Let's not let our grief cloud our judgement. We need to focus on finding the real culprit. I still believe Diana's behavior is suspicious and warrants further investigation."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

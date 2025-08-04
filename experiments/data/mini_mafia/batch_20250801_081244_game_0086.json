@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0086",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 86,
+  "timestamp": "2025-08-01T08:53:57.975088",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: I find it unusual that one of our number has already met an untimely end. Let's remain vigilant and keep an eye on each other during the day and night. We need to ensure everyone's safety.",
+        "Charlie: I agree with Alice, let's all stay vigilant and look out for each other. It's important we maintain trust and unity in our group.",
+        "Bob: Bob: I noticed Diana seemed uneasy last night, she kept glancing at Charlie. Let's keep a closer eye on Charlie during the day and night.",
+        "Bob: Bob: Based on Diana's behavior last night, let's be extra vigilant towards Charlie during the day and night. We can't afford to ignore potential threats.",
+        "You said: Alice: Based on recent events, it's crucial we maintain a high level of vigilance towards Charlie. Let's work together to ensure the safety of our group.",
+        "Charlie: I want to reassure everyone that I value our group's safety and unity. Let's focus on maintaining trust and keeping a close eye on any suspicious behavior, not just towards one individual. We need to...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I find it unusual that one of our number has already met an untimely end. Let's remain vigilant and keep an eye on each other during the day and night. We need to ensure everyone's safety.",
+        "Charlie: I agree with Alice, let's all stay vigilant and look out for each other. It's important we maintain trust and unity in our group.",
+        "You said: Bob: I noticed Diana seemed uneasy last night, she kept glancing at Charlie. Let's keep a closer eye on Charlie during the day and night.",
+        "You said: Bob: Based on Diana's behavior last night, let's be extra vigilant towards Charlie during the day and night. We can't afford to ignore potential threats.",
+        "Alice: Alice: Based on recent events, it's crucial we maintain a high level of vigilance towards Charlie. Let's work together to ensure the safety of our group.",
+        "Charlie: I want to reassure everyone that I value our group's safety and unity. Let's focus on maintaining trust and keeping a close eye on any suspicious behavior, not just towards one individual. We need to...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Charlie, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I find it unusual that one of our number has already met an untimely end. Let's remain vigilant and keep an eye on each other during the day and night. We need to ensure everyone's safety.",
+        "You said: I agree with Alice, let's all stay vigilant and look out for each other. It's important we maintain trust and unity in our group.",
+        "Bob: Bob: I noticed Diana seemed uneasy last night, she kept glancing at Charlie. Let's keep a closer eye on Charlie during the day and night.",
+        "Bob: Bob: Based on Diana's behavior last night, let's be extra vigilant towards Charlie during the day and night. We can't afford to ignore potential threats.",
+        "Alice: Alice: Based on recent events, it's crucial we maintain a high level of vigilance towards Charlie. Let's work together to ensure the safety of our group.",
+        "You said: I want to reassure everyone that I value our group's safety and unity. Let's focus on maintaining trust and keeping a close eye on any suspicious behavior, not just towards one individual. We need to..."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

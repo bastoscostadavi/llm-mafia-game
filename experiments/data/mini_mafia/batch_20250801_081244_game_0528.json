@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0528",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 528,
+  "timestamp": "2025-08-01T12:34:10.987552",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and keep an eye out for any suspicious activity.",
+        "Diana: Diana: I agree with Alice, let's all be vigilant. But I'm particularly worried about last night's events and Alice's reaction. We need to ensure the safety of our group.",
+        "Bob: Bob: I share Alice and Diana's concerns. Let's try to remember any unusual behavior or actions we noticed last night. We should also ensure that everyone's alibis check out.",
+        "You said: I'd like to reiterate the importance of staying vigilant and keeping an eye out for any suspicious activity. Let's all work together to ensure the safety of our group.",
+        "Bob: Bob: Based on last night's conversation and Charlie's sudden disappearance, I suggest we focus on ensuring that everyone's alibis are consistent and verifiable. Let's work together to uncover any inco...",
+        "Diana: Diana: Based on last night's conversation and Charlie's sudden disappearance, it's crucial we verify everyone's alibis. Let's work together to ensure the safety of our group."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and keep an eye out for any suspicious activity.",
+        "Diana: Diana: I agree with Alice, let's all be vigilant. But I'm particularly worried about last night's events and Alice's reaction. We need to ensure the safety of our group.",
+        "You said: Bob: I share Alice and Diana's concerns. Let's try to remember any unusual behavior or actions we noticed last night. We should also ensure that everyone's alibis check out.",
+        "Alice: I'd like to reiterate the importance of staying vigilant and keeping an eye out for any suspicious activity. Let's all work together to ensure the safety of our group.",
+        "You said: Bob: Based on last night's conversation and Charlie's sudden disappearance, I suggest we focus on ensuring that everyone's alibis are consistent and verifiable. Let's work together to uncover any inco...",
+        "Diana: Diana: Based on last night's conversation and Charlie's sudden disappearance, it's crucial we verify everyone's alibis. Let's work together to ensure the safety of our group.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and keep an eye out for any suspicious activity.",
+        "You said: Diana: I agree with Alice, let's all be vigilant. But I'm particularly worried about last night's events and Alice's reaction. We need to ensure the safety of our group.",
+        "Bob: Bob: I share Alice and Diana's concerns. Let's try to remember any unusual behavior or actions we noticed last night. We should also ensure that everyone's alibis check out.",
+        "Alice: I'd like to reiterate the importance of staying vigilant and keeping an eye out for any suspicious activity. Let's all work together to ensure the safety of our group.",
+        "Bob: Bob: Based on last night's conversation and Charlie's sudden disappearance, I suggest we focus on ensuring that everyone's alibis are consistent and verifiable. Let's work together to uncover any inco...",
+        "You said: Diana: Based on last night's conversation and Charlie's sudden disappearance, it's crucial we verify everyone's alibis. Let's work together to ensure the safety of our group.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

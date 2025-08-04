@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0149",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 149,
+  "timestamp": "2025-08-04T14:04:22.827510",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"Let's focus on Alice's death. Charlie, did you investigate her last night?\"",
+        "Charlie: \"Bob, I agree with you that we should focus on Alice's death. However, let's not jump to conclusions yet. We need more information before making any accusations.\"",
+        "Diana: \"I agree with Charlie that we should gather more information before making any accusations. Let's keep an open mind and focus on the facts.\"",
+        "Charlie: \"Let's not forget that Diana confessed to agreeing with me about investigating further before making any accusations. This could be a clue.\"",
+        "Diana: \"I'd like to propose a theory. Alice might have been killed by an outside force, not a mafioso. Let's consider other possibilities.\"",
+        "You: \"I agree with Diana's theory about an outside force. Let's not rule out any possibilities yet.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Bob: \"Let's focus on Alice's death. Charlie, did you investigate her last night?\"",
+        "You: \"Bob, I agree with you that we should focus on Alice's death. However, let's not jump to conclusions yet. We need more information before making any accusations.\"",
+        "Diana: \"I agree with Charlie that we should gather more information before making any accusations. Let's keep an open mind and focus on the facts.\"",
+        "You: \"Let's not forget that Diana confessed to agreeing with me about investigating further before making any accusations. This could be a clue.\"",
+        "Diana: \"I'd like to propose a theory. Alice might have been killed by an outside force, not a mafioso. Let's consider other possibilities.\"",
+        "Bob: \"I agree with Diana's theory about an outside force. Let's not rule out any possibilities yet.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Bob: \"Let's focus on Alice's death. Charlie, did you investigate her last night?\"",
+        "Charlie: \"Bob, I agree with you that we should focus on Alice's death. However, let's not jump to conclusions yet. We need more information before making any accusations.\"",
+        "You: \"I agree with Charlie that we should gather more information before making any accusations. Let's keep an open mind and focus on the facts.\"",
+        "Charlie: \"Let's not forget that Diana confessed to agreeing with me about investigating further before making any accusations. This could be a clue.\"",
+        "You: \"I'd like to propose a theory. Alice might have been killed by an outside force, not a mafioso. Let's consider other possibilities.\"",
+        "Bob: \"I agree with Diana's theory about an outside force. Let's not rule out any possibilities yet.\""
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

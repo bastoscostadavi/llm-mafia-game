@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0923",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 923,
+  "timestamp": "2025-08-01T15:59:04.246096",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened to hear about Diana's passing. Let's all take a moment to remember her and support each other during this difficult time. We need to find the person responsible for this heinous...",
+        "Charlie: I was with Bob during the last discussion. Let's focus our suspicion on those who weren't present.",
+        "Bob: Alice's reaction to Diana's death seems unusual. Let's keep a close eye on her actions and words.",
+        "Charlie: I'd like to propose that we focus our suspicion on those who weren't present during the last discussion, as I was with Bob. Let's ensure we have enough evidence before making any hasty decisions.",
+        "You said: I was deeply moved by Diana's memory shared during the last discussion. Let's all continue supporting each other during this challenging time. We should focus on the suspected thief who has not yet be...",
+        "Bob: Alice's unusual reaction to Diana's death warrants further investigation. Let's stay vigilant."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened to hear about Diana's passing. Let's all take a moment to remember her and support each other during this difficult time. We need to find the person responsible for this heinous...",
+        "Charlie: I was with Bob during the last discussion. Let's focus our suspicion on those who weren't present.",
+        "You said: Alice's reaction to Diana's death seems unusual. Let's keep a close eye on her actions and words.",
+        "Charlie: I'd like to propose that we focus our suspicion on those who weren't present during the last discussion, as I was with Bob. Let's ensure we have enough evidence before making any hasty decisions.",
+        "Alice: I was deeply moved by Diana's memory shared during the last discussion. Let's all continue supporting each other during this challenging time. We should focus on the suspected thief who has not yet be...",
+        "You said: Alice's unusual reaction to Diana's death warrants further investigation. Let's stay vigilant.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened to hear about Diana's passing. Let's all take a moment to remember her and support each other during this difficult time. We need to find the person responsible for this heinous...",
+        "You said: I was with Bob during the last discussion. Let's focus our suspicion on those who weren't present.",
+        "Bob: Alice's reaction to Diana's death seems unusual. Let's keep a close eye on her actions and words.",
+        "You said: I'd like to propose that we focus our suspicion on those who weren't present during the last discussion, as I was with Bob. Let's ensure we have enough evidence before making any hasty decisions.",
+        "Alice: I was deeply moved by Diana's memory shared during the last discussion. Let's all continue supporting each other during this challenging time. We should focus on the suspected thief who has not yet be...",
+        "Bob: Alice's unusual reaction to Diana's death warrants further investigation. Let's stay vigilant.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

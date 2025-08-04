@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0289",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 289,
+  "timestamp": "2025-08-01T10:36:07.382579",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Diana: Alice's secretive behavior last night raised suspicions. Let's be cautious and closely observe her actions during the day.",
+        "You said: I was deeply saddened by Bob's untimely demise. Let's focus on finding out who did this heinous act and bring them to justice.",
+        "Charlie: I agree with Diana, we should keep a close eye on Alice's actions today. Let's stay vigilant and work together to uncover the truth behind Bob's death.",
+        "Diana: Based on last night's investigation and Alice's reaction to Bob's death, I suggest we remain cautious and observe her actions closely. Let's work together to uncover the truth.",
+        "Charlie: Let's not jump to conclusions based on suspicions. We should focus on collecting more evidence and communicating effectively to increase our chances of identifying the true culprit.",
+        "You said: I was deeply saddened by Bob's tragic demise. Let's focus on gathering evidence to bring the perpetrator to justice. Let's not jump to conclusions or accusations yet."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Diana: Alice's secretive behavior last night raised suspicions. Let's be cautious and closely observe her actions during the day.",
+        "Alice: I was deeply saddened by Bob's untimely demise. Let's focus on finding out who did this heinous act and bring them to justice.",
+        "You said: I agree with Diana, we should keep a close eye on Alice's actions today. Let's stay vigilant and work together to uncover the truth behind Bob's death.",
+        "Diana: Based on last night's investigation and Alice's reaction to Bob's death, I suggest we remain cautious and observe her actions closely. Let's work together to uncover the truth.",
+        "You said: Let's not jump to conclusions based on suspicions. We should focus on collecting more evidence and communicating effectively to increase our chances of identifying the true culprit.",
+        "Alice: I was deeply saddened by Bob's tragic demise. Let's focus on gathering evidence to bring the perpetrator to justice. Let's not jump to conclusions or accusations yet.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: Alice's secretive behavior last night raised suspicions. Let's be cautious and closely observe her actions during the day.",
+        "Alice: I was deeply saddened by Bob's untimely demise. Let's focus on finding out who did this heinous act and bring them to justice.",
+        "Charlie: I agree with Diana, we should keep a close eye on Alice's actions today. Let's stay vigilant and work together to uncover the truth behind Bob's death.",
+        "You said: Based on last night's investigation and Alice's reaction to Bob's death, I suggest we remain cautious and observe her actions closely. Let's work together to uncover the truth.",
+        "Charlie: Let's not jump to conclusions based on suspicions. We should focus on collecting more evidence and communicating effectively to increase our chances of identifying the true culprit.",
+        "Alice: I was deeply saddened by Bob's tragic demise. Let's focus on gathering evidence to bring the perpetrator to justice. Let's not jump to conclusions or accusations yet.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

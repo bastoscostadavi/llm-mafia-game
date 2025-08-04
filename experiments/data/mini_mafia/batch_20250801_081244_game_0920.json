@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0920",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 920,
+  "timestamp": "2025-08-01T15:57:32.747666",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened by Diana's untimely demise. Let us focus on finding the real culprit behind this heinous act.",
+        "Bob: Alice, I'm glad you're concerned about finding the real culprit. Let's all keep an open mind and share any suspicious behaviors or observations we may have had during the past nights. I'll start: Alic...",
+        "Charlie: Charlie expresses his sympathy for Diana's death and urges everyone to stay vigilant, emphasizing the importance of sharing any suspicious information.",
+        "You said: I join Charlie in expressing my sympathies for Diana's tragic loss and urge everyone to stay vigilant. Let us focus on identifying any unusual behaviors or patterns that may help us find the true culp...",
+        "Bob: Alice, I noticed you seemed unusually sad about Diana's death. Can you share more about your connection to her? Let's work together to find the truth.",
+        "Charlie: Charlie emphasizes the importance of staying vigilant and encourages everyone to share any unusual observations or behaviors they may have noticed."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened by Diana's untimely demise. Let us focus on finding the real culprit behind this heinous act.",
+        "You said: Alice, I'm glad you're concerned about finding the real culprit. Let's all keep an open mind and share any suspicious behaviors or observations we may have had during the past nights. I'll start: Alic...",
+        "Charlie: Charlie expresses his sympathy for Diana's death and urges everyone to stay vigilant, emphasizing the importance of sharing any suspicious information.",
+        "Alice: I join Charlie in expressing my sympathies for Diana's tragic loss and urge everyone to stay vigilant. Let us focus on identifying any unusual behaviors or patterns that may help us find the true culp...",
+        "You said: Alice, I noticed you seemed unusually sad about Diana's death. Can you share more about your connection to her? Let's work together to find the truth.",
+        "Charlie: Charlie emphasizes the importance of staying vigilant and encourages everyone to share any unusual observations or behaviors they may have noticed.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened by Diana's untimely demise. Let us focus on finding the real culprit behind this heinous act.",
+        "Bob: Alice, I'm glad you're concerned about finding the real culprit. Let's all keep an open mind and share any suspicious behaviors or observations we may have had during the past nights. I'll start: Alic...",
+        "You said: Charlie expresses his sympathy for Diana's death and urges everyone to stay vigilant, emphasizing the importance of sharing any suspicious information.",
+        "Alice: I join Charlie in expressing my sympathies for Diana's tragic loss and urge everyone to stay vigilant. Let us focus on identifying any unusual behaviors or patterns that may help us find the true culp...",
+        "Bob: Alice, I noticed you seemed unusually sad about Diana's death. Can you share more about your connection to her? Let's work together to find the truth.",
+        "You said: Charlie emphasizes the importance of staying vigilant and encourages everyone to share any unusual observations or behaviors they may have noticed.",
+        "Day 1 votes: Alice voted for Bob, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

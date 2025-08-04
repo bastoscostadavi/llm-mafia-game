@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0738",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 738,
+  "timestamp": "2025-08-01T14:24:50.233047",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Diana: \"I'm concerned about Charlie's unusual behavior last night. Let's keep a close eye on him.\"",
+        "Charlie: \"I had a bad dream last night, let's focus on finding the real culprit instead of pointing fingers.\"",
+        "You said: I agree with Charlie, let's focus on finding the real culprit and not jump to conclusions based on suspicions.",
+        "You said: I support Charlie's suggestion to focus on finding the real culprit. Let's not let our suspicions cloud our judgment.",
+        "Diana: I'd like to remind everyone that we've lost a villager already. Let's be vigilant and pay close attention to each other's actions and statements. I still have concerns about Charlie's behavior last ni...",
+        "Charlie: \"I understand Diana's concerns, but let's not jump to conclusions. Let's focus on finding clues and working together as a team. We need to stay calm and avoid panicking.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Diana: \"I'm concerned about Charlie's unusual behavior last night. Let's keep a close eye on him.\"",
+        "You said: \"I had a bad dream last night, let's focus on finding the real culprit instead of pointing fingers.\"",
+        "Alice: I agree with Charlie, let's focus on finding the real culprit and not jump to conclusions based on suspicions.",
+        "Alice: I support Charlie's suggestion to focus on finding the real culprit. Let's not let our suspicions cloud our judgment.",
+        "Diana: I'd like to remind everyone that we've lost a villager already. Let's be vigilant and pay close attention to each other's actions and statements. I still have concerns about Charlie's behavior last ni...",
+        "You said: \"I understand Diana's concerns, but let's not jump to conclusions. Let's focus on finding clues and working together as a team. We need to stay calm and avoid panicking.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: \"I'm concerned about Charlie's unusual behavior last night. Let's keep a close eye on him.\"",
+        "Charlie: \"I had a bad dream last night, let's focus on finding the real culprit instead of pointing fingers.\"",
+        "Alice: I agree with Charlie, let's focus on finding the real culprit and not jump to conclusions based on suspicions.",
+        "Alice: I support Charlie's suggestion to focus on finding the real culprit. Let's not let our suspicions cloud our judgment.",
+        "You said: I'd like to remind everyone that we've lost a villager already. Let's be vigilant and pay close attention to each other's actions and statements. I still have concerns about Charlie's behavior last ni...",
+        "Charlie: \"I understand Diana's concerns, but let's not jump to conclusions. Let's focus on finding clues and working together as a team. We need to stay calm and avoid panicking.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

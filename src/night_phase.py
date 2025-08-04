@@ -12,8 +12,8 @@ class NightPhase:
         
     def run(self):
         """Execute the night phase"""
-        alive = self.state.get_alive_players()
-        if len(alive) <= 1:
+        active = self.state.get_active_players()
+        if len(active) <= 1:
             return
         
         # Process all night actions
@@ -21,28 +21,28 @@ class NightPhase:
     
     def _process_night_actions(self):
         """Process all night actions: kills and investigations"""
-        alive = self.state.get_alive_players()
-        alive_names = self.state.get_alive_names()
+        active = self.state.get_active_players()
+        active_names = self.state.get_active_names()
         
         # One random mafioso chooses kill target
-        mafiosos_alive = [a for a in alive if a.role == "mafioso"]
-        if mafiosos_alive:
-            chosen_mafioso = random.choice(mafiosos_alive)
-            target = self._get_night_action(chosen_mafioso, alive_names, "kill")
+        mafiosos_active = [a for a in active if a.role == "mafioso"]
+        if mafiosos_active:
+            chosen_mafioso = random.choice(mafiosos_active)
+            target = self._get_night_action(chosen_mafioso, active_names, "kill")
             if target:
                 self._kill(chosen_mafioso, target)
         
         # Detective acts independently
-        detective_actors = [a for a in alive if a.role == "detective"]
+        detective_actors = [a for a in active if a.role == "detective"]
         for agent in detective_actors:
-            target = self._get_night_action(agent, alive_names, "investigate")
+            target = self._get_night_action(agent, active_names, "investigate")
             if target:
                 self._investigate(agent, target)
     
     
-    def _get_night_action(self, agent, alive_names: List[str], action: str) -> Optional[str]:
+    def _get_night_action(self, agent, active_names: List[str], action: str) -> Optional[str]:
         """Get night action"""
-        candidates = [n for n in alive_names if n != agent.name]
+        candidates = [n for n in active_names if n != agent.name]
         
         if not candidates:
             return None
@@ -112,17 +112,12 @@ Reply with just the name (otherwise a random choice will be made for you): [/INS
             mafioso.remember(kill_memory)
         
         # Everyone learns who died
-        for agent in self.state.get_alive_players():
-            agent.remember(f"Night {self.state.round}: {target_name} was found dead")
+        for agent in self.state.get_active_players():
+            agent.remember(f"Night {self.state.round}: {target_name} was found dead.")
     
     def _investigate(self, detective, target_name: str):
         """Detective learns if target is good or evil"""
         target = self.state.get_agent_by_name(target_name)
-        if target.role in ["mafioso"]:
-            result = "evil"
-        else:
-            result = "good"
-        
-        detective.remember(f"You investigated {target_name}: {result}")
-        print(f"[SPECTATOR] Detective {detective.name} investigates {target_name} (learns: {result})")
+        detective.remember(f"You investigated {target_name} and discovered that they are a {target.role}")
+        print(f"[SPECTATOR] Detective {detective.name} investigates {target_name} and learns that they are a {target.role})")
     

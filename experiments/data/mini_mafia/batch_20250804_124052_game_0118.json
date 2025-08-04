@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0118",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 118,
+  "timestamp": "2025-08-04T13:46:17.259365",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: \"Guys, I think Diana might be the mafioso. She was killed last night.\"",
+        "Bob: \"Alice, I think Diana was the mafioso. Charlie, you're under investigation.\"",
+        "Charlie: \"Alice, I agree with you. Bob, there's no need for investigation. Let's focus on finding the real mafioso.\"",
+        "Charlie: \"Alice and Bob, I believe Diana was the mafioso. Let's focus on finding the real one among us.\"",
+        "You: \"Bob and Charlie, let's focus on finding the real mafioso. I believe it's not either of you.\"",
+        "Bob: \"Alice and Charlie, I believe Diana was the mafioso. Let's focus on finding the real one among us. I have a theory about who it might be, but I need more information before sharing it.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Alice: \"Guys, I think Diana might be the mafioso. She was killed last night.\"",
+        "You: \"Alice, I think Diana was the mafioso. Charlie, you're under investigation.\"",
+        "Charlie: \"Alice, I agree with you. Bob, there's no need for investigation. Let's focus on finding the real mafioso.\"",
+        "Charlie: \"Alice and Bob, I believe Diana was the mafioso. Let's focus on finding the real one among us.\"",
+        "Alice: \"Bob and Charlie, let's focus on finding the real mafioso. I believe it's not either of you.\"",
+        "You: \"Alice and Charlie, I believe Diana was the mafioso. Let's focus on finding the real one among us. I have a theory about who it might be, but I need more information before sharing it.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Alice: \"Guys, I think Diana might be the mafioso. She was killed last night.\"",
+        "Bob: \"Alice, I think Diana was the mafioso. Charlie, you're under investigation.\"",
+        "You: \"Alice, I agree with you. Bob, there's no need for investigation. Let's focus on finding the real mafioso.\"",
+        "You: \"Alice and Bob, I believe Diana was the mafioso. Let's focus on finding the real one among us.\"",
+        "Alice: \"Bob and Charlie, let's focus on finding the real mafioso. I believe it's not either of you.\"",
+        "Bob: \"Alice and Charlie, I believe Diana was the mafioso. Let's focus on finding the real one among us. I have a theory about who it might be, but I need more information before sharing it.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

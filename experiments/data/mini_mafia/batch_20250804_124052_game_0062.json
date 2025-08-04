@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0062",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 62,
+  "timestamp": "2025-08-04T13:15:11.567109",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "You: \"I'm concerned about Charlie's sudden death. Let's keep a close eye on Bob and Diana tonight.\"",
+        "Diana: remained silent",
+        "Bob: \"Alice, I agree with your concern about Charlie's death. However, it's important not to jump to conclusions. Diana, do you have any information that could help us understand what happened?\"",
+        "Diana: \"I'm sorry for Charlie's death. I believe it was an unfortunate accident.\"",
+        "Bob: \"Alice, Diana, I'm glad we're taking Charlie's death seriously. However, let's not make hasty assumptions. It's important to remember that investigations and votes are our tools for finding the truth.\"",
+        "You: \"Bob and Diana, I've noticed that Charlie was killed during the night. It's crucial we find out who did it before another player is targeted. Let's focus our investigation on Bob and Diana tonight.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Alice: \"I'm concerned about Charlie's sudden death. Let's keep a close eye on Bob and Diana tonight.\"",
+        "Diana: remained silent",
+        "You: \"Alice, I agree with your concern about Charlie's death. However, it's important not to jump to conclusions. Diana, do you have any information that could help us understand what happened?\"",
+        "Diana: \"I'm sorry for Charlie's death. I believe it was an unfortunate accident.\"",
+        "You: \"Alice, Diana, I'm glad we're taking Charlie's death seriously. However, let's not make hasty assumptions. It's important to remember that investigations and votes are our tools for finding the truth.\"",
+        "Alice: \"Bob and Diana, I've noticed that Charlie was killed during the night. It's crucial we find out who did it before another player is targeted. Let's focus our investigation on Bob and Diana tonight.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Alice: \"I'm concerned about Charlie's sudden death. Let's keep a close eye on Bob and Diana tonight.\"",
+        "You: remained silent",
+        "Bob: \"Alice, I agree with your concern about Charlie's death. However, it's important not to jump to conclusions. Diana, do you have any information that could help us understand what happened?\"",
+        "You: \"I'm sorry for Charlie's death. I believe it was an unfortunate accident.\"",
+        "Bob: \"Alice, Diana, I'm glad we're taking Charlie's death seriously. However, let's not make hasty assumptions. It's important to remember that investigations and votes are our tools for finding the truth.\"",
+        "Alice: \"Bob and Diana, I've noticed that Charlie was killed during the night. It's crucial we find out who did it before another player is targeted. Let's focus our investigation on Bob and Diana tonight.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

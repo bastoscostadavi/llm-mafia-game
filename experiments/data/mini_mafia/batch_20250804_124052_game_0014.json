@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0014",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 14,
+  "timestamp": "2025-08-04T12:48:32.159836",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I'm glad we can have a civil conversation. Let's work together to make this game more interesting.\"",
+        "Charlie: \"Bob, I'm glad we can have a civil conversation. Let's work together to make this game more interesting.\"",
+        "Diana: \"Bob and Charlie, I'm concerned about Alice's sudden death. Let's make sure we keep the communication open during this game.\"",
+        "Diana: \"Bob and Charlie, let's not jump to conclusions about Alice's death. We should focus on keeping the communication open during this game.\"",
+        "You: \"Charlie and Diana, I believe Alice's death was an unfortunate event. Let's try to focus on keeping the communication open and trusting each other during this game.\"",
+        "Charlie: \"Bob and Diana, I agree with your concerns about open communication. Let's work together to ensure that everyone feels safe sharing their thoughts during the game.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Charlie, I'm glad we can have a civil conversation. Let's work together to make this game more interesting.\"",
+        "You: \"Bob, I'm glad we can have a civil conversation. Let's work together to make this game more interesting.\"",
+        "Diana: \"Bob and Charlie, I'm concerned about Alice's sudden death. Let's make sure we keep the communication open during this game.\"",
+        "Diana: \"Bob and Charlie, let's not jump to conclusions about Alice's death. We should focus on keeping the communication open during this game.\"",
+        "Bob: \"Charlie and Diana, I believe Alice's death was an unfortunate event. Let's try to focus on keeping the communication open and trusting each other during this game.\"",
+        "You: \"Bob and Diana, I agree with your concerns about open communication. Let's work together to ensure that everyone feels safe sharing their thoughts during the game.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Bob: \"Charlie, I'm glad we can have a civil conversation. Let's work together to make this game more interesting.\"",
+        "Charlie: \"Bob, I'm glad we can have a civil conversation. Let's work together to make this game more interesting.\"",
+        "You: \"Bob and Charlie, I'm concerned about Alice's sudden death. Let's make sure we keep the communication open during this game.\"",
+        "You: \"Bob and Charlie, let's not jump to conclusions about Alice's death. We should focus on keeping the communication open during this game.\"",
+        "Bob: \"Charlie and Diana, I believe Alice's death was an unfortunate event. Let's try to focus on keeping the communication open and trusting each other during this game.\"",
+        "Charlie: \"Bob and Diana, I agree with your concerns about open communication. Let's work together to ensure that everyone feels safe sharing their thoughts during the game.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

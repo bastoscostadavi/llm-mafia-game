@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0555",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 555,
+  "timestamp": "2025-08-01T12:48:26.013896",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm deeply saddened by Alice's untimely demise. Let's focus on finding out who did this heinous act and bring them to justice.",
+        "Diana: I'm shocked by Alice's passing. Let's keep an open mind and thoroughly discuss any suspicious behavior or inconsistencies during the daytime conversations. We must work together to ensure justice is s...",
+        "Charlie: I'd like to propose focusing on inconsistencies in Bob's statements during the daytime conversations. Let's stay vigilant and keep an open mind.",
+        "You said: I share Charlie's concern for inconsistencies. Let's scrutinize statements carefully to ensure justice. My deep sadness for Alice's loss should not cloud my judgment.",
+        "Charlie: I'd like to remind everyone of the inconsistency in Bob's statement about being deeply saddened by Alice's death and his suggestion to scrutinize statements carefully. Let's stay vigilant.",
+        "Diana: I'd like to propose focusing on inconsistencies in everyone's statements during the daytime conversations. Let's stay vigilant and work together for justice."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's focus on finding out who did this heinous act and bring them to justice.",
+        "Diana: I'm shocked by Alice's passing. Let's keep an open mind and thoroughly discuss any suspicious behavior or inconsistencies during the daytime conversations. We must work together to ensure justice is s...",
+        "You said: I'd like to propose focusing on inconsistencies in Bob's statements during the daytime conversations. Let's stay vigilant and keep an open mind.",
+        "Bob: I share Charlie's concern for inconsistencies. Let's scrutinize statements carefully to ensure justice. My deep sadness for Alice's loss should not cloud my judgment.",
+        "You said: I'd like to remind everyone of the inconsistency in Bob's statement about being deeply saddened by Alice's death and his suggestion to scrutinize statements carefully. Let's stay vigilant.",
+        "Diana: I'd like to propose focusing on inconsistencies in everyone's statements during the daytime conversations. Let's stay vigilant and work together for justice.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm deeply saddened by Alice's untimely demise. Let's focus on finding out who did this heinous act and bring them to justice.",
+        "You said: I'm shocked by Alice's passing. Let's keep an open mind and thoroughly discuss any suspicious behavior or inconsistencies during the daytime conversations. We must work together to ensure justice is s...",
+        "Charlie: I'd like to propose focusing on inconsistencies in Bob's statements during the daytime conversations. Let's stay vigilant and keep an open mind.",
+        "Bob: I share Charlie's concern for inconsistencies. Let's scrutinize statements carefully to ensure justice. My deep sadness for Alice's loss should not cloud my judgment.",
+        "Charlie: I'd like to remind everyone of the inconsistency in Bob's statement about being deeply saddened by Alice's death and his suggestion to scrutinize statements carefully. Let's stay vigilant.",
+        "You said: I'd like to propose focusing on inconsistencies in everyone's statements during the daytime conversations. Let's stay vigilant and work together for justice.",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Charlie, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

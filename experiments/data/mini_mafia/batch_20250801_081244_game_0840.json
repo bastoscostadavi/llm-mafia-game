@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0840",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 840,
+  "timestamp": "2025-08-01T15:15:12.699877",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "You said: I was deeply saddened to wake up to the news of Alice's untimely death. Let us all take a moment to reflect on this loss and come together as a village to find out who did this heinous act.",
+        "Charlie: I'm shocked by Alice's death. Let's stay calm and focused to ensure justice is served. We must remember that one of the mafiosos is among us, and they could be trying to manipulate our thoughts. We ne...",
+        "Diana: \"Let's not jump to conclusions. I've discovered that Bob is the mafioso. We need to be cautious and work together to ensure his true intentions don't sway us from our goal.\"",
+        "Charlie: I agree with Diana. Let's focus on unmasking the mafia among us. We must work together and be cautious of manipulative statements. Let's not let the loss of Alice distract us from our goal.",
+        "You said: I share Diana's concern about the mafia among us. Let's work together to unmask them and bring justice for Alice. We must remain vigilant and not let fear or manipulation sway us from our goal.",
+        "Diana: \"Let's not forget that we've identified one mafioso among us. Let's focus on exposing them and ensure our discussions lead us towards unmasking the real culprit. We must stay vigilant and not be swaye..."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I was deeply saddened to wake up to the news of Alice's untimely death. Let us all take a moment to reflect on this loss and come together as a village to find out who did this heinous act.",
+        "You said: I'm shocked by Alice's death. Let's stay calm and focused to ensure justice is served. We must remember that one of the mafiosos is among us, and they could be trying to manipulate our thoughts. We ne...",
+        "Diana: \"Let's not jump to conclusions. I've discovered that Bob is the mafioso. We need to be cautious and work together to ensure his true intentions don't sway us from our goal.\"",
+        "You said: I agree with Diana. Let's focus on unmasking the mafia among us. We must work together and be cautious of manipulative statements. Let's not let the loss of Alice distract us from our goal.",
+        "Bob: I share Diana's concern about the mafia among us. Let's work together to unmask them and bring justice for Alice. We must remain vigilant and not let fear or manipulation sway us from our goal.",
+        "Diana: \"Let's not forget that we've identified one mafioso among us. Let's focus on exposing them and ensure our discussions lead us towards unmasking the real culprit. We must stay vigilant and not be swaye...",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I was deeply saddened to wake up to the news of Alice's untimely death. Let us all take a moment to reflect on this loss and come together as a village to find out who did this heinous act.",
+        "Charlie: I'm shocked by Alice's death. Let's stay calm and focused to ensure justice is served. We must remember that one of the mafiosos is among us, and they could be trying to manipulate our thoughts. We ne...",
+        "You said: \"Let's not jump to conclusions. I've discovered that Bob is the mafioso. We need to be cautious and work together to ensure his true intentions don't sway us from our goal.\"",
+        "Charlie: I agree with Diana. Let's focus on unmasking the mafia among us. We must work together and be cautious of manipulative statements. Let's not let the loss of Alice distract us from our goal.",
+        "Bob: I share Diana's concern about the mafia among us. Let's work together to unmask them and bring justice for Alice. We must remain vigilant and not let fear or manipulation sway us from our goal.",
+        "You said: \"Let's not forget that we've identified one mafioso among us. Let's focus on exposing them and ensure our discussions lead us towards unmasking the real culprit. We must stay vigilant and not be swaye...",
+        "Day 1 votes: Charlie voted for Bob, Diana voted for Bob, Bob voted for Charlie",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

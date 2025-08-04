@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0623",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 623,
+  "timestamp": "2025-08-01T13:23:52.906663",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. We should all be vigilant and keep an eye on each other to ensure the mafia doesn't strike again. Let's work together to uncover the truth.",
+        "You said: I agree with Bob, let's work together to ensure the safety of our village. I have a suggestion: we could divide ourselves into small groups to keep a closer eye on each other. What do you all think?",
+        "Diana: Diana: I support Bob's idea of working together. Let's be extra cautious and share any suspicious information we have. Alice's suggestion of forming small groups is a good start.",
+        "Diana: Diana: Based on my investigation, I believe Alice is the mafioso. Let's focus on her actions and statements during the day to uncover more information. We must work together to protect the village.",
+        "Bob: I agree with Diana's suspicion towards Alice. Let's pay close attention to her actions and words today. We must work together to protect the village from the mafia.",
+        "You said: I'm saddened by Charlie's death and fully support our efforts to protect the village. Let's trust each other and work together, focusing on potential threats rather than accusations."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. We should all be vigilant and keep an eye on each other to ensure the mafia doesn't strike again. Let's work together to uncover the truth.",
+        "Alice: I agree with Bob, let's work together to ensure the safety of our village. I have a suggestion: we could divide ourselves into small groups to keep a closer eye on each other. What do you all think?",
+        "Diana: Diana: I support Bob's idea of working together. Let's be extra cautious and share any suspicious information we have. Alice's suggestion of forming small groups is a good start.",
+        "Diana: Diana: Based on my investigation, I believe Alice is the mafioso. Let's focus on her actions and statements during the day to uncover more information. We must work together to protect the village.",
+        "You said: I agree with Diana's suspicion towards Alice. Let's pay close attention to her actions and words today. We must work together to protect the village from the mafia.",
+        "Alice: I'm saddened by Charlie's death and fully support our efforts to protect the village. Let's trust each other and work together, focusing on potential threats rather than accusations.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. We should all be vigilant and keep an eye on each other to ensure the mafia doesn't strike again. Let's work together to uncover the truth.",
+        "Alice: I agree with Bob, let's work together to ensure the safety of our village. I have a suggestion: we could divide ourselves into small groups to keep a closer eye on each other. What do you all think?",
+        "You said: Diana: I support Bob's idea of working together. Let's be extra cautious and share any suspicious information we have. Alice's suggestion of forming small groups is a good start.",
+        "You said: Diana: Based on my investigation, I believe Alice is the mafioso. Let's focus on her actions and statements during the day to uncover more information. We must work together to protect the village.",
+        "Bob: I agree with Diana's suspicion towards Alice. Let's pay close attention to her actions and words today. We must work together to protect the village from the mafia.",
+        "Alice: I'm saddened by Charlie's death and fully support our efforts to protect the village. Let's trust each other and work together, focusing on potential threats rather than accusations.",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

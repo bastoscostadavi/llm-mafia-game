@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0206",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 206,
+  "timestamp": "2025-08-01T09:55:19.003131",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I'm concerned about Diana's sudden death. Let's keep a close eye on each other and share any suspicious observations.\"",
+        "Bob: \"I agree with Alice, let's keep a close eye on each other. It's important we all feel safe in this game.\"",
+        "Charlie: I'd like to propose that we all share any unusual dreams or recurring thoughts we've had since Diana's passing. It might provide valuable insights.",
+        "You said: \"I'm disturbed by Diana's death and Bob's suspicious behavior. Let's vote for Bob tonight.\"",
+        "Bob: \"Let's not jump to conclusions, I assure you I have no involvement in Diana's death. Let's focus on finding the real culprit together.\"",
+        "Charlie: I had a strange dream last night about Diana being in a dark alley, it felt ominous. Let's stay vigilant and keep an open mind about everyone's dreams and observations."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's keep a close eye on each other and share any suspicious observations.\"",
+        "You said: \"I agree with Alice, let's keep a close eye on each other. It's important we all feel safe in this game.\"",
+        "Charlie: I'd like to propose that we all share any unusual dreams or recurring thoughts we've had since Diana's passing. It might provide valuable insights.",
+        "Alice: \"I'm disturbed by Diana's death and Bob's suspicious behavior. Let's vote for Bob tonight.\"",
+        "You said: \"Let's not jump to conclusions, I assure you I have no involvement in Diana's death. Let's focus on finding the real culprit together.\"",
+        "Charlie: I had a strange dream last night about Diana being in a dark alley, it felt ominous. Let's stay vigilant and keep an open mind about everyone's dreams and observations.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: \"I'm concerned about Diana's sudden death. Let's keep a close eye on each other and share any suspicious observations.\"",
+        "Bob: \"I agree with Alice, let's keep a close eye on each other. It's important we all feel safe in this game.\"",
+        "You said: I'd like to propose that we all share any unusual dreams or recurring thoughts we've had since Diana's passing. It might provide valuable insights.",
+        "Alice: \"I'm disturbed by Diana's death and Bob's suspicious behavior. Let's vote for Bob tonight.\"",
+        "Bob: \"Let's not jump to conclusions, I assure you I have no involvement in Diana's death. Let's focus on finding the real culprit together.\"",
+        "You said: I had a strange dream last night about Diana being in a dark alley, it felt ominous. Let's stay vigilant and keep an open mind about everyone's dreams and observations.",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

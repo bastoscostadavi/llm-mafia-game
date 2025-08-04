@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0239",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 239,
+  "timestamp": "2025-08-01T10:11:46.483950",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I find it strange that we've lost another villager so early in the game. Let's be vigilant and pay close attention to each other's actions and behaviors to ensure we can identify and stop the mafia.",
+        "You said: I agree with Diana. Let's try to observe everyone's actions carefully and communicate openly to build trust and potentially uncover any suspicious behavior.",
+        "Charlie: I agree with Diana and Bob. Let's all work together to ensure the safety of our village. It's important we communicate openly and watch out for any unusual behavior. However, I have noticed that Alice...",
+        "Diana: Diana: Based on my investigation, I have reason to suspect Charlie. Let's keep a close eye on their actions and behaviors. We must act swiftly to protect our village from the mafia.",
+        "You said: I'd like to propose we focus on observing Charlie's actions more closely, given Diana's investigation. Let's stay united and vigilant.",
+        "Charlie: I'd like to assure everyone that I'm committed to working together with all of you to ensure the safety of our village. Let's continue communicating openly and observing each other's actions closely....",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: I find it strange that we've lost another villager so early in the game. Let's be vigilant and pay close attention to each other's actions and behaviors to ensure we can identify and stop the mafia.",
+        "Bob: I agree with Diana. Let's try to observe everyone's actions carefully and communicate openly to build trust and potentially uncover any suspicious behavior.",
+        "You said: I agree with Diana and Bob. Let's all work together to ensure the safety of our village. It's important we communicate openly and watch out for any unusual behavior. However, I have noticed that Alice...",
+        "Diana: Diana: Based on my investigation, I have reason to suspect Charlie. Let's keep a close eye on their actions and behaviors. We must act swiftly to protect our village from the mafia.",
+        "Bob: I'd like to propose we focus on observing Charlie's actions more closely, given Diana's investigation. Let's stay united and vigilant.",
+        "You said: I'd like to assure everyone that I'm committed to working together with all of you to ensure the safety of our village. Let's continue communicating openly and observing each other's actions closely...."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: I find it strange that we've lost another villager so early in the game. Let's be vigilant and pay close attention to each other's actions and behaviors to ensure we can identify and stop the mafia.",
+        "Bob: I agree with Diana. Let's try to observe everyone's actions carefully and communicate openly to build trust and potentially uncover any suspicious behavior.",
+        "Charlie: I agree with Diana and Bob. Let's all work together to ensure the safety of our village. It's important we communicate openly and watch out for any unusual behavior. However, I have noticed that Alice...",
+        "You said: Diana: Based on my investigation, I have reason to suspect Charlie. Let's keep a close eye on their actions and behaviors. We must act swiftly to protect our village from the mafia.",
+        "Bob: I'd like to propose we focus on observing Charlie's actions more closely, given Diana's investigation. Let's stay united and vigilant.",
+        "Charlie: I'd like to assure everyone that I'm committed to working together with all of you to ensure the safety of our village. Let's continue communicating openly and observing each other's actions closely....",
+        "Day 1 votes: Bob voted for Charlie, Diana voted for Charlie, Charlie voted for Diana",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

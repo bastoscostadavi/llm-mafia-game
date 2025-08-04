@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0212",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 212,
+  "timestamp": "2025-08-04T14:39:27.055405",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Charlie and Diana.\"",
+        "Charlie: \"I'm sorry for Alice's death, but I believe Diana's investigation might reveal my identity. Let's focus on keeping her from investigating me further.\"",
+        "Diana: \"I agree with Bob's concern. Let's focus on keeping Charlie from killing again.\"",
+        "You: \"I'd like to propose a truce between us for now, focusing on keeping Charlie from killing again.\"",
+        "Diana: \"I believe we should focus on keeping Charlie from killing again. Let's try to keep our suspicions to ourselves and vote for Charlie if necessary.\"",
+        "Charlie: remained silent",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Bob: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Charlie and Diana.\"",
+        "You: \"I'm sorry for Alice's death, but I believe Diana's investigation might reveal my identity. Let's focus on keeping her from investigating me further.\"",
+        "Diana: \"I agree with Bob's concern. Let's focus on keeping Charlie from killing again.\"",
+        "Bob: \"I'd like to propose a truce between us for now, focusing on keeping Charlie from killing again.\"",
+        "Diana: \"I believe we should focus on keeping Charlie from killing again. Let's try to keep our suspicions to ourselves and vote for Charlie if necessary.\"",
+        "You: remained silent"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Bob: \"I'm concerned about Alice's sudden death. Let's keep a close eye on Charlie and Diana.\"",
+        "Charlie: \"I'm sorry for Alice's death, but I believe Diana's investigation might reveal my identity. Let's focus on keeping her from investigating me further.\"",
+        "You: \"I agree with Bob's concern. Let's focus on keeping Charlie from killing again.\"",
+        "Bob: \"I'd like to propose a truce between us for now, focusing on keeping Charlie from killing again.\"",
+        "You: \"I believe we should focus on keeping Charlie from killing again. Let's try to keep our suspicions to ourselves and vote for Charlie if necessary.\"",
+        "Charlie: remained silent",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

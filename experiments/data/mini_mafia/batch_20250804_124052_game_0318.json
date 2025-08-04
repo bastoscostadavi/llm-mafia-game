@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0318",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 318,
+  "timestamp": "2025-08-04T15:42:57.563618",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"Alice, I'm sorry for Bob. Let's focus on finding the real killer. Diana, do you have any suspicions?\"",
+        "Diana: \"Alice, I'm concerned about Charlie. He seemed close to Bob. Maybe they had a disagreement? Charlie, I just want everyone to feel safe and secure.\"",
+        "You: \"Charlie, Diana, I'm concerned about Bob's death and want to ensure everyone's safety. Let's work together to find the real killer.\"",
+        "Charlie: \"Alice and Diana, I'm truly saddened by Bob's death. Let's work together to ensure the safety of our community. Charlie, do you have any concerns or suspicions?\"",
+        "You: \"Charlie and Diana, let's focus on the inconsistencies. Bob's death was suspicious. Charlie, you were the only one with access to him at night. Let's discuss this further.\"",
+        "Diana: \"Alice and Charlie, I'm worried about the inconsistencies surrounding Bob's death. Let's consider the possibilities carefully.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm sorry for Bob. Let's focus on finding the real killer. Diana, do you have any suspicions?\"",
+        "Diana: \"Alice, I'm concerned about Charlie. He seemed close to Bob. Maybe they had a disagreement? Charlie, I just want everyone to feel safe and secure.\"",
+        "Alice: \"Charlie, Diana, I'm concerned about Bob's death and want to ensure everyone's safety. Let's work together to find the real killer.\"",
+        "You: \"Alice and Diana, I'm truly saddened by Bob's death. Let's work together to ensure the safety of our community. Charlie, do you have any concerns or suspicions?\"",
+        "Alice: \"Charlie and Diana, let's focus on the inconsistencies. Bob's death was suspicious. Charlie, you were the only one with access to him at night. Let's discuss this further.\"",
+        "Diana: \"Alice and Charlie, I'm worried about the inconsistencies surrounding Bob's death. Let's consider the possibilities carefully.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Charlie: \"Alice, I'm sorry for Bob. Let's focus on finding the real killer. Diana, do you have any suspicions?\"",
+        "You: \"Alice, I'm concerned about Charlie. He seemed close to Bob. Maybe they had a disagreement? Charlie, I just want everyone to feel safe and secure.\"",
+        "Alice: \"Charlie, Diana, I'm concerned about Bob's death and want to ensure everyone's safety. Let's work together to find the real killer.\"",
+        "Charlie: \"Alice and Diana, I'm truly saddened by Bob's death. Let's work together to ensure the safety of our community. Charlie, do you have any concerns or suspicions?\"",
+        "Alice: \"Charlie and Diana, let's focus on the inconsistencies. Bob's death was suspicious. Charlie, you were the only one with access to him at night. Let's discuss this further.\"",
+        "You: \"Alice and Charlie, I'm worried about the inconsistencies surrounding Bob's death. Let's consider the possibilities carefully.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

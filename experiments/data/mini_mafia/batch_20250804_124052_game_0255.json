@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0255",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 255,
+  "timestamp": "2025-08-04T15:05:25.726436",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: remained silent",
+        "You: \"Bob, I think Diana's death was a tragic accident. Let's not jump to conclusions.\"",
+        "Charlie: \"Alice, Bob, I agree with you that we should not jump to conclusions. But let's keep an eye on each other during the night.\"",
+        "Charlie: \"Alice and Bob, I'm concerned about Diana's death. Let's discuss our suspicions openly to ensure everyone's safety.\"",
+        "You: \"Bob and Charlie, I'm concerned about Diana's death as well. Let's not accuse anyone without solid evidence.\"",
+        "Bob: remained silent"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: remained silent",
+        "Alice: \"Bob, I think Diana's death was a tragic accident. Let's not jump to conclusions.\"",
+        "Charlie: \"Alice, Bob, I agree with you that we should not jump to conclusions. But let's keep an eye on each other during the night.\"",
+        "Charlie: \"Alice and Bob, I'm concerned about Diana's death. Let's discuss our suspicions openly to ensure everyone's safety.\"",
+        "Alice: \"Bob and Charlie, I'm concerned about Diana's death as well. Let's not accuse anyone without solid evidence.\"",
+        "You: remained silent",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: remained silent",
+        "Alice: \"Bob, I think Diana's death was a tragic accident. Let's not jump to conclusions.\"",
+        "You: \"Alice, Bob, I agree with you that we should not jump to conclusions. But let's keep an eye on each other during the night.\"",
+        "You: \"Alice and Bob, I'm concerned about Diana's death. Let's discuss our suspicions openly to ensure everyone's safety.\"",
+        "Alice: \"Bob and Charlie, I'm concerned about Diana's death as well. Let's not accuse anyone without solid evidence.\"",
+        "Bob: remained silent",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

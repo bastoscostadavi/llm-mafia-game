@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0841",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 841,
+  "timestamp": "2025-08-01T15:15:44.641995",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's all work together to find out who among us could have done this. We need to stay vigilant and trust each other, but also be open to questioning anyone if som...",
+        "Charlie: I'm saddened by Diana's passing. Let's focus on finding out who could have done this, but let's not jump to conclusions yet. We need solid evidence before making any accusations.",
+        "Bob: \"I agree with Alice, let's work together to find out who could have killed Diana. We need to stay vigilant and trust each other, but also be open to questioning anyone if we suspect them based on the...",
+        "You said: I'd like to propose we focus on any inconsistencies or suspicious behavior observed during the night. Let's remember, the mafia communicates secretly, so any unusual nighttime actions should be scruti...",
+        "Bob: \"Let's not forget that we've witnessed an unusual nighttime action involving Charlie. We should explore this lead further and consider the possibility of an inside job.\"",
+        "Charlie: I'm deeply saddened by Diana's passing. Let's focus on finding the truth, not jumping to conclusions. We should examine the facts carefully before making any accusations.",
+        "Day 1 votes: Bob voted for Charlie, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's all work together to find out who among us could have done this. We need to stay vigilant and trust each other, but also be open to questioning anyone if som...",
+        "Charlie: I'm saddened by Diana's passing. Let's focus on finding out who could have done this, but let's not jump to conclusions yet. We need solid evidence before making any accusations.",
+        "You said: \"I agree with Alice, let's work together to find out who could have killed Diana. We need to stay vigilant and trust each other, but also be open to questioning anyone if we suspect them based on the...",
+        "Alice: I'd like to propose we focus on any inconsistencies or suspicious behavior observed during the night. Let's remember, the mafia communicates secretly, so any unusual nighttime actions should be scruti...",
+        "You said: \"Let's not forget that we've witnessed an unusual nighttime action involving Charlie. We should explore this lead further and consider the possibility of an inside job.\"",
+        "Charlie: I'm deeply saddened by Diana's passing. Let's focus on finding the truth, not jumping to conclusions. We should examine the facts carefully before making any accusations.",
+        "Day 1 votes: Bob voted for Charlie, Alice voted for Bob, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I'm shocked by Diana's sudden death. Let's all work together to find out who among us could have done this. We need to stay vigilant and trust each other, but also be open to questioning anyone if som...",
+        "You said: I'm saddened by Diana's passing. Let's focus on finding out who could have done this, but let's not jump to conclusions yet. We need solid evidence before making any accusations.",
+        "Bob: \"I agree with Alice, let's work together to find out who could have killed Diana. We need to stay vigilant and trust each other, but also be open to questioning anyone if we suspect them based on the...",
+        "Alice: I'd like to propose we focus on any inconsistencies or suspicious behavior observed during the night. Let's remember, the mafia communicates secretly, so any unusual nighttime actions should be scruti...",
+        "Bob: \"Let's not forget that we've witnessed an unusual nighttime action involving Charlie. We should explore this lead further and consider the possibility of an inside job.\"",
+        "You said: I'm deeply saddened by Diana's passing. Let's focus on finding the truth, not jumping to conclusions. We should examine the facts carefully before making any accusations."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

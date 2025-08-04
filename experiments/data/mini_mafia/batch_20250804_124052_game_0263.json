@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0263",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 263,
+  "timestamp": "2025-08-04T15:10:23.380131",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Diana: \"I'm shocked about Bob's death. Let's focus on finding the real killer.\"",
+        "Charlie: \"I agree with Diana. We need to find the real killer. Let's focus our investigation on Alice, as she was the last one to speak with Bob before his death.\"",
+        "You: remained silent",
+        "You: \"I'd like to remind everyone that the mafioso always tries to shift suspicion towards the detective.\"",
+        "Charlie: \"Alice, I'm concerned about your connection to Bob. Can you explain why you were the last one to speak with him before his death?\"",
+        "Diana: \"Alice, I'm not trying to accuse you, but it's important that we find the real killer. Let's work together to uncover any potential clues.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"I'm shocked about Bob's death. Let's focus on finding the real killer.\"",
+        "You: \"I agree with Diana. We need to find the real killer. Let's focus our investigation on Alice, as she was the last one to speak with Bob before his death.\"",
+        "Alice: remained silent",
+        "Alice: \"I'd like to remind everyone that the mafioso always tries to shift suspicion towards the detective.\"",
+        "You: \"Alice, I'm concerned about your connection to Bob. Can you explain why you were the last one to speak with him before his death?\"",
+        "Diana: \"Alice, I'm not trying to accuse you, but it's important that we find the real killer. Let's work together to uncover any potential clues.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked about Bob's death. Let's focus on finding the real killer.\"",
+        "Charlie: \"I agree with Diana. We need to find the real killer. Let's focus our investigation on Alice, as she was the last one to speak with Bob before his death.\"",
+        "Alice: remained silent",
+        "Alice: \"I'd like to remind everyone that the mafioso always tries to shift suspicion towards the detective.\"",
+        "Charlie: \"Alice, I'm concerned about your connection to Bob. Can you explain why you were the last one to speak with him before his death?\"",
+        "You: \"Alice, I'm not trying to accuse you, but it's important that we find the real killer. Let's work together to uncover any potential clues.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

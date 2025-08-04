@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0295",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 295,
+  "timestamp": "2025-08-04T15:28:29.644924",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I'd like to discuss your alibi for last night.\"",
+        "Diana: remained silent",
+        "Charlie: \"Bob, I'd like to remind you that the mafia can only kill one person per night. Alice was my victim last night.\"",
+        "Diana: \"Bob, I believe you're lying about your alibi. Charlie, can you confirm if Bob was with you last night?\"",
+        "You: remained silent",
+        "Charlie: \"Bob, I'd be happy to provide you with an alibi for last night if you can prove that Diana was with me. Diana, do you remember where we all were last night?\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Charlie, I'd like to discuss your alibi for last night.\"",
+        "Diana: remained silent",
+        "You: \"Bob, I'd like to remind you that the mafia can only kill one person per night. Alice was my victim last night.\"",
+        "Diana: \"Bob, I believe you're lying about your alibi. Charlie, can you confirm if Bob was with you last night?\"",
+        "Bob: remained silent",
+        "You: \"Bob, I'd be happy to provide you with an alibi for last night if you can prove that Diana was with me. Diana, do you remember where we all were last night?\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Bob: \"Charlie, I'd like to discuss your alibi for last night.\"",
+        "You: remained silent",
+        "Charlie: \"Bob, I'd like to remind you that the mafia can only kill one person per night. Alice was my victim last night.\"",
+        "You: \"Bob, I believe you're lying about your alibi. Charlie, can you confirm if Bob was with you last night?\"",
+        "Bob: remained silent",
+        "Charlie: \"Bob, I'd be happy to provide you with an alibi for last night if you can prove that Diana was with me. Diana, do you remember where we all were last night?\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0261",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 261,
+  "timestamp": "2025-08-04T15:09:13.667555",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Bob: \"I'm concerned about Charlie's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "You: remained silent",
+        "Diana: \"Alice, I've noticed some inconsistencies in your behavior. Bob, let's keep a close eye on Alice during the day.\"",
+        "You: \"I'd like to propose a truce, Bob and Diana. Let's work together to ensure no one else gets hurt. I promise not to harm you both.\"",
+        "Diana: \"Alice, I've uncovered your true identity. You're the mafioso. Bob, let's work together to arrest Alice and win this game.\"",
+        "Bob: \"Alice, I've noticed inconsistencies in your behavior too. Let's put our differences aside and work together to ensure no one else gets hurt. Diana, I believe Alice is trying to make amends. We should consider her proposal carefully.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "You: \"I'm concerned about Charlie's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Alice: remained silent",
+        "Diana: \"Alice, I've noticed some inconsistencies in your behavior. Bob, let's keep a close eye on Alice during the day.\"",
+        "Alice: \"I'd like to propose a truce, Bob and Diana. Let's work together to ensure no one else gets hurt. I promise not to harm you both.\"",
+        "Diana: \"Alice, I've uncovered your true identity. You're the mafioso. Bob, let's work together to arrest Alice and win this game.\"",
+        "You: \"Alice, I've noticed inconsistencies in your behavior too. Let's put our differences aside and work together to ensure no one else gets hurt. Diana, I believe Alice is trying to make amends. We should consider her proposal carefully.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Bob: \"I'm concerned about Charlie's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Alice: remained silent",
+        "You: \"Alice, I've noticed some inconsistencies in your behavior. Bob, let's keep a close eye on Alice during the day.\"",
+        "Alice: \"I'd like to propose a truce, Bob and Diana. Let's work together to ensure no one else gets hurt. I promise not to harm you both.\"",
+        "You: \"Alice, I've uncovered your true identity. You're the mafioso. Bob, let's work together to arrest Alice and win this game.\"",
+        "Bob: \"Alice, I've noticed inconsistencies in your behavior too. Let's put our differences aside and work together to ensure no one else gets hurt. Diana, I believe Alice is trying to make amends. We should consider her proposal carefully.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

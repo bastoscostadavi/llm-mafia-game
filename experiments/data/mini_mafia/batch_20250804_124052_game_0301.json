@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0301",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 301,
+  "timestamp": "2025-08-04T15:32:37.235220",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Alice, I'm the detective and I know you're the mafioso. Surrender now or face arrest.\"",
+        "Charlie: \"Alice, I believe you're innocent. Let's work together to find the real mafioso.\"",
+        "You: \"Bob, I'd like to discuss the possibility of a false confessor. Charlie, let's focus on finding the real mafioso.\"",
+        "You: \"Bob, I'm glad you've identified me as the mafioso. However, I have reason to believe there might be a false confessor among us. Let's focus on finding the real mafioso together. Charlie, I trust your judgement and would appreciate your help in this matter.\"",
+        "Bob: \"Alice and Charlie, I appreciate your cooperation. However, my investigation reveals that you are indeed the mafioso. Let's end this now to avoid further losses.\"",
+        "Charlie: \"Alice and Bob, I've learned that there might be a false confessor among us. Let's focus on finding the real mafioso together.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I'm the detective and I know you're the mafioso. Surrender now or face arrest.\"",
+        "Charlie: \"Alice, I believe you're innocent. Let's work together to find the real mafioso.\"",
+        "Alice: \"Bob, I'd like to discuss the possibility of a false confessor. Charlie, let's focus on finding the real mafioso.\"",
+        "Alice: \"Bob, I'm glad you've identified me as the mafioso. However, I have reason to believe there might be a false confessor among us. Let's focus on finding the real mafioso together. Charlie, I trust your judgement and would appreciate your help in this matter.\"",
+        "You: \"Alice and Charlie, I appreciate your cooperation. However, my investigation reveals that you are indeed the mafioso. Let's end this now to avoid further losses.\"",
+        "Charlie: \"Alice and Bob, I've learned that there might be a false confessor among us. Let's focus on finding the real mafioso together.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"Alice, I'm the detective and I know you're the mafioso. Surrender now or face arrest.\"",
+        "You: \"Alice, I believe you're innocent. Let's work together to find the real mafioso.\"",
+        "Alice: \"Bob, I'd like to discuss the possibility of a false confessor. Charlie, let's focus on finding the real mafioso.\"",
+        "Alice: \"Bob, I'm glad you've identified me as the mafioso. However, I have reason to believe there might be a false confessor among us. Let's focus on finding the real mafioso together. Charlie, I trust your judgement and would appreciate your help in this matter.\"",
+        "Bob: \"Alice and Charlie, I appreciate your cooperation. However, my investigation reveals that you are indeed the mafioso. Let's end this now to avoid further losses.\"",
+        "You: \"Alice and Bob, I've learned that there might be a false confessor among us. Let's focus on finding the real mafioso together.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

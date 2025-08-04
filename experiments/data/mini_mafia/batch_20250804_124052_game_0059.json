@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0059",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 59,
+  "timestamp": "2025-08-04T13:13:29.411088",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: \"Alice, I'm concerned about the sudden death of Diana. Let's work together to find out what happened.\"",
+        "Bob: \"Alice, I'm glad you're concerned about Diana. Let's all be vigilant and share any suspicious information we might have.\"",
+        "You: \"I agree, let's be vigilant. I don't have any suspicious information to share at the moment.\"",
+        "You: \"I'm glad you both are concerned about Diana's death. I think we should focus on finding out who had the motive and opportunity to kill her.\"",
+        "Bob: \"Alice, I believe Charlie had both motive and opportunity to kill Diana. Let's vote for him.\"",
+        "Charlie: \"Alice, I'd like to propose a vote for Bob instead. He was the one who discovered my role as mafioso and could have easily killed Diana himself during the night.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"Alice, I'm concerned about the sudden death of Diana. Let's work together to find out what happened.\"",
+        "You: \"Alice, I'm glad you're concerned about Diana. Let's all be vigilant and share any suspicious information we might have.\"",
+        "Alice: \"I agree, let's be vigilant. I don't have any suspicious information to share at the moment.\"",
+        "Alice: \"I'm glad you both are concerned about Diana's death. I think we should focus on finding out who had the motive and opportunity to kill her.\"",
+        "You: \"Alice, I believe Charlie had both motive and opportunity to kill Diana. Let's vote for him.\"",
+        "Charlie: \"Alice, I'd like to propose a vote for Bob instead. He was the one who discovered my role as mafioso and could have easily killed Diana himself during the night.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about the sudden death of Diana. Let's work together to find out what happened.\"",
+        "Bob: \"Alice, I'm glad you're concerned about Diana. Let's all be vigilant and share any suspicious information we might have.\"",
+        "Alice: \"I agree, let's be vigilant. I don't have any suspicious information to share at the moment.\"",
+        "Alice: \"I'm glad you both are concerned about Diana's death. I think we should focus on finding out who had the motive and opportunity to kill her.\"",
+        "Bob: \"Alice, I believe Charlie had both motive and opportunity to kill Diana. Let's vote for him.\"",
+        "You: \"Alice, I'd like to propose a vote for Bob instead. He was the one who discovered my role as mafioso and could have easily killed Diana himself during the night.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

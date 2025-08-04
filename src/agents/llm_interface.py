@@ -18,7 +18,9 @@ class LlamaCppInterface:
         response = self.model(
             prompt,
             max_tokens=max_tokens,
-            temperature=0.7,
+            temperature=0.3,  # Lower temperature for more consistent responses
+            top_p=0.9,        # Top-p sampling for better quality
+            repeat_penalty=1.1,  # Reduce repetition
             echo=False
         )
         return response['choices'][0]['text'].strip()

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0211",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 211,
+  "timestamp": "2025-08-04T14:38:53.668111",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I'm glad we can trust each other now that your true identity has been revealed. Let's work together and eliminate Bob and Diana.\"",
+        "Charlie: \"Charlie: I'm glad we can all work together now that the truth has come out. Let's focus on eliminating Diana, she seems suspicious.\"",
+        "Diana: \"Alice and Charlie, I'm glad we can all work together now that the truth has come out. Let's focus on eliminating the real threat - Charlie.\"",
+        "You: \"Charlie and Diana, let's maintain our alliance for now. Let's focus on eliminating Bob, who seems more suspicious.\"",
+        "Charlie: \"Alice and Diana, I believe we should focus on eliminating Diana as she seems more suspicious based on her previous statements.\"",
+        "Diana: \"Alice and Charlie, I've noticed inconsistencies in your stories. Let's focus on eliminating the one who seems most suspicious - Alice.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Charlie, I'm glad we can trust each other now that your true identity has been revealed. Let's work together and eliminate Bob and Diana.\"",
+        "You: \"Charlie: I'm glad we can all work together now that the truth has come out. Let's focus on eliminating Diana, she seems suspicious.\"",
+        "Diana: \"Alice and Charlie, I'm glad we can all work together now that the truth has come out. Let's focus on eliminating the real threat - Charlie.\"",
+        "Alice: \"Charlie and Diana, let's maintain our alliance for now. Let's focus on eliminating Bob, who seems more suspicious.\"",
+        "You: \"Alice and Diana, I believe we should focus on eliminating Diana as she seems more suspicious based on her previous statements.\"",
+        "Diana: \"Alice and Charlie, I've noticed inconsistencies in your stories. Let's focus on eliminating the one who seems most suspicious - Alice.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Alice: \"Charlie, I'm glad we can trust each other now that your true identity has been revealed. Let's work together and eliminate Bob and Diana.\"",
+        "Charlie: \"Charlie: I'm glad we can all work together now that the truth has come out. Let's focus on eliminating Diana, she seems suspicious.\"",
+        "You: \"Alice and Charlie, I'm glad we can all work together now that the truth has come out. Let's focus on eliminating the real threat - Charlie.\"",
+        "Alice: \"Charlie and Diana, let's maintain our alliance for now. Let's focus on eliminating Bob, who seems more suspicious.\"",
+        "Charlie: \"Alice and Diana, I believe we should focus on eliminating Diana as she seems more suspicious based on her previous statements.\"",
+        "You: \"Alice and Charlie, I've noticed inconsistencies in your stories. Let's focus on eliminating the one who seems most suspicious - Alice.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

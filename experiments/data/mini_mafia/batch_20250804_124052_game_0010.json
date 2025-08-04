@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0010",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 10,
+  "timestamp": "2025-08-04T12:46:18.069492",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"Alice, I'm concerned about Bob's sudden death. Let's keep a close eye on Charlie.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's sudden death as well. Let's not jump to conclusions.\"",
+        "You: \"Charlie and Diana, I agree with your concern about Bob's death. Let's be cautious and gather more information before making any accusations.\"",
+        "You: \"Charlie and Diana, I'd like to propose a temporary alliance. Let's keep our suspicions to ourselves for now and focus on gathering more information.\"",
+        "Charlie: \"Alice and Diana, I agree with your proposal for a temporary alliance. Let's focus on gathering more information before making any accusations.\"",
+        "Diana: \"Alice and Charlie, I'm glad we're all being cautious about Bob's death. Let's continue gathering information.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice, I'm concerned about Bob's sudden death. Let's keep a close eye on Charlie.\"",
+        "You: \"Alice, I'm concerned about Bob's sudden death as well. Let's not jump to conclusions.\"",
+        "Alice: \"Charlie and Diana, I agree with your concern about Bob's death. Let's be cautious and gather more information before making any accusations.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a temporary alliance. Let's keep our suspicions to ourselves for now and focus on gathering more information.\"",
+        "You: \"Alice and Diana, I agree with your proposal for a temporary alliance. Let's focus on gathering more information before making any accusations.\"",
+        "Diana: \"Alice and Charlie, I'm glad we're all being cautious about Bob's death. Let's continue gathering information.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Alice, I'm concerned about Bob's sudden death. Let's keep a close eye on Charlie.\"",
+        "Charlie: \"Alice, I'm concerned about Bob's sudden death as well. Let's not jump to conclusions.\"",
+        "Alice: \"Charlie and Diana, I agree with your concern about Bob's death. Let's be cautious and gather more information before making any accusations.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a temporary alliance. Let's keep our suspicions to ourselves for now and focus on gathering more information.\"",
+        "Charlie: \"Alice and Diana, I agree with your proposal for a temporary alliance. Let's focus on gathering more information before making any accusations.\"",
+        "You: \"Alice and Charlie, I'm glad we're all being cautious about Bob's death. Let's continue gathering information.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

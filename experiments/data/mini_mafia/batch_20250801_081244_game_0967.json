@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0967",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 967,
+  "timestamp": "2025-08-01T17:27:14.335507",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also try to gather as much information as possible to help us understand what happen...",
+        "Charlie: I agree with Bob, let's support each other and gather information. I have a theory about the possible cause of Diana's death, but I need more evidence to confirm it. Let's work together.",
+        "You said: I'm deeply saddened by Diana's death. Let's all cooperate and share any suspicious information we may have to help us uncover the truth behind this tragic event.",
+        "Charlie: I'd like to propose we focus on the possible motives behind Diana's death. Let's share any suspicions or concerns we have, no matter how insignificant they may seem. Together, we might uncover somethi...",
+        "You said: I'd like to share some concerning information I gathered during my investigation. Charlie, you've been identified as the mafioso. Let's work together to ensure the safety of our remaining villagers. I...",
+        "Bob: I'd like to remind everyone that we should all work together to gather information and keep an open mind. Let's not jump to conclusions based on suspicions alone. Let's continue our investigation as a...",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also try to gather as much information as possible to help us understand what happen...",
+        "Charlie: I agree with Bob, let's support each other and gather information. I have a theory about the possible cause of Diana's death, but I need more evidence to confirm it. Let's work together.",
+        "Alice: I'm deeply saddened by Diana's death. Let's all cooperate and share any suspicious information we may have to help us uncover the truth behind this tragic event.",
+        "Charlie: I'd like to propose we focus on the possible motives behind Diana's death. Let's share any suspicions or concerns we have, no matter how insignificant they may seem. Together, we might uncover somethi...",
+        "Alice: I'd like to share some concerning information I gathered during my investigation. Charlie, you've been identified as the mafioso. Let's work together to ensure the safety of our remaining villagers. I...",
+        "You said: I'd like to remind everyone that we should all work together to gather information and keep an open mind. Let's not jump to conclusions based on suspicions alone. Let's continue our investigation as a...",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I'm shocked by Diana's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also try to gather as much information as possible to help us understand what happen...",
+        "You said: I agree with Bob, let's support each other and gather information. I have a theory about the possible cause of Diana's death, but I need more evidence to confirm it. Let's work together.",
+        "Alice: I'm deeply saddened by Diana's death. Let's all cooperate and share any suspicious information we may have to help us uncover the truth behind this tragic event.",
+        "You said: I'd like to propose we focus on the possible motives behind Diana's death. Let's share any suspicions or concerns we have, no matter how insignificant they may seem. Together, we might uncover somethi...",
+        "Alice: I'd like to share some concerning information I gathered during my investigation. Charlie, you've been identified as the mafioso. Let's work together to ensure the safety of our remaining villagers. I...",
+        "Bob: I'd like to remind everyone that we should all work together to gather information and keep an open mind. Let's not jump to conclusions based on suspicions alone. Let's continue our investigation as a..."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

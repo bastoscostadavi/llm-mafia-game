@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0306",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 306,
+  "timestamp": "2025-08-04T15:35:33.463295",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked by Diana's sudden death and want to find out what happened. Let's work together to uncover the truth.\"",
+        "Charlie: \"Alice, I think Diana was killed by the mafia. Let's vote for Bob.\"",
+        "Bob: remained silent",
+        "Charlie: \"Alice, I believe the mafia struck again. Let's not waste time and vote for Bob.\"",
+        "Bob: \"Alice, I believe you're the mafioso. Let's not waste any more time. We should vote for Charlie.\"",
+        "You: \"Bob, I'm innocent. Charlie, let's focus on finding the real mafioso.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Alice: \"I'm shocked by Diana's sudden death and want to find out what happened. Let's work together to uncover the truth.\"",
+        "Charlie: \"Alice, I think Diana was killed by the mafia. Let's vote for Bob.\"",
+        "You: remained silent",
+        "Charlie: \"Alice, I believe the mafia struck again. Let's not waste time and vote for Bob.\"",
+        "You: \"Alice, I believe you're the mafioso. Let's not waste any more time. We should vote for Charlie.\"",
+        "Alice: \"Bob, I'm innocent. Charlie, let's focus on finding the real mafioso.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Alice: \"I'm shocked by Diana's sudden death and want to find out what happened. Let's work together to uncover the truth.\"",
+        "You: \"Alice, I think Diana was killed by the mafia. Let's vote for Bob.\"",
+        "Bob: remained silent",
+        "You: \"Alice, I believe the mafia struck again. Let's not waste time and vote for Bob.\"",
+        "Bob: \"Alice, I believe you're the mafioso. Let's not waste any more time. We should vote for Charlie.\"",
+        "Alice: \"Bob, I'm innocent. Charlie, let's focus on finding the real mafioso.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

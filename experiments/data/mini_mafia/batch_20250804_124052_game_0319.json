@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0319",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 319,
+  "timestamp": "2025-08-04T15:43:39.664784",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Diana: \"Alice, I'm concerned about Bob. He seems suspicious to me.\"",
+        "You: \"Bob, I agree with Diana. Let's vote for Charlie.\"",
+        "Bob: \"Alice, Diana, I think Charlie's death is suspicious. Let's focus on finding the real killer instead of accusing innocent players.\"",
+        "Bob: \"Alice, Diana, I've noticed that Charlie was the one who suggested we vote for me last night. It seems odd that he would do that if he wasn't involved in his own death. Let's consider this when making our decision today.\"",
+        "You: \"Bob, Diana, I'd like to remind you that Charlie suggested we vote for him last night. It's odd behavior from a villager. Let's focus on finding the real killer.\"",
+        "Diana: \"Alice, Bob, I think Charlie's death was a warning. Let's be careful.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Diana: \"Alice, I'm concerned about Bob. He seems suspicious to me.\"",
+        "Alice: \"Bob, I agree with Diana. Let's vote for Charlie.\"",
+        "You: \"Alice, Diana, I think Charlie's death is suspicious. Let's focus on finding the real killer instead of accusing innocent players.\"",
+        "You: \"Alice, Diana, I've noticed that Charlie was the one who suggested we vote for me last night. It seems odd that he would do that if he wasn't involved in his own death. Let's consider this when making our decision today.\"",
+        "Alice: \"Bob, Diana, I'd like to remind you that Charlie suggested we vote for him last night. It's odd behavior from a villager. Let's focus on finding the real killer.\"",
+        "Diana: \"Alice, Bob, I think Charlie's death was a warning. Let's be careful.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about Bob. He seems suspicious to me.\"",
+        "Alice: \"Bob, I agree with Diana. Let's vote for Charlie.\"",
+        "Bob: \"Alice, Diana, I think Charlie's death is suspicious. Let's focus on finding the real killer instead of accusing innocent players.\"",
+        "Bob: \"Alice, Diana, I've noticed that Charlie was the one who suggested we vote for me last night. It seems odd that he would do that if he wasn't involved in his own death. Let's consider this when making our decision today.\"",
+        "Alice: \"Bob, Diana, I'd like to remind you that Charlie suggested we vote for him last night. It's odd behavior from a villager. Let's focus on finding the real killer.\"",
+        "You: \"Alice, Bob, I think Charlie's death was a warning. Let's be careful.\""
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

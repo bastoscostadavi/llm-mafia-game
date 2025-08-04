@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0093",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 93,
+  "timestamp": "2025-08-04T13:32:20.835436",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"Alice, I'm concerned about Bob's behavior last night. He seemed nervous and looked at me suspiciously.\"",
+        "Bob: \"Alice, Charlie, I'm glad you're paying attention. But let's not jump to conclusions based on speculation or assumptions. We should focus on the facts and work together as a team.\"",
+        "You: \"Bob and Charlie, I've noticed some unusual behavior last night. Let's discuss it openly to ensure our team's safety.\"",
+        "You: \"Bob and Charlie, I've noticed some unusual behavior last night. Let's discuss it openly to ensure our team's safety.\"",
+        "Charlie: \"Alice, I'm glad we're discussing this. Let's focus on the facts and not jump to conclusions. Bob, you seemed nervous last night. Can you explain?\"",
+        "Bob: \"Alice and Charlie, I understand your concerns. However, I can assure both of you that I had nothing to do with Diana's death. Let's focus on finding the real culprit together.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: \"Alice, I'm concerned about Bob's behavior last night. He seemed nervous and looked at me suspiciously.\"",
+        "You: \"Alice, Charlie, I'm glad you're paying attention. But let's not jump to conclusions based on speculation or assumptions. We should focus on the facts and work together as a team.\"",
+        "Alice: \"Bob and Charlie, I've noticed some unusual behavior last night. Let's discuss it openly to ensure our team's safety.\"",
+        "Alice: \"Bob and Charlie, I've noticed some unusual behavior last night. Let's discuss it openly to ensure our team's safety.\"",
+        "Charlie: \"Alice, I'm glad we're discussing this. Let's focus on the facts and not jump to conclusions. Bob, you seemed nervous last night. Can you explain?\"",
+        "You: \"Alice and Charlie, I understand your concerns. However, I can assure both of you that I had nothing to do with Diana's death. Let's focus on finding the real culprit together.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"Alice, I'm concerned about Bob's behavior last night. He seemed nervous and looked at me suspiciously.\"",
+        "Bob: \"Alice, Charlie, I'm glad you're paying attention. But let's not jump to conclusions based on speculation or assumptions. We should focus on the facts and work together as a team.\"",
+        "Alice: \"Bob and Charlie, I've noticed some unusual behavior last night. Let's discuss it openly to ensure our team's safety.\"",
+        "Alice: \"Bob and Charlie, I've noticed some unusual behavior last night. Let's discuss it openly to ensure our team's safety.\"",
+        "You: \"Alice, I'm glad we're discussing this. Let's focus on the facts and not jump to conclusions. Bob, you seemed nervous last night. Can you explain?\"",
+        "Bob: \"Alice and Charlie, I understand your concerns. However, I can assure both of you that I had nothing to do with Diana's death. Let's focus on finding the real culprit together.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

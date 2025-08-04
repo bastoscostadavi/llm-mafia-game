@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0129",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 129,
+  "timestamp": "2025-08-04T13:53:09.124263",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "You: \"Bob, I'm glad we have a detective on our team. Diana, you'll be crucial in identifying the mafia. Let's work together to ensure our team wins.\"",
+        "Bob: remained silent",
+        "Diana: \"Alice, I'm glad you revealed your identity to me. Let's work together to expose Bob as the mafioso.\"",
+        "Diana: \"Alice, I'm glad you trust me. But I can't trust Bob yet. Let's vote for him tonight.\"",
+        "You: remained silent",
+        "Bob: \"Alice, Diana, I've noticed that you both seem to be suspicious of me. I want to assure you that I am on the side of the villagers. Let's work together and trust each other.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Alice: \"Bob, I'm glad we have a detective on our team. Diana, you'll be crucial in identifying the mafia. Let's work together to ensure our team wins.\"",
+        "You: remained silent",
+        "Diana: \"Alice, I'm glad you revealed your identity to me. Let's work together to expose Bob as the mafioso.\"",
+        "Diana: \"Alice, I'm glad you trust me. But I can't trust Bob yet. Let's vote for him tonight.\"",
+        "Alice: remained silent",
+        "You: \"Alice, Diana, I've noticed that you both seem to be suspicious of me. I want to assure you that I am on the side of the villagers. Let's work together and trust each other.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Alice: \"Bob, I'm glad we have a detective on our team. Diana, you'll be crucial in identifying the mafia. Let's work together to ensure our team wins.\"",
+        "Bob: remained silent",
+        "You: \"Alice, I'm glad you revealed your identity to me. Let's work together to expose Bob as the mafioso.\"",
+        "You: \"Alice, I'm glad you trust me. But I can't trust Bob yet. Let's vote for him tonight.\"",
+        "Alice: remained silent",
+        "Bob: \"Alice, Diana, I've noticed that you both seem to be suspicious of me. I want to assure you that I am on the side of the villagers. Let's work together and trust each other.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0683",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 683,
+  "timestamp": "2025-08-01T13:54:00.445851",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was saddened to hear about Diana's passing. Let us focus on finding out who among us could have done such a heinous act.",
+        "Charlie: I was also shocked by Diana's death. Let's try to remain calm and open-minded during our investigation to ensure we don't jump to any incorrect conclusions.",
+        "Bob: Alice, I'm glad you're expressing concern for Diana's death. However, given the circumstances, it's crucial we investigate thoroughly. Alice, could you clarify your whereabouts during the night?",
+        "Bob: Alice, I'd like to reiterate the importance of transparency during our investigation. Alice, could you please provide a detailed account of your activities during the night, especially around the time...",
+        "You said: I was deeply saddened by Diana's passing and am committed to helping uncover the truth behind her death. Let's all work together to ensure justice is served.",
+        "Charlie: I'd like to echo Alice's sentiments and urge us to work together to find out who is responsible for Diana's death. Let's keep an open mind and share any suspicious observations or activities we may ha..."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was saddened to hear about Diana's passing. Let us focus on finding out who among us could have done such a heinous act.",
+        "Charlie: I was also shocked by Diana's death. Let's try to remain calm and open-minded during our investigation to ensure we don't jump to any incorrect conclusions.",
+        "You said: Alice, I'm glad you're expressing concern for Diana's death. However, given the circumstances, it's crucial we investigate thoroughly. Alice, could you clarify your whereabouts during the night?",
+        "You said: Alice, I'd like to reiterate the importance of transparency during our investigation. Alice, could you please provide a detailed account of your activities during the night, especially around the time...",
+        "Alice: I was deeply saddened by Diana's passing and am committed to helping uncover the truth behind her death. Let's all work together to ensure justice is served.",
+        "Charlie: I'd like to echo Alice's sentiments and urge us to work together to find out who is responsible for Diana's death. Let's keep an open mind and share any suspicious observations or activities we may ha...",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was saddened to hear about Diana's passing. Let us focus on finding out who among us could have done such a heinous act.",
+        "You said: I was also shocked by Diana's death. Let's try to remain calm and open-minded during our investigation to ensure we don't jump to any incorrect conclusions.",
+        "Bob: Alice, I'm glad you're expressing concern for Diana's death. However, given the circumstances, it's crucial we investigate thoroughly. Alice, could you clarify your whereabouts during the night?",
+        "Bob: Alice, I'd like to reiterate the importance of transparency during our investigation. Alice, could you please provide a detailed account of your activities during the night, especially around the time...",
+        "Alice: I was deeply saddened by Diana's passing and am committed to helping uncover the truth behind her death. Let's all work together to ensure justice is served.",
+        "You said: I'd like to echo Alice's sentiments and urge us to work together to find out who is responsible for Diana's death. Let's keep an open mind and share any suspicious observations or activities we may ha...",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

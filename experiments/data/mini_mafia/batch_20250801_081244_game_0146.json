@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0146",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 146,
+  "timestamp": "2025-08-01T09:25:52.820243",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm shocked by Alice's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also try to gather as much information as we can to help us understand what might ha...",
+        "Diana: I'm saddened by Alice's passing. Let's all work together to find out what happened and bring justice to her memory.",
+        "Charlie: I agree with Bob, let's work together to gather information and find out who killed Alice. I'll start by asking Diana if she was in the vicinity of Alice last night.",
+        "Charlie: I'd like to propose that we focus our investigation on the area where Alice was last seen last night. Let's also discuss any suspicious activities or unusual occurrences that might have taken place. W...",
+        "You said: I remember seeing Charlie in the vicinity of Alice last night. Let's discuss this further and consider it as a potential lead in our investigation.",
+        "Diana: I was deeply saddened by Alice's passing and I believe it's important we all stay focused on finding the truth. Let's continue our investigation on the area where Alice was last seen and discuss any p...",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also try to gather as much information as we can to help us understand what might ha...",
+        "Diana: I'm saddened by Alice's passing. Let's all work together to find out what happened and bring justice to her memory.",
+        "You said: I agree with Bob, let's work together to gather information and find out who killed Alice. I'll start by asking Diana if she was in the vicinity of Alice last night.",
+        "You said: I'd like to propose that we focus our investigation on the area where Alice was last seen last night. Let's also discuss any suspicious activities or unusual occurrences that might have taken place. W...",
+        "Bob: I remember seeing Charlie in the vicinity of Alice last night. Let's discuss this further and consider it as a potential lead in our investigation.",
+        "Diana: I was deeply saddened by Alice's passing and I believe it's important we all stay focused on finding the truth. Let's continue our investigation on the area where Alice was last seen and discuss any p..."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm shocked by Alice's sudden death. Let's remain vigilant and support each other during this difficult time. Let's also try to gather as much information as we can to help us understand what might ha...",
+        "You said: I'm saddened by Alice's passing. Let's all work together to find out what happened and bring justice to her memory.",
+        "Charlie: I agree with Bob, let's work together to gather information and find out who killed Alice. I'll start by asking Diana if she was in the vicinity of Alice last night.",
+        "Charlie: I'd like to propose that we focus our investigation on the area where Alice was last seen last night. Let's also discuss any suspicious activities or unusual occurrences that might have taken place. W...",
+        "Bob: I remember seeing Charlie in the vicinity of Alice last night. Let's discuss this further and consider it as a potential lead in our investigation.",
+        "You said: I was deeply saddened by Alice's passing and I believe it's important we all stay focused on finding the truth. Let's continue our investigation on the area where Alice was last seen and discuss any p...",
+        "Day 1 votes: Diana voted for Charlie, Charlie voted for Diana, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0077",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 77,
+  "timestamp": "2025-08-04T13:23:30.403248",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: remained silent",
+        "Charlie: \"Given the sudden death of Bob, I suggest we be extra cautious and pay close attention to each other's actions. Let's work together to uncover the truth behind this tragic event.\"",
+        "You: \"I agree with Charlie, we should all work together to find out who killed Bob. I have a theory that it might have been an outside influence.\"",
+        "Diana: \"Alice, I'm glad you agree we should work together. Charlie, I believe Alice is the mafioso based on my investigation last night. Let's vote for her tonight.\"",
+        "Charlie: \"Alice, I'm glad we're working together to find the truth. Diana, I don't think Alice is the mafioso. Let's focus on gathering more information before making any rash decisions.\"",
+        "You: \"Charlie and Diana, I'd like to propose a truce. Let's focus on gathering more information before making any decisions. We can work together to uncover the truth behind Bob's death.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: remained silent",
+        "You: \"Given the sudden death of Bob, I suggest we be extra cautious and pay close attention to each other's actions. Let's work together to uncover the truth behind this tragic event.\"",
+        "Alice: \"I agree with Charlie, we should all work together to find out who killed Bob. I have a theory that it might have been an outside influence.\"",
+        "Diana: \"Alice, I'm glad you agree we should work together. Charlie, I believe Alice is the mafioso based on my investigation last night. Let's vote for her tonight.\"",
+        "You: \"Alice, I'm glad we're working together to find the truth. Diana, I don't think Alice is the mafioso. Let's focus on gathering more information before making any rash decisions.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a truce. Let's focus on gathering more information before making any decisions. We can work together to uncover the truth behind Bob's death.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: remained silent",
+        "Charlie: \"Given the sudden death of Bob, I suggest we be extra cautious and pay close attention to each other's actions. Let's work together to uncover the truth behind this tragic event.\"",
+        "Alice: \"I agree with Charlie, we should all work together to find out who killed Bob. I have a theory that it might have been an outside influence.\"",
+        "You: \"Alice, I'm glad you agree we should work together. Charlie, I believe Alice is the mafioso based on my investigation last night. Let's vote for her tonight.\"",
+        "Charlie: \"Alice, I'm glad we're working together to find the truth. Diana, I don't think Alice is the mafioso. Let's focus on gathering more information before making any rash decisions.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a truce. Let's focus on gathering more information before making any decisions. We can work together to uncover the truth behind Bob's death.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

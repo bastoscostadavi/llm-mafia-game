@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0793",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 793,
+  "timestamp": "2025-08-01T14:51:52.242569",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I was deeply saddened to hear about Diana's passing. Let's focus on finding out who could have done this heinous act and bring them to justice.",
+        "You said: Bob, I'm glad you're expressing your concern for Diana's death. However, given the circumstances, it's crucial we pay close attention to any unusual behavior or inconsistencies. Let's all work togethe...",
+        "Charlie: I agree with Alice, let's focus on suspicious behavior. I noticed Bob was very emotional about Diana's death. It's unusual for someone to be so affected by the death of a colleague. We should keep an...",
+        "You said: Bob's emotional reaction to Diana's death is worth investigating. Let's explore possible motives and alibis. We should also consider Charlie's observation and look for inconsistencies in their stateme...",
+        "Bob: I was deeply moved by Diana's passing. Let's not jump to conclusions and focus on finding the real culprit behind this tragedy. We should all work together to uncover the truth.",
+        "Charlie: I'd like to remind everyone of Bob's emotional reaction to Diana's death. It's important we explore possible motives and inconsistencies further.",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened to hear about Diana's passing. Let's focus on finding out who could have done this heinous act and bring them to justice.",
+        "Alice: Bob, I'm glad you're expressing your concern for Diana's death. However, given the circumstances, it's crucial we pay close attention to any unusual behavior or inconsistencies. Let's all work togethe...",
+        "Charlie: I agree with Alice, let's focus on suspicious behavior. I noticed Bob was very emotional about Diana's death. It's unusual for someone to be so affected by the death of a colleague. We should keep an...",
+        "Alice: Bob's emotional reaction to Diana's death is worth investigating. Let's explore possible motives and alibis. We should also consider Charlie's observation and look for inconsistencies in their stateme...",
+        "You said: I was deeply moved by Diana's passing. Let's not jump to conclusions and focus on finding the real culprit behind this tragedy. We should all work together to uncover the truth.",
+        "Charlie: I'd like to remind everyone of Bob's emotional reaction to Diana's death. It's important we explore possible motives and inconsistencies further."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I was deeply saddened to hear about Diana's passing. Let's focus on finding out who could have done this heinous act and bring them to justice.",
+        "Alice: Bob, I'm glad you're expressing your concern for Diana's death. However, given the circumstances, it's crucial we pay close attention to any unusual behavior or inconsistencies. Let's all work togethe...",
+        "You said: I agree with Alice, let's focus on suspicious behavior. I noticed Bob was very emotional about Diana's death. It's unusual for someone to be so affected by the death of a colleague. We should keep an...",
+        "Alice: Bob's emotional reaction to Diana's death is worth investigating. Let's explore possible motives and alibis. We should also consider Charlie's observation and look for inconsistencies in their stateme...",
+        "Bob: I was deeply moved by Diana's passing. Let's not jump to conclusions and focus on finding the real culprit behind this tragedy. We should all work together to uncover the truth.",
+        "You said: I'd like to remind everyone of Bob's emotional reaction to Diana's death. It's important we explore possible motives and inconsistencies further.",
+        "Day 1 votes: Charlie voted for Bob, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

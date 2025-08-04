@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0256",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 256,
+  "timestamp": "2025-08-04T15:05:57.915067",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: remained silent",
+        "You: \"Charlie, let's vote for Diana tonight. I have a bad feeling about her.\"",
+        "Charlie: \"Alice, I think Diana is suspicious. Let's vote for her tonight.\"",
+        "Charlie: \"Alice, I agree with you. Let's vote for Diana tonight.\"",
+        "Diana: \"Alice and Charlie, I've noticed some inconsistencies in your statements. Let's focus on finding the real mafioso instead of pointing fingers.\"",
+        "You: \"Charlie and Diana, I'd like to propose a truce for now. Let's focus on finding the real detective. My vote will be with you both tonight.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: remained silent",
+        "Alice: \"Charlie, let's vote for Diana tonight. I have a bad feeling about her.\"",
+        "You: \"Alice, I think Diana is suspicious. Let's vote for her tonight.\"",
+        "You: \"Alice, I agree with you. Let's vote for Diana tonight.\"",
+        "Diana: \"Alice and Charlie, I've noticed some inconsistencies in your statements. Let's focus on finding the real mafioso instead of pointing fingers.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a truce for now. Let's focus on finding the real detective. My vote will be with you both tonight.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: remained silent",
+        "Alice: \"Charlie, let's vote for Diana tonight. I have a bad feeling about her.\"",
+        "Charlie: \"Alice, I think Diana is suspicious. Let's vote for her tonight.\"",
+        "Charlie: \"Alice, I agree with you. Let's vote for Diana tonight.\"",
+        "You: \"Alice and Charlie, I've noticed some inconsistencies in your statements. Let's focus on finding the real mafioso instead of pointing fingers.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a truce for now. Let's focus on finding the real detective. My vote will be with you both tonight.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0381",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 381,
+  "timestamp": "2025-08-01T11:21:46.464087",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: Alice's behavior seems suspicious, let's keep a close eye on her actions.",
+        "You said: I was deeply saddened by Charlie's untimely demise. Let's all work together to find out who among us could have committed such a heinous act.",
+        "Bob: Bob expresses his sadness and agrees with Alice, emphasizing the importance of finding the truth behind Charlie's death.",
+        "Bob: Bob suggests they focus on the inconsistencies in Alice's statements regarding her whereabouts during the night.",
+        "You said: I share Bob's concern for the inconsistencies in my statements. Let's focus on finding the truth together, starting with any potential alibis we may have. I assure you, I have nothing to hide.",
+        "Diana: Alice's inconsistencies about her whereabouts during the night are concerning. Let's focus on this detail to uncover the truth about Charlie's death."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: Alice's behavior seems suspicious, let's keep a close eye on her actions.",
+        "Alice: I was deeply saddened by Charlie's untimely demise. Let's all work together to find out who among us could have committed such a heinous act.",
+        "You said: Bob expresses his sadness and agrees with Alice, emphasizing the importance of finding the truth behind Charlie's death.",
+        "You said: Bob suggests they focus on the inconsistencies in Alice's statements regarding her whereabouts during the night.",
+        "Alice: I share Bob's concern for the inconsistencies in my statements. Let's focus on finding the truth together, starting with any potential alibis we may have. I assure you, I have nothing to hide.",
+        "Diana: Alice's inconsistencies about her whereabouts during the night are concerning. Let's focus on this detail to uncover the truth about Charlie's death.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: Alice's behavior seems suspicious, let's keep a close eye on her actions.",
+        "Alice: I was deeply saddened by Charlie's untimely demise. Let's all work together to find out who among us could have committed such a heinous act.",
+        "Bob: Bob expresses his sadness and agrees with Alice, emphasizing the importance of finding the truth behind Charlie's death.",
+        "Bob: Bob suggests they focus on the inconsistencies in Alice's statements regarding her whereabouts during the night.",
+        "Alice: I share Bob's concern for the inconsistencies in my statements. Let's focus on finding the truth together, starting with any potential alibis we may have. I assure you, I have nothing to hide.",
+        "You said: Alice's inconsistencies about her whereabouts during the night are concerning. Let's focus on this detail to uncover the truth about Charlie's death.",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

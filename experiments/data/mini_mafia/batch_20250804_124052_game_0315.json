@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0315",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 315,
+  "timestamp": "2025-08-04T15:41:13.083365",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: remained silent",
+        "You: \"I'm concerned about Bob's sudden death. Let's keep a close eye on Diana as she was silent last night.\"",
+        "Charlie: \"Alice, I agree with your concern about Diana's silence last night. Let's focus on her actions today.\"",
+        "You: \"Charlie and Diana, I'd like to propose a vote for Diana today. Let's try to gather more evidence before making any definitive conclusions.\"",
+        "Diana: \"Alice and Charlie, I'd like to propose a vote for Charlie today based on my investigation results from the first night.\"",
+        "Charlie: \"I'm not concerned about my investigation results. Let's focus on Diana's actions today.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: remained silent",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's keep a close eye on Diana as she was silent last night.\"",
+        "You: \"Alice, I agree with your concern about Diana's silence last night. Let's focus on her actions today.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a vote for Diana today. Let's try to gather more evidence before making any definitive conclusions.\"",
+        "Diana: \"Alice and Charlie, I'd like to propose a vote for Charlie today based on my investigation results from the first night.\"",
+        "You: \"I'm not concerned about my investigation results. Let's focus on Diana's actions today.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: remained silent",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's keep a close eye on Diana as she was silent last night.\"",
+        "Charlie: \"Alice, I agree with your concern about Diana's silence last night. Let's focus on her actions today.\"",
+        "Alice: \"Charlie and Diana, I'd like to propose a vote for Diana today. Let's try to gather more evidence before making any definitive conclusions.\"",
+        "You: \"Alice and Charlie, I'd like to propose a vote for Charlie today based on my investigation results from the first night.\"",
+        "Charlie: \"I'm not concerned about my investigation results. Let's focus on Diana's actions today.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

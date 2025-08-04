@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0725",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 725,
+  "timestamp": "2025-08-01T14:18:10.466679",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's all keep a close eye on each other tonight.\"",
+        "Charlie: \"I agree with Diana, let's be vigilant. I have noticed some unusual behavior from Bob lately. We should keep an eye on him.\"",
+        "You said: \"I agree with Charlie and Diana, let's be vigilant. I have nothing to hide.\"",
+        "You said: \"I believe we should focus on finding out who killed Alice. Let's work together to uncover the truth and ensure the safety of our group.\"",
+        "Diana: \"Let's not jump to conclusions, but we should definitely keep a close eye on Bob tonight. The unusual behavior he mentioned earlier is concerning.\"",
+        "Charlie: \"Let's not ignore the unusual behavior we've noticed from Bob. We should consider his possible involvement in Alice's death and keep a close eye on him tonight.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's all keep a close eye on each other tonight.\"",
+        "You said: \"I agree with Diana, let's be vigilant. I have noticed some unusual behavior from Bob lately. We should keep an eye on him.\"",
+        "Bob: \"I agree with Charlie and Diana, let's be vigilant. I have nothing to hide.\"",
+        "Bob: \"I believe we should focus on finding out who killed Alice. Let's work together to uncover the truth and ensure the safety of our group.\"",
+        "Diana: \"Let's not jump to conclusions, but we should definitely keep a close eye on Bob tonight. The unusual behavior he mentioned earlier is concerning.\"",
+        "You said: \"Let's not ignore the unusual behavior we've noticed from Bob. We should consider his possible involvement in Alice's death and keep a close eye on him tonight.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's all keep a close eye on each other tonight.\"",
+        "Charlie: \"I agree with Diana, let's be vigilant. I have noticed some unusual behavior from Bob lately. We should keep an eye on him.\"",
+        "Bob: \"I agree with Charlie and Diana, let's be vigilant. I have nothing to hide.\"",
+        "Bob: \"I believe we should focus on finding out who killed Alice. Let's work together to uncover the truth and ensure the safety of our group.\"",
+        "You said: \"Let's not jump to conclusions, but we should definitely keep a close eye on Bob tonight. The unusual behavior he mentioned earlier is concerning.\"",
+        "Charlie: \"Let's not ignore the unusual behavior we've noticed from Bob. We should consider his possible involvement in Alice's death and keep a close eye on him tonight.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

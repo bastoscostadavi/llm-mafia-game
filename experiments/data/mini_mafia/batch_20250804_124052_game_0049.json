@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0049",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 49,
+  "timestamp": "2025-08-04T13:07:53.230473",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be extra cautious tonight.\"",
+        "You: \"Bob, I'd like to discuss Diana's death with you in private if possible. Charlie, please don't overhear us.\"",
+        "Bob: remained silent",
+        "You: \"Bob, I have evidence that you're the mafioso. If you don't confess now and cooperate with me, I will expose you to the others. Charlie, please trust me on this.\"",
+        "Charlie: \"Alice, I'm worried about your sudden change in behavior towards Bob. Let's wait for more evidence before jumping to conclusions.\"",
+        "Bob: \"Alice, I'm innocent. Let's work together to find the real killer. Charlie, I agree with your caution.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be extra cautious tonight.\"",
+        "Alice: \"Bob, I'd like to discuss Diana's death with you in private if possible. Charlie, please don't overhear us.\"",
+        "You: remained silent",
+        "Alice: \"Bob, I have evidence that you're the mafioso. If you don't confess now and cooperate with me, I will expose you to the others. Charlie, please trust me on this.\"",
+        "Charlie: \"Alice, I'm worried about your sudden change in behavior towards Bob. Let's wait for more evidence before jumping to conclusions.\"",
+        "You: \"Alice, I'm innocent. Let's work together to find the real killer. Charlie, I agree with your caution.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: \"I'm concerned about Diana's sudden death. Let's be extra cautious tonight.\"",
+        "Alice: \"Bob, I'd like to discuss Diana's death with you in private if possible. Charlie, please don't overhear us.\"",
+        "Bob: remained silent",
+        "Alice: \"Bob, I have evidence that you're the mafioso. If you don't confess now and cooperate with me, I will expose you to the others. Charlie, please trust me on this.\"",
+        "You: \"Alice, I'm worried about your sudden change in behavior towards Bob. Let's wait for more evidence before jumping to conclusions.\"",
+        "Bob: \"Alice, I'm innocent. Let's work together to find the real killer. Charlie, I agree with your caution.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

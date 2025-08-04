@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0439",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 439,
+  "timestamp": "2025-08-01T11:50:05.128607",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: Alice's behavior seems suspicious. Let's keep a close eye on her actions.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to uncover the truth.",
+        "Diana: I agree with Alice, we should all stay vigilant. Let's not jump to conclusions, but keep an eye on any unusual behavior.",
+        "You said: I'm concerned about the strange turn of events and urge everyone to remain vigilant, especially towards those acting suspiciously. Let's work together to uncover the truth.",
+        "Bob: Alice's suspicious behavior warrants further investigation. Let's focus on uncovering the truth behind her actions.",
+        "Diana: I'd like to remind everyone of Alice's concerns about Charlie's sudden disappearance and the importance of staying vigilant. Let's work together to gather more information."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: Alice's behavior seems suspicious. Let's keep a close eye on her actions.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to uncover the truth.",
+        "Diana: I agree with Alice, we should all stay vigilant. Let's not jump to conclusions, but keep an eye on any unusual behavior.",
+        "Alice: I'm concerned about the strange turn of events and urge everyone to remain vigilant, especially towards those acting suspiciously. Let's work together to uncover the truth.",
+        "You said: Alice's suspicious behavior warrants further investigation. Let's focus on uncovering the truth behind her actions.",
+        "Diana: I'd like to remind everyone of Alice's concerns about Charlie's sudden disappearance and the importance of staying vigilant. Let's work together to gather more information.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: Alice's behavior seems suspicious. Let's keep a close eye on her actions.",
+        "Alice: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to uncover the truth.",
+        "You said: I agree with Alice, we should all stay vigilant. Let's not jump to conclusions, but keep an eye on any unusual behavior.",
+        "Alice: I'm concerned about the strange turn of events and urge everyone to remain vigilant, especially towards those acting suspiciously. Let's work together to uncover the truth.",
+        "Bob: Alice's suspicious behavior warrants further investigation. Let's focus on uncovering the truth behind her actions.",
+        "You said: I'd like to remind everyone of Alice's concerns about Charlie's sudden disappearance and the importance of staying vigilant. Let's work together to gather more information.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

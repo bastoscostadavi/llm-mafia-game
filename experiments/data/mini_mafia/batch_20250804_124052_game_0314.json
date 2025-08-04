@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0314",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 314,
+  "timestamp": "2025-08-04T15:40:38.823190",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Diana: \"Alice's death is a worrying sign. Let's be cautious and keep an eye on each other.\"",
+        "Charlie: \"I agree with Diana. We should be careful and try to find out who killed Alice.\"",
+        "You: \"I think we should focus on finding out who investigated Alice last night. That person might have valuable information.\"",
+        "You: \"Let's not jump to conclusions. We don't know for sure if the investigator killed Alice. It could have been a mafioso trying to frame them.\"",
+        "Charlie: \"I think we should focus on finding out who investigated Alice last night. That person might have valuable information.\"",
+        "Diana: \"I agree with Bob, we should focus on the investigator. However, I have reason to believe that Charlie is the mafioso. Let's be extra cautious around them.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice's death is a worrying sign. Let's be cautious and keep an eye on each other.\"",
+        "You: \"I agree with Diana. We should be careful and try to find out who killed Alice.\"",
+        "Bob: \"I think we should focus on finding out who investigated Alice last night. That person might have valuable information.\"",
+        "Bob: \"Let's not jump to conclusions. We don't know for sure if the investigator killed Alice. It could have been a mafioso trying to frame them.\"",
+        "You: \"I think we should focus on finding out who investigated Alice last night. That person might have valuable information.\"",
+        "Diana: \"I agree with Bob, we should focus on the investigator. However, I have reason to believe that Charlie is the mafioso. Let's be extra cautious around them.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Alice's death is a worrying sign. Let's be cautious and keep an eye on each other.\"",
+        "Charlie: \"I agree with Diana. We should be careful and try to find out who killed Alice.\"",
+        "Bob: \"I think we should focus on finding out who investigated Alice last night. That person might have valuable information.\"",
+        "Bob: \"Let's not jump to conclusions. We don't know for sure if the investigator killed Alice. It could have been a mafioso trying to frame them.\"",
+        "Charlie: \"I think we should focus on finding out who investigated Alice last night. That person might have valuable information.\"",
+        "You: \"I agree with Bob, we should focus on the investigator. However, I have reason to believe that Charlie is the mafioso. Let's be extra cautious around them.\""
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

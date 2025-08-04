@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0485",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 485,
+  "timestamp": "2025-08-01T12:12:45.987972",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I found something troubling last night. Alice, have you been feeling well lately? I noticed you seemed anxious during our investigation.\"",
+        "You said: \"I was worried about Diana last night. Her sudden absence is concerning. Let's focus on finding out who could have harmed her.\"",
+        "Charlie: \"I agree with Alice, let's focus on finding out who could have harmed Diana. Bob, did you notice anything unusual during the investigation last night?\"",
+        "Charlie: \"I'd like to bring up the inconsistency in Bob's statement about finding something troubling last night. Alice, do you recall any specific behavior from Bob during the investigation that could indicat...",
+        "You said: \"Let's not jump to conclusions. We need to focus on finding clues to solve the mystery of Diana's death. I believe we can work together to uncover the truth.\"",
+        "Bob: \"I agree with Alice, let's focus on finding clues to solve Diana's death. I noticed Alice's concern for Diana last night, but I also sensed some unease from Charlie. Let's explore that further.\"",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"I found something troubling last night. Alice, have you been feeling well lately? I noticed you seemed anxious during our investigation.\"",
+        "Alice: \"I was worried about Diana last night. Her sudden absence is concerning. Let's focus on finding out who could have harmed her.\"",
+        "Charlie: \"I agree with Alice, let's focus on finding out who could have harmed Diana. Bob, did you notice anything unusual during the investigation last night?\"",
+        "Charlie: \"I'd like to bring up the inconsistency in Bob's statement about finding something troubling last night. Alice, do you recall any specific behavior from Bob during the investigation that could indicat...",
+        "Alice: \"Let's not jump to conclusions. We need to focus on finding clues to solve the mystery of Diana's death. I believe we can work together to uncover the truth.\"",
+        "You said: \"I agree with Alice, let's focus on finding clues to solve Diana's death. I noticed Alice's concern for Diana last night, but I also sensed some unease from Charlie. Let's explore that further.\"",
+        "Day 1 votes: Charlie voted for Bob, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: \"I found something troubling last night. Alice, have you been feeling well lately? I noticed you seemed anxious during our investigation.\"",
+        "Alice: \"I was worried about Diana last night. Her sudden absence is concerning. Let's focus on finding out who could have harmed her.\"",
+        "You said: \"I agree with Alice, let's focus on finding out who could have harmed Diana. Bob, did you notice anything unusual during the investigation last night?\"",
+        "You said: \"I'd like to bring up the inconsistency in Bob's statement about finding something troubling last night. Alice, do you recall any specific behavior from Bob during the investigation that could indicat...",
+        "Alice: \"Let's not jump to conclusions. We need to focus on finding clues to solve the mystery of Diana's death. I believe we can work together to uncover the truth.\"",
+        "Bob: \"I agree with Alice, let's focus on finding clues to solve Diana's death. I noticed Alice's concern for Diana last night, but I also sensed some unease from Charlie. Let's explore that further.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

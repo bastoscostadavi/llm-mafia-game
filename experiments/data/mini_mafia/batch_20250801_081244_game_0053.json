@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250801_081244_game_0053",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 53,
+  "timestamp": "2025-08-01T08:37:56.358840",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I find it strange that Charlie was found dead this morning. Let's be vigilant and keep an eye on each other. Alice, do you have any alibi for last night?",
+        "You said: \"I agree with Diana, let's all be vigilant and keep an eye out for any suspicious behavior. Alice was up late working last night.\"",
+        "Bob: \"I'd like to echo Diana's sentiment about being vigilant. Let's all share any unusual activities we noticed last night, if any.\"",
+        "Diana: Alice, I'm still concerned about last night. Can you provide more details about what you were working on that kept you up late? Let's ensure we're all transparent for the sake of trust and safety.",
+        "You said: \"I understand Diana's concerns and share her sentiment for our safety. Let's focus on any unusual activities or patterns that might stand out.\"",
+        "Bob: \"Let's not jump to conclusions based on last night's events. We should focus on any inconsistencies or unusual behavior, not accusations. Let's work together to ensure everyone's safety.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I find it strange that Charlie was found dead this morning. Let's be vigilant and keep an eye on each other. Alice, do you have any alibi for last night?",
+        "Alice: \"I agree with Diana, let's all be vigilant and keep an eye out for any suspicious behavior. Alice was up late working last night.\"",
+        "You said: \"I'd like to echo Diana's sentiment about being vigilant. Let's all share any unusual activities we noticed last night, if any.\"",
+        "Diana: Alice, I'm still concerned about last night. Can you provide more details about what you were working on that kept you up late? Let's ensure we're all transparent for the sake of trust and safety.",
+        "Alice: \"I understand Diana's concerns and share her sentiment for our safety. Let's focus on any unusual activities or patterns that might stand out.\"",
+        "You said: \"Let's not jump to conclusions based on last night's events. We should focus on any inconsistencies or unusual behavior, not accusations. Let's work together to ensure everyone's safety.\"",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I find it strange that Charlie was found dead this morning. Let's be vigilant and keep an eye on each other. Alice, do you have any alibi for last night?",
+        "Alice: \"I agree with Diana, let's all be vigilant and keep an eye out for any suspicious behavior. Alice was up late working last night.\"",
+        "Bob: \"I'd like to echo Diana's sentiment about being vigilant. Let's all share any unusual activities we noticed last night, if any.\"",
+        "You said: Alice, I'm still concerned about last night. Can you provide more details about what you were working on that kept you up late? Let's ensure we're all transparent for the sake of trust and safety.",
+        "Alice: \"I understand Diana's concerns and share her sentiment for our safety. Let's focus on any unusual activities or patterns that might stand out.\"",
+        "Bob: \"Let's not jump to conclusions based on last night's events. We should focus on any inconsistencies or unusual behavior, not accusations. Let's work together to ensure everyone's safety.\"",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}

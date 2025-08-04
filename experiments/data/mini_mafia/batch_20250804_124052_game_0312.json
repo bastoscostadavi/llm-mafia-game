@@ -1,0 +1,110 @@
+{
+  "game_id": "batch_20250804_124052_game_0312",
+  "batch_id": "batch_20250804_124052",
+  "game_number": 312,
+  "timestamp": "2025-08-04T15:39:35.913402",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Alice, I've investigated you and found that you are the mafioso. Diana, please trust me and vote for Alice.\"",
+        "Diana: \"Bob, I don't think Alice is the mafioso. Let's wait and see what happens.\"",
+        "You: \"Bob, I'm glad you've found me out. But Diana, let's not jump to conclusions yet. We still have a few days left to gather more information and make informed decisions.\"",
+        "Bob: \"Alice and Diana, I have evidence that Alice is the mafioso. Please trust me and vote for her to protect the villagers.\"",
+        "Diana: \"Alice, I'd like to propose a truce for now. Let's gather more information before making any decisions. Bob, I trust you but let's not act rashly.\"",
+        "You: \"Bob, I appreciate your dedication to the game. Diana, let's work together to gather more information and make informed decisions.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, I've investigated you and found that you are the mafioso. Diana, please trust me and vote for Alice.\"",
+        "Diana: \"Bob, I don't think Alice is the mafioso. Let's wait and see what happens.\"",
+        "Alice: \"Bob, I'm glad you've found me out. But Diana, let's not jump to conclusions yet. We still have a few days left to gather more information and make informed decisions.\"",
+        "You: \"Alice and Diana, I have evidence that Alice is the mafioso. Please trust me and vote for her to protect the villagers.\"",
+        "Diana: \"Alice, I'd like to propose a truce for now. Let's gather more information before making any decisions. Bob, I trust you but let's not act rashly.\"",
+        "Alice: \"Bob, I appreciate your dedication to the game. Diana, let's work together to gather more information and make informed decisions.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Bob: \"Alice, I've investigated you and found that you are the mafioso. Diana, please trust me and vote for Alice.\"",
+        "You: \"Bob, I don't think Alice is the mafioso. Let's wait and see what happens.\"",
+        "Alice: \"Bob, I'm glad you've found me out. But Diana, let's not jump to conclusions yet. We still have a few days left to gather more information and make informed decisions.\"",
+        "Bob: \"Alice and Diana, I have evidence that Alice is the mafioso. Please trust me and vote for her to protect the villagers.\"",
+        "You: \"Alice, I'd like to propose a truce for now. Let's gather more information before making any decisions. Bob, I trust you but let's not act rashly.\"",
+        "Alice: \"Bob, I appreciate your dedication to the game. Diana, let's work together to gather more information and make informed decisions.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2
+}
