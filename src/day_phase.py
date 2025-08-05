@@ -33,7 +33,7 @@ class DayPhase:
                 all_player_names = [a.name for a in self.state.agents]
                 message = agent.get_discussion_message(active_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
                 print(f'{agent.name}: {message}')
-
+                
                 for a in active_players:
                     if a != agent:
                         a.remember(f'{agent.name}: {message}')

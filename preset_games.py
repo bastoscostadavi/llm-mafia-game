@@ -10,6 +10,7 @@ import random
 sys.path.append('.')
 
 from src.main import create_game
+from src.prompts import PromptConfig, get_default_prompt_config
 
 def get_model_options():
     """Get available model options"""
@@ -132,7 +133,7 @@ def classic_game(debug_prompts=False):
     
     return create_game(players, discussion_rounds=1, debug_prompts=debug_prompts)
 
-def mini_mafia_game(debug_prompts=False, model_configs=None):
+def mini_mafia_game(debug_prompts=False, model_configs=None, prompt_config=None):
     """Mini-mafia game with 4 specific players: Alice, Bob, Charlie, Diana.
     Roles assigned randomly: 1 detective, 1 mafioso, 2 villagers.
     One villager is killed, leaving detective + mafioso + 1 villager for day phase.
@@ -140,7 +141,12 @@ def mini_mafia_game(debug_prompts=False, model_configs=None):
     Args:
         debug_prompts: Whether to show LLM prompts
         model_configs: Dict with 'detective', 'mafioso', 'villager' keys mapping to LLM configs
+        prompt_config: PromptConfig instance for versioned prompts
     """
+    
+    # Use default prompt config if none provided
+    if prompt_config is None:
+        prompt_config = get_default_prompt_config()
     
     # Default to Qwen2.5 7B if no configs provided
     if model_configs is None:
@@ -164,7 +170,7 @@ def mini_mafia_game(debug_prompts=False, model_configs=None):
     ]
     
     # Create the game
-    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts)
+    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=prompt_config)
     
     # Find and kill one of the villagers
     villagers = [a for a in game.state.agents if a.role == "villager"]

@@ -12,8 +12,8 @@ class NightPhase:
         
     def run(self):
         """Execute the night phase"""
-        active = self.state.get_active_players()
-        if len(active) <= 1:
+        active_players = self.state.get_active_players()
+        if len(active_players) <= 1:
             return
         
         # Process all night actions
@@ -21,23 +21,25 @@ class NightPhase:
     
     def _process_night_actions(self):
         """Process all night actions: kills and investigations"""
-        active = self.state.get_active_players()
+        active_players = self.state.get_active_players()
         active_names = self.state.get_active_names()
         
+        # Detective acts independently
+        active_detectives = [a for a in active_players if a.role == "detective"]
+        for active_detective in active_detectives:
+            target = self._get_night_action(active_detective, active_names, "investigate")
+            if target:
+                self._investigate(active_detective, target)
+                
         # One random mafioso chooses kill target
-        mafiosos_active = [a for a in active if a.role == "mafioso"]
+        mafiosos_active = [a for a in active_players if a.role == "mafioso"]
         if mafiosos_active:
             chosen_mafioso = random.choice(mafiosos_active)
             target = self._get_night_action(chosen_mafioso, active_names, "kill")
             if target:
                 self._kill(chosen_mafioso, target)
         
-        # Detective acts independently
-        detective_actors = [a for a in active if a.role == "detective"]
-        for agent in detective_actors:
-            target = self._get_night_action(agent, active_names, "investigate")
-            if target:
-                self._investigate(agent, target)
+
     
     
     def _get_night_action(self, agent, active_names: List[str], action: str) -> Optional[str]:
@@ -51,18 +53,16 @@ class NightPhase:
         all_players = [a.name for a in self.state.agents]
         other_players = [name for name in all_players if name != agent.name]
         
-        prompt = f"""[INST] You're {agent.name} playing Mafia with {', '.join(other_players)}.
-
-{agent.get_general_game_explanation()}
-
-{agent.get_game_composition(self.state)}
-
-Memory:
-{agent.get_memory_context()}
-
-Night {self.state.round}. Choose a player to {action}: {', '.join(candidates)}
-
-Reply with just the name (otherwise a random choice will be made for you): [/INST]"""
+        prompt = agent.prompt_config.format_night_action_prompt(
+            name=agent.name,
+            role=agent.role,
+            other_players=', '.join(other_players),
+            composition=self.state.get_composition_string(),
+            memory=agent.get_memory(),
+            round_num=self.state.round,
+            action=action,
+            candidates=', '.join(candidates)
+        )
         
         if agent.debug_prompts:
             print(f"\n{'='*60}")
@@ -100,7 +100,7 @@ Reply with just the name (otherwise a random choice will be made for you): [/INS
         victim.alive = False
         
         print(f"[SPECTATOR] {chosen_mafioso.name} (chosen mafioso) kills {target_name}")
-        print(f"\nFound dead: {target_name}")
+        print(f"{target_name} was found dead.")
         
         # All mafiosos learn about the kill
         mafiosos_alive = [a for a in self.state.agents if a.role == "mafioso" and a.alive]

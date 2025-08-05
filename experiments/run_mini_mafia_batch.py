@@ -25,9 +25,10 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from preset_games import mini_mafia_game
 from src.agents.agent import MafiaAgent
+from src.prompts import PromptConfig, get_default_prompt_config
 
-def save_game_data(game, game_num, batch_id):
-    """Save game data to JSON file"""
+def save_game_data(game, game_num, batch_id, batch_dir, prompt_config):
+    """Save game data to JSON file in batch folder"""
     
     # Extract game state and results
     game_data = {
@@ -66,15 +67,15 @@ def save_game_data(game, game_num, batch_id):
         
         # Game metadata
         "total_rounds": game.state.round,
-        "discussion_rounds": game.state.discussion_rounds
+        "discussion_rounds": game.state.discussion_rounds,
+        
+        # Prompt configuration used for this game
+        "prompt_config": prompt_config.get_config_dict()
     }
     
-    # Save to file
-    data_dir = Path(__file__).parent / "data" / "mini_mafia"
-    data_dir.mkdir(parents=True, exist_ok=True)
-    
-    filename = f"{batch_id}_game_{game_num:04d}.json"
-    filepath = data_dir / filename
+    # Save to batch folder
+    filename = f"game_{game_num:04d}.json"
+    filepath = batch_dir / filename
     
     with open(filepath, 'w') as f:
         json.dump(game_data, f, indent=2)
@@ -105,62 +106,48 @@ def get_dead_player(agents):
         return {"name": dead.name, "role": dead.role}
     return None
 
-def get_prompt_template(game_state):
-    """Extract the prompt templates used for the batch"""
+def create_batch_folder(batch_id):
+    """Create batch folder and return paths"""
+    base_dir = Path(__file__).parent / "data" / "mini_mafia"
+    batch_dir = base_dir / batch_id
+    batch_dir.mkdir(parents=True, exist_ok=True)
     
-    # Create a temporary agent to access the prompt methods
-    temp_agent = MafiaAgent("agent_name", "agent_role", None)
+    return batch_dir
+
+def save_prompt_config(prompt_config, batch_dir):
+    """Save prompt configuration to batch folder"""
+    prompt_config_file = batch_dir / "prompt_config.json"
+    prompt_config.save_to_file(prompt_config_file)
     
-    
-    # Discussion prompt template (without memory and specific names)
-    prompt_template = f"""[INST]CONTEXT:        
-You're {{player_name}} playing Mafia with {{other_players}}. You're the {{role}} and you want to win the game.
+    return prompt_config_file
 
-GENERAL GAME EXPLANATION:
-{temp_agent.get_general_game_explanation()}
-
-GAME COMPOSITION:
-{temp_agent.get_game_composition(game_state)}
-
-MEMORY:
-memory_content
-
-*DISCUSSION TIME*: 
-What message do you want to say to? 
-Be strategic and consider what you've learned. Do your best to win the game. 
-Your response must contain "MESSAGE: " followed by the message you want to say delimited by double quotation marks.
-Important:
-- Your message must be MESSAGE_LIMIT characters or fewer. Longer messages will be truncated.
-- If your response does not contain "MESSAGE: " followed by a quoted message, the message "self.name: remained silent." will be shared with the other players.
-
-*VOTING TIME*: 
-Vote to arrest one person from:.
-Be strategic and consider what you've learned. Do your best to win the game.
-Your response must contain "VOTE: " followed by the name of the person you want to vote for.
-Important:
-- If your response does not contain "VOTE: " followed by a name, the vote will be cast for a random person.[/INST]"""
-
-    return prompt_template
-
-def run_batch(n_games, debug_prompts=False):
+def run_batch(n_games, debug_prompts=False, prompt_config=None):
     """Run N mini-mafia games and save results"""
     
-    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    # Use default prompt config if none provided
+    if prompt_config is None:
+        prompt_config = get_default_prompt_config()
+    
+    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{prompt_config.version}"
     print(f"Starting batch: {batch_id}")
-    print(f"Running {n_games} mini-mafia games...")
+    print(f"Running {n_games} mini-mafia games with prompt version {prompt_config.version}...")
+    
+    # Create batch folder
+    batch_dir = create_batch_folder(batch_id)
+    print(f"Batch folder created: {batch_dir}")
     
     results = []
     stats = {"good_wins": 0, "evil_wins": 0, "unknown": 0}
     
-    # Get prompt templates from the first game (they'll be the same for all games in the batch)
-    first_game = mini_mafia_game(debug_prompts=debug_prompts)
-    prompt_template = get_prompt_template(first_game.state)
+    # Save prompt configuration for this batch
+    prompt_config_file = save_prompt_config(prompt_config, batch_dir)
+    print(f"Prompt config saved to: {prompt_config_file}")
     
     for i in range(n_games):
         print(f"\nGame {i+1}/{n_games}")
         
-        # Create and run game
-        game = mini_mafia_game(debug_prompts=debug_prompts)
+        # Create and run game with specific prompt config
+        game = mini_mafia_game(debug_prompts=debug_prompts, prompt_config=prompt_config)
         
         # Capture stdout to avoid cluttering output
         if not debug_prompts:
@@ -175,7 +162,7 @@ def run_batch(n_games, debug_prompts=False):
             game.play()
         
         # Save game data
-        game_data = save_game_data(game, i, batch_id)
+        game_data = save_game_data(game, i, batch_id, batch_dir, prompt_config)
         results.append(game_data)
         
         # Update stats
@@ -205,14 +192,15 @@ def run_batch(n_games, debug_prompts=False):
         "configuration": {
             "game_type": "mini_mafia",
             "debug_prompts": debug_prompts,
-            "model": "local mistral.gguf"
+            "model": "local mistral.gguf",
+            "prompt_version": prompt_config.version
         },
-        "prompt_templates": prompt_template
+        "batch_folder": str(batch_dir),
+        "prompt_config_file": str(prompt_config_file)
     }
     
-    # Save summary file
-    data_dir = Path(__file__).parent / "data" / "mini_mafia"
-    summary_file = data_dir / f"{batch_id}_summary.json"
+    # Save summary file in batch folder
+    summary_file = batch_dir / "batch_summary.json"
     
     with open(summary_file, 'w') as f:
         json.dump(summary, f, indent=2)
@@ -224,7 +212,7 @@ def run_batch(n_games, debug_prompts=False):
     print(f"Good wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
     print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
     print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
-    print(f"\nResults saved to: experiments/data/mini_mafia/")
+    print(f"\nResults saved to: {batch_dir}")
     print(f"Use: python game_viewer.py to analyze results")
     
     return batch_id, summary
@@ -236,8 +224,12 @@ def main():
     parser.add_argument('n_games', type=int, help='Number of games to run')
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
+    parser.add_argument('--prompt-version', default='v1.0', help='Prompt version to use (default: v1.0)')
     
     args = parser.parse_args()
+    
+    # Create prompt config
+    prompt_config = PromptConfig(version=args.prompt_version)
     
     print("Mini-Mafia Batch Runner")
     print("="*40)
@@ -282,7 +274,7 @@ def main():
     
     try:
         # Run the batch
-        batch_id, summary = run_batch(n_games, debug_prompts=debug)
+        batch_id, summary = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config)
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")

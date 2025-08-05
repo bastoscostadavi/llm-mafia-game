@@ -7,6 +7,7 @@ from src.agents.agent import MafiaAgent
 from src.day_phase import DayPhase
 from src.night_phase import NightPhase
 from src.agents.llm_interface import LlamaCppInterface
+from src.prompts import PromptConfig, get_default_prompt_config
 
 try:
     import openai
@@ -88,6 +89,17 @@ class GameState:
     
     def get_active_names(self):
         return [a.name for a in self.get_active_players()]
+    
+    def get_composition_string(self) -> str:
+        """Get the game composition formatted for prompts"""
+        parts = []
+        for role in ['mafioso', 'detective', 'villager']:
+            count = self.composition.get(role, 0)
+            if count > 0:
+                role_word = role + ('s' if count > 1 else '')
+                parts.append(f"{count} {role_word}")
+        
+        return ', '.join(parts)
 
 class Game:
     """Main game controller that manages the game flow"""
@@ -237,7 +249,7 @@ def create_llm(llm_config):
         # Default to local
         return create_llm({'type': 'local'})
 
-def create_game(players, discussion_rounds=2, debug_prompts=False):
+def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=None):
     """
     Create a Mafia game with specified players
     
@@ -245,6 +257,7 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
         players: List of player dicts with 'name', 'role', and 'llm' keys
         discussion_rounds: Number of discussion rounds per day (default: 2)
         debug_prompts: Whether to print prompts sent to LLMs (default: False)
+        prompt_config: PromptConfig instance for versioned prompts (default: v1.0)
         
     Example:
         players = [
@@ -253,11 +266,14 @@ def create_game(players, discussion_rounds=2, debug_prompts=False):
             {'name': 'Charlie', 'role': 'villager', 'llm': {'type': 'anthropic', 'model': 'claude-3-haiku'}}
         ]
     """
+    # Use default prompt config if none provided
+    if prompt_config is None:
+        prompt_config = get_default_prompt_config()
     # Create agents
     agents = []
     for player in players:
         llm = create_llm(player['llm'])
-        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts)
+        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts, prompt_config)
         # Add role identity as first memory entry
         agent.remember(f"You're {agent.name}, the {agent.role}.")
         agents.append(agent)
