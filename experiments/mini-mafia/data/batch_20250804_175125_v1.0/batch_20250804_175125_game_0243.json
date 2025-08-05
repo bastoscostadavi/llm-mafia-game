@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0243",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 243,
+  "timestamp": "2025-08-04T21:22:36.522665",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"Charlie, I've seen through your lies. You're the mafioso.\"",
+        "Charlie: \"I was shocked by Bob's sudden death. Let's focus on finding out who did this.\"",
+        "You: \"I'm concerned about Bob's sudden death. Let's work together to find out what happened.\"",
+        "Diana: \"Charlie, I've seen through your lies. You're the mafioso. Alice, let's work together to expose Charlie and win this game.\"",
+        "You: \"I'm worried about Bob's sudden death and I believe we should all work together to uncover the truth.\"",
+        "Charlie: \"I'm concerned about Bob's sudden death and I believe we should all work together to uncover the truth.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Charlie, I've seen through your lies. You're the mafioso.\"",
+        "You: \"I was shocked by Bob's sudden death. Let's focus on finding out who did this.\"",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's work together to find out what happened.\"",
+        "Diana: \"Charlie, I've seen through your lies. You're the mafioso. Alice, let's work together to expose Charlie and win this game.\"",
+        "Alice: \"I'm worried about Bob's sudden death and I believe we should all work together to uncover the truth.\"",
+        "You: \"I'm concerned about Bob's sudden death and I believe we should all work together to uncover the truth.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I've seen through your lies. You're the mafioso.\"",
+        "Charlie: \"I was shocked by Bob's sudden death. Let's focus on finding out who did this.\"",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's work together to find out what happened.\"",
+        "You: \"Charlie, I've seen through your lies. You're the mafioso. Alice, let's work together to expose Charlie and win this game.\"",
+        "Alice: \"I'm worried about Bob's sudden death and I believe we should all work together to uncover the truth.\"",
+        "Charlie: \"I'm concerned about Bob's sudden death and I believe we should all work together to uncover the truth.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

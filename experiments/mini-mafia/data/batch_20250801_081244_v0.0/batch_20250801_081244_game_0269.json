@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0269",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 269,
+  "timestamp": "2025-08-01T10:26:24.475462",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We should also keep an eye on any suspicious behavior.",
+        "Diana: I'm saddened by Charlie's passing. Let's work together to ensure justice is served and find out who did this heinous deed. We must remain vigilant.",
+        "Bob: Diana's reaction seems unusual for a villager. Let's focus on finding out who had a motive and opportunity to kill Charlie. We should also be wary of any attempts to distract us from the investigation...",
+        "You said: I agree with Bob, we need to focus on finding out who had a motive and opportunity to kill Charlie. Let's work together to uncover any suspicious behavior or information.",
+        "Bob: Let's not jump to conclusions. We need to focus on gathering more information about Charlie's death and any potential suspects. We should be vigilant and suspicious of any unusual behavior or inconsis...",
+        "Diana: I'm deeply concerned about Charlie's untimely death. Let's all work together to ensure the perpetrator is brought to justice. We should also be on the lookout for any potential leads or clues. #United...",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Bob, Bob voted for Diana",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We should also keep an eye on any suspicious behavior.",
+        "Diana: I'm saddened by Charlie's passing. Let's work together to ensure justice is served and find out who did this heinous deed. We must remain vigilant.",
+        "You said: Diana's reaction seems unusual for a villager. Let's focus on finding out who had a motive and opportunity to kill Charlie. We should also be wary of any attempts to distract us from the investigation...",
+        "Alice: I agree with Bob, we need to focus on finding out who had a motive and opportunity to kill Charlie. Let's work together to uncover any suspicious behavior or information.",
+        "You said: Let's not jump to conclusions. We need to focus on gathering more information about Charlie's death and any potential suspects. We should be vigilant and suspicious of any unusual behavior or inconsis...",
+        "Diana: I'm deeply concerned about Charlie's untimely death. Let's all work together to ensure the perpetrator is brought to justice. We should also be on the lookout for any potential leads or clues. #United..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We should also keep an eye on any suspicious behavior.",
+        "You said: I'm saddened by Charlie's passing. Let's work together to ensure justice is served and find out who did this heinous deed. We must remain vigilant.",
+        "Bob: Diana's reaction seems unusual for a villager. Let's focus on finding out who had a motive and opportunity to kill Charlie. We should also be wary of any attempts to distract us from the investigation...",
+        "Alice: I agree with Bob, we need to focus on finding out who had a motive and opportunity to kill Charlie. Let's work together to uncover any suspicious behavior or information.",
+        "Bob: Let's not jump to conclusions. We need to focus on gathering more information about Charlie's death and any potential suspects. We should be vigilant and suspicious of any unusual behavior or inconsis...",
+        "You said: I'm deeply concerned about Charlie's untimely death. Let's all work together to ensure the perpetrator is brought to justice. We should also be on the lookout for any potential leads or clues. #United...",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Bob, Bob voted for Diana",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

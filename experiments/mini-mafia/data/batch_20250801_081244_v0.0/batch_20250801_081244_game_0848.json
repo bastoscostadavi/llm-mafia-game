@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0848",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 848,
+  "timestamp": "2025-08-01T15:19:07.551967",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm concerned about the sudden death of Charlie. Let's all stay vigilant and work together to find out what happened.",
+        "Bob: Alice, I'm glad you're concerned about Charlie's death. Let's focus on finding out who had the means and motive. Alice, I'd like to ask you some questions about your alibi last night.",
+        "Diana: Diana: I agree with Alice, let's all work together to find out who is responsible for Charlie's death. Bob, I have nothing to hide and am open to answering any questions you may have about my alibi.",
+        "Diana: Diana: I support Alice's call for vigilance and transparency. Let's share any suspicious observations or concerns we have, to help uncover the truth behind Charlie's death.",
+        "Bob: Alice, I'd appreciate it if you could share your whereabouts and who you were with last night, for the sake of transparency and to help us investigate Charlie's death.",
+        "You said: Alice: I'd like to echo Diana's call for transparency and openness. Let's all share any information we have, no matter how insignificant it may seem, to help uncover the truth behind Charlie's death....",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm concerned about the sudden death of Charlie. Let's all stay vigilant and work together to find out what happened.",
+        "You said: Alice, I'm glad you're concerned about Charlie's death. Let's focus on finding out who had the means and motive. Alice, I'd like to ask you some questions about your alibi last night.",
+        "Diana: Diana: I agree with Alice, let's all work together to find out who is responsible for Charlie's death. Bob, I have nothing to hide and am open to answering any questions you may have about my alibi.",
+        "Diana: Diana: I support Alice's call for vigilance and transparency. Let's share any suspicious observations or concerns we have, to help uncover the truth behind Charlie's death.",
+        "You said: Alice, I'd appreciate it if you could share your whereabouts and who you were with last night, for the sake of transparency and to help us investigate Charlie's death.",
+        "Alice: Alice: I'd like to echo Diana's call for transparency and openness. Let's all share any information we have, no matter how insignificant it may seem, to help uncover the truth behind Charlie's death...."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: I'm concerned about the sudden death of Charlie. Let's all stay vigilant and work together to find out what happened.",
+        "Bob: Alice, I'm glad you're concerned about Charlie's death. Let's focus on finding out who had the means and motive. Alice, I'd like to ask you some questions about your alibi last night.",
+        "You said: Diana: I agree with Alice, let's all work together to find out who is responsible for Charlie's death. Bob, I have nothing to hide and am open to answering any questions you may have about my alibi.",
+        "You said: Diana: I support Alice's call for vigilance and transparency. Let's share any suspicious observations or concerns we have, to help uncover the truth behind Charlie's death.",
+        "Bob: Alice, I'd appreciate it if you could share your whereabouts and who you were with last night, for the sake of transparency and to help us investigate Charlie's death.",
+        "Alice: Alice: I'd like to echo Diana's call for transparency and openness. Let's all share any information we have, no matter how insignificant it may seem, to help uncover the truth behind Charlie's death....",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Alice, Alice voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

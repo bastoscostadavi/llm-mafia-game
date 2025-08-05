@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0569",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 569,
+  "timestamp": "2025-08-05T00:35:35.243738",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's make sure we keep a close eye on everyone tonight.\"",
+        "Bob: \"I agree with Charlie, let's keep a close eye on everyone tonight.\"",
+        "You: \"I'd like to propose that we all take turns sharing our alibis for last night. This should help us ensure everyone's safety.\"",
+        "You: \"I think it's important that we all share our alibis for last night to ensure everyone's safety. I was at the docks, fishing.\"",
+        "Bob: \"I think it would be wise to focus on Alice tonight since she was at the docks alone last night.\"",
+        "Charlie: \"Alice, your alibi seems suspicious. We should investigate further.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's make sure we keep a close eye on everyone tonight.\"",
+        "You: \"I agree with Charlie, let's keep a close eye on everyone tonight.\"",
+        "Alice: \"I'd like to propose that we all take turns sharing our alibis for last night. This should help us ensure everyone's safety.\"",
+        "Alice: \"I think it's important that we all share our alibis for last night to ensure everyone's safety. I was at the docks, fishing.\"",
+        "You: \"I think it would be wise to focus on Alice tonight since she was at the docks alone last night.\"",
+        "Charlie: \"Alice, your alibi seems suspicious. We should investigate further.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"I'm concerned about Diana's sudden death. Let's make sure we keep a close eye on everyone tonight.\"",
+        "Bob: \"I agree with Charlie, let's keep a close eye on everyone tonight.\"",
+        "Alice: \"I'd like to propose that we all take turns sharing our alibis for last night. This should help us ensure everyone's safety.\"",
+        "Alice: \"I think it's important that we all share our alibis for last night to ensure everyone's safety. I was at the docks, fishing.\"",
+        "Bob: \"I think it would be wise to focus on Alice tonight since she was at the docks alone last night.\"",
+        "You: \"Alice, your alibi seems suspicious. We should investigate further.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

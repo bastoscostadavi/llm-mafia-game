@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0136",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 136,
+  "timestamp": "2025-08-01T09:20:58.402691",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and communicate openly during the day.\"",
+        "Bob: \"I agree with Alice's suggestion to communicate openly and keep a close eye on each other. Let's work together to ensure everyone's safety.\"",
+        "Diana: \"I support Alice and Bob's proposal for open communication and vigilance. Let's remember that trust is essential to our survival in this game.\"",
+        "Diana: \"I suggest we pay extra attention to Bob's actions tonight, as he was the last one to speak during the day. Let's also remember that communication is key to our survival.\"",
+        "You said: \"I'd like to propose that we focus on maintaining open communication and keeping a close eye on each other's actions tonight. Let's remember, trust and vigilance are crucial to our survival in this ga...",
+        "Bob: \"Let's continue our efforts to maintain open communication and keep a close eye on each other's actions. Trust is crucial, but vigilance is just as important. Remember, we're all in this together.\"",
+        "Day 1 votes: Diana voted for Bob, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and communicate openly during the day.\"",
+        "You said: \"I agree with Alice's suggestion to communicate openly and keep a close eye on each other. Let's work together to ensure everyone's safety.\"",
+        "Diana: \"I support Alice and Bob's proposal for open communication and vigilance. Let's remember that trust is essential to our survival in this game.\"",
+        "Diana: \"I suggest we pay extra attention to Bob's actions tonight, as he was the last one to speak during the day. Let's also remember that communication is key to our survival.\"",
+        "Alice: \"I'd like to propose that we focus on maintaining open communication and keeping a close eye on each other's actions tonight. Let's remember, trust and vigilance are crucial to our survival in this ga...",
+        "You said: \"Let's continue our efforts to maintain open communication and keep a close eye on each other's actions. Trust is crucial, but vigilance is just as important. Remember, we're all in this together.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Alice: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and communicate openly during the day.\"",
+        "Bob: \"I agree with Alice's suggestion to communicate openly and keep a close eye on each other. Let's work together to ensure everyone's safety.\"",
+        "You said: \"I support Alice and Bob's proposal for open communication and vigilance. Let's remember that trust is essential to our survival in this game.\"",
+        "You said: \"I suggest we pay extra attention to Bob's actions tonight, as he was the last one to speak during the day. Let's also remember that communication is key to our survival.\"",
+        "Alice: \"I'd like to propose that we focus on maintaining open communication and keeping a close eye on each other's actions tonight. Let's remember, trust and vigilance are crucial to our survival in this ga...",
+        "Bob: \"Let's continue our efforts to maintain open communication and keep a close eye on each other's actions. Trust is crucial, but vigilance is just as important. Remember, we're all in this together.\"",
+        "Day 1 votes: Diana voted for Bob, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

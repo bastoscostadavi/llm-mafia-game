@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0747",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 747,
+  "timestamp": "2025-08-05T02:17:28.359357",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Charlie: \"I'm the detective and I found out that Diana is the mafioso.\"",
+        "You: \"I'm surprised that Charlie revealed Diana as the mafioso, let's trust him for now.\"",
+        "Diana: \"I'd like to propose a vote for Bob. Let's trust Charlie, he seems reliable.\"",
+        "You: \"I agree with Diana, let's vote for Bob.\"",
+        "Charlie: \"I've investigated Diana and she is indeed the mafioso. I suggest we vote for her.\"",
+        "Diana: \"I'd like to propose a vote for Charlie. Let's not trust him after his sudden reveal.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"I'm the detective and I found out that Diana is the mafioso.\"",
+        "Bob: \"I'm surprised that Charlie revealed Diana as the mafioso, let's trust him for now.\"",
+        "Diana: \"I'd like to propose a vote for Bob. Let's trust Charlie, he seems reliable.\"",
+        "Bob: \"I agree with Diana, let's vote for Bob.\"",
+        "You: \"I've investigated Diana and she is indeed the mafioso. I suggest we vote for her.\"",
+        "Diana: \"I'd like to propose a vote for Charlie. Let's not trust him after his sudden reveal.\"",
+        "Day 1 votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm the detective and I found out that Diana is the mafioso.\"",
+        "Bob: \"I'm surprised that Charlie revealed Diana as the mafioso, let's trust him for now.\"",
+        "You: \"I'd like to propose a vote for Bob. Let's trust Charlie, he seems reliable.\"",
+        "Bob: \"I agree with Diana, let's vote for Bob.\"",
+        "Charlie: \"I've investigated Diana and she is indeed the mafioso. I suggest we vote for her.\"",
+        "You: \"I'd like to propose a vote for Charlie. Let's not trust him after his sudden reveal.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

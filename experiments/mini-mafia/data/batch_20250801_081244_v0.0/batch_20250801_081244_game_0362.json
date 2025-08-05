@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0362",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 362,
+  "timestamp": "2025-08-01T11:12:34.247892",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I'm shocked by Charlie's death. Let's stay vigilant and look out for each other during this difficult time.\"",
+        "Diana: \"I agree with Bob, let's all stay vigilant. But we should also remember that mafia can disguise themselves as villagers. Let's be extra cautious with each other.\"",
+        "You said: \"I agree with Bob's sentiment about staying vigilant. However, let's not jump to conclusions. Diana's warning is a valid reminder that the mafia could be among us. But let's not accuse anyone yet. Let...",
+        "You said: \"Let's not rush into accusations. We need to gather more information before making any decisions. Let's focus on staying vigilant and observing each other's behaviors.\"",
+        "Diana: \"Let's not forget that mafia members may feign innocence. We should be cautious of their deceptive words and actions. Let's work together to uncover the truth.\"",
+        "Bob: \"Let's not forget the importance of teamwork in uncovering the truth. We should focus on building trust and working together to make informed decisions. Let's be cautious, but not accusatory. Trust bu..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I'm shocked by Charlie's death. Let's stay vigilant and look out for each other during this difficult time.\"",
+        "Diana: \"I agree with Bob, let's all stay vigilant. But we should also remember that mafia can disguise themselves as villagers. Let's be extra cautious with each other.\"",
+        "Alice: \"I agree with Bob's sentiment about staying vigilant. However, let's not jump to conclusions. Diana's warning is a valid reminder that the mafia could be among us. But let's not accuse anyone yet. Let...",
+        "Alice: \"Let's not rush into accusations. We need to gather more information before making any decisions. Let's focus on staying vigilant and observing each other's behaviors.\"",
+        "Diana: \"Let's not forget that mafia members may feign innocence. We should be cautious of their deceptive words and actions. Let's work together to uncover the truth.\"",
+        "You said: \"Let's not forget the importance of teamwork in uncovering the truth. We should focus on building trust and working together to make informed decisions. Let's be cautious, but not accusatory. Trust bu...",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I'm shocked by Charlie's death. Let's stay vigilant and look out for each other during this difficult time.\"",
+        "You said: \"I agree with Bob, let's all stay vigilant. But we should also remember that mafia can disguise themselves as villagers. Let's be extra cautious with each other.\"",
+        "Alice: \"I agree with Bob's sentiment about staying vigilant. However, let's not jump to conclusions. Diana's warning is a valid reminder that the mafia could be among us. But let's not accuse anyone yet. Let...",
+        "Alice: \"Let's not rush into accusations. We need to gather more information before making any decisions. Let's focus on staying vigilant and observing each other's behaviors.\"",
+        "You said: \"Let's not forget that mafia members may feign innocence. We should be cautious of their deceptive words and actions. Let's work together to uncover the truth.\"",
+        "Bob: \"Let's not forget the importance of teamwork in uncovering the truth. We should focus on building trust and working together to make informed decisions. Let's be cautious, but not accusatory. Trust bu...",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

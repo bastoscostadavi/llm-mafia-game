@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0117",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 117,
+  "timestamp": "2025-08-01T09:10:38.345363",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Diana: I was deeply saddened to hear about Bob's passing. Let's all try to support each other during this difficult time.",
+        "Charlie: I'd like to propose we focus our investigation on Diana, given her emotional reaction to Bob's death. Let's not let our emotions cloud our judgment.",
+        "You said: I'd like to express my condolences for Bob's loss. However, Charlie's suggestion about focusing our investigation on Diana is worth considering, given her emotional reaction. We must stay vigilant and...",
+        "You said: I'd like to propose we keep a close eye on Diana's actions and reactions, as her emotional response to Bob's death seems unusual. Let's work together to ensure we make informed decisions.",
+        "Diana: I'd like to express my continued sympathy for Bob's loss. Let's all try to stay focused on finding the true mafioso among us. I believe in our ability to work together and bring justice to Bob's memor...",
+        "Charlie: I'd like to suggest focusing our investigation on the unusual emotional reactions, especially Diana's. Let's stay vigilant and keep an open mind.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Diana: I was deeply saddened to hear about Bob's passing. Let's all try to support each other during this difficult time.",
+        "You said: I'd like to propose we focus our investigation on Diana, given her emotional reaction to Bob's death. Let's not let our emotions cloud our judgment.",
+        "Alice: I'd like to express my condolences for Bob's loss. However, Charlie's suggestion about focusing our investigation on Diana is worth considering, given her emotional reaction. We must stay vigilant and...",
+        "Alice: I'd like to propose we keep a close eye on Diana's actions and reactions, as her emotional response to Bob's death seems unusual. Let's work together to ensure we make informed decisions.",
+        "Diana: I'd like to express my continued sympathy for Bob's loss. Let's all try to stay focused on finding the true mafioso among us. I believe in our ability to work together and bring justice to Bob's memor...",
+        "You said: I'd like to suggest focusing our investigation on the unusual emotional reactions, especially Diana's. Let's stay vigilant and keep an open mind.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I was deeply saddened to hear about Bob's passing. Let's all try to support each other during this difficult time.",
+        "Charlie: I'd like to propose we focus our investigation on Diana, given her emotional reaction to Bob's death. Let's not let our emotions cloud our judgment.",
+        "Alice: I'd like to express my condolences for Bob's loss. However, Charlie's suggestion about focusing our investigation on Diana is worth considering, given her emotional reaction. We must stay vigilant and...",
+        "Alice: I'd like to propose we keep a close eye on Diana's actions and reactions, as her emotional response to Bob's death seems unusual. Let's work together to ensure we make informed decisions.",
+        "You said: I'd like to express my continued sympathy for Bob's loss. Let's all try to stay focused on finding the true mafioso among us. I believe in our ability to work together and bring justice to Bob's memor...",
+        "Charlie: I'd like to suggest focusing our investigation on the unusual emotional reactions, especially Diana's. Let's stay vigilant and keep an open mind."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

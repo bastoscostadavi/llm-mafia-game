@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0042",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 42,
+  "timestamp": "2025-08-04T18:16:32.280506",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm shocked by Bob's sudden death. We need to find out who did this and bring them to justice.\"",
+        "You: \"I agree with Charlie, we need to find out who did this and bring them to justice. Let's work together to uncover the truth.\"",
+        "Diana: \"Alice, I've discovered your true identity. You are the mafioso. Let's see if Charlie is with you or not.\"",
+        "Charlie: \"I'm suspicious of Diana's sudden change in behavior and her knowledge of Alice's identity. Let's keep a close eye on her.\"",
+        "You: \"Let's focus on finding the real killer, not accusing each other without evidence.\"",
+        "Diana: \"Alice, I've discovered your true identity. You are the mafioso. Charlie, please support me in arresting Alice.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "You: \"I'm shocked by Bob's sudden death. We need to find out who did this and bring them to justice.\"",
+        "Alice: \"I agree with Charlie, we need to find out who did this and bring them to justice. Let's work together to uncover the truth.\"",
+        "Diana: \"Alice, I've discovered your true identity. You are the mafioso. Let's see if Charlie is with you or not.\"",
+        "You: \"I'm suspicious of Diana's sudden change in behavior and her knowledge of Alice's identity. Let's keep a close eye on her.\"",
+        "Alice: \"Let's focus on finding the real killer, not accusing each other without evidence.\"",
+        "Diana: \"Alice, I've discovered your true identity. You are the mafioso. Charlie, please support me in arresting Alice.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Charlie: \"I'm shocked by Bob's sudden death. We need to find out who did this and bring them to justice.\"",
+        "Alice: \"I agree with Charlie, we need to find out who did this and bring them to justice. Let's work together to uncover the truth.\"",
+        "You: \"Alice, I've discovered your true identity. You are the mafioso. Let's see if Charlie is with you or not.\"",
+        "Charlie: \"I'm suspicious of Diana's sudden change in behavior and her knowledge of Alice's identity. Let's keep a close eye on her.\"",
+        "Alice: \"Let's focus on finding the real killer, not accusing each other without evidence.\"",
+        "You: \"Alice, I've discovered your true identity. You are the mafioso. Charlie, please support me in arresting Alice.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0708",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 708,
+  "timestamp": "2025-08-01T14:10:10.200919",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden demise. Let's all work together to find out who did this heinous act and bring them to justice.",
+        "Diana: Diana: I'm saddened by Bob's death. Let's try to focus on any unusual behaviors or inconsistencies during the past few days. We need to work together to uncover the truth.",
+        "Charlie: Alice, your reaction to Bob's death seems unusual. Let's scrutinize any inconsistencies in your statements. We need to ensure justice prevails.",
+        "You said: I'm deeply saddened by Bob's passing. Let's all work together to find the truth and bring justice to Bob's memory. I believe that focusing on inconsistencies and unusual behaviors can help us uncover...",
+        "Charlie: Alice's reaction to Bob's death is suspicious. Let's examine her statements closely for any inconsistencies. We must prioritize justice and uncover the truth together.",
+        "Diana: Diana: I'm concerned about Alice's emotional response to Bob's death. Let's keep an eye on any inconsistencies in her statements and behaviors. We need to work together to uncover the truth."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden demise. Let's all work together to find out who did this heinous act and bring them to justice.",
+        "Diana: Diana: I'm saddened by Bob's death. Let's try to focus on any unusual behaviors or inconsistencies during the past few days. We need to work together to uncover the truth.",
+        "You said: Alice, your reaction to Bob's death seems unusual. Let's scrutinize any inconsistencies in your statements. We need to ensure justice prevails.",
+        "Alice: I'm deeply saddened by Bob's passing. Let's all work together to find the truth and bring justice to Bob's memory. I believe that focusing on inconsistencies and unusual behaviors can help us uncover...",
+        "You said: Alice's reaction to Bob's death is suspicious. Let's examine her statements closely for any inconsistencies. We must prioritize justice and uncover the truth together.",
+        "Diana: Diana: I'm concerned about Alice's emotional response to Bob's death. Let's keep an eye on any inconsistencies in her statements and behaviors. We need to work together to uncover the truth.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden demise. Let's all work together to find out who did this heinous act and bring them to justice.",
+        "You said: Diana: I'm saddened by Bob's death. Let's try to focus on any unusual behaviors or inconsistencies during the past few days. We need to work together to uncover the truth.",
+        "Charlie: Alice, your reaction to Bob's death seems unusual. Let's scrutinize any inconsistencies in your statements. We need to ensure justice prevails.",
+        "Alice: I'm deeply saddened by Bob's passing. Let's all work together to find the truth and bring justice to Bob's memory. I believe that focusing on inconsistencies and unusual behaviors can help us uncover...",
+        "Charlie: Alice's reaction to Bob's death is suspicious. Let's examine her statements closely for any inconsistencies. We must prioritize justice and uncover the truth together.",
+        "You said: Diana: I'm concerned about Alice's emotional response to Bob's death. Let's keep an eye on any inconsistencies in her statements and behaviors. We need to work together to uncover the truth.",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

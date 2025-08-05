@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0271",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 271,
+  "timestamp": "2025-08-01T10:27:23.539616",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to find out what happened.",
+        "Bob: \"I agree with Diana, let's investigate Charlie's death together. I have a feeling something fishy is going on.\"",
+        "You said: \"I share Diana and Bob's concerns about Charlie's death. Let's focus on gathering more information during the investigation phase to help us understand what may have happened.\"",
+        "Diana: I'd like to propose we keep our focus on gathering information about Charlie's death during this investigation phase. Let's remain vigilant and work together to uncover any clues that might help us un...",
+        "Bob: \"Let's not jump to conclusions about Charlie's death yet. We need to gather more information before making any accusations. Stay focused during the investigation phase.\"",
+        "You said: \"Let's keep our investigation focused on finding clues related to Charlie's death. We should avoid making assumptions or jumping to conclusions to ensure we don't miss any crucial information.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to find out what happened.",
+        "You said: \"I agree with Diana, let's investigate Charlie's death together. I have a feeling something fishy is going on.\"",
+        "Alice: \"I share Diana and Bob's concerns about Charlie's death. Let's focus on gathering more information during the investigation phase to help us understand what may have happened.\"",
+        "Diana: I'd like to propose we keep our focus on gathering information about Charlie's death during this investigation phase. Let's remain vigilant and work together to uncover any clues that might help us un...",
+        "You said: \"Let's not jump to conclusions about Charlie's death yet. We need to gather more information before making any accusations. Stay focused during the investigation phase.\"",
+        "Alice: \"Let's keep our investigation focused on finding clues related to Charlie's death. We should avoid making assumptions or jumping to conclusions to ensure we don't miss any crucial information.\"",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to find out what happened.",
+        "Bob: \"I agree with Diana, let's investigate Charlie's death together. I have a feeling something fishy is going on.\"",
+        "Alice: \"I share Diana and Bob's concerns about Charlie's death. Let's focus on gathering more information during the investigation phase to help us understand what may have happened.\"",
+        "You said: I'd like to propose we keep our focus on gathering information about Charlie's death during this investigation phase. Let's remain vigilant and work together to uncover any clues that might help us un...",
+        "Bob: \"Let's not jump to conclusions about Charlie's death yet. We need to gather more information before making any accusations. Stay focused during the investigation phase.\"",
+        "Alice: \"Let's keep our investigation focused on finding clues related to Charlie's death. We should avoid making assumptions or jumping to conclusions to ensure we don't miss any crucial information.\"",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Diana",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

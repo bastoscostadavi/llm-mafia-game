@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0154",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 154,
+  "timestamp": "2025-08-01T09:29:48.109983",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I was deeply saddened to hear about Diana's passing. Let's all focus on finding the real culprit behind this tragedy. We must work together to ensure justice is served. #solidarity #justiceforDiana",
+        "Charlie: I agree with Bob, we need to find the real culprit. Let's not jump to conclusions and consider all possibilities carefully. #justiceforDiana #stayfocused",
+        "You said: \"Let's not forget, Bob was the one who suggested we focus on finding the real culprit right after Diana's death. We should keep that in mind during our investigation.\"",
+        "You said: \"Based on the information we have, let's keep an eye on those who have shown concern for Diana's death right after it happened. It's important we stay vigilant.\"",
+        "Charlie: I'd like to propose we revisit the conversation right after Diana's death. Let's examine the reactions and statements of everyone present at that time for clues. #stayfocused #justiceforDiana",
+        "Bob: I'd like to express my condolences once again for Diana's unfortunate demise. Let's all work together to find the real culprit and bring them to justice. #justiceforDiana #solidarity #stayfocused"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened to hear about Diana's passing. Let's all focus on finding the real culprit behind this tragedy. We must work together to ensure justice is served. #solidarity #justiceforDiana",
+        "Charlie: I agree with Bob, we need to find the real culprit. Let's not jump to conclusions and consider all possibilities carefully. #justiceforDiana #stayfocused",
+        "Alice: \"Let's not forget, Bob was the one who suggested we focus on finding the real culprit right after Diana's death. We should keep that in mind during our investigation.\"",
+        "Alice: \"Based on the information we have, let's keep an eye on those who have shown concern for Diana's death right after it happened. It's important we stay vigilant.\"",
+        "Charlie: I'd like to propose we revisit the conversation right after Diana's death. Let's examine the reactions and statements of everyone present at that time for clues. #stayfocused #justiceforDiana",
+        "You said: I'd like to express my condolences once again for Diana's unfortunate demise. Let's all work together to find the real culprit and bring them to justice. #justiceforDiana #solidarity #stayfocused",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Bob: I was deeply saddened to hear about Diana's passing. Let's all focus on finding the real culprit behind this tragedy. We must work together to ensure justice is served. #solidarity #justiceforDiana",
+        "You said: I agree with Bob, we need to find the real culprit. Let's not jump to conclusions and consider all possibilities carefully. #justiceforDiana #stayfocused",
+        "Alice: \"Let's not forget, Bob was the one who suggested we focus on finding the real culprit right after Diana's death. We should keep that in mind during our investigation.\"",
+        "Alice: \"Based on the information we have, let's keep an eye on those who have shown concern for Diana's death right after it happened. It's important we stay vigilant.\"",
+        "You said: I'd like to propose we revisit the conversation right after Diana's death. Let's examine the reactions and statements of everyone present at that time for clues. #stayfocused #justiceforDiana",
+        "Bob: I'd like to express my condolences once again for Diana's unfortunate demise. Let's all work together to find the real culprit and bring them to justice. #justiceforDiana #solidarity #stayfocused",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

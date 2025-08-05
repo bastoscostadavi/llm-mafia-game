@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0156",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 156,
+  "timestamp": "2025-08-01T09:30:47.883919",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other and share any suspicious observations.\"",
+        "Diana: \"I agree with Bob, let's keep a close eye on each other and share any suspicious observations. Diana\"\n\nExplanation: In this message, I agree with Bob's suggestion to keep a close eye on each other and...",
+        "Charlie: I've noticed that both Bob and Diana have expressed concern about Alice's death and suggested keeping a close eye on each other. Let's remember, it's important to trust each other and maintain open co...",
+        "Diana: \"I'd like to propose that we focus on identifying the cause of Alice's death. Let's share any information we have, no matter how insignificant it may seem. Diana\"",
+        "Charlie: Charlie suggests we all share any unusual observations or behaviors we've noticed since Alice's death to help identify the cause. Let's work together to ensure everyone's safety.",
+        "You said: \"I've noticed that Diana mentioned focusing on Alice's cause of death. Let's not forget, we need to identify the mafia among us first. Let's share any suspicious behavior or unusual interactions we've..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Bob: \"I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other and share any suspicious observations.\"",
+        "Diana: \"I agree with Bob, let's keep a close eye on each other and share any suspicious observations. Diana\"\n\nExplanation: In this message, I agree with Bob's suggestion to keep a close eye on each other and...",
+        "You said: I've noticed that both Bob and Diana have expressed concern about Alice's death and suggested keeping a close eye on each other. Let's remember, it's important to trust each other and maintain open co...",
+        "Diana: \"I'd like to propose that we focus on identifying the cause of Alice's death. Let's share any information we have, no matter how insignificant it may seem. Diana\"",
+        "You said: Charlie suggests we all share any unusual observations or behaviors we've noticed since Alice's death to help identify the cause. Let's work together to ensure everyone's safety.",
+        "Bob: \"I've noticed that Diana mentioned focusing on Alice's cause of death. Let's not forget, we need to identify the mafia among us first. Let's share any suspicious behavior or unusual interactions we've...",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Bob: \"I'm concerned about Alice's sudden disappearance. Let's keep a close eye on each other and share any suspicious observations.\"",
+        "You said: \"I agree with Bob, let's keep a close eye on each other and share any suspicious observations. Diana\"\n\nExplanation: In this message, I agree with Bob's suggestion to keep a close eye on each other and...",
+        "Charlie: I've noticed that both Bob and Diana have expressed concern about Alice's death and suggested keeping a close eye on each other. Let's remember, it's important to trust each other and maintain open co...",
+        "You said: \"I'd like to propose that we focus on identifying the cause of Alice's death. Let's share any information we have, no matter how insignificant it may seem. Diana\"",
+        "Charlie: Charlie suggests we all share any unusual observations or behaviors we've noticed since Alice's death to help identify the cause. Let's work together to ensure everyone's safety.",
+        "Bob: \"I've noticed that Diana mentioned focusing on Alice's cause of death. Let's not forget, we need to identify the mafia among us first. Let's share any suspicious behavior or unusual interactions we've...",
+        "Day 1 votes: Diana voted for Bob, Bob voted for Diana, Charlie voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

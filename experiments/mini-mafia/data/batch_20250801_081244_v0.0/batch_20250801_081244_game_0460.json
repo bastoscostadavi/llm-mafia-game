@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0460",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 460,
+  "timestamp": "2025-08-01T12:00:29.904148",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "You said: I agree with Bob, let's not jump to conclusions and trust the investigation process. I'm saddened by Charlie's death and want to support our team during this difficult time.",
+        "Diana: Diana: Based on my investigation, I believe Alice might be the mafioso. Let's keep a close eye on her actions and votes. We must work together to ensure the safety of our team.",
+        "You said: I'd like to express my condolences once again for Charlie's unfortunate demise. Let's not let suspicion cloud our judgement and focus on ensuring a peaceful game for all. We should trust the investiga...",
+        "Diana: Diana: Given the recent events, it's crucial we maintain vigilance. Let's not forget that trust and communication are key to identifying the mafioso. I still believe Alice's behavior is suspicious. Le...",
+        "Bob: I'd like to echo Alice's sentiments about supporting each other during this trying time. Let's trust the investigation process and avoid jumping to conclusions, keeping an open mind for new informatio..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "Alice: I agree with Bob, let's not jump to conclusions and trust the investigation process. I'm saddened by Charlie's death and want to support our team during this difficult time.",
+        "Diana: Diana: Based on my investigation, I believe Alice might be the mafioso. Let's keep a close eye on her actions and votes. We must work together to ensure the safety of our team.",
+        "Alice: I'd like to express my condolences once again for Charlie's unfortunate demise. Let's not let suspicion cloud our judgement and focus on ensuring a peaceful game for all. We should trust the investiga...",
+        "Diana: Diana: Given the recent events, it's crucial we maintain vigilance. Let's not forget that trust and communication are key to identifying the mafioso. I still believe Alice's behavior is suspicious. Le...",
+        "You said: I'd like to echo Alice's sentiments about supporting each other during this trying time. Let's trust the investigation process and avoid jumping to conclusions, keeping an open mind for new informatio...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. Let's not jump to conclusions and trust the investigation process.",
+        "Alice: I agree with Bob, let's not jump to conclusions and trust the investigation process. I'm saddened by Charlie's death and want to support our team during this difficult time.",
+        "You said: Diana: Based on my investigation, I believe Alice might be the mafioso. Let's keep a close eye on her actions and votes. We must work together to ensure the safety of our team.",
+        "Alice: I'd like to express my condolences once again for Charlie's unfortunate demise. Let's not let suspicion cloud our judgement and focus on ensuring a peaceful game for all. We should trust the investiga...",
+        "You said: Diana: Given the recent events, it's crucial we maintain vigilance. Let's not forget that trust and communication are key to identifying the mafioso. I still believe Alice's behavior is suspicious. Le...",
+        "Bob: I'd like to echo Alice's sentiments about supporting each other during this trying time. Let's trust the investigation process and avoid jumping to conclusions, keeping an open mind for new informatio...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

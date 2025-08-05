@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0174",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 174,
+  "timestamp": "2025-08-01T09:39:46.051222",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other to ensure everyone's safety.",
+        "You said: \"Diana, your concern for Bob's safety is understandable, but let's not jump to conclusions. We should focus on maintaining trust and working together as a team to ensure everyone's safety.\"",
+        "Charlie: \"I agree with Alice, let's not jump to conclusions and focus on maintaining trust and working together as a team.\"",
+        "Diana: I'd like to echo Alice and Charlie's sentiments about maintaining trust and working together. Let's keep an open mind and focus on ensuring everyone's safety. However, I'm also worried about Bob's sud...",
+        "You said: \"Let's not forget, Diana's concern about Bob's safety is valid. However, we should be cautious and not accuse anyone without solid evidence. Let's focus on maintaining trust and working together.\"",
+        "Charlie: I'd like to reiterate the importance of maintaining trust and working together as a team. Let's focus on building relationships and ensuring everyone's safety. Let's not forget that accusations withou..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Diana: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other to ensure everyone's safety.",
+        "Alice: \"Diana, your concern for Bob's safety is understandable, but let's not jump to conclusions. We should focus on maintaining trust and working together as a team to ensure everyone's safety.\"",
+        "You said: \"I agree with Alice, let's not jump to conclusions and focus on maintaining trust and working together as a team.\"",
+        "Diana: I'd like to echo Alice and Charlie's sentiments about maintaining trust and working together. Let's keep an open mind and focus on ensuring everyone's safety. However, I'm also worried about Bob's sud...",
+        "Alice: \"Let's not forget, Diana's concern about Bob's safety is valid. However, we should be cautious and not accuse anyone without solid evidence. Let's focus on maintaining trust and working together.\"",
+        "You said: I'd like to reiterate the importance of maintaining trust and working together as a team. Let's focus on building relationships and ensuring everyone's safety. Let's not forget that accusations withou...",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm concerned about Bob's sudden disappearance. Let's stay vigilant and keep an eye on each other to ensure everyone's safety.",
+        "Alice: \"Diana, your concern for Bob's safety is understandable, but let's not jump to conclusions. We should focus on maintaining trust and working together as a team to ensure everyone's safety.\"",
+        "Charlie: \"I agree with Alice, let's not jump to conclusions and focus on maintaining trust and working together as a team.\"",
+        "You said: I'd like to echo Alice and Charlie's sentiments about maintaining trust and working together. Let's keep an open mind and focus on ensuring everyone's safety. However, I'm also worried about Bob's sud...",
+        "Alice: \"Let's not forget, Diana's concern about Bob's safety is valid. However, we should be cautious and not accuse anyone without solid evidence. Let's focus on maintaining trust and working together.\"",
+        "Charlie: I'd like to reiterate the importance of maintaining trust and working together as a team. Let's focus on building relationships and ensuring everyone's safety. Let's not forget that accusations withou...",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Diana",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

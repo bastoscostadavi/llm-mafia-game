@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0419",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 419,
+  "timestamp": "2025-08-01T11:40:21.192463",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's focus on finding out who could have done this. Charlie, do you have any alibi for last night?\"",
+        "Charlie: \"I was up late working on a project last night. I didn't notice anything unusual. Let's focus on finding the real culprit.\"",
+        "You said: \"I agree with Diana, let's focus on finding Alice's killer. Charlie, since you were up late working, could you share more details about your project? It might help us in our investigation.\"",
+        "You said: \"I'd like to know if anyone saw or heard anything unusual last night, aside from Charlie's project. Let's share all relevant information to help us find Alice's killer.\"",
+        "Charlie: \"I'm shocked by Alice's death. Let's focus on finding the real culprit. I have no information to add regarding last night, but I'm open to discussing any leads.\"",
+        "Diana: \"Let's not jump to conclusions. I suggest we focus on potential leads and any unusual activities or sounds that might have been heard or seen last night, aside from Charlie's project. Remember, the tr...",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's focus on finding out who could have done this. Charlie, do you have any alibi for last night?\"",
+        "You said: \"I was up late working on a project last night. I didn't notice anything unusual. Let's focus on finding the real culprit.\"",
+        "Bob: \"I agree with Diana, let's focus on finding Alice's killer. Charlie, since you were up late working, could you share more details about your project? It might help us in our investigation.\"",
+        "Bob: \"I'd like to know if anyone saw or heard anything unusual last night, aside from Charlie's project. Let's share all relevant information to help us find Alice's killer.\"",
+        "You said: \"I'm shocked by Alice's death. Let's focus on finding the real culprit. I have no information to add regarding last night, but I'm open to discussing any leads.\"",
+        "Diana: \"Let's not jump to conclusions. I suggest we focus on potential leads and any unusual activities or sounds that might have been heard or seen last night, aside from Charlie's project. Remember, the tr..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's focus on finding out who could have done this. Charlie, do you have any alibi for last night?\"",
+        "Charlie: \"I was up late working on a project last night. I didn't notice anything unusual. Let's focus on finding the real culprit.\"",
+        "Bob: \"I agree with Diana, let's focus on finding Alice's killer. Charlie, since you were up late working, could you share more details about your project? It might help us in our investigation.\"",
+        "Bob: \"I'd like to know if anyone saw or heard anything unusual last night, aside from Charlie's project. Let's share all relevant information to help us find Alice's killer.\"",
+        "Charlie: \"I'm shocked by Alice's death. Let's focus on finding the real culprit. I have no information to add regarding last night, but I'm open to discussing any leads.\"",
+        "You said: \"Let's not jump to conclusions. I suggest we focus on potential leads and any unusual activities or sounds that might have been heard or seen last night, aside from Charlie's project. Remember, the tr...",
+        "Day 1 votes: Charlie voted for Diana, Diana voted for Charlie, Bob voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

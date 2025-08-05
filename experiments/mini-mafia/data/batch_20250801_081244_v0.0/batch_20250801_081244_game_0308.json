@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0308",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 308,
+  "timestamp": "2025-08-01T10:45:34.221573",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I'm concerned about Charlie's sudden absence. Let's be vigilant and make sure we all protect each other.\"",
+        "Diana: \"I agree with Bob, let's all stay vigilant and protect each other. We don't know who the mafia is yet.\"",
+        "You said: \"I support Bob and Diana's suggestion to stay vigilant. Let's trust each other for now, but keep an eye out for any suspicious behavior.\"",
+        "You said: \"I'd like to suggest we focus on analyzing everyone's actions and words during the night. Let's be cautious and pay attention to any inconsistencies or unusual behavior.\"",
+        "Diana: \"Let's not jump to conclusions. We should trust each other until we have solid evidence. I propose we focus on analyzing the clues and information we have.\"",
+        "Bob: \"Let's not forget, Diana was the one who suggested we stay vigilant after Charlie's death. We should pay close attention to her actions and words.\"",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Diana, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I'm concerned about Charlie's sudden absence. Let's be vigilant and make sure we all protect each other.\"",
+        "Diana: \"I agree with Bob, let's all stay vigilant and protect each other. We don't know who the mafia is yet.\"",
+        "Alice: \"I support Bob and Diana's suggestion to stay vigilant. Let's trust each other for now, but keep an eye out for any suspicious behavior.\"",
+        "Alice: \"I'd like to suggest we focus on analyzing everyone's actions and words during the night. Let's be cautious and pay attention to any inconsistencies or unusual behavior.\"",
+        "Diana: \"Let's not jump to conclusions. We should trust each other until we have solid evidence. I propose we focus on analyzing the clues and information we have.\"",
+        "You said: \"Let's not forget, Diana was the one who suggested we stay vigilant after Charlie's death. We should pay close attention to her actions and words.\"",
+        "Day 1 votes: Diana voted for Alice, Bob voted for Diana, Alice voted for Diana",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I'm concerned about Charlie's sudden absence. Let's be vigilant and make sure we all protect each other.\"",
+        "You said: \"I agree with Bob, let's all stay vigilant and protect each other. We don't know who the mafia is yet.\"",
+        "Alice: \"I support Bob and Diana's suggestion to stay vigilant. Let's trust each other for now, but keep an eye out for any suspicious behavior.\"",
+        "Alice: \"I'd like to suggest we focus on analyzing everyone's actions and words during the night. Let's be cautious and pay attention to any inconsistencies or unusual behavior.\"",
+        "You said: \"Let's not jump to conclusions. We should trust each other until we have solid evidence. I propose we focus on analyzing the clues and information we have.\"",
+        "Bob: \"Let's not forget, Diana was the one who suggested we stay vigilant after Charlie's death. We should pay close attention to her actions and words.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

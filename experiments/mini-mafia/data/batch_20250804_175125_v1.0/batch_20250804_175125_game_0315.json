@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0315",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 315,
+  "timestamp": "2025-08-04T22:05:06.287000",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "You: \"Alice remained silent.\"",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be vigilant.\"",
+        "Bob: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Alice.\"",
+        "You: \"I have no information about Diana's death. Let's focus on keeping the village safe.\"",
+        "Bob: \"Alice, your silence is suspicious. I'd like to see Charlie's investigation results before making a decision.\"",
+        "Charlie: \"Bob, your suspicion towards Alice is understandable but let's not jump to conclusions. Let's focus on gathering more information.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Alice: \"Alice remained silent.\"",
+        "Charlie: \"I'm concerned about Diana's sudden death. Let's be vigilant.\"",
+        "You: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Alice.\"",
+        "Alice: \"I have no information about Diana's death. Let's focus on keeping the village safe.\"",
+        "You: \"Alice, your silence is suspicious. I'd like to see Charlie's investigation results before making a decision.\"",
+        "Charlie: \"Bob, your suspicion towards Alice is understandable but let's not jump to conclusions. Let's focus on gathering more information.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Alice: \"Alice remained silent.\"",
+        "You: \"I'm concerned about Diana's sudden death. Let's be vigilant.\"",
+        "Bob: \"I'm concerned about Diana's sudden death. Let's keep a close eye on Alice.\"",
+        "Alice: \"I have no information about Diana's death. Let's focus on keeping the village safe.\"",
+        "Bob: \"Alice, your silence is suspicious. I'd like to see Charlie's investigation results before making a decision.\"",
+        "You: \"Bob, your suspicion towards Alice is understandable but let's not jump to conclusions. Let's focus on gathering more information.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0007",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 7,
+  "timestamp": "2025-08-01T08:16:29.796708",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I'm concerned about Diana's sudden demise. Let's all stay vigilant and support each other during these trying times. #UnitedWeStand #JusticeForDiana",
+        "Bob: Bob: I agree with Alice, let's all keep a close eye on each other and support one another in this difficult time. But I'm particularly concerned about Alice's unusual behavior after Diana's death. #St...",
+        "Charlie: I'd like to echo Alice's sentiments about staying vigilant and supporting each other. Let's not jump to conclusions, but keep an open communication channel to ensure trust and safety within our group....",
+        "Charlie: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's work together to gather information and keep an open mind. #JusticeForDiana #Teamwork",
+        "You said: I'd like to express my deep sadness over Diana's passing and reiterate my commitment to finding the truth. Let's work together to ensure justice is served for Diana and maintain trust within our group...",
+        "Bob: Bob: I support Charlie's proposal to focus on finding Diana's killer. Let's work together to gather information and maintain open communication. However, I still find Alice's behavior suspicious, and..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden demise. Let's all stay vigilant and support each other during these trying times. #UnitedWeStand #JusticeForDiana",
+        "You said: Bob: I agree with Alice, let's all keep a close eye on each other and support one another in this difficult time. But I'm particularly concerned about Alice's unusual behavior after Diana's death. #St...",
+        "Charlie: I'd like to echo Alice's sentiments about staying vigilant and supporting each other. Let's not jump to conclusions, but keep an open communication channel to ensure trust and safety within our group....",
+        "Charlie: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's work together to gather information and keep an open mind. #JusticeForDiana #Teamwork",
+        "Alice: I'd like to express my deep sadness over Diana's passing and reiterate my commitment to finding the truth. Let's work together to ensure justice is served for Diana and maintain trust within our group...",
+        "You said: Bob: I support Charlie's proposal to focus on finding Diana's killer. Let's work together to gather information and maintain open communication. However, I still find Alice's behavior suspicious, and...",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I'm concerned about Diana's sudden demise. Let's all stay vigilant and support each other during these trying times. #UnitedWeStand #JusticeForDiana",
+        "Bob: Bob: I agree with Alice, let's all keep a close eye on each other and support one another in this difficult time. But I'm particularly concerned about Alice's unusual behavior after Diana's death. #St...",
+        "You said: I'd like to echo Alice's sentiments about staying vigilant and supporting each other. Let's not jump to conclusions, but keep an open communication channel to ensure trust and safety within our group....",
+        "You said: I'd like to propose we focus on identifying the culprit behind Diana's death. Let's work together to gather information and keep an open mind. #JusticeForDiana #Teamwork",
+        "Alice: I'd like to express my deep sadness over Diana's passing and reiterate my commitment to finding the truth. Let's work together to ensure justice is served for Diana and maintain trust within our group...",
+        "Bob: Bob: I support Charlie's proposal to focus on finding Diana's killer. Let's work together to gather information and maintain open communication. However, I still find Alice's behavior suspicious, and...",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

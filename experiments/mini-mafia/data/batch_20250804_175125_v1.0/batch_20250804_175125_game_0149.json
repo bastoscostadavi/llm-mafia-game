@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0149",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 149,
+  "timestamp": "2025-08-04T19:16:46.983641",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I'd like to express my condolences for Charlie's unfortunate demise. Let's all work together to find out who did this.\"",
+        "You: \"Bob, I'm glad you expressed your condolences over Charlie's death. However, I cannot ignore the fact that you were the only one who knew Charlie was going to be investigated that night. Let's discuss \"",
+        "Diana: \"I'd like to express my condolences for Charlie's unfortunate demise as well, but I agree with Alice that we should investigate Bob further due to his unusual knowledge of the investigation.\"",
+        "You: \"Bob, since you expressed your condolences and agreed with our investigation, I believe it's important for us to consider the possibility that Diana might be the mafioso. Let's discuss this further.\"",
+        "Bob: \"I'd like to remind everyone that we need to work together as a team and not jump to conclusions based on assumptions. Let's focus on gathering more information before making any decisions.\"",
+        "Diana: \"I'd like to remind everyone that we need to focus on gathering more information before making any decisions. Let's not jump to conclusions based on assumptions.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I'd like to express my condolences for Charlie's unfortunate demise. Let's all work together to find out who did this.\"",
+        "Alice: \"Bob, I'm glad you expressed your condolences over Charlie's death. However, I cannot ignore the fact that you were the only one who knew Charlie was going to be investigated that night. Let's discuss \"",
+        "Diana: \"I'd like to express my condolences for Charlie's unfortunate demise as well, but I agree with Alice that we should investigate Bob further due to his unusual knowledge of the investigation.\"",
+        "Alice: \"Bob, since you expressed your condolences and agreed with our investigation, I believe it's important for us to consider the possibility that Diana might be the mafioso. Let's discuss this further.\"",
+        "You: \"I'd like to remind everyone that we need to work together as a team and not jump to conclusions based on assumptions. Let's focus on gathering more information before making any decisions.\"",
+        "Diana: \"I'd like to remind everyone that we need to focus on gathering more information before making any decisions. Let's not jump to conclusions based on assumptions.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Bob: \"I'd like to express my condolences for Charlie's unfortunate demise. Let's all work together to find out who did this.\"",
+        "Alice: \"Bob, I'm glad you expressed your condolences over Charlie's death. However, I cannot ignore the fact that you were the only one who knew Charlie was going to be investigated that night. Let's discuss \"",
+        "You: \"I'd like to express my condolences for Charlie's unfortunate demise as well, but I agree with Alice that we should investigate Bob further due to his unusual knowledge of the investigation.\"",
+        "Alice: \"Bob, since you expressed your condolences and agreed with our investigation, I believe it's important for us to consider the possibility that Diana might be the mafioso. Let's discuss this further.\"",
+        "Bob: \"I'd like to remind everyone that we need to work together as a team and not jump to conclusions based on assumptions. Let's focus on gathering more information before making any decisions.\"",
+        "You: \"I'd like to remind everyone that we need to focus on gathering more information before making any decisions. Let's not jump to conclusions based on assumptions.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0970",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 970,
+  "timestamp": "2025-08-01T17:28:39.041458",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. We should all keep an eye out for any suspicious behavior to ensure everyone's safety. Let's work together to uncover the truth behind this tragedy.",
+        "Diana: I agree with Alice, let's all work together to ensure everyone's safety. If anyone notices anything suspicious, please share it with the group.",
+        "Charlie: Diana's reaction to Bob's death seems too calm. Let's keep a close eye on her actions and words.",
+        "You said: I'm concerned about Charlie's suspicion towards Diana. Let's focus on ensuring open communication and trust within our group instead.",
+        "Diana: I'd like to echo Alice's sentiments about open communication and trust. Let's all work together to ensure a peaceful and safe game for everyone. If anyone notices anything unusual, please bring it to...",
+        "Charlie: I agree with Alice's suggestion for open communication and trust. However, I also believe it's crucial that we all remain vigilant and share any concerns or suspicions we may have. Let's work together..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. We should all keep an eye out for any suspicious behavior to ensure everyone's safety. Let's work together to uncover the truth behind this tragedy.",
+        "Diana: I agree with Alice, let's all work together to ensure everyone's safety. If anyone notices anything suspicious, please share it with the group.",
+        "You said: Diana's reaction to Bob's death seems too calm. Let's keep a close eye on her actions and words.",
+        "Alice: I'm concerned about Charlie's suspicion towards Diana. Let's focus on ensuring open communication and trust within our group instead.",
+        "Diana: I'd like to echo Alice's sentiments about open communication and trust. Let's all work together to ensure a peaceful and safe game for everyone. If anyone notices anything unusual, please bring it to...",
+        "You said: I agree with Alice's suggestion for open communication and trust. However, I also believe it's crucial that we all remain vigilant and share any concerns or suspicions we may have. Let's work together...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I'm shocked by Bob's sudden death. We should all keep an eye out for any suspicious behavior to ensure everyone's safety. Let's work together to uncover the truth behind this tragedy.",
+        "You said: I agree with Alice, let's all work together to ensure everyone's safety. If anyone notices anything suspicious, please share it with the group.",
+        "Charlie: Diana's reaction to Bob's death seems too calm. Let's keep a close eye on her actions and words.",
+        "Alice: I'm concerned about Charlie's suspicion towards Diana. Let's focus on ensuring open communication and trust within our group instead.",
+        "You said: I'd like to echo Alice's sentiments about open communication and trust. Let's all work together to ensure a peaceful and safe game for everyone. If anyone notices anything unusual, please bring it to...",
+        "Charlie: I agree with Alice's suggestion for open communication and trust. However, I also believe it's crucial that we all remain vigilant and share any concerns or suspicions we may have. Let's work together...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

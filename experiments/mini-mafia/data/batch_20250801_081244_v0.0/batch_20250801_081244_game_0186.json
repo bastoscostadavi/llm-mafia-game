@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0186",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 186,
+  "timestamp": "2025-08-01T09:45:40.406440",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm deeply saddened by Charlie's unexpected demise. Let's work together to find out who did this heinous act and bring them to justice.",
+        "You said: I was shocked to hear about Charlie's death. Let's try to remain calm and focused during our investigation to ensure we don't jump to any hasty conclusions. We should consider everyone's actions and w...",
+        "Bob: Diana, I'm troubled by your sudden display of grief. Let's focus on the facts and examine everyone's actions since the last death.",
+        "Bob: Diana, let's examine the sequence of events leading to Charlie's death. It's crucial we stay objective in our investigation.",
+        "Diana: I agree with Bob, let's focus on the facts and examine everyone's actions since the last death. It's important we stay objective in our investigation.",
+        "You said: I suggest we focus on the sequence of events leading to Charlie's death and analyze everyone's actions since the last death. Let's keep an open mind and avoid jumping to conclusions based on emotions.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm deeply saddened by Charlie's unexpected demise. Let's work together to find out who did this heinous act and bring them to justice.",
+        "Alice: I was shocked to hear about Charlie's death. Let's try to remain calm and focused during our investigation to ensure we don't jump to any hasty conclusions. We should consider everyone's actions and w...",
+        "You said: Diana, I'm troubled by your sudden display of grief. Let's focus on the facts and examine everyone's actions since the last death.",
+        "You said: Diana, let's examine the sequence of events leading to Charlie's death. It's crucial we stay objective in our investigation.",
+        "Diana: I agree with Bob, let's focus on the facts and examine everyone's actions since the last death. It's important we stay objective in our investigation.",
+        "Alice: I suggest we focus on the sequence of events leading to Charlie's death and analyze everyone's actions since the last death. Let's keep an open mind and avoid jumping to conclusions based on emotions."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm deeply saddened by Charlie's unexpected demise. Let's work together to find out who did this heinous act and bring them to justice.",
+        "Alice: I was shocked to hear about Charlie's death. Let's try to remain calm and focused during our investigation to ensure we don't jump to any hasty conclusions. We should consider everyone's actions and w...",
+        "Bob: Diana, I'm troubled by your sudden display of grief. Let's focus on the facts and examine everyone's actions since the last death.",
+        "Bob: Diana, let's examine the sequence of events leading to Charlie's death. It's crucial we stay objective in our investigation.",
+        "You said: I agree with Bob, let's focus on the facts and examine everyone's actions since the last death. It's important we stay objective in our investigation.",
+        "Alice: I suggest we focus on the sequence of events leading to Charlie's death and analyze everyone's actions since the last death. Let's keep an open mind and avoid jumping to conclusions based on emotions.",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Bob, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

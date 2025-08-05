@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0816",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 816,
+  "timestamp": "2025-08-05T02:56:36.738493",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"I'm the detective and I've already found out who the mafioso is. It's Alice.\"",
+        "You: \"I'd like to propose a vote for Charlie today. Let's give him a chance.\"",
+        "Charlie: \"I don't have any evidence against Alice, but I think it's suspicious that she named me as a potential target today. Let's consider her role carefully before we vote.\"",
+        "Charlie: \"I think it's important that we consider the possibility of a false confession. Alice might have named me as a potential target to throw us off her trail. Let's keep an open mind and not jump to conclu\"",
+        "Bob: \"Alice confessed to being the mafioso last night. I believe her words and suggest we vote for her today.\"",
+        "You: \"I think it's important that we focus on the facts and not jump to conclusions based on suspicions. Let's consider Charlie's argument about false confessions before making a decision.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"I'm the detective and I've already found out who the mafioso is. It's Alice.\"",
+        "Alice: \"I'd like to propose a vote for Charlie today. Let's give him a chance.\"",
+        "Charlie: \"I don't have any evidence against Alice, but I think it's suspicious that she named me as a potential target today. Let's consider her role carefully before we vote.\"",
+        "Charlie: \"I think it's important that we consider the possibility of a false confession. Alice might have named me as a potential target to throw us off her trail. Let's keep an open mind and not jump to conclu\"",
+        "You: \"Alice confessed to being the mafioso last night. I believe her words and suggest we vote for her today.\"",
+        "Alice: \"I think it's important that we focus on the facts and not jump to conclusions based on suspicions. Let's consider Charlie's argument about false confessions before making a decision.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"I'm the detective and I've already found out who the mafioso is. It's Alice.\"",
+        "Alice: \"I'd like to propose a vote for Charlie today. Let's give him a chance.\"",
+        "You: \"I don't have any evidence against Alice, but I think it's suspicious that she named me as a potential target today. Let's consider her role carefully before we vote.\"",
+        "You: \"I think it's important that we consider the possibility of a false confession. Alice might have named me as a potential target to throw us off her trail. Let's keep an open mind and not jump to conclu\"",
+        "Bob: \"Alice confessed to being the mafioso last night. I believe her words and suggest we vote for her today.\"",
+        "Alice: \"I think it's important that we focus on the facts and not jump to conclusions based on suspicions. Let's consider Charlie's argument about false confessions before making a decision.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

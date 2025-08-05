@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0550",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 550,
+  "timestamp": "2025-08-01T12:45:46.643949",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and communicate openly.\"",
+        "You said: \"I agree with Diana. Let's all promise to be honest and open in our communications. We need to trust each other if we are to uncover what happened to Charlie.\"",
+        "Bob: \"I share the concern about Charlie's disappearance. Let's not jump to conclusions and give the police time to investigate thoroughly. We don't want to wrongly accuse an innocent person.\"",
+        "Diana: \"I'd like to propose that we focus on the unusual circumstances surrounding Charlie's death. Let's scrutinize each other's statements and actions carefully to ensure trust and uncover any inconsistenc...",
+        "Bob: \"I'd like to propose we focus on finding clues that could lead to Charlie's killer. Let's remember, we all have different perspectives and knowledge that could be valuable. Trust but verify.\"",
+        "You said: \"Let's not forget, we all have different information and perspectives. Sharing what we know openly might help us uncover the truth about Charlie's death.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and communicate openly.\"",
+        "Alice: \"I agree with Diana. Let's all promise to be honest and open in our communications. We need to trust each other if we are to uncover what happened to Charlie.\"",
+        "You said: \"I share the concern about Charlie's disappearance. Let's not jump to conclusions and give the police time to investigate thoroughly. We don't want to wrongly accuse an innocent person.\"",
+        "Diana: \"I'd like to propose that we focus on the unusual circumstances surrounding Charlie's death. Let's scrutinize each other's statements and actions carefully to ensure trust and uncover any inconsistenc...",
+        "You said: \"I'd like to propose we focus on finding clues that could lead to Charlie's killer. Let's remember, we all have different perspectives and knowledge that could be valuable. Trust but verify.\"",
+        "Alice: \"Let's not forget, we all have different information and perspectives. Sharing what we know openly might help us uncover the truth about Charlie's death.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I'm concerned about Charlie's sudden disappearance. Let's keep a close eye on each other and communicate openly.\"",
+        "Alice: \"I agree with Diana. Let's all promise to be honest and open in our communications. We need to trust each other if we are to uncover what happened to Charlie.\"",
+        "Bob: \"I share the concern about Charlie's disappearance. Let's not jump to conclusions and give the police time to investigate thoroughly. We don't want to wrongly accuse an innocent person.\"",
+        "You said: \"I'd like to propose that we focus on the unusual circumstances surrounding Charlie's death. Let's scrutinize each other's statements and actions carefully to ensure trust and uncover any inconsistenc...",
+        "Bob: \"I'd like to propose we focus on finding clues that could lead to Charlie's killer. Let's remember, we all have different perspectives and knowledge that could be valuable. Trust but verify.\"",
+        "Alice: \"Let's not forget, we all have different information and perspectives. Sharing what we know openly might help us uncover the truth about Charlie's death.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

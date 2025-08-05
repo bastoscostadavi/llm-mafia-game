@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0348",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 348,
+  "timestamp": "2025-08-01T11:05:41.234362",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's stay vigilant and keep an eye on each other to ensure the safety of our village.\"",
+        "You said: \"I agree with Diana. Let's remember that the mafia often tries to manipulate us. Let's not jump to conclusions but focus on inconsistencies and suspicious behavior.\"",
+        "Charlie: \"I share Diana's concerns about Alice's death. Let's work together to ensure our safety and uncover the truth behind this unfortunate event.\"",
+        "Charlie: \"Let's not forget the importance of trust and unity in our village. We should focus on finding Alice's killer, not accusing each other without solid evidence.\"",
+        "Diana: \"Let's not overlook the inconsistency of Charlie's concerns about Alice's death right after it happened. We should consider the possibility of his involvement and maintain our vigilance as a team.\"",
+        "You said: \"Let's not forget that the mafia might try to manipulate our words. Let's focus on inconsistencies and suspicious behavior, but avoid jumping to conclusions based on emotions.\"",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "Diana: \"I'm concerned about Alice's sudden death. Let's stay vigilant and keep an eye on each other to ensure the safety of our village.\"",
+        "Bob: \"I agree with Diana. Let's remember that the mafia often tries to manipulate us. Let's not jump to conclusions but focus on inconsistencies and suspicious behavior.\"",
+        "You said: \"I share Diana's concerns about Alice's death. Let's work together to ensure our safety and uncover the truth behind this unfortunate event.\"",
+        "You said: \"Let's not forget the importance of trust and unity in our village. We should focus on finding Alice's killer, not accusing each other without solid evidence.\"",
+        "Diana: \"Let's not overlook the inconsistency of Charlie's concerns about Alice's death right after it happened. We should consider the possibility of his involvement and maintain our vigilance as a team.\"",
+        "Bob: \"Let's not forget that the mafia might try to manipulate our words. Let's focus on inconsistencies and suspicious behavior, but avoid jumping to conclusions based on emotions.\"",
+        "Day 1 votes: Charlie voted for Diana, Bob voted for Diana, Diana voted for Charlie",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "You said: \"I'm concerned about Alice's sudden death. Let's stay vigilant and keep an eye on each other to ensure the safety of our village.\"",
+        "Bob: \"I agree with Diana. Let's remember that the mafia often tries to manipulate us. Let's not jump to conclusions but focus on inconsistencies and suspicious behavior.\"",
+        "Charlie: \"I share Diana's concerns about Alice's death. Let's work together to ensure our safety and uncover the truth behind this unfortunate event.\"",
+        "Charlie: \"Let's not forget the importance of trust and unity in our village. We should focus on finding Alice's killer, not accusing each other without solid evidence.\"",
+        "You said: \"Let's not overlook the inconsistency of Charlie's concerns about Alice's death right after it happened. We should consider the possibility of his involvement and maintain our vigilance as a team.\"",
+        "Bob: \"Let's not forget that the mafia might try to manipulate our words. Let's focus on inconsistencies and suspicious behavior, but avoid jumping to conclusions based on emotions.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

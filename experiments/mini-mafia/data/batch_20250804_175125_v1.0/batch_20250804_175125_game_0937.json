@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0937",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 937,
+  "timestamp": "2025-08-05T04:06:00.838889",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"I'm a loyal friend to all of you.\"",
+        "You: \"Charlie, I'm suspicious of your sudden loyalty. Let's discuss it further.\"",
+        "Bob: \"Alice, let's focus on Charlie's suspicious behavior.\"",
+        "You: \"Charlie, your sudden loyalty is concerning. Let's discuss it further.\"",
+        "Bob: \"Alice, let's focus on Charlie's suspicious behavior.\"",
+        "Charlie: \"I've been misunderstood. I'm not a mafioso, I just want to protect our group.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: \"I'm a loyal friend to all of you.\"",
+        "Alice: \"Charlie, I'm suspicious of your sudden loyalty. Let's discuss it further.\"",
+        "You: \"Alice, let's focus on Charlie's suspicious behavior.\"",
+        "Alice: \"Charlie, your sudden loyalty is concerning. Let's discuss it further.\"",
+        "You: \"Alice, let's focus on Charlie's suspicious behavior.\"",
+        "Charlie: \"I've been misunderstood. I'm not a mafioso, I just want to protect our group.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I'm a loyal friend to all of you.\"",
+        "Alice: \"Charlie, I'm suspicious of your sudden loyalty. Let's discuss it further.\"",
+        "Bob: \"Alice, let's focus on Charlie's suspicious behavior.\"",
+        "Alice: \"Charlie, your sudden loyalty is concerning. Let's discuss it further.\"",
+        "Bob: \"Alice, let's focus on Charlie's suspicious behavior.\"",
+        "You: \"I've been misunderstood. I'm not a mafioso, I just want to protect our group.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

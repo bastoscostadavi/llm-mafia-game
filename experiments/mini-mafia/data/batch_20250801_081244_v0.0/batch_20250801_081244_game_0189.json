@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0189",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 189,
+  "timestamp": "2025-08-01T09:47:07.123948",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Alice.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Alice was found dead this morning.",
+        "You said: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety. However, I'm also worried about Charlie being the mafioso, considering Alice's death. We should be cautious.",
+        "Charlie: \"I agree with both Bob and Diana about keeping a close eye on each other. However, I'd like to remind everyone that we still don't know who the second mafioso is. Let's remain vigilant and trust no on...",
+        "Diana: I'd like to propose that we focus our suspicion on Charlie, given his close proximity to Alice during the night. However, we should also keep an open mind as we still don't know the identity of the se...",
+        "Charlie: I'd like to reiterate the importance of keeping a close eye on each other and trusting no one blindly. We still need to identify the second mafioso in our midst. Let's remain vigilant.",
+        "You said: I'd like to echo Diana's concerns about Charlie's proximity to Alice during the night. Let's keep a close eye on him, but we shouldn't jump to conclusions without enough evidence. We need to be cautio...",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Be careful, Bob knows you're the detective.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "Diana: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety. However, I'm also worried about Charlie being the mafioso, considering Alice's death. We should be cautious.",
+        "You said: \"I agree with both Bob and Diana about keeping a close eye on each other. However, I'd like to remind everyone that we still don't know who the second mafioso is. Let's remain vigilant and trust no on...",
+        "Diana: I'd like to propose that we focus our suspicion on Charlie, given his close proximity to Alice during the night. However, we should also keep an open mind as we still don't know the identity of the se...",
+        "You said: I'd like to reiterate the importance of keeping a close eye on each other and trusting no one blindly. We still need to identify the second mafioso in our midst. Let's remain vigilant.",
+        "Bob: I'd like to echo Diana's concerns about Charlie's proximity to Alice during the night. Let's keep a close eye on him, but we shouldn't jump to conclusions without enough evidence. We need to be cautio..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Alice was found dead this morning.",
+        "Bob: I'm concerned about Alice's sudden disappearance. Let's stay vigilant and keep an eye on each other.",
+        "You said: I agree with Bob, let's keep a close eye on each other to ensure everyone's safety. However, I'm also worried about Charlie being the mafioso, considering Alice's death. We should be cautious.",
+        "Charlie: \"I agree with both Bob and Diana about keeping a close eye on each other. However, I'd like to remind everyone that we still don't know who the second mafioso is. Let's remain vigilant and trust no on...",
+        "You said: I'd like to propose that we focus our suspicion on Charlie, given his close proximity to Alice during the night. However, we should also keep an open mind as we still don't know the identity of the se...",
+        "Charlie: I'd like to reiterate the importance of keeping a close eye on each other and trusting no one blindly. We still need to identify the second mafioso in our midst. Let's remain vigilant.",
+        "Bob: I'd like to echo Diana's concerns about Charlie's proximity to Alice during the night. Let's keep a close eye on him, but we shouldn't jump to conclusions without enough evidence. We need to be cautio...",
+        "Day 1 votes: Diana voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

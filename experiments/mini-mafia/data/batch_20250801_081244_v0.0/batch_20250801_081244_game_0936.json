@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0936",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 936,
+  "timestamp": "2025-08-01T16:05:44.835768",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's stay vigilant and support each other during these trying times. We need to unite against the mafia to ensure their reign of terror ends here.",
+        "You said: I'm saddened by Charlie's passing. Let's focus on finding the truth behind this tragedy and bring justice to our community. We must work together to ensure the mafia's influence is minimized. #unity #...",
+        "Diana: \"I agree with Bob's sentiment of unity. Let's work together to find out who among us is the mafioso. Alice's reaction to Charlie's death is suspicious. We should keep a close eye on her actions.\"",
+        "You said: \"I'd like to echo Bob's call for unity and support each other in uncovering the truth behind Charlie's death. Let's focus on facts and evidence to ensure justice is served.\" #truth #justice",
+        "Bob: I'd like to propose that we focus our investigation on Alice, considering her unusual reaction during the discussion about Charlie's death. We should also share any suspicious observations or findings...",
+        "Diana: \"Based on recent events, I believe it's crucial we scrutinize Alice's actions. Let's collaborate to uncover any potential connections to the mafia.\" #collaboration #suspiciousactivity"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden demise. Let's stay vigilant and support each other during these trying times. We need to unite against the mafia to ensure their reign of terror ends here.",
+        "Alice: I'm saddened by Charlie's passing. Let's focus on finding the truth behind this tragedy and bring justice to our community. We must work together to ensure the mafia's influence is minimized. #unity #...",
+        "Diana: \"I agree with Bob's sentiment of unity. Let's work together to find out who among us is the mafioso. Alice's reaction to Charlie's death is suspicious. We should keep a close eye on her actions.\"",
+        "Alice: \"I'd like to echo Bob's call for unity and support each other in uncovering the truth behind Charlie's death. Let's focus on facts and evidence to ensure justice is served.\" #truth #justice",
+        "You said: I'd like to propose that we focus our investigation on Alice, considering her unusual reaction during the discussion about Charlie's death. We should also share any suspicious observations or findings...",
+        "Diana: \"Based on recent events, I believe it's crucial we scrutinize Alice's actions. Let's collaborate to uncover any potential connections to the mafia.\" #collaboration #suspiciousactivity",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: I'm shocked by Charlie's sudden demise. Let's stay vigilant and support each other during these trying times. We need to unite against the mafia to ensure their reign of terror ends here.",
+        "Alice: I'm saddened by Charlie's passing. Let's focus on finding the truth behind this tragedy and bring justice to our community. We must work together to ensure the mafia's influence is minimized. #unity #...",
+        "You said: \"I agree with Bob's sentiment of unity. Let's work together to find out who among us is the mafioso. Alice's reaction to Charlie's death is suspicious. We should keep a close eye on her actions.\"",
+        "Alice: \"I'd like to echo Bob's call for unity and support each other in uncovering the truth behind Charlie's death. Let's focus on facts and evidence to ensure justice is served.\" #truth #justice",
+        "Bob: I'd like to propose that we focus our investigation on Alice, considering her unusual reaction during the discussion about Charlie's death. We should also share any suspicious observations or findings...",
+        "You said: \"Based on recent events, I believe it's crucial we scrutinize Alice's actions. Let's collaborate to uncover any potential connections to the mafia.\" #collaboration #suspiciousactivity",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

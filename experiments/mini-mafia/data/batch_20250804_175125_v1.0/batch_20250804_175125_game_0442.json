@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0442",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 442,
+  "timestamp": "2025-08-04T23:22:48.618928",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Alice, why were you up late last night? I saw you leaving the forest after midnight.\"",
+        "Charlie: \"Diana, I didn't see you leave the forest. Are you sure you weren't just out for a late walk?\"",
+        "You: \"I was up late preparing for the market tomorrow. Let's focus on finding the real killer.\"",
+        "You: remained silent.",
+        "Diana: \"Alice, why did you lie about being up late? I have evidence that you killed Bob last night.\"",
+        "Charlie: \"Diana, I'm concerned about your accusations against Alice. Let's focus on finding the real killer instead.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"Alice, why were you up late last night? I saw you leaving the forest after midnight.\"",
+        "You: \"Diana, I didn't see you leave the forest. Are you sure you weren't just out for a late walk?\"",
+        "Alice: \"I was up late preparing for the market tomorrow. Let's focus on finding the real killer.\"",
+        "Alice: remained silent.",
+        "Diana: \"Alice, why did you lie about being up late? I have evidence that you killed Bob last night.\"",
+        "You: \"Diana, I'm concerned about your accusations against Alice. Let's focus on finding the real killer instead.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "You: \"Alice, why were you up late last night? I saw you leaving the forest after midnight.\"",
+        "Charlie: \"Diana, I didn't see you leave the forest. Are you sure you weren't just out for a late walk?\"",
+        "Alice: \"I was up late preparing for the market tomorrow. Let's focus on finding the real killer.\"",
+        "Alice: remained silent.",
+        "You: \"Alice, why did you lie about being up late? I have evidence that you killed Bob last night.\"",
+        "Charlie: \"Diana, I'm concerned about your accusations against Alice. Let's focus on finding the real killer instead.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

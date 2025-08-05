@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0443",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 443,
+  "timestamp": "2025-08-04T23:23:22.884387",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Charlie: \"I'm the detective and I found out who the mafioso is. Let's vote for Diana.\"",
+        "Diana: \"I have no reason to be suspicious of anyone. Let's focus on finding the real mafioso among us.\"",
+        "You: \"I'm not suspicious of anyone at this moment, but let's be cautious and pay attention to Charlie's actions.\"",
+        "You: \"Let's focus on Charlie's actions and behavior, he seems suspicious.\"",
+        "Diana: \"I have no reason to suspect anyone, but we should be vigilant and focus on finding the real mafioso. Let's not jump to conclusions based on suspicions.\"",
+        "Charlie: \"I have evidence that Diana is the mafioso and I urge everyone to vote for her.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"I'm the detective and I found out who the mafioso is. Let's vote for Diana.\"",
+        "Diana: \"I have no reason to be suspicious of anyone. Let's focus on finding the real mafioso among us.\"",
+        "Alice: \"I'm not suspicious of anyone at this moment, but let's be cautious and pay attention to Charlie's actions.\"",
+        "Alice: \"Let's focus on Charlie's actions and behavior, he seems suspicious.\"",
+        "Diana: \"I have no reason to suspect anyone, but we should be vigilant and focus on finding the real mafioso. Let's not jump to conclusions based on suspicions.\"",
+        "You: \"I have evidence that Diana is the mafioso and I urge everyone to vote for her.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm the detective and I found out who the mafioso is. Let's vote for Diana.\"",
+        "You: \"I have no reason to be suspicious of anyone. Let's focus on finding the real mafioso among us.\"",
+        "Alice: \"I'm not suspicious of anyone at this moment, but let's be cautious and pay attention to Charlie's actions.\"",
+        "Alice: \"Let's focus on Charlie's actions and behavior, he seems suspicious.\"",
+        "You: \"I have no reason to suspect anyone, but we should be vigilant and focus on finding the real mafioso. Let's not jump to conclusions based on suspicions.\"",
+        "Charlie: \"I have evidence that Diana is the mafioso and I urge everyone to vote for her.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

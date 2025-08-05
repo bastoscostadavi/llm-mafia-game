@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0122",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 122,
+  "timestamp": "2025-08-01T09:13:54.864003",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Diana: \"I'm concerned about Bob's sudden absence. Let's stay vigilant and keep an eye on each other.\"",
+        "Charlie: \"I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.\"",
+        "You said: \"I'd like to propose we focus on identifying any unusual behavior or inconsistencies, as Diana and Bob's situations seem suspicious.\"",
+        "Charlie: \"I'm worried about the recent strange events. Let's try to remain calm and not jump to conclusions. We should focus on maintaining trust within our group.\"",
+        "Diana: \"Given the recent suspicious events, I propose we pay close attention to any inconsistencies or unusual behavior to ensure everyone's safety.\"",
+        "You said: \"Let's not overlook the unusual behavior. I suggest we keep a record of any inconsistencies or suspicious actions to help us make informed decisions.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Diana: \"I'm concerned about Bob's sudden absence. Let's stay vigilant and keep an eye on each other.\"",
+        "You said: \"I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.\"",
+        "Alice: \"I'd like to propose we focus on identifying any unusual behavior or inconsistencies, as Diana and Bob's situations seem suspicious.\"",
+        "You said: \"I'm worried about the recent strange events. Let's try to remain calm and not jump to conclusions. We should focus on maintaining trust within our group.\"",
+        "Diana: \"Given the recent suspicious events, I propose we pay close attention to any inconsistencies or unusual behavior to ensure everyone's safety.\"",
+        "Alice: \"Let's not overlook the unusual behavior. I suggest we keep a record of any inconsistencies or suspicious actions to help us make informed decisions.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: \"I'm concerned about Bob's sudden absence. Let's stay vigilant and keep an eye on each other.\"",
+        "Charlie: \"I agree with Diana, let's keep a close eye on each other to ensure everyone's safety.\"",
+        "Alice: \"I'd like to propose we focus on identifying any unusual behavior or inconsistencies, as Diana and Bob's situations seem suspicious.\"",
+        "Charlie: \"I'm worried about the recent strange events. Let's try to remain calm and not jump to conclusions. We should focus on maintaining trust within our group.\"",
+        "You said: \"Given the recent suspicious events, I propose we pay close attention to any inconsistencies or unusual behavior to ensure everyone's safety.\"",
+        "Alice: \"Let's not overlook the unusual behavior. I suggest we keep a record of any inconsistencies or suspicious actions to help us make informed decisions.\"",
+        "Day 1 votes: Charlie voted for Alice, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

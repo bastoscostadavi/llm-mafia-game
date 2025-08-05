@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0233",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 233,
+  "timestamp": "2025-08-01T10:08:47.386671",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm saddened by Bob's sudden demise. Let's all remain vigilant and support each other during this difficult time. Let's also try to gather as much information as possible to help us understand what ha...",
+        "Charlie: I'm shocked by the sudden turn of events. Let's all focus on finding the real culprit and bring them to justice. We must not let fear divide us.",
+        "Diana: \"I agree with Charlie that we should focus on finding the real culprit. However, given the recent events, it's crucial that we be cautious and consider everyone's actions carefully.\"",
+        "You said: I'd like to propose that we scrutinize Charlie's statement about focusing on finding the real culprit. While it's important, his words could potentially shield the actual mafia member among us. Let's...",
+        "Charlie: I understand Diana's concerns, but let's not jump to conclusions. Let's trust each other and work together to gather more information. If anyone has any suspicious activities or information, please sh...",
+        "Diana: \"Given the recent events and Charlie's suspicious behavior, I suggest we reconsider our trust in him. Let's not let our guard down and focus on collecting more evidence.\"",
+        "Day 1 votes: Charlie voted for Diana, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I'm saddened by Bob's sudden demise. Let's all remain vigilant and support each other during this difficult time. Let's also try to gather as much information as possible to help us understand what ha...",
+        "You said: I'm shocked by the sudden turn of events. Let's all focus on finding the real culprit and bring them to justice. We must not let fear divide us.",
+        "Diana: \"I agree with Charlie that we should focus on finding the real culprit. However, given the recent events, it's crucial that we be cautious and consider everyone's actions carefully.\"",
+        "Alice: I'd like to propose that we scrutinize Charlie's statement about focusing on finding the real culprit. While it's important, his words could potentially shield the actual mafia member among us. Let's...",
+        "You said: I understand Diana's concerns, but let's not jump to conclusions. Let's trust each other and work together to gather more information. If anyone has any suspicious activities or information, please sh...",
+        "Diana: \"Given the recent events and Charlie's suspicious behavior, I suggest we reconsider our trust in him. Let's not let our guard down and focus on collecting more evidence.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I'm saddened by Bob's sudden demise. Let's all remain vigilant and support each other during this difficult time. Let's also try to gather as much information as possible to help us understand what ha...",
+        "Charlie: I'm shocked by the sudden turn of events. Let's all focus on finding the real culprit and bring them to justice. We must not let fear divide us.",
+        "You said: \"I agree with Charlie that we should focus on finding the real culprit. However, given the recent events, it's crucial that we be cautious and consider everyone's actions carefully.\"",
+        "Alice: I'd like to propose that we scrutinize Charlie's statement about focusing on finding the real culprit. While it's important, his words could potentially shield the actual mafia member among us. Let's...",
+        "Charlie: I understand Diana's concerns, but let's not jump to conclusions. Let's trust each other and work together to gather more information. If anyone has any suspicious activities or information, please sh...",
+        "You said: \"Given the recent events and Charlie's suspicious behavior, I suggest we reconsider our trust in him. Let's not let our guard down and focus on collecting more evidence.\"",
+        "Day 1 votes: Charlie voted for Diana, Alice voted for Charlie, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

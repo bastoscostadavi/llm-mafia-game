@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0113",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 113,
+  "timestamp": "2025-08-01T09:08:40.588457",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We need to find out who did this and bring them to justice.",
+        "Bob: Alice, I'm concerned about Charlie's death. Let's work together to find out what happened and ensure justice is served. Alice, do you have any information that might help us?",
+        "You said: I agree with Diana, let's all stay vigilant and support each other during this difficult time. We need to work together to find out what happened to Charlie and bring the culprit to justice. However,...",
+        "Bob: Alice, your reaction to Charlie's death was unexpected. I'd like to know more about your whereabouts during the night. Let's ensure we're all working towards finding the truth.",
+        "You said: I was awake during the night and noticed some unusual noises coming from the forest. Let's keep an open mind and explore all possibilities. We don't know if the culprit is among us or outside the vill...",
+        "Diana: I'm concerned about the unusual noises Alice heard. Let's focus our investigation towards the forest area. We should also consider the possibility that the culprit may be trying to mislead us. Let's s..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We need to find out who did this and bring them to justice.",
+        "You said: Alice, I'm concerned about Charlie's death. Let's work together to find out what happened and ensure justice is served. Alice, do you have any information that might help us?",
+        "Alice: I agree with Diana, let's all stay vigilant and support each other during this difficult time. We need to work together to find out what happened to Charlie and bring the culprit to justice. However,...",
+        "You said: Alice, your reaction to Charlie's death was unexpected. I'd like to know more about your whereabouts during the night. Let's ensure we're all working towards finding the truth.",
+        "Alice: I was awake during the night and noticed some unusual noises coming from the forest. Let's keep an open mind and explore all possibilities. We don't know if the culprit is among us or outside the vill...",
+        "Diana: I'm concerned about the unusual noises Alice heard. Let's focus our investigation towards the forest area. We should also consider the possibility that the culprit may be trying to mislead us. Let's s...",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We need to find out who did this and bring them to justice.",
+        "Bob: Alice, I'm concerned about Charlie's death. Let's work together to find out what happened and ensure justice is served. Alice, do you have any information that might help us?",
+        "Alice: I agree with Diana, let's all stay vigilant and support each other during this difficult time. We need to work together to find out what happened to Charlie and bring the culprit to justice. However,...",
+        "Bob: Alice, your reaction to Charlie's death was unexpected. I'd like to know more about your whereabouts during the night. Let's ensure we're all working towards finding the truth.",
+        "Alice: I was awake during the night and noticed some unusual noises coming from the forest. Let's keep an open mind and explore all possibilities. We don't know if the culprit is among us or outside the vill...",
+        "You said: I'm concerned about the unusual noises Alice heard. Let's focus our investigation towards the forest area. We should also consider the possibility that the culprit may be trying to mislead us. Let's s...",
+        "Day 1 votes: Bob voted for Alice, Diana voted for Alice, Alice voted for Bob",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

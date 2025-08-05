@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0715",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 715,
+  "timestamp": "2025-08-01T14:13:23.453040",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. Let's all stay vigilant and try to uncover the truth together.",
+        "You said: \"I'm deeply saddened by Bob's death. Let's focus on finding out who among us could have done this. Diana, I'd like to know more about your relationship with Bob.\"",
+        "Diana: I'm as shocked and saddened by Bob's death as everyone else. Let's work together to uncover the truth.",
+        "Charlie: I'd like to remind everyone that we should base our suspicions on facts and evidence, not rumors or assumptions. Let's remain focused and work together to find the truth.",
+        "You said: \"Let's not forget that Diana was the only one with a close relationship with Bob. It's important we explore that connection further.\"",
+        "Diana: I'd like to reiterate Charlie's words about focusing on facts and evidence. Let's not jump to conclusions based on assumptions. Let's work together to uncover any relevant information that might help..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm shocked about Bob's sudden death. Let's all stay vigilant and try to uncover the truth together.",
+        "Alice: \"I'm deeply saddened by Bob's death. Let's focus on finding out who among us could have done this. Diana, I'd like to know more about your relationship with Bob.\"",
+        "Diana: I'm as shocked and saddened by Bob's death as everyone else. Let's work together to uncover the truth.",
+        "You said: I'd like to remind everyone that we should base our suspicions on facts and evidence, not rumors or assumptions. Let's remain focused and work together to find the truth.",
+        "Alice: \"Let's not forget that Diana was the only one with a close relationship with Bob. It's important we explore that connection further.\"",
+        "Diana: I'd like to reiterate Charlie's words about focusing on facts and evidence. Let's not jump to conclusions based on assumptions. Let's work together to uncover any relevant information that might help...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked about Bob's sudden death. Let's all stay vigilant and try to uncover the truth together.",
+        "Alice: \"I'm deeply saddened by Bob's death. Let's focus on finding out who among us could have done this. Diana, I'd like to know more about your relationship with Bob.\"",
+        "You said: I'm as shocked and saddened by Bob's death as everyone else. Let's work together to uncover the truth.",
+        "Charlie: I'd like to remind everyone that we should base our suspicions on facts and evidence, not rumors or assumptions. Let's remain focused and work together to find the truth.",
+        "Alice: \"Let's not forget that Diana was the only one with a close relationship with Bob. It's important we explore that connection further.\"",
+        "You said: I'd like to reiterate Charlie's words about focusing on facts and evidence. Let's not jump to conclusions based on assumptions. Let's work together to uncover any relevant information that might help...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

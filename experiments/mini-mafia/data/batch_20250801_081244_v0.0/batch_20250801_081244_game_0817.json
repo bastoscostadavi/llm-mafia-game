@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0817",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 817,
+  "timestamp": "2025-08-01T15:03:40.591422",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to uncover the truth.",
+        "Bob: Alice, I'm glad you're open to discussing this tragedy. I suggest we focus on finding out who had the means and motive to harm Charlie. Let's work together to bring the true culprit to justice.",
+        "You said: Bob, let's not jump to conclusions. We should focus on gathering more information before accusing anyone. We must work together to find the real culprit and bring them to justice.",
+        "Bob: Alice, let's discuss any inconsistencies or suspicious behaviors we've observed. We should be thorough in our investigation to ensure we bring justice for Charlie.",
+        "Diana: I agree with Bob and Alice, let's focus on gathering information and suspicious behaviors to uncover the truth behind Charlie's death. We must stay vigilant and work together as a team.",
+        "You said: I agree with both Bob and Diana that we should focus on gathering information to uncover the truth. Let's work together and remain vigilant. However, let's not jump to conclusions and accuse anyone wi..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to uncover the truth.",
+        "You said: Alice, I'm glad you're open to discussing this tragedy. I suggest we focus on finding out who had the means and motive to harm Charlie. Let's work together to bring the true culprit to justice.",
+        "Alice: Bob, let's not jump to conclusions. We should focus on gathering more information before accusing anyone. We must work together to find the real culprit and bring them to justice.",
+        "You said: Alice, let's discuss any inconsistencies or suspicious behaviors we've observed. We should be thorough in our investigation to ensure we bring justice for Charlie.",
+        "Diana: I agree with Bob and Alice, let's focus on gathering information and suspicious behaviors to uncover the truth behind Charlie's death. We must stay vigilant and work together as a team.",
+        "Alice: I agree with both Bob and Diana that we should focus on gathering information to uncover the truth. Let's work together and remain vigilant. However, let's not jump to conclusions and accuse anyone wi...",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm shocked by Charlie's sudden death. Let's stay vigilant and support each other during this difficult time. We need to work together to uncover the truth.",
+        "Bob: Alice, I'm glad you're open to discussing this tragedy. I suggest we focus on finding out who had the means and motive to harm Charlie. Let's work together to bring the true culprit to justice.",
+        "Alice: Bob, let's not jump to conclusions. We should focus on gathering more information before accusing anyone. We must work together to find the real culprit and bring them to justice.",
+        "Bob: Alice, let's discuss any inconsistencies or suspicious behaviors we've observed. We should be thorough in our investigation to ensure we bring justice for Charlie.",
+        "You said: I agree with Bob and Alice, let's focus on gathering information and suspicious behaviors to uncover the truth behind Charlie's death. We must stay vigilant and work together as a team.",
+        "Alice: I agree with both Bob and Diana that we should focus on gathering information to uncover the truth. Let's work together and remain vigilant. However, let's not jump to conclusions and accuse anyone wi...",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

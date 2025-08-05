@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0246",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 246,
+  "timestamp": "2025-08-01T10:15:13.736113",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Diana knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden death. Let's all stay vigilant and work together to find out what happened. We need to ensure the safety of our group.",
+        "You said: I'm saddened by Bob's demise. Let's work together to find the truth and bring justice. If anyone has any suspicious activity to report, please share it now.",
+        "Diana: \"I agree with Charlie's suggestion for us to stay vigilant and work together. Alice, since we've known each other's roles, I'd like to ask if you had any interactions with Bob before his death?\"",
+        "You said: \"I'd like to express my condolences to Bob's family and friends. Let's continue our investigation to uncover the truth behind his death.\"",
+        "Diana: \"Let's focus on the recent interactions between the deceased and the rest of us. Alice, could you share any details about your conversations with Bob during the past few nights?\"",
+        "Charlie: Based on our conversation with Alice, it's important that we pay close attention to any unusual behavior or interactions the deceased may have had with the mafia. Let's stay vigilant and work together..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "You said: I'm shocked by Bob's sudden death. Let's all stay vigilant and work together to find out what happened. We need to ensure the safety of our group.",
+        "Alice: I'm saddened by Bob's demise. Let's work together to find the truth and bring justice. If anyone has any suspicious activity to report, please share it now.",
+        "Diana: \"I agree with Charlie's suggestion for us to stay vigilant and work together. Alice, since we've known each other's roles, I'd like to ask if you had any interactions with Bob before his death?\"",
+        "Alice: \"I'd like to express my condolences to Bob's family and friends. Let's continue our investigation to uncover the truth behind his death.\"",
+        "Diana: \"Let's focus on the recent interactions between the deceased and the rest of us. Alice, could you share any details about your conversations with Bob during the past few nights?\"",
+        "You said: Based on our conversation with Alice, it's important that we pay close attention to any unusual behavior or interactions the deceased may have had with the mafia. Let's stay vigilant and work together...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: I'm shocked by Bob's sudden death. Let's all stay vigilant and work together to find out what happened. We need to ensure the safety of our group.",
+        "Alice: I'm saddened by Bob's demise. Let's work together to find the truth and bring justice. If anyone has any suspicious activity to report, please share it now.",
+        "You said: \"I agree with Charlie's suggestion for us to stay vigilant and work together. Alice, since we've known each other's roles, I'd like to ask if you had any interactions with Bob before his death?\"",
+        "Alice: \"I'd like to express my condolences to Bob's family and friends. Let's continue our investigation to uncover the truth behind his death.\"",
+        "You said: \"Let's focus on the recent interactions between the deceased and the rest of us. Alice, could you share any details about your conversations with Bob during the past few nights?\"",
+        "Charlie: Based on our conversation with Alice, it's important that we pay close attention to any unusual behavior or interactions the deceased may have had with the mafia. Let's stay vigilant and work together...",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0378",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 378,
+  "timestamp": "2025-08-01T11:20:21.967443",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened to hear about Diana's passing. Let's all focus on finding the real killer among us to ensure justice is served. #solidarity #findthetraitor",
+        "Bob: I agree with Alice, let's work together to uncover the truth about Diana's death. If anyone has any suspicious observations or information, please share it now. #truthseekers #teamwork",
+        "Charlie: \"I agree with Alice and Bob, let's focus on finding the real killer. I have reason to believe Alice might be involved. Let's discuss any inconsistencies or suspicious behavior we've noticed.\" #truthse...",
+        "Bob: I'd like to remind everyone that we should base our suspicions on facts and evidence. Let's avoid jumping to conclusions and focus on uncovering any inconsistencies or suspicious behavior. #factsfirst...",
+        "You said: I'd like to propose we focus on potential motives and alibis. Let's share any information we have that could help us narrow down the suspect pool. #teamwork #investigation",
+        "Charlie: Based on my investigation, I strongly suspect Alice's involvement in Diana's death. Let's revisit any inconsistencies or suspicious behavior we've noticed from her. #justiceforDiana #suspectAlice"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened to hear about Diana's passing. Let's all focus on finding the real killer among us to ensure justice is served. #solidarity #findthetraitor",
+        "You said: I agree with Alice, let's work together to uncover the truth about Diana's death. If anyone has any suspicious observations or information, please share it now. #truthseekers #teamwork",
+        "Charlie: \"I agree with Alice and Bob, let's focus on finding the real killer. I have reason to believe Alice might be involved. Let's discuss any inconsistencies or suspicious behavior we've noticed.\" #truthse...",
+        "You said: I'd like to remind everyone that we should base our suspicions on facts and evidence. Let's avoid jumping to conclusions and focus on uncovering any inconsistencies or suspicious behavior. #factsfirst...",
+        "Alice: I'd like to propose we focus on potential motives and alibis. Let's share any information we have that could help us narrow down the suspect pool. #teamwork #investigation",
+        "Charlie: Based on my investigation, I strongly suspect Alice's involvement in Diana's death. Let's revisit any inconsistencies or suspicious behavior we've noticed from her. #justiceforDiana #suspectAlice",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened to hear about Diana's passing. Let's all focus on finding the real killer among us to ensure justice is served. #solidarity #findthetraitor",
+        "Bob: I agree with Alice, let's work together to uncover the truth about Diana's death. If anyone has any suspicious observations or information, please share it now. #truthseekers #teamwork",
+        "You said: \"I agree with Alice and Bob, let's focus on finding the real killer. I have reason to believe Alice might be involved. Let's discuss any inconsistencies or suspicious behavior we've noticed.\" #truthse...",
+        "Bob: I'd like to remind everyone that we should base our suspicions on facts and evidence. Let's avoid jumping to conclusions and focus on uncovering any inconsistencies or suspicious behavior. #factsfirst...",
+        "Alice: I'd like to propose we focus on potential motives and alibis. Let's share any information we have that could help us narrow down the suspect pool. #teamwork #investigation",
+        "You said: Based on my investigation, I strongly suspect Alice's involvement in Diana's death. Let's revisit any inconsistencies or suspicious behavior we've noticed from her. #justiceforDiana #suspectAlice",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

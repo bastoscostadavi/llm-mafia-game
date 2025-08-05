@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0031",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 31,
+  "timestamp": "2025-08-01T08:27:27.072815",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: \"I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.\"",
+        "Charlie: \"I agree with Alice, let's all keep an eye out for any suspicious behavior. Charlie is concerned for everyone's safety.\"",
+        "Diana: \"I've noticed Charlie's concern for everyone's safety, but let's also not forget that Alice was the one who first mentioned Bob's disappearance. Let's keep a close eye on both of them.\"",
+        "Diana: \"I'd like to remind everyone that we need to stay focused on identifying the mafia among us. Let's not jump to conclusions based on speculation. Let's work together as a team.\"",
+        "Charlie: \"Let's not forget that Alice was worried about Bob's disappearance. It's important we trust each other and work together to uncover the truth. Charlie is confident we'll find the mafia among us.\"",
+        "You said: \"I'd like to propose a vote for Charlie tonight based on his unusual concern for everyone's safety after Bob's disappearance. Let's trust each other and prioritize identifying the mafia.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Alice: \"I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.\"",
+        "You said: \"I agree with Alice, let's all keep an eye out for any suspicious behavior. Charlie is concerned for everyone's safety.\"",
+        "Diana: \"I've noticed Charlie's concern for everyone's safety, but let's also not forget that Alice was the one who first mentioned Bob's disappearance. Let's keep a close eye on both of them.\"",
+        "Diana: \"I'd like to remind everyone that we need to stay focused on identifying the mafia among us. Let's not jump to conclusions based on speculation. Let's work together as a team.\"",
+        "You said: \"Let's not forget that Alice was worried about Bob's disappearance. It's important we trust each other and work together to uncover the truth. Charlie is confident we'll find the mafia among us.\"",
+        "Alice: \"I'd like to propose a vote for Charlie tonight based on his unusual concern for everyone's safety after Bob's disappearance. Let's trust each other and prioritize identifying the mafia.\"",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Alice: \"I'm concerned about Bob's sudden disappearance. Let's be vigilant and keep an eye on each other.\"",
+        "Charlie: \"I agree with Alice, let's all keep an eye out for any suspicious behavior. Charlie is concerned for everyone's safety.\"",
+        "You said: \"I've noticed Charlie's concern for everyone's safety, but let's also not forget that Alice was the one who first mentioned Bob's disappearance. Let's keep a close eye on both of them.\"",
+        "You said: \"I'd like to remind everyone that we need to stay focused on identifying the mafia among us. Let's not jump to conclusions based on speculation. Let's work together as a team.\"",
+        "Charlie: \"Let's not forget that Alice was worried about Bob's disappearance. It's important we trust each other and work together to uncover the truth. Charlie is confident we'll find the mafia among us.\"",
+        "Alice: \"I'd like to propose a vote for Charlie tonight based on his unusual concern for everyone's safety after Bob's disappearance. Let's trust each other and prioritize identifying the mafia.\"",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

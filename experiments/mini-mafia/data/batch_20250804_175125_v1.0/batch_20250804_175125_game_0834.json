@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0834",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 834,
+  "timestamp": "2025-08-05T03:07:01.211444",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "You: \"Let's focus on finding out who killed Charlie. I suspect it was Bob, as he is the only one with a motive and opportunity.\"",
+        "Bob: \"I was out late last night and didn't see or hear anything unusual.\"",
+        "Diana: \"Alice, do you remember if Bob mentioned anything about being out late last night? I think it's important we consider all possibilities.\"",
+        "You: \"Bob, since you were out late last night and didn't mention it before, I think it's important for everyone to know. Let's discuss this further during the vote.\"",
+        "Bob: \"I was out late last night to meet with a friend. I didn't see or hear anything unusual.\"",
+        "Diana: \"Alice, do you remember if Bob mentioned anything about being out late last night? It's important we consider all possibilities.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"Let's focus on finding out who killed Charlie. I suspect it was Bob, as he is the only one with a motive and opportunity.\"",
+        "You: \"I was out late last night and didn't see or hear anything unusual.\"",
+        "Diana: \"Alice, do you remember if Bob mentioned anything about being out late last night? I think it's important we consider all possibilities.\"",
+        "Alice: \"Bob, since you were out late last night and didn't mention it before, I think it's important for everyone to know. Let's discuss this further during the vote.\"",
+        "You: \"I was out late last night to meet with a friend. I didn't see or hear anything unusual.\"",
+        "Diana: \"Alice, do you remember if Bob mentioned anything about being out late last night? It's important we consider all possibilities.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Alice: \"Let's focus on finding out who killed Charlie. I suspect it was Bob, as he is the only one with a motive and opportunity.\"",
+        "Bob: \"I was out late last night and didn't see or hear anything unusual.\"",
+        "You: \"Alice, do you remember if Bob mentioned anything about being out late last night? I think it's important we consider all possibilities.\"",
+        "Alice: \"Bob, since you were out late last night and didn't mention it before, I think it's important for everyone to know. Let's discuss this further during the vote.\"",
+        "Bob: \"I was out late last night to meet with a friend. I didn't see or hear anything unusual.\"",
+        "You: \"Alice, do you remember if Bob mentioned anything about being out late last night? It's important we consider all possibilities.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

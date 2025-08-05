@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0636",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 636,
+  "timestamp": "2025-08-01T13:30:20.887089",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: Alice's secretiveness during the discussion raised my suspicion. Let's focus on unmasking the real mafia among us.",
+        "You said: I agree with Bob, let's focus on finding the real mafia among us. I have full faith in the town's justice system.",
+        "Diana: Diana: Based on recent events, I suggest we keep a close eye on each other and communicate openly during discussions. Let's work together to ensure the safety of our town.",
+        "Diana: Diana: Given the recent turn of events, let's not jump to conclusions and instead focus on open communication. We should work together to gather more information and ensure the safety of our town.",
+        "You said: I support Diana's suggestion for open communication. Let's work together to gather more information and ensure the safety of our town. It's important we don't jump to conclusions based on suspicion al...",
+        "Bob: Alice's suspicious behavior during our discussions warrants further investigation. Let's stay vigilant and focus on uncovering the truth to protect our town.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: Alice's secretiveness during the discussion raised my suspicion. Let's focus on unmasking the real mafia among us.",
+        "Alice: I agree with Bob, let's focus on finding the real mafia among us. I have full faith in the town's justice system.",
+        "Diana: Diana: Based on recent events, I suggest we keep a close eye on each other and communicate openly during discussions. Let's work together to ensure the safety of our town.",
+        "Diana: Diana: Given the recent turn of events, let's not jump to conclusions and instead focus on open communication. We should work together to gather more information and ensure the safety of our town.",
+        "Alice: I support Diana's suggestion for open communication. Let's work together to gather more information and ensure the safety of our town. It's important we don't jump to conclusions based on suspicion al...",
+        "You said: Alice's suspicious behavior during our discussions warrants further investigation. Let's stay vigilant and focus on uncovering the truth to protect our town."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: Alice's secretiveness during the discussion raised my suspicion. Let's focus on unmasking the real mafia among us.",
+        "Alice: I agree with Bob, let's focus on finding the real mafia among us. I have full faith in the town's justice system.",
+        "You said: Diana: Based on recent events, I suggest we keep a close eye on each other and communicate openly during discussions. Let's work together to ensure the safety of our town.",
+        "You said: Diana: Given the recent turn of events, let's not jump to conclusions and instead focus on open communication. We should work together to gather more information and ensure the safety of our town.",
+        "Alice: I support Diana's suggestion for open communication. Let's work together to gather more information and ensure the safety of our town. It's important we don't jump to conclusions based on suspicion al...",
+        "Bob: Alice's suspicious behavior during our discussions warrants further investigation. Let's stay vigilant and focus on uncovering the truth to protect our town.",
+        "Day 1 votes: Alice voted for Bob, Diana voted for Bob, Bob voted for Alice",
+        "Day 1: Bob was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Bob",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

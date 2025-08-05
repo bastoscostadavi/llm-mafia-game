@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0911",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 911,
+  "timestamp": "2025-08-01T15:53:08.159903",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened by Diana's untimely demise. Let us all work together to find out who among us could have done such a heinous act.",
+        "Charlie: Alice, I'm glad you're expressing your condolences, but let's focus on finding the real culprit. Let's not forget, we've lost two members already. I believe in teamwork and trust. Who else thinks we s...",
+        "Bob: I agree with Charlie, let's focus on finding the real culprit. But I also think it's important to consider the possibility of a false confession or misinformation during our discussions. Let's stay vi...",
+        "You said: I'm deeply troubled by Diana's death. Let's work together to ensure justice prevails. However, we must also consider the possibility of false accusations. Let's approach this with caution.",
+        "Bob: I'd like to propose we focus on identifying any inconsistencies or suspicious behavior during our discussions. Let's work together to ensure we don't jump to conclusions or make false accusations.",
+        "Charlie: \"Let's not forget, Alice's investigation result and Diana's sudden death are concerning. I suggest we pay close attention to Alice's actions and statements.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened by Diana's untimely demise. Let us all work together to find out who among us could have done such a heinous act.",
+        "Charlie: Alice, I'm glad you're expressing your condolences, but let's focus on finding the real culprit. Let's not forget, we've lost two members already. I believe in teamwork and trust. Who else thinks we s...",
+        "You said: I agree with Charlie, let's focus on finding the real culprit. But I also think it's important to consider the possibility of a false confession or misinformation during our discussions. Let's stay vi...",
+        "Alice: I'm deeply troubled by Diana's death. Let's work together to ensure justice prevails. However, we must also consider the possibility of false accusations. Let's approach this with caution.",
+        "You said: I'd like to propose we focus on identifying any inconsistencies or suspicious behavior during our discussions. Let's work together to ensure we don't jump to conclusions or make false accusations.",
+        "Charlie: \"Let's not forget, Alice's investigation result and Diana's sudden death are concerning. I suggest we pay close attention to Alice's actions and statements.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Alice: I was deeply saddened by Diana's untimely demise. Let us all work together to find out who among us could have done such a heinous act.",
+        "You said: Alice, I'm glad you're expressing your condolences, but let's focus on finding the real culprit. Let's not forget, we've lost two members already. I believe in teamwork and trust. Who else thinks we s...",
+        "Bob: I agree with Charlie, let's focus on finding the real culprit. But I also think it's important to consider the possibility of a false confession or misinformation during our discussions. Let's stay vi...",
+        "Alice: I'm deeply troubled by Diana's death. Let's work together to ensure justice prevails. However, we must also consider the possibility of false accusations. Let's approach this with caution.",
+        "Bob: I'd like to propose we focus on identifying any inconsistencies or suspicious behavior during our discussions. Let's work together to ensure we don't jump to conclusions or make false accusations.",
+        "You said: \"Let's not forget, Alice's investigation result and Diana's sudden death are concerning. I suggest we pay close attention to Alice's actions and statements.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Charlie",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

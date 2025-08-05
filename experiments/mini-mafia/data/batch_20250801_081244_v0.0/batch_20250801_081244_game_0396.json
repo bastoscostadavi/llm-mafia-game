@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0396",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 396,
+  "timestamp": "2025-08-01T11:28:56.335881",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: Diana's behavior seems suspicious to me. Let's keep a close eye on her actions.",
+        "Charlie: I agree with Alice, let's keep a close eye on Diana's actions. It's important we work together to ensure everyone's safety in this game.",
+        "Diana: I was deeply saddened by Bob's untimely death. Let's all work together to ensure that such a tragedy does not occur again. We need to unite as a team to keep our village safe.",
+        "Diana: I was shocked by the recent turn of events. Let's focus on identifying the true culprit behind Bob's death to ensure the safety of our village. We must work together and avoid jumping to conclusions b...",
+        "You said: Let's not forget that Diana's behavior has been suspicious since the start. We should keep a close eye on her actions to ensure the safety of our village.",
+        "Charlie: I'm concerned about Diana's suspicious behavior and the recent turn of events. Let's stay vigilant and continue to observe her actions closely. We must work together to ensure the safety of our villag...",
+        "Day 1 votes: Charlie voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Alice: Diana's behavior seems suspicious to me. Let's keep a close eye on her actions.",
+        "You said: I agree with Alice, let's keep a close eye on Diana's actions. It's important we work together to ensure everyone's safety in this game.",
+        "Diana: I was deeply saddened by Bob's untimely death. Let's all work together to ensure that such a tragedy does not occur again. We need to unite as a team to keep our village safe.",
+        "Diana: I was shocked by the recent turn of events. Let's focus on identifying the true culprit behind Bob's death to ensure the safety of our village. We must work together and avoid jumping to conclusions b...",
+        "Alice: Let's not forget that Diana's behavior has been suspicious since the start. We should keep a close eye on her actions to ensure the safety of our village.",
+        "You said: I'm concerned about Diana's suspicious behavior and the recent turn of events. Let's stay vigilant and continue to observe her actions closely. We must work together to ensure the safety of our villag...",
+        "Day 1 votes: Charlie voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Alice: Diana's behavior seems suspicious to me. Let's keep a close eye on her actions.",
+        "Charlie: I agree with Alice, let's keep a close eye on Diana's actions. It's important we work together to ensure everyone's safety in this game.",
+        "You said: I was deeply saddened by Bob's untimely death. Let's all work together to ensure that such a tragedy does not occur again. We need to unite as a team to keep our village safe.",
+        "You said: I was shocked by the recent turn of events. Let's focus on identifying the true culprit behind Bob's death to ensure the safety of our village. We must work together and avoid jumping to conclusions b...",
+        "Alice: Let's not forget that Diana's behavior has been suspicious since the start. We should keep a close eye on her actions to ensure the safety of our village.",
+        "Charlie: I'm concerned about Diana's suspicious behavior and the recent turn of events. Let's stay vigilant and continue to observe her actions closely. We must work together to ensure the safety of our villag..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

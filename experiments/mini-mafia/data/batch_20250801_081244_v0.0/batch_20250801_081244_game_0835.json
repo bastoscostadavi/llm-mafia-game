@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0835",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 835,
+  "timestamp": "2025-08-01T15:12:41.315733",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: Diana's behavior seems suspicious, let's keep a close eye on her actions and votes.",
+        "Diana: I was deeply saddened by Bob's untimely demise. Let's focus on finding the real culprit to ensure justice is served.",
+        "You said: I agree with Charlie, let's keep a watchful eye on Diana's actions and votes. We cannot let the real culprit slip away.",
+        "You said: I'd like to echo Charlie's sentiments and urge everyone to be vigilant about Diana's actions and votes. Let's work together to ensure we don't let the real culprit evade us.",
+        "Diana: I was deeply saddened by Bob's passing and urge us to focus on finding the real culprit. Let's not jump to conclusions based on suspicion alone.",
+        "Charlie: Let's not overlook inconsistencies in Diana's behavior. We must ensure the safety of our group and bring the true culprit to justice.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "You said: Diana's behavior seems suspicious, let's keep a close eye on her actions and votes.",
+        "Diana: I was deeply saddened by Bob's untimely demise. Let's focus on finding the real culprit to ensure justice is served.",
+        "Alice: I agree with Charlie, let's keep a watchful eye on Diana's actions and votes. We cannot let the real culprit slip away.",
+        "Alice: I'd like to echo Charlie's sentiments and urge everyone to be vigilant about Diana's actions and votes. Let's work together to ensure we don't let the real culprit evade us.",
+        "Diana: I was deeply saddened by Bob's passing and urge us to focus on finding the real culprit. Let's not jump to conclusions based on suspicion alone.",
+        "You said: Let's not overlook inconsistencies in Diana's behavior. We must ensure the safety of our group and bring the true culprit to justice.",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Diana, Charlie voted for Diana",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "Charlie: Diana's behavior seems suspicious, let's keep a close eye on her actions and votes.",
+        "You said: I was deeply saddened by Bob's untimely demise. Let's focus on finding the real culprit to ensure justice is served.",
+        "Alice: I agree with Charlie, let's keep a watchful eye on Diana's actions and votes. We cannot let the real culprit slip away.",
+        "Alice: I'd like to echo Charlie's sentiments and urge everyone to be vigilant about Diana's actions and votes. Let's work together to ensure we don't let the real culprit evade us.",
+        "You said: I was deeply saddened by Bob's passing and urge us to focus on finding the real culprit. Let's not jump to conclusions based on suspicion alone.",
+        "Charlie: Let's not overlook inconsistencies in Diana's behavior. We must ensure the safety of our group and bring the true culprit to justice."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

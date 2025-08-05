@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0916",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 916,
+  "timestamp": "2025-08-01T15:55:34.342596",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I'm concerned about Charlie's sudden death. Let's focus on finding out who had the means and motive. Diana, can you explain your whereabouts last night?\"",
+        "You said: \"I agree with Bob, let's focus on finding out who had the means and motive. Diana, your alibi sounds suspicious, can you provide more details about your whereabouts last night?\"",
+        "Diana: \"I was in my hideout last night, working on some personal matters. I have nothing to hide and trust that everyone is innocent until proven guilty.\"",
+        "Bob: \"Let's not jump to conclusions, but Diana's suspicious alibi warrants further investigation. We should focus on gathering more information before making any accusations.\"",
+        "You said: \"Let's not forget that Charlie's death is a reminder of the importance of trust and transparency in our group. Diana, your alibi is still unclear. Can you provide more specific details about your hide...",
+        "Diana: \"I understand the concerns about last night's events. Let's keep an open mind and focus on gathering facts. I have nothing to hide and trust the process will reveal the truth.\"",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "You said: \"I'm concerned about Charlie's sudden death. Let's focus on finding out who had the means and motive. Diana, can you explain your whereabouts last night?\"",
+        "Alice: \"I agree with Bob, let's focus on finding out who had the means and motive. Diana, your alibi sounds suspicious, can you provide more details about your whereabouts last night?\"",
+        "Diana: \"I was in my hideout last night, working on some personal matters. I have nothing to hide and trust that everyone is innocent until proven guilty.\"",
+        "You said: \"Let's not jump to conclusions, but Diana's suspicious alibi warrants further investigation. We should focus on gathering more information before making any accusations.\"",
+        "Alice: \"Let's not forget that Charlie's death is a reminder of the importance of trust and transparency in our group. Diana, your alibi is still unclear. Can you provide more specific details about your hide...",
+        "Diana: \"I understand the concerns about last night's events. Let's keep an open mind and focus on gathering facts. I have nothing to hide and trust the process will reveal the truth.\"",
+        "Day 1 votes: Bob voted for Diana, Alice voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Bob: \"I'm concerned about Charlie's sudden death. Let's focus on finding out who had the means and motive. Diana, can you explain your whereabouts last night?\"",
+        "Alice: \"I agree with Bob, let's focus on finding out who had the means and motive. Diana, your alibi sounds suspicious, can you provide more details about your whereabouts last night?\"",
+        "You said: \"I was in my hideout last night, working on some personal matters. I have nothing to hide and trust that everyone is innocent until proven guilty.\"",
+        "Bob: \"Let's not jump to conclusions, but Diana's suspicious alibi warrants further investigation. We should focus on gathering more information before making any accusations.\"",
+        "Alice: \"Let's not forget that Charlie's death is a reminder of the importance of trust and transparency in our group. Diana, your alibi is still unclear. Can you provide more specific details about your hide...",
+        "You said: \"I understand the concerns about last night's events. Let's keep an open mind and focus on gathering facts. I have nothing to hide and trust the process will reveal the truth.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

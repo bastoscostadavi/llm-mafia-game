@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0471",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 471,
+  "timestamp": "2025-08-01T12:05:52.917247",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: \"Alice's unusual behavior last night raised my suspicion. Let's stay vigilant and keep a close eye on her actions.\"",
+        "You said: \"I found a strange object in the forest last night. It might be relevant to our investigation. Let's discuss this further.\"",
+        "Bob: \"I agree with Charlie, let's keep a close eye on Alice's behavior. It's important we work together to uncover any suspicious activity.\"",
+        "Bob: \"Let's not jump to conclusions about Alice. Her finding an object in the forest could be innocent. We should focus on gathering more information before making any decisions.\"",
+        "Charlie: \"Let's focus our investigation on the object Alice found in the forest. It could be a crucial clue. Alice, can you describe it in more detail?\"",
+        "You said: \"I'm glad we're focusing on the forest object. Let's not forget the possibility of it being a clue. I'll describe it in detail during the investigation phase.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: \"Alice's unusual behavior last night raised my suspicion. Let's stay vigilant and keep a close eye on her actions.\"",
+        "Alice: \"I found a strange object in the forest last night. It might be relevant to our investigation. Let's discuss this further.\"",
+        "You said: \"I agree with Charlie, let's keep a close eye on Alice's behavior. It's important we work together to uncover any suspicious activity.\"",
+        "You said: \"Let's not jump to conclusions about Alice. Her finding an object in the forest could be innocent. We should focus on gathering more information before making any decisions.\"",
+        "Charlie: \"Let's focus our investigation on the object Alice found in the forest. It could be a crucial clue. Alice, can you describe it in more detail?\"",
+        "Alice: \"I'm glad we're focusing on the forest object. Let's not forget the possibility of it being a clue. I'll describe it in detail during the investigation phase.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "You said: \"Alice's unusual behavior last night raised my suspicion. Let's stay vigilant and keep a close eye on her actions.\"",
+        "Alice: \"I found a strange object in the forest last night. It might be relevant to our investigation. Let's discuss this further.\"",
+        "Bob: \"I agree with Charlie, let's keep a close eye on Alice's behavior. It's important we work together to uncover any suspicious activity.\"",
+        "Bob: \"Let's not jump to conclusions about Alice. Her finding an object in the forest could be innocent. We should focus on gathering more information before making any decisions.\"",
+        "You said: \"Let's focus our investigation on the object Alice found in the forest. It could be a crucial clue. Alice, can you describe it in more detail?\"",
+        "Alice: \"I'm glad we're focusing on the forest object. Let's not forget the possibility of it being a clue. I'll describe it in detail during the investigation phase.\"",
+        "Day 1 votes: Bob voted for Alice, Alice voted for Charlie, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

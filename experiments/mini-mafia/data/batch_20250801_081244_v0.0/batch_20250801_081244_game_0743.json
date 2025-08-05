@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0743",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 743,
+  "timestamp": "2025-08-01T14:27:19.956326",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Bob knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected demise. Let's focus on finding out who among us could have done this heinous act. We need to work together to ensure justice prevails.",
+        "Bob: Alice, I'm disappointed to learn of your true identity. Let's work together to ensure the mafia is exposed and brought to justice. Charlie's death is a reminder of the danger at hand. Let's focus on i...",
+        "You said: I'm saddened by Charlie's loss. Let's focus on finding the real culprit and bring them to justice. We must work together to keep our community safe. #unitedfront",
+        "Diana: I'm shocked by Charlie's death. Let's stay vigilant and cooperate to identify the killer. Our unity is our strength. #justiceforcharlie",
+        "You said: I'm shocked by Charlie's tragic demise. Let's all work together to uncover the truth and bring the killer to justice. Our unity is our best weapon against the darkness that threatens us. #justiceforch...",
+        "Bob: Alice, I'm glad you're expressing your commitment to finding the truth. However, given the recent turn of events, it's important we maintain a healthy level of suspicion towards each other. Let's keep..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm saddened by Charlie's unexpected demise. Let's focus on finding out who among us could have done this heinous act. We need to work together to ensure justice prevails.",
+        "You said: Alice, I'm disappointed to learn of your true identity. Let's work together to ensure the mafia is exposed and brought to justice. Charlie's death is a reminder of the danger at hand. Let's focus on i...",
+        "Alice: I'm saddened by Charlie's loss. Let's focus on finding the real culprit and bring them to justice. We must work together to keep our community safe. #unitedfront",
+        "Diana: I'm shocked by Charlie's death. Let's stay vigilant and cooperate to identify the killer. Our unity is our strength. #justiceforcharlie",
+        "Alice: I'm shocked by Charlie's tragic demise. Let's all work together to uncover the truth and bring the killer to justice. Our unity is our best weapon against the darkness that threatens us. #justiceforch...",
+        "You said: Alice, I'm glad you're expressing your commitment to finding the truth. However, given the recent turn of events, it's important we maintain a healthy level of suspicion towards each other. Let's keep...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm saddened by Charlie's unexpected demise. Let's focus on finding out who among us could have done this heinous act. We need to work together to ensure justice prevails.",
+        "Bob: Alice, I'm disappointed to learn of your true identity. Let's work together to ensure the mafia is exposed and brought to justice. Charlie's death is a reminder of the danger at hand. Let's focus on i...",
+        "Alice: I'm saddened by Charlie's loss. Let's focus on finding the real culprit and bring them to justice. We must work together to keep our community safe. #unitedfront",
+        "You said: I'm shocked by Charlie's death. Let's stay vigilant and cooperate to identify the killer. Our unity is our strength. #justiceforcharlie",
+        "Alice: I'm shocked by Charlie's tragic demise. Let's all work together to uncover the truth and bring the killer to justice. Our unity is our best weapon against the darkness that threatens us. #justiceforch...",
+        "Bob: Alice, I'm glad you're expressing your commitment to finding the truth. However, given the recent turn of events, it's important we maintain a healthy level of suspicion towards each other. Let's keep...",
+        "Day 1 votes: Diana voted for Alice, Alice voted for Bob, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

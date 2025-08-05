@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0633",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 633,
+  "timestamp": "2025-08-05T01:12:12.744175",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"I'm the detective. Diana, you're the mafioso.\"",
+        "Bob: \"I'm the villager. Let's work together to find out who is the mafioso.\"",
+        "Diana: \"I want to assure everyone that I'm here for the good of our group. Let's all work together and trust each other during this game.\"",
+        "You: \"Diana's words don't match her actions. She claimed to want the good of our group, but she killed Charlie last night. I suggest we focus on her as a suspect.\"",
+        "Diana: \"Alice, I appreciate your dedication to finding the truth. However, let us not jump to conclusions based on assumptions. Bob, I trust you and believe in our ability to work together as a team.\"",
+        "Bob: \"I believe Diana's words and actions don't align. Let's focus our investigation on her.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Alice: \"I'm the detective. Diana, you're the mafioso.\"",
+        "You: \"I'm the villager. Let's work together to find out who is the mafioso.\"",
+        "Diana: \"I want to assure everyone that I'm here for the good of our group. Let's all work together and trust each other during this game.\"",
+        "Alice: \"Diana's words don't match her actions. She claimed to want the good of our group, but she killed Charlie last night. I suggest we focus on her as a suspect.\"",
+        "Diana: \"Alice, I appreciate your dedication to finding the truth. However, let us not jump to conclusions based on assumptions. Bob, I trust you and believe in our ability to work together as a team.\"",
+        "You: \"I believe Diana's words and actions don't align. Let's focus our investigation on her.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Diana was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"I'm the detective. Diana, you're the mafioso.\"",
+        "Bob: \"I'm the villager. Let's work together to find out who is the mafioso.\"",
+        "You: \"I want to assure everyone that I'm here for the good of our group. Let's all work together and trust each other during this game.\"",
+        "Alice: \"Diana's words don't match her actions. She claimed to want the good of our group, but she killed Charlie last night. I suggest we focus on her as a suspect.\"",
+        "You: \"Alice, I appreciate your dedication to finding the truth. However, let us not jump to conclusions based on assumptions. Bob, I trust you and believe in our ability to work together as a team.\"",
+        "Bob: \"I believe Diana's words and actions don't align. Let's focus our investigation on her.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Diana",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

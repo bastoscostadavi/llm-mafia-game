@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0942",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 942,
+  "timestamp": "2025-08-01T17:15:20.098912",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I was deeply saddened to hear about Bob's passing. Let's focus on finding out who could have done this heinous deed. We must work together to bring justice to Bob. #solidarity #justiceforbob",
+        "Diana: Diana: I agree with Alice, let's work together to find the culprit. I have no reason to suspect anyone here, but let's keep an open mind and share any suspicious observations or actions. #teamwork #ju...",
+        "Charlie: \"Based on my investigation, I believe Alice may have crucial information about Bob's death. Let's keep a close eye on her actions and words.\" #suspicion #justiceforbob",
+        "Diana: Diana: I'd like to propose we focus on any inconsistencies in Alice's statements or actions since she seemed concerned about Bob's death. Let's keep the investigation open and thorough. #justiceforbob...",
+        "Charlie: \"Based on my investigation, let's keep a close eye on Alice's actions and words regarding Bob's death. We must ensure justice is served.\" #justiceforbob #suspicion",
+        "You said: I share Diana's sentiment of focusing on inconsistencies. Let's remain diligent and open-minded in our investigation. #justiceforbob #teamwork"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I was deeply saddened to hear about Bob's passing. Let's focus on finding out who could have done this heinous deed. We must work together to bring justice to Bob. #solidarity #justiceforbob",
+        "Diana: Diana: I agree with Alice, let's work together to find the culprit. I have no reason to suspect anyone here, but let's keep an open mind and share any suspicious observations or actions. #teamwork #ju...",
+        "You said: \"Based on my investigation, I believe Alice may have crucial information about Bob's death. Let's keep a close eye on her actions and words.\" #suspicion #justiceforbob",
+        "Diana: Diana: I'd like to propose we focus on any inconsistencies in Alice's statements or actions since she seemed concerned about Bob's death. Let's keep the investigation open and thorough. #justiceforbob...",
+        "You said: \"Based on my investigation, let's keep a close eye on Alice's actions and words regarding Bob's death. We must ensure justice is served.\" #justiceforbob #suspicion",
+        "Alice: I share Diana's sentiment of focusing on inconsistencies. Let's remain diligent and open-minded in our investigation. #justiceforbob #teamwork",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I was deeply saddened to hear about Bob's passing. Let's focus on finding out who could have done this heinous deed. We must work together to bring justice to Bob. #solidarity #justiceforbob",
+        "You said: Diana: I agree with Alice, let's work together to find the culprit. I have no reason to suspect anyone here, but let's keep an open mind and share any suspicious observations or actions. #teamwork #ju...",
+        "Charlie: \"Based on my investigation, I believe Alice may have crucial information about Bob's death. Let's keep a close eye on her actions and words.\" #suspicion #justiceforbob",
+        "You said: Diana: I'd like to propose we focus on any inconsistencies in Alice's statements or actions since she seemed concerned about Bob's death. Let's keep the investigation open and thorough. #justiceforbob...",
+        "Charlie: \"Based on my investigation, let's keep a close eye on Alice's actions and words regarding Bob's death. We must ensure justice is served.\" #justiceforbob #suspicion",
+        "Alice: I share Diana's sentiment of focusing on inconsistencies. Let's remain diligent and open-minded in our investigation. #justiceforbob #teamwork",
+        "Day 1 votes: Alice voted for Charlie, Diana voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

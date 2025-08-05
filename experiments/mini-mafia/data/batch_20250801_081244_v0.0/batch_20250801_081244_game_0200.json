@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0200",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 200,
+  "timestamp": "2025-08-01T09:52:28.123445",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Be careful, Diana knows you're the detective.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to find out what happened.",
+        "Bob: Bob: I agree with Diana, let's all keep an eye on each other and share any suspicious behavior or observations we notice. We want to uncover the truth behind Charlie's death.",
+        "You said: Alice: Based on my investigation, I believe Diana is the mafioso. Let's be cautious around her and work together to ensure her actions don't harm our cause. We must unite to find the truth and bring j...",
+        "Bob: Bob: I noticed Alice's accusation against Diana. Let's not jump to conclusions and consider all possibilities. We should focus on uncovering the truth about Charlie's death together.",
+        "Diana: I'd like to echo Bob's sentiments. Let's focus on finding the truth about Charlie's death and not make hasty accusations. We must work together as a team for the best outcome.",
+        "You said: Alice: Given Diana's suspicious behavior and Charlie's sudden disappearance, it's crucial we remain vigilant. Let's focus on uncovering the truth about Charlie's death and maintain open communication."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Charlie was found dead this morning.",
+        "Diana: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to find out what happened.",
+        "You said: Bob: I agree with Diana, let's all keep an eye on each other and share any suspicious behavior or observations we notice. We want to uncover the truth behind Charlie's death.",
+        "Alice: Alice: Based on my investigation, I believe Diana is the mafioso. Let's be cautious around her and work together to ensure her actions don't harm our cause. We must unite to find the truth and bring j...",
+        "You said: Bob: I noticed Alice's accusation against Diana. Let's not jump to conclusions and consider all possibilities. We should focus on uncovering the truth about Charlie's death together.",
+        "Diana: I'd like to echo Bob's sentiments. Let's focus on finding the truth about Charlie's death and not make hasty accusations. We must work together as a team for the best outcome.",
+        "Alice: Alice: Given Diana's suspicious behavior and Charlie's sudden disappearance, it's crucial we remain vigilant. Let's focus on uncovering the truth about Charlie's death and maintain open communication.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Charlie was found dead this morning.",
+        "You said: I'm concerned about Charlie's sudden disappearance. Let's all stay vigilant and work together to find out what happened.",
+        "Bob: Bob: I agree with Diana, let's all keep an eye on each other and share any suspicious behavior or observations we notice. We want to uncover the truth behind Charlie's death.",
+        "Alice: Alice: Based on my investigation, I believe Diana is the mafioso. Let's be cautious around her and work together to ensure her actions don't harm our cause. We must unite to find the truth and bring j...",
+        "Bob: Bob: I noticed Alice's accusation against Diana. Let's not jump to conclusions and consider all possibilities. We should focus on uncovering the truth about Charlie's death together.",
+        "You said: I'd like to echo Bob's sentiments. Let's focus on finding the truth about Charlie's death and not make hasty accusations. We must work together as a team for the best outcome.",
+        "Alice: Alice: Given Diana's suspicious behavior and Charlie's sudden disappearance, it's crucial we remain vigilant. Let's focus on uncovering the truth about Charlie's death and maintain open communication.",
+        "Day 1 votes: Alice voted for Diana, Diana voted for Alice, Bob voted for Alice",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Charlie",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

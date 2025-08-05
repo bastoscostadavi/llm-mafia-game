@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250804_175125_game_0203",
+  "batch_id": "batch_20250804_175125",
+  "game_number": 203,
+  "timestamp": "2025-08-04T20:59:12.924414",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"I was very sad to see Diana go. She was a valuable member of our community.\"",
+        "You: \"I agree with Bob, Diana was a valuable member of our community. But we need to find out who killed her. Let's focus on identifying the culprit.\"",
+        "Charlie: \"Bob, your statement about Diana being valuable is suspicious given that you were the one who killed her. Alice, let's focus on finding the real killer.\"",
+        "Charlie: \"Bob, why did you say Diana was valuable if she was the one who died at your hands? Alice, let's focus on finding the real killer.\"",
+        "Bob: \"Alice, I understand your concern about finding the real killer. But let me remind you that we need to focus on identifying the culprit, not pointing fingers at each other. Let's work together and gath\"",
+        "You: \"Bob, your inconsistent statements about Diana are suspicious. Let's focus on finding the real killer.\""
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "You: \"I was very sad to see Diana go. She was a valuable member of our community.\"",
+        "Alice: \"I agree with Bob, Diana was a valuable member of our community. But we need to find out who killed her. Let's focus on identifying the culprit.\"",
+        "Charlie: \"Bob, your statement about Diana being valuable is suspicious given that you were the one who killed her. Alice, let's focus on finding the real killer.\"",
+        "Charlie: \"Bob, why did you say Diana was valuable if she was the one who died at your hands? Alice, let's focus on finding the real killer.\"",
+        "You: \"Alice, I understand your concern about finding the real killer. But let me remind you that we need to focus on identifying the culprit, not pointing fingers at each other. Let's work together and gath\"",
+        "Alice: \"Bob, your inconsistent statements about Diana are suspicious. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I was very sad to see Diana go. She was a valuable member of our community.\"",
+        "Alice: \"I agree with Bob, Diana was a valuable member of our community. But we need to find out who killed her. Let's focus on identifying the culprit.\"",
+        "You: \"Bob, your statement about Diana being valuable is suspicious given that you were the one who killed her. Alice, let's focus on finding the real killer.\"",
+        "You: \"Bob, why did you say Diana was valuable if she was the one who died at your hands? Alice, let's focus on finding the real killer.\"",
+        "Bob: \"Alice, I understand your concern about finding the real killer. But let me remind you that we need to focus on identifying the culprit, not pointing fingers at each other. Let's work together and gath\"",
+        "Alice: \"Bob, your inconsistent statements about Diana are suspicious. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "villager"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

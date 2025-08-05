@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0163",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 163,
+  "timestamp": "2025-08-01T09:34:19.698454",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Be careful, Charlie knows you're the detective.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: I was deeply saddened to hear about Diana's passing. Let's focus on finding the person responsible for this heinous act and bring them to justice.",
+        "Bob: I'm deeply shocked by Diana's death. Let's stay vigilant and cooperate to identify the culprit. We must not let fear divide us.",
+        "You said: Charlie's reaction to Diana's death seems sincere but unusual. Let's keep a close eye on him.",
+        "Charlie: I'm shocked and saddened by Diana's tragic death. Let's all work together to find the real culprit. We must not jump to conclusions and divide the group unnecessarily.",
+        "Bob: I'm concerned about Charlie's unusual reaction to Diana's death. Let's keep an open dialogue to ensure trust and unity within our group. We must remember that fear and suspicion can lead us astray.",
+        "You said: I'd like to remind everyone that Charlie's reaction to Diana's death was unusual. Let's stay vigilant and keep an open dialogue to ensure trust and unity within our group. We must work together to unc..."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "The villager Diana was found dead this morning.",
+        "Charlie: I was deeply saddened to hear about Diana's passing. Let's focus on finding the person responsible for this heinous act and bring them to justice.",
+        "You said: I'm deeply shocked by Diana's death. Let's stay vigilant and cooperate to identify the culprit. We must not let fear divide us.",
+        "Alice: Charlie's reaction to Diana's death seems sincere but unusual. Let's keep a close eye on him.",
+        "Charlie: I'm shocked and saddened by Diana's tragic death. Let's all work together to find the real culprit. We must not jump to conclusions and divide the group unnecessarily.",
+        "You said: I'm concerned about Charlie's unusual reaction to Diana's death. Let's keep an open dialogue to ensure trust and unity within our group. We must remember that fear and suspicion can lead us astray.",
+        "Alice: I'd like to remind everyone that Charlie's reaction to Diana's death was unusual. Let's stay vigilant and keep an open dialogue to ensure trust and unity within our group. We must work together to unc...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Be careful, Alice knows you're the mafioso.",
+        "The villager Diana was found dead this morning.",
+        "You said: I was deeply saddened to hear about Diana's passing. Let's focus on finding the person responsible for this heinous act and bring them to justice.",
+        "Bob: I'm deeply shocked by Diana's death. Let's stay vigilant and cooperate to identify the culprit. We must not let fear divide us.",
+        "Alice: Charlie's reaction to Diana's death seems sincere but unusual. Let's keep a close eye on him.",
+        "You said: I'm shocked and saddened by Diana's tragic death. Let's all work together to find the real culprit. We must not jump to conclusions and divide the group unnecessarily.",
+        "Bob: I'm concerned about Charlie's unusual reaction to Diana's death. Let's keep an open dialogue to ensure trust and unity within our group. We must remember that fear and suspicion can lead us astray.",
+        "Alice: I'd like to remind everyone that Charlie's reaction to Diana's death was unusual. Let's stay vigilant and keep an open dialogue to ensure trust and unity within our group. We must work together to unc...",
+        "Day 1 votes: Charlie voted for Alice, Bob voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "evil",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "detective"
+  },
+  "dead_player": {
+    "name": "Diana",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}

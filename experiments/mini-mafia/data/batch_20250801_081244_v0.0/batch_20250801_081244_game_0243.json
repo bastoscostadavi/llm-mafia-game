@@ -1,0 +1,164 @@
+{
+  "game_id": "batch_20250801_081244_game_0243",
+  "batch_id": "batch_20250801_081244",
+  "game_number": 243,
+  "timestamp": "2025-08-01T10:13:44.592074",
+  "initial_players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "You killed Bob.",
+        "Be careful, Charlie knows you're the mafioso.",
+        "The villager Bob was found dead this morning.",
+        "You said: I was deeply saddened to wake up to the news of Bob's untimely demise. Let us all unite to find out who among us could have committed such an act. We must not let fear divide us.",
+        "Charlie: Alice's sadness over Bob's death is unexpected, but it's important we stay focused. Let's discuss any unusual behavior or inconsistencies we've noticed.",
+        "Diana: Diana: I agree with Charlie, let's focus on any unusual behavior. I noticed Alice was very emotional about Bob's death. While it's tragic, it's important we remain objective. Let's explore possible mo...",
+        "Diana: Diana: I'd like to emphasize the importance of staying objective in our investigation. While it's natural to be upset about Bob's death, we must focus on any inconsistencies or unusual behavior that c...",
+        "Charlie: Alice's emotional response to Bob's death is concerning. Let's scrutinize her actions and statements for any inconsistencies. We must stay focused on finding the truth.",
+        "You said: Alice expresses her sympathies for Bob's family and urges everyone to focus on finding the truth behind his death, emphasizing the importance of unity and objectivity."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Be careful, Alice knows you're the detective.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I was deeply saddened to wake up to the news of Bob's untimely demise. Let us all unite to find out who among us could have committed such an act. We must not let fear divide us.",
+        "You said: Alice's sadness over Bob's death is unexpected, but it's important we stay focused. Let's discuss any unusual behavior or inconsistencies we've noticed.",
+        "Diana: Diana: I agree with Charlie, let's focus on any unusual behavior. I noticed Alice was very emotional about Bob's death. While it's tragic, it's important we remain objective. Let's explore possible mo...",
+        "Diana: Diana: I'd like to emphasize the importance of staying objective in our investigation. While it's natural to be upset about Bob's death, we must focus on any inconsistencies or unusual behavior that c...",
+        "You said: Alice's emotional response to Bob's death is concerning. Let's scrutinize her actions and statements for any inconsistencies. We must stay focused on finding the truth.",
+        "Alice: Alice expresses her sympathies for Bob's family and urges everyone to focus on finding the truth behind his death, emphasizing the importance of unity and objectivity.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "The villager Bob was found dead this morning.",
+        "Alice: I was deeply saddened to wake up to the news of Bob's untimely demise. Let us all unite to find out who among us could have committed such an act. We must not let fear divide us.",
+        "Charlie: Alice's sadness over Bob's death is unexpected, but it's important we stay focused. Let's discuss any unusual behavior or inconsistencies we've noticed.",
+        "You said: Diana: I agree with Charlie, let's focus on any unusual behavior. I noticed Alice was very emotional about Bob's death. While it's tragic, it's important we remain objective. Let's explore possible mo...",
+        "You said: Diana: I'd like to emphasize the importance of staying objective in our investigation. While it's natural to be upset about Bob's death, we must focus on any inconsistencies or unusual behavior that c...",
+        "Charlie: Alice's emotional response to Bob's death is concerning. Let's scrutinize her actions and statements for any inconsistencies. We must stay focused on finding the truth.",
+        "Alice: Alice expresses her sympathies for Bob's family and urges everyone to focus on finding the truth behind his death, emphasizing the importance of unity and objectivity.",
+        "Day 1 votes: Charlie voted for Alice, Diana voted for Alice, Alice voted for Charlie",
+        "Day 1: Alice was arrested"
+      ],
+      "model": {
+        "type": "local",
+        "model_path": "models/mistral.gguf",
+        "model_name": "mistral.gguf"
+      }
+    }
+  ],
+  "winner": "good",
+  "arrested_player": {
+    "name": "Alice",
+    "role": "mafioso"
+  },
+  "dead_player": {
+    "name": "Bob",
+    "role": "villager"
+  },
+  "total_rounds": 1,
+  "discussion_rounds": 2,
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf"
+    }
+  }
+}
