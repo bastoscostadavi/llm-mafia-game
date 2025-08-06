@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0068",
+  "game_number": 68,
+  "timestamp": "2025-08-04T18:31:02.164678",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"Charlie, I have a strong suspicion about you. Please explain your actions last night.\"",
+        "Charlie: remained silent.",
+        "You: \"Bob, I'm concerned about Charlie's silence last night. Let's keep an eye on him.\"",
+        "Bob: \"Charlie, your silence last night raised suspicion. Let's vote Charlie tonight.\"",
+        "Charlie: \"I have nothing to hide. I was merely sleeping last night.\"",
+        "You: \"Bob, I think it's important that we focus on Charlie's suspicious silence last night. Let's vote him tonight.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I have a strong suspicion about you. Please explain your actions last night.\"",
+        "Charlie: remained silent.",
+        "Alice: \"Bob, I'm concerned about Charlie's silence last night. Let's keep an eye on him.\"",
+        "You: \"Charlie, your silence last night raised suspicion. Let's vote Charlie tonight.\"",
+        "Charlie: \"I have nothing to hide. I was merely sleeping last night.\"",
+        "Alice: \"Bob, I think it's important that we focus on Charlie's suspicious silence last night. Let's vote him tonight.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Charlie, I have a strong suspicion about you. Please explain your actions last night.\"",
+        "You: remained silent.",
+        "Alice: \"Bob, I'm concerned about Charlie's silence last night. Let's keep an eye on him.\"",
+        "Bob: \"Charlie, your silence last night raised suspicion. Let's vote Charlie tonight.\"",
+        "You: \"I have nothing to hide. I was merely sleeping last night.\"",
+        "Alice: \"Bob, I think it's important that we focus on Charlie's suspicious silence last night. Let's vote him tonight.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

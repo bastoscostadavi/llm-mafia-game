@@ -92,14 +92,16 @@ def get_preset_configs():
 
 def single_day_play(game):
     """Single day phase play function for mini-mafia"""
-    game.display.show_game_start()
-    game.display.show_roles(game.state.agents)
+    print("Initializing Mafia Game...")
+    game.show_roles()
     
     # Start day 1 directly (no night phase)
     game.state.round = 1
-    game.display.show_day_start(game.state.round)
-    game.display.show_status(game.state)
-    game.day_phase.run()
+    print(f"\n{'='*50}")
+    print(f"DAY {game.state.round}")
+    print(f"{'='*50}")
+    game.show_status()
+    game.run_day_phase()
     
     # Determine winner based on who was arrested
     arrested_agent = next((a for a in game.state.agents if a.imprisoned), None)
@@ -113,8 +115,7 @@ def single_day_play(game):
     else:
         result = "No one was arrested! Game incomplete."
         
-    game.display.show_game_end(result)
-    game.display.show_final_roles(game.state.agents)
+    game.show_game_end(result)
 
 def classic_game(debug_prompts=False):
     """Classic 6-player Mafia game: 2 mafiosos, 1 detective, 3 villagers"""

@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0213",
+  "game_number": 213,
+  "timestamp": "2025-08-04T21:05:08.633956",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Charlie: \"I'm shocked by Diana's sudden death. We should be careful and try to find out who did this.\"",
+        "You: \"Bob, your actions last night are suspicious. Let's focus on you tonight.\"",
+        "Bob: \"I was shocked by Diana's death as well. Let's focus on finding out who did this.\"",
+        "Charlie: \"Bob, I agree that we should focus on finding out who killed Diana. But let's not jump to conclusions without enough evidence.\"",
+        "You: \"Bob, your suspicious behavior last night raises concerns. Let's focus on you tonight.\"",
+        "Bob: \"I'm concerned about Diana's death as well. Let's focus on finding out the truth together.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm shocked by Diana's sudden death. We should be careful and try to find out who did this.\"",
+        "Alice: \"Bob, your actions last night are suspicious. Let's focus on you tonight.\"",
+        "You: \"I was shocked by Diana's death as well. Let's focus on finding out who did this.\"",
+        "Charlie: \"Bob, I agree that we should focus on finding out who killed Diana. But let's not jump to conclusions without enough evidence.\"",
+        "Alice: \"Bob, your suspicious behavior last night raises concerns. Let's focus on you tonight.\"",
+        "You: \"I'm concerned about Diana's death as well. Let's focus on finding out the truth together.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: \"I'm shocked by Diana's sudden death. We should be careful and try to find out who did this.\"",
+        "Alice: \"Bob, your actions last night are suspicious. Let's focus on you tonight.\"",
+        "Bob: \"I was shocked by Diana's death as well. Let's focus on finding out who did this.\"",
+        "You: \"Bob, I agree that we should focus on finding out who killed Diana. But let's not jump to conclusions without enough evidence.\"",
+        "Alice: \"Bob, your suspicious behavior last night raises concerns. Let's focus on you tonight.\"",
+        "Bob: \"I'm concerned about Diana's death as well. Let's focus on finding out the truth together.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

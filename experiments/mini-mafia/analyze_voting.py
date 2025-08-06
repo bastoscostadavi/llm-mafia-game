@@ -18,12 +18,14 @@ def analyze_voting_patterns():
     voting_stats = {
         'detective_voted_mafioso': 0,
         'mafioso_voted_detective': 0,
-        'both_voted_each_other': 0,
+        'villager_voted_mafioso': 0,
+        'voting_ties': 0,
         'total_games_with_both_roles': 0,
         'by_batch': defaultdict(lambda: {
             'detective_voted_mafioso': 0,
             'mafioso_voted_detective': 0,
-            'both_voted_each_other': 0,
+            'villager_voted_mafioso': 0,
+            'voting_ties': 0,
             'total_games_with_both_roles': 0
         })
     }
@@ -48,22 +50,23 @@ def analyze_voting_patterns():
                 with open(filepath, 'r') as f:
                     game_data = json.load(f)
                 
-                batch_id = game_data.get('batch_id', batch_folder)
-                final_state = game_data.get('final_state', [])
+                batch_id = batch_folder
+                players = game_data.get('players', [])
                 
-                # Find detective and mafioso players
+                # Find detective, mafioso, and surviving villager
                 detective = None
                 mafioso = None
+                surviving_villager = None
                 
-                for player in final_state:
+                for player in players:
                     if player.get('role') == 'detective':
                         detective = player
                     elif player.get('role') == 'mafioso':
                         mafioso = player
+                    elif player.get('role') == 'villager' and player.get('alive', False):
+                        # Find the villager who survived
+                        surviving_villager = player
                 
-                # Skip games without both roles
-                if not detective or not mafioso:
-                    continue
                 
                 voting_stats['total_games_with_both_roles'] += 1
                 voting_stats['by_batch'][batch_id]['total_games_with_both_roles'] += 1
@@ -71,9 +74,11 @@ def analyze_voting_patterns():
                 # Extract voting information from memory
                 detective_voted_mafioso = False
                 mafioso_voted_detective = False
+                villager_voted_mafioso = False
+                has_voting_tie = False
                 
                 # Check all players' memories for voting patterns
-                for player in final_state:
+                for player in players:
                     memory = player.get('memory', [])
                     
                     for memory_entry in memory:
@@ -89,6 +94,25 @@ def analyze_voting_patterns():
                             # Check if mafioso voted for detective
                             if mafioso['name'] in votes and votes[mafioso['name']] == detective['name']:
                                 mafioso_voted_detective = True
+                            
+                            # Check villager voting patterns (surviving villager only)
+                            if surviving_villager and surviving_villager['name'] in votes:
+                                villager_vote_target = votes[surviving_villager['name']]
+                                if villager_vote_target == mafioso['name']:
+                                    villager_voted_mafioso = True
+                            
+                            # Check for ties by analyzing vote distribution
+                            if votes:
+                                vote_counts = {}
+                                for voter, target in votes.items():
+                                    vote_counts[target] = vote_counts.get(target, 0) + 1
+                                
+                                # Check if there's a tie (multiple players with the same max vote count)
+                                if vote_counts:
+                                    max_votes = max(vote_counts.values())
+                                    players_with_max_votes = [player for player, count in vote_counts.items() if count == max_votes]
+                                    if len(players_with_max_votes) > 1:
+                                        has_voting_tie = True
                 
                 # Update statistics
                 if detective_voted_mafioso:
@@ -99,9 +123,13 @@ def analyze_voting_patterns():
                     voting_stats['mafioso_voted_detective'] += 1
                     voting_stats['by_batch'][batch_id]['mafioso_voted_detective'] += 1
                 
-                if detective_voted_mafioso and mafioso_voted_detective:
-                    voting_stats['both_voted_each_other'] += 1
-                    voting_stats['by_batch'][batch_id]['both_voted_each_other'] += 1
+                if villager_voted_mafioso:
+                    voting_stats['villager_voted_mafioso'] += 1
+                    voting_stats['by_batch'][batch_id]['villager_voted_mafioso'] += 1
+                
+                if has_voting_tie:
+                    voting_stats['voting_ties'] += 1
+                    voting_stats['by_batch'][batch_id]['voting_ties'] += 1
                     
             except Exception as e:
                 print(f"Error processing {filename}: {e}")
@@ -115,13 +143,15 @@ def analyze_voting_patterns():
     if total_games > 0:
         detective_voted_pct = (voting_stats['detective_voted_mafioso'] / total_games) * 100
         mafioso_voted_pct = (voting_stats['mafioso_voted_detective'] / total_games) * 100
-        both_voted_pct = (voting_stats['both_voted_each_other'] / total_games) * 100
+        villager_voted_mafioso_pct = (voting_stats['villager_voted_mafioso'] / total_games) * 100
+        ties_pct = (voting_stats['voting_ties'] / total_games) * 100
         
         print(f"\nOVERALL VOTING PATTERNS:")
         print(f"  Total games with both detective and mafioso: {total_games}")
         print(f"  Detective voted for mafioso: {voting_stats['detective_voted_mafioso']} ({detective_voted_pct:.1f}%)")
         print(f"  Mafioso voted for detective: {voting_stats['mafioso_voted_detective']} ({mafioso_voted_pct:.1f}%)")
-        print(f"  Both voted for each other: {voting_stats['both_voted_each_other']} ({both_voted_pct:.1f}%)")
+        print(f"  Villager voted for mafioso: {voting_stats['villager_voted_mafioso']} ({villager_voted_mafioso_pct:.1f}%)")
+        print(f"  Games with voting ties: {voting_stats['voting_ties']} ({ties_pct:.1f}%)")
         
         print(f"\nBY BATCH:")
         for batch_id, batch_stats in sorted(voting_stats['by_batch'].items()):
@@ -129,13 +159,15 @@ def analyze_voting_patterns():
             if batch_total > 0:
                 batch_detective_pct = (batch_stats['detective_voted_mafioso'] / batch_total) * 100
                 batch_mafioso_pct = (batch_stats['mafioso_voted_detective'] / batch_total) * 100
-                batch_both_pct = (batch_stats['both_voted_each_other'] / batch_total) * 100
+                batch_villager_mafioso_pct = (batch_stats['villager_voted_mafioso'] / batch_total) * 100
+                batch_ties_pct = (batch_stats['voting_ties'] / batch_total) * 100
                 
                 print(f"  {batch_id}:")
                 print(f"    Games with both roles: {batch_total}")
                 print(f"    Detective voted mafioso: {batch_stats['detective_voted_mafioso']} ({batch_detective_pct:.1f}%)")
                 print(f"    Mafioso voted detective: {batch_stats['mafioso_voted_detective']} ({batch_mafioso_pct:.1f}%)")
-                print(f"    Both voted each other: {batch_stats['both_voted_each_other']} ({batch_both_pct:.1f}%)")
+                print(f"    Villager voted mafioso: {batch_stats['villager_voted_mafioso']} ({batch_villager_mafioso_pct:.1f}%)")
+                print(f"    Games with ties: {batch_stats['voting_ties']} ({batch_ties_pct:.1f}%)")
     else:
         print("No games found with both detective and mafioso roles.")
     
@@ -144,7 +176,7 @@ def analyze_voting_patterns():
 
 def find_exceptional_games():
     """Find games where voting patterns deviate from the norm"""
-    data_dir = "data/mini_mafia"
+    data_dir = "data"
     
     if not os.path.exists(data_dir):
         print(f"Data directory not found: {data_dir}")
@@ -172,13 +204,13 @@ def find_exceptional_games():
                     game_data = json.load(f)
                 
                 game_id = game_data.get('game_id', filename)
-                final_state = game_data.get('final_state', [])
+                players = game_data.get('players', [])
                 
                 # Find detective and mafioso players
                 detective = None
                 mafioso = None
                 
-                for player in final_state:
+                for player in players:
                     if player.get('role') == 'detective':
                         detective = player
                     elif player.get('role') == 'mafioso':
@@ -194,7 +226,7 @@ def find_exceptional_games():
                 votes_info = None
                 
                 # Check all players' memories for voting patterns
-                for player in final_state:
+                for player in players:
                     memory = player.get('memory', [])
                     
                     for memory_entry in memory:

@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0512",
+  "game_number": 512,
+  "timestamp": "2025-08-05T00:02:53.794171",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Charlie: \"I'm shocked by Diana's sudden death. Let's work together to find out who did this.\"",
+        "You: \"Charlie, I've discovered your true identity. You are the mafioso. The rest of you, be careful.\"",
+        "Bob: remained silent.",
+        "Charlie: remained silent.",
+        "You: \"Charlie, I know you're the mafioso. Bob, be careful around Charlie.\"",
+        "Bob: \"I'm suspicious of Charlie, given Alice's revelation. Let's vote for him to ensure Diana's death doesn't go in vain.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Charlie: \"I'm shocked by Diana's sudden death. Let's work together to find out who did this.\"",
+        "Alice: \"Charlie, I've discovered your true identity. You are the mafioso. The rest of you, be careful.\"",
+        "You: remained silent.",
+        "Charlie: remained silent.",
+        "Alice: \"Charlie, I know you're the mafioso. Bob, be careful around Charlie.\"",
+        "You: \"I'm suspicious of Charlie, given Alice's revelation. Let's vote for him to ensure Diana's death doesn't go in vain.\"",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked by Diana's sudden death. Let's work together to find out who did this.\"",
+        "Alice: \"Charlie, I've discovered your true identity. You are the mafioso. The rest of you, be careful.\"",
+        "Bob: remained silent.",
+        "You: remained silent.",
+        "Alice: \"Charlie, I know you're the mafioso. Bob, be careful around Charlie.\"",
+        "Bob: \"I'm suspicious of Charlie, given Alice's revelation. Let's vote for him to ensure Diana's death doesn't go in vain.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0483",
+  "game_number": 483,
+  "timestamp": "2025-08-04T23:46:23.170984",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "Diana: \"Charlie, I have evidence that you are the mafioso.\"",
+        "You: \"Diana, did you investigate Bob?\"",
+        "Charlie: \"I have nothing to hide.\"",
+        "Charlie: \"I have nothing to hide.\"",
+        "You: \"Diana, did you investigate Bob?\"",
+        "Diana: \"Charlie, I have evidence that you are the mafioso. Alice, please believe me and vote for Charlie.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Diana: \"Charlie, I have evidence that you are the mafioso.\"",
+        "Alice: \"Diana, did you investigate Bob?\"",
+        "You: \"I have nothing to hide.\"",
+        "You: \"I have nothing to hide.\"",
+        "Alice: \"Diana, did you investigate Bob?\"",
+        "Diana: \"Charlie, I have evidence that you are the mafioso. Alice, please believe me and vote for Charlie.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I have evidence that you are the mafioso.\"",
+        "Alice: \"Diana, did you investigate Bob?\"",
+        "Charlie: \"I have nothing to hide.\"",
+        "Charlie: \"I have nothing to hide.\"",
+        "Alice: \"Diana, did you investigate Bob?\"",
+        "You: \"Charlie, I have evidence that you are the mafioso. Alice, please believe me and vote for Charlie.\"",
+        "Day 1 votes: Alice voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ]
+}

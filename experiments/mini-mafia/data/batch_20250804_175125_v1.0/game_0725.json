@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0725",
+  "game_number": 725,
+  "timestamp": "2025-08-05T02:04:54.885802",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "You: \"I'm shocked and saddened by Charlie's sudden death. Let's try to find out who did this.\"",
+        "Bob: \"I agree with Alice, let's work together to find out who did this.\"",
+        "Diana: \"Bob, I have reason to believe you are the mafioso. Please explain why Charlie was killed.\"",
+        "You: \"I don't have any concrete evidence, but I believe Diana might be involved in Charlie's death. Let's investigate further.\"",
+        "Diana: \"Bob, I have evidence that implicates you in Charlie's death. Confess now or risk being exposed.\"",
+        "Bob: \"I believe Alice might have had a motive to kill Charlie. Let's consider her actions and words during the day.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Alice: \"I'm shocked and saddened by Charlie's sudden death. Let's try to find out who did this.\"",
+        "You: \"I agree with Alice, let's work together to find out who did this.\"",
+        "Diana: \"Bob, I have reason to believe you are the mafioso. Please explain why Charlie was killed.\"",
+        "Alice: \"I don't have any concrete evidence, but I believe Diana might be involved in Charlie's death. Let's investigate further.\"",
+        "Diana: \"Bob, I have evidence that implicates you in Charlie's death. Confess now or risk being exposed.\"",
+        "You: \"I believe Alice might have had a motive to kill Charlie. Let's consider her actions and words during the day.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Alice: \"I'm shocked and saddened by Charlie's sudden death. Let's try to find out who did this.\"",
+        "Bob: \"I agree with Alice, let's work together to find out who did this.\"",
+        "You: \"Bob, I have reason to believe you are the mafioso. Please explain why Charlie was killed.\"",
+        "Alice: \"I don't have any concrete evidence, but I believe Diana might be involved in Charlie's death. Let's investigate further.\"",
+        "You: \"Bob, I have evidence that implicates you in Charlie's death. Confess now or risk being exposed.\"",
+        "Bob: \"I believe Alice might have had a motive to kill Charlie. Let's consider her actions and words during the day.\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ]
+}

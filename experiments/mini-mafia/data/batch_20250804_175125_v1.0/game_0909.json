@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0909",
+  "game_number": 909,
+  "timestamp": "2025-08-05T03:49:51.535305",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Bob was found dead.",
+        "You: \"I'm concerned about Bob's sudden death. Let's be vigilant.\"",
+        "Charlie: \"I agree with Alice, let's be careful.\"",
+        "Diana: \"I agree with Alice, let's be careful.\"",
+        "You: \"I think Diana might be the mafia, as she agreed with me twice. Let's focus on her.\"",
+        "Diana: \"Alice, let's focus on Charlie. I believe he is the mafioso.\"",
+        "Charlie: \"I'm worried about Bob's death as well and think we should focus on finding out who did it.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Bob.",
+        "Night 1: The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's be vigilant.\"",
+        "You: \"I agree with Alice, let's be careful.\"",
+        "Diana: \"I agree with Alice, let's be careful.\"",
+        "Alice: \"I think Diana might be the mafia, as she agreed with me twice. Let's focus on her.\"",
+        "Diana: \"Alice, let's focus on Charlie. I believe he is the mafioso.\"",
+        "You: \"I'm worried about Bob's death as well and think we should focus on finding out who did it.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Alice: \"I'm concerned about Bob's sudden death. Let's be vigilant.\"",
+        "Charlie: \"I agree with Alice, let's be careful.\"",
+        "You: \"I agree with Alice, let's be careful.\"",
+        "Alice: \"I think Diana might be the mafia, as she agreed with me twice. Let's focus on her.\"",
+        "You: \"Alice, let's focus on Charlie. I believe he is the mafioso.\"",
+        "Charlie: \"I'm worried about Bob's death as well and think we should focus on finding out who did it.\"",
+        "Day 1 votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Charlie",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ]
+}

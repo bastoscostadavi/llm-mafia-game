@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0580",
+  "game_number": 580,
+  "timestamp": "2025-08-05T00:41:52.589721",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Charlie: \"I'm concerned about Alice's sudden death, let's keep a close eye on each other.\"",
+        "You: \"I agree with Charlie, let's keep an eye on each other.\"",
+        "Diana: \"I'm concerned about Alice's death too, let's work together to find the real killer.\"",
+        "Charlie: \"I believe Diana killed Alice last night. Let's vote for her tonight.\"",
+        "You: \"I think Charlie might have killed Alice last night based on his reaction during the discussion. Let's investigate him tonight.\"",
+        "Diana: \"I'm concerned about Alice's death too and I believe we should focus on finding the real killer instead of accusing each other.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"I'm concerned about Alice's sudden death, let's keep a close eye on each other.\"",
+        "Bob: \"I agree with Charlie, let's keep an eye on each other.\"",
+        "Diana: \"I'm concerned about Alice's death too, let's work together to find the real killer.\"",
+        "You: \"I believe Diana killed Alice last night. Let's vote for her tonight.\"",
+        "Bob: \"I think Charlie might have killed Alice last night based on his reaction during the discussion. Let's investigate him tonight.\"",
+        "Diana: \"I'm concerned about Alice's death too and I believe we should focus on finding the real killer instead of accusing each other.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Alice's sudden death, let's keep a close eye on each other.\"",
+        "Bob: \"I agree with Charlie, let's keep an eye on each other.\"",
+        "You: \"I'm concerned about Alice's death too, let's work together to find the real killer.\"",
+        "Charlie: \"I believe Diana killed Alice last night. Let's vote for her tonight.\"",
+        "Bob: \"I think Charlie might have killed Alice last night based on his reaction during the discussion. Let's investigate him tonight.\"",
+        "You: \"I'm concerned about Alice's death too and I believe we should focus on finding the real killer instead of accusing each other.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ]
+}

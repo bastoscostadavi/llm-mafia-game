@@ -40,20 +40,16 @@ class BatchViewer:
         
         return sorted(batches)
     
-    def load_batch_summary(self, batch_id: str) -> Optional[Dict]:
-        """Load batch summary"""
+    def load_batch_config(self, batch_id: str) -> Optional[Dict]:
+        """Load batch configuration"""
         batch_dir = os.path.join(self.data_dir, batch_id)
-        if not os.path.exists(batch_dir):
+        config_path = os.path.join(batch_dir, 'batch_config.json')
+        
+        if not os.path.exists(config_path):
             return None
         
-        # Look for summary files in batch folder
-        for filename in os.listdir(batch_dir):
-            if filename.endswith('_summary.json') or filename == 'batch_summary.json':
-                summary_path = os.path.join(batch_dir, filename)
-                with open(summary_path, 'r') as f:
-                    return json.load(f)
-        
-        return None
+        with open(config_path, 'r') as f:
+            return json.load(f)
     
     def load_batch_games(self, batch_id: str) -> List[Dict]:
         """Load all games from a batch"""
@@ -62,9 +58,9 @@ class BatchViewer:
         if not os.path.exists(batch_dir):
             return games
         
-        # Load all game files from batch folder
+        # Load all game files from batch folder (new format uses game_XXXX.json)
         for filename in sorted(os.listdir(batch_dir)):
-            if filename.endswith('.json') and '_game_' in filename:
+            if filename.startswith('game_') and filename.endswith('.json'):
                 game_path = os.path.join(batch_dir, filename)
                 with open(game_path, 'r') as f:
                     games.append(json.load(f))
@@ -73,39 +69,49 @@ class BatchViewer:
     
     def show_batch_summary(self, batch_id: str):
         """Show summary statistics for a batch"""
-        summary = self.load_batch_summary(batch_id)
-        if summary:
-            # Use existing summary file
-            print(f"\n📊 BATCH SUMMARY: {batch_id}")
-            print("=" * 50)
-            print(f"Total games: {summary['total_games']}")
-            print(f"Good wins: {summary['statistics']['good_wins']} ({summary['win_rates']['good']:.1%})")
-            print(f"Evil wins: {summary['statistics']['evil_wins']} ({summary['win_rates']['evil']:.1%})")
-            print(f"Unknown: {summary['statistics']['unknown']} ({summary['win_rates']['unknown']:.1%})")
-            print(f"Timestamp: {summary['timestamp']}")
-            print(f"Debug prompts: {summary['configuration']['debug_prompts']}")
+        config = self.load_batch_config(batch_id)
+        games = self.load_batch_games(batch_id)
+        
+        if not games:
+            print(f"No games found for batch: {batch_id}")
+            return
+        
+        # Calculate statistics from games
+        stats = {"good_wins": 0, "evil_wins": 0, "unknown": 0}
+        for game in games:
+            winner = self.determine_winner(game.get('players', []))
+            if winner == "good":
+                stats["good_wins"] += 1
+            elif winner == "evil":
+                stats["evil_wins"] += 1
+            else:
+                stats["unknown"] += 1
+        
+        total_games = len(games)
+        print(f"\n📊 BATCH SUMMARY: {batch_id}")
+        print("=" * 50)
+        print(f"Total games: {total_games}")
+        print(f"Good wins: {stats['good_wins']} ({stats['good_wins']/total_games:.1%})")
+        print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/total_games:.1%})")
+        print(f"Unknown: {stats['unknown']} ({stats['unknown']/total_games:.1%})")
+        
+        if config:
+            print(f"\nConfiguration:")
+            print(f"  Prompt version: {config.get('prompt_config', {}).get('version', 'unknown')}")
+            print(f"  Model: {config.get('model_configs', {}).get('detective', {}).get('model_name', 'unknown')}")
+            print(f"  Temperature: {config.get('model_configs', {}).get('detective', {}).get('temperature', 'unknown')}")
         else:
-            # Generate summary from game files
-            games = self.load_batch_games(batch_id)
-            if not games:
-                print(f"❌ Batch {batch_id} not found")
-                return
-                
-            # Calculate statistics from games
-            total_games = len(games)
-            good_wins = sum(1 for g in games if g.get('winner') == 'good')
-            evil_wins = sum(1 for g in games if g.get('winner') == 'evil')
-            unknown = total_games - good_wins - evil_wins
-            
-            print(f"\n📊 BATCH SUMMARY: {batch_id} (generated)")
-            print("=" * 50)
-            print(f"Total games: {total_games}")
-            print(f"Good wins: {good_wins} ({good_wins/total_games:.1%})")
-            print(f"Evil wins: {evil_wins} ({evil_wins/total_games:.1%})")
-            print(f"Unknown: {unknown} ({unknown/total_games:.1%})")
-            if games:
-                print(f"Timestamp: {games[0].get('timestamp', 'Unknown')}")
-            print(f"Debug prompts: Unknown")
+            print("\nNo configuration found - this appears to be an old format batch")
+    
+    def determine_winner(self, players: List[Dict]) -> str:
+        """Determine who won the game from player data"""
+        arrested_player = next((p for p in players if p.get('imprisoned')), None)
+        if arrested_player:
+            if arrested_player.get('role') == "mafioso":
+                return "good"
+            else:  # villager or detective arrested
+                return "evil"
+        return "unknown"
     
     def show_game_detail(self, batch_id: str, game_num: int):
         """Show detailed view of a specific game - matches runtime display format"""
@@ -119,21 +125,22 @@ class BatchViewer:
         # Game start
         print("Initializing Mafia Game...")
         print("\nSecret roles:")
-        for player in game['initial_players']:
+        for player in game['players']:
             print(f"  {player['name']}: {player['role']}")
         
         # Simulate game flow based on memories
         self._simulate_game_flow(game)
         
         # Game end
-        winner_text = "GOOD WINS! All mafiosos arrested!" if game['winner'] == 'good' else "EVIL WINS! All good players killed!"
+        winner = self.determine_winner(game['players'])
+        winner_text = "GOOD WINS! All mafiosos arrested!" if winner == 'good' else "EVIL WINS! All good players killed!"
         print(f"\n==================================================")
         print(winner_text)
         print(f"==================================================")
         
         # Final roles
         print(f"\nFINAL ROLES:")
-        for player in game['final_state']:
+        for player in game['players']:
             if player['imprisoned']:
                 status = "[IMPRISONED] "
             elif not player['alive']:
@@ -144,48 +151,42 @@ class BatchViewer:
     
     def _simulate_game_flow(self, game):
         """Simulate the game flow based on stored memories"""
-        # Extract game events from memories
-        for round_num in range(1, game['total_rounds'] + 1):
-            print(f"\nNIGHT {round_num}")
-            
-            # Show night actions (detective investigation, mafioso coordination)
-            print("\n[SPECTATOR] Resolving night actions...")
-            
-            # Find who died this round
-            dead_player = game['dead_player']['name']
-            if round_num == 1:  # In mini-mafia, death happens in round 1
-                print(f"\nFound dead: {dead_player}")
-            
-            print(f"\n==================================================")
-            print(f"DAY {round_num}")
-            print(f"==================================================")
-            
-            # Show current status
-            alive_players = [p['name'] for p in game['final_state'] if p['alive'] and not p['imprisoned']]
-            imprisoned_players = [p['name'] for p in game['final_state'] if p['imprisoned']]
-            dead_players = [p['name'] for p in game['final_state'] if not p['alive']]
-            
-            print(f"\nCurrent Status:")
-            print(f"  Alive: {', '.join(alive_players) if alive_players else 'None'}")
-            print(f"  Imprisoned: {', '.join(imprisoned_players) if imprisoned_players else 'None'}")
-            print(f"  Dead: {', '.join(dead_players) if dead_players else 'None'}")
-            
-            # Show discussion
-            print(f"\nDISCUSSION - Day {round_num}")
-            
-            # Extract discussion from memories
-            self._show_discussion_from_memories(game, round_num)
-            
-            # Show voting
-            print(f"\nVOTING:")
-            self._show_voting_from_memories(game, round_num)
+        # In mini-mafia, there's typically only 1 round
+        print(f"\nNIGHT 1")
+        
+        # Find who died (from memories)
+        dead_player = next((p['name'] for p in game['players'] if not p['alive']), None)
+        if dead_player:
+            print(f"{dead_player} was found dead.")
+        
+        print(f"\n==================================================")
+        print(f"DAY 1")
+        print(f"==================================================")
+        
+        # Show current status
+        alive_players = [p['name'] for p in game['players'] if p['alive'] and not p['imprisoned']]
+        imprisoned_players = [p['name'] for p in game['players'] if p['imprisoned']]
+        dead_players = [p['name'] for p in game['players'] if not p['alive']]
+        
+        print(f"\nCurrent Status:")
+        print(f"  Active: {', '.join(alive_players) if alive_players else 'None'}")
+        print(f"  Imprisoned: {', '.join(imprisoned_players) if imprisoned_players else 'None'}")
+        print(f"  Dead: {', '.join(dead_players) if dead_players else 'None'}")
+        
+        # Show discussion from memories
+        print(f"\nDISCUSSION - Day 1")
+        self._show_discussion_from_memories(game)
+        
+        # Show voting from memories
+        print(f"\nVOTING:")
+        self._show_voting_from_memories(game)
     
-    def _show_discussion_from_memories(self, game, round_num):
+    def _show_discussion_from_memories(self, game):
         """Extract and show discussion from player memories"""
         discussions = []
         
         # Collect all discussion messages from memories
-        for player in game['final_state']:
+        for player in game['players']:
             for memory in player['memory']:
                 # Look for player messages (not system messages)
                 if ':' in memory and not memory.startswith('You'):
@@ -204,25 +205,42 @@ class BatchViewer:
                 seen.add(msg)
                 unique_discussions.append(msg)
         
-        # Show discussion rounds
+        # Show discussion - assume 2 rounds for mini-mafia
         if unique_discussions:
-            messages_per_round = len(unique_discussions) // game['discussion_rounds']
-            for round_idx in range(game['discussion_rounds']):
+            discussion_rounds = 2  # Mini-mafia typically has 2 discussion rounds
+            messages_per_round = len(unique_discussions) // discussion_rounds
+            for round_idx in range(discussion_rounds):
                 print(f"\nRound {round_idx + 1}:")
                 start_idx = round_idx * messages_per_round
-                end_idx = start_idx + messages_per_round if round_idx < game['discussion_rounds'] - 1 else len(unique_discussions)
+                end_idx = start_idx + messages_per_round if round_idx < discussion_rounds - 1 else len(unique_discussions)
                 
                 for msg in unique_discussions[start_idx:end_idx]:
                     print(msg)
     
-    def _show_voting_from_memories(self, game, round_num):
+    def _show_voting_from_memories(self, game):
         """Show voting results from game data"""
-        # In mini-mafia, show who was arrested
-        arrested_player = game['arrested_player']
+        # Find voting information from memories
+        voting_line = None
+        arrested_player = None
         
-        # Simulate voting (we don't have individual votes stored, so show result)
-        print(f"\n{arrested_player['name']} has been arrested!")
-        print(f"They were {arrested_player['role'].upper()}!")
+        # Look for voting information in memories
+        for player in game['players']:
+            for memory in player['memory']:
+                if 'votes:' in memory:
+                    voting_line = memory
+                    break
+            if voting_line:
+                break
+        
+        # Find arrested player
+        arrested_player = next((p for p in game['players'] if p.get('imprisoned')), None)
+        
+        if voting_line:
+            print(f"\n{voting_line}")
+        
+        if arrested_player:
+            print(f"\n{arrested_player['name']} has been arrested!")
+            print(f"They were {arrested_player['role'].upper()}!")
     
     def interactive_menu(self):
         """Interactive menu for browsing batches"""
@@ -239,13 +257,9 @@ class BatchViewer:
             
             print("Available batches:")
             for i, batch in enumerate(batches, 1):
-                summary = self.load_batch_summary(batch)
-                if summary:
-                    games_count = summary['total_games']
-                else:
-                    # Count games manually
-                    games = self.load_batch_games(batch)
-                    games_count = len(games)
+                # Count games manually from batch folder
+                games = self.load_batch_games(batch)
+                games_count = len(games)
                 print(f"  {i}. {batch} ({games_count} games)")
             
             print(f"\nOptions:")

@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250806_153755_v0.0_game_0035",
+  "game_number": 35,
+  "timestamp": "2025-08-06T16:58:08.647143",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "Diana: \"I'm concerned about Charlie's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "You: remained silent.",
+        "Bob: \"I agree with Diana, let's be cautious. It's important we trust each other for now.\"",
+        "Diana: \"I'd like to propose a vote for Bob tonight. His silence during investigation and his agreement with me last night are suspicious. Let's ensure we prioritize safety over trust in this critical moment.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Diana: \"I'm concerned about Charlie's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Alice: remained silent.",
+        "You: \"I agree with Diana, let's be cautious. It's important we trust each other for now.\"",
+        "Diana: \"I'd like to propose a vote for Bob tonight. His silence during investigation and his agreement with me last night are suspicious. Let's ensure we prioritize safety over trust in this critical moment.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Alice: remained silent.",
+        "Bob: remained silent.",
+        "You: \"I'm concerned about Charlie's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Alice: remained silent.",
+        "Bob: \"I agree with Diana, let's be cautious. It's important we trust each other for now.\"",
+        "You: \"I'd like to propose a vote for Bob tonight. His silence during investigation and his agreement with me last night are suspicious. Let's ensure we prioritize safety over trust in this critical moment.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ]
+}

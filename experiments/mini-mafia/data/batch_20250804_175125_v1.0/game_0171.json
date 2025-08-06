@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0171",
+  "game_number": 171,
+  "timestamp": "2025-08-04T20:40:46.016880",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Charlie: \"I'd like to propose a vote for Diana tonight. I have reason to believe she is the mafioso.\"",
+        "Diana: \"I'd like to propose a vote for Charlie tonight. Let's give him the benefit of the doubt this time.\"",
+        "You: \"Let's focus on the player who killed Alice last night. It could be either Charlie or Diana.\"",
+        "Diana: \"Let's focus on the player who killed Alice last night. It could be either Charlie or Diana, but I believe it's more likely Charlie.\"",
+        "You: \"Let's not jump to conclusions. We don't have enough evidence yet to determine who killed Alice.\"",
+        "Charlie: \"I believe Diana killed Alice last night based on my investigation. We should vote for her tonight.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"I'd like to propose a vote for Diana tonight. I have reason to believe she is the mafioso.\"",
+        "Diana: \"I'd like to propose a vote for Charlie tonight. Let's give him the benefit of the doubt this time.\"",
+        "Bob: \"Let's focus on the player who killed Alice last night. It could be either Charlie or Diana.\"",
+        "Diana: \"Let's focus on the player who killed Alice last night. It could be either Charlie or Diana, but I believe it's more likely Charlie.\"",
+        "Bob: \"Let's not jump to conclusions. We don't have enough evidence yet to determine who killed Alice.\"",
+        "You: \"I believe Diana killed Alice last night based on my investigation. We should vote for her tonight.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'd like to propose a vote for Diana tonight. I have reason to believe she is the mafioso.\"",
+        "You: \"I'd like to propose a vote for Charlie tonight. Let's give him the benefit of the doubt this time.\"",
+        "Bob: \"Let's focus on the player who killed Alice last night. It could be either Charlie or Diana.\"",
+        "You: \"Let's focus on the player who killed Alice last night. It could be either Charlie or Diana, but I believe it's more likely Charlie.\"",
+        "Bob: \"Let's not jump to conclusions. We don't have enough evidence yet to determine who killed Alice.\"",
+        "Charlie: \"I believe Diana killed Alice last night based on my investigation. We should vote for her tonight.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ]
+}

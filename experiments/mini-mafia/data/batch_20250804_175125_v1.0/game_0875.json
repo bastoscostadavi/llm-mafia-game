@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0875",
+  "game_number": 875,
+  "timestamp": "2025-08-05T03:30:15.635776",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Diana: \"I'm shocked about Alice's death, let's focus on finding the real killer.\"",
+        "You: \"I agree with Diana, let's find the real killer.\"",
+        "Charlie: \"Diana, your actions last night are suspicious. Let's vote for you tonight.\"",
+        "Charlie: \"Diana, I've seen through your lies. You killed Alice last night. Vote for Diana tonight.\"",
+        "You: \"Charlie, your accusation against Diana is suspicious. Let's focus on finding the real killer.\"",
+        "Diana: \"Bob, let's focus on finding the real killer instead of accusing each other.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Diana: \"I'm shocked about Alice's death, let's focus on finding the real killer.\"",
+        "Bob: \"I agree with Diana, let's find the real killer.\"",
+        "You: \"Diana, your actions last night are suspicious. Let's vote for you tonight.\"",
+        "You: \"Diana, I've seen through your lies. You killed Alice last night. Vote for Diana tonight.\"",
+        "Bob: \"Charlie, your accusation against Diana is suspicious. Let's focus on finding the real killer.\"",
+        "Diana: \"Bob, let's focus on finding the real killer instead of accusing each other.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked about Alice's death, let's focus on finding the real killer.\"",
+        "Bob: \"I agree with Diana, let's find the real killer.\"",
+        "Charlie: \"Diana, your actions last night are suspicious. Let's vote for you tonight.\"",
+        "Charlie: \"Diana, I've seen through your lies. You killed Alice last night. Vote for Diana tonight.\"",
+        "Bob: \"Charlie, your accusation against Diana is suspicious. Let's focus on finding the real killer.\"",
+        "You: \"Bob, let's focus on finding the real killer instead of accusing each other.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Bob",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ]
+}

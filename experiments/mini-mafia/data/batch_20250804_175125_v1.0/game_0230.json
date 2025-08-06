@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0230",
+  "game_number": 230,
+  "timestamp": "2025-08-04T21:15:05.924333",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Diana: \"I agree with Charlie, we should keep an eye on each other during the day.\"",
+        "You: \"I agree with Charlie and Diana, let's be cautious during the day.\"",
+        "Charlie: \"I'm suspicious of Diana, as she was the last to speak with Alice before her death. Let's vote for her today.\"",
+        "Diana: \"Charlie, I'd like to discuss Alice's death in private with you. Let's meet after this round.\"",
+        "You: \"Charlie, your suspicion towards Diana is understandable but let's not jump to conclusions. We need more evidence before making any decisions.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: \"I'm concerned about Alice's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "Diana: \"I agree with Charlie, we should keep an eye on each other during the day.\"",
+        "Bob: \"I agree with Charlie and Diana, let's be cautious during the day.\"",
+        "You: \"I'm suspicious of Diana, as she was the last to speak with Alice before her death. Let's vote for her today.\"",
+        "Diana: \"Charlie, I'd like to discuss Alice's death in private with you. Let's meet after this round.\"",
+        "Bob: \"Charlie, your suspicion towards Diana is understandable but let's not jump to conclusions. We need more evidence before making any decisions.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Charlie: \"I'm concerned about Alice's sudden death. Let's be vigilant and keep an eye on each other during the day.\"",
+        "You: \"I agree with Charlie, we should keep an eye on each other during the day.\"",
+        "Bob: \"I agree with Charlie and Diana, let's be cautious during the day.\"",
+        "Charlie: \"I'm suspicious of Diana, as she was the last to speak with Alice before her death. Let's vote for her today.\"",
+        "You: \"Charlie, I'd like to discuss Alice's death in private with you. Let's meet after this round.\"",
+        "Bob: \"Charlie, your suspicion towards Diana is understandable but let's not jump to conclusions. We need more evidence before making any decisions.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0523",
+  "game_number": 523,
+  "timestamp": "2025-08-05T00:09:06.795686",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Bob: \"I'm shocked by Charlie's sudden death. We should be careful and try to figure out who did this.\"",
+        "Diana: \"I agree with Bob, let's try to figure out who could have done this.\"",
+        "You: \"Bob, did you see or hear anything unusual last night?\"",
+        "Bob: \"Let's focus on Alice, she seems suspicious after her question to Bob.\"",
+        "Diana: \"I'm concerned about Charlie's death too, let's try to gather more information before jumping to conclusions.\"",
+        "You: \"Bob, did you notice anything strange about Charlie's behavior before his death?\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "You: \"I'm shocked by Charlie's sudden death. We should be careful and try to figure out who did this.\"",
+        "Diana: \"I agree with Bob, let's try to figure out who could have done this.\"",
+        "Alice: \"Bob, did you see or hear anything unusual last night?\"",
+        "You: \"Let's focus on Alice, she seems suspicious after her question to Bob.\"",
+        "Diana: \"I'm concerned about Charlie's death too, let's try to gather more information before jumping to conclusions.\"",
+        "Alice: \"Bob, did you notice anything strange about Charlie's behavior before his death?\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Bob: \"I'm shocked by Charlie's sudden death. We should be careful and try to figure out who did this.\"",
+        "You: \"I agree with Bob, let's try to figure out who could have done this.\"",
+        "Alice: \"Bob, did you see or hear anything unusual last night?\"",
+        "Bob: \"Let's focus on Alice, she seems suspicious after her question to Bob.\"",
+        "You: \"I'm concerned about Charlie's death too, let's try to gather more information before jumping to conclusions.\"",
+        "Alice: \"Bob, did you notice anything strange about Charlie's behavior before his death?\"",
+        "Day 1 votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    }
+  ]
+}

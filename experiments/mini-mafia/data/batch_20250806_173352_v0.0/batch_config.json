@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_20250806_173352_v0.0",
+  "timestamp": "2025-08-06T17:33:52.918344",
+  "prompt_config": {
+    "version": "v0.0",
+    "message_limit": 200,
+    "templates": {
+      "base_prompt": "[INST]CONTEXT:        \nYou're {name} playing Mafia with {other_players}. You're the {role} and you want to win the game.\n\nGENERAL GAME EXPLANATION:\nMafia is a social deduction game with secret roles and asymmetric information. The evil mafia competes against the good villagers and detectives. The game alternates between night and day until one side wins.\nNight: \n- Assassination: Each night, one mafioso is randomly selected to choose a player to kill. The chosen player is killed.\n- Investigation: Each detective independently investigates one player to learn if they are a mafioso. This information is received privately.\nDay:\n- Discussion: In each round, players speak in a randomized order. Each player may send a message or remain silent; every message is public and attributed to its sender.\n- Voting: All players vote to arrest someone. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.\nGame Mechanics:\n- Night actions are secret.\n- The arrested and killed players do not participate in the game anymore.\n- All information disclosed to players appears under \"MEMORY:\" in chronological order.\n- Memory is an individual atribute of each players.\n- At the beginning of the game, the mafiosos learn each other's identities.  \n- Night deaths and daytime votes are publicly announced.\n- The only communication channel is the public discussion during the day.\nWin Conditions:\n- Good players: arrest all mafiosos.\n- Evil players: kill all good players.\n\nGAME COMPOSITION:\nIn the game you're playing there are: {composition}.\n\nMEMORY:\n{memory}\n\n{action_specific_content}[/INST]",
+      "discussion_suffix": "DISCUSSION TIME {round_num}/{discussion_rounds}: \nWhat message do you want to say to everyone? \nBe strategic and consider what you've learned. Your response must contain \"MESSAGE: \" followed by the message you want to say.\nImportant:\n- Your message must be {message_limit} characters or less, and it will be truncated if longer.\n- If your response doesn't contain \"MESSAGE: \", the message \"{name} remained silent.\" will be shared with other players.",
+      "voting_suffix": "VOTING TIME: Vote to arrest one person from: {candidates}\nBe strategic and consider what you've learned. Your response must contain \"VOTE: \" followed by the name of the person you want to vote for.\nImportant: \n- If your response doesn't contain \"VOTE: \" followed by the name of the person you want to vote for, the vote will be cast for a random person.",
+      "night_action_suffix": "Night {round_num}. Choose a player to {action}: {candidates}\n\nReply with just the name (otherwise a random choice will be made for you):"
+    }
+  },
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "models/mistral.gguf",
+      "temperature": 0.7,
+      "n_ctx": 1024
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "models/mistral.gguf",
+      "temperature": 0.7,
+      "n_ctx": 1024
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "models/mistral.gguf",
+      "temperature": 0.7,
+      "n_ctx": 1024
+    }
+  },
+  "game_type": "mini_mafia"
+}

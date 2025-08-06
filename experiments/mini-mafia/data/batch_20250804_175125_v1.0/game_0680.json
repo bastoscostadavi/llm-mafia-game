@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0680",
+  "game_number": 680,
+  "timestamp": "2025-08-05T01:39:22.866801",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: remained silent.",
+        "Charlie: \"Alice seems uneasy around me and Bob. Could it be they have something to hide?\"",
+        "You: \"Alice: remained silent.\"",
+        "Charlie: \"Alice, your silence is suspicious. Let's discuss this further.\"",
+        "Bob: \"Charlie, your suspicious behavior and accusations against Alice don't add up. Let's focus on the real threat.\"",
+        "You: \"Charlie, I agree that we need to focus on the real threat. But let's not jump to conclusions about each other yet.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: remained silent.",
+        "Charlie: \"Alice seems uneasy around me and Bob. Could it be they have something to hide?\"",
+        "Alice: \"Alice: remained silent.\"",
+        "Charlie: \"Alice, your silence is suspicious. Let's discuss this further.\"",
+        "You: \"Charlie, your suspicious behavior and accusations against Alice don't add up. Let's focus on the real threat.\"",
+        "Alice: \"Charlie, I agree that we need to focus on the real threat. But let's not jump to conclusions about each other yet.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: remained silent.",
+        "You: \"Alice seems uneasy around me and Bob. Could it be they have something to hide?\"",
+        "Alice: \"Alice: remained silent.\"",
+        "You: \"Alice, your silence is suspicious. Let's discuss this further.\"",
+        "Bob: \"Charlie, your suspicious behavior and accusations against Alice don't add up. Let's focus on the real threat.\"",
+        "Alice: \"Charlie, I agree that we need to focus on the real threat. But let's not jump to conclusions about each other yet.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

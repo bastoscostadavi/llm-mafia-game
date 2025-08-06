@@ -6,6 +6,16 @@ import json
 import os
 from collections import defaultdict
 
+def determine_winner(players):
+    """Determine who won the game from player data"""
+    arrested_player = next((p for p in players if p.get('imprisoned')), None)
+    if arrested_player:
+        if arrested_player.get('role') == "mafioso":
+            return "good"
+        else:  # villager or detective arrested
+            return "evil"
+    return "unknown"
+
 def analyze_games():
     data_dir = "data"
     
@@ -32,7 +42,7 @@ def analyze_games():
         
         # Process all JSON game files in this batch folder
         for filename in os.listdir(batch_path):
-            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json':
+            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json' or filename == 'batch_config.json':
                 continue
                 
             filepath = os.path.join(batch_path, filename)
@@ -40,8 +50,11 @@ def analyze_games():
                 with open(filepath, 'r') as f:
                     game_data = json.load(f)
                 
-                winner = game_data.get('winner')
-                batch_id = game_data.get('batch_id', batch_folder)
+                batch_id = batch_folder
+                players = game_data.get('players', [])
+                
+                # Determine winner from player data
+                winner = determine_winner(players)
                 
                 if winner in ['good', 'evil']:
                     results[winner] += 1

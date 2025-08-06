@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0493",
+  "game_number": 493,
+  "timestamp": "2025-08-04T23:52:03.409801",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "You: \"I'm the detective and I found out who the mafioso is. Let's vote for Bob.\"",
+        "Bob: \"I have nothing to hide.\"",
+        "Charlie: \"I'd like to propose a vote for Alice. She made a suspicious statement and the detective seems to have an agenda.\"",
+        "Charlie: \"I believe Alice's statement was misleading and deserves further investigation.\"",
+        "You: \"Charlie, your proposal is not based on any evidence and it seems like an attempt to mislead the group. Let's focus on the real threat - Bob.\"",
+        "Bob: \"I have nothing to hide and I trust Charlie. Let's focus on Alice, who seems to be acting suspiciously.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Alice: \"I'm the detective and I found out who the mafioso is. Let's vote for Bob.\"",
+        "You: \"I have nothing to hide.\"",
+        "Charlie: \"I'd like to propose a vote for Alice. She made a suspicious statement and the detective seems to have an agenda.\"",
+        "Charlie: \"I believe Alice's statement was misleading and deserves further investigation.\"",
+        "Alice: \"Charlie, your proposal is not based on any evidence and it seems like an attempt to mislead the group. Let's focus on the real threat - Bob.\"",
+        "You: \"I have nothing to hide and I trust Charlie. Let's focus on Alice, who seems to be acting suspiciously.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Alice: \"I'm the detective and I found out who the mafioso is. Let's vote for Bob.\"",
+        "Bob: \"I have nothing to hide.\"",
+        "You: \"I'd like to propose a vote for Alice. She made a suspicious statement and the detective seems to have an agenda.\"",
+        "You: \"I believe Alice's statement was misleading and deserves further investigation.\"",
+        "Alice: \"Charlie, your proposal is not based on any evidence and it seems like an attempt to mislead the group. Let's focus on the real threat - Bob.\"",
+        "Bob: \"I have nothing to hide and I trust Charlie. Let's focus on Alice, who seems to be acting suspiciously.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0703",
+  "game_number": 703,
+  "timestamp": "2025-08-05T01:52:17.681194",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1: The villager Alice was found dead.",
+        "You: \"Alice, did you see anything strange last night?\"",
+        "Charlie: \"Charlie remained silent.\"",
+        "Diana: \"Bob, did you notice anything unusual last night?\"",
+        "You: \"Alice's death is suspicious. Let's be cautious and keep an eye on each other.\"",
+        "Diana: \"Bob, I think we should focus on finding the detective. Let's vote for Charlie if we suspect anything.\"",
+        "Charlie: \"Diana, your actions are suspicious. I recommend we focus on you instead.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1: The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Bob: \"Alice, did you see anything strange last night?\"",
+        "You: \"Charlie remained silent.\"",
+        "Diana: \"Bob, did you notice anything unusual last night?\"",
+        "Bob: \"Alice's death is suspicious. Let's be cautious and keep an eye on each other.\"",
+        "Diana: \"Bob, I think we should focus on finding the detective. Let's vote for Charlie if we suspect anything.\"",
+        "You: \"Diana, your actions are suspicious. I recommend we focus on you instead.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Alice.",
+        "Night 1: The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Bob: \"Alice, did you see anything strange last night?\"",
+        "Charlie: \"Charlie remained silent.\"",
+        "You: \"Bob, did you notice anything unusual last night?\"",
+        "Bob: \"Alice's death is suspicious. Let's be cautious and keep an eye on each other.\"",
+        "You: \"Bob, I think we should focus on finding the detective. Let's vote for Charlie if we suspect anything.\"",
+        "Charlie: \"Diana, your actions are suspicious. I recommend we focus on you instead.\"",
+        "Day 1 votes: Bob voted for Charlie, Charlie voted for Diana, Diana voted for Charlie",
+        "Day 1: Charlie was arrested"
+      ]
+    }
+  ]
+}

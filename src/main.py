@@ -1,66 +1,12 @@
 # src/main.py - Simple Mafia Game System
 import sys
-import os
 import random
 from collections import Counter
-from src.agents.agent import MafiaAgent
-from src.day_phase import DayPhase
-from src.night_phase import NightPhase
-from src.agents.llm_interface import LlamaCppInterface
+from src.agents import MafiaAgent
 from src.prompts import PromptConfig, get_default_prompt_config
-
-try:
-    import openai
-except ImportError:
-    openai = None
-
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
-
-try:
-    from dotenv import load_dotenv
-    # Load .env file if it exists
-    load_dotenv()
-except ImportError:
-    # dotenv not installed, skip loading
-    pass
+from src.llm_utils import create_llm
 
 sys.path.append('.')
-
-# Simple model cache to avoid conflicts
-_model_cache = {}
-
-class SimpleOpenAI:
-    """OpenAI API wrapper"""
-    def __init__(self, client, model):
-        self.client = client
-        self.model = model
-    
-    def generate(self, prompt, max_tokens=50):
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=max_tokens,
-            temperature=0.7
-        )
-        return response.choices[0].message.content.strip()
-
-class SimpleAnthropic:
-    """Anthropic API wrapper"""
-    def __init__(self, client, model):
-        self.client = client
-        self.model = model
-    
-    def generate(self, prompt, max_tokens=50):
-        response = self.client.messages.create(
-            model=self.model,
-            max_tokens=max_tokens,
-            temperature=0.7,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.content[0].text.strip()
 
 class GameState:
     """Manages the state of a Mafia game"""
@@ -104,44 +50,169 @@ class GameState:
 class Game:
     """Main game controller that manages the game flow"""
     
-    def __init__(self, state, display, day_phase, night_phase):
+    def __init__(self, state):
         self.state = state
-        self.display = display
-        self.day_phase = day_phase
-        self.night_phase = night_phase
     
     def play(self):
-        self.display.show_game_start()
-        self.display.show_roles(self.state.agents)
+        print("Initializing Mafia Game...")
+        self.show_roles()
         
         while self.state.round < 10:  # Max rounds
             self.state.round += 1
             
             # Night Phase
-            self.display.show_night_start(self.state.round)
-            self.night_phase.run()
+            print(f"\nNIGHT {self.state.round}")
+            self.run_night_phase()
             
             # Check win conditions
             result = self.check_game_over()
             if result:
-                self.display.show_game_end(result)
-                self.display.show_final_roles(self.state.agents)
+                self.show_game_end(result)
                 return
             
             # Day Phase
-            self.display.show_day_start(self.state.round)
-            self.display.show_status(self.state)
-            self.day_phase.run()
+            print(f"\n{'='*50}")
+            print(f"DAY {self.state.round}")
+            print(f"{'='*50}")
+            self.show_status()
+            self.run_day_phase()
             
             # Check win conditions
             result = self.check_game_over()
             if result:
-                self.display.show_game_end(result)
-                self.display.show_final_roles(self.state.agents)
+                self.show_game_end(result)
                 return
         
-        self.display.show_timeout()
-        self.display.show_final_roles(self.state.agents)
+        print(f"\nGame ended due to timeout!")
+        self.show_final_roles()
+    
+    def run_night_phase(self):
+        """Execute night phase"""
+        active_players = self.state.get_active_players()
+        if len(active_players) <= 1:
+            return
+        
+        self.night_actions()
+    
+    def night_actions(self):
+        """Process all night actions: kills and investigations"""
+        active_players = self.state.get_active_players()
+        active_names = self.state.get_active_names()
+        candidates = [n for n in active_names]
+        
+        # Detective acts independently
+        active_detectives = [a for a in active_players if a.role == "detective"]
+        for active_detective in active_detectives:
+            detective_candidates = [n for n in candidates if n != active_detective.name]
+            if detective_candidates:
+                target = active_detective.investigate(detective_candidates, self.state)
+                print(f"[SPECTATOR] Detective {active_detective.name} investigates {target} and learns their role")
+                
+        # One random mafioso chooses kill target
+        mafiosos_active = [a for a in active_players if a.role == "mafioso"]
+        if mafiosos_active:
+            chosen_mafioso = random.choice(mafiosos_active)
+            kill_candidates = [n for n in candidates if n != chosen_mafioso.name]
+            if kill_candidates:
+                target = chosen_mafioso.kill(kill_candidates, self.state)
+                
+                # Kill the target
+                victim = self.state.get_agent_by_name(target)
+                victim.alive = False
+                
+                print(f"[SPECTATOR] {chosen_mafioso.name} (chosen mafioso) kills {target}")
+                print(f"{target} was found dead.")
+                
+                # All mafiosos learn about the kill (except the killer who already remembers)
+                mafiosos_alive = [a for a in self.state.agents if a.role == "mafioso" and a.alive]
+                for mafioso in mafiosos_alive:
+                    if mafioso != chosen_mafioso:
+                        mafioso.remember(f"The Mafia member {chosen_mafioso.name} killed {target}")
+                
+                # Everyone learns who died
+                for agent in self.state.get_active_players():
+                    agent.remember(f"Night {self.state.round}: {target} was found dead.")
+    
+    def run_day_phase(self):
+        """Execute day phase"""
+        self.discussion_rounds()
+        self.voting_round()
+    
+    def discussion_rounds(self):
+        """Two rounds of strategic communication"""
+        print(f"\nDISCUSSION - Day {self.state.round}")
+        active_players = self.state.get_active_players()
+        active_names = self.state.get_active_names()
+        
+        for round_num in range(1, self.state.discussion_rounds + 1):
+            print(f"\nRound {round_num}:")
+            
+            # Random order each round
+            agents_order = active_players.copy()
+            random.shuffle(agents_order)
+            
+            for agent in agents_order:
+                # Agent sends a public message
+                all_player_names = [a.name for a in self.state.agents]
+                message = agent.get_discussion_message(active_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
+                print(f'{agent.name}: {message}')
+                
+                for a in active_players:
+                    if a != agent:
+                        a.remember(f'{agent.name}: {message}')
+                    else: 
+                        agent.remember(f'You: {message}')
+    
+    def voting_round(self):
+        """Everyone votes to arrest someone"""
+        print(f"\nVOTING:")
+        active_players = self.state.get_active_players()
+        votes = {}
+        
+        for agent in active_players:
+            candidates = [a.name for a in active_players if a != agent]
+            all_player_names = [a.name for a in self.state.agents]
+            vote = agent.vote(candidates, all_player_names, self.state.discussion_rounds, self.state)
+            votes[agent.name] = vote
+            print(f"{agent.name} votes for {vote}")
+        
+        # Count votes and arrest
+        self.resolve_votes(votes)
+    
+    def resolve_votes(self, votes):
+        """Count votes and arrest the chosen player"""
+        if not votes:
+            return
+            
+        vote_counts = Counter(votes.values())
+        
+        # Handle ties
+        max_votes = max(vote_counts.values())
+        tied = [name for name, count in vote_counts.items() if count == max_votes]
+        
+        if len(tied) > 1:
+            print(f"\nTie between: {', '.join(tied)}")
+            arrested = random.choice(tied)
+            print(f"Random tiebreaker: {arrested}")
+        else:
+            arrested = tied[0]
+        
+        # Arrest the player
+        arrested_agent = self.state.get_agent_by_name(arrested)
+        arrested_agent.imprisoned = True
+        
+        print(f"\n{arrested} has been arrested!")
+        
+        # Create vote summary for memory (show all votes to everyone)
+        vote_summary = f"Day {self.state.round} votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
+        
+        # Create arrest announcement for memory (without role)
+        arrest_announcement = f"Day {self.state.round}: {arrested} was arrested"
+        
+        # Everyone remembers both the votes and the arrest
+        for agent in self.state.get_active_players():
+            agent.remember(vote_summary)
+            agent.remember(arrest_announcement)
     
     def check_game_over(self):
         """Check win conditions"""
@@ -155,30 +226,16 @@ class Game:
             return "EVIL WINS! All good players killed!"
         
         return None
-
-class Display:
-    """Simple display class for game output"""
     
-    def show_game_start(self):
-        print("Initializing Mafia Game...")
-    
-    def show_roles(self, agents):
+    def show_roles(self):
         print("\nSecret roles:")
-        for agent in agents:
+        for agent in self.state.agents:
             print(f"  {agent.name}: {agent.role}")
     
-    def show_night_start(self, round_num):
-        print(f"\nNIGHT {round_num}")
-    
-    def show_day_start(self, round_num):
-        print(f"\n==================================================")
-        print(f"DAY {round_num}")
-        print(f"==================================================")
-    
-    def show_status(self, state):
-        active = [a.name for a in state.get_active_players()]
-        imprisoned = [a.name for a in state.agents if a.imprisoned]
-        dead = [a.name for a in state.agents if not a.alive]
+    def show_status(self):
+        active = [a.name for a in self.state.get_active_players()]
+        imprisoned = [a.name for a in self.state.agents if a.imprisoned]
+        dead = [a.name for a in self.state.agents if not a.alive]
         
         print(f"\nCurrent Status:")
         print(f"  Active: {', '.join(active) if active else 'None'}")
@@ -186,13 +243,14 @@ class Display:
         print(f"  Dead: {', '.join(dead) if dead else 'None'}")
     
     def show_game_end(self, result):
-        print(f"\n==================================================")
+        print(f"\n{'='*50}")
         print(result)
-        print(f"==================================================")
+        print(f"{'='*50}")
+        self.show_final_roles()
     
-    def show_final_roles(self, agents):
+    def show_final_roles(self):
         print(f"\nFINAL ROLES:")
-        for agent in agents:
+        for agent in self.state.agents:
             if agent.imprisoned:
                 status = "[IMPRISONED] "
             elif not agent.alive:
@@ -200,89 +258,25 @@ class Display:
             else:
                 status = "[ALIVE] "
             print(f"{status}{agent.name}: {agent.role.upper()}")
-    
-    def show_timeout(self):
-        print(f"\nGame ended due to timeout!")
-    
-    def show_discussion_start(self, round_num):
-        print(f"\nDISCUSSION - Day {round_num}")
-    
-    def show_voting_start(self):
-        print(f"\nVOTING:")
-    
-    def show_arrest(self, player_name):
-        print(f"\n{player_name} has been arrested!")
-    
-    def show_no_consensus(self):
-        print(f"\nNo consensus reached. No one was arrested.")
 
-def create_llm(llm_config):
-    """Simple LLM creator - supports local, openai, anthropic"""
-    llm_type = llm_config.get('type', 'local')
-    
-    if llm_type == 'local':
-        # Use shared model to avoid conflicts
-        model_path = llm_config.get('model_path', 'models/mistral.gguf')
-        if model_path not in _model_cache:
-            _model_cache[model_path] = LlamaCppInterface(model_path)
-        return _model_cache[model_path]
-    
-    elif llm_type == 'openai':
-        if openai is None:
-            print("ERROR: OpenAI package not installed. Using local model instead.")
-            return create_llm({'type': 'local'})
-        
-        client = openai.OpenAI(api_key=llm_config.get('api_key') or os.getenv('OPENAI_API_KEY'))
-        model = llm_config.get('model', 'gpt-3.5-turbo')
-        return SimpleOpenAI(client, model)
-    
-    elif llm_type == 'anthropic':
-        if anthropic is None:
-            print("ERROR: Anthropic package not installed. Using local model instead.")
-            return create_llm({'type': 'local'})
-        
-        client = anthropic.Anthropic(api_key=llm_config.get('api_key') or os.getenv('ANTHROPIC_API_KEY'))
-        model = llm_config.get('model', 'claude-3-haiku-20240307')
-        return SimpleAnthropic(client, model)
-    
-    else:
-        # Default to local
-        return create_llm({'type': 'local'})
+
 
 def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=None):
-    """
-    Create a Mafia game with specified players
-    
-    Args:
-        players: List of player dicts with 'name', 'role', and 'llm' keys
-        discussion_rounds: Number of discussion rounds per day (default: 2)
-        debug_prompts: Whether to print prompts sent to LLMs (default: False)
-        prompt_config: PromptConfig instance for versioned prompts (default: v1.0)
-        
-    Example:
-        players = [
-            {'name': 'Alice', 'role': 'detective', 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-            {'name': 'Bob', 'role': 'mafioso', 'llm': {'type': 'openai', 'model': 'gpt-3.5-turbo'}},
-            {'name': 'Charlie', 'role': 'villager', 'llm': {'type': 'anthropic', 'model': 'claude-3-haiku'}}
-        ]
-    """
+    """Create a Mafia game with specified players"""
     # Use default prompt config if none provided
     if prompt_config is None:
         prompt_config = get_default_prompt_config()
+        
     # Create agents
     agents = []
     for player in players:
         llm = create_llm(player['llm'])
         agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts, prompt_config)
-        # Add role identity as first memory entry
         agent.remember(f"You're {agent.name}, the {agent.role}.")
         agents.append(agent)
     
-    # Create game components
+    # Create game state
     state = GameState(agents, discussion_rounds)
-    display = Display()
-    day_phase = DayPhase(state, display)
-    night_phase = NightPhase(state, display)
     
     # Game setup: Mafiosos know each other
     mafiosos = [a for a in agents if a.role == "mafioso"]
@@ -291,7 +285,7 @@ def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config
             other_mafiosos = [a.name for a in mafiosos if a != mafioso]
             mafioso.remember(f"Your fellow mafiosos are: {', '.join(other_mafiosos)}.")
     
-    return Game(state, display, day_phase, night_phase)
+    return Game(state)
 
 if __name__ == "__main__":
     print("Use preset_games.py to run predefined games, or use create_game() function directly.")

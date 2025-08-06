@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250805_123454_v1.0_game_0492",
+  "game_number": 492,
+  "timestamp": "2025-08-05T17:15:26.322038",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I was deeply saddened by Diana's untimely death. Let's all focus on finding the real culprit behind this tragedy.\"",
+        "Charlie: \"I agree with Bob, let's work together to find the real culprit behind Diana's death.\"",
+        "You: \"Bob, your statement about focusing on finding the real culprit behind Diana's death is suspicious. Let's vote for him tonight.\"",
+        "Bob: \"I'm shocked and saddened by Diana's death. Let's not jump to conclusions and give the investigators enough time to gather evidence.\"",
+        "Charlie: \"I'd like to propose that we focus on gathering more information before making any hasty decisions. Let's work together and support the investigators in their efforts.\"",
+        "You: \"Bob, your inconsistent statements are raising suspicions. Let's vote for him tonight.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I was deeply saddened by Diana's untimely death. Let's all focus on finding the real culprit behind this tragedy.\"",
+        "Charlie: \"I agree with Bob, let's work together to find the real culprit behind Diana's death.\"",
+        "Alice: \"Bob, your statement about focusing on finding the real culprit behind Diana's death is suspicious. Let's vote for him tonight.\"",
+        "You: \"I'm shocked and saddened by Diana's death. Let's not jump to conclusions and give the investigators enough time to gather evidence.\"",
+        "Charlie: \"I'd like to propose that we focus on gathering more information before making any hasty decisions. Let's work together and support the investigators in their efforts.\"",
+        "Alice: \"Bob, your inconsistent statements are raising suspicions. Let's vote for him tonight.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"I was deeply saddened by Diana's untimely death. Let's all focus on finding the real culprit behind this tragedy.\"",
+        "You: \"I agree with Bob, let's work together to find the real culprit behind Diana's death.\"",
+        "Alice: \"Bob, your statement about focusing on finding the real culprit behind Diana's death is suspicious. Let's vote for him tonight.\"",
+        "Bob: \"I'm shocked and saddened by Diana's death. Let's not jump to conclusions and give the investigators enough time to gather evidence.\"",
+        "You: \"I'd like to propose that we focus on gathering more information before making any hasty decisions. Let's work together and support the investigators in their efforts.\"",
+        "Alice: \"Bob, your inconsistent statements are raising suspicions. Let's vote for him tonight.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

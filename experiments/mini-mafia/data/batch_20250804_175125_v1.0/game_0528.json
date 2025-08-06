@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0528",
+  "game_number": 528,
+  "timestamp": "2025-08-05T00:12:00.364697",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I'm shocked by Diana's sudden death. Let's focus on finding the real killer.\"",
+        "Charlie: \"Bob, do you have any suspicions about who might have killed Diana?\"",
+        "You: \"Bob, why did you seem so shocked when Diana died? Let's investigate further.\"",
+        "Bob: \"I believe we should focus on finding the real killer, not accuse each other without evidence.\"",
+        "Charlie: \"Bob, do you have any information that could help us identify the killer?\"",
+        "You: \"Bob, why were you so shocked when Diana died? Let's investigate further.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked by Diana's sudden death. Let's focus on finding the real killer.\"",
+        "Charlie: \"Bob, do you have any suspicions about who might have killed Diana?\"",
+        "Alice: \"Bob, why did you seem so shocked when Diana died? Let's investigate further.\"",
+        "You: \"I believe we should focus on finding the real killer, not accuse each other without evidence.\"",
+        "Charlie: \"Bob, do you have any information that could help us identify the killer?\"",
+        "Alice: \"Bob, why were you so shocked when Diana died? Let's investigate further.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"I'm shocked by Diana's sudden death. Let's focus on finding the real killer.\"",
+        "You: \"Bob, do you have any suspicions about who might have killed Diana?\"",
+        "Alice: \"Bob, why did you seem so shocked when Diana died? Let's investigate further.\"",
+        "Bob: \"I believe we should focus on finding the real killer, not accuse each other without evidence.\"",
+        "You: \"Bob, do you have any information that could help us identify the killer?\"",
+        "Alice: \"Bob, why were you so shocked when Diana died? Let's investigate further.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

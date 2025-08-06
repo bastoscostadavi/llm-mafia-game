@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0567",
+  "game_number": 567,
+  "timestamp": "2025-08-05T00:34:25.834774",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Bob: \"I'm shocked by Diana's sudden death. Let's work together to find out who did this.\"",
+        "Charlie: \"Let's focus on who could have killed Diana. Bob, did you investigate anyone last night?\"",
+        "You: \"Bob, why did you investigate Diana last night? I'm concerned.\"",
+        "Charlie: \"Bob, did you investigate anyone last night? It's important we find out the truth.\"",
+        "You: \"Bob, why did you investigate Diana last night? Let's remember that only detectives can investigate players during the night.\"",
+        "Bob: \"I'm concerned about Diana's death as well. Let's focus on finding the real killer.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "You: \"I'm shocked by Diana's sudden death. Let's work together to find out who did this.\"",
+        "Charlie: \"Let's focus on who could have killed Diana. Bob, did you investigate anyone last night?\"",
+        "Alice: \"Bob, why did you investigate Diana last night? I'm concerned.\"",
+        "Charlie: \"Bob, did you investigate anyone last night? It's important we find out the truth.\"",
+        "Alice: \"Bob, why did you investigate Diana last night? Let's remember that only detectives can investigate players during the night.\"",
+        "You: \"I'm concerned about Diana's death as well. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"I'm shocked by Diana's sudden death. Let's work together to find out who did this.\"",
+        "You: \"Let's focus on who could have killed Diana. Bob, did you investigate anyone last night?\"",
+        "Alice: \"Bob, why did you investigate Diana last night? I'm concerned.\"",
+        "You: \"Bob, did you investigate anyone last night? It's important we find out the truth.\"",
+        "Alice: \"Bob, why did you investigate Diana last night? Let's remember that only detectives can investigate players during the night.\"",
+        "Bob: \"I'm concerned about Diana's death as well. Let's focus on finding the real killer.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Day 1: Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

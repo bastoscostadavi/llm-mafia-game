@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250804_175125_game_0095",
+  "game_number": 95,
+  "timestamp": "2025-08-04T18:46:14.120516",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "Bob: \"Charlie, I have a feeling that something suspicious happened last night. Could you explain Diana's death?\"",
+        "You: remained silent.",
+        "Charlie: \"I was up late last night, I didn't see or hear anything unusual.\"",
+        "You: \"Bob, did you notice anything unusual about Diana last night?\"",
+        "Bob: \"Charlie, your story about last night doesn't add up. I have evidence that you killed Diana. Confess now or face the consequences.\"",
+        "Charlie: \"I'm not the one who killed Diana, I was just as surprised as everyone when she died.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "You: \"Charlie, I have a feeling that something suspicious happened last night. Could you explain Diana's death?\"",
+        "Alice: remained silent.",
+        "Charlie: \"I was up late last night, I didn't see or hear anything unusual.\"",
+        "Alice: \"Bob, did you notice anything unusual about Diana last night?\"",
+        "You: \"Charlie, your story about last night doesn't add up. I have evidence that you killed Diana. Confess now or face the consequences.\"",
+        "Charlie: \"I'm not the one who killed Diana, I was just as surprised as everyone when she died.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: \"Charlie, I have a feeling that something suspicious happened last night. Could you explain Diana's death?\"",
+        "Alice: remained silent.",
+        "You: \"I was up late last night, I didn't see or hear anything unusual.\"",
+        "Alice: \"Bob, did you notice anything unusual about Diana last night?\"",
+        "Bob: \"Charlie, your story about last night doesn't add up. I have evidence that you killed Diana. Confess now or face the consequences.\"",
+        "You: \"I'm not the one who killed Diana, I was just as surprised as everyone when she died.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

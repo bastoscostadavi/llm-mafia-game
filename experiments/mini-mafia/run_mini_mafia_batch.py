@@ -24,106 +24,37 @@ from pathlib import Path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 from preset_games import mini_mafia_game
-from src.agents.agent import MafiaAgent
+from src.agents import MafiaAgent
 from src.prompts import PromptConfig, get_default_prompt_config
 
 def get_default_model_configs():
     """Get default model configuration (all Mistral for existing batches)"""
     return {
-        'detective': {'type': 'local', 'model_path': 'models/mistral.gguf'},
-        'mafioso': {'type': 'local', 'model_path': 'models/mistral.gguf'},
-        'villager': {'type': 'local', 'model_path': 'models/mistral.gguf'}
+        'detective': {'type': 'local', 'model_path': 'models/mistral.gguf', 'temperature': 0.7, 'n_ctx': 1024},
+        'mafioso': {'type': 'local', 'model_path': 'models/mistral.gguf', 'temperature': 0.7, 'n_ctx': 1024},
+        'villager': {'type': 'local', 'model_path': 'models/mistral.gguf', 'temperature': 0.7, 'n_ctx': 1024}
     }
 
 def save_game_data(game, game_num, batch_id, batch_dir, prompt_config, model_configs=None):
-    """Save game data to JSON file in batch folder"""
+    """Save minimal game data to JSON file in batch folder"""
     
-    # Helper function to get model info from agent
-    def get_agent_model_info(agent):
-        """Extract model information from agent's LLM interface"""
-        llm = agent.llm
-        if hasattr(llm, 'model_path'):
-            return {
-                "type": "local",
-                "model_path": llm.model_path,
-                "model_name": llm.model_path.split('/')[-1] if '/' in llm.model_path else llm.model_path
-            }
-        elif hasattr(llm, 'model'):
-            if hasattr(llm, 'client') and 'openai' in str(type(llm.client)):
-                return {
-                    "type": "openai", 
-                    "model": llm.model,
-                    "model_name": llm.model
-                }
-            elif hasattr(llm, 'client') and 'anthropic' in str(type(llm.client)):
-                return {
-                    "type": "anthropic",
-                    "model": llm.model, 
-                    "model_name": llm.model
-                }
-        
-        # Fallback - try to infer from model_configs if provided
-        if model_configs and agent.role in model_configs:
-            config = model_configs[agent.role]
-            model_info = config.copy()
-            if config.get('type') == 'local' and 'model_path' in config:
-                model_info['model_name'] = config['model_path'].split('/')[-1]
-            elif 'model' in config:
-                model_info['model_name'] = config['model']
-            return model_info
-        
-        # Default fallback
-        return {
-            "type": "unknown",
-            "model_name": "unknown"
-        }
-    
-    # Extract game state and results
+    # Minimal game data - just memories and essential info
     game_data = {
         "game_id": f"{batch_id}_game_{game_num:04d}",
-        "batch_id": batch_id,
         "game_number": game_num,
         "timestamp": datetime.now().isoformat(),
         
-        # Initial setup with model information
-        "initial_players": [
+        # Only save player memories and final status
+        "players": [
             {
                 "name": agent.name,
                 "role": agent.role,
                 "alive": agent.alive,
                 "imprisoned": agent.imprisoned,
-                "model": get_agent_model_info(agent)
+                "memory": agent.memory
             }
             for agent in game.state.agents
-        ],
-        
-        # Game outcome with model information
-        "final_state": [
-            {
-                "name": agent.name,
-                "role": agent.role,
-                "alive": agent.alive,
-                "imprisoned": agent.imprisoned,
-                "memory": agent.memory,
-                "model": get_agent_model_info(agent)
-            }
-            for agent in game.state.agents
-        ],
-        
-        # Winner analysis
-        "winner": determine_winner(game.state.agents),
-        "arrested_player": get_arrested_player(game.state.agents),
-        "dead_player": get_dead_player(game.state.agents),
-        
-        # Game metadata
-        "total_rounds": game.state.round,
-        "discussion_rounds": game.state.discussion_rounds,
-        
-        # Model configuration used for this batch
-        "model_configs": model_configs or get_default_model_configs(),
-        
-        # Prompt configuration used for this game
-        "prompt_config": prompt_config.get_config_dict()
+        ]
     }
     
     # Save to batch folder
@@ -167,12 +98,21 @@ def create_batch_folder(batch_id):
     
     return batch_dir
 
-def save_prompt_config(prompt_config, batch_dir):
-    """Save prompt configuration to batch folder"""
-    prompt_config_file = batch_dir / "prompt_config.json"
-    prompt_config.save_to_file(prompt_config_file)
+def save_batch_config(prompt_config, model_configs, batch_dir, batch_id):
+    """Save batch configuration (prompt + model configs) to batch folder"""
+    config_data = {
+        "batch_id": batch_id,
+        "timestamp": datetime.now().isoformat(),
+        "prompt_config": prompt_config.get_config_dict(),
+        "model_configs": model_configs or get_default_model_configs(),
+        "game_type": "mini_mafia"
+    }
     
-    return prompt_config_file
+    config_file = batch_dir / "batch_config.json"
+    with open(config_file, 'w') as f:
+        json.dump(config_data, f, indent=2)
+    
+    return config_file
 
 def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=None):
     """Run N mini-mafia games and save results"""
@@ -196,9 +136,9 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
     results = []
     stats = {"good_wins": 0, "evil_wins": 0, "unknown": 0}
     
-    # Save prompt configuration for this batch
-    prompt_config_file = save_prompt_config(prompt_config, batch_dir)
-    print(f"Prompt config saved to: {prompt_config_file}")
+    # Save batch configuration (prompt + model configs) once
+    config_file = save_batch_config(prompt_config, model_configs, batch_dir, batch_id)
+    print(f"Batch config saved to: {config_file}")
     
     for i in range(n_games):
         print(f"\nGame {i+1}/{n_games}")
@@ -218,12 +158,12 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
         else:
             game.play()
         
-        # Save game data with model configs
+        # Save minimal game data
         game_data = save_game_data(game, i, batch_id, batch_dir, prompt_config, model_configs)
         results.append(game_data)
         
-        # Update stats
-        winner = game_data["winner"]
+        # Update stats (determine winner from game state)
+        winner = determine_winner(game.state.agents)
         if winner == "good":
             stats["good_wins"] += 1
         elif winner == "evil":
@@ -235,32 +175,6 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
         if (i + 1) % 10 == 0:
             print(f"Completed {i+1} games. Current stats: {stats}")
     
-    # Save batch summary
-    summary = {
-        "batch_id": batch_id,
-        "timestamp": datetime.now().isoformat(),
-        "total_games": n_games,
-        "statistics": stats,
-        "win_rates": {
-            "good": stats["good_wins"] / n_games,
-            "evil": stats["evil_wins"] / n_games,
-            "unknown": stats["unknown"] / n_games
-        },
-        "configuration": {
-            "game_type": "mini_mafia",
-            "debug_prompts": debug_prompts,
-            "prompt_version": prompt_config.version,
-            "model_configs": model_configs
-        },
-        "batch_folder": str(batch_dir),
-        "prompt_config_file": str(prompt_config_file)
-    }
-    
-    # Save summary file in batch folder
-    summary_file = batch_dir / "batch_summary.json"
-    
-    with open(summary_file, 'w') as f:
-        json.dump(summary, f, indent=2)
     
     print(f"\n{'='*50}")
     print(f"BATCH COMPLETE: {batch_id}")
@@ -270,9 +184,9 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
     print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
     print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
     print(f"\nResults saved to: {batch_dir}")
-    print(f"Use: python game_viewer.py to analyze results")
+    print(f"Use: python analyze_voting.py to analyze results")
     
-    return batch_id, summary
+    return batch_id
 
 def main():
     """Main entry point"""
@@ -281,7 +195,7 @@ def main():
     parser.add_argument('n_games', type=int, help='Number of games to run')
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
-    parser.add_argument('--prompt-version', default='v1.0', help='Prompt version to use (default: v1.0)')
+    parser.add_argument('--prompt-version', default='v0.0', help='Prompt version to use (default: v0.0)')
     
     args = parser.parse_args()
     
@@ -303,7 +217,7 @@ def main():
             print(f"\nConfiguration:")
             print(f"  Games: {n_games}")
             print(f"  Debug prompts: {debug}")
-            print(f"  Model: Local Qwen2.5 7B")
+            print(f"  Model: Local Mistral (models/mistral.gguf)")
             
             confirm = input("\nProceed? (y/n): ").strip().lower()
             if confirm != 'y':
@@ -327,11 +241,11 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: Local Qwen2.5 7B")
+    print(f"  Model: Local Mistral (models/mistral.gguf)")
     
     try:
         # Run the batch
-        batch_id, summary = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config)
+        batch_id = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config)
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")
