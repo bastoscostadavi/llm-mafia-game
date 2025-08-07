@@ -112,7 +112,9 @@ class Game:
         mafiosos_active = [a for a in active_players if a.role == "mafioso"]
         if mafiosos_active:
             chosen_mafioso = random.choice(mafiosos_active)
-            kill_candidates = [n for n in candidates if n != chosen_mafioso.name]
+            # Exclude all mafiosos from kill candidates (mafiosos cannot kill other mafiosos)
+            mafioso_names = [a.name for a in active_players if a.role == "mafioso"]
+            kill_candidates = [n for n in candidates if n not in mafioso_names]
             if kill_candidates:
                 target = chosen_mafioso.kill(kill_candidates, self.state)
                 
