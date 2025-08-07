@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250806_173352_v0.0_game_0748",
+  "game_number": 748,
+  "timestamp": "2025-08-06T23:09:54.964863",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Charlie was found dead.",
+        "Bob: remained silent.",
+        "You: remained silent.",
+        "Diana: remained silent.",
+        "You: remained silent.",
+        "Bob: \"I'm concerned about Charlie's sudden death. Let's stay vigilant and keep an eye on each other.\"",
+        "Diana: \"I agree with Alice, let's not jump to conclusions. It's important we all trust each other during this investigation.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "You: remained silent.",
+        "Alice: remained silent.",
+        "Diana: remained silent.",
+        "Alice: remained silent.",
+        "You: \"I'm concerned about Charlie's sudden death. Let's stay vigilant and keep an eye on each other.\"",
+        "Diana: \"I agree with Alice, let's not jump to conclusions. It's important we all trust each other during this investigation.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "You killed Charlie.",
+        "Night 1: The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Bob: remained silent.",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Alice: remained silent.",
+        "Bob: \"I'm concerned about Charlie's sudden death. Let's stay vigilant and keep an eye on each other.\"",
+        "You: \"I agree with Alice, let's not jump to conclusions. It's important we all trust each other during this investigation.\"",
+        "Day 1 votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Day 1: Bob was arrested"
+      ]
+    }
+  ]
+}

@@ -165,9 +165,6 @@ This is a research framework. Contributions welcome for:
 - Enhanced analysis tools
 - Performance optimizations
 
-## License
-
-MIT License - See LICENSE file for details.
 
 ## Citation
 
@@ -176,7 +173,7 @@ If you use this framework in your research, please cite:
 ```bibtex
 @misc{llm-mafia-game,
   title={LLM Mafia Game: A Framework for Studying AI Behavior in Social Deduction},
-  author={[Author Name]},
+  author={Davi Bastos Costa},
   year={2025},
   url={https://github.com/bastoscostadavi/llm-mafia-game}
 }

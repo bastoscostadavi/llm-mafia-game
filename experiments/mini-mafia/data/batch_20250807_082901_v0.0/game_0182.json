@@ -1,0 +1,72 @@
+{
+  "game_id": "batch_20250807_082901_v0.0_game_0182",
+  "game_number": 182,
+  "timestamp": "2025-08-07T09:55:15.902141",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1: The villager Diana was found dead.",
+        "You: remained silent.",
+        "Charlie: remained silent.",
+        "Bob: remained silent.",
+        "Charlie: remained silent.",
+        "Bob: remained silent.",
+        "You: remained silent.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1: The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Alice: remained silent.",
+        "Charlie: remained silent.",
+        "You: remained silent.",
+        "Charlie: remained silent.",
+        "You: remained silent.",
+        "Alice: remained silent.",
+        "Day 1 votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Day 1: Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "You killed Diana.",
+        "Night 1: The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "Alice: remained silent."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager."
+      ]
+    }
+  ]
+}

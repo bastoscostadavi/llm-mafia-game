@@ -3,7 +3,7 @@ import sys
 import random
 from collections import Counter
 from src.agents import MafiaAgent
-from src.prompts import PromptConfig, get_default_prompt_config
+from src.prompts import PromptConfig
 from src.llm_utils import create_llm
 
 sys.path.append('.')
@@ -92,13 +92,25 @@ class Game:
         if len(active_players) <= 1:
             return
         
-        self.night_actions()
+        # Announce night phase start to all players
+        for agent in self.state.agents:
+            agent.remember(f"Night {self.state.round} begins.")
+        
+        killed_player = self.night_actions()
+        
+        # Announce deaths before day starts
+        if killed_player:
+            print(f"{killed_player} was found dead.")
+            # Everyone learns who died
+            for agent in self.state.agents:
+                agent.remember(f"{killed_player} was found dead.")
     
     def night_actions(self):
         """Process all night actions: kills and investigations"""
         active_players = self.state.get_active_players()
         active_names = self.state.get_active_names()
         candidates = [n for n in active_names]
+        killed_player = None
         
         # Detective acts independently
         active_detectives = [a for a in active_players if a.role == "detective"]
@@ -121,22 +133,24 @@ class Game:
                 # Kill the target
                 victim = self.state.get_agent_by_name(target)
                 victim.alive = False
+                killed_player = target
                 
                 print(f"[SPECTATOR] {chosen_mafioso.name} (chosen mafioso) kills {target}")
-                print(f"{target} was found dead.")
                 
                 # All mafiosos learn about the kill (except the killer who already remembers)
                 mafiosos_alive = [a for a in self.state.agents if a.role == "mafioso" and a.alive]
                 for mafioso in mafiosos_alive:
                     if mafioso != chosen_mafioso:
                         mafioso.remember(f"The Mafia member {chosen_mafioso.name} killed {target}")
-                
-                # Everyone learns who died
-                for agent in self.state.get_active_players():
-                    agent.remember(f"Night {self.state.round}: {target} was found dead.")
+        
+        return killed_player
     
     def run_day_phase(self):
         """Execute day phase"""
+        # Announce day phase start to all players
+        for agent in self.state.agents:
+            agent.remember(f"Day {self.state.round} begins.")
+        
         self.discussion_rounds()
         self.voting_round()
     
@@ -206,10 +220,10 @@ class Game:
         print(f"\n{arrested} has been arrested!")
         
         # Create vote summary for memory (show all votes to everyone)
-        vote_summary = f"Day {self.state.round} votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
+        vote_summary = f"Votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
         
         # Create arrest announcement for memory (without role)
-        arrest_announcement = f"Day {self.state.round}: {arrested} was arrested"
+        arrest_announcement = f"{arrested} was arrested"
         
         # Everyone remembers both the votes and the arrest
         for agent in self.state.get_active_players():
@@ -223,9 +237,9 @@ class Game:
         good = sum(1 for a in active if a.role not in ["mafioso"])
         
         if mafiosos == 0:
-            return "GOOD WINS! All mafiosos arrested!"
+            return "TOWN WINS! All mafiosos arrested!"
         elif good == 0:
-            return "EVIL WINS! All good players killed!"
+            return "MAFIA WINS! All non-mafiosos eliminated!"
         
         return None
     
@@ -263,12 +277,8 @@ class Game:
 
 
 
-def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=None):
+def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=PromptConfig(version="v1.0")):
     """Create a Mafia game with specified players"""
-    # Use default prompt config if none provided
-    if prompt_config is None:
-        prompt_config = get_default_prompt_config()
-        
     # Create agents
     agents = []
     for player in players:

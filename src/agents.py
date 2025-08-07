@@ -176,7 +176,7 @@ class MafiaAgent:
                 print(f"[DEBUG] {self.name} failed to parse response, random choice: {target}")
         
         # Remember the action
-        self.remember(f"Night {game_state.round}: You killed {target}")
+        self.remember(f"You killed {target}")
         return target
     
     def investigate(self, candidates: List[str], game_state=None) -> str:
@@ -229,5 +229,5 @@ class MafiaAgent:
         
         # Remember the investigation result
         target_agent = game_state.get_agent_by_name(target)
-        self.remember(f"Night {game_state.round}: You investigated {target} and discovered that they are a {target_agent.role}")
+        self.remember(f"You investigated {target} and discovered that they are a {target_agent.role}")
         return target

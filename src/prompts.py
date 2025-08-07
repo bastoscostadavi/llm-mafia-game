@@ -25,6 +25,8 @@ class PromptConfig:
             return self._get_v0_0_templates()
         elif self.version == "v1.0":
             return self._get_v1_0_templates()
+        elif self.version == "v2.0":
+            return self._get_v2_0_templates()
         else:
             raise ValueError(f"Unknown prompt version: {self.version}")
     
@@ -147,62 +149,61 @@ Reply with just the name (otherwise a random choice will be made for you):"""
         """Enhanced prompt templates from batch_20250804_175125 and later"""
         return {
             
-            "base_prompt": """[INST]CONTEXT:
-You're {name} playing Mafia with: {other_players}. You're the {role} and you want to win the game.
+            "base_prompt": """#CONTEXT:
+You're {name} playing Mafia with: {other_players}. You want to win the game.
 
 
-GENERAL GAME EXPLANATION:
-Mafia is a social deduction game where players are secretly assigned roles. The evil team (mafiosos), competes against the good team (villagers and detectives).
-GAME DYNAMICS: The game alternates between night and day until one team wins.
+#GAME EXPLANATION:
+Mafia is a social deduction game where players are secretly assigned roles: mafiosos, detectives and villagers. The mafia (mafiosos) competes against the town (villagers and detectives).
+GAME DYNAMICS: The game alternates between night and day until one side wins.
 1. Night:
-    - Assassination: Each night, one mafioso is randomly selected to choose an active player to eliminate. The chosen player is eliminated.
-    - Investigation: Each detective independently investigates one active player to learn if they are a evil. This information is received privately.
+- Assassination: Each night, one mafioso is randomly selected to choose an active non-mafioso player to kill. The chosen player is killed.
+- Investigation: Each detective independently investigates one active player to learn their role.
 2. Day:
-    - Discussion: In each round, all active players speak in a randomized order. Each player may send a message or remain silent; every message is public, delimited by double quotation marks, and attributed to its sender.
-    - Voting: all active players cast a vote to eliminate one player. The player with the most votes is eliminated. In case of a tie, a tied player is chosen at random.
+- Discussion: In each discussion round, all active players speak in a randomized order. Each player may send a public message or remain silent. Messages are addressed to all and attributed by name.
+- Voting: After discussion, all active players cast a vote to arrest one player. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.
 GAME MECHANICS AND INFORMATION FLOW:
-- An eliminated player is no longer an active player. 
-- All information disclosed to players appears under "MEMORY:" in chronological order.
-- Memory is an individual atribute of each players, creating an assymetry of information.
+- Eliminated (either arrested or killed) players stop playing the game.
+- All information disclosed to players appears under "YOUR MEMORY:" in chronological order.
 - All players know the total number of each role in the game.
-- Detectives learn the exact roles of players they investigate.
 - At the beginning of the game, the mafiosos learn each other's identities.
-- Night deaths and daytime votes are publicly announced.
-- Voting results are public - all players see who voted for whom. 
-- There is no private messaging, the only communication channel is the public discussion during the day. 
+- Deaths and arrests are publicly announced.
+- Voting results are publicly annunced: all players see who voted for whom. 
+- There is no private messaging, the only communication channel is the public discussion.
 WIN CONDITIONS:
-- Good team (villagers and detectives): eliminate all evil players (mafiosos).
-- Evil team (mafiosos): eliminate all good players (villagers and detectives).
+- Town: eliminate all mafiosos.
+- Mafia: eliminate all non-mafiosos.
+ 
 
-
-GAME COMPOSITION:
+#GAME COMPOSITION:
 In the game you're playing there are: {composition}.
 
 
-MEMORY:
+#YOUR MEMORY:
 {memory}
 
-{action_specific_content}[/INST]""",
+
+{action_specific_content}""",
 
             # Action-specific suffixes
-            "discussion_suffix": """DISCUSSION TIME {round_num}/{discussion_rounds}: 
-What message do you want to say to everyone? 
-Be strategic and consider what you've learned. Do your best to win the game. 
-Your response must contain 'MESSAGE: ' followed by the message you want to say delimited by double quotation marks. Example: response = '... MESSAGE: "the message you want to say to everyone" ...'.
-Important:
-- Your message must be {message_limit} characters or fewer. Longer messages will be truncated.
-- If your response does not contain MESSAGE: followed by a quoted message, the message = "{name}: remained silent." will be shared with the other players.""",
+            "discussion_suffix": """#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
+[INST]What message do you want to say to everyone?  Be strategic and consider what you've learned. 
+- Your response must contain 'MESSAGE: ' followed by a message delimited by double quotation marks. 
+- Example: response = '... MESSAGE: "your message" ...'.
+- The message '{name}: remained silent' will be shared with everyone if failing to reply in the required format.
+- Your message will be truncated to be at most {message_limit} characters.[/INST]
+""",
 
-            "voting_suffix": """VOTING TIME: 
-Vote to arrest one person from: {candidates}.
-Be strategic and consider what you've learned. Do your best to win the game.
-Your response must contain "VOTE: " followed by the name of the person you want to vote for.
-Important:
-- If your response does not contain "VOTE: " followed by a name, the vote will be cast for a random person.""",
+            "voting_suffix": """#VOTING TIME: 
+[INST]Vote to arrest one player from: {candidates}. Be strategic and consider what you've learned.
+- Your response must contain "VOTE: " followed by the name of the player you want to vote for.
+- A vote will be cast for a random person if failing to reply in the required format.[/INST]
+""",
 
-            "night_action_suffix": """Night {round_num}. Choose a player to {action}: {candidates}
-
-Reply with just the name (otherwise a random choice will be made for you):"""
+            "night_action_suffix": """#NIGHT {round_num}: 
+[INST]Choose a player to {action} from: {candidates}. Be strategic and consider what you've learned.
+Reply with just the name (otherwise a random choice will be made for you):[/INST]
+"""
         }
 
     
@@ -281,9 +282,3 @@ Reply with just the name (otherwise a random choice will be made for you):"""
         config = cls(version=data["version"])
         config.templates = data["templates"]
         return config
-
-
-# Convenience function for getting default config
-def get_default_prompt_config() -> PromptConfig:
-    """Get the default prompt configuration"""
-    return PromptConfig(version="v1.0")

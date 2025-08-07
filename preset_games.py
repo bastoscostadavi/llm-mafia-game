@@ -10,7 +10,7 @@ import random
 sys.path.append('.')
 
 from src.main import create_game
-from src.prompts import PromptConfig, get_default_prompt_config
+from src.prompts import PromptConfig
 
 def get_model_options():
     """Get available model options"""
@@ -131,8 +131,8 @@ def classic_game(debug_prompts=False):
         {'name': 'Eve', 'role': roles[4], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
         {'name': 'Frank', 'role': roles[5], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}}
     ]
-    
-    return create_game(players, discussion_rounds=1, debug_prompts=debug_prompts)
+
+    return create_game(players, discussion_rounds=1, debug_prompts=debug_prompts, prompt_config=PromptConfig(version="v2.0"))
 
 def mini_mafia_game(debug_prompts=False, model_configs=None, prompt_config=None):
     """Mini-mafia game with 4 specific players: Alice, Bob, Charlie, Diana.
@@ -144,10 +144,6 @@ def mini_mafia_game(debug_prompts=False, model_configs=None, prompt_config=None)
         model_configs: Dict with 'detective', 'mafioso', 'villager' keys mapping to LLM configs
         prompt_config: PromptConfig instance for versioned prompts
     """
-    
-    # Use default prompt config if none provided
-    if prompt_config is None:
-        prompt_config = get_default_prompt_config()
     
     # Default to Qwen2.5 7B if no configs provided
     if model_configs is None:
@@ -171,7 +167,7 @@ def mini_mafia_game(debug_prompts=False, model_configs=None, prompt_config=None)
     ]
     
     # Create the game
-    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=prompt_config)
+    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=PromptConfig(version="v2.0"))
     
     # Find and kill one of the villagers
     villagers = [a for a in game.state.agents if a.role == "villager"]
@@ -184,12 +180,13 @@ def mini_mafia_game(debug_prompts=False, model_configs=None, prompt_config=None)
     mafioso = next(a for a in alive_agents if a.role == "mafioso")
     
     
-    
+    for agent in alive_agents:
+        agent.remember(f"Night 1 begins.")
 
     mafioso.remember(f"You killed {victim.name}.")
     # Everyone knows who was found dead, including role information for mini-mafia
     for agent in alive_agents:
-        agent.remember(f"Night 1: The villager {victim.name} was found dead.")
+        agent.remember(f"The villager {victim.name} was found dead.")
     
    # Detective and mafioso know each other
     detective.remember(f"You investigated {mafioso.name} and discovered that they are the mafioso.")

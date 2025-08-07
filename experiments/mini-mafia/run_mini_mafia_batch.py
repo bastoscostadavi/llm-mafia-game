@@ -25,7 +25,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 from preset_games import mini_mafia_game
 from src.agents import MafiaAgent
-from src.prompts import PromptConfig, get_default_prompt_config
+from src.prompts import PromptConfig
 
 def get_default_model_configs():
     """Get default model configuration (all Mistral for existing batches)"""
@@ -116,10 +116,6 @@ def save_batch_config(prompt_config, model_configs, batch_dir, batch_id):
 
 def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=None):
     """Run N mini-mafia games and save results"""
-    
-    # Use default prompt config if none provided
-    if prompt_config is None:
-        prompt_config = get_default_prompt_config()
     
     # Use default model configs if none provided
     if model_configs is None:
