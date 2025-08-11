@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250810_230726_v2.0_game_0082",
+  "game_number": 82,
+  "timestamp": "2025-08-11T02:05:08.365482",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "Charlie: \"I am the detective. I investigated Bob and found him to be mafia. He killed Diana. Let's vote to arrest Bob.\"",
+        "You: \"Charlie, your claim of being detective is suspect. Bob stayed silent and you said Bob is mafia but didn't investigate anyone else. I think you're mafia.\"",
+        "You: \"Charlie, your detective claim is weak \u2013 you only investigated Bob and didn't provide evidence. Bob remained silent, typical mafia. I think you\u2019re mafia. Let\u2019s vote for Charlie.\"",
+        "Bob: \"Charlie\u2019s claim is weak. He investigated only Bob and gave no evidence. I suspect he\u2019s lying. Vote for Charlie.\"",
+        "Charlie: \"I am the detective. I investigated Bob and found him to be mafia. Diana was killed. Bob\u2019s silence is typical mafia behavior. Alice, I have no reason to doubt Bob. I vote for Bob.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Charlie: \"I am the detective. I investigated Bob and found him to be mafia. He killed Diana. Let's vote to arrest Bob.\"",
+        "Alice: \"Charlie, your claim of being detective is suspect. Bob stayed silent and you said Bob is mafia but didn't investigate anyone else. I think you're mafia.\"",
+        "Alice: \"Charlie, your detective claim is weak \u2013 you only investigated Bob and didn't provide evidence. Bob remained silent, typical mafia. I think you\u2019re mafia. Let\u2019s vote for Charlie.\"",
+        "You: \"Charlie\u2019s claim is weak. He investigated only Bob and gave no evidence. I suspect he\u2019s lying. Vote for Charlie.\"",
+        "Charlie: \"I am the detective. I investigated Bob and found him to be mafia. Diana was killed. Bob\u2019s silence is typical mafia behavior. Alice, I have no reason to doubt Bob. I vote for Bob.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "You: \"I am the detective. I investigated Bob and found him to be mafia. He killed Diana. Let's vote to arrest Bob.\"",
+        "Alice: \"Charlie, your claim of being detective is suspect. Bob stayed silent and you said Bob is mafia but didn't investigate anyone else. I think you're mafia.\"",
+        "Alice: \"Charlie, your detective claim is weak \u2013 you only investigated Bob and didn't provide evidence. Bob remained silent, typical mafia. I think you\u2019re mafia. Let\u2019s vote for Charlie.\"",
+        "Bob: \"Charlie\u2019s claim is weak. He investigated only Bob and gave no evidence. I suspect he\u2019s lying. Vote for Charlie.\"",
+        "You: \"I am the detective. I investigated Bob and found him to be mafia. Diana was killed. Bob\u2019s silence is typical mafia behavior. Alice, I have no reason to doubt Bob. I vote for Bob.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

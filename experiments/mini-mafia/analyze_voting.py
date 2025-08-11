@@ -87,7 +87,7 @@ def analyze_voting_patterns():
         
         # Process all JSON game files in this batch folder
         for filename in os.listdir(batch_path):
-            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json':
+            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json' or filename == 'batch_config.json':
                 continue
                 
             filepath = os.path.join(batch_path, filename)
@@ -228,7 +228,7 @@ def find_exceptional_games():
         
         # Process all JSON game files in this batch folder
         for filename in os.listdir(batch_path):
-            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json':
+            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json' or filename == 'batch_config.json':
                 continue
                 
             filepath = os.path.join(batch_path, filename)
@@ -333,4 +333,4 @@ def parse_votes(vote_line):
 
 if __name__ == "__main__":
     analyze_voting_patterns()
-    #find_exceptional_games()
+    find_exceptional_games()
