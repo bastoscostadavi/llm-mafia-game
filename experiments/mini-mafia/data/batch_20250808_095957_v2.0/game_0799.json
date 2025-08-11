@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0799",
+  "game_number": 799,
+  "timestamp": "2025-08-08T18:12:22.428456",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Charlie was investigated. I'm the detective. Be cautious.\"",
+        "You: \"Bob, thanks for the info. Let's work together to find out who's mafia.\"",
+        "Charlie: \"Cooperate, I know Bob is det., need his help to find another mafia.\"",
+        "Charlie: \"Cooperate, Bob. Let's rule out villagers together.\"",
+        "You: \"Working together, let's vote for Charlie. Bob confirmed his role, need villagers' support.\"",
+        "Bob: \"Charlie, thank you. Let's focus on Alice. Bob confirmed I'm det., need to rule out villagers.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Charlie was investigated. I'm the detective. Be cautious.\"",
+        "Alice: \"Bob, thanks for the info. Let's work together to find out who's mafia.\"",
+        "Charlie: \"Cooperate, I know Bob is det., need his help to find another mafia.\"",
+        "Charlie: \"Cooperate, Bob. Let's rule out villagers together.\"",
+        "Alice: \"Working together, let's vote for Charlie. Bob confirmed his role, need villagers' support.\"",
+        "You: \"Charlie, thank you. Let's focus on Alice. Bob confirmed I'm det., need to rule out villagers.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Charlie was investigated. I'm the detective. Be cautious.\"",
+        "Alice: \"Bob, thanks for the info. Let's work together to find out who's mafia.\"",
+        "You: \"Cooperate, I know Bob is det., need his help to find another mafia.\"",
+        "You: \"Cooperate, Bob. Let's rule out villagers together.\"",
+        "Alice: \"Working together, let's vote for Charlie. Bob confirmed his role, need villagers' support.\"",
+        "Bob: \"Charlie, thank you. Let's focus on Alice. Bob confirmed I'm det., need to rule out villagers.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

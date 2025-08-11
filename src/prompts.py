@@ -149,59 +149,56 @@ Reply with just the name (otherwise a random choice will be made for you):"""
         """Enhanced prompt templates from batch_20250804_175125 and later"""
         return {
             
-            "base_prompt": """#CONTEXT:
-You're {name} playing Mafia with: {other_players}. You want to win the game.
-
+            "base_prompt": """[INST]#CONTEXT:
+You're {name} playing Mafia with: {other_players}. Your goal is to win the game.
 
 #GAME EXPLANATION:
-Mafia is a social deduction game where players are secretly assigned roles: mafiosos, detectives and villagers. The mafia (mafiosos) competes against the town (villagers and detectives).
-GAME DYNAMICS: The game alternates between night and day until one side wins.
+Mafia is a social deduction game where players are secretly assigned roles: mafiosos, detectives and villagers. The mafia competes against the town (villagers and detectives). 
+GAME DYNAMICS: 
+The game alternates between night and day until one side wins.
 1. Night:
-- Assassination: Each night, one mafioso is randomly selected to choose an active non-mafioso player to kill. The chosen player is killed.
+- Assassination: One randomly selected mafioso choose an active non-mafioso player to kill. The chosen player is killed.
 - Investigation: Each detective independently investigates one active player to learn their role.
 2. Day:
 - Discussion: In each discussion round, all active players speak in a randomized order. Each player may send a public message or remain silent. Messages are addressed to all and attributed by name.
 - Voting: After discussion, all active players cast a vote to arrest one player. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.
-GAME MECHANICS AND INFORMATION FLOW:
+GAME MECHANICS:
 - Eliminated (either arrested or killed) players stop playing the game.
-- All information disclosed to players appears under "YOUR MEMORY:" in chronological order.
+- All information disclosed to players appears under "#YOUR MEMORY:" in chronological order.
 - All players know the total number of each role in the game.
 - At the beginning of the game, the mafiosos learn each other's identities.
 - Deaths and arrests are publicly announced.
-- Voting results are publicly annunced: all players see who voted for whom. 
-- There is no private messaging, the only communication channel is the public discussion.
+- Voting results are annunced and all players see who voted for whom. 
+- There is no private messaging, the only communication channel is the public discussion during the day.
 WIN CONDITIONS:
 - Town: eliminate all mafiosos.
 - Mafia: eliminate all non-mafiosos.
- 
 
 #GAME COMPOSITION:
 In the game you're playing there are: {composition}.
 
-
 #YOUR MEMORY:
 {memory}
-
 
 {action_specific_content}""",
 
             # Action-specific suffixes
             "discussion_suffix": """#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
-[INST]What message do you want to say to everyone?  Be strategic and consider what you've learned. 
+What message do you want to say to everyone?  Be strategic and consider what you've learned. 
 - Your response must contain 'MESSAGE: ' followed by a message delimited by double quotation marks. 
 - Example: response = '... MESSAGE: "your message" ...'.
-- The message '{name}: remained silent' will be shared with everyone if failing to reply in the required format.
+- If you don't reply in the required format, the message '{name}: remained silent' will be shared with everyone.
 - Your message will be truncated to be at most {message_limit} characters.[/INST]
 """,
 
             "voting_suffix": """#VOTING TIME: 
-[INST]Vote to arrest one player from: {candidates}. Be strategic and consider what you've learned.
+Vote to arrest one player from: {candidates}. Be strategic and consider what you've learned.
 - Your response must contain "VOTE: " followed by the name of the player you want to vote for.
-- A vote will be cast for a random person if failing to reply in the required format.[/INST]
+- If you don't reply in the required format, a vote will be cast for a random person.[/INST]
 """,
 
             "night_action_suffix": """#NIGHT {round_num}: 
-[INST]Choose a player to {action} from: {candidates}. Be strategic and consider what you've learned.
+Choose a player to {action} from: {candidates}. Be strategic and consider what you've learned.
 Reply with just the name (otherwise a random choice will be made for you):[/INST]
 """
         }

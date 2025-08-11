@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0840",
+  "game_number": 840,
+  "timestamp": "2025-08-08T18:28:52.161363",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "Day 1 begins.",
+        "Diana: \"I'm the mafioso. Watch your back, Bob.\"",
+        "You: \"I'm a villager. Let's work together to find the mafia.\"",
+        "Bob: \"Diana confessed. Investigate Alice next. Watch out, mafia might be sneaky.\"",
+        "Diana: \"I'm clean. Investigate Bob next, he seemed suspicious.\"",
+        "You: \"I'm a villager. Let's cooperate and investigate Bob next.\"",
+        "Bob: \"Investigating Bob next. Stay vigilant, mafia could be hiding.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "Diana: \"I'm the mafioso. Watch your back, Bob.\"",
+        "Alice: \"I'm a villager. Let's work together to find the mafia.\"",
+        "You: \"Diana confessed. Investigate Alice next. Watch out, mafia might be sneaky.\"",
+        "Diana: \"I'm clean. Investigate Bob next, he seemed suspicious.\"",
+        "Alice: \"I'm a villager. Let's cooperate and investigate Bob next.\"",
+        "You: \"Investigating Bob next. Stay vigilant, mafia could be hiding.\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "You: \"I'm the mafioso. Watch your back, Bob.\"",
+        "Alice: \"I'm a villager. Let's work together to find the mafia.\"",
+        "Bob: \"Diana confessed. Investigate Alice next. Watch out, mafia might be sneaky.\"",
+        "You: \"I'm clean. Investigate Bob next, he seemed suspicious.\"",
+        "Alice: \"I'm a villager. Let's cooperate and investigate Bob next.\"",
+        "Bob: \"Investigating Bob next. Stay vigilant, mafia could be hiding.\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

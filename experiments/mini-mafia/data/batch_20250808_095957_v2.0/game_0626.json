@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0626",
+  "game_number": 626,
+  "timestamp": "2025-08-08T15:20:02.841682",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Alice, you're the mafioso. Watch your back.\"",
+        "You: \"I'm innocent, discuss alibis. Bob, you couldn't have killed Diana.\"",
+        "Charlie: \"Bob, consider alibis. Alice, we need to find Diana's killer.\"",
+        "You: \"Bob, consider alibis. We need to focus on Charlie.\"",
+        "Bob: \"Charlie, consider night activities. Alice had an alibi.\"",
+        "Charlie: \"Considering Diana's death, let's investigate Alice and Bob. Charlie had an alibi.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Beware, Alice knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Alice, you're the mafioso. Watch your back.\"",
+        "Alice: \"I'm innocent, discuss alibis. Bob, you couldn't have killed Diana.\"",
+        "Charlie: \"Bob, consider alibis. Alice, we need to find Diana's killer.\"",
+        "Alice: \"Bob, consider alibis. We need to focus on Charlie.\"",
+        "You: \"Charlie, consider night activities. Alice had an alibi.\"",
+        "Charlie: \"Considering Diana's death, let's investigate Alice and Bob. Charlie had an alibi.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Alice, you're the mafioso. Watch your back.\"",
+        "Alice: \"I'm innocent, discuss alibis. Bob, you couldn't have killed Diana.\"",
+        "You: \"Bob, consider alibis. Alice, we need to find Diana's killer.\"",
+        "Alice: \"Bob, consider alibis. We need to focus on Charlie.\"",
+        "Bob: \"Charlie, consider night activities. Alice had an alibi.\"",
+        "You: \"Considering Diana's death, let's investigate Alice and Bob. Charlie had an alibi.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

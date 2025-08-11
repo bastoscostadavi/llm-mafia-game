@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_200359_v2.0_game_0031",
+  "game_number": 31,
+  "timestamp": "2025-08-08T21:10:40.593368",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Diana killed Charlie. I'm the detective, and I know her. Vote her.\"",
+        "Diana: \"Bob, how did you see me? I don't know you. Maybe you are the one who killed Charlie.\"",
+        "You: \"Bob, you claim to be detective but never mentioned your investigation. If you were, you'd know Charlie's role. Diana, I see no proof you killed him. I vote Bob.\"",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "Diana: remained silent.",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Diana killed Charlie. I'm the detective, and I know her. Vote her.\"",
+        "Diana: \"Bob, how did you see me? I don't know you. Maybe you are the one who killed Charlie.\"",
+        "Alice: \"Bob, you claim to be detective but never mentioned your investigation. If you were, you'd know Charlie's role. Diana, I see no proof you killed him. I vote Bob.\"",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Diana: remained silent.",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Diana killed Charlie. I'm the detective, and I know her. Vote her.\"",
+        "You: \"Bob, how did you see me? I don't know you. Maybe you are the one who killed Charlie.\"",
+        "Alice: \"Bob, you claim to be detective but never mentioned your investigation. If you were, you'd know Charlie's role. Diana, I see no proof you killed him. I vote Bob.\"",
+        "Alice: remained silent.",
+        "Bob: remained silent.",
+        "You: remained silent."
+      ]
+    }
+  ]
+}

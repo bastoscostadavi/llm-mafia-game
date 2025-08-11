@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0707",
+  "game_number": 707,
+  "timestamp": "2025-08-08T15:56:07.293776",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "Day 1 begins.",
+        "You: \"Charlie was found dead. Let's discuss who he might be and vote to investigate someone tonight.\"",
+        "Bob: \"I'm the mafioso, watch out for Diana. Vote to investigate her tonight.\"",
+        "Diana: \"I'm the detective. Bob is mafia. Voting to investigate Diana tonight.\"",
+        "You: \"Bob's admission points to Diana. Investigating her makes sense given the info.\"",
+        "Diana: \"Based on Bob's info, investigating You might reveal mafia.\"",
+        "Bob: \"I'm innocent. Investigate Diana as she seems suspicious.\"",
+        "Votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "The villager Charlie was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"Charlie was found dead. Let's discuss who he might be and vote to investigate someone tonight.\"",
+        "You: \"I'm the mafioso, watch out for Diana. Vote to investigate her tonight.\"",
+        "Diana: \"I'm the detective. Bob is mafia. Voting to investigate Diana tonight.\"",
+        "Alice: \"Bob's admission points to Diana. Investigating her makes sense given the info.\"",
+        "Diana: \"Based on Bob's info, investigating You might reveal mafia.\"",
+        "You: \"I'm innocent. Investigate Diana as she seems suspicious.\"",
+        "Votes: Alice voted for Diana, Bob voted for Diana, Diana voted for Alice",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "Alice: \"Charlie was found dead. Let's discuss who he might be and vote to investigate someone tonight.\"",
+        "Bob: \"I'm the mafioso, watch out for Diana. Vote to investigate her tonight.\"",
+        "You: \"I'm the detective. Bob is mafia. Voting to investigate Diana tonight.\"",
+        "Alice: \"Bob's admission points to Diana. Investigating her makes sense given the info.\"",
+        "You: \"Based on Bob's info, investigating You might reveal mafia.\"",
+        "Bob: \"I'm innocent. Investigate Diana as she seems suspicious.\""
+      ]
+    }
+  ]
+}

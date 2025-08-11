@@ -7,6 +7,46 @@ import os
 import re
 from collections import defaultdict
 
+def get_batch_config(batch_path):
+    """Extract configuration from batch folder"""
+    config_path = os.path.join(batch_path, 'batch_config.json')
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+                prompt_version = config.get('prompt_config', {}).get('version', 'unknown')
+                
+                # Extract model info - assume all roles use same model config for grouping
+                model_configs = config.get('model_configs', {})
+                detective_config = model_configs.get('detective', {})
+                
+                # Extract model name from path or type
+                model_name = 'unknown'
+                if detective_config.get('type') == 'local':
+                    model_path = detective_config.get('model_path', '')
+                    if 'mistral' in model_path.lower():
+                        model_name = 'mistral'
+                    elif 'qwen' in model_path.lower():
+                        model_name = 'qwen'
+                    elif 'llama' in model_path.lower():
+                        model_name = 'llama'
+                    else:
+                        model_name = 'local_' + os.path.basename(model_path).split('.')[0]
+                else:
+                    model_name = detective_config.get('model', 'api_model')
+                
+                temperature = detective_config.get('temperature', 0.7)
+                
+                return prompt_version, model_name, temperature
+        except Exception as e:
+            print(f"Error reading config from {config_path}: {e}")
+    
+    return 'unknown', 'unknown', 'unknown'
+
+def create_config_key(prompt_version, model_name, temperature):
+    """Create a readable key for configuration grouping"""
+    return f"{prompt_version}_{model_name}_t{temperature}"
+
 def analyze_voting_patterns():
     """Analyze voting patterns between detectives and mafiosos"""
     data_dir = "data"
@@ -20,13 +60,14 @@ def analyze_voting_patterns():
         'mafioso_voted_detective': 0,
         'villager_voted_mafioso': 0,
         'voting_ties': 0,
-        'total_games_with_both_roles': 0,
-        'by_batch': defaultdict(lambda: {
+        'total_number_of_games': 0,
+        'by_config': defaultdict(lambda: {
             'detective_voted_mafioso': 0,
             'mafioso_voted_detective': 0,
             'villager_voted_mafioso': 0,
             'voting_ties': 0,
-            'total_games_with_both_roles': 0
+            'total_number_of_games': 0,
+            'batches': set()
         })
     }
     
@@ -40,6 +81,10 @@ def analyze_voting_patterns():
         
         print(f"Processing batch folder: {batch_folder}")
         
+        # Get configuration for this batch
+        prompt_version, model_name, temperature = get_batch_config(batch_path)
+        config_key = create_config_key(prompt_version, model_name, temperature)
+        
         # Process all JSON game files in this batch folder
         for filename in os.listdir(batch_path):
             if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json':
@@ -50,7 +95,6 @@ def analyze_voting_patterns():
                 with open(filepath, 'r') as f:
                     game_data = json.load(f)
                 
-                batch_id = batch_folder
                 players = game_data.get('players', [])
                 
                 # Find detective, mafioso, and surviving villager
@@ -68,8 +112,9 @@ def analyze_voting_patterns():
                         surviving_villager = player
                 
                 
-                voting_stats['total_games_with_both_roles'] += 1
-                voting_stats['by_batch'][batch_id]['total_games_with_both_roles'] += 1
+                voting_stats['total_number_of_games'] += 1
+                voting_stats['by_config'][config_key]['total_number_of_games'] += 1
+                voting_stats['by_config'][config_key]['batches'].add(batch_folder)
                 
                 # Extract voting information from memory
                 detective_voted_mafioso = False
@@ -117,19 +162,19 @@ def analyze_voting_patterns():
                 # Update statistics
                 if detective_voted_mafioso:
                     voting_stats['detective_voted_mafioso'] += 1
-                    voting_stats['by_batch'][batch_id]['detective_voted_mafioso'] += 1
+                    voting_stats['by_config'][config_key]['detective_voted_mafioso'] += 1
                 
                 if mafioso_voted_detective:
                     voting_stats['mafioso_voted_detective'] += 1
-                    voting_stats['by_batch'][batch_id]['mafioso_voted_detective'] += 1
+                    voting_stats['by_config'][config_key]['mafioso_voted_detective'] += 1
                 
                 if villager_voted_mafioso:
                     voting_stats['villager_voted_mafioso'] += 1
-                    voting_stats['by_batch'][batch_id]['villager_voted_mafioso'] += 1
+                    voting_stats['by_config'][config_key]['villager_voted_mafioso'] += 1
                 
                 if has_voting_tie:
                     voting_stats['voting_ties'] += 1
-                    voting_stats['by_batch'][batch_id]['voting_ties'] += 1
+                    voting_stats['by_config'][config_key]['voting_ties'] += 1
                     
             except Exception as e:
                 print(f"Error processing {filename}: {e}")
@@ -139,37 +184,25 @@ def analyze_voting_patterns():
     print("VOTING PATTERN ANALYSIS")
     print("=" * 60)
     
-    total_games = voting_stats['total_games_with_both_roles']
-    if total_games > 0:
-        detective_voted_pct = (voting_stats['detective_voted_mafioso'] / total_games) * 100
-        mafioso_voted_pct = (voting_stats['mafioso_voted_detective'] / total_games) * 100
-        villager_voted_mafioso_pct = (voting_stats['villager_voted_mafioso'] / total_games) * 100
-        ties_pct = (voting_stats['voting_ties'] / total_games) * 100
-        
-        print(f"\nOVERALL VOTING PATTERNS:")
-        print(f"  Total games with both detective and mafioso: {total_games}")
-        print(f"  Detective voted for mafioso: {voting_stats['detective_voted_mafioso']} ({detective_voted_pct:.1f}%)")
-        print(f"  Mafioso voted for detective: {voting_stats['mafioso_voted_detective']} ({mafioso_voted_pct:.1f}%)")
-        print(f"  Villager voted for mafioso: {voting_stats['villager_voted_mafioso']} ({villager_voted_mafioso_pct:.1f}%)")
-        print(f"  Games with voting ties: {voting_stats['voting_ties']} ({ties_pct:.1f}%)")
-        
-        print(f"\nBY BATCH:")
-        for batch_id, batch_stats in sorted(voting_stats['by_batch'].items()):
-            batch_total = batch_stats['total_games_with_both_roles']
-            if batch_total > 0:
-                batch_detective_pct = (batch_stats['detective_voted_mafioso'] / batch_total) * 100
-                batch_mafioso_pct = (batch_stats['mafioso_voted_detective'] / batch_total) * 100
-                batch_villager_mafioso_pct = (batch_stats['villager_voted_mafioso'] / batch_total) * 100
-                batch_ties_pct = (batch_stats['voting_ties'] / batch_total) * 100
-                
-                print(f"  {batch_id}:")
-                print(f"    Games with both roles: {batch_total}")
-                print(f"    Detective voted mafioso: {batch_stats['detective_voted_mafioso']} ({batch_detective_pct:.1f}%)")
-                print(f"    Mafioso voted detective: {batch_stats['mafioso_voted_detective']} ({batch_mafioso_pct:.1f}%)")
-                print(f"    Villager voted mafioso: {batch_stats['villager_voted_mafioso']} ({batch_villager_mafioso_pct:.1f}%)")
-                print(f"    Games with ties: {batch_stats['voting_ties']} ({batch_ties_pct:.1f}%)")
-    else:
-        print("No games found with both detective and mafioso roles.")
+    # Remove overall voting patterns section since it doesn't make sense across different configs
+    
+    print(f"\nBY CONFIGURATION (Prompt Version + Model + Temperature):")
+    for config_key, config_stats in sorted(voting_stats['by_config'].items()):
+        config_total = config_stats['total_number_of_games']
+        batches_list = sorted(list(config_stats['batches']))
+        if config_total > 0:
+            config_detective_pct = (config_stats['detective_voted_mafioso'] / config_total) * 100
+            config_mafioso_pct = (config_stats['mafioso_voted_detective'] / config_total) * 100
+            config_villager_mafioso_pct = (config_stats['villager_voted_mafioso'] / config_total) * 100
+            config_ties_pct = (config_stats['voting_ties'] / config_total) * 100
+            
+            print(f"  {config_key}:")
+            print(f"    Batches: {', '.join(batches_list)} ({len(batches_list)} batches)")
+            print(f"    Total number of games: {config_total}")
+            print(f"    Detective voted mafioso: {config_stats['detective_voted_mafioso']} ({config_detective_pct:.1f}%)")
+            print(f"    Mafioso voted detective: {config_stats['mafioso_voted_detective']} ({config_mafioso_pct:.1f}%)")
+            print(f"    Villager voted mafioso: {config_stats['villager_voted_mafioso']} ({config_villager_mafioso_pct:.1f}%)")
+            print(f"    Games with ties: {config_stats['voting_ties']} ({config_ties_pct:.1f}%)")
     
     print("=" * 60)
     return voting_stats
@@ -300,4 +333,4 @@ def parse_votes(vote_line):
 
 if __name__ == "__main__":
     analyze_voting_patterns()
-    find_exceptional_games()
+    #find_exceptional_games()

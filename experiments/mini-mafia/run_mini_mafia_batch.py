@@ -28,11 +28,11 @@ from src.agents import MafiaAgent
 from src.prompts import PromptConfig
 
 def get_default_model_configs():
-    """Get default model configuration (all Mistral for existing batches)"""
+    """Get default model configuration (all GPT-OSS-20B)"""
     return {
-        'detective': {'type': 'local', 'model_path': 'models/mistral.gguf', 'temperature': 0.7, 'n_ctx': 1024},
-        'mafioso': {'type': 'local', 'model_path': 'models/mistral.gguf', 'temperature': 0.7, 'n_ctx': 1024},
-        'villager': {'type': 'local', 'model_path': 'models/mistral.gguf', 'temperature': 0.7, 'n_ctx': 1024}
+        'detective': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
+        'mafioso': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
+        'villager': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048}
     }
 
 def save_game_data(game, game_num, batch_id, batch_dir, prompt_config, model_configs=None):
@@ -191,12 +191,12 @@ def main():
     parser.add_argument('n_games', type=int, help='Number of games to run')
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
-    parser.add_argument('--prompt-version', default='v0.0', help='Prompt version to use (default: v0.0)')
+    parser.add_argument('--prompt-version', default='v2.0', help='Prompt version to use (default: v0.0)')
     
     args = parser.parse_args()
     
     # Create prompt config
-    prompt_config = PromptConfig(version=args.prompt_version)
+    prompt_config = PromptConfig(version='v2.0')
     
     print("Mini-Mafia Batch Runner")
     print("="*40)
@@ -213,7 +213,7 @@ def main():
             print(f"\nConfiguration:")
             print(f"  Games: {n_games}")
             print(f"  Debug prompts: {debug}")
-            print(f"  Model: Local Mistral (models/mistral.gguf)")
+            print(f"  Model: Local GPT-OSS-20B (models/openai_gpt-oss-20b-Q4_K_M.gguf)")
             
             confirm = input("\nProceed? (y/n): ").strip().lower()
             if confirm != 'y':
@@ -237,7 +237,7 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: Local Mistral (models/mistral.gguf)")
+    print(f"  Model: Local GPT-OSS-20B (models/openai_gpt-oss-20b-Q4_K_M.gguf)")
     
     try:
         # Run the batch

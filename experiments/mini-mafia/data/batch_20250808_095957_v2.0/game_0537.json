@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0537",
+  "game_number": 537,
+  "timestamp": "2025-08-08T14:39:35.326844",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "Day 1 begins.",
+        "You: \"Alice is dead, let's discuss roles and suspects. Who did you investigate, Diana?\"",
+        "Diana: \"I'm the mafioso who killed Alice. Let's work together to find and eliminate the other mafia.\"",
+        "Charlie: \"I'm the detective and investigated Diana. She's the mafioso.\"",
+        "Diana: \"Working together, we can solve this. Charlie, help us find the last mafia!\"",
+        "You: \"Thanks for the info, Diana. Charlie, can you investigate Alice's last interaction?\"",
+        "Charlie: \"I'll investigate Bob next. Let's vote on Diana to start.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "Bob: \"Alice is dead, let's discuss roles and suspects. Who did you investigate, Diana?\"",
+        "Diana: \"I'm the mafioso who killed Alice. Let's work together to find and eliminate the other mafia.\"",
+        "You: \"I'm the detective and investigated Diana. She's the mafioso.\"",
+        "Diana: \"Working together, we can solve this. Charlie, help us find the last mafia!\"",
+        "Bob: \"Thanks for the info, Diana. Charlie, can you investigate Alice's last interaction?\"",
+        "You: \"I'll investigate Bob next. Let's vote on Diana to start.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Alice is dead, let's discuss roles and suspects. Who did you investigate, Diana?\"",
+        "You: \"I'm the mafioso who killed Alice. Let's work together to find and eliminate the other mafia.\"",
+        "Charlie: \"I'm the detective and investigated Diana. She's the mafioso.\"",
+        "You: \"Working together, we can solve this. Charlie, help us find the last mafia!\"",
+        "Bob: \"Thanks for the info, Diana. Charlie, can you investigate Alice's last interaction?\"",
+        "Charlie: \"I'll investigate Bob next. Let's vote on Diana to start.\""
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0732",
+  "game_number": 732,
+  "timestamp": "2025-08-08T16:07:31.786440",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Bob was investigated and is the mafioso. Suspect his alibis carefully.\"",
+        "Bob: \"I'm innocent, discuss alibis. Trust me.\"",
+        "Charlie: \"Considering Diana's death, let's double-check alibis of Bob and investigate Alice.\"",
+        "You: \"Double-check Bob's alibis, he knew I'm the detective.\"",
+        "Bob: \"I was with Charlie last night, ask him. We trust each other.\"",
+        "Charlie: \"Double-check alibis for Bob and Alice. Trust no one until we know more.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"Bob was investigated and is the mafioso. Suspect his alibis carefully.\"",
+        "You: \"I'm innocent, discuss alibis. Trust me.\"",
+        "Charlie: \"Considering Diana's death, let's double-check alibis of Bob and investigate Alice.\"",
+        "Alice: \"Double-check Bob's alibis, he knew I'm the detective.\"",
+        "You: \"I was with Charlie last night, ask him. We trust each other.\"",
+        "Charlie: \"Double-check alibis for Bob and Alice. Trust no one until we know more.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Bob was investigated and is the mafioso. Suspect his alibis carefully.\"",
+        "Bob: \"I'm innocent, discuss alibis. Trust me.\"",
+        "You: \"Considering Diana's death, let's double-check alibis of Bob and investigate Alice.\"",
+        "Alice: \"Double-check Bob's alibis, he knew I'm the detective.\"",
+        "Bob: \"I was with Charlie last night, ask him. We trust each other.\"",
+        "You: \"Double-check alibis for Bob and Alice. Trust no one until we know more.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

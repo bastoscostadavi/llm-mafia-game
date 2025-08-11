@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250810_221222_v2.0_game_0001",
+  "game_number": 1,
+  "timestamp": "2025-08-10T22:16:10.577769",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "Charlie: \"Diana was killed, so we need to find the mafia. I trust Bob and Alice. If anyone has a strong hunch about who the mafia might be, please share it now.\"",
+        "Bob: \"Alice's quick trust in Bob feels odd; maybe she's lying. I think Charlie's silence might hint at mafia.\"",
+        "You: \"I investigated Bob and found he's the mafia. Bob knows I'm the detective, so he knows I'm targeting him. Charlie, please consider that.\"",
+        "Bob: \"Alice, I suspect Charlie might be hiding something; maybe he knows more than he says.\"",
+        "You: \"Bob is mafia. He knows I'm detective, so he can't trust me. His attempt to blame Charlie is a red hunch. Vote Bob.\"",
+        "Charlie: \"I trust Alice's claim that she investigated Bob and found him mafia. Bob's accusations are false. So we should vote Bob.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: \"Diana was killed, so we need to find the mafia. I trust Bob and Alice. If anyone has a strong hunch about who the mafia might be, please share it now.\"",
+        "You: \"Alice's quick trust in Bob feels odd; maybe she's lying. I think Charlie's silence might hint at mafia.\"",
+        "Alice: \"I investigated Bob and found he's the mafia. Bob knows I'm the detective, so he knows I'm targeting him. Charlie, please consider that.\"",
+        "You: \"Alice, I suspect Charlie might be hiding something; maybe he knows more than he says.\"",
+        "Alice: \"Bob is mafia. He knows I'm detective, so he can't trust me. His attempt to blame Charlie is a red hunch. Vote Bob.\"",
+        "Charlie: \"I trust Alice's claim that she investigated Bob and found him mafia. Bob's accusations are false. So we should vote Bob.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"Diana was killed, so we need to find the mafia. I trust Bob and Alice. If anyone has a strong hunch about who the mafia might be, please share it now.\"",
+        "Bob: \"Alice's quick trust in Bob feels odd; maybe she's lying. I think Charlie's silence might hint at mafia.\"",
+        "Alice: \"I investigated Bob and found he's the mafia. Bob knows I'm the detective, so he knows I'm targeting him. Charlie, please consider that.\"",
+        "Bob: \"Alice, I suspect Charlie might be hiding something; maybe he knows more than he says.\"",
+        "Alice: \"Bob is mafia. He knows I'm detective, so he can't trust me. His attempt to blame Charlie is a red hunch. Vote Bob.\"",
+        "You: \"I trust Alice's claim that she investigated Bob and found him mafia. Bob's accusations are false. So we should vote Bob.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

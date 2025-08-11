@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_200359_v2.0_game_0008",
+  "game_number": 8,
+  "timestamp": "2025-08-08T20:23:23.143839",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "Charlie: \"Who was present when Diana was killed? We need to figure out who might have been the killer.\"",
+        "Bob: \"I was in the kitchen, alone. I didn't see anyone else.\"",
+        "You: \"Bob, you claim you were alone, but I know you\u2019re the mafia. I\u2019ll vote for you. Let\u2019s see if anyone else has evidence.\"",
+        "Bob: \"Alice, you say you found me, yet you haven\u2019t investigated anyone. That\u2019s odd. Charlie, let\u2019s vote for Alice, not Bob.\"",
+        "You: \"I investigated Bob and confirmed he's mafia. He killed Diana. He claims he was alone, but we suspect otherwise. Let's vote Bob.\"",
+        "Charlie: \"Alice claims to have investigated Bob, yet Bob says she hasn't. That contradiction points to Bob being mafia. Let's vote Bob.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: \"Who was present when Diana was killed? We need to figure out who might have been the killer.\"",
+        "You: \"I was in the kitchen, alone. I didn't see anyone else.\"",
+        "Alice: \"Bob, you claim you were alone, but I know you\u2019re the mafia. I\u2019ll vote for you. Let\u2019s see if anyone else has evidence.\"",
+        "You: \"Alice, you say you found me, yet you haven\u2019t investigated anyone. That\u2019s odd. Charlie, let\u2019s vote for Alice, not Bob.\"",
+        "Alice: \"I investigated Bob and confirmed he's mafia. He killed Diana. He claims he was alone, but we suspect otherwise. Let's vote Bob.\"",
+        "Charlie: \"Alice claims to have investigated Bob, yet Bob says she hasn't. That contradiction points to Bob being mafia. Let's vote Bob.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"Who was present when Diana was killed? We need to figure out who might have been the killer.\"",
+        "Bob: \"I was in the kitchen, alone. I didn't see anyone else.\"",
+        "Alice: \"Bob, you claim you were alone, but I know you\u2019re the mafia. I\u2019ll vote for you. Let\u2019s see if anyone else has evidence.\"",
+        "Bob: \"Alice, you say you found me, yet you haven\u2019t investigated anyone. That\u2019s odd. Charlie, let\u2019s vote for Alice, not Bob.\"",
+        "Alice: \"I investigated Bob and confirmed he's mafia. He killed Diana. He claims he was alone, but we suspect otherwise. Let's vote Bob.\"",
+        "You: \"Alice claims to have investigated Bob, yet Bob says she hasn't. That contradiction points to Bob being mafia. Let's vote Bob.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0513",
+  "game_number": 513,
+  "timestamp": "2025-08-08T14:28:45.667798",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "Day 1 begins.",
+        "You: \"Bob was found dead. Any suspects? Thoughts?\"",
+        "Diana: \"I'm the mafioso who killed Bob. Alice, watch Charlie.\"",
+        "Charlie: \"I'm Charlie, the detective. Diana admitted to killing Bob.\"",
+        "Charlie: \"Diana confessed. Watch her closely, Alice.\"",
+        "Diana: \"I'm clean, Alice. Watch Charlie. He's the detective.\"",
+        "You: \"Listening to Diana, but keeping an eye on Charlie. Thoughts?\"",
+        "Votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "Alice: \"Bob was found dead. Any suspects? Thoughts?\"",
+        "Diana: \"I'm the mafioso who killed Bob. Alice, watch Charlie.\"",
+        "You: \"I'm Charlie, the detective. Diana admitted to killing Bob.\"",
+        "You: \"Diana confessed. Watch her closely, Alice.\"",
+        "Diana: \"I'm clean, Alice. Watch Charlie. He's the detective.\"",
+        "Alice: \"Listening to Diana, but keeping an eye on Charlie. Thoughts?\"",
+        "Votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Bob.",
+        "The villager Bob was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"Bob was found dead. Any suspects? Thoughts?\"",
+        "You: \"I'm the mafioso who killed Bob. Alice, watch Charlie.\"",
+        "Charlie: \"I'm Charlie, the detective. Diana admitted to killing Bob.\"",
+        "Charlie: \"Diana confessed. Watch her closely, Alice.\"",
+        "You: \"I'm clean, Alice. Watch Charlie. He's the detective.\"",
+        "Alice: \"Listening to Diana, but keeping an eye on Charlie. Thoughts?\""
+      ]
+    }
+  ]
+}

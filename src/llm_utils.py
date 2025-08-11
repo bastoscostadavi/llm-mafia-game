@@ -1,5 +1,6 @@
 # src/llm_utils.py - LLM Interface Utilities
 import os
+import re
 
 try:
     import openai
@@ -22,7 +23,7 @@ except ImportError:
 # Simple model cache to avoid conflicts
 _model_cache = {}
 
-class SimpleOpenAI:
+class OpenAI:
     """OpenAI API wrapper"""
     def __init__(self, client, model, temperature=0.7):
         self.client = client
@@ -38,7 +39,7 @@ class SimpleOpenAI:
         )
         return response.choices[0].message.content.strip()
 
-class SimpleAnthropic:
+class Anthropic:
     """Anthropic API wrapper"""
     def __init__(self, client, model, temperature=0.7):
         self.client = client
@@ -54,16 +55,23 @@ class SimpleAnthropic:
         )
         return response.content[0].text.strip()
 
-class SimpleLocal:
+class Local:
     """Local llama-cpp model wrapper"""
     def __init__(self, model, temperature=0.3):
         self.model = model
         self.model_path = getattr(model, 'model_path', 'unknown')
         self.temperature = temperature
+        self.is_gpt_oss = 'gpt-oss' in self.model_path.lower()
     
     def generate(self, prompt, max_tokens=50):
         """Generate response handling llama-cpp generator properly"""
-        # Try the completion method instead of __call__
+        
+        # Special handling for GPT-OSS reasoning models
+        if self.is_gpt_oss:
+            # Let GPT-OSS think with very high token limit
+            return self._generate_gpt_oss(prompt, max_tokens=4000)
+        
+        # Standard handling for other models
         try:
             result = self.model.create_completion(
                 prompt,
@@ -99,6 +107,57 @@ class SimpleLocal:
                 full_text += token_data
         
         return full_text.strip()
+    
+    def _generate_gpt_oss(self, prompt, max_tokens=50):
+        """Simple GPT-OSS handling - extract final channel if present, otherwise return full response"""
+        messages = [{"role": "user", "content": prompt}]
+        
+        try:
+            result = self.model.create_chat_completion(
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=self.temperature,
+                stream=False
+            )
+            
+            if 'choices' in result and len(result['choices']) > 0:
+                response = result['choices'][0]['message']['content'].strip()
+                
+                # Simple: if there's a final channel, use that
+                if 'final<|message|>' in response:
+                    return response.split('final<|message|>')[-1]
+                
+                # Otherwise return full response
+                return response
+                    
+        except Exception as e:
+            print(f"GPT-OSS generation failed: {e}")
+        
+        return "I understand the situation."
+
+class Human:
+    """Human input interface - displays prompts and captures user responses"""
+    def __init__(self, player_name):
+        self.player_name = player_name
+    
+    def generate(self, prompt, max_tokens=50):
+        """Display prompt to human and capture their response"""
+        print(f"\n{'='*60}")
+        print(f"PROMPT FOR {self.player_name.upper()}:")
+        print(f"{'='*60}")
+        print(prompt)
+        print(f"{'='*60}")
+        
+        try:
+            response = input(f"\n{self.player_name}, your response: ").strip()
+            if not response:
+                return "No response"
+            return response
+        except KeyboardInterrupt:
+            print(f"\n{self.player_name} left the game.")
+            return "No response"
+        except EOFError:
+            return "No response"
 
 def create_llm(llm_config):
     """Simple LLM creator - supports local, openai, anthropic"""
@@ -119,7 +178,7 @@ def create_llm(llm_config):
             print("Model loaded!")
             _model_cache[model_path] = model
         temperature = llm_config.get('temperature', 0.3)
-        return SimpleLocal(_model_cache[model_path], temperature)
+        return Local(_model_cache[model_path], temperature)
     
     elif llm_type == 'openai':
         if openai is None:
@@ -129,7 +188,7 @@ def create_llm(llm_config):
         client = openai.OpenAI(api_key=llm_config.get('api_key') or os.getenv('OPENAI_API_KEY'))
         model = llm_config.get('model', 'gpt-3.5-turbo')
         temperature = llm_config.get('temperature', 0.7)
-        return SimpleOpenAI(client, model, temperature)
+        return OpenAI(client, model, temperature)
     
     elif llm_type == 'anthropic':
         if anthropic is None:
@@ -139,7 +198,11 @@ def create_llm(llm_config):
         client = anthropic.Anthropic(api_key=llm_config.get('api_key') or os.getenv('ANTHROPIC_API_KEY'))
         model = llm_config.get('model', 'claude-3-haiku-20240307')
         temperature = llm_config.get('temperature', 0.7)
-        return SimpleAnthropic(client, model, temperature)
+        return Anthropic(client, model, temperature)
+    
+    elif llm_type == 'human':
+        player_name = llm_config.get('player_name', 'Human Player')
+        return Human(player_name)
     
     else:
         # Default to local

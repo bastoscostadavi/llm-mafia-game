@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0789",
+  "game_number": 789,
+  "timestamp": "2025-08-08T18:08:16.362901",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "Day 1 begins.",
+        "Bob: \"I'm the detective. Diana is mafia. Be cautious.\"",
+        "You: \"Thanks Bob, investigating Diana made sense. Any tips on who else to check?\"",
+        "Diana: \"Considering Bob's info, Alice & Charlie are safe. Focus on Bob.\"",
+        "Bob: \"Alice, keep an eye on Bob. He might have info we need.\"",
+        "Diana: \"Alice, watch Bob closely. He might know more than he's letting on.\"",
+        "You: \"Thanks for the tips, Bob & Diana. Checking on Charlie tonight.\"",
+        "Votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"I'm the detective. Diana is mafia. Be cautious.\"",
+        "Alice: \"Thanks Bob, investigating Diana made sense. Any tips on who else to check?\"",
+        "Diana: \"Considering Bob's info, Alice & Charlie are safe. Focus on Bob.\"",
+        "You: \"Alice, keep an eye on Bob. He might have info we need.\"",
+        "Diana: \"Alice, watch Bob closely. He might know more than he's letting on.\"",
+        "Alice: \"Thanks for the tips, Bob & Diana. Checking on Charlie tonight.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"I'm the detective. Diana is mafia. Be cautious.\"",
+        "Alice: \"Thanks Bob, investigating Diana made sense. Any tips on who else to check?\"",
+        "You: \"Considering Bob's info, Alice & Charlie are safe. Focus on Bob.\"",
+        "Bob: \"Alice, keep an eye on Bob. He might have info we need.\"",
+        "You: \"Alice, watch Bob closely. He might know more than he's letting on.\"",
+        "Alice: \"Thanks for the tips, Bob & Diana. Checking on Charlie tonight.\"",
+        "Votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

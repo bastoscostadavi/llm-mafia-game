@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_200359_v2.0_game_0036",
+  "game_number": 36,
+  "timestamp": "2025-08-08T21:21:18.291283",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "Charlie: \"I think Alice is the mafia. She was quiet before Bob died, and no one else stood out. Let's vote Alice.\"",
+        "You: \"I investigated Diana, she's mafia. Vote her.\"",
+        "Diana: \"I think Charlie is the real threat, Alice's accusation is suspicious. Maybe you\u2019re the one who killed Bob.\"",
+        "Charlie: \"I think Alice is the mafia. Her claim about Diana is likely a lie, so vote Alice.\"",
+        "You: \"Charlie, Bob was killed, only Mafia can kill. I investigated Diana and confirmed she's Mafia. She knows I'm detective, so she's lying. Vote Diana.\"",
+        "Diana: \" followed by double quotes. The message should be at most 200 characters. We'll produce something like:\n\nMESSAGE: \""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "Day 1 begins.",
+        "You: \"I think Alice is the mafia. She was quiet before Bob died, and no one else stood out. Let's vote Alice.\"",
+        "Alice: \"I investigated Diana, she's mafia. Vote her.\"",
+        "Diana: \"I think Charlie is the real threat, Alice's accusation is suspicious. Maybe you\u2019re the one who killed Bob.\"",
+        "You: \"I think Alice is the mafia. Her claim about Diana is likely a lie, so vote Alice.\"",
+        "Alice: \"Charlie, Bob was killed, only Mafia can kill. I investigated Diana and confirmed she's Mafia. She knows I'm detective, so she's lying. Vote Diana.\"",
+        "Diana: \" followed by double quotes. The message should be at most 200 characters. We'll produce something like:\n\nMESSAGE: \"",
+        "Votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Bob.",
+        "The villager Bob was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: \"I think Alice is the mafia. She was quiet before Bob died, and no one else stood out. Let's vote Alice.\"",
+        "Alice: \"I investigated Diana, she's mafia. Vote her.\"",
+        "You: \"I think Charlie is the real threat, Alice's accusation is suspicious. Maybe you\u2019re the one who killed Bob.\"",
+        "Charlie: \"I think Alice is the mafia. Her claim about Diana is likely a lie, so vote Alice.\"",
+        "Alice: \"Charlie, Bob was killed, only Mafia can kill. I investigated Diana and confirmed she's Mafia. She knows I'm detective, so she's lying. Vote Diana.\"",
+        "You: \" followed by double quotes. The message should be at most 200 characters. We'll produce something like:\n\nMESSAGE: \"",
+        "Votes: Alice voted for Diana, Charlie voted for Alice, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

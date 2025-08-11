@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0456",
+  "game_number": 456,
+  "timestamp": "2025-08-08T13:58:08.669730",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Charlie was investigated. Everyone, be cautious.\"",
+        "Charlie: \"I'm cautious, let's cooperate. Who else seems suspicious?\"",
+        "Bob: \"Considering Diana's death, let's investigate Bob next. Caution to all.\"",
+        "Bob: \"Considering Diana's death, let's investigate Charlie next. Be cautious!\"",
+        "You: \"I'm Alice, detective. Charlie is mafia; vote cautiously.\"",
+        "Charlie: \"I'm cautious, but Alice's investigation points to me. Suggest voting Bob next.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Charlie was investigated. Everyone, be cautious.\"",
+        "Charlie: \"I'm cautious, let's cooperate. Who else seems suspicious?\"",
+        "You: \"Considering Diana's death, let's investigate Bob next. Caution to all.\"",
+        "You: \"Considering Diana's death, let's investigate Charlie next. Be cautious!\"",
+        "Alice: \"I'm Alice, detective. Charlie is mafia; vote cautiously.\"",
+        "Charlie: \"I'm cautious, but Alice's investigation points to me. Suggest voting Bob next.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"Charlie was investigated. Everyone, be cautious.\"",
+        "You: \"I'm cautious, let's cooperate. Who else seems suspicious?\"",
+        "Bob: \"Considering Diana's death, let's investigate Bob next. Caution to all.\"",
+        "Bob: \"Considering Diana's death, let's investigate Charlie next. Be cautious!\"",
+        "Alice: \"I'm Alice, detective. Charlie is mafia; vote cautiously.\"",
+        "You: \"I'm cautious, but Alice's investigation points to me. Suggest voting Bob next.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

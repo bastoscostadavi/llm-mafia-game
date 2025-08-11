@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0609",
+  "game_number": 609,
+  "timestamp": "2025-08-08T15:11:51.761589",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "Day 1 begins.",
+        "Diana: \"Charlie knows I'm the detective. Discuss alibis for Alice's death.\"",
+        "Charlie: \"Looking for alibis, Charlie was in the lounge with me.\"",
+        "You: \"Charlie, thanks for the alibi. Let's rule out mafia involvement.\"",
+        "You: \"Charlie & I were together in the lounge. No mafia involvement here.\"",
+        "Charlie: \"Let's focus on Bob and Diana. Any alibi for them?\"",
+        "Diana: \"Checking on Bob, no alibi needed as I was with Charlie.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Diana: \"Charlie knows I'm the detective. Discuss alibis for Alice's death.\"",
+        "You: \"Looking for alibis, Charlie was in the lounge with me.\"",
+        "Bob: \"Charlie, thanks for the alibi. Let's rule out mafia involvement.\"",
+        "Bob: \"Charlie & I were together in the lounge. No mafia involvement here.\"",
+        "You: \"Let's focus on Bob and Diana. Any alibi for them?\"",
+        "Diana: \"Checking on Bob, no alibi needed as I was with Charlie.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Charlie knows I'm the detective. Discuss alibis for Alice's death.\"",
+        "Charlie: \"Looking for alibis, Charlie was in the lounge with me.\"",
+        "Bob: \"Charlie, thanks for the alibi. Let's rule out mafia involvement.\"",
+        "Bob: \"Charlie & I were together in the lounge. No mafia involvement here.\"",
+        "Charlie: \"Let's focus on Bob and Diana. Any alibi for them?\"",
+        "You: \"Checking on Bob, no alibi needed as I was with Charlie.\""
+      ]
+    }
+  ]
+}

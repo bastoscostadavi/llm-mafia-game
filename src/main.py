@@ -170,7 +170,7 @@ class Game:
             for agent in agents_order:
                 # Agent sends a public message
                 all_player_names = [a.name for a in self.state.agents]
-                message = agent.get_discussion_message(active_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
+                message = agent.message(active_names, round_num, all_player_names, self.state.discussion_rounds, self.state)
                 print(f'{agent.name}: {message}')
                 
                 for a in active_players:
@@ -220,14 +220,12 @@ class Game:
         print(f"\n{arrested} has been arrested!")
         
         # Create vote summary for memory (show all votes to everyone)
-        vote_summary = f"Votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
-        
-        # Create arrest announcement for memory (without role)
+        votes_announcement = f"Votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
         arrest_announcement = f"{arrested} was arrested"
         
         # Everyone remembers both the votes and the arrest
         for agent in self.state.get_active_players():
-            agent.remember(vote_summary)
+            agent.remember(votes_announcement)
             agent.remember(arrest_announcement)
     
     def check_game_over(self):
@@ -237,10 +235,10 @@ class Game:
         good = sum(1 for a in active if a.role not in ["mafioso"])
         
         if mafiosos == 0:
-            return "TOWN WINS! All mafiosos arrested!"
+            return "TOWN WINS! All mafiosos eliminated!"
         elif good == 0:
             return "MAFIA WINS! All non-mafiosos eliminated!"
-        
+
         return None
     
     def show_roles(self):

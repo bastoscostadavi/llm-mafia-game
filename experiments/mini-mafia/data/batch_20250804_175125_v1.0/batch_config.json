@@ -1,5 +1,5 @@
 {
-  "batch_id": "batch_20250804_175125",
+  "batch_id": "batch_20250804_175125_v1.0",
   "timestamp": "2025-08-05T04:04:50.003364",
   "game_type": "mini_mafia",
   "prompt_config": {
@@ -15,15 +15,18 @@
   "model_configs": {
     "detective": {
       "type": "local",
-      "model_path": "models/mistral.gguf"
+      "model_path": "models/mistral.gguf",
+      "temperature": 0.7
     },
     "mafioso": {
       "type": "local",
-      "model_path": "models/mistral.gguf"
+      "model_path": "models/mistral.gguf",
+      "temperature": 0.7
     },
     "villager": {
       "type": "local",
-      "model_path": "models/mistral.gguf"
+      "model_path": "models/mistral.gguf",
+      "temperature": 0.7
     }
   }
 }

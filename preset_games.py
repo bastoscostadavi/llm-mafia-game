@@ -18,8 +18,10 @@ def get_model_options():
         '1': ('Local Mistral', {'type': 'local', 'model_path': 'models/mistral.gguf'}),
         '2': ('Local Llama 3.1 8B', {'type': 'local', 'model_path': 'models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'}),
         '3': ('Local Qwen2.5 7B', {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}),
-        '4': ('OpenAI GPT-3.5 (cheapest)', {'type': 'openai', 'model': 'gpt-3.5-turbo'}),
-        '5': ('Claude Haiku (cheapest)', {'type': 'anthropic', 'model': 'claude-3-haiku-20240307'})
+        '4': ('Local GPT-OSS-20B', {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048}),
+        '5': ('OpenAI GPT-3.5 (cheapest)', {'type': 'openai', 'model': 'gpt-3.5-turbo'}),
+        '6': ('Claude Haiku (cheapest)', {'type': 'anthropic', 'model': 'claude-3-haiku-20240307'}),
+        '7': ('Human Player', {'type': 'human'})
     }
 
 def select_model_for_role(role):
@@ -31,10 +33,14 @@ def select_model_for_role(role):
         print(f"  {key}. {name}")
     
     while True:
-        choice = input(f"Choice for {role} (1-5): ").strip()
+        choice = input(f"Choice for {role} (1-7): ").strip()
         if choice in options:
-            return options[choice][1]
-        print("Invalid choice. Please select 1, 2, 3, 4, or 5.")
+            config = options[choice][1].copy()
+            # Add player name for human players
+            if config.get('type') == 'human':
+                config['player_name'] = role.capitalize()
+            return config
+        print("Invalid choice. Please select 1, 2, 3, 4, 5, 6, or 7.")
 
 def get_model_configs_interactive():
     """Get model configurations through interactive selection"""
@@ -78,15 +84,35 @@ def get_preset_configs():
             'mafioso': {'type': 'local', 'model_path': 'models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'},
             'villager': {'type': 'local', 'model_path': 'models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'}
         }),
-        '4': ('ChatGPT as Mafioso', {
+        '4': ('All Local (GPT-OSS-20B)', {
+            'detective': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
+            'mafioso': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
+            'villager': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048}
+        }),
+        '5': ('ChatGPT as Mafioso', {
             'detective': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'},
             'mafioso': {'type': 'openai', 'model': 'gpt-3.5-turbo'},
             'villager': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}
         }),
-        '5': ('Claude as Mafioso', {
+        '6': ('Claude as Mafioso', {
             'detective': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'},
             'mafioso': {'type': 'anthropic', 'model': 'claude-3-haiku-20240307'},
             'villager': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}
+        }),
+        '7': ('Human vs LLMs (You play Detective)', {
+            'detective': {'type': 'human', 'player_name': 'Detective'},
+            'mafioso': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'},
+            'villager': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}
+        }),
+        '8': ('Human vs LLMs (You play Mafioso)', {
+            'detective': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'},
+            'mafioso': {'type': 'human', 'player_name': 'Mafioso'},
+            'villager': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}
+        }),
+        '9': ('All Humans', {
+            'detective': {'type': 'human', 'player_name': 'Detective'},
+            'mafioso': {'type': 'human', 'player_name': 'Mafioso'},
+            'villager': {'type': 'human', 'player_name': 'Villager'}
         })
     }
 
@@ -221,15 +247,15 @@ def main():
         print("\nSelect model configuration:")
         for key, (name, _) in presets.items():
             print(f"  {key}. {name}")
-        print("  6. Custom (choose models for each role)")
+        print("  10. Custom (choose models for each role)")
         
         while True:
-            preset_choice = input("\nChoice (1-6): ").strip()
-            if preset_choice in ['1', '2', '3', '4', '5', '6']:
+            preset_choice = input("\nChoice (1-9): ").strip()
+            if preset_choice in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']:
                 break
-            print("Invalid choice. Please select 1, 2, 3, 4, 5, or 6.")
+            print("Invalid choice. Please select 1, 2, 3, 4, 5, 6, 7, 8, 9, or 10.")
         
-        if preset_choice == '6':
+        if preset_choice == '10':
             # Custom configuration
             model_configs = get_model_configs_interactive()
         else:

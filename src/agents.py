@@ -32,7 +32,7 @@ class MafiaAgent:
         """Generate response from LLM (all wrappers have generate method)"""
         return self.llm.generate(prompt, max_tokens)
 
-    def get_discussion_message(self, active_players: List[str], round_num: int, all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> Dict:
+    def message(self, active_players: List[str], round_num: int, all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> Dict:
         """Get public discussion message from players"""
         if all_players is None:
             all_players = active_players

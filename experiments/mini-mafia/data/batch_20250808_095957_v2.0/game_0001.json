@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250808_095957_v2.0_game_0001",
+  "game_number": 1,
+  "timestamp": "2025-08-08T10:00:46.794224",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"Diana was found dead, any info on her investigation result?\"",
+        "Charlie: \"Bob knew I killed Diana. Stay vigilant, Alice.\"",
+        "Bob: \"Investigated Charlie last night, found him to be the mafioso. Be cautious, Alice.\"",
+        "Charlie: \"Be cautious, mafioso could be among us. Verify each other.\"",
+        "Bob: \"Verifying roles, keep Diana's death in mind. Charlie and Bob as mafia.\"",
+        "You: \"Bob claimed Charlie is mafia, let's consider his words. Any other insights?\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "Alice: \"Diana was found dead, any info on her investigation result?\"",
+        "Charlie: \"Bob knew I killed Diana. Stay vigilant, Alice.\"",
+        "You: \"Investigated Charlie last night, found him to be the mafioso. Be cautious, Alice.\"",
+        "Charlie: \"Be cautious, mafioso could be among us. Verify each other.\"",
+        "You: \"Verifying roles, keep Diana's death in mind. Charlie and Bob as mafia.\"",
+        "Alice: \"Bob claimed Charlie is mafia, let's consider his words. Any other insights?\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"Diana was found dead, any info on her investigation result?\"",
+        "You: \"Bob knew I killed Diana. Stay vigilant, Alice.\"",
+        "Bob: \"Investigated Charlie last night, found him to be the mafioso. Be cautious, Alice.\"",
+        "You: \"Be cautious, mafioso could be among us. Verify each other.\"",
+        "Bob: \"Verifying roles, keep Diana's death in mind. Charlie and Bob as mafia.\"",
+        "Alice: \"Bob claimed Charlie is mafia, let's consider his words. Any other insights?\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}
