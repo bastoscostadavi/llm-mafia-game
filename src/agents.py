@@ -80,8 +80,12 @@ class MafiaAgent:
         
         return f'"{message}"'
 
-    def vote(self, candidates: List[str], all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> str:
-        """Vote for someone based on memory"""
+    def vote(self, candidates: List[str], all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> tuple[str, bool]:
+        """Vote for someone based on memory
+        
+        Returns:
+            tuple: (vote_target, was_successful_parse)
+        """
         if all_players is None:
             all_players = candidates
             
@@ -119,13 +123,13 @@ class MafiaAgent:
             if vote_pattern.upper() in response.upper():
                 if self.debug_prompts:
                     print(f"[DEBUG] {self.name} voted for {candidate} using pattern '{vote_pattern}'")
-                return candidate
+                return candidate, True
         
         # If no valid "VOTE: name" found, cast random vote
         fallback_vote = random.choice(candidates)
         if self.debug_prompts:
             print(f"[DEBUG] {self.name} failed to parse VOTE: format, random vote: {fallback_vote}")
-        return fallback_vote
+        return fallback_vote, False
     
     def kill(self, candidates: List[str], game_state=None) -> str:
         """Choose target to kill"""

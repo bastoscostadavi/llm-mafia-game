@@ -184,18 +184,20 @@ class Game:
         print(f"\nVOTING:")
         active_players = self.state.get_active_players()
         votes = {}
+        vote_statuses = {}
         
         for agent in active_players:
             candidates = [a.name for a in active_players if a != agent]
             all_player_names = [a.name for a in self.state.agents]
-            vote = agent.vote(candidates, all_player_names, self.state.discussion_rounds, self.state)
+            vote, successful = agent.vote(candidates, all_player_names, self.state.discussion_rounds, self.state)
             votes[agent.name] = vote
+            vote_statuses[agent.name] = successful
             print(f"{agent.name} votes for {vote}")
         
         # Count votes and arrest
-        self.resolve_votes(votes)
+        self.resolve_votes(votes, vote_statuses)
     
-    def resolve_votes(self, votes):
+    def resolve_votes(self, votes, vote_statuses=None):
         """Count votes and arrest the chosen player"""
         if not votes:
             return
@@ -219,8 +221,17 @@ class Game:
         
         print(f"\n{arrested} has been arrested!")
         
-        # Create vote summary for memory (show all votes to everyone)
-        votes_announcement = f"Votes: " + ", ".join([f"{voter} voted for {target}" for voter, target in votes.items()])
+        # Create vote summary for memory with format status info
+        vote_entries = []
+        for voter, target in votes.items():
+            if vote_statuses and not vote_statuses.get(voter, True):
+                # Failed to parse vote format - was randomly assigned
+                vote_entries.append(f"{voter} voted for {target} (the vote was cast randomly because of a failed format)")
+            else:
+                # Successfully parsed vote
+                vote_entries.append(f"{voter} voted for {target}")
+        
+        votes_announcement = f"Votes: " + ", ".join(vote_entries)
         arrest_announcement = f"{arrested} was arrested"
         
         # Everyone remembers both the votes and the arrest

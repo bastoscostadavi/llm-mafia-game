@@ -150,8 +150,8 @@ def classic_game(debug_prompts=False):
     random.shuffle(roles)
     
     players = [
-        {'name': 'Alice', 'role': roles[0], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Bob', 'role': roles[1], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
+        {'name': 'Alice', 'role': roles[0], 'llm': {'type': 'local', 'model_path': 'models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'}},
+        {'name': 'Bob', 'role': roles[1], 'llm': {'type': 'local', 'model_path': 'models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'}},
         {'name': 'Charlie', 'role': roles[2], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
         {'name': 'Diana', 'role': roles[3], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
         {'name': 'Eve', 'role': roles[4], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
