@@ -192,7 +192,10 @@ class Game:
             vote, successful = agent.vote(candidates, all_player_names, self.state.discussion_rounds, self.state)
             votes[agent.name] = vote
             vote_statuses[agent.name] = successful
-            print(f"{agent.name} votes for {vote}")
+            if not successful:
+                print(f"{agent.name}: random vote for {vote} (failed format)")
+            else:
+                print(f"{agent.name} votes for {vote}")
         
         # Count votes and arrest
         self.resolve_votes(votes, vote_statuses)
