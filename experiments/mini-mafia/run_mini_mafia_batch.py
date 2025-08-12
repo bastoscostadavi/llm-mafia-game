@@ -27,13 +27,23 @@ from preset_games import mini_mafia_game
 from src.agents import MafiaAgent
 from src.prompts import PromptConfig
 
-def get_default_model_configs():
-    """Get default model configuration (all GPT-OSS-20B)"""
+def get_default_model_configs(temperature=0.7):
+    """Get default model configuration (all GPT-OSS-20B with configurable temperature)"""
+    # Use absolute path to avoid issues when running from different directories
+    project_root = Path(__file__).parent.parent.parent
+    model_path = project_root / 'models' / 'openai_gpt-oss-20b-Q4_K_M.gguf'
+    
     return {
-        'detective': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
-        'mafioso': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
-        'villager': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048}
+        'detective': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048},
+        'mafioso': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048},
+        'villager': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048}
     }
+
+#{
+#        'detective': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
+#        'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
+#        'villager': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7}
+#    }
 
 def save_game_data(game, game_num, batch_id, batch_dir, prompt_config, model_configs=None):
     """Save minimal game data to JSON file in batch folder"""
@@ -114,14 +124,16 @@ def save_batch_config(prompt_config, model_configs, batch_dir, batch_id):
     
     return config_file
 
-def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=None):
+def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=None, temperature=None):
     """Run N mini-mafia games and save results"""
     
     # Use default model configs if none provided
     if model_configs is None:
-        model_configs = get_default_model_configs()
+        model_configs = get_default_model_configs(temperature=temperature or 0.7)
     
-    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{prompt_config.version}"
+    # Include temperature in batch ID if specified
+    temp_suffix = f"_temp{temperature}" if temperature is not None else ""
+    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{prompt_config.version}{temp_suffix}"
     print(f"Starting batch: {batch_id}")
     print(f"Running {n_games} mini-mafia games with prompt version {prompt_config.version}...")
     
@@ -191,7 +203,8 @@ def main():
     parser.add_argument('n_games', type=int, help='Number of games to run')
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
-    parser.add_argument('--prompt-version', default='v2.0', help='Prompt version to use (default: v0.0)')
+    parser.add_argument('--prompt-version', default='v2.0', help='Prompt version to use (default: v2.0)')
+    parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
     
     args = parser.parse_args()
     
@@ -213,7 +226,7 @@ def main():
             print(f"\nConfiguration:")
             print(f"  Games: {n_games}")
             print(f"  Debug prompts: {debug}")
-            print(f"  Model: Local GPT-OSS-20B (models/openai_gpt-oss-20b-Q4_K_M.gguf)")
+            print(f"  Model: OpenAI GPT-4o")
             
             confirm = input("\nProceed? (y/n): ").strip().lower()
             if confirm != 'y':
@@ -237,11 +250,11 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: Local GPT-OSS-20B (models/openai_gpt-oss-20b-Q4_K_M.gguf)")
+    print(f"  Model: OpenAI GPT-4o")
     
     try:
         # Run the batch
-        batch_id = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config)
+        batch_id = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config, temperature=args.temperature)
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")
