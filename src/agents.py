@@ -68,25 +68,13 @@ class MafiaAgent:
             print(f"{'='*60}")
             
 
-        # Parse the message based on prompt version
-        if self.prompt_config.version == "v4.0":
-            # v4.0 format: "message" \n reasoning...
-            match = re.search(r'^\s*"([^"]+)"', response)
-            if not match:
-                # Debug: always show what the model actually returned when parsing fails
-                print(f"[DEBUG] {self.name} failed to parse v4.0 format. Raw response:")
-                print(f"[DEBUG] {repr(response)}")
-                return "remained silent."
-            message = match.group(1)
-        else:
-            # v3.0 and earlier format: MESSAGE: "message"
-            match = re.search(r'MESSAGE:\s*("((?:\\.|[^"\\])*)")', response)
-            if not match:
-                # Debug: always show what the model actually returned when parsing fails
-                print(f"[DEBUG] {self.name} failed to parse MESSAGE format. Raw response:")
-                print(f"[DEBUG] {repr(response)}")
-                return "remained silent."
-            message = match.group(2)
+        # Parse the message using centralized parsing
+        message = self.prompt_config.parse_discussion_response(response)
+        if not message:
+            # Debug: always show what the model actually returned when parsing fails
+            print(f"[DEBUG] {self.name} failed to parse discussion format. Raw response:")
+            print(f"[DEBUG] {repr(response)}")
+            return "remained silent."
         
         return f'"{message}"'
 
