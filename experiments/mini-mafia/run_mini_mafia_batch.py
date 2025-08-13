@@ -29,10 +29,11 @@ from src.prompts import PromptConfig
 
 def get_default_model_configs(temperature=0.7):
     """Get default model configuration (specify the exact model name you want)"""
+    # GPT-5 only supports default temperature (1.0), so we don't include temperature parameter
     return {
-        'detective': {'type': 'openai', 'model': 'gpt-5', 'temperature': temperature},
-        'mafioso': {'type': 'openai', 'model': 'gpt-5', 'temperature': temperature},
-        'villager': {'type': 'openai', 'model': 'gpt-5', 'temperature': temperature}
+        'detective': {'type': 'openai', 'model': 'gpt-5'},
+        'mafioso': {'type': 'openai', 'model': 'gpt-5'},
+        'villager': {'type': 'openai', 'model': 'gpt-5'}
     }
 
 #{
