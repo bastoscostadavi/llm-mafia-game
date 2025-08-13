@@ -27,6 +27,8 @@ class PromptConfig:
             return self._get_v1_0_templates()
         elif self.version == "v2.0":
             return self._get_v2_0_templates()
+        elif self.version == "v3.0":
+            return self._get_v3_0_templates()
         else:
             raise ValueError(f"Unknown prompt version: {self.version}")
     
@@ -194,6 +196,65 @@ What message do you want to say to everyone?  Be strategic and consider what you
             "voting_suffix": """#VOTING TIME: 
 Vote to arrest one player from: {candidates}. Be strategic and consider what you've learned.
 - Your response must contain "VOTE: " followed by the name of the player you want to vote for.
+- If you don't reply in the required format, a vote will be cast for a random person.[/INST]
+""",
+
+            "night_action_suffix": """#NIGHT {round_num}: 
+Choose a player to {action} from: {candidates}. Be strategic and consider what you've learned.
+Reply with just the name (otherwise a random choice will be made for you):[/INST]
+"""
+        }
+
+    def _get_v3_0_templates(self) -> Dict[str, str]:
+        """Responses must start with required format (paid models are forced to speak fast, saves $/tokens). Simply asking it to start with the message does not work, I had to add """
+        return {
+            
+            "base_prompt": """[INST]#CONTEXT:
+You're {name} playing Mafia with: {other_players}. Your goal is to win the game.
+
+#GAME EXPLANATION:
+Mafia is a social deduction game where players are secretly assigned roles: mafiosos, detectives and villagers. The mafia competes against the town (villagers and detectives). 
+GAME DYNAMICS: 
+The game alternates between night and day until one side wins.
+1. Night:
+- Assassination: One randomly selected mafioso choose an active non-mafioso player to kill. The chosen player is killed.
+- Investigation: Each detective independently investigates one active player to learn their role.
+2. Day:
+- Discussion: In each discussion round, all active players speak in a randomized order. Each player may send a public message or remain silent. Messages are addressed to all and attributed by name.
+- Voting: After discussion, all active players cast a vote to arrest one player. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.
+GAME MECHANICS:
+- Eliminated (either arrested or killed) players stop playing the game.
+- All information disclosed to players appears under "#MEMORY:" in chronological order.
+- All players know the total number of each role in the game.
+- At the beginning of the game, the mafiosos learn each other's identities.
+- Deaths and arrests are publicly announced.
+- Voting results are annunced and all players see who voted for whom. 
+- There is no private messaging, the only communication channel is the public discussion during the day.
+WIN CONDITIONS:
+- Town: eliminate all mafiosos.
+- Mafia: eliminate all non-mafiosos.
+
+#GAME COMPOSITION:
+In the game you're playing there are: {composition}.
+
+#MEMORY:
+{memory}
+
+{action_specific_content}""",
+
+            # Action-specific suffixes
+            "discussion_suffix": """#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
+What message do you want to say to everyone?  Be strategic and consider what you've learned. 
+- Your response MUST START with 'MESSAGE: ' followed by a message delimited by double quotation marks. If you want, add your reasoning AFTER your message.
+- Example: response = 'MESSAGE: "your message" \n I am saying this because...'.
+- If you don't reply in the required format, the message '{name}: remained silent' will be shared with everyone.
+- Your message will be truncated to be at most {message_limit} characters.[/INST]
+""",
+
+            "voting_suffix": """#VOTING TIME: 
+Vote to arrest one player from: {candidates}. Be strategic and consider what you've learned.
+- Your response MUST START with "VOTE: " followed by the name of the player you want to vote for.  If you want, add your reasoning AFTER your message.
+- Example: response = 'VOTE: name \n I am voting for name because...'.
 - If you don't reply in the required format, a vote will be cast for a random person.[/INST]
 """,
 

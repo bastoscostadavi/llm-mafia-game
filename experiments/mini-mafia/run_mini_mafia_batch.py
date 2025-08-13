@@ -28,15 +28,11 @@ from src.agents import MafiaAgent
 from src.prompts import PromptConfig
 
 def get_default_model_configs(temperature=0.7):
-    """Get default model configuration (all GPT-OSS-20B with configurable temperature)"""
-    # Use absolute path to avoid issues when running from different directories
-    project_root = Path(__file__).parent.parent.parent
-    model_path = project_root / 'models' / 'openai_gpt-oss-20b-Q4_K_M.gguf'
-    
+    """Get default model configuration (all Claude Sonnet 4 with configurable temperature)"""
     return {
-        'detective': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048},
-        'mafioso': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048},
-        'villager': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048}
+        'detective': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': temperature},
+        'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': temperature},
+        'villager': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': temperature}
     }
 
 #{
@@ -202,6 +198,7 @@ def main():
     parser = argparse.ArgumentParser(description='Run N mini-mafia games and save results')
     parser.add_argument('n_games', type=int, help='Number of games to run')
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
+    parser.add_argument('--debug-responses', action='store_true', help='Show raw model responses when parsing fails')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
     parser.add_argument('--prompt-version', default='v2.0', help='Prompt version to use (default: v2.0)')
     parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
@@ -209,7 +206,7 @@ def main():
     args = parser.parse_args()
     
     # Create prompt config
-    prompt_config = PromptConfig(version='v2.0')
+    prompt_config = PromptConfig(version='v3.0')
     
     print("Mini-Mafia Batch Runner")
     print("="*40)
@@ -226,7 +223,7 @@ def main():
             print(f"\nConfiguration:")
             print(f"  Games: {n_games}")
             print(f"  Debug prompts: {debug}")
-            print(f"  Model: OpenAI GPT-4o")
+            print(f"  Model: Claude Sonnet 4")
             
             confirm = input("\nProceed? (y/n): ").strip().lower()
             if confirm != 'y':
@@ -250,7 +247,7 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: OpenAI GPT-4o")
+    print(f"  Model: Claude Sonnet 4")
     
     try:
         # Run the batch

@@ -58,7 +58,7 @@ class MafiaAgent:
             print(discussion_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(discussion_prompt, max_tokens=100)
+        response = self._generate(discussion_prompt, max_tokens=int(MESSAGE_LIMIT/4+14))
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -71,12 +71,15 @@ class MafiaAgent:
         #parse the message    
         match = re.search(r'MESSAGE:\s*("((?:\\.|[^"\\])*)")', response)
         if not match:
+            # Debug: always show what the model actually returned when parsing fails
+            print(f"[DEBUG] {self.name} failed to parse MESSAGE format. Raw response:")
+            print(f"[DEBUG] {repr(response)}")
             return "remained silent."
         
         message = match.group(2)
         
-        if len(message) > MESSAGE_LIMIT:
-            message = message[:MESSAGE_LIMIT]
+        #if len(message) > MESSAGE_LIMIT:
+        #    message = message[:MESSAGE_LIMIT]
         
         return f'"{message}"'
 
@@ -108,7 +111,7 @@ class MafiaAgent:
             print(voting_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(voting_prompt, max_tokens=100)
+        response = self._generate(voting_prompt, max_tokens=15)
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
