@@ -58,7 +58,7 @@ class MafiaAgent:
             print(discussion_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(discussion_prompt, max_tokens=int(MESSAGE_LIMIT/4+14))
+        response = self._generate(discussion_prompt, max_tokens=60)  # ~200 chars message + format
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -68,18 +68,25 @@ class MafiaAgent:
             print(f"{'='*60}")
             
 
-        #parse the message    
-        match = re.search(r'MESSAGE:\s*("((?:\\.|[^"\\])*)")', response)
-        if not match:
-            # Debug: always show what the model actually returned when parsing fails
-            print(f"[DEBUG] {self.name} failed to parse MESSAGE format. Raw response:")
-            print(f"[DEBUG] {repr(response)}")
-            return "remained silent."
-        
-        message = match.group(2)
-        
-        #if len(message) > MESSAGE_LIMIT:
-        #    message = message[:MESSAGE_LIMIT]
+        # Parse the message based on prompt version
+        if self.prompt_config.version == "v4.0":
+            # v4.0 format: "message" \n reasoning...
+            match = re.search(r'^\s*"([^"]+)"', response)
+            if not match:
+                # Debug: always show what the model actually returned when parsing fails
+                print(f"[DEBUG] {self.name} failed to parse v4.0 format. Raw response:")
+                print(f"[DEBUG] {repr(response)}")
+                return "remained silent."
+            message = match.group(1)
+        else:
+            # v3.0 and earlier format: MESSAGE: "message"
+            match = re.search(r'MESSAGE:\s*("((?:\\.|[^"\\])*)")', response)
+            if not match:
+                # Debug: always show what the model actually returned when parsing fails
+                print(f"[DEBUG] {self.name} failed to parse MESSAGE format. Raw response:")
+                print(f"[DEBUG] {repr(response)}")
+                return "remained silent."
+            message = match.group(2)
         
         return f'"{message}"'
 
@@ -111,7 +118,7 @@ class MafiaAgent:
             print(voting_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(voting_prompt, max_tokens=15)
+        response = self._generate(voting_prompt, max_tokens=5)  # Just need a name
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -120,18 +127,17 @@ class MafiaAgent:
             print(repr(response))
             print(f"{'='*60}")
         
-        # Extract vote using "VOTE: player_name" format
-        for candidate in candidates:
-            vote_pattern = f"VOTE: {candidate}"
-            if vote_pattern.upper() in response.upper():
-                if self.debug_prompts:
-                    print(f"[DEBUG] {self.name} voted for {candidate} using pattern '{vote_pattern}'")
-                return candidate, True
+        # Parse the vote using centralized parsing
+        vote_target = self.prompt_config.parse_voting_response(response, candidates)
+        if vote_target:
+            if self.debug_prompts:
+                print(f"[DEBUG] {self.name} voted for {vote_target}")
+            return vote_target, True
         
-        # If no valid "VOTE: name" found, cast random vote
+        # If no valid vote found, cast random vote
         fallback_vote = random.choice(candidates)
         if self.debug_prompts:
-            print(f"[DEBUG] {self.name} failed to parse VOTE: format, random vote: {fallback_vote}")
+            print(f"[DEBUG] {self.name} failed to parse vote format, random vote: {fallback_vote}")
         return fallback_vote, False
     
     def kill(self, candidates: List[str], game_state=None) -> str:
@@ -158,7 +164,7 @@ class MafiaAgent:
             print(killing_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(killing_prompt, max_tokens=15)
+        response = self._generate(killing_prompt, max_tokens=5)  # Just need a name
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -167,20 +173,14 @@ class MafiaAgent:
             print(repr(response))
             print(f"{'='*60}")
         
-        # Extract name
-        target = None
-        for name in candidates:
-            if name.lower() in response.lower():
-                if self.debug_prompts:
-                    print(f"[DEBUG] {self.name} chose {name} from response parsing")
-                target = name
-                break
-        
-        # If no valid name found, make random choice
+        # Parse the target using centralized parsing
+        target = self.prompt_config.parse_night_action_response(response, candidates)
         if not target:
             target = random.choice(candidates)
             if self.debug_prompts:
                 print(f"[DEBUG] {self.name} failed to parse response, random choice: {target}")
+        elif self.debug_prompts:
+            print(f"[DEBUG] {self.name} chose {target}")
         
         # Remember the action
         self.remember(f"You killed {target}")
@@ -210,7 +210,7 @@ class MafiaAgent:
             print(investigating_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(investigating_prompt, max_tokens=15)
+        response = self._generate(investigating_prompt, max_tokens=10)  # Just need a name
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -219,20 +219,14 @@ class MafiaAgent:
             print(repr(response))
             print(f"{'='*60}")
         
-        # Extract name
-        target = None
-        for name in candidates:
-            if name.lower() in response.lower():
-                if self.debug_prompts:
-                    print(f"[DEBUG] {self.name} chose {name} from response parsing")
-                target = name
-                break
-        
-        # If no valid name found, make random choice
+        # Parse the target using centralized parsing
+        target = self.prompt_config.parse_night_action_response(response, candidates)
         if not target:
             target = random.choice(candidates)
             if self.debug_prompts:
                 print(f"[DEBUG] {self.name} failed to parse response, random choice: {target}")
+        elif self.debug_prompts:
+            print(f"[DEBUG] {self.name} chose {target}")
         
         # Remember the investigation result
         target_agent = game_state.get_agent_by_name(target)

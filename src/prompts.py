@@ -7,7 +7,8 @@ and enable controlled experiments with different prompt variations.
 """
 
 import json
-from typing import Dict, Any
+import re
+from typing import Dict, Any, List
 
 # Configuration constants
 MESSAGE_LIMIT = 200  # Character limit for discussion messages
@@ -29,6 +30,8 @@ class PromptConfig:
             return self._get_v2_0_templates()
         elif self.version == "v3.0":
             return self._get_v3_0_templates()
+        elif self.version == "v4.0":
+            return self._get_v4_0_templates()
         else:
             raise ValueError(f"Unknown prompt version: {self.version}")
     
@@ -264,6 +267,117 @@ Reply with just the name (otherwise a random choice will be made for you):[/INST
 """
         }
 
+    def _get_v4_0_templates(self) -> Dict[str, str]:
+        """
+        Optimized for prompt caching (Anthropic + OpenAI).
+        
+        Key changes from v3.0:
+        - Reordered prompt structure to maximize cache efficiency
+        - Static game rules and explanations moved to beginning (cacheable)
+        - Dynamic content (name, memory, actions) moved to end (non-cacheable)
+        - Large static content (~500+ tokens) at start enables automatic caching
+        - Benefits: ~50% cost reduction + faster response times for repeated games
+        - Caching needs >1024 tokens => increase the cached part.
+        
+        Cache Strategy:
+        - Anthropic: Can use cache_control on game explanation section
+        - OpenAI: Automatic caching for 1024+ token prompts with common prefixes
+        """
+        return {
+            
+            "base_prompt": """[INST]
+#CONTEXT:
+You're playing the following instance of the Mafia game. Your ultimate objective is to ensure your team wins, whether through persuasion, deduction, deception, or careful timing.
+
+
+#MAFIA GAME EXPLANATION
+
+OVERVIEW:
+Mafia is a social deduction game of deception, logic, and hidden identities. Each player is secretly assigned to one of two opposing teams, but only the mafia know exactly who is on their side. The town must work together, using discussion, observation, and voting to identify and eliminate the mafia. Meanwhile, the mafia attempt to blend in, spread doubt, and mislead the town while secretly eliminating opponents at night. Every conversation, vote, and pause can carry meaning, and both teams must carefully balance truth and lies to secure victory. Over the course of alternating night and day phases, alliances form, suspicions grow, and the game builds toward a decisive end where only one side will prevail.
+
+TEAMS AND ROLES:
+The game features two opposing teams: the informed mafia and the uninformed town.
+- Mafia: Mafiosos act together at night to eliminate members of the town. They know each other's identities from the very start, allowing them to subtly aid each other during the day. While they cannot speak privately during the day, they may attempt to coordinate through hints and voting behavior.
+- Detectives: Town members with the ability to investigate at night. A detective learns the role of the player they investigate, but only they receive this information. They must decide carefully when and how to reveal their findings to avoid becoming a mafia target.
+- Villagers: Town members with no special abilities. Though they lack private information, their power lies in collective reasoning, pattern recognition, and their ability to influence voting outcomes.
+
+GAME STRUCTURE:
+The game alternates between night and day phases until one side wins.
+1. Night Phase:
+- Investigation: Each detective chooses one player to investigate and learns their role privately. Investigations are secret and can only be shared by choice in the public discussion.
+- Assassination: One randomly selected mafioso makes the final kill decision for the team. The target must be an active non-mafioso.
+- Outcome: Killed players become inactive immediately and take no further part in discussions, votes, or actions.
+
+2. Day Phase:
+- Discussion: In each discussion round, all active players speak in a randomized order. Each player may send a single public message or remain silent. Messages are addressed to all and attributed by name. No private communication is allowed.
+- Voting: Following discussion, all active players cast a vote to arrest one player. The player with the most votes is arrested. If there is a tie, a tied player is selected randomly.
+- Outcome: Arrested players became inactive, and stop playing the game.
+
+WIN CONDITIONS:
+- Town: eliminate all mafiosos through coordinated voting during the day.
+- Mafia: eliminate all non-mafiosos through a combination of night kills and daytime voting deception.
+
+INFORMATION FLOW:
+- All information revealead to players appears in their #YOUR MEMORY: log, in strict chronological order.
+- Memory is unique to each player, creating asymmetries in what individuals know.
+- Detective investigation results are visible only to that specific detective.
+- All mafiosos know which mafioso was assigned the kill decision at night, and they are all informed of the outcome.
+- There is no private messaging at any point; all communication occurs in public during the day.
+- The total number of each role is known to all players from the start.
+- Deaths and arrests are publicly announced.
+- Voting results are announced and all players see who voted for whom.
+- Voting results are revealed once all active players have cast their vote.
+
+
+#REQUIRED RESPONSE FORMATS
+
+NIGHT ACTION RESPONSE FORMAT:
+- Your night action response MUST START with the name of the player you want to choose.
+- Optional reasoning may follow AFTER a line break.
+- Example: response = 'player_name \n I choose player_name because...'.
+- If you fail to respond in the required format, a random valid choice will be made for you.
+
+DISCUSSION RESPONSE FORMAT:
+- Your discussion response MUST START with your message, enclosed in double quotation marks. 
+- Optional reasoning may follow AFTER a line break.
+- Example: response = '"your message" \n I am saying this because...'.
+- If you fail to respond in the required format, a message stating that you remained silent will be shared with everyone.
+- Your message will be truncated to a maximum of 200 characters.
+
+VOTING RESPONSE FORMAT: 
+- Your voting response MUST START with the name of the player you want to vote for. 
+- Optional reasoning may follow AFTER a line break.
+- Example: response = 'player_name \n I am voting for player_name because...'.
+- If you fail to respond in the required format, a random valid vote will be cast for you.
+
+
+#GAME PLAYERS AND COMPOSITION
+- In the game you're playing there are: {composition}.
+- You're {name} and the other players are: {other_players}.
+
+
+#YOUR MEMORY:
+{memory}
+
+
+{action_specific_content}""",
+
+            # Action-specific suffixes
+            "discussion_suffix": """#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
+What message do you want to say to everyone?
+Reply with just your message enclosed in double quotation marks:[/INST]
+""",
+
+            "voting_suffix": """#VOTING TIME: 
+Vote to arrest one player from: {candidates}.
+Reply with just a name:[/INST]
+""",
+
+            "night_action_suffix": """#NIGHT {round_num}: 
+Choose a player to {action} from: {candidates}.
+Reply with just a name:[/INST]
+"""
+        }
     
     def format_discussion_prompt(self, name: str, role: str, other_players: str, 
                                 composition: str, memory: str, round_num: int, discussion_rounds: int) -> str:
@@ -318,6 +432,58 @@ Reply with just the name (otherwise a random choice will be made for you):[/INST
             action_specific_content=action_specific_content
         )
     
+    def parse_discussion_response(self, response: str) -> str:
+        """Parse discussion response based on prompt version"""
+        if self.version == "v4.0":
+            # v4.0 format: "message" \n reasoning...
+            match = re.search(r'^\s*"([^"]+)"', response)
+            if not match:
+                return None
+            return match.group(1)
+        else:
+            # v3.0 and earlier format: MESSAGE: "message"
+            match = re.search(r'MESSAGE:\s*"((?:\\.|[^"\\])*)"', response)
+            if not match:
+                return None
+            return match.group(1)
+    
+    def parse_voting_response(self, response: str, candidates: List[str]) -> str:
+        """Parse voting response based on prompt version"""
+        if self.version == "v4.0":
+            # v4.0 format: player_name \n reasoning...
+            response_lines = response.strip().split('\n')
+            first_line = response_lines[0].strip()
+            
+            for candidate in candidates:
+                if candidate.lower() == first_line.lower():
+                    return candidate
+        else:
+            # v3.0 and earlier format: VOTE: player_name
+            for candidate in candidates:
+                vote_pattern = f"VOTE: {candidate}"
+                if vote_pattern.upper() in response.upper():
+                    return candidate
+        
+        return None
+    
+    def parse_night_action_response(self, response: str, candidates: List[str]) -> str:
+        """Parse night action response based on prompt version"""
+        if self.version == "v4.0":
+            # v4.0 format: player_name \n reasoning...
+            response_lines = response.strip().split('\n')
+            first_line = response_lines[0].strip()
+            
+            for candidate in candidates:
+                if candidate.lower() == first_line.lower():
+                    return candidate
+        else:
+            # v3.0 and earlier format: look for name anywhere in response
+            for candidate in candidates:
+                if candidate.lower() in response.lower():
+                    return candidate
+        
+        return None
+
     def get_config_dict(self) -> Dict[str, Any]:
         """Return serializable config for saving with experiments"""
         return {

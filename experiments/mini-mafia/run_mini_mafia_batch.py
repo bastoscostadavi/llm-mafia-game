@@ -28,11 +28,11 @@ from src.agents import MafiaAgent
 from src.prompts import PromptConfig
 
 def get_default_model_configs(temperature=0.7):
-    """Get default model configuration (all Claude Sonnet 4 with configurable temperature)"""
+    """Get default model configuration (specify the exact model name you want)"""
     return {
-        'detective': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': temperature},
-        'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': temperature},
-        'villager': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': temperature}
+        'detective': {'type': 'openai', 'model': 'gpt-5', 'temperature': temperature},
+        'mafioso': {'type': 'openai', 'model': 'gpt-5', 'temperature': temperature},
+        'villager': {'type': 'openai', 'model': 'gpt-5', 'temperature': temperature}
     }
 
 #{
@@ -200,13 +200,13 @@ def main():
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--debug-responses', action='store_true', help='Show raw model responses when parsing fails')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
-    parser.add_argument('--prompt-version', default='v2.0', help='Prompt version to use (default: v2.0)')
+    parser.add_argument('--prompt-version', default='v4.0', help='Prompt version to use (default: v4.0 with caching)')
     parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
     
     args = parser.parse_args()
     
-    # Create prompt config
-    prompt_config = PromptConfig(version='v3.0')
+    # Create prompt config (v4.0 optimized for caching)
+    prompt_config = PromptConfig(version='v4.0')
     
     print("Mini-Mafia Batch Runner")
     print("="*40)
@@ -223,7 +223,7 @@ def main():
             print(f"\nConfiguration:")
             print(f"  Games: {n_games}")
             print(f"  Debug prompts: {debug}")
-            print(f"  Model: Claude Sonnet 4")
+            print(f"  Model: GPT-5 (with prompt caching)")
             
             confirm = input("\nProceed? (y/n): ").strip().lower()
             if confirm != 'y':
@@ -247,7 +247,7 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: Claude Sonnet 4")
+    print(f"  Model: GPT-5 (with prompt caching)")
     
     try:
         # Run the batch

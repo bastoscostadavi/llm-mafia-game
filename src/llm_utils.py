@@ -31,27 +31,77 @@ class OpenAI:
         self.temperature = temperature
     
     def generate(self, prompt, max_tokens=50):
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=max_tokens,
-            temperature=self.temperature
-        )
+        # GPT-5 has different parameter requirements
+        if self.model.startswith('gpt-5'):
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                max_completion_tokens=max_tokens
+                # GPT-5 only supports default temperature (1), so we omit it
+            )
+        else:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=max_tokens,
+                temperature=self.temperature
+            )
+        
+        # Debug: Print cache info if available
+        if hasattr(response, 'usage') and response.usage:
+            usage = response.usage
+            if hasattr(usage, 'cached_tokens') and usage.cached_tokens > 0:
+                print(f"[CACHE HIT] {usage.cached_tokens} cached tokens, {usage.prompt_tokens} total prompt tokens")
+            elif hasattr(usage, 'prompt_tokens'):
+                print(f"[NO CACHE] {usage.prompt_tokens} prompt tokens processed")
+        
         return response.choices[0].message.content.strip()
 
 class Anthropic:
-    """Anthropic API wrapper"""
-    def __init__(self, client, model, temperature=0.7):
+    """Anthropic API wrapper with prompt caching support"""
+    def __init__(self, client, model, temperature=0.7, use_cache=False):
         self.client = client
         self.model = model
         self.temperature = temperature
+        self.use_cache = use_cache
     
     def generate(self, prompt, max_tokens=50):
+        # For v4.0 prompts, we can enable caching on the game rules section
+        if self.use_cache and "#MAFIA GAME RULES:" in prompt:
+            # Find the end of the cacheable section (before dynamic content)
+            cache_boundary = prompt.find("#PLAYER CONTEXT:")
+            if cache_boundary > 0:
+                cacheable_part = prompt[:cache_boundary].strip()
+                dynamic_part = prompt[cache_boundary:].strip()
+                
+                messages = [
+                    {
+                        "role": "user", 
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": cacheable_part,
+                                "cache_control": {"type": "ephemeral"}
+                            },
+                            {
+                                "type": "text", 
+                                "text": dynamic_part
+                            }
+                        ]
+                    }
+                ]
+            else:
+                # Fallback to regular message if no cache boundary found
+                messages = [{"role": "user", "content": prompt}]
+        else:
+            # Regular message without caching
+            messages = [{"role": "user", "content": prompt}]
+        
         response = self.client.messages.create(
             model=self.model,
             max_tokens=max_tokens,
             temperature=self.temperature,
-            messages=[{"role": "user", "content": prompt}]
+            messages=messages
         )
         return response.content[0].text.strip()
 
@@ -69,7 +119,7 @@ class Local:
         # Special handling for GPT-OSS reasoning models
         if self.is_gpt_oss:
             # Let GPT-OSS think with very high token limit
-            return self._generate_gpt_oss(prompt, max_tokens=4000)
+            return self._generate_gpt_oss(prompt, max_tokens=10000)
         
         # Standard handling for other models
         try:
@@ -198,7 +248,8 @@ def create_llm(llm_config):
         client = anthropic.Anthropic(api_key=llm_config.get('api_key') or os.getenv('ANTHROPIC_API_KEY'))
         model = llm_config.get('model', 'claude-3-haiku-20240307')
         temperature = llm_config.get('temperature', 0.7)
-        return Anthropic(client, model, temperature)
+        use_cache = llm_config.get('use_cache', False)
+        return Anthropic(client, model, temperature, use_cache)
     
     elif llm_type == 'human':
         player_name = llm_config.get('player_name', 'Human Player')
