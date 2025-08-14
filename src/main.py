@@ -289,8 +289,13 @@ class Game:
 
 
 
-def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=PromptConfig(version="v1.0")):
+def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=None):
     """Create a Mafia game with specified players"""
+    # Use system default prompt config if none provided
+    if prompt_config is None:
+        from src.config import get_default_prompt_config
+        prompt_config = get_default_prompt_config()
+    
     # Create agents
     agents = []
     for player in players:

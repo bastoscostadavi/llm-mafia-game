@@ -365,7 +365,7 @@ VOTING RESPONSE FORMAT:
             # Action-specific suffixes
             "discussion_suffix": """#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
 What message do you want to say to everyone?
-Reply with just your message enclosed in double quotation marks:[/INST]
+Your response must start with your message in double quotation marks, followed by optional reasoning:[/INST]
 """,
 
             "voting_suffix": """#VOTING TIME: 
@@ -454,8 +454,14 @@ Reply with just a name:[/INST]
             response_lines = response.strip().split('\n')
             first_line = response_lines[0].strip()
             
+            # First try exact match on first line
             for candidate in candidates:
                 if candidate.lower() == first_line.lower():
+                    return candidate
+            
+            # If no exact match, look for candidate names anywhere in the response
+            for candidate in candidates:
+                if candidate.lower() in response.lower():
                     return candidate
         else:
             # v3.0 and earlier format: VOTE: player_name
@@ -473,8 +479,14 @@ Reply with just a name:[/INST]
             response_lines = response.strip().split('\n')
             first_line = response_lines[0].strip()
             
+            # First try exact match on first line
             for candidate in candidates:
                 if candidate.lower() == first_line.lower():
+                    return candidate
+            
+            # If no exact match, look for candidate names anywhere in the response
+            for candidate in candidates:
+                if candidate.lower() in response.lower():
                     return candidate
         else:
             # v3.0 and earlier format: look for name anywhere in response

@@ -26,15 +26,9 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from preset_games import mini_mafia_game
 from src.agents import MafiaAgent
 from src.prompts import PromptConfig
+from src.config import DEFAULT_PROMPT_VERSION, get_default_model_configs, get_default_prompt_config
 
-def get_default_model_configs(temperature=0.7):
-    """Get default model configuration (specify the exact model name you want)"""
-    # GPT-5 only supports default temperature (1.0), so we don't include temperature parameter
-    return {
-        'detective': {'type': 'openai', 'model': 'gpt-5'},
-        'mafioso': {'type': 'openai', 'model': 'gpt-5'},
-        'villager': {'type': 'openai', 'model': 'gpt-5'}
-    }
+# Import centralized model configs - no local definition needed
 
 #{
 #        'detective': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
@@ -126,7 +120,7 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
     
     # Use default model configs if none provided
     if model_configs is None:
-        model_configs = get_default_model_configs(temperature=temperature or 0.7)
+        model_configs = get_default_model_configs()
     
     # Include temperature in batch ID if specified
     temp_suffix = f"_temp{temperature}" if temperature is not None else ""
@@ -201,13 +195,13 @@ def main():
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--debug-responses', action='store_true', help='Show raw model responses when parsing fails')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
-    parser.add_argument('--prompt-version', default='v4.0', help='Prompt version to use (default: v4.0 with caching)')
+    parser.add_argument('--prompt-version', default=DEFAULT_PROMPT_VERSION, help=f'Prompt version to use (default: {DEFAULT_PROMPT_VERSION} with caching)')
     parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
     
     args = parser.parse_args()
     
-    # Create prompt config (v4.0 optimized for caching)
-    prompt_config = PromptConfig(version='v4.0')
+    # Create prompt config using system default
+    prompt_config = get_default_prompt_config()
     
     print("Mini-Mafia Batch Runner")
     print("="*40)

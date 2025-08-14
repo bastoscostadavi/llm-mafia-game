@@ -5,6 +5,7 @@ import random
 import re
 import ast
 from src.prompts import PromptConfig, MESSAGE_LIMIT
+from src.config import TOKEN_LIMITS, GPT5_TOKEN_LIMITS
 
 class MafiaAgent:
     def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, prompt_config: PromptConfig = None):
@@ -27,6 +28,22 @@ class MafiaAgent:
         if not self.memory:
             return "No previous events."
         return "\n".join(self.memory)
+    
+    def _is_gpt5(self) -> bool:
+        """Check if this agent is using a GPT-5 model"""
+        if hasattr(self.llm, 'model'):
+            # For OpenAI/Anthropic wrappers, model is a string
+            if isinstance(self.llm.model, str):
+                return self.llm.model.startswith('gpt-5')
+            # For Local wrapper, model is a Llama object, check model_path
+            elif hasattr(self.llm, 'model_path'):
+                return 'gpt-5' in self.llm.model_path.lower()
+        return False
+    
+    def _get_token_limit(self, action_type: str) -> int:
+        """Get appropriate token limit based on model type"""
+        limits = GPT5_TOKEN_LIMITS if self._is_gpt5() else TOKEN_LIMITS
+        return limits.get(action_type, TOKEN_LIMITS[action_type])
     
     def _generate(self, prompt: str, max_tokens: int = 50) -> str:
         """Generate response from LLM (all wrappers have generate method)"""
@@ -58,7 +75,7 @@ class MafiaAgent:
             print(discussion_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(discussion_prompt, max_tokens=60)  # ~200 chars message + format
+        response = self._generate(discussion_prompt, max_tokens=self._get_token_limit('discussion'))
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -106,7 +123,7 @@ class MafiaAgent:
             print(voting_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(voting_prompt, max_tokens=5)  # Just need a name
+        response = self._generate(voting_prompt, max_tokens=self._get_token_limit('voting'))
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -152,7 +169,7 @@ class MafiaAgent:
             print(killing_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(killing_prompt, max_tokens=5)  # Just need a name
+        response = self._generate(killing_prompt, max_tokens=self._get_token_limit('night_action'))
         
         if self.debug_prompts:
             print(f"\n{'='*60}")
@@ -198,7 +215,7 @@ class MafiaAgent:
             print(investigating_prompt)
             print(f"{'='*60}")
         
-        response = self._generate(investigating_prompt, max_tokens=10)  # Just need a name
+        response = self._generate(investigating_prompt, max_tokens=self._get_token_limit('night_action'))
         
         if self.debug_prompts:
             print(f"\n{'='*60}")

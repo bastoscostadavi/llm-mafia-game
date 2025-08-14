@@ -11,6 +11,7 @@ sys.path.append('.')
 
 from src.main import create_game
 from src.prompts import PromptConfig
+from src.config import get_default_prompt_config
 
 def get_model_options():
     """Get available model options"""
@@ -95,9 +96,9 @@ def get_preset_configs():
             'villager': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}
         }),
         '6': ('Claude as Mafioso', {
-            'detective': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'},
-            'mafioso': {'type': 'anthropic', 'model': 'claude-3-haiku-20240307'},
-            'villager': {'type': 'local', 'model_path': 'models/Qwen2.5-7B-Instruct-Q4_K_M.gguf'}
+            'detective': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
+            'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514'},
+            'villager': {'type': 'local', 'model_path': 'models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048}
         }),
         '7': ('Human vs LLMs (You play Detective)', {
             'detective': {'type': 'human', 'player_name': 'Detective'},
@@ -192,8 +193,10 @@ def mini_mafia_game(debug_prompts=False, model_configs=None, prompt_config=None)
         {'name': 'Diana', 'role': roles[3], 'llm': model_configs[roles[3]]}
     ]
     
-    # Create the game
-    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=PromptConfig(version="v2.0"))
+    # Create the game - use the provided prompt_config or system default
+    if prompt_config is None:
+        prompt_config = get_default_prompt_config()
+    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=prompt_config)
     
     # Find and kill one of the villagers
     villagers = [a for a in game.state.agents if a.role == "villager"]
