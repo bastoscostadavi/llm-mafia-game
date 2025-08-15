@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafia vs LLMs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .game-setup {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .game-setup.hidden {
+            display: none;
+        }
+        
+        .form-group {
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .game-area {
+            padding: 40px;
+            display: none;
+        }
+        
+        .game-area.active {
+            display: block;
+        }
+        
+        .game-log {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+        
+        .log-entry {
+            margin: 10px 0;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        
+        .log-entry.system {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .log-entry.human {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+        }
+        
+        .log-entry.llm {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .human-input {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .human-input.active {
+            display: block;
+        }
+        
+        .human-input h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+        
+        .prompt-text {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .response-input {
+            width: 100%;
+            min-height: 100px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .status.waiting {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        
+        .status.playing {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .status.finished {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+        
+        .quick-responses {
+            margin: 15px 0;
+        }
+        
+        .quick-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .quick-btn:hover {
+            background: #e9ecef;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .game-setup, .game-area {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🕵️ Mafia vs LLMs</h1>
+            <p>Test your social deduction skills against AI opponents</p>
+        </div>
+        
+        <div class="game-setup" id="gameSetup">
+            <h2>Create Your Game</h2>
+            <form id="createGameForm">
+                <div class="form-group">
+                    <label for="playerName">Your Name:</label>
+                    <input type="text" id="playerName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="playerRole">Choose Your Role:</label>
+                    <select id="playerRole" required>
+                        <option value="">Select your role...</option>
+                        <option value="detective">🔍 Detective - Find the mafia with investigations</option>
+                        <option value="mafioso">🔪 Mafioso - Eliminate townspeople without being caught</option>
+                        <option value="villager">👥 Villager - Help the town identify the mafia</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn">Start Game</button>
+            </form>
+        </div>
+        
+        <div class="game-area" id="gameArea">
+            <div class="status" id="gameStatus">
+                <span id="statusText">Connecting...</span>
+            </div>
+            
+            <div class="game-log" id="gameLog">
+                <div class="log-entry system">
+                    <strong>System:</strong> Welcome to Mafia vs LLMs! Your game is starting...
+                </div>
+            </div>
+            
+            <div class="human-input" id="humanInput">
+                <h3>Your Turn</h3>
+                <div class="prompt-text" id="promptText"></div>
+                
+                <textarea class="response-input" id="responseInput" placeholder="Type your response here..."></textarea>
+                
+                <div class="quick-responses" id="quickResponses">
+                    <!-- Quick response buttons will be added dynamically -->
+                </div>
+                
+                <div style="text-align: center; margin-top: 15px;">
+                    <button class="btn" onclick="submitResponse()">Submit Response</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script>
+        let socket;
+        let currentGameId = null;
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Socket.IO
+            socket = io();
+            
+            // Handle form submission
+            document.getElementById('createGameForm').addEventListener('submit', createGame);
+            
+            // Setup WebSocket event listeners
+            setupSocketListeners();
+        });
+        
+        function createGame(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('playerName').value;
+            const role = document.getElementById('playerRole').value;
+            
+            if (!name || !role) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Create game via API
+            fetch('/api/create_game', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    role: role
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.game_id) {
+                    currentGameId = data.game_id;
+                    joinGame(data.game_id);
+                } else {
+                    alert('Error creating game');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error creating game');
+            });
+        }
+        
+        function joinGame(gameId) {
+            // Switch to game area
+            document.getElementById('gameSetup').classList.add('hidden');
+            document.getElementById('gameArea').classList.add('active');
+            
+            // Join game room
+            socket.emit('join_game', { game_id: gameId });
+        }
+        
+        function setupSocketListeners() {
+            socket.on('joined_game', function(data) {
+                addLogEntry('system', `Joined game as ${data.human_name} (${data.human_role})`);
+                updateStatus('waiting', 'Setting up game...');
+            });
+            
+            socket.on('game_update', function(data) {
+                addLogEntry('system', data.message);
+                updateStatus(data.phase, data.message);
+            });
+            
+            socket.on('human_turn', function(data) {
+                showHumanInput(data.prompt, data.type);
+            });
+            
+            socket.on('game_log', function(data) {
+                if (data.type === 'llm_response') {
+                    addLogEntry('llm', `${data.data.agent}: ${data.data.response}`);
+                }
+            });
+            
+            socket.on('error', function(data) {
+                alert(data.message);
+            });
+        }
+        
+        function addLogEntry(type, message) {
+            const log = document.getElementById('gameLog');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            
+            const timestamp = new Date().toLocaleTimeString();
+            entry.innerHTML = `<strong>[${timestamp}]</strong> ${message}`;
+            
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+        }
+        
+        function updateStatus(phase, message) {
+            const status = document.getElementById('gameStatus');
+            const statusText = document.getElementById('statusText');
+            
+            status.className = `status ${phase}`;
+            statusText.textContent = message;
+        }
+        
+        function showHumanInput(prompt, type) {
+            const humanInput = document.getElementById('humanInput');
+            const promptText = document.getElementById('promptText');
+            const responseInput = document.getElementById('responseInput');
+            const quickResponses = document.getElementById('quickResponses');
+            
+            // Show prompt
+            promptText.textContent = prompt;
+            responseInput.value = '';
+            
+            // Add quick response buttons based on type
+            quickResponses.innerHTML = '';
+            if (type === 'voting') {
+                // Extract candidate names from prompt (simplified)
+                const candidates = ['Alice', 'Bob', 'Charlie'].filter(name => prompt.includes(name));
+                candidates.forEach(candidate => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-btn';
+                    btn.textContent = `Vote: ${candidate}`;
+                    btn.onclick = () => {
+                        responseInput.value = candidate;
+                    };
+                    quickResponses.appendChild(btn);
+                });
+            } else if (type === 'discussion') {
+                const suggestions = [
+                    '"I think we should be careful who we trust."',
+                    '"Has anyone noticed anything suspicious?"',
+                    '"We need to work together to find the mafia."'
+                ];
+                suggestions.forEach(suggestion => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-btn';
+                    btn.textContent = suggestion;
+                    btn.onclick = () => {
+                        responseInput.value = suggestion;
+                    };
+                    quickResponses.appendChild(btn);
+                });
+            }
+            
+            // Show input area
+            humanInput.classList.add('active');
+            responseInput.focus();
+            
+            addLogEntry('human', 'Your turn - please respond');
+        }
+        
+        function submitResponse() {
+            const response = document.getElementById('responseInput').value.trim();
+            
+            if (!response) {
+                alert('Please enter a response');
+                return;
+            }
+            
+            // Send response
+            socket.emit('submit_response', {
+                game_id: currentGameId,
+                response: response
+            });
+            
+            // Hide input area
+            document.getElementById('humanInput').classList.remove('active');
+            
+            addLogEntry('human', `You: ${response}`);
+        }
+        
+        // Handle Enter key in textarea (with Shift+Enter for new line)
+        document.addEventListener('keydown', function(e) {
+            if (e.target.id === 'responseInput') {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    submitResponse();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
