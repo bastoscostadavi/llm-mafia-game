@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_223111_v4.0_game_0970",
+  "game_number": 970,
+  "timestamp": "2025-08-15T03:10:10.743047",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Charlie: \"Bob was a great guy, I'm sad to see him go.\"",
+        "Diana: \"Charlie's message seems suspicious, considering he knows I'm the detective and Bob was a villager. I think we should focus on Charlie first.\"",
+        "You: \"Charlie, I'm not sure what to think about your message. Maybe you're just being genuine?\"",
+        "Charlie: \"I'm just a grieving friend, I didn't kill Bob.\"",
+        "Diana: \"I think we should investigate Charlie further, as his message seems suspicious. We can't trust him after what happened last night.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Bob.",
+        "The villager Bob was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: remained silent.",
+        "You: \"Bob was a great guy, I'm sad to see him go.\"",
+        "Diana: \"Charlie's message seems suspicious, considering he knows I'm the detective and Bob was a villager. I think we should focus on Charlie first.\"",
+        "Alice: \"Charlie, I'm not sure what to think about your message. Maybe you're just being genuine?\"",
+        "You: \"I'm just a grieving friend, I didn't kill Bob.\"",
+        "Diana: \"I think we should investigate Charlie further, as his message seems suspicious. We can't trust him after what happened last night.\"",
+        "Votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "Alice: remained silent.",
+        "Charlie: \"Bob was a great guy, I'm sad to see him go.\"",
+        "You: \"Charlie's message seems suspicious, considering he knows I'm the detective and Bob was a villager. I think we should focus on Charlie first.\"",
+        "Alice: \"Charlie, I'm not sure what to think about your message. Maybe you're just being genuine?\"",
+        "Charlie: \"I'm just a grieving friend, I didn't kill Bob.\"",
+        "You: \"I think we should investigate Charlie further, as his message seems suspicious. We can't trust him after what happened last night.\"",
+        "Votes: Alice voted for Charlie, Charlie voted for Alice, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

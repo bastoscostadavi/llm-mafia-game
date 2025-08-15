@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_183322_v4.0_game_0257",
+  "game_number": 257,
+  "timestamp": "2025-08-14T19:34:01.519499",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Be careful, Charlie might be the mafioso.\"",
+        "Charlie: \"Charlie is acting suspiciously\"",
+        "You: \"I believe Diana's death was not random\"",
+        "Charlie: \"Be careful, I might be the mafioso. I killed Diana last night and Bob is the detective.\"",
+        "You: \"I'm sorry, but that's not possible. Charlie admitted to killing Diana and claimed Bob is the detective.\"",
+        "Bob: \"I need to clarify the situation. Charlie cannot be the mafioso if he admitted to killing Diana and claimed I am the detective, which would make his statement inconsistent.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Be careful, Charlie might be the mafioso.\"",
+        "Charlie: \"Charlie is acting suspiciously\"",
+        "Alice: \"I believe Diana's death was not random\"",
+        "Charlie: \"Be careful, I might be the mafioso. I killed Diana last night and Bob is the detective.\"",
+        "Alice: \"I'm sorry, but that's not possible. Charlie admitted to killing Diana and claimed Bob is the detective.\"",
+        "You: \"I need to clarify the situation. Charlie cannot be the mafioso if he admitted to killing Diana and claimed I am the detective, which would make his statement inconsistent.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Be careful, Charlie might be the mafioso.\"",
+        "You: \"Charlie is acting suspiciously\"",
+        "Alice: \"I believe Diana's death was not random\"",
+        "You: \"Be careful, I might be the mafioso. I killed Diana last night and Bob is the detective.\"",
+        "Alice: \"I'm sorry, but that's not possible. Charlie admitted to killing Diana and claimed Bob is the detective.\"",
+        "Bob: \"I need to clarify the situation. Charlie cannot be the mafioso if he admitted to killing Diana and claimed I am the detective, which would make his statement inconsistent.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

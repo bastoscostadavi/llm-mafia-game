@@ -14,8 +14,6 @@ import sys
 import os
 import json
 import random
-import io
-import contextlib
 import argparse
 from datetime import datetime
 from pathlib import Path
@@ -23,18 +21,12 @@ from pathlib import Path
 # Add project root to path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-from preset_games import mini_mafia_game
+from mini_mafia import create_mini_mafia_game
+import io
 from src.agents import MafiaAgent
 from src.prompts import PromptConfig
 from src.config import DEFAULT_PROMPT_VERSION, get_default_model_configs, get_default_prompt_config
 
-# Import centralized model configs - no local definition needed
-
-#{
-#        'detective': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
-#        'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
-#        'villager': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7}
-#    }
 
 def save_game_data(game, game_num, batch_id, batch_dir, prompt_config, model_configs=None):
     """Save minimal game data to JSON file in batch folder"""
@@ -143,7 +135,7 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
         print(f"\nGame {i+1}/{n_games}")
         
         # Create and run game with specific prompt config and model configs
-        game = mini_mafia_game(debug_prompts=debug_prompts, model_configs=model_configs, prompt_config=prompt_config)
+        game = create_mini_mafia_game(model_configs=model_configs, debug_prompts=debug_prompts, prompt_config=prompt_config)
         
         # Capture stdout to avoid cluttering output
         if not debug_prompts:

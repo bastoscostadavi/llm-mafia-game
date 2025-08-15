@@ -1,6 +1,6 @@
 # Mini-Mafia Experiment
 
-A streamlined 4-player Mafia variant optimized for studying LLM deception and detection patterns in social deduction games.
+A streamlined 4-player Mafia variant optimized for studying LLM deception and detection patterns in social deduction games. Features advanced prompt caching for performance optimization and supports human vs LLM gameplay data collection.
 
 ## Overview
 
@@ -45,20 +45,27 @@ Mini-Mafia simplifies the classic Mafia game to focus on the core interaction be
 python run_mini_mafia_batch.py 100
 
 # Run 50 games with specific prompt version
-python run_mini_mafia_batch.py 50 --prompt-version v1.0
+python run_mini_mafia_batch.py 50 --prompt-version v4.0
+
+# Run with caching enabled (recommended for v4.0 prompts)
+python run_mini_mafia_batch.py 100 --prompt-version v4.0 --enable-cache
 
 # View batch results interactively
 python game_viewer.py
 
 # View specific batch
-python game_viewer.py batch_20250801_081244_v0.0
+python game_viewer.py batch_20250814_183322_v4.0
 
 # View specific game
-python game_viewer.py batch_20250801_081244_v0.0 0
+python game_viewer.py batch_20250814_183322_v4.0 0
 
 # Generate analysis reports
 python analyze_results.py
 python analyze_voting.py
+
+# Human vs LLM data collection (from project root)
+cd ../../
+python web_app.py  # Creates data in web_games/ folder
 ```
 
 ## Data Format
@@ -71,6 +78,10 @@ data/
     ├── game_0000.json         # Individual game results  
     ├── game_0001.json
     └── ...
+
+# Human vs LLM data (from web interface)
+../../web_games/
+└── web_game_YYYYMMDD_HHMMSS_PlayerName_Role.json
 ```
 
 ### Game Data (Streamlined Format)
@@ -191,11 +202,16 @@ Available model types and recommended usage:
 ### Prompt Versions
 - **v0.0**: Original research prompts, basic role descriptions
 - **v1.0**: Enhanced with strategic guidance and clearer instructions
+- **v2.0**: Improved structure and clarity
+- **v3.0**: Forced response format for faster API model inference
+- **v4.0**: Optimized for prompt caching with 50%+ performance improvements
 
 ### Performance Tuning
-- **Context Window**: 1024 tokens (optimized for mini-mafia)
+- **Context Window**: 2048 tokens (optimized for caching and v4.0 prompts)
 - **Temperature**: 0.7 (balanced creativity and consistency)
 - **Discussion Rounds**: 2 (adequate for 3-player dynamics)
+- **KV Caching**: Enabled for local models with v4.0 prompts (50%+ speedup)
+- **Prompt Caching**: Automatic cache boundary detection for repeated content
 
 ## Troubleshooting
 
@@ -209,6 +225,8 @@ Available model types and recommended usage:
 ### Performance Optimization
 - Use local models for large-scale experiments  
 - Enable GPU acceleration for llama.cpp models
+- **Use v4.0 prompts with caching** for 50%+ performance improvement
+- Enable KV caching: `--enable-cache` flag for batch experiments
 - Monitor disk space (batches can be large despite optimization)
 - Consider parallel execution for independent experiments
 
@@ -219,5 +237,6 @@ Potential extensions to the mini-mafia framework:
 - **Multi-round variants**: Extended gameplay with multiple elimination rounds
 - **Role variants**: Additional roles like doctor or serial killer
 - **Communication restrictions**: Limited or structured communication phases  
-- **Mixed-model scenarios**: Human players vs AI agents
+- **Mixed-model scenarios**: Human players vs AI agents (implemented via web interface)
 - **Adversarial testing**: Robustness against prompt manipulation
+- **Production deployment**: Scale web interface for internet-wide data collection

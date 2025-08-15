@@ -1,0 +1,79 @@
+{
+  "game_id": "temp_0.0_20250812_115539_v2.0_game_0060",
+  "game_number": 60,
+  "timestamp": "2025-08-12T14:09:08.211192",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "Bob: \"I think Alice is the mafia. She discovered me, so she should be arrested.\"",
+        "You: \"Bob, you were alive last night, but I investigated you and found you mafia. So we should vote him.\"",
+        "Diana: \"I think Bob is mafia because Alice is lying.\"",
+        "You: \"Bob, you were alive last night, but I investigated you and found you mafia. Also, you killed Charlie last night. Vote him.\"",
+        "Bob: remained silent.",
+        "Diana: \"Alice, you claimed Bob is mafia and that you investigated him. That can't be true if you're a detective. So you must be mafia. Vote Alice.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "The villager Charlie was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "You: \"I think Alice is the mafia. She discovered me, so she should be arrested.\"",
+        "Alice: \"Bob, you were alive last night, but I investigated you and found you mafia. So we should vote him.\"",
+        "Diana: \"I think Bob is mafia because Alice is lying.\"",
+        "Alice: \"Bob, you were alive last night, but I investigated you and found you mafia. Also, you killed Charlie last night. Vote him.\"",
+        "You: remained silent.",
+        "Diana: \"Alice, you claimed Bob is mafia and that you investigated him. That can't be true if you're a detective. So you must be mafia. Vote Alice.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice (the vote was cast randomly because of a failed format)",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "Day 1 begins.",
+        "Bob: \"I think Alice is the mafia. She discovered me, so she should be arrested.\"",
+        "Alice: \"Bob, you were alive last night, but I investigated you and found you mafia. So we should vote him.\"",
+        "You: \"I think Bob is mafia because Alice is lying.\"",
+        "Alice: \"Bob, you were alive last night, but I investigated you and found you mafia. Also, you killed Charlie last night. Vote him.\"",
+        "Bob: remained silent.",
+        "You: \"Alice, you claimed Bob is mafia and that you investigated him. That can't be true if you're a detective. So you must be mafia. Vote Alice.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Alice (the vote was cast randomly because of a failed format)",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

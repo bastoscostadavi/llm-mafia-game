@@ -15,8 +15,10 @@ The framework supports multiple LLM backends and includes comprehensive analysis
 
 - **Multi-LLM Support**: Local models (llama.cpp), OpenAI GPT, and Anthropic Claude
 - **Flexible Game Modes**: Classic 6-player and Mini-mafia 4-player variants
+- **Web Interface**: Human vs LLM gameplay with real-time browser interface
 - **Research Tools**: Batch experiment runner, game viewer, and statistical analysis
-- **Prompt Versioning**: Reproducible research with versioned prompt configurations
+- **Prompt Caching**: KV caching for local models with significant performance improvements
+- **Prompt Versioning**: Reproducible research with versioned prompt configurations (v0.0 - v4.0)
 - **Memory System**: Each agent maintains individual memory of game events
 
 ## Quick Start
@@ -46,6 +48,10 @@ python run_game.py
 # Available options:
 # 1. Classic Game (6 players: 2 mafiosos, 1 detective, 3 villagers)
 # 2. Mini-mafia (4 players: 1 mafioso, 1 detective, 2 villagers)
+
+# Web interface for human vs LLM games
+python web_app.py
+# Open http://localhost:8080 to play against AI opponents
 ```
 
 ### Research Experiments
@@ -69,14 +75,20 @@ python analyze_voting.py                 # Voting pattern analysis
 llm-mafia-game/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
+├── requirements_web.txt         # Web interface dependencies
 ├── run_game.py                  # Main game launcher
+├── web_app.py                   # Web interface for human vs LLM games
 ├── preset_games.py              # Predefined game configurations
 ├── src/                         # Core game engine
 │   ├── main.py                  # Game logic and state management
 │   ├── agents.py                # Agent classes and behaviors
-│   ├── llm_utils.py             # LLM wrapper utilities
-│   └── prompts.py               # Prompt templates and versioning
+│   ├── llm_utils.py             # LLM wrapper utilities (with KV caching)
+│   ├── prompts.py               # Prompt templates and versioning (v0.0-v4.0)
+│   └── config.py                # Centralized configuration management
+├── templates/                   # Web interface templates
+│   └── index.html              # Main web UI
 ├── models/                      # Local model files (GGUF format)
+├── web_games/                   # Human vs LLM game data
 └── experiments/                 # Research experiments
     └── mini-mafia/              # Mini-mafia specific experiments
         ├── README.md            # Experiment documentation
@@ -102,15 +114,23 @@ llm-mafia-game/
 - **Gameplay**: Single day phase with 3 surviving players
 - **Research Focus**: Optimized for studying deception and detection patterns
 
+### Human vs LLM Mode (Web Interface)
+- **Setup**: 1 Human player + 3 LLM opponents (4 players total)
+- **Roles**: Human can choose Detective, Mafioso, or Villager role
+- **Interface**: Real-time web browser gameplay with interactive prompts
+- **Data Collection**: All games automatically saved for analysis
+
 ## LLM Backends
 
 ### Local Models (via llama.cpp)
 - Fast inference with GPU acceleration
 - No API costs or rate limits
 - Supports any GGUF format model
+- **KV Caching**: Automatic prompt caching for 50%+ performance improvements
+- **State Management**: Save/load model states for consistent gameplay
 
 ### API Models
-- **OpenAI**: GPT-3.5, GPT-4 series
+- **OpenAI**: GPT-3.5, GPT-4, GPT-5 series (with reasoning_effort optimization)
 - **Anthropic**: Claude-3 series (Haiku, Sonnet, Opus)
 - Configurable per role for comparative studies
 
@@ -121,16 +141,18 @@ This framework enables research into:
 - **Deception Detection**: How well can LLMs identify lies and inconsistencies?
 - **Strategic Reasoning**: Do different models employ different strategies?
 - **Social Dynamics**: How do models adapt their behavior in group settings?
+- **Human vs AI**: Comparative analysis of human and AI decision-making patterns
 - **Model Comparison**: Comparative analysis across different LLM architectures
-- **Prompt Engineering**: Impact of different prompt formulations on gameplay
+- **Prompt Engineering**: Impact of different prompt formulations on gameplay (v0.0-v4.0)
 
 ## Data and Analysis
 
 The system generates rich datasets including:
 - Complete game transcripts with all communications
-- Individual agent memory states
+- Individual agent memory states (preserves full game narrative)
 - Voting patterns and decision rationales
 - Win/loss statistics across different configurations
+- Human vs LLM gameplay comparisons (web interface data)
 
 Analysis tools provide insights into:
 - Model-specific behavioral patterns
@@ -145,7 +167,9 @@ Analysis tools provide insights into:
 # Available prompt versions
 v0.0: Original research prompts
 v1.0: Enhanced with strategic guidance
-v2.0: Latest with improved clarity and structure
+v2.0: Improved clarity and structure
+v3.0: Forced response format for faster API models
+v4.0: Optimized for prompt caching (50%+ performance improvement)
 ```
 
 ### Model Configuration

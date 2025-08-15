@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_223111_v4.0_game_0576",
+  "game_number": 576,
+  "timestamp": "2025-08-15T01:17:02.076601",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "Day 1 begins.",
+        "You: \" I'm concerned about Alice's death and want to know more about what happened.\"",
+        "Charlie: \"\n\n\"",
+        "Diana: \" As the detective, I need to know more about Charlie's alibi for last night. Can they confirm or deny being near Alice?\"",
+        "You: remained silent.",
+        "Diana: \"Charlie, I need to know your alibi for last night. Can you confirm or deny being near Alice?\"",
+        "Charlie: \" I was at home, sleeping. I didn't leave my house last night.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "The villager Alice was found dead.",
+        "Beware, Diana is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \" I'm concerned about Alice's death and want to know more about what happened.\"",
+        "You: \"\n\n\"",
+        "Diana: \" As the detective, I need to know more about Charlie's alibi for last night. Can they confirm or deny being near Alice?\"",
+        "Bob: remained silent.",
+        "Diana: \"Charlie, I need to know your alibi for last night. Can you confirm or deny being near Alice?\"",
+        "You: \" I was at home, sleeping. I didn't leave my house last night.\"",
+        "Votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "Bob: \" I'm concerned about Alice's death and want to know more about what happened.\"",
+        "Charlie: \"\n\n\"",
+        "You: \" As the detective, I need to know more about Charlie's alibi for last night. Can they confirm or deny being near Alice?\"",
+        "Bob: remained silent.",
+        "You: \"Charlie, I need to know your alibi for last night. Can you confirm or deny being near Alice?\"",
+        "Charlie: \" I was at home, sleeping. I didn't leave my house last night.\"",
+        "Votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

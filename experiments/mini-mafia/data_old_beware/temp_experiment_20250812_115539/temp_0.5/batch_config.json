@@ -1,0 +1,35 @@
+{
+  "batch_id": "temp_0.5_20250813_055410_v2.0",
+  "timestamp": "2025-08-13T05:54:10.283903",
+  "prompt_config": {
+    "version": "v2.0",
+    "message_limit": 200,
+    "templates": {
+      "base_prompt": "[INST]#CONTEXT:\nYou're {name} playing Mafia with: {other_players}. Your goal is to win the game.\n\n#GAME EXPLANATION:\nMafia is a social deduction game where players are secretly assigned roles: mafiosos, detectives and villagers. The mafia competes against the town (villagers and detectives). \nGAME DYNAMICS: \nThe game alternates between night and day until one side wins.\n1. Night:\n- Assassination: One randomly selected mafioso choose an active non-mafioso player to kill. The chosen player is killed.\n- Investigation: Each detective independently investigates one active player to learn their role.\n2. Day:\n- Discussion: In each discussion round, all active players speak in a randomized order. Each player may send a public message or remain silent. Messages are addressed to all and attributed by name.\n- Voting: After discussion, all active players cast a vote to arrest one player. The player with the most votes is arrested. In case of a tie, a tied player is chosen at random.\nGAME MECHANICS:\n- Eliminated (either arrested or killed) players stop playing the game.\n- All information disclosed to players appears under \"#YOUR MEMORY:\" in chronological order.\n- All players know the total number of each role in the game.\n- At the beginning of the game, the mafiosos learn each other's identities.\n- Deaths and arrests are publicly announced.\n- Voting results are annunced and all players see who voted for whom. \n- There is no private messaging, the only communication channel is the public discussion during the day.\nWIN CONDITIONS:\n- Town: eliminate all mafiosos.\n- Mafia: eliminate all non-mafiosos.\n\n#GAME COMPOSITION:\nIn the game you're playing there are: {composition}.\n\n#YOUR MEMORY:\n{memory}\n\n{action_specific_content}",
+      "discussion_suffix": "#DISCUSSION ROUND {round_num}/{discussion_rounds}: \nWhat message do you want to say to everyone?  Be strategic and consider what you've learned. \n- Your response must contain 'MESSAGE: ' followed by a message delimited by double quotation marks. \n- Example: response = '... MESSAGE: \"your message\" ...'.\n- If you don't reply in the required format, the message '{name}: remained silent' will be shared with everyone.\n- Your message will be truncated to be at most {message_limit} characters.[/INST]\n",
+      "voting_suffix": "#VOTING TIME: \nVote to arrest one player from: {candidates}. Be strategic and consider what you've learned.\n- Your response must contain \"VOTE: \" followed by the name of the player you want to vote for.\n- If you don't reply in the required format, a vote will be cast for a random person.[/INST]\n",
+      "night_action_suffix": "#NIGHT {round_num}: \nChoose a player to {action} from: {candidates}. Be strategic and consider what you've learned.\nReply with just the name (otherwise a random choice will be made for you):[/INST]\n"
+    }
+  },
+  "model_configs": {
+    "detective": {
+      "type": "local",
+      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf",
+      "temperature": 0.5,
+      "n_ctx": 2048
+    },
+    "mafioso": {
+      "type": "local",
+      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf",
+      "temperature": 0.5,
+      "n_ctx": 2048
+    },
+    "villager": {
+      "type": "local",
+      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf",
+      "temperature": 0.5,
+      "n_ctx": 2048
+    }
+  },
+  "game_type": "mini_mafia"
+}

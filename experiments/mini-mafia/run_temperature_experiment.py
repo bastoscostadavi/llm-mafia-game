@@ -10,7 +10,6 @@ Uses GPT-OSS-20B model for all players.
 import sys
 import os
 import json
-import subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -27,9 +26,9 @@ def create_model_config_with_temperature(temperature):
     model_path = project_root / 'models' / 'openai_gpt-oss-20b-Q4_K_M.gguf'
     
     return {
-        'detective': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048},
-        'mafioso': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048},
-        'villager': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 2048}
+        'detective': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 8192},
+        'mafioso': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 8192},
+        'villager': {'type': 'local', 'model_path': str(model_path), 'temperature': temperature, 'n_ctx': 8192}
     }
 
 def run_temperature_experiment(n_games=100, temperatures=None, debug_prompts=False):

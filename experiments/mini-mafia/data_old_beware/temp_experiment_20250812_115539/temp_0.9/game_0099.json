@@ -1,0 +1,79 @@
+{
+  "game_id": "temp_0.9_20250813_232021_v2.0_game_0099",
+  "game_number": 99,
+  "timestamp": "2025-08-14T03:00:14.059823",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I investigated Diana and she is mafia. Bob was killed last night. Vote for her.\"",
+        "You: remained silent.",
+        "Diana: \" and use double quotes. So final output: 'MESSAGE: \"",
+        "You: \"I support Charlie\u2019s vote; Diana seems suspicious.\"",
+        "Charlie: \"Bob was killed by the mafia. I confirmed Diana is mafia. Alice, please vote her.\"",
+        "Diana: \"Alice, I think Charlie is the one to go.\"",
+        "Votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "The villager Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"I investigated Diana and she is mafia. Bob was killed last night. Vote for her.\"",
+        "Alice: remained silent.",
+        "Diana: \" and use double quotes. So final output: 'MESSAGE: \"",
+        "Alice: \"I support Charlie\u2019s vote; Diana seems suspicious.\"",
+        "You: \"Bob was killed by the mafia. I confirmed Diana is mafia. Alice, please vote her.\"",
+        "Diana: \"Alice, I think Charlie is the one to go.\"",
+        "Votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Bob.",
+        "The villager Bob was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: \"I investigated Diana and she is mafia. Bob was killed last night. Vote for her.\"",
+        "Alice: remained silent.",
+        "You: \" and use double quotes. So final output: 'MESSAGE: \"",
+        "Alice: \"I support Charlie\u2019s vote; Diana seems suspicious.\"",
+        "Charlie: \"Bob was killed by the mafia. I confirmed Diana is mafia. Alice, please vote her.\"",
+        "You: \"Alice, I think Charlie is the one to go.\""
+      ]
+    }
+  ]
+}

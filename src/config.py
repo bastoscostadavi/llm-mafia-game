@@ -6,6 +6,9 @@ This module provides a single source of truth for system-wide settings,
 preventing version mismatches and configuration inconsistencies.
 """
 
+
+from src.prompts import PromptConfig
+
 # CURRENT SYSTEM VERSION
 # This is the single source of truth for prompt version across the entire system
 DEFAULT_PROMPT_VERSION = "v4.0"
@@ -18,7 +21,6 @@ DEFAULT_MODEL_CONFIGS = {
 }
 
 # GAME SETTINGS
-DEFAULT_DISCUSSION_ROUNDS = 2
 DEFAULT_MESSAGE_LIMIT = 200
 
 # TOKEN LIMITS (optimized for cost efficiency)
@@ -37,7 +39,6 @@ GPT5_TOKEN_LIMITS = {
 
 def get_default_prompt_config():
     """Get the default prompt configuration for the system"""
-    from src.prompts import PromptConfig
     return PromptConfig(version=DEFAULT_PROMPT_VERSION)
 
 def get_default_model_configs():

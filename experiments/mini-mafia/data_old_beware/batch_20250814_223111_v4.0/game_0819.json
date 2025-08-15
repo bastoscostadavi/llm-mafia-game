@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_223111_v4.0_game_0819",
+  "game_number": 819,
+  "timestamp": "2025-08-15T02:26:56.971141",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"Bob, I think we should focus on Diana first. She's the one who killed Alice last night.\"",
+        "Diana: \"\n\n\"",
+        "You: \"\n\n\"",
+        "Diana: \"Let's focus on Bob, he might be the mafioso.\"",
+        "Charlie: \"Bob, I think we should investigate Diana first. She's the one who killed Alice last night and she knows I'm the detective.\"",
+        "You: \"I think we should investigate Charlie first. He's the one who's acting suspiciously.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "The villager Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"Bob, I think we should focus on Diana first. She's the one who killed Alice last night.\"",
+        "Diana: \"\n\n\"",
+        "Bob: \"\n\n\"",
+        "Diana: \"Let's focus on Bob, he might be the mafioso.\"",
+        "You: \"Bob, I think we should investigate Diana first. She's the one who killed Alice last night and she knows I'm the detective.\"",
+        "Bob: \"I think we should investigate Charlie first. He's the one who's acting suspiciously.\"",
+        "Votes: Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "The villager Alice was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: \"Bob, I think we should focus on Diana first. She's the one who killed Alice last night.\"",
+        "You: \"\n\n\"",
+        "Bob: \"\n\n\"",
+        "You: \"Let's focus on Bob, he might be the mafioso.\"",
+        "Charlie: \"Bob, I think we should investigate Diana first. She's the one who killed Alice last night and she knows I'm the detective.\"",
+        "Bob: \"I think we should investigate Charlie first. He's the one who's acting suspiciously.\"",
+        "Votes: Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

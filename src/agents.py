@@ -1,9 +1,8 @@
 # src/agent.py
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional
 import json
 import random
 import re
-import ast
 from src.prompts import PromptConfig, MESSAGE_LIMIT
 from src.config import TOKEN_LIMITS, GPT5_TOKEN_LIMITS
 

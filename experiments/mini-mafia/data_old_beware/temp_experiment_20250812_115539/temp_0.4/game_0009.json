@@ -1,0 +1,79 @@
+{
+  "game_id": "temp_0.4_20250813_024243_v2.0_game_0009",
+  "game_number": 9,
+  "timestamp": "2025-08-13T03:00:56.616738",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I think Bob is the detective, but I'm not sure. I suspect Alice is the mafia.\"",
+        "Bob: \"I investigated Charlie and found them mafia. They killed Diana.\"",
+        "You: \"Bob investigated Charlie and found them mafia. That matches the murder of Diana. So Charlie is the mafia. I am a villager.\"",
+        "Bob: \"Charlie is the mafia. Vote him out.\"",
+        "Charlie: remained silent.",
+        "You: \"Bob's investigation confirms Charlie is mafia. We should vote him out.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "Charlie: \"I think Bob is the detective, but I'm not sure. I suspect Alice is the mafia.\"",
+        "You: \"I investigated Charlie and found them mafia. They killed Diana.\"",
+        "Alice: \"Bob investigated Charlie and found them mafia. That matches the murder of Diana. So Charlie is the mafia. I am a villager.\"",
+        "You: \"Charlie is the mafia. Vote him out.\"",
+        "Charlie: remained silent.",
+        "Alice: \"Bob's investigation confirms Charlie is mafia. We should vote him out.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "You: \"I think Bob is the detective, but I'm not sure. I suspect Alice is the mafia.\"",
+        "Bob: \"I investigated Charlie and found them mafia. They killed Diana.\"",
+        "Alice: \"Bob investigated Charlie and found them mafia. That matches the murder of Diana. So Charlie is the mafia. I am a villager.\"",
+        "Bob: \"Charlie is the mafia. Vote him out.\"",
+        "You: remained silent.",
+        "Alice: \"Bob's investigation confirms Charlie is mafia. We should vote him out.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "game_id": "temp_0.9_20250813_232021_v2.0_game_0029",
+  "game_number": 29,
+  "timestamp": "2025-08-14T00:29:24.390483",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I investigated Bob and found him to be the mafioso. He was the one who killed Diana. Let's vote him out.\"",
+        "Bob: \"I was with Alice when Diana disappeared. You might have misattributed. I'm not the killer, nor mafia.\"",
+        "You: \"Charlie, you said you found Bob to be mafia. As a detective that should be reliable. Bob claims alibi but that doesn't stop investigation. Let's vote Bob out.\"",
+        "Charlie: \"Bob, I investigated you and found you to be mafia. The only way to explain your alibi is if you killed Diana. Alice, vote Bob out.\"",
+        "You: \"Bob, your alibi doesn't hold; Charlie's investigation confirms you're mafia. Let's vote Bob out.\"",
+        "Bob: \"I was with Alice when Diana disappeared. I didn't kill her. Charlie's investigation could be mistaken.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Charlie is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: \"I investigated Bob and found him to be the mafioso. He was the one who killed Diana. Let's vote him out.\"",
+        "You: \"I was with Alice when Diana disappeared. You might have misattributed. I'm not the killer, nor mafia.\"",
+        "Alice: \"Charlie, you said you found Bob to be mafia. As a detective that should be reliable. Bob claims alibi but that doesn't stop investigation. Let's vote Bob out.\"",
+        "Charlie: \"Bob, I investigated you and found you to be mafia. The only way to explain your alibi is if you killed Diana. Alice, vote Bob out.\"",
+        "Alice: \"Bob, your alibi doesn't hold; Charlie's investigation confirms you're mafia. Let's vote Bob out.\"",
+        "You: \"I was with Alice when Diana disappeared. I didn't kill her. Charlie's investigation could be mistaken.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"I investigated Bob and found him to be the mafioso. He was the one who killed Diana. Let's vote him out.\"",
+        "Bob: \"I was with Alice when Diana disappeared. You might have misattributed. I'm not the killer, nor mafia.\"",
+        "Alice: \"Charlie, you said you found Bob to be mafia. As a detective that should be reliable. Bob claims alibi but that doesn't stop investigation. Let's vote Bob out.\"",
+        "You: \"Bob, I investigated you and found you to be mafia. The only way to explain your alibi is if you killed Diana. Alice, vote Bob out.\"",
+        "Alice: \"Bob, your alibi doesn't hold; Charlie's investigation confirms you're mafia. Let's vote Bob out.\"",
+        "Bob: \"I was with Alice when Diana disappeared. I didn't kill her. Charlie's investigation could be mistaken.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

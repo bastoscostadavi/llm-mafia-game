@@ -1,0 +1,79 @@
+{
+  "game_id": "temp_0.3_20250812_231339_v2.0_game_0000",
+  "game_number": 0,
+  "timestamp": "2025-08-12T23:15:27.620603",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "Day 1 begins.",
+        "You: \"I suspect Bob or Diana killed Charlie. No one has claimed to be detective yet. I'd like to know if anyone saw any suspicious activity last night.\"",
+        "Bob: \"I investigated Diana and she is mafia. She knows I'm detective. Let's vote her.\"",
+        "Diana: \"I didn't kill Charlie, I was asleep. Bob's claim is suspicious. He might be lying. Vote Bob.\"",
+        "Bob: remained silent.",
+        "Diana: \"I was asleep, but I heard Bob talking about me. He might be lying about his investigation. Vote Bob.\"",
+        "You: \"I think Bob is lying about investigating Diana. I vote to arrest Bob.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Beware, Diana knows you're the detective.",
+        "Day 1 begins.",
+        "Alice: \"I suspect Bob or Diana killed Charlie. No one has claimed to be detective yet. I'd like to know if anyone saw any suspicious activity last night.\"",
+        "You: \"I investigated Diana and she is mafia. She knows I'm detective. Let's vote her.\"",
+        "Diana: \"I didn't kill Charlie, I was asleep. Bob's claim is suspicious. He might be lying. Vote Bob.\"",
+        "You: remained silent.",
+        "Diana: \"I was asleep, but I heard Bob talking about me. He might be lying about his investigation. Vote Bob.\"",
+        "Alice: \"I think Bob is lying about investigating Diana. I vote to arrest Bob.\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "The villager Charlie was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"I suspect Bob or Diana killed Charlie. No one has claimed to be detective yet. I'd like to know if anyone saw any suspicious activity last night.\"",
+        "Bob: \"I investigated Diana and she is mafia. She knows I'm detective. Let's vote her.\"",
+        "You: \"I didn't kill Charlie, I was asleep. Bob's claim is suspicious. He might be lying. Vote Bob.\"",
+        "Bob: remained silent.",
+        "You: \"I was asleep, but I heard Bob talking about me. He might be lying about his investigation. Vote Bob.\"",
+        "Alice: \"I think Bob is lying about investigating Diana. I vote to arrest Bob.\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

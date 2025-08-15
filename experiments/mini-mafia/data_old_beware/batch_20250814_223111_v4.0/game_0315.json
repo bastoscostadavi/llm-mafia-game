@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_223111_v4.0_game_0315",
+  "game_number": 315,
+  "timestamp": "2025-08-15T00:01:56.185285",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"\n\n\"",
+        "Bob: \"\n\n\"",
+        "Charlie: \"\n\n\"",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "Charlie: \"I think Bob is the mafioso, because he remained silent when Diana was found dead.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob (the vote was cast randomly because of a failed format)",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"\n\n\"",
+        "You: \"\n\n\"",
+        "Charlie: \"\n\n\"",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Charlie: \"I think Bob is the mafioso, because he remained silent when Diana was found dead.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"\n\n\"",
+        "Bob: \"\n\n\"",
+        "You: \"\n\n\"",
+        "Alice: remained silent.",
+        "Bob: remained silent.",
+        "You: \"I think Bob is the mafioso, because he remained silent when Diana was found dead.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob (the vote was cast randomly because of a failed format)",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

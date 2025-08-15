@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_183322_v4.0_game_0594",
+  "game_number": 594,
+  "timestamp": "2025-08-14T20:53:47.839524",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "Charlie: \"I am innocent\"",
+        "You: remained silent.",
+        "Charlie: \"I am the mafioso and I killed Diana last night. Bob, as the detective, has figured this out. Today is my chance to turn the tables on you.\"",
+        "Bob: remained silent.",
+        "You: \"I am not the mafioso. I believe Charlie is lying and Bob might have figured out who the mafioso is.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Beware, Charlie knows you're the detective.",
+        "Day 1 begins.",
+        "You: \"\n\"",
+        "Charlie: \"I am innocent\"",
+        "Alice: remained silent.",
+        "Charlie: \"I am the mafioso and I killed Diana last night. Bob, as the detective, has figured this out. Today is my chance to turn the tables on you.\"",
+        "You: remained silent.",
+        "Alice: \"I am not the mafioso. I believe Charlie is lying and Bob might have figured out who the mafioso is.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Bob is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "You: \"I am innocent\"",
+        "Alice: remained silent.",
+        "You: \"I am the mafioso and I killed Diana last night. Bob, as the detective, has figured this out. Today is my chance to turn the tables on you.\"",
+        "Bob: remained silent.",
+        "Alice: \"I am not the mafioso. I believe Charlie is lying and Bob might have figured out who the mafioso is.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

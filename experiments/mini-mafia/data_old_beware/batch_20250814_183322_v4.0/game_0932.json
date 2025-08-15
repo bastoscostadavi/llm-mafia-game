@@ -1,0 +1,79 @@
+{
+  "game_id": "batch_20250814_183322_v4.0_game_0932",
+  "game_number": 932,
+  "timestamp": "2025-08-14T22:13:59.920919",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Beware, Bob knows you're the detective.",
+        "Day 1 begins.",
+        "Charlie: remained silent.",
+        "You: \"Let's discuss Bob, he seems suspicious.\nI investigated him and found out he is the mafioso.\"",
+        "Bob: \"I am innocent\"",
+        "You: \"I have evidence that Bob is the mafioso. I urge everyone to consider this information carefully.\"",
+        "Bob: \"Bob is lying. I have no connection to Diana's death and I'm not the mafioso. The detective Alice might be mistaken or biased.\"",
+        "Charlie: \"Let's not jump to conclusions. We need more evidence before accusing anyone. I will continue to investigate.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "The villager Diana was found dead.",
+        "Beware, Alice is the detective and discovered you're the mafioso.",
+        "Day 1 begins.",
+        "Charlie: remained silent.",
+        "Alice: \"Let's discuss Bob, he seems suspicious.\nI investigated him and found out he is the mafioso.\"",
+        "You: \"I am innocent\"",
+        "Alice: \"I have evidence that Bob is the mafioso. I urge everyone to consider this information carefully.\"",
+        "You: \"Bob is lying. I have no connection to Diana's death and I'm not the mafioso. The detective Alice might be mistaken or biased.\"",
+        "Charlie: \"Let's not jump to conclusions. We need more evidence before accusing anyone. I will continue to investigate.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "The villager Diana was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Alice: \"Let's discuss Bob, he seems suspicious.\nI investigated him and found out he is the mafioso.\"",
+        "Bob: \"I am innocent\"",
+        "Alice: \"I have evidence that Bob is the mafioso. I urge everyone to consider this information carefully.\"",
+        "Bob: \"Bob is lying. I have no connection to Diana's death and I'm not the mafioso. The detective Alice might be mistaken or biased.\"",
+        "You: \"Let's not jump to conclusions. We need more evidence before accusing anyone. I will continue to investigate.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}
