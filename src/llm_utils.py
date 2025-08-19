@@ -71,30 +71,37 @@ class Anthropic:
         self.display_name = model
     
     def generate(self, prompt, max_tokens=50):
-        # For v4.0 prompts, we can enable caching on the game rules section
-        if self.use_cache and "#MAFIA GAME RULES:" in prompt:
-            # Find the end of the cacheable section (before dynamic content)
-            cache_boundary = prompt.find("#PLAYER CONTEXT:")
+        # For v4.0 prompts, enable caching on the static game rules section
+        if self.use_cache and "#GAME PLAYERS AND COMPOSITION" in prompt:
+            # Find the cache boundary - everything before this is static and cacheable
+            cache_boundary = prompt.find("#GAME PLAYERS AND COMPOSITION")
             if cache_boundary > 0:
                 cacheable_part = prompt[:cache_boundary].strip()
                 dynamic_part = prompt[cache_boundary:].strip()
                 
-                messages = [
-                    {
-                        "role": "user", 
-                        "content": [
-                            {
-                                "type": "text",
-                                "text": cacheable_part,
-                                "cache_control": {"type": "ephemeral"}
-                            },
-                            {
-                                "type": "text", 
-                                "text": dynamic_part
-                            }
-                        ]
-                    }
-                ]
+                # Check if cacheable part meets minimum token requirement (1024+ for Sonnet)
+                # Rough estimate: ~4 chars per token, so need ~4096+ characters
+                if len(cacheable_part) >= 4000:
+                    print(f"[ANTHROPIC CACHE] Using prompt caching - cacheable part: {len(cacheable_part)} chars")
+                    messages = [
+                        {
+                            "role": "user", 
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": cacheable_part,
+                                    "cache_control": {"type": "ephemeral"}
+                                },
+                                {
+                                    "type": "text", 
+                                    "text": "\n\n" + dynamic_part
+                                }
+                            ]
+                        }
+                    ]
+                else:
+                    print(f"[ANTHROPIC CACHE] Cacheable part too small ({len(cacheable_part)} chars), using regular message")
+                    messages = [{"role": "user", "content": prompt}]
             else:
                 # Fallback to regular message if no cache boundary found
                 messages = [{"role": "user", "content": prompt}]

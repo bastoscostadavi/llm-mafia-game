@@ -38,8 +38,8 @@ def extract_model_name(model_config):
         model = model_config.get('model', 'unknown')
         if model.startswith('gpt-5'):
             return 'GPT-5'
-        elif model.startswith('gpt-4'):
-            return 'GPT-4'
+        elif 'gpt-4o' in model.lower():
+            return 'GPT-4o'
         elif model.startswith('gpt-3.5'):
             return 'GPT-3.5'
         else:
@@ -53,6 +53,8 @@ def extract_model_name(model_config):
             return 'Claude-3-Sonnet'
         elif 'claude-3-opus' in model:
             return 'Claude-3-Opus'
+        elif 'claude-sonnet-4' in model or 'sonnet-4' in model:
+            return 'Claude-Sonnet-4'
         else:
             return f"Claude-{model}"
     
@@ -64,11 +66,11 @@ def extract_model_name(model_config):
         
         filename = os.path.basename(model_path)
         
-        # Map model files to short names
+        # Map model files to full descriptive names
         model_mapping = {
-            'mistral.gguf': 'Mistral',
-            'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5',
-            'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama3.1',
+            'mistral.gguf': 'Mistral 7B Instruct',
+            'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5 7B Instruct',
+            'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama3.1 8B Instruct',
             'openai_gpt-oss-20b-Q4_K_M.gguf': 'GPT-OSS'
         }
         

@@ -4,7 +4,7 @@ import json
 import random
 import re
 from src.prompts import PromptConfig, MESSAGE_LIMIT
-from src.config import TOKEN_LIMITS, GPT4O_TOKEN_LIMITS, GPT5_TOKEN_LIMITS
+from src.config import TOKEN_LIMITS
 
 class MafiaAgent:
     def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, prompt_config: PromptConfig = None):
@@ -46,17 +46,8 @@ class MafiaAgent:
         return 'default'
     
     def _get_token_limit(self, action_type: str) -> int:
-        """Get appropriate token limit based on model type"""
-        model_type = self._get_model_type()
-        
-        if model_type == 'gpt5':
-            limits = GPT5_TOKEN_LIMITS
-        elif model_type == 'gpt4o':
-            limits = GPT4O_TOKEN_LIMITS
-        else:
-            limits = TOKEN_LIMITS
-            
-        return limits.get(action_type, TOKEN_LIMITS[action_type])
+        """Get token limit for action type"""
+        return TOKEN_LIMITS.get(action_type, TOKEN_LIMITS['discussion'])
     
     def _generate(self, prompt: str, max_tokens: int = 50) -> str:
         """Generate response from LLM (all wrappers have generate method)"""

@@ -16,32 +16,18 @@ DEFAULT_PROMPT_VERSION = "v4.0"
 # MODEL CONFIGURATIONS
 DEFAULT_MODEL_CONFIGS = {
     'detective': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/mistral.gguf', 'n_ctx': 2048},
-    'mafioso': {'type': 'openai', 'model': 'gpt-4o'},
+    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': 0.7, 'use_cache': True},
     'villager': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/mistral.gguf', 'n_ctx': 2048}
 }
 
 # GAME SETTINGS
 DEFAULT_MESSAGE_LIMIT = 200
 
-# TOKEN LIMITS (optimized for cost efficiency)
+# TOKEN LIMITS (standard for all models)
 TOKEN_LIMITS = {
-    'discussion': 60,   # ~200 chars message + format
-    'voting': 7,        # A name
-    'night_action': 7  # A name
-}
-
-# GPT-4o specific token limits (cost-optimized)
-GPT4O_TOKEN_LIMITS = {
-    'discussion': 40,    # GPT-4o is more concise than GPT-5
-    'voting': 5,         # Just a name
-    'night_action': 5    # Just a name
-}
-
-# GPT-5 specific token limits (needs higher limits even with minimal reasoning)
-GPT5_TOKEN_LIMITS = {
-    'discussion': 120,   # GPT-5 needs more tokens even with minimal reasoning
-    'voting': 25,        # Same as night actions
-    'night_action': 25   # Same as voting
+    'discussion': 50,   # Balanced between quality and cost
+    'voting': 5,        # A name
+    'night_action': 5   # A name
 }
 
 def get_default_prompt_config():
