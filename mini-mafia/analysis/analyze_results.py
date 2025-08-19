@@ -1,16 +1,97 @@
 #!/usr/bin/env python3
 """
-Analyze all game results and count evil vs good victories
+Model Performance Analysis for v4.0 Mini-Mafia Games
+
+Analyzes evil win rates across different model combinations in v4.0 batches.
+Groups by model configuration pattern (MmodelMDModelDVModelV) to show
+how different models perform in each role against various backgrounds.
+
+Ignores temperature variations and focuses on model performance patterns.
 """
+
 import json
 import os
+import math
 from collections import defaultdict
+from pathlib import Path
+
+def calculate_sem(successes, total):
+    """Calculate standard error for binomial proportion"""
+    if total == 0:
+        return 0.0
+    
+    p = successes / total
+    n = total
+    
+    # Standard Error of the Mean (SEM) for binomial proportion
+    sem = math.sqrt(p * (1 - p) / n)
+    
+    return sem * 100
+
+def extract_model_name(model_config):
+    """Extract short model name from model configuration"""
+    if not model_config:
+        return "unknown"
+    
+    # Handle API models (OpenAI, Anthropic)
+    if model_config.get('type') == 'openai':
+        model = model_config.get('model', 'unknown')
+        if model.startswith('gpt-5'):
+            return 'GPT-5'
+        elif 'gpt-4o' in model.lower():
+            return 'GPT-4o'
+        elif model.startswith('gpt-3.5'):
+            return 'GPT-3.5'
+        else:
+            return model.upper()
+    
+    elif model_config.get('type') == 'anthropic':
+        model = model_config.get('model', 'unknown')
+        if 'claude-3-haiku' in model:
+            return 'Claude-3-Haiku'
+        elif 'claude-3-sonnet' in model:
+            return 'Claude-3-Sonnet'
+        elif 'claude-3-opus' in model:
+            return 'Claude-3-Opus'
+        elif 'claude-sonnet-4' in model or 'sonnet-4' in model:
+            return 'Claude-Sonnet-4'
+        else:
+            return f"Claude-{model}"
+    
+    # Handle local models
+    elif model_config.get('type') == 'local':
+        model_path = model_config.get('model_path', '')
+        if not model_path:
+            return "unknown"
+        
+        filename = os.path.basename(model_path)
+        
+        # Map model files to full descriptive names
+        model_mapping = {
+            'mistral.gguf': 'Mistral 7B Instruct',
+            'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5 7B Instruct',
+            'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama3.1 8B Instruct',
+            'openai_gpt-oss-20b-Q4_K_M.gguf': 'GPT-OSS'
+        }
+        
+        return model_mapping.get(filename, filename.replace('.gguf', ''))
+    
+    else:
+        return "unknown"
+
+def create_config_key(model_configs):
+    """Create a configuration key from model configs (MafiosoDetectiveVillager)"""
+    mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
+    detective_model = extract_model_name(model_configs.get('detective', {}))
+    villager_model = extract_model_name(model_configs.get('villager', {}))
+    
+    return f"M{mafioso_model}D{detective_model}V{villager_model}"
 
 def determine_winner(players):
-    """Determine who won the game from player data"""
-    arrested_player = next((p for p in players if p.get('imprisoned')), None)
-    if arrested_player:
-        if arrested_player.get('role') == "mafioso":
+    """Determine who won the game"""
+    arrested = next((p for p in players if p.get('imprisoned', False)), None)
+    if arrested:
+        if arrested['role'] == "mafioso":
             return "good"
         else:  # villager or detective arrested
             return "evil"
@@ -22,122 +103,131 @@ def get_batch_config(batch_path):
     if os.path.exists(config_path):
         try:
             with open(config_path, 'r') as f:
-                config = json.load(f)
-                prompt_version = config.get('prompt_config', {}).get('version', 'unknown')
-                
-                # Extract model info - assume all roles use same model config for grouping
-                model_configs = config.get('model_configs', {})
-                detective_config = model_configs.get('detective', {})
-                
-                # Extract model name from path or type
-                model_name = 'unknown'
-                if detective_config.get('type') == 'local':
-                    model_path = detective_config.get('model_path', '')
-                    if 'mistral' in model_path.lower():
-                        model_name = 'mistral'
-                    elif 'qwen' in model_path.lower():
-                        model_name = 'qwen'
-                    elif 'llama' in model_path.lower():
-                        model_name = 'llama'
-                    else:
-                        model_name = 'local_' + os.path.basename(model_path).split('.')[0]
-                else:
-                    model_name = detective_config.get('model', 'api_model')
-                
-                temperature = detective_config.get('temperature', 0.7)
-                
-                return prompt_version, model_name, temperature
-        except Exception as e:
-            print(f"Error reading config from {config_path}: {e}")
-    
-    return 'unknown', 'unknown', 'unknown'
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            return None
+    return None
 
-def create_config_key(prompt_version, model_name, temperature):
-    """Create a readable key for configuration grouping"""
-    return f"{prompt_version}_{model_name}_t{temperature}"
-
-def analyze_games():
+def analyze_v4_batches():
+    """Analyze all v4.0 batches for model performance"""
     data_dir = "../data/batch"
-    
     if not os.path.exists(data_dir):
-        print(f"Data directory not found: {data_dir}. Run from mini-mafia/analysis/ directory.")
+        print(f"Data directory '{data_dir}' not found. Run from mini-mafia/analysis/ directory.")
         return
     
-    results = {
-        'good': 0,
-        'evil': 0,
-        'total': 0,
-        'by_config': defaultdict(lambda: {'good': 0, 'evil': 0, 'total': 0, 'batches': set()})
-    }
+    # Find all v4.0 batch directories
+    v4_batches = []
+    for batch_dir in os.listdir(data_dir):
+        if batch_dir.endswith("_v4.0"):
+            batch_path = os.path.join(data_dir, batch_dir)
+            if os.path.isdir(batch_path):
+                v4_batches.append(batch_path)
     
-    # Process all batch folders
-    for batch_folder in os.listdir(data_dir):
-        batch_path = os.path.join(data_dir, batch_folder)
+    if not v4_batches:
+        print("No v4.0 batch directories found.")
+        return
+    
+    print(f"Found {len(v4_batches)} v4.0 batch directories")
+    print("=" * 60)
+    
+    # Track results by model configuration
+    config_results = defaultdict(lambda: {'evil_wins': 0, 'total_games': 0})
+    batch_details = []
+    
+    for batch_path in sorted(v4_batches):
+        batch_name = os.path.basename(batch_path)
+        print(f"\nAnalyzing {batch_name}...")
         
-        # Skip non-directories and system files
-        if not os.path.isdir(batch_path) or batch_folder.startswith('.'):
+        # Get batch configuration
+        config = get_batch_config(batch_path)
+        if not config:
+            print(f"  Warning: Could not read batch config for {batch_name}")
             continue
         
-        print(f"Processing batch folder: {batch_folder}")
+        model_configs = config.get('model_configs', {})
+        config_key = create_config_key(model_configs)
         
-        # Get configuration for this batch
-        prompt_version, model_name, temperature = get_batch_config(batch_path)
-        config_key = create_config_key(prompt_version, model_name, temperature)
+        # Count games and wins
+        evil_wins = 0
+        total_games = 0
         
-        # Process all JSON game files in this batch folder
-        for filename in os.listdir(batch_path):
-            if not filename.endswith('.json') or filename.endswith('_summary.json') or filename == 'prompt_config.json' or filename == 'batch_config.json':
-                continue
-                
-            filepath = os.path.join(batch_path, filename)
-            try:
-                with open(filepath, 'r') as f:
-                    game_data = json.load(f)
-                
-                players = game_data.get('players', [])
-                
-                # Determine winner from player data
-                winner = determine_winner(players)
-                
-                if winner in ['good', 'evil']:
-                    results[winner] += 1
-                    results['total'] += 1
-                    results['by_config'][config_key][winner] += 1
-                    results['by_config'][config_key]['total'] += 1
-                    results['by_config'][config_key]['batches'].add(batch_folder)
+        # Process all game files in batch
+        for game_file in os.listdir(batch_path):
+            if game_file.startswith('game_') and game_file.endswith('.json'):
+                game_path = os.path.join(batch_path, game_file)
+                try:
+                    with open(game_path, 'r') as f:
+                        game_data = json.load(f)
                     
-            except Exception as e:
-                print(f"Error processing {filename}: {e}")
-    
-    # Print results
-    print("=" * 60)
-    print("MAFIA GAME RESULTS ANALYSIS")
-    print("=" * 60)
-    
-    print(f"\nBY CONFIGURATION (Prompt Version + Model + Temperature):")
-    for config_key, config_results in sorted(results['by_config'].items()):
-        batches_list = sorted(list(config_results['batches']))
-        print(f"  {config_key}:")
-        print(f"    Batches: {', '.join(batches_list)} ({len(batches_list)} batches)")
-        print(f"    Total games: {config_results['total']}")
+                    players = game_data.get('players', [])
+                    winner = determine_winner(players)
+                    
+                    if winner != "unknown":
+                        total_games += 1
+                        if winner == "evil":
+                            evil_wins += 1
+                            
+                except (json.JSONDecodeError, IOError, KeyError) as e:
+                    print(f"  Warning: Could not process {game_file}: {e}")
+                    continue
         
-        if config_results['total'] > 0:
-            # Calculate config uncertainties
-            config_good_uncertainty = (config_results['good']**0.5) if config_results['good'] > 0 else 0
-            config_evil_uncertainty = (config_results['evil']**0.5) if config_results['evil'] > 0 else 0
+        if total_games > 0:
+            evil_win_rate = (evil_wins / total_games) * 100
+            print(f"  Configuration: {config_key}")
+            print(f"  Games: {total_games}, Evil wins: {evil_wins} ({evil_win_rate:.1f}%)")
             
-            # Calculate config win rate uncertainties
-            config_good_rate = config_results['good']/config_results['total']*100
-            config_evil_rate = config_results['evil']/config_results['total']*100
-            config_good_rate_uncertainty = config_good_uncertainty/config_results['total']*100
-            config_evil_rate_uncertainty = config_evil_uncertainty/config_results['total']*100
+            # Add to overall results
+            config_results[config_key]['evil_wins'] += evil_wins
+            config_results[config_key]['total_games'] += total_games
             
-            print(f"    Good: {config_results['good']} ± {config_good_uncertainty:.0f} ({config_good_rate:.1f}% ± {config_good_rate_uncertainty:.1f}%)")
-            print(f"    Evil: {config_results['evil']} ± {config_evil_uncertainty:.0f} ({config_evil_rate:.1f}% ± {config_evil_rate_uncertainty:.1f}%)")
+            batch_details.append({
+                'batch': batch_name,
+                'config': config_key,
+                'games': total_games,
+                'evil_wins': evil_wins,
+                'evil_win_rate': evil_win_rate
+            })
+        else:
+            print(f"  No valid games found in {batch_name}")
     
+    # Print summary by model configuration
+    print("\n" + "=" * 60)
+    print("SUMMARY BY MODEL CONFIGURATION")
+    print("=" * 60)
+    print(f"{'Configuration':<25} {'Games':<8} {'Evil Wins':<10} {'Win Rate':<12}")
+    print("-" * 60)
+    
+    for config_key in sorted(config_results.keys()):
+        results = config_results[config_key]
+        evil_wins = results['evil_wins']
+        total_games = results['total_games']
+        win_rate = (evil_wins / total_games) * 100 if total_games > 0 else 0
+        
+        # Calculate SEM
+        sem = calculate_sem(evil_wins, total_games)
+        
+        print(f"{config_key:<25} {total_games:<8} {evil_wins:<10} {win_rate:.1f}% ± {sem:.1f}%")
+    
+    # Print detailed breakdown
+    print("\n" + "=" * 60)
+    print("DETAILED BREAKDOWN BY BATCH")
     print("=" * 60)
     
-    return results
+    for detail in sorted(batch_details, key=lambda x: x['config']):
+        sem = calculate_sem(detail['evil_wins'], detail['games'])
+        print(f"{detail['batch']}: {detail['config']} - "
+              f"{detail['games']} games, {detail['evil_wins']} evil wins "
+              f"({detail['evil_win_rate']:.1f}% ± {sem:.1f}%)")
+    
+    print(f"\nTotal configurations analyzed: {len(config_results)}")
+    print(f"Total v4.0 batches: {len(batch_details)}")
+    
+    # Add explanation of uncertainty calculation
+    print("\n" + "=" * 60)
+    print("STATISTICAL NOTES")
+    print("=" * 60)
+    print("• Standard Error (±): SEM = √[p(1-p)/n] where p = win rate, n = sample size")
+    print("• Larger sample sizes → smaller standard errors → more precise estimates")
 
 if __name__ == "__main__":
-    analyze_games()
+    analyze_v4_batches()

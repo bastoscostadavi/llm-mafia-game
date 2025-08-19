@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_234517_v4.0_game_0914",
+  "game_number": 914,
+  "timestamp": "2025-08-19T04:26:13.108556",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Diana: \"\n\n\"",
+        "Bob: \"I am innocent\"",
+        "You: \"\n\n\"",
+        "Diana: \"Let's investigate Charlie's body.\"",
+        "Bob: \"I am the mafioso and I killed Charlie last night. Keep an eye on Alice, she seems suspicious.\"",
+        "You: \"Bob is the mafioso, I'm sure of it. We should investigate his house.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "Diana: \"\n\n\"",
+        "You: \"I am innocent\"",
+        "Alice: \"\n\n\"",
+        "Diana: \"Let's investigate Charlie's body.\"",
+        "You: \"I am the mafioso and I killed Charlie last night. Keep an eye on Alice, she seems suspicious.\"",
+        "Alice: \"Bob is the mafioso, I'm sure of it. We should investigate his house.\"",
+        "Votes: Alice voted for Bob (the vote was cast randomly because of a failed format), Bob voted for Alice, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "You: \"\n\n\"",
+        "Bob: \"I am innocent\"",
+        "Alice: \"\n\n\"",
+        "You: \"Let's investigate Charlie's body.\"",
+        "Bob: \"I am the mafioso and I killed Charlie last night. Keep an eye on Alice, she seems suspicious.\"",
+        "Alice: \"Bob is the mafioso, I'm sure of it. We should investigate his house.\"",
+        "Votes: Alice voted for Bob (the vote was cast randomly because of a failed format), Bob voted for Alice, Diana voted for Alice",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

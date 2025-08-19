@@ -15,12 +15,15 @@ mini-mafia/
 │   ├── templates/                   # HTML templates
 │   └── requirements_web.txt         # Web-specific dependencies
 │
-├── analysis/                        # All analysis scripts
-│   ├── analyze_results.py           # General results analysis
-│   ├── analyze_results2.py          # v4.0 model performance analysis
-│   ├── model_performance.py         # Individual model behavior analysis
-│   ├── analyze_voting.py            # Voting pattern analysis
-│   └── game_viewer.py               # Interactive game viewer
+├── analysis/                        # Analysis scripts
+│   ├── analyze_results.py           # Comprehensive results analysis (v4.0 optimized)
+│   └── model_performance.py         # Individual model behavior analysis
+│
+├── results/                         # Visualization and plotting
+│   ├── create_benchmark_plots_final.py  # Dynamic benchmark plotting
+│   └── logos/                       # Company logos for plots
+│
+├── game_viewer.py                   # Interactive game viewer
 │
 └── data/                           # All mini-mafia data
     ├── batch/                      # Batch experiment data
@@ -67,10 +70,11 @@ Mini-Mafia simplifies the classic Mafia game to focus on the core interaction be
 
 ### Core Scripts
 
-- **`run_mini_mafia_batch.py`**: Batch experiment runner
+- **`run_mini_mafia_batch.py`**: Batch experiment runner (Claude Sonnet-4 + caching)
 - **`game_viewer.py`**: Interactive game viewer and analyzer  
-- **`analyze_results.py`**: Win/loss statistical analysis
-- **`analyze_voting.py`**: Detailed voting pattern analysis
+- **`analysis/analyze_results.py`**: Comprehensive win/loss and model performance analysis
+- **`analysis/model_performance.py`**: Individual model behavior analysis
+- **`results/create_benchmark_plots_final.py`**: Dynamic benchmark plotting with latest data
 
 ### Usage Examples
 
@@ -94,8 +98,11 @@ python game_viewer.py batch_20250814_183322_v4.0
 python game_viewer.py batch_20250814_183322_v4.0 0
 
 # Generate analysis reports
-python analyze_results.py
-python analyze_voting.py
+python analysis/analyze_results.py        # Comprehensive model performance analysis
+python analysis/model_performance.py      # Individual model behavior analysis
+
+# Generate dynamic benchmark plots
+python results/create_benchmark_plots_final.py  # Auto-updates with latest batch data
 
 # Human vs LLM data collection (from project root)
 cd ../../
@@ -155,7 +162,7 @@ data/
   },
   "model_configs": {
     "detective": {"type": "local", "model_path": "models/mistral.gguf"},
-    "mafioso": {"type": "local", "model_path": "models/mistral.gguf"}, 
+    "mafioso": {"type": "anthropic", "model": "claude-sonnet-4-20250514", "temperature": 0.7, "use_cache": true}, 
     "villager": {"type": "local", "model_path": "models/mistral.gguf"}
   }
 }
@@ -163,17 +170,23 @@ data/
 
 ## Analysis Capabilities
 
-### Win Rate Analysis (`analyze_results.py`)
-- Overall good vs evil win percentages
-- Batch-by-batch comparison
-- Statistical uncertainty calculations
-- Model configuration impact assessment
+### Comprehensive Analysis (`analysis/analyze_results.py`)
+- Model performance analysis by configuration (v4.0 optimized)
+- Win rate analysis with statistical error calculations
+- Background model grouping and comparison
+- Configuration-based performance tracking
 
-### Voting Pattern Analysis (`analyze_voting.py`)
-- Detective voting accuracy (% voting for mafioso)
-- Mafioso targeting patterns (% voting for detective)
-- Villager decision-making (% voting for mafioso)
-- Voting tie frequency and resolution
+### Model Behavior Analysis (`analysis/model_performance.py`)
+- Individual model behavioral patterns
+- Decision-making analysis by role
+- Cross-model strategy comparison
+- Performance metrics and trends
+
+### Dynamic Benchmark Plotting (`results/create_benchmark_plots_final.py`)
+- Automatically reads latest batch data
+- Professional company-branded visualizations
+- Dynamic benchmark comparisons
+- Export-ready publication plots
 
 ### Game Viewer (`game_viewer.py`)
 - Interactive batch browser

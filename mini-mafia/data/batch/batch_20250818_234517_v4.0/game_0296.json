@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_234517_v4.0_game_0296",
+  "game_number": 296,
+  "timestamp": "2025-08-19T01:16:27.073536",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Diana: remained silent.",
+        "You: \"Given Diana's silence, I suspect she might be the mafioso. We should discuss further to uncover more information.\"",
+        "Bob: \"Given Alice's statement, I think we should investigate Diana to confirm her role.\"",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "Diana: \"I am the mafioso and I killed Charlie last night. Let's continue to investigate Bob and Alice.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "Diana: remained silent.",
+        "Alice: \"Given Diana's silence, I suspect she might be the mafioso. We should discuss further to uncover more information.\"",
+        "You: \"Given Alice's statement, I think we should investigate Diana to confirm her role.\"",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Diana: \"I am the mafioso and I killed Charlie last night. Let's continue to investigate Bob and Alice.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Alice: \"Given Diana's silence, I suspect she might be the mafioso. We should discuss further to uncover more information.\"",
+        "Bob: \"Given Alice's statement, I think we should investigate Diana to confirm her role.\"",
+        "Alice: remained silent.",
+        "Bob: remained silent.",
+        "You: \"I am the mafioso and I killed Charlie last night. Let's continue to investigate Bob and Alice.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

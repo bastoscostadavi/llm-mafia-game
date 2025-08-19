@@ -13,13 +13,14 @@ The framework supports multiple LLM backends and includes comprehensive analysis
 
 ## Features
 
-- **Multi-LLM Support**: Local models (llama.cpp), OpenAI GPT, and Anthropic Claude
+- **Multi-LLM Support**: Local models (llama.cpp), OpenAI GPT, and Anthropic Claude (including Claude Sonnet-4)
+- **Advanced Prompt Caching**: KV caching for local models + Anthropic prompt caching (50%+ API cost reduction)
 - **Flexible Game Modes**: Classic 6-player and Mini-mafia 4-player variants
 - **Web Interface**: Human vs LLM gameplay with real-time browser interface
-- **Research Tools**: Batch experiment runner, game viewer, and statistical analysis
-- **Prompt Caching**: KV caching for local models with significant performance improvements
+- **Research Tools**: Batch experiment runner, dynamic benchmark plotting, and comprehensive analysis
 - **Prompt Versioning**: Reproducible research with versioned prompt configurations (v0.0 - v4.0)
 - **Memory System**: Each agent maintains individual memory of game events
+- **Cost Optimization**: Standardized token limits (50/5/5) for efficient API usage
 
 ## Quick Start
 
@@ -58,15 +59,16 @@ python web_app.py
 
 ```bash
 # Run batch experiments (Mini-mafia)
-cd experiments/mini-mafia
+cd mini-mafia
 
-# Run 100 games with current configuration
+# Run 100 games with current configuration (Claude Sonnet-4 + Mistral)
 python run_mini_mafia_batch.py 100
 
-# View results
-python game_viewer.py                    # Interactive viewer
-python analyze_results.py                # Win rate analysis
-python analyze_voting.py                 # Voting pattern analysis
+# Analysis and visualization
+python analysis/analyze_results.py       # Comprehensive model performance analysis
+python analysis/model_performance.py     # Individual model behavior analysis
+python results/create_benchmark_plots_final.py  # Dynamic benchmark plots with latest data
+python game_viewer.py                    # Interactive game viewer
 ```
 
 ## Project Structure
@@ -82,22 +84,26 @@ llm-mafia-game/
 ├── src/                         # Core game engine
 │   ├── main.py                  # Game logic and state management
 │   ├── agents.py                # Agent classes and behaviors
-│   ├── llm_utils.py             # LLM wrapper utilities (with KV caching)
+│   ├── llm_utils.py             # LLM wrapper utilities (with prompt caching)
 │   ├── prompts.py               # Prompt templates and versioning (v0.0-v4.0)
 │   └── config.py                # Centralized configuration management
 ├── templates/                   # Web interface templates
 │   └── index.html              # Main web UI
 ├── models/                      # Local model files (GGUF format)
 ├── web_games/                   # Human vs LLM game data
-└── experiments/                 # Research experiments
-    └── mini-mafia/              # Mini-mafia specific experiments
-        ├── README.md            # Experiment documentation
-        ├── run_mini_mafia_batch.py  # Batch runner
-        ├── game_viewer.py       # Game visualization tool
-        ├── analyze_results.py   # Statistical analysis
-        ├── analyze_voting.py    # Voting pattern analysis
-        └── data/                # Experimental data
-            └── batch_*/         # Individual batch results
+└── mini-mafia/                  # Mini-mafia research hub
+    ├── README.md                # Experiment documentation
+    ├── run_mini_mafia_batch.py  # Batch runner with Claude Sonnet-4 support
+    ├── game_viewer.py           # Interactive game visualization
+    ├── analysis/                # Analysis tools
+    │   ├── analyze_results.py   # Comprehensive model performance analysis
+    │   └── model_performance.py # Individual model behavior analysis
+    ├── results/                 # Visualization and plotting
+    │   ├── create_benchmark_plots_final.py  # Dynamic benchmark plotting
+    │   └── logos/               # Company logos for plots
+    └── data/                    # Experimental data
+        └── batch/               # Batch experiment results (v4.0 optimized)
+            └── batch_*/         # Individual batch directories
 ```
 
 ## Game Modes
@@ -130,9 +136,10 @@ llm-mafia-game/
 - **State Management**: Save/load model states for consistent gameplay
 
 ### API Models
-- **OpenAI**: GPT-3.5, GPT-4, GPT-5 series (with reasoning_effort optimization)
-- **Anthropic**: Claude-3 series (Haiku, Sonnet, Opus)
+- **OpenAI**: GPT-3.5-turbo, GPT-4o, GPT-5 series (with reasoning_effort optimization)
+- **Anthropic**: Claude-3 series (Haiku, Sonnet, Opus) + Claude Sonnet-4 with prompt caching
 - Configurable per role for comparative studies
+- **Current Default**: Claude Sonnet-4 (mafioso) + Mistral 7B Instruct (detective/villager)
 
 ## Research Applications
 
@@ -174,10 +181,19 @@ v4.0: Optimized for prompt caching (50%+ performance improvement)
 
 ### Model Configuration
 ```python
+# Current default configuration (optimized for performance + cost)
 model_configs = {
     'detective': {'type': 'local', 'model_path': 'models/mistral.gguf'},
-    'mafioso': {'type': 'openai', 'model': 'gpt-3.5-turbo'},
-    'villager': {'type': 'anthropic', 'model': 'claude-3-haiku-20240307'}
+    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 
+                'temperature': 0.7, 'use_cache': True},
+    'villager': {'type': 'local', 'model_path': 'models/mistral.gguf'}
+}
+
+# Token limits (standardized across all models except GPT-5)
+token_limits = {
+    'discussion': 50,    # Balanced quality and cost
+    'voting': 5,         # Player name
+    'night_action': 5    # Player name
 }
 ```
 

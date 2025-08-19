@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_234517_v4.0_game_0023",
+  "game_number": 23,
+  "timestamp": "2025-08-18T23:52:44.827698",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Diana: remained silent.",
+        "You: \"Since Alice is dead, we should investigate Diana to see if she's a detective.\"",
+        "Charlie: \"Given Diana's silence and Alice's death, it seems suspicious. I think we should vote for Diana to see if she's indeed a mafioso.\"",
+        "Diana: \"I'm innocent, and I didn't kill Alice. Keep an eye on Charlie; he seems suspicious to me.\"",
+        "Charlie: remained silent.",
+        "You: \"I think we should vote for Charlie, since Diana said he seems suspicious and he remained silent so far.\"",
+        "Votes: Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Bob, Diana voted for Charlie",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Diana: remained silent.",
+        "Bob: \"Since Alice is dead, we should investigate Diana to see if she's a detective.\"",
+        "You: \"Given Diana's silence and Alice's death, it seems suspicious. I think we should vote for Diana to see if she's indeed a mafioso.\"",
+        "Diana: \"I'm innocent, and I didn't kill Alice. Keep an eye on Charlie; he seems suspicious to me.\"",
+        "You: remained silent.",
+        "Bob: \"I think we should vote for Charlie, since Diana said he seems suspicious and he remained silent so far.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Bob: \"Since Alice is dead, we should investigate Diana to see if she's a detective.\"",
+        "Charlie: \"Given Diana's silence and Alice's death, it seems suspicious. I think we should vote for Diana to see if she's indeed a mafioso.\"",
+        "You: \"I'm innocent, and I didn't kill Alice. Keep an eye on Charlie; he seems suspicious to me.\"",
+        "Charlie: remained silent.",
+        "Bob: \"I think we should vote for Charlie, since Diana said he seems suspicious and he remained silent so far.\"",
+        "Votes: Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Bob, Diana voted for Charlie",
+        "Charlie was arrested"
+      ]
+    }
+  ]
+}
