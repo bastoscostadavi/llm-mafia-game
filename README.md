@@ -77,33 +77,41 @@ python game_viewer.py                    # Interactive game viewer
 llm-mafia-game/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
-├── requirements_web.txt         # Web interface dependencies
 ├── run_game.py                  # Main game launcher
-├── web_app.py                   # Web interface for human vs LLM games
 ├── preset_games.py              # Predefined game configurations
 ├── src/                         # Core game engine
+│   ├── __init__.py              # Package initialization
 │   ├── main.py                  # Game logic and state management
 │   ├── agents.py                # Agent classes and behaviors
 │   ├── llm_utils.py             # LLM wrapper utilities (with prompt caching)
 │   ├── prompts.py               # Prompt templates and versioning (v0.0-v4.0)
 │   └── config.py                # Centralized configuration management
-├── templates/                   # Web interface templates
-│   └── index.html              # Main web UI
 ├── models/                      # Local model files (GGUF format)
-├── web_games/                   # Human vs LLM game data
+│   ├── mistral.gguf             # Mistral 7B Instruct model
+│   ├── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
+│   ├── Qwen2.5-7B-Instruct-Q4_K_M.gguf
+│   └── openai_gpt-oss-20b-Q4_K_M.gguf
 └── mini-mafia/                  # Mini-mafia research hub
     ├── README.md                # Experiment documentation
+    ├── mini_mafia.py             # Core mini-mafia game logic
     ├── run_mini_mafia_batch.py  # Batch runner with Claude Sonnet-4 support
-    ├── game_viewer.py           # Interactive game visualization
+    ├── run_temperature_experiment.py  # Temperature analysis experiments
     ├── analysis/                # Analysis tools
     │   ├── analyze_results.py   # Comprehensive model performance analysis
     │   └── model_performance.py # Individual model behavior analysis
     ├── results/                 # Visualization and plotting
-    │   ├── create_benchmark_plots_final.py  # Dynamic benchmark plotting
+    │   ├── create_benchmark_plots.py  # Dynamic benchmark plotting
     │   └── logos/               # Company logos for plots
+    ├── web/                     # Web interface for human vs LLM games
+    │   ├── app.py               # Flask web application
+    │   ├── requirements_web.txt # Web-specific dependencies
+    │   └── templates/           # HTML templates
+    │       └── index.html       # Main web UI
     └── data/                    # Experimental data
-        └── batch/               # Batch experiment results (v4.0 optimized)
-            └── batch_*/         # Individual batch directories
+        ├── batch/               # Batch experiment results (v4.0 optimized)
+        │   └── batch_*/         # Individual batch directories
+        ├── web/                 # Human vs LLM game data
+        └── archived/            # Archived experimental data
 ```
 
 ## Game Modes
