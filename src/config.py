@@ -24,20 +24,53 @@ DEFAULT_PROMPT_VERSION = "v4.0"
 # - openai_gpt-oss-20b-Q4_K_M.gguf        # GPT-OSS 20B (11GB)
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/Mistral-7B-Instruct-v0.2-Q4_K_M.gguf', 'n_ctx': 2048},
-    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': 0.7, 'use_cache': True},
-    'villager': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/Mistral-7B-Instruct-v0.2-Q4_K_M.gguf', 'n_ctx': 2048}
+    'detective': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
+    'mafioso': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
+    'villager': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048}
 }
 
 # GAME SETTINGS
 DEFAULT_MESSAGE_LIMIT = 200
 
-# TOKEN LIMITS (standard for all models)
-TOKEN_LIMITS = {
+# TOKEN LIMITS by model type
+# Standard limits for most models
+STANDARD_TOKEN_LIMITS = {
     'discussion': 50,   # Balanced between quality and cost
     'voting': 5,        # A name
     'night_action': 5   # A name
 }
+
+# Extended limits for reasoning models (GPT-OSS, etc.)
+REASONING_TOKEN_LIMITS = {
+    'discussion': 150,  # More space for reasoning
+    'voting': 20,       # Allow reasoning before name
+    'night_action': 20  # Allow reasoning before name
+}
+
+# Model-specific token limit mapping
+MODEL_TOKEN_LIMITS = {
+    'openai_gpt-oss-20b-Q4_K_M.gguf': REASONING_TOKEN_LIMITS,
+    'gpt-oss': REASONING_TOKEN_LIMITS,  # For any GPT-OSS variants
+}
+
+# Default token limits (used if model not in specific mapping)
+TOKEN_LIMITS = STANDARD_TOKEN_LIMITS
+
+
+def get_token_limits_for_model(model_config):
+    """Get appropriate token limits based on model configuration."""
+    if model_config.get('type') == 'local':
+        model_path = model_config.get('model_path', '')
+        model_filename = model_path.split('/')[-1] if model_path else ''
+        
+        # Check if this is a reasoning model
+        if model_filename in MODEL_TOKEN_LIMITS:
+            return MODEL_TOKEN_LIMITS[model_filename]
+        elif 'gpt-oss' in model_filename.lower():
+            return REASONING_TOKEN_LIMITS
+    
+    # Default to standard limits
+    return STANDARD_TOKEN_LIMITS
 
 def get_default_prompt_config():
     """Get the default prompt configuration for the system"""

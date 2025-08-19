@@ -4,10 +4,10 @@ import json
 import random
 import re
 from src.prompts import PromptConfig, MESSAGE_LIMIT
-from src.config import TOKEN_LIMITS
+from src.config import TOKEN_LIMITS, get_token_limits_for_model
 
 class MafiaAgent:
-    def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, prompt_config: PromptConfig = None):
+    def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, prompt_config: PromptConfig = None, model_config: dict = None):
         self.name = name
         self.role = role
         self.llm = llm_interface
@@ -16,6 +16,8 @@ class MafiaAgent:
         self.memory = []  # List of all messages and events
         self.debug_prompts = debug_prompts
         self.prompt_config = prompt_config or PromptConfig()
+        self.model_config = model_config or {}
+        self.token_limits = get_token_limits_for_model(self.model_config)
         
     
     def remember(self, event: str):
@@ -28,26 +30,10 @@ class MafiaAgent:
             return "No previous events."
         return "\n".join(self.memory)
     
-    def _get_model_type(self) -> str:
-        """Determine the model type for token limit selection"""
-        if hasattr(self.llm, 'model'):
-            # For OpenAI/Anthropic wrappers, model is a string
-            if isinstance(self.llm.model, str):
-                if self.llm.model.startswith('gpt-5'):
-                    return 'gpt5'
-                elif self.llm.model.startswith('gpt-4o'):
-                    return 'gpt4o'
-            # For Local wrapper, model is a Llama object, check model_path
-            elif hasattr(self.llm, 'model_path'):
-                if 'gpt-5' in self.llm.model_path.lower():
-                    return 'gpt5'
-                elif 'gpt-4o' in self.llm.model_path.lower():
-                    return 'gpt4o'
-        return 'default'
     
     def _get_token_limit(self, action_type: str) -> int:
         """Get token limit for action type"""
-        return TOKEN_LIMITS.get(action_type, TOKEN_LIMITS['discussion'])
+        return self.token_limits.get(action_type, self.token_limits['discussion'])
     
     def _generate(self, prompt: str, max_tokens: int = 50) -> str:
         """Generate response from LLM (all wrappers have generate method)"""

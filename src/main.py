@@ -300,7 +300,7 @@ def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config
     agents = []
     for player in players:
         llm = create_llm(player['llm'])
-        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts, prompt_config)
+        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts, prompt_config, player['llm'])
         agent.remember(f"You're {agent.name}, the {agent.role}.")
         agents.append(agent)
     
