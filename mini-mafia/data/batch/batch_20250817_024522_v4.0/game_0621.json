@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0621",
+  "game_number": 621,
+  "timestamp": "2025-08-17T05:05:36.589940",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "You: remained silent.",
+        "Charlie: \"Charlie is acting suspiciously tonight.\"",
+        "Bob: \"Bob is the mafioso, and I killed Diana last night. Keep an eye on Charlie; he's acting suspiciously.\"",
+        "Charlie: \"I'm not sure about Charlie's actions, but Bob's claim seems suspicious. He knows too much if he's telling the truth.\"",
+        "You: \"I'm the detective and I know Bob is the mafioso. I suggest we keep an eye on him.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"\n\"",
+        "Alice: remained silent.",
+        "Charlie: \"Charlie is acting suspiciously tonight.\"",
+        "You: \"Bob is the mafioso, and I killed Diana last night. Keep an eye on Charlie; he's acting suspiciously.\"",
+        "Charlie: \"I'm not sure about Charlie's actions, but Bob's claim seems suspicious. He knows too much if he's telling the truth.\"",
+        "Alice: \"I'm the detective and I know Bob is the mafioso. I suggest we keep an eye on him.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "Alice: remained silent.",
+        "You: \"Charlie is acting suspiciously tonight.\"",
+        "Bob: \"Bob is the mafioso, and I killed Diana last night. Keep an eye on Charlie; he's acting suspiciously.\"",
+        "You: \"I'm not sure about Charlie's actions, but Bob's claim seems suspicious. He knows too much if he's telling the truth.\"",
+        "Alice: \"I'm the detective and I know Bob is the mafioso. I suggest we keep an eye on him.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

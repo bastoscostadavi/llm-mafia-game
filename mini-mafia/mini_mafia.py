@@ -108,7 +108,7 @@ def create_mini_mafia_game(model_configs=None, debug_prompts=False, prompt_confi
     
     # Everyone discovers the death
     for agent in alive_agents:
-        agent.remember(f"The villager {victim.name} was found dead.")
+        agent.remember(f"{victim.name} was found dead.")
     
     # Detective investigates the mafioso
     detective.remember(f"You investigated {mafioso.name} and discovered that they are the mafioso.")

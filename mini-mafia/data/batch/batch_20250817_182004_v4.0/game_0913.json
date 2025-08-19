@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0913",
+  "game_number": 913,
+  "timestamp": "2025-08-17T23:02:25.533410",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Bob is the mafioso and he killed Diana. Trust me.\"",
+        "Charlie: remained silent.",
+        "Bob: \"\n\n\"",
+        "Bob: \"I'm innocent and I didn't kill Diana.\"",
+        "You: \"I investigated Bob and found evidence that he is the mafioso. He lied about his innocence.\"",
+        "Charlie: \"I'm a villager and I believe Diana's death was not Bob's doing. Alice, your evidence doesn't convince me.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Bob is the mafioso and he killed Diana. Trust me.\"",
+        "Charlie: remained silent.",
+        "You: \"\n\n\"",
+        "You: \"I'm innocent and I didn't kill Diana.\"",
+        "Alice: \"I investigated Bob and found evidence that he is the mafioso. He lied about his innocence.\"",
+        "Charlie: \"I'm a villager and I believe Diana's death was not Bob's doing. Alice, your evidence doesn't convince me.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Bob is the mafioso and he killed Diana. Trust me.\"",
+        "You: remained silent.",
+        "Bob: \"\n\n\"",
+        "Bob: \"I'm innocent and I didn't kill Diana.\"",
+        "Alice: \"I investigated Bob and found evidence that he is the mafioso. He lied about his innocence.\"",
+        "You: \"I'm a villager and I believe Diana's death was not Bob's doing. Alice, your evidence doesn't convince me.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0657",
+  "game_number": 657,
+  "timestamp": "2025-08-17T05:13:51.125063",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Bob was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Based on the investigation, I believe Diana is the mafioso. Please consider this information in your voting.\"",
+        "Diana: \"I'm innocent\"",
+        "Charlie: \"Considering Bob's death, I think we should investigate Diana. \"",
+        "You: \"I'm still convinced Diana is the mafioso. I have evidence from my investigation.\"",
+        "Diana: \"I am the mafioso and I killed Bob. I suggest we investigate Charlie next as he seems suspicious.\"",
+        "Charlie: \"I'm not the mafioso. I was investigating Bob's death and found no evidence against Diana. Let's investigate Charlie instead, as Diana suggested.\"",
+        "Votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Bob was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Based on the investigation, I believe Diana is the mafioso. Please consider this information in your voting.\"",
+        "Diana: \"I'm innocent\"",
+        "You: \"Considering Bob's death, I think we should investigate Diana. \"",
+        "Alice: \"I'm still convinced Diana is the mafioso. I have evidence from my investigation.\"",
+        "Diana: \"I am the mafioso and I killed Bob. I suggest we investigate Charlie next as he seems suspicious.\"",
+        "You: \"I'm not the mafioso. I was investigating Bob's death and found no evidence against Diana. Let's investigate Charlie instead, as Diana suggested.\"",
+        "Votes: Alice voted for Diana, Charlie voted for Diana, Diana voted for Charlie",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Bob.",
+        "Bob was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Based on the investigation, I believe Diana is the mafioso. Please consider this information in your voting.\"",
+        "You: \"I'm innocent\"",
+        "Charlie: \"Considering Bob's death, I think we should investigate Diana. \"",
+        "Alice: \"I'm still convinced Diana is the mafioso. I have evidence from my investigation.\"",
+        "You: \"I am the mafioso and I killed Bob. I suggest we investigate Charlie next as he seems suspicious.\"",
+        "Charlie: \"I'm not the mafioso. I was investigating Bob's death and found no evidence against Diana. Let's investigate Charlie instead, as Diana suggested.\""
+      ]
+    }
+  ]
+}

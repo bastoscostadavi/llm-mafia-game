@@ -169,7 +169,7 @@ def analyze_model_performance():
     """Analyze model performance across all v4.0 batches"""
     data_dir = "../data/batch"
     if not os.path.exists(data_dir):
-        print(f"Data directory '{data_dir}' not found. Run from experiments/mini-mafia/ directory.")
+        print(f"Data directory '{data_dir}' not found. Run from mini-mafia/analysis/ directory.")
         return
     
     # Find all v4.0 batch directories
@@ -296,10 +296,21 @@ def analyze_model_performance():
               f"({(stats['silent_messages']/stats['total_messages']*100):.1f}%)")
         print(f"  Votes: {stats['random_votes']}/{stats['total_votes']} random "
               f"({(stats['random_votes']/stats['total_votes']*100):.1f}%)")
-        print(f"  Detective accuracy: {stats['detective_votes_for_mafioso']}/{stats['detective_total_votes']} "
-              f"({(stats['detective_votes_for_mafioso']/stats['detective_total_votes']*100):.1f}%)")
-        print(f"  Mafioso targeting: {stats['mafioso_votes_for_detective']}/{stats['mafioso_total_votes']} "
-              f"({(stats['mafioso_votes_for_detective']/stats['mafioso_total_votes']*100):.1f}%)")
+        # Detective accuracy (only if model played as detective)
+        if stats['detective_total_votes'] > 0:
+            detective_accuracy = (stats['detective_votes_for_mafioso']/stats['detective_total_votes']*100)
+            print(f"  Detective accuracy: {stats['detective_votes_for_mafioso']}/{stats['detective_total_votes']} "
+                  f"({detective_accuracy:.1f}%)")
+        else:
+            print(f"  Detective accuracy: N/A (model never played as detective)")
+        
+        # Mafioso targeting (only if model played as mafioso)
+        if stats['mafioso_total_votes'] > 0:
+            mafioso_targeting = (stats['mafioso_votes_for_detective']/stats['mafioso_total_votes']*100)
+            print(f"  Mafioso targeting: {stats['mafioso_votes_for_detective']}/{stats['mafioso_total_votes']} "
+                  f"({mafioso_targeting:.1f}%)")
+        else:
+            print(f"  Mafioso targeting: N/A (model never played as mafioso)")
 
 if __name__ == "__main__":
     analyze_model_performance()

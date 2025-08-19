@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_005136_v4.0_game_0725",
+  "game_number": 725,
+  "timestamp": "2025-08-18T04:19:11.128876",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"\n\n\"",
+        "You: \"\n\n\"",
+        "Charlie: \"\n\n\"",
+        "Charlie: \"I think Bob is the mafioso.\"",
+        "Bob: remained silent.",
+        "You: \"Bob is the mafioso. I investigated him last night and found evidence.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"\n\n\"",
+        "Alice: \"\n\n\"",
+        "Charlie: \"\n\n\"",
+        "Charlie: \"I think Bob is the mafioso.\"",
+        "You: remained silent.",
+        "Alice: \"Bob is the mafioso. I investigated him last night and found evidence.\"",
+        "Votes: Alice voted for Charlie (the vote was cast randomly because of a failed format), Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\n\"",
+        "Alice: \"\n\n\"",
+        "You: \"\n\n\"",
+        "You: \"I think Bob is the mafioso.\"",
+        "Bob: remained silent.",
+        "Alice: \"Bob is the mafioso. I investigated him last night and found evidence.\"",
+        "Votes: Alice voted for Charlie (the vote was cast randomly because of a failed format), Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0210",
+  "game_number": 210,
+  "timestamp": "2025-08-17T19:25:38.534884",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "You: \"\n\n\"",
+        "Diana: \"I am the mafioso\"",
+        "Bob: \"I saw Diana talking to Charlie last night. I'm not sure if it's relevant, but thought I should mention it.\"",
+        "Diana: \"I am the mafioso. I saw Alice talking to Charlie last night, which is suspicious.\"",
+        "You: \"Bob is the detective. Diana is innocent.\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Alice: \"\n\n\"",
+        "Diana: \"I am the mafioso\"",
+        "You: \"I saw Diana talking to Charlie last night. I'm not sure if it's relevant, but thought I should mention it.\"",
+        "Diana: \"I am the mafioso. I saw Alice talking to Charlie last night, which is suspicious.\"",
+        "Alice: \"Bob is the detective. Diana is innocent.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "Alice: \"\n\n\"",
+        "You: \"I am the mafioso\"",
+        "Bob: \"I saw Diana talking to Charlie last night. I'm not sure if it's relevant, but thought I should mention it.\"",
+        "You: \"I am the mafioso. I saw Alice talking to Charlie last night, which is suspicious.\"",
+        "Alice: \"Bob is the detective. Diana is innocent.\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

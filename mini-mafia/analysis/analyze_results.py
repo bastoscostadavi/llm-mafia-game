@@ -60,7 +60,7 @@ def analyze_games():
     data_dir = "../data/batch"
     
     if not os.path.exists(data_dir):
-        print(f"Data directory not found: {data_dir}")
+        print(f"Data directory not found: {data_dir}. Run from mini-mafia/analysis/ directory.")
         return
     
     results = {

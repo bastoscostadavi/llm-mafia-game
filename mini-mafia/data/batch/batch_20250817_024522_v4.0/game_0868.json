@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0868",
+  "game_number": 868,
+  "timestamp": "2025-08-17T06:01:43.994356",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "You: remained silent.",
+        "Charlie: \"\nI am innocent and saw Diana with Alice last night. Vote for Alice.\"",
+        "You: \"I saw Diana with Alice last night, and both of us are innocent. Please consider Charlie's vote as it seems suspicious.\"",
+        "Charlie: \"I'm innocent and was with Bob last night. Let's focus on Charlie since he seems suspicious.\"",
+        "Bob: \"Let's gather more information before making any accusations. Charlie was found suspicious by my investigation, but we need to hear from Alice and potentially others to confirm our suspicions.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"\n\"",
+        "Alice: remained silent.",
+        "Charlie: \"\nI am innocent and saw Diana with Alice last night. Vote for Alice.\"",
+        "Alice: \"I saw Diana with Alice last night, and both of us are innocent. Please consider Charlie's vote as it seems suspicious.\"",
+        "Charlie: \"I'm innocent and was with Bob last night. Let's focus on Charlie since he seems suspicious.\"",
+        "You: \"Let's gather more information before making any accusations. Charlie was found suspicious by my investigation, but we need to hear from Alice and potentially others to confirm our suspicions.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "Alice: remained silent.",
+        "You: \"\nI am innocent and saw Diana with Alice last night. Vote for Alice.\"",
+        "Alice: \"I saw Diana with Alice last night, and both of us are innocent. Please consider Charlie's vote as it seems suspicious.\"",
+        "You: \"I'm innocent and was with Bob last night. Let's focus on Charlie since he seems suspicious.\"",
+        "Bob: \"Let's gather more information before making any accusations. Charlie was found suspicious by my investigation, but we need to hear from Alice and potentially others to confirm our suspicions.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

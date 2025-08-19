@@ -60,6 +60,9 @@ class WebGame:
             prompt_config=get_default_prompt_config()
         )
         
+        # Replace human agent with web interface
+        self._setup_human_agent()
+        
         self.log_event("game_created", {
             "players": [{"name": p.name, "role": p.role} for p in self.game_engine.state.agents],
             "human_player": self.human_name,
@@ -75,9 +78,6 @@ class WebGame:
             'n_ctx': 2048
         }
         
-        # Human player config
-        human_config = {'type': 'human', 'player_name': self.human_name}
-        
         # Model configs for each role
         model_configs = {
             'detective': llm_config.copy(),
@@ -85,9 +85,8 @@ class WebGame:
             'villager': llm_config.copy()
         }
         
-        # Replace human's role with human config
-        model_configs[self.human_role] = human_config
-                
+        # We'll replace the human role after game creation
+        # For now, just use LLM configs for all roles
         return model_configs
     
     def log_event(self, event_type: str, data: dict):
@@ -106,9 +105,6 @@ class WebGame:
         """Start the game in a separate thread"""
         def game_thread():
             try:
-                # Replace human agent with web interface
-                self._setup_human_agent()
-                
                 # Start game
                 self.current_phase = "playing"
                 self.emit_game_update("Game starting!")
@@ -129,8 +125,11 @@ class WebGame:
     
     def _setup_human_agent(self):
         """Replace human agent with web interface"""
+        # Find the agent with the human role and replace their LLM
         for agent in self.game_engine.state.agents:
-            if agent.name == self.human_name:
+            if agent.role == self.human_role:
+                # Update the agent's name to match the human player name
+                agent.name = self.human_name
                 # Replace LLM with web interface
                 agent.llm = WebHumanInterface(self)
                 break

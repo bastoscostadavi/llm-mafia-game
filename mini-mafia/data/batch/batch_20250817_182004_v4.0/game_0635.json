@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0635",
+  "game_number": 635,
+  "timestamp": "2025-08-17T21:37:18.483957",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Charlie: \"Charlie is the detective and he knows who the mafioso is.\"",
+        "Bob: \"Charlie is the detective and he knows who the mafioso is, but I'm not sure if he's telling the truth.\"",
+        "You: \"I'm still unsure who the mafioso is, but I believe Charlie might be the detective based on his statements. However, I need more information to confirm this.\"",
+        "Bob: remained silent.",
+        "Charlie: \"I am the detective and I know Bob is the mafioso. Alice, you should consider this information carefully as it could be crucial for the investigation.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: remained silent.",
+        "Charlie: \"Charlie is the detective and he knows who the mafioso is.\"",
+        "You: \"Charlie is the detective and he knows who the mafioso is, but I'm not sure if he's telling the truth.\"",
+        "Alice: \"I'm still unsure who the mafioso is, but I believe Charlie might be the detective based on his statements. However, I need more information to confirm this.\"",
+        "You: remained silent.",
+        "Charlie: \"I am the detective and I know Bob is the mafioso. Alice, you should consider this information carefully as it could be crucial for the investigation.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Alice: remained silent.",
+        "You: \"Charlie is the detective and he knows who the mafioso is.\"",
+        "Bob: \"Charlie is the detective and he knows who the mafioso is, but I'm not sure if he's telling the truth.\"",
+        "Alice: \"I'm still unsure who the mafioso is, but I believe Charlie might be the detective based on his statements. However, I need more information to confirm this.\"",
+        "Bob: remained silent.",
+        "You: \"I am the detective and I know Bob is the mafioso. Alice, you should consider this information carefully as it could be crucial for the investigation.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

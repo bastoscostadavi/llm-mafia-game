@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_093255_v4.0_game_0492",
+  "game_number": 492,
+  "timestamp": "2025-08-18T14:25:31.262601",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"Bob is the mafioso I investigated last night.\"",
+        "You: \"\n\n\"",
+        "Bob: \"I have nothing to hide.\"",
+        "Bob: \"I have an alibi for the night. I was at home, and Alice can confirm it.\"",
+        "Charlie: \"Bob is lying, and I think he killed Diana.\"",
+        "You: remained silent."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"Bob is the mafioso I investigated last night.\"",
+        "Alice: \"\n\n\"",
+        "You: \"I have nothing to hide.\"",
+        "You: \"I have an alibi for the night. I was at home, and Alice can confirm it.\"",
+        "Charlie: \"Bob is lying, and I think he killed Diana.\"",
+        "Alice: remained silent.",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Bob is the mafioso I investigated last night.\"",
+        "Alice: \"\n\n\"",
+        "Bob: \"I have nothing to hide.\"",
+        "Bob: \"I have an alibi for the night. I was at home, and Alice can confirm it.\"",
+        "You: \"Bob is lying, and I think he killed Diana.\"",
+        "Alice: remained silent.",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0729",
+  "game_number": 729,
+  "timestamp": "2025-08-17T22:05:56.790181",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Charlie: \"Bob's silence is suspicious, I think he might be the detective.\"",
+        "Diana: remained silent.",
+        "Diana: \"\\\"",
+        "Charlie: \"Bob's silence is suspicious, I think he might be the detective. We should investigate him.\"",
+        "You: \"I will remain silent for now. Let's see what happens during the night.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "You: \"Bob's silence is suspicious, I think he might be the detective.\"",
+        "Diana: remained silent.",
+        "Diana: \"\\\"",
+        "You: \"Bob's silence is suspicious, I think he might be the detective. We should investigate him.\"",
+        "Bob: \"I will remain silent for now. Let's see what happens during the night.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Bob, Diana voted for Charlie",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "Charlie: \"Bob's silence is suspicious, I think he might be the detective.\"",
+        "You: remained silent.",
+        "You: \"\\\"",
+        "Charlie: \"Bob's silence is suspicious, I think he might be the detective. We should investigate him.\"",
+        "Bob: \"I will remain silent for now. Let's see what happens during the night.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Bob, Diana voted for Charlie",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

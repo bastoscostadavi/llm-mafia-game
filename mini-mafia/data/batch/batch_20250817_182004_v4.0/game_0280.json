@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0280",
+  "game_number": 280,
+  "timestamp": "2025-08-17T19:47:39.078812",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Since Diana was killed, I think we should focus on finding the killer.\"",
+        "Charlie: remained silent.",
+        "You: \"Let's investigate Charlie next. The mafioso could be anyone else.\"",
+        "Charlie: \"I think we should consider the possibility that Diana's death might be related to a mistake or accident. Let's not jump to conclusions about Charlie just yet.\"",
+        "Bob: \"I think we should focus on investigating Charlie. He seemed suspicious last night.\"",
+        "You: \"Let's continue our investigation of Charlie. While his comments might seem reasonable, they could also be a tactic to mislead us. We need to gather more evidence before making any conclusions.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"Since Diana was killed, I think we should focus on finding the killer.\"",
+        "Charlie: remained silent.",
+        "Alice: \"Let's investigate Charlie next. The mafioso could be anyone else.\"",
+        "Charlie: \"I think we should consider the possibility that Diana's death might be related to a mistake or accident. Let's not jump to conclusions about Charlie just yet.\"",
+        "You: \"I think we should focus on investigating Charlie. He seemed suspicious last night.\"",
+        "Alice: \"Let's continue our investigation of Charlie. While his comments might seem reasonable, they could also be a tactic to mislead us. We need to gather more evidence before making any conclusions.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Since Diana was killed, I think we should focus on finding the killer.\"",
+        "You: remained silent.",
+        "Alice: \"Let's investigate Charlie next. The mafioso could be anyone else.\"",
+        "You: \"I think we should consider the possibility that Diana's death might be related to a mistake or accident. Let's not jump to conclusions about Charlie just yet.\"",
+        "Bob: \"I think we should focus on investigating Charlie. He seemed suspicious last night.\"",
+        "Alice: \"Let's continue our investigation of Charlie. While his comments might seem reasonable, they could also be a tactic to mislead us. We need to gather more evidence before making any conclusions.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Alice, Charlie voted for Bob",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

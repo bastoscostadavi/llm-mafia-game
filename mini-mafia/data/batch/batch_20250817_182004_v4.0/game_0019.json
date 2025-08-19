@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0019",
+  "game_number": 19,
+  "timestamp": "2025-08-17T18:26:04.172174",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\n\"",
+        "Diana: \"I am the detective and I found out Bob is the mafioso. \nLet's vote to arrest Bob.\"",
+        "You: \"I support Diana's investigation.\n\"",
+        "Bob: \"Vote to save me, I'm a good guy!\"",
+        "Diana: \"I have evidence that Bob is the mafioso. I suggest we vote to arrest him.\"",
+        "You: \"I support Diana's findings. Bob, please explain your actions to clear your name.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "You: \"\n\n\"",
+        "Diana: \"I am the detective and I found out Bob is the mafioso. \nLet's vote to arrest Bob.\"",
+        "Alice: \"I support Diana's investigation.\n\"",
+        "You: \"Vote to save me, I'm a good guy!\"",
+        "Diana: \"I have evidence that Bob is the mafioso. I suggest we vote to arrest him.\"",
+        "Alice: \"I support Diana's findings. Bob, please explain your actions to clear your name.\"",
+        "Votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"\n\n\"",
+        "You: \"I am the detective and I found out Bob is the mafioso. \nLet's vote to arrest Bob.\"",
+        "Alice: \"I support Diana's investigation.\n\"",
+        "Bob: \"Vote to save me, I'm a good guy!\"",
+        "You: \"I have evidence that Bob is the mafioso. I suggest we vote to arrest him.\"",
+        "Alice: \"I support Diana's findings. Bob, please explain your actions to clear your name.\"",
+        "Votes: Alice voted for Diana, Bob voted for Alice, Diana voted for Bob",
+        "Alice was arrested"
+      ]
+    }
+  ]
+}

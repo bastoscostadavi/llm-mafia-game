@@ -11,8 +11,22 @@ Ignores temperature variations and focuses on model performance patterns.
 
 import json
 import os
+import math
 from collections import defaultdict
 from pathlib import Path
+
+def calculate_sem(successes, total):
+    """Calculate standard error for binomial proportion"""
+    if total == 0:
+        return 0.0
+    
+    p = successes / total
+    n = total
+    
+    # Standard Error of the Mean (SEM) for binomial proportion
+    sem = math.sqrt(p * (1 - p) / n)
+    
+    return sem * 100
 
 def extract_model_name(model_config):
     """Extract short model name from model configuration"""
@@ -96,7 +110,7 @@ def analyze_v4_batches():
     """Analyze all v4.0 batches for model performance"""
     data_dir = "../data/batch"
     if not os.path.exists(data_dir):
-        print(f"Data directory '{data_dir}' not found. Run from experiments/mini-mafia/ directory.")
+        print(f"Data directory '{data_dir}' not found. Run from mini-mafia/analysis/ directory.")
         return
     
     # Find all v4.0 batch directories
@@ -178,7 +192,7 @@ def analyze_v4_batches():
     print("\n" + "=" * 60)
     print("SUMMARY BY MODEL CONFIGURATION")
     print("=" * 60)
-    print(f"{'Configuration':<25} {'Games':<8} {'Evil Wins':<10} {'Win Rate':<10}")
+    print(f"{'Configuration':<25} {'Games':<8} {'Evil Wins':<10} {'Win Rate':<12}")
     print("-" * 60)
     
     for config_key in sorted(config_results.keys()):
@@ -187,7 +201,10 @@ def analyze_v4_batches():
         total_games = results['total_games']
         win_rate = (evil_wins / total_games) * 100 if total_games > 0 else 0
         
-        print(f"{config_key:<25} {total_games:<8} {evil_wins:<10} {win_rate:<10.1f}%")
+        # Calculate SEM
+        sem = calculate_sem(evil_wins, total_games)
+        
+        print(f"{config_key:<25} {total_games:<8} {evil_wins:<10} {win_rate:.1f}% ± {sem:.1f}%")
     
     # Print detailed breakdown
     print("\n" + "=" * 60)
@@ -195,11 +212,20 @@ def analyze_v4_batches():
     print("=" * 60)
     
     for detail in sorted(batch_details, key=lambda x: x['config']):
+        sem = calculate_sem(detail['evil_wins'], detail['games'])
         print(f"{detail['batch']}: {detail['config']} - "
-              f"{detail['games']} games, {detail['evil_wins']} evil wins ({detail['evil_win_rate']:.1f}%)")
+              f"{detail['games']} games, {detail['evil_wins']} evil wins "
+              f"({detail['evil_win_rate']:.1f}% ± {sem:.1f}%)")
     
     print(f"\nTotal configurations analyzed: {len(config_results)}")
     print(f"Total v4.0 batches: {len(batch_details)}")
+    
+    # Add explanation of uncertainty calculation
+    print("\n" + "=" * 60)
+    print("STATISTICAL NOTES")
+    print("=" * 60)
+    print("• Standard Error (±): SEM = √[p(1-p)/n] where p = win rate, n = sample size")
+    print("• Larger sample sizes → smaller standard errors → more precise estimates")
 
 if __name__ == "__main__":
     analyze_v4_batches()

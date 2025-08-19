@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0521",
+  "game_number": 521,
+  "timestamp": "2025-08-17T04:42:57.284853",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "You: \"\n\"",
+        "Charlie: remained silent.",
+        "Diana: remained silent.",
+        "Charlie: \"\\\"",
+        "Diana: \"\\\"",
+        "You: \"I saw Alice last night, she was with Diana. I think something happened between them.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "You investigated Diana and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "You: remained silent.",
+        "Diana: remained silent.",
+        "You: \"\\\"",
+        "Diana: \"\\\"",
+        "Bob: \"I saw Alice last night, she was with Diana. I think something happened between them.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Diana, Diana voted for Bob",
+        "Diana was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Diana, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\"",
+        "Charlie: remained silent.",
+        "You: remained silent.",
+        "Charlie: \"\\\"",
+        "You: \"\\\"",
+        "Bob: \"I saw Alice last night, she was with Diana. I think something happened between them.\""
+      ]
+    }
+  ]
+}

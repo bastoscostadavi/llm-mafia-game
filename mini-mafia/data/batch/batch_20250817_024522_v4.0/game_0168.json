@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0168",
+  "game_number": 168,
+  "timestamp": "2025-08-17T03:23:16.749094",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "You: \"Observing the situation, I think we should discuss who Diana might have been.\"",
+        "Charlie: remained silent.",
+        "Bob: \"\\\"",
+        "You: \"I believe Diana was likely killed by the mafioso. Given that Bob and Charlie were silent during the night, they might be hiding something.\"",
+        "Charlie: \"I'm still investigating, but I suspect Bob is the mafioso. He was silent last night and his alibi doesn't hold up.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: remained silent.",
+        "Alice: \"Observing the situation, I think we should discuss who Diana might have been.\"",
+        "Charlie: remained silent.",
+        "You: \"\\\"",
+        "Alice: \"I believe Diana was likely killed by the mafioso. Given that Bob and Charlie were silent during the night, they might be hiding something.\"",
+        "Charlie: \"I'm still investigating, but I suspect Bob is the mafioso. He was silent last night and his alibi doesn't hold up.\"",
+        "Votes: Alice voted for Charlie, Bob voted for Charlie, Charlie voted for Bob",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: remained silent.",
+        "Alice: \"Observing the situation, I think we should discuss who Diana might have been.\"",
+        "You: remained silent.",
+        "Bob: \"\\\"",
+        "Alice: \"I believe Diana was likely killed by the mafioso. Given that Bob and Charlie were silent during the night, they might be hiding something.\"",
+        "You: \"I'm still investigating, but I suspect Bob is the mafioso. He was silent last night and his alibi doesn't hold up.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

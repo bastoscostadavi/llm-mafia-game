@@ -4,7 +4,7 @@ import json
 import random
 import re
 from src.prompts import PromptConfig, MESSAGE_LIMIT
-from src.config import TOKEN_LIMITS, GPT5_TOKEN_LIMITS
+from src.config import TOKEN_LIMITS, GPT4O_TOKEN_LIMITS, GPT5_TOKEN_LIMITS
 
 class MafiaAgent:
     def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, prompt_config: PromptConfig = None):
@@ -28,20 +28,34 @@ class MafiaAgent:
             return "No previous events."
         return "\n".join(self.memory)
     
-    def _is_gpt5(self) -> bool:
-        """Check if this agent is using a GPT-5 model"""
+    def _get_model_type(self) -> str:
+        """Determine the model type for token limit selection"""
         if hasattr(self.llm, 'model'):
             # For OpenAI/Anthropic wrappers, model is a string
             if isinstance(self.llm.model, str):
-                return self.llm.model.startswith('gpt-5')
+                if self.llm.model.startswith('gpt-5'):
+                    return 'gpt5'
+                elif self.llm.model.startswith('gpt-4o'):
+                    return 'gpt4o'
             # For Local wrapper, model is a Llama object, check model_path
             elif hasattr(self.llm, 'model_path'):
-                return 'gpt-5' in self.llm.model_path.lower()
-        return False
+                if 'gpt-5' in self.llm.model_path.lower():
+                    return 'gpt5'
+                elif 'gpt-4o' in self.llm.model_path.lower():
+                    return 'gpt4o'
+        return 'default'
     
     def _get_token_limit(self, action_type: str) -> int:
         """Get appropriate token limit based on model type"""
-        limits = GPT5_TOKEN_LIMITS if self._is_gpt5() else TOKEN_LIMITS
+        model_type = self._get_model_type()
+        
+        if model_type == 'gpt5':
+            limits = GPT5_TOKEN_LIMITS
+        elif model_type == 'gpt4o':
+            limits = GPT4O_TOKEN_LIMITS
+        else:
+            limits = TOKEN_LIMITS
+            
         return limits.get(action_type, TOKEN_LIMITS[action_type])
     
     def _generate(self, prompt: str, max_tokens: int = 50) -> str:

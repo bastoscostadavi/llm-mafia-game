@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_005136_v4.0_game_0328",
+  "game_number": 328,
+  "timestamp": "2025-08-18T02:25:32.219860",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"Bob is the mafioso I investigated last night.\"",
+        "Bob: \"\n\n\"",
+        "You: \" I think we should investigate Charlie next night to see if he's the mafioso.\"",
+        "You: \"Bob, I think you're the mafioso. Charlie, let's investigate you next night.\"",
+        "Charlie: \"Bob is the mafioso, I'm not. Let's investigate Alice tonight.\"",
+        "Bob: \" I'm the detective, not the mafioso. Let's investigate Alice tonight.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"Bob is the mafioso I investigated last night.\"",
+        "You: \"\n\n\"",
+        "Alice: \" I think we should investigate Charlie next night to see if he's the mafioso.\"",
+        "Alice: \"Bob, I think you're the mafioso. Charlie, let's investigate you next night.\"",
+        "Charlie: \"Bob is the mafioso, I'm not. Let's investigate Alice tonight.\"",
+        "You: \" I'm the detective, not the mafioso. Let's investigate Alice tonight.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Bob is the mafioso I investigated last night.\"",
+        "Bob: \"\n\n\"",
+        "Alice: \" I think we should investigate Charlie next night to see if he's the mafioso.\"",
+        "Alice: \"Bob, I think you're the mafioso. Charlie, let's investigate you next night.\"",
+        "You: \"Bob is the mafioso, I'm not. Let's investigate Alice tonight.\"",
+        "Bob: \" I'm the detective, not the mafioso. Let's investigate Alice tonight.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0544",
+  "game_number": 544,
+  "timestamp": "2025-08-17T04:48:09.942492",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"I am the detective and I found Charlie is the mafioso\"",
+        "Charlie: \"\n\"",
+        "You: \"I am a villager and I believe Bob is the mafioso\"",
+        "Charlie: remained silent.",
+        "Bob: \"I am the detective and I have identified Charlie as the mafioso. I will continue to investigate and protect the villagers.\"",
+        "You: \"\\\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"I am the detective and I found Charlie is the mafioso\"",
+        "Charlie: \"\n\"",
+        "Alice: \"I am a villager and I believe Bob is the mafioso\"",
+        "Charlie: remained silent.",
+        "You: \"I am the detective and I have identified Charlie as the mafioso. I will continue to investigate and protect the villagers.\"",
+        "Alice: \"\\\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"I am the detective and I found Charlie is the mafioso\"",
+        "You: \"\n\"",
+        "Alice: \"I am a villager and I believe Bob is the mafioso\"",
+        "You: remained silent.",
+        "Bob: \"I am the detective and I have identified Charlie as the mafioso. I will continue to investigate and protect the villagers.\"",
+        "Alice: \"\\\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

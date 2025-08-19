@@ -52,7 +52,7 @@ def analyze_voting_patterns():
     data_dir = "../data/batch"
     
     if not os.path.exists(data_dir):
-        print(f"Data directory not found: {data_dir}")
+        print(f"Data directory not found: {data_dir}. Run from mini-mafia/analysis/ directory.")
         return
     
     voting_stats = {
@@ -212,7 +212,7 @@ def find_exceptional_games():
     data_dir = "../data/batch"
     
     if not os.path.exists(data_dir):
-        print(f"Data directory not found: {data_dir}")
+        print(f"Data directory not found: {data_dir}. Run from mini-mafia/analysis/ directory.")
         return
     
     detective_not_voting_mafioso = []

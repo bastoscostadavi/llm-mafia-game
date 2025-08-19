@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0205",
+  "game_number": 205,
+  "timestamp": "2025-08-17T19:24:07.219967",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Bob is the mafioso and must be eliminated.\"",
+        "Charlie: \"I believe Alice has a lead\nI'll investigate her suggestion.\"",
+        "Bob: \"\n\n\"",
+        "Charlie: \"\\\"",
+        "You: \"I will investigate Alice's claim about Bob being the mafioso.\"",
+        "Bob: \"Let's not jump to conclusions, let's investigate first.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Bob is the mafioso and must be eliminated.\"",
+        "Charlie: \"I believe Alice has a lead\nI'll investigate her suggestion.\"",
+        "You: \"\n\n\"",
+        "Charlie: \"\\\"",
+        "Alice: \"I will investigate Alice's claim about Bob being the mafioso.\"",
+        "You: \"Let's not jump to conclusions, let's investigate first.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Bob is the mafioso and must be eliminated.\"",
+        "You: \"I believe Alice has a lead\nI'll investigate her suggestion.\"",
+        "Bob: \"\n\n\"",
+        "You: \"\\\"",
+        "Alice: \"I will investigate Alice's claim about Bob being the mafioso.\"",
+        "Bob: \"Let's not jump to conclusions, let's investigate first.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_093255_v4.0_game_0500",
+  "game_number": 500,
+  "timestamp": "2025-08-18T14:28:41.182573",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Diana: \"Charlie seems suspicious to me.\"",
+        "You: \"\n\n\"",
+        "Charlie: \"I have nothing to hide.\"",
+        "Charlie: \"I was with Bob during the night. We both saw each other the whole time.\"",
+        "You: remained silent.",
+        "Diana: \"Bob, can you confirm Charlie's alibi?\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Diana: \"Charlie seems suspicious to me.\"",
+        "Bob: \"\n\n\"",
+        "You: \"I have nothing to hide.\"",
+        "You: \"I was with Bob during the night. We both saw each other the whole time.\"",
+        "Bob: remained silent.",
+        "Diana: \"Bob, can you confirm Charlie's alibi?\"",
+        "Votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "You: \"Charlie seems suspicious to me.\"",
+        "Bob: \"\n\n\"",
+        "Charlie: \"I have nothing to hide.\"",
+        "Charlie: \"I was with Bob during the night. We both saw each other the whole time.\"",
+        "Bob: remained silent.",
+        "You: \"Bob, can you confirm Charlie's alibi?\"",
+        "Votes: Bob voted for Charlie, Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

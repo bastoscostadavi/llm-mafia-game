@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0641",
+  "game_number": 641,
+  "timestamp": "2025-08-17T21:39:07.321508",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"\n\n\"",
+        "Charlie: \"I am the detective and I know Bob is mafia.\n\"",
+        "You: \"\n\"",
+        "Charlie: \"I will investigate Alice and Diana to gather more information on the case.\"",
+        "Bob: \"Charlie is the detective, he will investigate Alice and Diana. I am innocent.\"",
+        "You: \"I am innocent and I have no idea what happened to Diana. Let's work together to find out the truth.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"\n\n\"",
+        "Charlie: \"I am the detective and I know Bob is mafia.\n\"",
+        "Alice: \"\n\"",
+        "Charlie: \"I will investigate Alice and Diana to gather more information on the case.\"",
+        "You: \"Charlie is the detective, he will investigate Alice and Diana. I am innocent.\"",
+        "Alice: \"I am innocent and I have no idea what happened to Diana. Let's work together to find out the truth.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"\n\n\"",
+        "You: \"I am the detective and I know Bob is mafia.\n\"",
+        "Alice: \"\n\"",
+        "You: \"I will investigate Alice and Diana to gather more information on the case.\"",
+        "Bob: \"Charlie is the detective, he will investigate Alice and Diana. I am innocent.\"",
+        "Alice: \"I am innocent and I have no idea what happened to Diana. Let's work together to find out the truth.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

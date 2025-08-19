@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0500",
+  "game_number": 500,
+  "timestamp": "2025-08-17T04:38:17.565565",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "Night 1 begins.",
+        "You killed Charlie.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "Diana: \"\n\"",
+        "You: \"\nI am innocent and saw Charlie with the detective last night.Vote for Bob.\n\"",
+        "Bob: \"I am innocent\"",
+        "Diana: \"\\\"",
+        "Bob: \"I am innocent and saw Charlie with the detective last night. Vote for Bob.\"",
+        "You: \"\\\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "Day 1 begins.",
+        "Diana: \"\n\"",
+        "Alice: \"\nI am innocent and saw Charlie with the detective last night.Vote for Bob.\n\"",
+        "You: \"I am innocent\"",
+        "Diana: \"\\\"",
+        "You: \"I am innocent and saw Charlie with the detective last night. Vote for Bob.\"",
+        "Alice: \"\\\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "Charlie was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"\n\"",
+        "Alice: \"\nI am innocent and saw Charlie with the detective last night.Vote for Bob.\n\"",
+        "Bob: \"I am innocent\"",
+        "You: \"\\\"",
+        "Bob: \"I am innocent and saw Charlie with the detective last night. Vote for Bob.\"",
+        "Alice: \"\\\"",
+        "Votes: Alice voted for Bob, Bob voted for Diana, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_024522_v4.0_game_0995",
+  "game_number": 995,
+  "timestamp": "2025-08-17T06:30:39.294258",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I am the detective and I found Bob is the mafioso\"",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "Charlie: \"\\\"",
+        "Bob: \"\\\"",
+        "You: \"I am a villager and I heard Charlie's accusation. I will work with the detective to find out who the mafioso is.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I am the detective and I found Bob is the mafioso\"",
+        "Alice: remained silent.",
+        "You: remained silent.",
+        "Charlie: \"\\\"",
+        "You: \"\\\"",
+        "Alice: \"I am a villager and I heard Charlie's accusation. I will work with the detective to find out who the mafioso is.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"I am the detective and I found Bob is the mafioso\"",
+        "Alice: remained silent.",
+        "Bob: remained silent.",
+        "You: \"\\\"",
+        "Bob: \"\\\"",
+        "Alice: \"I am a villager and I heard Charlie's accusation. I will work with the detective to find out who the mafioso is.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

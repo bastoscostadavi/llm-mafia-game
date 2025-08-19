@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250818_005136_v4.0_game_0160",
+  "game_number": 160,
+  "timestamp": "2025-08-18T01:37:15.054805",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Charlie is likely the mafioso because I investigated them last night.\"",
+        "Charlie: \"Bob is likely innocent, but I'm not sure about Alice.\"",
+        "Bob: \"Charlie's behavior seems suspicious, especially considering Alice's investigation result.\"",
+        "Bob: \"Charlie, can you explain your behavior last night?\"",
+        "You: \"I think we should investigate Bob next night, because he's been acting suspiciously and hasn't given a clear explanation for his behavior.\"",
+        "Charlie: \"Bob, I think you're the detective. You've been trying to distract us from your own suspicious behavior.\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Charlie is likely the mafioso because I investigated them last night.\"",
+        "Charlie: \"Bob is likely innocent, but I'm not sure about Alice.\"",
+        "You: \"Charlie's behavior seems suspicious, especially considering Alice's investigation result.\"",
+        "You: \"Charlie, can you explain your behavior last night?\"",
+        "Alice: \"I think we should investigate Bob next night, because he's been acting suspiciously and hasn't given a clear explanation for his behavior.\"",
+        "Charlie: \"Bob, I think you're the detective. You've been trying to distract us from your own suspicious behavior.\"",
+        "Votes: Alice voted for Charlie (the vote was cast randomly because of a failed format), Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Charlie is likely the mafioso because I investigated them last night.\"",
+        "You: \"Bob is likely innocent, but I'm not sure about Alice.\"",
+        "Bob: \"Charlie's behavior seems suspicious, especially considering Alice's investigation result.\"",
+        "Bob: \"Charlie, can you explain your behavior last night?\"",
+        "Alice: \"I think we should investigate Bob next night, because he's been acting suspiciously and hasn't given a clear explanation for his behavior.\"",
+        "You: \"Bob, I think you're the detective. You've been trying to distract us from your own suspicious behavior.\"",
+        "Votes: Alice voted for Charlie (the vote was cast randomly because of a failed format), Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

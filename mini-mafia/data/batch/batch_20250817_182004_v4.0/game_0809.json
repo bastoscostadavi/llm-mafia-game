@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250817_182004_v4.0_game_0809",
+  "game_number": 809,
+  "timestamp": "2025-08-17T22:30:23.877208",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"Charlie is the mafioso and I investigated him. Trust me.\"",
+        "Diana: \"I believe Bob\"",
+        "Charlie: \"\n\n\"",
+        "You: \"I am innocent and I didn't kill Alice. Bob must have made a mistake in his investigation.\"",
+        "Charlie: \"Bob is lying and he killed Alice. I investigated him too.\"",
+        "Diana: \"Charlie, I still believe Bob. He might have made a mistake, but I don't think he's capable of murder. Let's focus on finding the mafioso.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Charlie is the mafioso and I investigated him. Trust me.\"",
+        "Diana: \"I believe Bob\"",
+        "You: \"\n\n\"",
+        "Bob: \"I am innocent and I didn't kill Alice. Bob must have made a mistake in his investigation.\"",
+        "You: \"Bob is lying and he killed Alice. I investigated him too.\"",
+        "Diana: \"Charlie, I still believe Bob. He might have made a mistake, but I don't think he's capable of murder. Let's focus on finding the mafioso.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Charlie is the mafioso and I investigated him. Trust me.\"",
+        "You: \"I believe Bob\"",
+        "Charlie: \"\n\n\"",
+        "Bob: \"I am innocent and I didn't kill Alice. Bob must have made a mistake in his investigation.\"",
+        "Charlie: \"Bob is lying and he killed Alice. I investigated him too.\"",
+        "You: \"Charlie, I still believe Bob. He might have made a mistake, but I don't think he's capable of murder. Let's focus on finding the mafioso.\"",
+        "Votes: Bob voted for Diana, Charlie voted for Bob, Diana voted for Bob",
+        "Bob was arrested"
+      ]
+    }
+  ]
+}
