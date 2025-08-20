@@ -20,6 +20,9 @@ class GameState:
         self.llm = agents[0].llm if agents else None
         # Calculate and store game composition once  
         self.composition = Counter(agent.role for agent in agents)
+        # Sequential game logging
+        self.game_sequence = []
+        self.step_counter = 0
     
     def get_alive_players(self):
         return [a for a in self.agents if a.alive]
@@ -46,6 +49,19 @@ class GameState:
                 parts.append(f"{count} {role_word}")
         
         return ', '.join(parts)
+    
+    def log_action(self, action, actor, raw_response, parsed_result):
+        """Log an action to the game sequence"""
+        self.step_counter += 1
+        log_entry = {
+            "step": self.step_counter,
+            "action": action,
+            "actor": actor,
+            "raw_response": raw_response,
+            "parsed_result": parsed_result
+        }
+        
+        self.game_sequence.append(log_entry)
 
 class Game:
     """Main game controller that manages the game flow"""

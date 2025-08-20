@@ -22,11 +22,19 @@ DEFAULT_PROMPT_VERSION = "v4.0"
 # - Qwen2.5-7B-Instruct-Q4_K_M.gguf       # Qwen2.5 7B (4.4GB)
 # - qwen2.5-32b-instruct-q4_k_m-*-of-00005.gguf # Qwen2.5 32B (5 parts, ~19GB total)
 # - openai_gpt-oss-20b-Q4_K_M.gguf        # GPT-OSS 20B (11GB)
+# - gemma-2-27b-it-Q4_K_M.gguf            # Gemma 2 27B (16GB)
+# - Qwen3-14B-Q4_K_M.gguf        # Qwen3 14B (~8GB)
+# EX: 'mafioso': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf', 'temperature': 0.7},
+
+# Available OpenAI/Anthropic models:
+# - gpt-4o                      # OpenAI GPT-4o
+# - claude-sonnet-4-20250514    #Claude Sonnet
+# EX: 'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
-    'mafioso': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048},
-    'villager': {'type': 'local', 'model_path': '/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf', 'n_ctx': 2048}
+    'detective': {'type': 'local', 'model': 'Qwen3-14B-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
+    'mafioso': {'type': 'local', 'model': 'Qwen3-14B-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
+    'villager': {'type': 'local', 'model': 'Qwen3-14B-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048}
 }
 
 # GAME SETTINGS
@@ -42,9 +50,9 @@ STANDARD_TOKEN_LIMITS = {
 
 # Extended limits for reasoning models (GPT-OSS, etc.)
 REASONING_TOKEN_LIMITS = {
-    'discussion': 250,
-    'voting': 50,       
-    'night_action': 50  
+    'discussion': 2500,
+    'voting': 2000,       
+    'night_action': 2000  
 }
 
 # Model-specific token limit mapping
@@ -60,8 +68,7 @@ TOKEN_LIMITS = STANDARD_TOKEN_LIMITS
 def get_token_limits_for_model(model_config):
     """Get appropriate token limits based on model configuration."""
     if model_config.get('type') == 'local':
-        model_path = model_config.get('model_path', '')
-        model_filename = model_path.split('/')[-1] if model_path else ''
+        model_filename = model_config.get('model', '')
         
         # Check if this is a reasoning model
         if model_filename in MODEL_TOKEN_LIMITS:

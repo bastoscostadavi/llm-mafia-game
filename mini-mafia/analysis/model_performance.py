@@ -45,20 +45,23 @@ def extract_model_name(model_config):
         else:
             return f"Claude-{model}"
     
-    # Handle local models
-    elif model_config.get('type') == 'local':
-        model_path = model_config.get('model_path', '')
-        if not model_path:
+    # Handle local models (including mistyped configs with .gguf in API models)
+    elif model_config.get('type') == 'local' or (model_config.get('model', '').endswith('.gguf')):
+        model_filename = model_config.get('model', '')
+        if not model_filename:
             return "unknown"
         
-        filename = os.path.basename(model_path)
+        filename = model_filename
         
         # Map model files to short names
         model_mapping = {
             'mistral.gguf': 'Mistral',
+            'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf': 'Mistral',
+            'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf': 'Mistral v0.3',
             'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5',
             'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama3.1',
-            'openai_gpt-oss-20b-Q4_K_M.gguf': 'GPT-OSS'
+            'openai_gpt-oss-20b-Q4_K_M.gguf': 'GPT-OSS',
+            'gemma-2-27b-it-Q4_K_M.gguf': 'Gemma 2 27B'
         }
         
         return model_mapping.get(filename, filename.replace('.gguf', ''))

@@ -126,7 +126,6 @@ class Local:
         self.is_gpt_oss = 'gpt-oss' in self.model_path.lower()
         self.prompt_cache = {}  # Cache for processed prompt prefixes
         # Extract model name from path for display
-        import os
         self.display_name = os.path.basename(self.model_path)
     
     def generate(self, prompt, max_tokens=50):
@@ -327,7 +326,6 @@ def get_model_display_name(llm_wrapper):
         # Local wrapper has Llama object as model
     if hasattr(llm_wrapper, 'model_path'):
         # Extract model name from path
-        import os
         return os.path.basename(llm_wrapper.model_path)
     return "Unknown Model"
 
@@ -337,7 +335,10 @@ def create_llm(llm_config):
     
     if llm_type == 'local':
         # Use shared model to avoid conflicts
-        model_path = llm_config.get('model_path', 'models/mistral.gguf')
+        model_filename = llm_config.get('model', 'mistral.gguf')
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        model_path = os.path.join(project_root, 'models', model_filename)
+        
         if model_path not in _model_cache:
             from llama_cpp import Llama
             print(f"Loading model from: {model_path}")

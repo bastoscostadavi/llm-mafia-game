@@ -38,9 +38,13 @@ def get_model_company(model_name):
         'Claude-3-Opus': 'Anthropic',
         'Claude-Sonnet-4': 'Anthropic',
         'Mistral 7B Instruct': 'Mistral AI',
+        'Mistral 7B Instruct v0.2': 'Mistral AI',
+        'Mistral 7B Instruct v0.3': 'Mistral AI',
         'Llama3.1 8B Instruct': 'Meta',
         'Qwen2.5 7B Instruct': 'Alibaba',
-        'GPT-OSS': 'OpenAI'
+        'Qwen3 14B Instruct': 'Alibaba',
+        'GPT-OSS': 'OpenAI',
+        'Gemma 2 27B Instruct': 'Google'
     }
     
     # Handle Claude Sonnet-4 variations

@@ -78,11 +78,15 @@ class MafiaAgent:
         # Parse the message using centralized parsing
         message = self.prompt_config.parse_discussion_response(response)
         if not message:
+            # Log failed discussion
+            game_state.log_action("discuss", self.name, response, "remained silent")
             # Debug: always show what the model actually returned when parsing fails
             print(f"[DEBUG] {self.name} failed to parse discussion format. Raw response:")
             print(f"[DEBUG] {repr(response)}")
             return "remained silent."
         
+        # Log successful discussion
+        game_state.log_action("discuss", self.name, response, message)
         return f'"{message}"'
 
     def vote(self, candidates: List[str], all_players: List[str] = None, discussion_rounds: int = 2, game_state=None) -> tuple[str, bool]:
@@ -125,12 +129,16 @@ class MafiaAgent:
         # Parse the vote using centralized parsing
         vote_target = self.prompt_config.parse_voting_response(response, candidates)
         if vote_target:
+            # Log successful vote
+            game_state.log_action("vote", self.name, response, vote_target)
             if self.debug_prompts:
                 print(f"[DEBUG] {self.name} voted for {vote_target}")
             return vote_target, True
         
         # If no valid vote found, cast random vote
         fallback_vote = random.choice(candidates)
+        parsed_result = f"{fallback_vote} (random)"
+        game_state.log_action("vote", self.name, response, parsed_result)
         if self.debug_prompts:
             print(f"[DEBUG] {self.name} failed to parse vote format, random vote: {fallback_vote}")
         return fallback_vote, False
@@ -172,10 +180,14 @@ class MafiaAgent:
         target = self.prompt_config.parse_night_action_response(response, candidates)
         if not target:
             target = random.choice(candidates)
+            parsed_result = f"{target} (random)"
+            game_state.log_action("kill", self.name, response, parsed_result)
             if self.debug_prompts:
                 print(f"[DEBUG] {self.name} failed to parse response, random choice: {target}")
-        elif self.debug_prompts:
-            print(f"[DEBUG] {self.name} chose {target}")
+        else:
+            game_state.log_action("kill", self.name, response, target)
+            if self.debug_prompts:
+                print(f"[DEBUG] {self.name} chose {target}")
         
         # Remember the action
         self.remember(f"You killed {target}")
@@ -218,10 +230,14 @@ class MafiaAgent:
         target = self.prompt_config.parse_night_action_response(response, candidates)
         if not target:
             target = random.choice(candidates)
+            parsed_result = f"{target} (random)"
+            game_state.log_action("investigate", self.name, response, parsed_result)
             if self.debug_prompts:
                 print(f"[DEBUG] {self.name} failed to parse response, random choice: {target}")
-        elif self.debug_prompts:
-            print(f"[DEBUG] {self.name} chose {target}")
+        else:
+            game_state.log_action("investigate", self.name, response, target)
+            if self.debug_prompts:
+                print(f"[DEBUG] {self.name} chose {target}")
         
         # Remember the investigation result
         target_agent = game_state.get_agent_by_name(target)

@@ -1,6 +1,6 @@
 {
-  "batch_id": "batch_20250819_184736_v4.0",
-  "timestamp": "2025-08-19T18:47:36.706668",
+  "batch_id": "batch_20250820_114041_v4.0",
+  "timestamp": "2025-08-20T11:40:41.931017",
   "prompt_config": {
     "version": "v4.0",
     "message_limit": 200,
@@ -13,19 +13,19 @@
   },
   "model_configs": {
     "detective": {
-      "type": "local",
-      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf",
-      "n_ctx": 2048
+      "type": "openai",
+      "model": "gpt-4o",
+      "temperature": 0.7
     },
     "mafioso": {
       "type": "local",
-      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf",
-      "n_ctx": 2048
+      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/Mistral-7B-Instruct-v0.2-Q4_K_M.gguf",
+      "temperature": 0.7
     },
     "villager": {
-      "type": "local",
-      "model_path": "/Users/davicosta/Desktop/projects/llm-mafia-game/models/openai_gpt-oss-20b-Q4_K_M.gguf",
-      "n_ctx": 2048
+      "type": "openai",
+      "model": "gpt-4o",
+      "temperature": 0.7
     }
   },
   "game_type": "mini_mafia"

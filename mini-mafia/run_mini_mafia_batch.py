@@ -235,11 +235,10 @@ def main():
     print(f"\nConfiguration:")
     print(f"  Games: {n_games}")
     print(f"  Debug prompts: {debug}")
-    print(f"  Model: GPT-5 (with prompt caching)")
     
     try:
         # Run the batch
-        batch_id = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config, temperature=args.temperature)
+        batch_id = run_batch(n_games, debug_prompts= True, prompt_config=prompt_config, temperature=args.temperature)
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")

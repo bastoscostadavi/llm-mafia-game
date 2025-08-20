@@ -33,6 +33,29 @@ def extract_model_name(model_config):
     if not model_config:
         return "unknown"
     
+    # Get model filename from either new 'model' field or old 'model_path' field
+    model_filename = model_config.get('model', '')
+    if not model_filename and 'model_path' in model_config:
+        # Handle old format: extract filename from path
+        import os
+        model_filename = os.path.basename(model_config['model_path'])
+    
+    # Check if this is a local model file (regardless of type field)
+    if model_filename.endswith('.gguf'):
+        # Map model files to full descriptive names
+        model_mapping = {
+            'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf': 'Mistral 7B Instruct',
+            'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf': 'Mistral 7B Instruct v0.3',
+            'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5 7B Instruct',
+            'qwen3-14b-instruct-Q4_K_M.gguf': 'Qwen3 14B Instruct',
+            'Qwen3-14B-Q4_K_M.gguf': 'Qwen3 14B Instruct',
+            'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama3.1 8B Instruct',
+            'openai_gpt-oss-20b-Q4_K_M.gguf': 'GPT-OSS',
+            'gemma-2-27b-it-Q4_K_M.gguf': 'Gemma 2 27B Instruct',
+            'mistral.gguf': 'Mistral 7B Instruct'
+        }
+        return model_mapping.get(model_filename, model_filename.replace('.gguf', ''))
+    
     # Handle API models (OpenAI, Anthropic)
     if model_config.get('type') == 'openai':
         model = model_config.get('model', 'unknown')
@@ -58,23 +81,12 @@ def extract_model_name(model_config):
         else:
             return f"Claude-{model}"
     
-    # Handle local models
+    # Handle properly configured local models (fallback)
     elif model_config.get('type') == 'local':
-        model_path = model_config.get('model_path', '')
-        if not model_path:
+        if not model_filename:
             return "unknown"
-        
-        filename = os.path.basename(model_path)
-        
-        # Map model files to full descriptive names
-        model_mapping = {
-            'mistral.gguf': 'Mistral 7B Instruct',
-            'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5 7B Instruct',
-            'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama3.1 8B Instruct',
-            'openai_gpt-oss-20b-Q4_K_M.gguf': 'GPT-OSS'
-        }
-        
-        return model_mapping.get(filename, filename.replace('.gguf', ''))
+        # Already handled .gguf files above, but handle edge cases
+        return model_filename.replace('.gguf', '')
     
     else:
         return "unknown"

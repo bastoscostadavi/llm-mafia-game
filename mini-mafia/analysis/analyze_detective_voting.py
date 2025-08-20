@@ -11,14 +11,16 @@ from collections import defaultdict
 
 def extract_model_name(model_config: dict) -> str:
     """Extract a clean model name from configuration."""
-    if model_config.get('type') == 'local':
-        path = model_config.get('model_path', '')
-        if 'mistral' in path.lower():
+    if model_config.get('type') == 'local' or (model_config.get('model', '').endswith('.gguf')):
+        model_filename = model_config.get('model', '')
+        if 'mistral' in model_filename.lower():
             return 'Mistral'
-        elif 'llama' in path.lower():
+        elif 'llama' in model_filename.lower():
             return 'Llama'
-        elif 'qwen' in path.lower():
+        elif 'qwen' in model_filename.lower():
             return 'Qwen'
+        elif 'gemma' in model_filename.lower():
+            return 'Gemma'
         else:
             return 'Unknown'
     elif model_config.get('type') == 'openai':

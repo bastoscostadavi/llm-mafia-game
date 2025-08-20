@@ -434,6 +434,15 @@ Reply with just a name:[/INST]
     
     def parse_discussion_response(self, response: str) -> str:
         """Parse discussion response based on prompt version"""
+        # Handle GPT-OSS Harmony format: extract content after final channel
+        if '<|channel|>final<|message|>' in response:
+            response = response.split('<|channel|>final<|message|>', 1)[1]
+            response = response.split('<|')[0].strip()  # Remove trailing harmony tokens
+        
+        # Handle GPT-OSS reasoning format: extract content after final<|message|>
+        if 'final<|message|>' in response:
+            response = response.split('final<|message|>')[-1].strip()
+        
         if self.version == "v4.0":
             # v4.0 format: "message" \n reasoning...
             match = re.search(r'^\s*"([^"]+)"', response)
@@ -449,6 +458,15 @@ Reply with just a name:[/INST]
     
     def parse_voting_response(self, response: str, candidates: List[str]) -> str:
         """Parse voting response based on prompt version"""
+        # Handle GPT-OSS Harmony format: extract content after final channel
+        if '<|channel|>final<|message|>' in response:
+            response = response.split('<|channel|>final<|message|>', 1)[1]
+            response = response.split('<|')[0].strip()  # Remove trailing harmony tokens
+        
+        # Handle GPT-OSS reasoning format: extract content after final<|message|>
+        if 'final<|message|>' in response:
+            response = response.split('final<|message|>')[-1].strip()
+        
         if self.version == "v4.0":
             # v4.0 format: player_name \n reasoning...
             response_lines = response.strip().split('\n')
@@ -474,6 +492,15 @@ Reply with just a name:[/INST]
     
     def parse_night_action_response(self, response: str, candidates: List[str]) -> str:
         """Parse night action response based on prompt version"""
+        # Handle GPT-OSS Harmony format: extract content after final channel
+        if '<|channel|>final<|message|>' in response:
+            response = response.split('<|channel|>final<|message|>', 1)[1]
+            response = response.split('<|')[0].strip()  # Remove trailing harmony tokens
+        
+        # Handle GPT-OSS reasoning format: extract content after final<|message|>
+        if 'final<|message|>' in response:
+            response = response.split('final<|message|>')[-1].strip()
+        
         if self.version == "v4.0":
             # v4.0 format: player_name \n reasoning...
             response_lines = response.strip().split('\n')
