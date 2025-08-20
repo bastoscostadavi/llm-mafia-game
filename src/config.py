@@ -42,9 +42,9 @@ STANDARD_TOKEN_LIMITS = {
 
 # Extended limits for reasoning models (GPT-OSS, etc.)
 REASONING_TOKEN_LIMITS = {
-    'discussion': 150,  # More space for reasoning
-    'voting': 20,       # Allow reasoning before name
-    'night_action': 20  # Allow reasoning before name
+    'discussion': 250,
+    'voting': 50,       
+    'night_action': 50  
 }
 
 # Model-specific token limit mapping

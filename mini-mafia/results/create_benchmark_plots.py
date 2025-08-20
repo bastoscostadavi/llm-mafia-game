@@ -259,7 +259,7 @@ def create_benchmark_plot(benchmark_data, title, filename):
     baseline_2 = 2/3 * 100   # Random voting ≈ 66.67%
     
     ax.axvline(x=baseline_1, color='red', linestyle='--', alpha=0.7, linewidth=2)
-    ax.axvline(x=baseline_2, color='blue', linestyle='--', alpha=0.7, linewidth=2)
+    #ax.axvline(x=baseline_2, color='blue', linestyle='--', alpha=0.7, linewidth=2)
     
     # Add legends with dotted lines
     legend_x = 65  # Position for legends
@@ -269,18 +269,18 @@ def create_benchmark_plot(benchmark_data, title, filename):
     ax.plot([legend_x - 8, legend_x - 2], [legend_y1, legend_y1], 
             color='red', linestyle='--', linewidth=2, alpha=0.7)
     ax.text(legend_x, legend_y1, 
-            f'Random voting but detective votes mafioso ({baseline_1:.1f}%)', 
+            f'No information exchange ({baseline_1:.1f}%)', 
             ha='left', va='center', color='red', fontweight='bold', fontsize=9,
             bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.9, edgecolor='red'))
     
     # Second legend (blue line)  
-    legend_y2 = len(models) - 0.5
-    ax.plot([legend_x - 8, legend_x - 2], [legend_y2, legend_y2], 
-            color='blue', linestyle='--', linewidth=2, alpha=0.7)
-    ax.text(legend_x, legend_y2, 
-            f'Random voting ({baseline_2:.1f}%)', 
-            ha='left', va='center', color='blue', fontweight='bold', fontsize=9,
-            bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.9, edgecolor='blue'))
+    #legend_y2 = len(models) - 0.5
+    #ax.plot([legend_x - 8, legend_x - 2], [legend_y2, legend_y2], 
+    #        color='blue', linestyle='--', linewidth=2, alpha=0.7)
+    #ax.text(legend_x, legend_y2, 
+    #        f'Random voting ({baseline_2:.1f}%)', 
+    #        ha='left', va='center', color='blue', fontweight='bold', fontsize=9,
+    #        bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.9, edgecolor='blue'))
     
     # Formatting
     ax.set_xlabel('Evil Win Rate (%)', fontsize=12, fontweight='bold')
