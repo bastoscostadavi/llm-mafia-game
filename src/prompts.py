@@ -32,6 +32,8 @@ class PromptConfig:
             return self._get_v3_0_templates()
         elif self.version == "v4.0":
             return self._get_v4_0_templates()
+        elif self.version == "v4.1":
+            return self._get_v4_1_templates()
         else:
             raise ValueError(f"Unknown prompt version: {self.version}")
     
@@ -379,6 +381,111 @@ Reply with just a name:[/INST]
 """
         }
     
+    def _get_v4_1_templates(self) -> Dict[str, str]:
+        """
+        Enhanced v4.0 with improved truncation handling.
+        
+        Key changes from v4.0:
+        - Clarified discussion response format to explain truncation vs silence
+        - Better instructions for models about token limit behavior
+        - Maintains all caching optimizations from v4.0
+        """
+        return {
+            
+            "base_prompt": """[INST]
+#CONTEXT:
+You're playing the following instance of the Mafia game. Your ultimate objective is to ensure your team wins, whether through persuasion, deduction, deception, or careful timing.
+
+
+#MAFIA GAME EXPLANATION
+
+OVERVIEW:
+Mafia is a social deduction game of deception, logic, and hidden identities. Each player is secretly assigned to one of two opposing teams, but only the mafia know exactly who is on their side. The town must work together, using discussion, observation, and voting to identify and eliminate the mafia. Meanwhile, the mafia attempt to blend in, spread doubt, and mislead the town while secretly eliminating opponents at night. Every conversation, vote, and pause can carry meaning, and both teams must carefully balance truth and lies to secure victory. Over the course of alternating night and day phases, alliances form, suspicions grow, and the game builds toward a decisive end where only one side will prevail.
+
+TEAMS AND ROLES:
+The game features two opposing teams: the informed mafia and the uninformed town.
+- Mafia: Mafiosos act together at night to eliminate members of the town. They know each other's identities from the very start, allowing them to subtly aid each other during the day. While they cannot speak privately during the day, they may attempt to coordinate through hints and voting behavior.
+- Detectives: Town members with the ability to investigate at night. A detective learns the role of the player they investigate, but only they receive this information. They must decide carefully when and how to reveal their findings to avoid becoming a mafia target.
+- Villagers: Town members with no special abilities. Though they lack private information, their power lies in collective reasoning, pattern recognition, and their ability to influence voting outcomes.
+
+GAME STRUCTURE:
+The game alternates between night and day phases until one side wins.
+1. Night Phase:
+- Investigation: Each detective chooses one player to investigate and learns their role privately. Investigations are secret and can only be shared by choice in the public discussion.
+- Assassination: One randomly selected mafioso makes the final kill decision for the team. The target must be an active non-mafioso.
+- Outcome: Killed players become inactive immediately and take no further part in discussions, votes, or actions.
+
+2. Day Phase:
+- Discussion: In each discussion round, all active players speak in a randomized order. Each player may send a single public message or remain silent. Messages are addressed to all and attributed by name. No private communication is allowed.
+- Voting: Following discussion, all active players cast a vote to arrest one player. The player with the most votes is arrested. If there is a tie, a tied player is selected randomly.
+- Outcome: Arrested players became inactive, and stop playing the game.
+
+WIN CONDITIONS:
+- Town: eliminate all mafiosos through coordinated voting during the day.
+- Mafia: eliminate all non-mafiosos through a combination of night kills and daytime voting deception.
+
+INFORMATION FLOW:
+- All information revealead to players appears in their #YOUR MEMORY: log, in strict chronological order.
+- Memory is unique to each player, creating asymmetries in what individuals know.
+- Detective investigation results are visible only to that specific detective.
+- All mafiosos know which mafioso was assigned the kill decision at night, and they are all informed of the outcome.
+- There is no private messaging at any point; all communication occurs in public during the day.
+- The total number of each role is known to all players from the start.
+- Deaths and arrests are publicly announced.
+- Voting results are announced and all players see who voted for whom.
+- Voting results are revealed once all active players have cast their vote.
+
+
+#REQUIRED RESPONSE FORMATS
+
+NIGHT ACTION RESPONSE FORMAT:
+- Your night action response MUST START with the name of the player you want to choose.
+- Optional reasoning may follow AFTER a line break.
+- Example: response = 'player_name \n I choose player_name because...'.
+- If your response does not start with a player name, a random valid choice will be made for you.
+
+DISCUSSION RESPONSE FORMAT:
+- Your discussion response MUST START with your message, enclosed in double quotation marks. 
+- Optional reasoning may follow AFTER a line break.
+- Example: response = '"your message" \n I am saying this because...'.
+- Your message content will be truncated to a maximum of 200 characters.
+- If your response does not start with an opening quote, you will be marked as remaining silent.
+
+VOTING RESPONSE FORMAT: 
+- Your voting response MUST START with the name of the player you want to vote for. 
+- Optional reasoning may follow AFTER a line break.
+- Example: response = 'player_name \n I am voting for player_name because...'.
+- If your response does not start with a player name, a random valid choice will be made for you.
+
+
+#GAME PLAYERS AND COMPOSITION
+- In the game you're playing there are: {composition}.
+- You're {name} and the other players are: {other_players}.
+
+
+#YOUR MEMORY:
+{memory}
+
+
+{action_specific_content}""",
+
+            # Action-specific suffixes
+            "discussion_suffix": """#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
+What message do you want to say to everyone?
+Your response must start with your message in double quotation marks, followed by optional reasoning:[/INST]
+""",
+
+            "voting_suffix": """#VOTING TIME: 
+Vote to arrest one player from: {candidates}.
+Reply with just a name:[/INST]
+""",
+
+            "night_action_suffix": """#NIGHT {round_num}: 
+Choose a player to {action} from: {candidates}.
+Reply with just a name:[/INST]
+"""
+        }
+    
     def format_discussion_prompt(self, name: str, role: str, other_players: str, 
                                 composition: str, memory: str, round_num: int, discussion_rounds: int) -> str:
         """Format discussion prompt template using base + suffix"""
@@ -449,12 +556,38 @@ Reply with just a name:[/INST]
             if not match:
                 return None
             return match.group(1)
+        elif self.version == "v4.1":
+            # v4.1 format: "message" \n reasoning... (with truncation handling)
+            # First try to match complete quoted message
+            match = re.search(r'^\s*"([^"]+)"', response)
+            if match:
+                return match.group(1)
+            
+            # If no complete quote found, check for truncated message
+            # Look for opening quote followed by content (potentially truncated)
+            truncated_match = re.search(r'^\s*"([^"]*)', response.strip())
+            if truncated_match and len(truncated_match.group(1)) > 0:
+                # Found truncated message - return the partial content
+                return f'{truncated_match.group(1)}..."'
+            
+            # No valid message format found
+            return None
         else:
             # v3.0 and earlier format: MESSAGE: "message"
+            # First try to match complete quoted message
             match = re.search(r'MESSAGE:\s*"((?:\\.|[^"\\])*)"', response)
-            if not match:
-                return None
-            return match.group(1)
+            if match:
+                return match.group(1)
+            
+            # If no complete quote found, check for truncated message
+            # Look for MESSAGE: followed by opening quote and content (potentially truncated)
+            truncated_match = re.search(r'MESSAGE:\s*"([^"]*)', response.strip())
+            if truncated_match and len(truncated_match.group(1)) > 0:
+                # Found truncated message - return the partial content
+                return f'{truncated_match.group(1)}..."'
+            
+            # No valid message format found
+            return None
     
     def parse_voting_response(self, response: str, candidates: List[str]) -> str:
         """Parse voting response based on prompt version"""
@@ -467,8 +600,20 @@ Reply with just a name:[/INST]
         if 'final<|message|>' in response:
             response = response.split('final<|message|>')[-1].strip()
         
-        if self.version == "v4.0":
-            # v4.0 format: player_name \n reasoning...
+        if self.version == "v4.1":
+            # v4.1 format: strict parsing - only check first word
+            # response.strip().split()[0] gets the first word after removing whitespace
+            first_word = response.strip().split()[0] if response.strip().split() else ""
+            
+            # Check if first word matches any candidate (case insensitive)
+            for candidate in candidates:
+                if candidate.lower() == first_word.lower():
+                    return candidate
+            
+            # No match found - return None for random vote
+            return None
+        elif self.version == "v4.0":
+            # v4.0 format: player_name \n reasoning... (with fallback)
             response_lines = response.strip().split('\n')
             first_line = response_lines[0].strip()
             
@@ -501,8 +646,20 @@ Reply with just a name:[/INST]
         if 'final<|message|>' in response:
             response = response.split('final<|message|>')[-1].strip()
         
-        if self.version == "v4.0":
-            # v4.0 format: player_name \n reasoning...
+        if self.version == "v4.1":
+            # v4.1 format: strict parsing - only check first word
+            # response.strip().split()[0] gets the first word after removing whitespace
+            first_word = response.strip().split()[0] if response.strip().split() else ""
+            
+            # Check if first word matches any candidate (case insensitive)
+            for candidate in candidates:
+                if candidate.lower() == first_word.lower():
+                    return candidate
+            
+            # No match found - return None for random choice
+            return None
+        elif self.version == "v4.0":
+            # v4.0 format: player_name \n reasoning... (with fallback)
             response_lines = response.strip().split('\n')
             first_line = response_lines[0].strip()
             
