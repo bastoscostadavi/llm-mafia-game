@@ -386,10 +386,7 @@ Reply with just a name:[/INST]
         Enhanced v4.0 with improved truncation handling.
         
         Key changes from v4.0:
-        - Clarified discussion response format to explain truncation vs silence
-        - Better instructions for models about token limit behavior
-        - Explains that no name prefixing is needed for discussio messages
-        - Maintains all caching optimizations from v4.0
+        - Changed parsing logic for discussion message: if response = '"message truncated', return "message truncated..." instead of "remained silent"
         """
         return {
             
@@ -443,21 +440,20 @@ NIGHT ACTION RESPONSE FORMAT:
 - Your night action response MUST START with the name of the player you want to choose.
 - Optional reasoning may follow AFTER a line break.
 - Example: response = 'player_name \n I choose player_name because...'.
-- If your response does not start with a player name, a random valid choice will be made for you.
+- If you fail to respond in the required format, a random valid choice will be made for you.
 
 DISCUSSION RESPONSE FORMAT:
-- Your discussion response MUST START with the message you want to say to everyone, enclosed in double quotation marks. 
+- Your discussion response MUST START with your message, enclosed in double quotation marks. 
 - Optional reasoning may follow AFTER a line break.
-- No name prefixing needed, the system already attributes the message to the speaker.
-- Example: response = '"I believe that..." \n I am saying this because...'.
-- Your message content will be truncated to a maximum of 200 characters.
-- If your response does not start with an opening quote, you will be marked as remaining silent.
+- Example: response = '"your message" \n I am saying this because...'.
+- If you fail to respond in the required format, a message stating that you remained silent will be shared with everyone.
+- Your message will be truncated to a maximum of 200 characters.
 
 VOTING RESPONSE FORMAT: 
 - Your voting response MUST START with the name of the player you want to vote for. 
 - Optional reasoning may follow AFTER a line break.
 - Example: response = 'player_name \n I am voting for player_name because...'.
-- If your response does not start with a player name, a random valid choice will be made for you.
+- If you fail to respond in the required format, a random valid vote will be cast for you.
 
 
 #GAME PLAYERS AND COMPOSITION
@@ -605,19 +601,7 @@ Reply with just a name:[/INST]
         if 'final<|message|>' in response:
             response = response.split('final<|message|>')[-1].strip()
         
-        if self.version == "v4.1":
-            # v4.1 format: strict parsing - only check first word
-            # response.strip().split()[0] gets the first word after removing whitespace
-            first_word = response.strip().split()[0] if response.strip().split() else ""
-            
-            # Check if first word matches any candidate (case insensitive)
-            for candidate in candidates:
-                if candidate.lower() == first_word.lower():
-                    return candidate
-            
-            # No match found - return None for random vote
-            return None
-        elif self.version == "v4.0":
+        if self.version == "v4.0" or self.version == "v4.1":
             # v4.0 format: player_name \n reasoning... (with fallback)
             response_lines = response.strip().split('\n')
             first_line = response_lines[0].strip()
@@ -651,19 +635,7 @@ Reply with just a name:[/INST]
         if 'final<|message|>' in response:
             response = response.split('final<|message|>')[-1].strip()
         
-        if self.version == "v4.1":
-            # v4.1 format: strict parsing - only check first word
-            # response.strip().split()[0] gets the first word after removing whitespace
-            first_word = response.strip().split()[0] if response.strip().split() else ""
-            
-            # Check if first word matches any candidate (case insensitive)
-            for candidate in candidates:
-                if candidate.lower() == first_word.lower():
-                    return candidate
-            
-            # No match found - return None for random choice
-            return None
-        elif self.version == "v4.0":
+        if self.version == "v4.0" or self.version == "v4.1":
             # v4.0 format: player_name \n reasoning... (with fallback)
             response_lines = response.strip().split('\n')
             first_line = response_lines[0].strip()

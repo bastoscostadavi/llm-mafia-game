@@ -63,8 +63,19 @@ def extract_model_name(model_config):
             return 'GPT-5'
         elif 'gpt-4o' in model.lower():
             return 'GPT-4o'
+        elif model.startswith('gpt-4.1-mini'):
+            return 'GPT-4.1-mini'
         elif model.startswith('gpt-3.5'):
             return 'GPT-3.5'
+        else:
+            return model.upper()
+    
+    elif model_config.get('type') == 'xai':
+        model = model_config.get('model', 'unknown')
+        if model.startswith('grok-4'):
+            return 'Grok-4'
+        elif 'grok' in model.lower() and 'mini' in model.lower():
+            return f'Grok-{model.split("-")[1]}-mini'  # e.g., grok-3-mini -> Grok-3-mini
         else:
             return model.upper()
     

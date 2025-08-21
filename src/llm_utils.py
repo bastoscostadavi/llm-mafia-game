@@ -61,6 +61,36 @@ class OpenAI:
         
         return choice.message.content.strip()
 
+class XAI:
+    """xAI API wrapper (OpenAI compatible)"""
+    def __init__(self, client, model, temperature=0.7):
+        self.client = client
+        self.model = model
+        self.temperature = temperature
+        self.display_name = model
+    
+    def generate(self, prompt, max_tokens=50):
+        # Grok-4 is a reasoning model, doesn't support temperature, stop, etc.
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=max_tokens
+            # Note: Grok-4 doesn't support temperature, presencePenalty, frequencyPenalty, stop
+        )
+        
+        choice = response.choices[0]
+        
+        # Handle empty content gracefully
+        if choice.message.content is None or choice.message.content.strip() == "":
+            if choice.finish_reason == "content_filter":
+                return "I cannot respond due to content restrictions."
+            elif choice.finish_reason == "length":
+                return "My response was cut off."
+            else:
+                return "No response available."
+        
+        return choice.message.content.strip()
+
 class Anthropic:
     """Anthropic API wrapper with prompt caching support"""
     def __init__(self, client, model, temperature=0.7, use_cache=False):
@@ -362,6 +392,20 @@ def create_llm(llm_config):
         model = llm_config.get('model', 'gpt-3.5-turbo')
         temperature = llm_config.get('temperature', 0.7)
         return OpenAI(client, model, temperature)
+    
+    elif llm_type == 'xai':
+        if openai is None:
+            print("ERROR: OpenAI package not installed (needed for xAI). Using local model instead.")
+            return create_llm({'type': 'local'})
+        
+        # xAI uses OpenAI SDK with different base URL
+        client = openai.OpenAI(
+            api_key=llm_config.get('api_key') or os.getenv('XAI_API_KEY'),
+            base_url="https://api.x.ai/v1"
+        )
+        model = llm_config.get('model', 'grok-4')
+        temperature = llm_config.get('temperature', 0.7)
+        return XAI(client, model, temperature)
     
     elif llm_type == 'anthropic':
         if anthropic is None:
