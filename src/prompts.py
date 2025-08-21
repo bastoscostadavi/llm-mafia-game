@@ -388,6 +388,7 @@ Reply with just a name:[/INST]
         Key changes from v4.0:
         - Clarified discussion response format to explain truncation vs silence
         - Better instructions for models about token limit behavior
+        - Explains that no name prefixing is needed for discussio messages
         - Maintains all caching optimizations from v4.0
         """
         return {
@@ -445,9 +446,10 @@ NIGHT ACTION RESPONSE FORMAT:
 - If your response does not start with a player name, a random valid choice will be made for you.
 
 DISCUSSION RESPONSE FORMAT:
-- Your discussion response MUST START with your message, enclosed in double quotation marks. 
+- Your discussion response MUST START with the message you want to say to everyone, enclosed in double quotation marks. 
 - Optional reasoning may follow AFTER a line break.
-- Example: response = '"your message" \n I am saying this because...'.
+- No name prefixing needed, the system already attributes the message to the speaker.
+- Example: response = '"I believe that..." \n I am saying this because...'.
 - Your message content will be truncated to a maximum of 200 characters.
 - If your response does not start with an opening quote, you will be marked as remaining silent.
 
@@ -558,17 +560,20 @@ Reply with just a name:[/INST]
             return match.group(1)
         elif self.version == "v4.1":
             # v4.1 format: "message" \n reasoning... (with truncation handling)
-            # First try to match complete quoted message
-            match = re.search(r'^\s*"([^"]+)"', response)
+            # Split on newline and take only the first line to avoid capturing reasoning
+            first_line = response.split('\n')[0].strip()
+            
+            # First try to match complete quoted message on first line
+            match = re.search(r'^\s*"([^"]+)"', first_line)
             if match:
                 return match.group(1)
             
-            # If no complete quote found, check for truncated message
+            # If no complete quote found, check for truncated message on first line
             # Look for opening quote followed by content (potentially truncated)
-            truncated_match = re.search(r'^\s*"([^"]*)', response.strip())
+            truncated_match = re.search(r'^\s*"([^"]*)', first_line)
             if truncated_match and len(truncated_match.group(1)) > 0:
-                # Found truncated message - return the partial content
-                return f'{truncated_match.group(1)}..."'
+                # Found truncated message - return the partial content with proper closing
+                return f'{truncated_match.group(1)}...'
             
             # No valid message format found
             return None

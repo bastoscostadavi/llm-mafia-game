@@ -11,7 +11,7 @@ from src.prompts import PromptConfig
 
 # CURRENT SYSTEM VERSION
 # This is the single source of truth for prompt version across the entire system
-DEFAULT_PROMPT_VERSION = "v4.0"
+DEFAULT_PROMPT_VERSION = "v4.1"
 
 # MODEL CONFIGURATIONS
 # Available local models in models/ directory:
@@ -32,9 +32,9 @@ DEFAULT_PROMPT_VERSION = "v4.0"
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'local', 'model': 'Qwen3-14B-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
-    'mafioso': {'type': 'local', 'model': 'Qwen3-14B-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
-    'villager': {'type': 'local', 'model': 'Qwen3-14B-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048}
+    'detective': {'type': 'local', 'model': 'Qwen2.5-7B-Instruct-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
+    'mafioso': {'type': 'local', 'model': 'Qwen2.5-7B-Instruct-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048},
+    'villager': {'type': 'local', 'model': 'Qwen2.5-7B-Instruct-Q4_K_M.gguf', 'temperature': 0.7, 'n_ctx': 2048}
 }
 
 # GAME SETTINGS
@@ -43,7 +43,7 @@ DEFAULT_MESSAGE_LIMIT = 200
 # TOKEN LIMITS by model type
 # Standard limits for most models
 STANDARD_TOKEN_LIMITS = {
-    'discussion': 50,   # Balanced between quality and cost
+    'discussion': 55,   # Balanced between quality and cost
     'voting': 5,        # A name
     'night_action': 5   # A name
 }

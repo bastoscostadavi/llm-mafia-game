@@ -21,12 +21,12 @@ def classic_game(debug_prompts=False):
     random.shuffle(roles)
     
     players = [
-        {'name': 'Alice', 'role': roles[0], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Bob', 'role': roles[1], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Charlie', 'role': roles[2], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Diana', 'role': roles[3], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Eve', 'role': roles[4], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Frank', 'role': roles[5], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}}
+        {'name': 'Alice', 'role': roles[0], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Bob', 'role': roles[1], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Charlie', 'role': roles[2], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Diana', 'role': roles[3], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Eve', 'role': roles[4], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Frank', 'role': roles[5], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}}
     ]
 
     return create_game(players, discussion_rounds=1, debug_prompts=debug_prompts, prompt_config=get_default_prompt_config())
@@ -38,10 +38,10 @@ def mini_mafia_game(debug_prompts=False):
     random.shuffle(roles)
     
     players = [
-        {'name': 'Alice', 'role': roles[0], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Bob', 'role': roles[1], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Charlie', 'role': roles[2], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}},
-        {'name': 'Diana', 'role': roles[3], 'llm': {'type': 'local', 'model_path': 'models/mistral.gguf'}}
+        {'name': 'Alice', 'role': roles[0], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Bob', 'role': roles[1], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Charlie', 'role': roles[2], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}},
+        {'name': 'Diana', 'role': roles[3], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}}
     ]
 
     return create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=get_default_prompt_config())
