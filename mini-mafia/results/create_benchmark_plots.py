@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Dynamic LLM Mafia Benchmark Plot Generator
+Dynamic LLM Mafia Benchmark Plot Generator for v4.1 batches
 
-Creates horizontal bar plots for LLM Mafia benchmark results using the latest batch data.
-Automatically reads from v4.0 batch results and includes specific GPT-4o vs GPT-5 v4.1 batch.
+Creates horizontal bar plots for LLM Mafia benchmark results using v4.1 batch data.
+This script processes ONLY v4.1 batches to maintain version separation.
 Groups by background models for comparative analysis.
 """
 
@@ -34,13 +34,14 @@ def get_model_company(model_name):
         'GPT-4o': 'OpenAI', 
         'GPT-5': 'OpenAI',
         'GPT-3.5': 'OpenAI',
-        'GPT-4.1-mini': 'OpenAI',
+        'GPT 4.1 Mini': 'OpenAI',
         'Grok-4': 'X',
-        'Grok-3-mini': 'X',
+        'Grok 3 Mini': 'X',
         'Claude-3-Haiku': 'Anthropic',
         'Claude-3-Sonnet': 'Anthropic',
         'Claude-3-Opus': 'Anthropic',
         'Claude-Sonnet-4': 'Anthropic',
+        'Claude Opus 4.1': 'Anthropic',
         'Mistral 7B Instruct': 'Mistral AI',
         'Mistral 7B Instruct v0.2': 'Mistral AI',
         'Mistral 7B Instruct v0.3': 'Mistral AI',
@@ -51,8 +52,10 @@ def get_model_company(model_name):
         'Gemma 2 27B Instruct': 'DeepMind'
     }
     
-    # Handle Claude Sonnet-4 variations
+    # Handle Claude variations
     if 'claude-sonnet-4' in model_name.lower() or 'sonnet-4' in model_name.lower():
+        return 'Anthropic'
+    elif 'claude-opus-4' in model_name.lower() or 'opus-4' in model_name.lower():
         return 'Anthropic'
     
     return company_mapping.get(model_name, 'Unknown')
@@ -76,12 +79,12 @@ def load_company_logo(company, size=(40, 40)):
     # Map company names to logo filenames  
     logo_files = {
         "OpenAI": "openai.png",
-        "X": "x-logo.png",
+        "X": "x-logo-49794.webp",
         "Mistral AI": "mistral-color.png", 
         "Meta": "meta-logo-6760788.png",
         "Alibaba": "BABA.png",
         "Anthropic": "Anthropic.png",
-        "DeepMind": "deepmind-logo.png"
+        "DeepMind": "deepmind-color.png"
     }
     
     try:
@@ -114,36 +117,31 @@ def load_company_logo(company, size=(40, 40)):
         print(f"Error loading logo for {company}: {e}")
         return None
 
-def analyze_latest_batch_data():
-    """Analyze the latest v4.0 batch data and return organized results"""
+def analyze_v4_1_batch_data():
+    """Analyze ONLY v4.1 batch data and return organized results"""
     data_dir = "../data/batch"
     if not os.path.exists(data_dir):
         print(f"Data directory '{data_dir}' not found. Run from mini-mafia/results/ directory.")
         return {}
     
-    # Find all v4.0 batch directories + specific GPT-4o vs GPT-5 v4.1 batch
-    v4_batches = []
+    # Find all v4.1 batch directories (excluding the special GPT-4o vs GPT-5 batch handled in v4.0 script)
+    v4_1_batches = []
     for batch_dir in os.listdir(data_dir):
-        if batch_dir.endswith("_v4.0"):
+        if batch_dir.endswith("_v4.1") and batch_dir != "batch_20250821_150540_v4.1":
             batch_path = os.path.join(data_dir, batch_dir)
             if os.path.isdir(batch_path):
-                v4_batches.append(batch_path)
-        elif batch_dir == "batch_20250821_150540_v4.1":  # Include specific GPT-4o vs GPT-5 batch
-            batch_path = os.path.join(data_dir, batch_dir)
-            if os.path.isdir(batch_path):
-                v4_batches.append(batch_path)
-                print(f"Including GPT-4o vs GPT-5 v4.1 batch: {batch_dir}")
+                v4_1_batches.append(batch_path)
     
-    if not v4_batches:
-        print("No v4.0 batch directories found.")
+    if not v4_1_batches:
+        print("No v4.1 batch directories found (excluding special GPT-4o vs GPT-5 batch).")
         return {}
     
-    print(f"Found {len(v4_batches)} batch directories (v4.0 + specific GPT-4o vs GPT-5 v4.1)")
+    print(f"Found {len(v4_1_batches)} v4.1 batch directories")
     
     # Track results by model configuration
     config_results = defaultdict(lambda: {'evil_wins': 0, 'total_games': 0, 'model_configs': None})
     
-    for batch_path in sorted(v4_batches):
+    for batch_path in sorted(v4_1_batches):
         batch_name = os.path.basename(batch_path)
         print(f"Analyzing {batch_name}...")
         
@@ -259,6 +257,10 @@ def get_background_color(background_key):
         return '#FF6600'  # Mistral orange
     elif 'gpt-4o' in background_key.lower():
         return '#00A67E'  # GPT-4o green  
+    elif 'gpt-4.1-mini' in background_key.lower() or 'gpt 4.1 mini' in background_key.lower():
+        return '#10A37F'  # GPT-4.1-mini green
+    elif 'grok' in background_key.lower():
+        return '#FF6B35'  # Grok orange/red
     elif 'llama' in background_key.lower():
         return '#4A90E2'  # Llama blue
     elif 'qwen' in background_key.lower():
@@ -357,16 +359,16 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     print(f"Plot saved as {filename}")
 
 def main():
-    """Create dynamic benchmark plots from latest batch data"""
+    """Create dynamic benchmark plots from v4.1 batch data"""
     
-    print("🔄 Analyzing latest v4.0 batch data...")
-    config_results = analyze_latest_batch_data()
+    print("🔄 Analyzing v4.1 batch data...")
+    config_results = analyze_v4_1_batch_data()
     
     if not config_results:
-        print("❌ No data found to create plots")
+        print("❌ No v4.1 data found to create plots")
         return
     
-    print("📊 Grouping results by experiment type...")
+    print("📊 Grouping v4.1 results by experiment type...")
     
     # Group results for both experiment types
     mafioso_groups = group_results_by_mafioso_experiments(config_results)
@@ -375,7 +377,7 @@ def main():
     plots_created = 0
     
     # Create mafioso-changing experiment plots (evil win rate)
-    print("\n🟡 Creating mafioso-changing experiment plots...")
+    print("\n🟡 Creating v4.1 mafioso-changing experiment plots...")
     for background_key, results_list in mafioso_groups.items():
         if len(results_list) < 2:  # Need at least 2 models to compare
             continue
@@ -408,9 +410,9 @@ def main():
             background_desc = f"{detective_model} Detective + {villager_model} Villager Town"
         
         title = f"Mafioso vs {background_desc}"
-        filename = f"mafioso_{background_key.lower()}_benchmark.png"
+        filename = f"mafioso_{background_key.lower()}_v4_1_benchmark.png"
         
-        print(f"📈 Creating mafioso plot: {title}")
+        print(f"📈 Creating v4.1 mafioso plot: {title}")
         print(f"   Models: {', '.join(models)}")
         print(f"   Sample sizes: {[r['games'] for r in results_list]}")
         
@@ -418,7 +420,7 @@ def main():
         plots_created += 1
     
     # Create detective-changing experiment plots (good win rate)
-    print("\n🔵 Creating detective-changing experiment plots...")
+    print("\n🔵 Creating v4.1 detective-changing experiment plots...")
     for background_key, results_list in detective_groups.items():
         if len(results_list) < 2:  # Need at least 2 models to compare
             continue
@@ -451,20 +453,20 @@ def main():
             background_desc = f"{mafioso_model} Mafia and {villager_model} Villager"
         
         title = f"Detective vs {background_desc}"
-        filename = f"detective_{background_key.lower()}_benchmark.png"
+        filename = f"detective_{background_key.lower()}_v4_1_benchmark.png"
         
-        print(f"📈 Creating detective plot: {title}")
+        print(f"📈 Creating v4.1 detective plot: {title}")
         print(f"   Models: {', '.join(models)}")
         print(f"   Sample sizes: {[r['games'] for r in results_list]}")
         
         create_benchmark_plot(benchmark_data, title, filename, background_key, use_good_wins=True)
         plots_created += 1
     
-    print(f"\n✅ Created {plots_created} dynamic benchmark plots!")
+    print(f"\n✅ Created {plots_created} v4.1 benchmark plots!")
     print(f"   📊 Mafioso experiments: {len(mafioso_groups)} plots")
     print(f"   📊 Detective experiments: {len(detective_groups)} plots")
-    print("\nNote: Plots are automatically updated with the latest batch data.")
-    print("Including Claude Sonnet-4 support when data becomes available.")
+    print("\nNote: v4.1 plots are separate from v4.0 plots to maintain version isolation.")
+    print("The special GPT-4o vs GPT-5 v4.1 batch is included in the v4.0 script for comparison.")
 
 if __name__ == "__main__":
     main()

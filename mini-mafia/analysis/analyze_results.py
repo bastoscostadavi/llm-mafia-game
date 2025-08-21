@@ -64,7 +64,7 @@ def extract_model_name(model_config):
         elif 'gpt-4o' in model.lower():
             return 'GPT-4o'
         elif model.startswith('gpt-4.1-mini'):
-            return 'GPT-4.1-mini'
+            return 'GPT 4.1 Mini'
         elif model.startswith('gpt-3.5'):
             return 'GPT-3.5'
         else:
@@ -75,7 +75,7 @@ def extract_model_name(model_config):
         if model.startswith('grok-4'):
             return 'Grok-4'
         elif 'grok' in model.lower() and 'mini' in model.lower():
-            return f'Grok-{model.split("-")[1]}-mini'  # e.g., grok-3-mini -> Grok-3-mini
+            return f'Grok {model.split("-")[1]} Mini'  # e.g., grok-3-mini -> Grok 3 Mini
         else:
             return model.upper()
     
@@ -89,6 +89,8 @@ def extract_model_name(model_config):
             return 'Claude-3-Opus'
         elif 'claude-sonnet-4' in model or 'sonnet-4' in model:
             return 'Claude-Sonnet-4'
+        elif 'claude-opus-4' in model or 'opus-4' in model:
+            return 'Claude Opus 4.1'
         else:
             return f"Claude-{model}"
     

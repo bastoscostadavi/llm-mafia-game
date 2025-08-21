@@ -238,7 +238,7 @@ def main():
     
     try:
         # Run the batch
-        batch_id = run_batch(n_games, debug_prompts=True, prompt_config=prompt_config, temperature=args.temperature)
+        batch_id = run_batch(n_games, debug_prompts=debug, prompt_config=prompt_config, temperature=args.temperature)
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")

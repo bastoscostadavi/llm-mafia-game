@@ -39,8 +39,8 @@ DEFAULT_PROMPT_VERSION = "v4.1"
 # EX: 'mafioso': {'type': 'xai', 'model': 'grok-4', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'openai', 'model': 'gpt-4.1-mini', 'temperature': 0.7},
-    'mafioso': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf', 'temperature': 0.7},
+    'detective': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7},
+    'mafioso': {'type': 'openai', 'model': 'gpt-4.1-mini', 'temperature': 0.7},
     'villager': {'type': 'openai', 'model': 'gpt-4.1-mini', 'temperature': 0.7}
 }
 
