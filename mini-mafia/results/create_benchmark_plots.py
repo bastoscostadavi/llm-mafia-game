@@ -79,12 +79,12 @@ def load_company_logo(company, size=(40, 40)):
     # Map company names to logo filenames  
     logo_files = {
         "OpenAI": "openai.png",
-        "X": "x-logo-49794.webp",
-        "Mistral AI": "mistral-color.png", 
-        "Meta": "meta-logo-6760788.png",
-        "Alibaba": "BABA.png",
-        "Anthropic": "Anthropic.png",
-        "DeepMind": "deepmind-color.png"
+        "X": "xai.png",
+        "Mistral AI": "mistral.png", 
+        "Meta": "meta.png",
+        "Alibaba": "baba.png",
+        "Anthropic": "anthropic.png",
+        "DeepMind": "deepmind.png"
     }
     
     try:
@@ -321,36 +321,33 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
                     fontweight='bold', fontsize=12, color='black',
                     bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
     
-    # Add reference lines - adjust based on metric type
+    # Set axis labels based on metric type
     if use_good_wins:
-        baseline_1 = (1 - 5/12) * 100  # Good wins for no-information ≈ 58.33%
-        baseline_label = f'No information exchange ({baseline_1:.1f}%)'
         xlabel = 'Good Win Rate (%)'
     else:
-        baseline_1 = 5/12 * 100  # Evil wins for no-information ≈ 41.67%
-        baseline_label = f'No information exchange ({baseline_1:.1f}%)'
-        xlabel = 'Evil Win Rate (%)'
-    
-    ax.axvline(x=baseline_1, color='red', linestyle='--', alpha=0.7, linewidth=2)
-    
-    # Add legend with dotted line
-    legend_x = 65  # Position for legends
-    legend_y1 = len(models) - 0.3
-    ax.plot([legend_x - 8, legend_x - 2], [legend_y1, legend_y1], 
-            color='red', linestyle='--', linewidth=2, alpha=0.7)
-    ax.text(legend_x, legend_y1, baseline_label, 
-            ha='left', va='center', color='red', fontweight='bold', fontsize=9,
-            bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.9, edgecolor='red'))
+        xlabel = 'Mafia Win Rate (%)'
     
     # Formatting
     ax.set_xlabel(xlabel, fontsize=12, fontweight='bold')
     ax.set_title(title, fontsize=14, fontweight='bold', pad=20)
     ax.set_yticks([])  # Remove y-axis labels
     ax.set_xlim(-10, 100)  # Set range from -10 (for logos) to 100 (full domain)
-    ax.grid(axis='x', alpha=0.3)
+    
+    # Customize x-axis to only show positive values
+    ax.set_xticks([0, 20, 40, 60, 80, 100])
+    
+    # Add custom grid lines only for positive values
+    for x in [0, 20, 40, 60, 80, 100]:
+        ax.axvline(x=x, color='gray', alpha=0.3, linewidth=0.5)
+    
+    # Hide all spines
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    
+    # Add custom bottom axis line only from 0 to 100
+    ax.plot([0, 100], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
