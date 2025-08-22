@@ -28,13 +28,55 @@ from analyze_results import (
     get_batch_config, calculate_sem
 )
 
+def was_tie_vote(players):
+    """Determine if the final vote was a tie by checking if all living players received votes"""
+    # Find players who were alive at the time of voting (not killed in night phase)
+    living_players = [p for p in players if p.get('alive', True)]
+    
+    # Look for voting information in memory
+    voting_info = None
+    for player in players:
+        memory = player.get('memory', [])
+        for entry in reversed(memory):  # Check from most recent
+            if entry.startswith("Votes:"):
+                voting_info = entry
+                break
+        if voting_info:
+            break
+    
+    if not voting_info:
+        return False
+    
+    # Extract vote targets from the voting string
+    # Format: "Votes: Alice voted for Bob, Charlie voted for Diana, Diana voted for Alice"
+    vote_targets = set()
+    votes_part = voting_info.replace("Votes: ", "")
+    vote_entries = votes_part.split(", ")
+    
+    for vote_entry in vote_entries:
+        # Handle cases like "Alice voted for Bob (the vote was cast randomly because of a failed format)"
+        if " voted for " in vote_entry:
+            target = vote_entry.split(" voted for ")[1]
+            # Remove any parenthetical information
+            if " (" in target:
+                target = target.split(" (")[0]
+            vote_targets.add(target.strip())
+    
+    # Get names of living players
+    living_names = {p['name'] for p in living_players}
+    
+    # A tie occurred if all living players received at least one vote
+    return vote_targets == living_names
+
 def get_model_company(model_name):
     """Map model names to their companies"""
     company_mapping = {
-        'GPT-4o': 'OpenAI', 
+        'GPT-4o': 'OpenAI',
+        'GPT-4o Mini': 'OpenAI', 
         'GPT-5': 'OpenAI',
+        'GPT-5 Mini': 'OpenAI',
         'GPT-3.5': 'OpenAI',
-        'GPT 4.1 Mini': 'OpenAI',
+        'GPT-4.1 Mini': 'OpenAI',
         'Grok-4': 'X',
         'Grok 3 Mini': 'X',
         'Claude-3-Haiku': 'Anthropic',
@@ -127,7 +169,7 @@ def analyze_v4_1_batch_data():
     # Find all v4.1 batch directories (excluding the special GPT-4o vs GPT-5 batch handled in v4.0 script)
     v4_1_batches = []
     for batch_dir in os.listdir(data_dir):
-        if batch_dir.endswith("_v4.1") and batch_dir != "batch_20250821_150540_v4.1":
+        if batch_dir.endswith("_v4.1"):
             batch_path = os.path.join(data_dir, batch_dir)
             if os.path.isdir(batch_path):
                 v4_1_batches.append(batch_path)
@@ -139,7 +181,7 @@ def analyze_v4_1_batch_data():
     print(f"Found {len(v4_1_batches)} v4.1 batch directories")
     
     # Track results by model configuration
-    config_results = defaultdict(lambda: {'evil_wins': 0, 'total_games': 0, 'model_configs': None})
+    config_results = defaultdict(lambda: {'evil_wins': 0, 'evil_wins_after_tie': 0, 'good_wins_after_tie': 0, 'total_games': 0, 'model_configs': None})
     
     for batch_path in sorted(v4_1_batches):
         batch_name = os.path.basename(batch_path)
@@ -159,6 +201,8 @@ def analyze_v4_1_batch_data():
         
         # Count games and wins
         evil_wins = 0
+        evil_wins_after_tie = 0
+        good_wins_after_tie = 0
         total_games = 0
         
         # Process all game files in batch
@@ -174,20 +218,28 @@ def analyze_v4_1_batch_data():
                     
                     if winner != "unknown":
                         total_games += 1
+                        was_tie = was_tie_vote(players)
+                        
                         if winner == "evil":
                             evil_wins += 1
+                            if was_tie:
+                                evil_wins_after_tie += 1
+                        elif winner == "good" and was_tie:
+                            good_wins_after_tie += 1
                             
                 except (json.JSONDecodeError, IOError, KeyError):
                     continue
         
         # Add to overall results
         config_results[config_key]['evil_wins'] += evil_wins
+        config_results[config_key]['evil_wins_after_tie'] += evil_wins_after_tie
+        config_results[config_key]['good_wins_after_tie'] += good_wins_after_tie
         config_results[config_key]['total_games'] += total_games
     
     return config_results
 
 def group_results_by_mafioso_experiments(config_results):
-    """Group results for mafioso-changing experiments (detective + villager background)"""
+    """Group results for mafioso-changing experiments by background model"""
     background_groups = defaultdict(list)
     
     for config_key, results in config_results.items():
@@ -199,27 +251,63 @@ def group_results_by_mafioso_experiments(config_results):
         villager_model = extract_model_name(model_configs.get('villager', {}))
         mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
         
-        # Create background key (detective + villager)
-        background_key = f"{detective_model}_{villager_model}"
+        # Determine background model: if detective and villager are the same, use that model
+        # Otherwise, group by the more common/primary model (detective takes precedence)
+        if detective_model == villager_model:
+            background_model = detective_model
+        else:
+            # For mixed backgrounds, use detective as the primary background model
+            background_model = detective_model
         
         evil_wins = results['evil_wins']
+        evil_wins_after_tie = results['evil_wins_after_tie']
         total_games = results['total_games']
         if total_games > 0:
             win_rate = (evil_wins / total_games) * 100
+            tie_win_rate = (evil_wins_after_tie / total_games) * 100
             sem = calculate_sem(evil_wins, total_games)
             
-            background_groups[background_key].append({
-                'varying_model': mafioso_model,
-                'win_rate': win_rate,
-                'sem': sem,
-                'games': total_games,
-                'evil_wins': evil_wins
-            })
+            # Check if this varying model already exists in this background group
+            existing_entry = None
+            for entry in background_groups[background_model]:
+                if entry['varying_model'] == mafioso_model:
+                    existing_entry = entry
+                    break
+            
+            if existing_entry:
+                # Combine with existing entry
+                total_evil_wins = existing_entry['evil_wins'] + evil_wins
+                total_evil_wins_after_tie = existing_entry['evil_wins_after_tie'] + evil_wins_after_tie
+                total_games_combined = existing_entry['games'] + total_games
+                combined_win_rate = (total_evil_wins / total_games_combined) * 100
+                combined_tie_win_rate = (total_evil_wins_after_tie / total_games_combined) * 100
+                combined_sem = calculate_sem(total_evil_wins, total_games_combined)
+                
+                existing_entry.update({
+                    'win_rate': combined_win_rate,
+                    'tie_win_rate': combined_tie_win_rate,
+                    'sem': combined_sem,
+                    'games': total_games_combined,
+                    'evil_wins': total_evil_wins,
+                    'evil_wins_after_tie': total_evil_wins_after_tie
+                })
+            else:
+                # Add new entry
+                background_groups[background_model].append({
+                    'varying_model': mafioso_model,
+                    'background_config': f"{detective_model}_{villager_model}",  # Keep original config for reference
+                    'win_rate': win_rate,
+                    'tie_win_rate': tie_win_rate,
+                    'sem': sem,
+                    'games': total_games,
+                    'evil_wins': evil_wins,
+                    'evil_wins_after_tie': evil_wins_after_tie
+                })
     
     return background_groups
 
 def group_results_by_detective_experiments(config_results):
-    """Group results for detective-changing experiments (mafioso + villager background)"""
+    """Group results for detective-changing experiments by background model"""
     background_groups = defaultdict(list)
     
     for config_key, results in config_results.items():
@@ -231,23 +319,59 @@ def group_results_by_detective_experiments(config_results):
         villager_model = extract_model_name(model_configs.get('villager', {}))
         mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
         
-        # Create background key (mafioso + villager)
-        background_key = f"{mafioso_model}_{villager_model}"
+        # Determine background model: if mafioso and villager are the same, use that model
+        # Otherwise, group by the more common/primary model (villager takes precedence for detective experiments)
+        if mafioso_model == villager_model:
+            background_model = mafioso_model
+        else:
+            # For mixed backgrounds, use villager as the primary background model for detective experiments
+            background_model = villager_model
         
         evil_wins = results['evil_wins']
+        good_wins_after_tie = results['good_wins_after_tie']
         total_games = results['total_games']
         if total_games > 0:
             good_wins = total_games - evil_wins
             win_rate = (good_wins / total_games) * 100  # Good win rate for detective experiments
+            tie_win_rate = (good_wins_after_tie / total_games) * 100
             sem = calculate_sem(good_wins, total_games)
             
-            background_groups[background_key].append({
-                'varying_model': detective_model,
-                'win_rate': win_rate,
-                'sem': sem,
-                'games': total_games,
-                'good_wins': good_wins
-            })
+            # Check if this varying model already exists in this background group
+            existing_entry = None
+            for entry in background_groups[background_model]:
+                if entry['varying_model'] == detective_model:
+                    existing_entry = entry
+                    break
+            
+            if existing_entry:
+                # Combine with existing entry
+                total_good_wins = existing_entry['good_wins'] + good_wins
+                total_good_wins_after_tie = existing_entry['good_wins_after_tie'] + good_wins_after_tie
+                total_games_combined = existing_entry['games'] + total_games
+                combined_win_rate = (total_good_wins / total_games_combined) * 100
+                combined_tie_win_rate = (total_good_wins_after_tie / total_games_combined) * 100
+                combined_sem = calculate_sem(total_good_wins, total_games_combined)
+                
+                existing_entry.update({
+                    'win_rate': combined_win_rate,
+                    'tie_win_rate': combined_tie_win_rate,
+                    'sem': combined_sem,
+                    'games': total_games_combined,
+                    'good_wins': total_good_wins,
+                    'good_wins_after_tie': total_good_wins_after_tie
+                })
+            else:
+                # Add new entry
+                background_groups[background_model].append({
+                    'varying_model': detective_model,
+                    'background_config': f"{mafioso_model}_{villager_model}",  # Keep original config for reference
+                    'win_rate': win_rate,
+                    'tie_win_rate': tie_win_rate,
+                    'sem': sem,
+                    'games': total_games,
+                    'good_wins': good_wins,
+                    'good_wins_after_tie': good_wins_after_tie
+                })
     
     return background_groups
 
@@ -255,10 +379,14 @@ def get_background_color(background_key):
     """Get color based on background model type"""
     if 'mistral' in background_key.lower():
         return '#FF6600'  # Mistral orange
+    elif 'gpt-4o mini' in background_key.lower():
+        return '#00D4AA'  # GPT-4o Mini lighter green
     elif 'gpt-4o' in background_key.lower():
         return '#00A67E'  # GPT-4o green  
-    elif 'gpt-4.1-mini' in background_key.lower() or 'gpt 4.1 mini' in background_key.lower():
-        return '#10A37F'  # GPT-4.1-mini green
+    elif 'gpt-4.1' in background_key.lower() and 'mini' in background_key.lower():
+        return '#10A37F'  # GPT-4.1 Mini green
+    elif 'grok' in background_key.lower() and 'mini' in background_key.lower():
+        return '#8A2BE2'  # Grok Mini purple
     elif 'grok' in background_key.lower():
         return '#FF6B35'  # Grok orange/red
     elif 'llama' in background_key.lower():
@@ -279,6 +407,7 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     
     models = benchmark_data['models']
     values = benchmark_data['values'] 
+    tie_values = benchmark_data.get('tie_values', [0] * len(values))
     errors = benchmark_data['errors']
     companies = benchmark_data['companies']
     
@@ -286,18 +415,20 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     
     # Get color based on background
     bar_color = get_background_color(background_key)
+    
+    # Create main bars
     bars = ax.barh(y_positions, values, xerr=errors, 
                    color=bar_color, alpha=0.8, height=0.6,
                    error_kw={'capsize': 5, 'capthick': 2})
     
-    # Add model names inside the bars (white text)
-    for i, (model, value) in enumerate(zip(models, values)):
-        ax.text(value/2, i, model, ha='center', va='center', 
-                fontweight='bold', fontsize=11, color='white')
+    # Create hatched overlay bars for tie-based wins
+    tie_bars = ax.barh(y_positions, tie_values, 
+                       color=bar_color, alpha=0.8, height=0.6,
+                       hatch='///', edgecolor='white', linewidth=1)
     
-    # Add values on the right side of bars
-    for i, (value, error) in enumerate(zip(values, errors)):
-        ax.text(value + error + 1.5, i, f'{value:.1f}% ± {error:.1f}%', 
+    # Add model names and values on the right side of bars
+    for i, (model, value, error) in enumerate(zip(models, values, errors)):
+        ax.text(value + error + 1.5, i, f'{model}: {value:.1f}% ± {error:.1f}%', 
                 ha='left', va='center', fontweight='bold', fontsize=10)
     
     # Add company logos on the left
@@ -349,6 +480,16 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     # Add custom bottom axis line only from 0 to 100
     ax.plot([0, 100], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
+    # Add legend for tie-based wins if any exist
+    if tie_values and any(v > 0 for v in tie_values):
+        from matplotlib.patches import Patch
+        legend_elements = [
+            Patch(facecolor=bar_color, alpha=0.8, label='Regular wins'),
+            Patch(facecolor=bar_color, alpha=0.8, hatch='///', edgecolor='white', label='Wins after tie vote')
+        ]
+        ax.legend(handles=legend_elements, loc='upper right', frameon=True, 
+                 facecolor='white', edgecolor='gray', framealpha=0.9)
+    
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
                 facecolor='white', edgecolor='none')
@@ -385,6 +526,7 @@ def main():
         # Extract data for plotting
         models = [r['varying_model'] for r in results_list]
         values = [r['win_rate'] for r in results_list]
+        tie_values = [r['tie_win_rate'] for r in results_list]
         errors = [r['sem'] for r in results_list]
         companies = [get_model_company(model) for model in models]
         
@@ -392,22 +534,15 @@ def main():
         benchmark_data = {
             'models': models,
             'values': values,
+            'tie_values': tie_values,
             'errors': errors,
             'companies': companies
         }
         
-        # Create descriptive title and filename
-        background_parts = background_key.split('_')
-        detective_model = background_parts[0] if len(background_parts) > 0 else "Unknown"
-        villager_model = background_parts[1] if len(background_parts) > 1 else detective_model
-        
-        if detective_model == villager_model:
-            background_desc = f"{detective_model} Town"
-        else:
-            background_desc = f"{detective_model} Detective + {villager_model} Villager Town"
-        
-        title = f"Mafioso vs {background_desc}"
-        filename = f"mafioso_{background_key.lower()}_v4_1_benchmark.png"
+        # Create descriptive title and filename using background model
+        background_model = background_key  # background_key is now the background model name
+        title = f"Mafioso vs {background_model} Town"
+        filename = f"mafioso_{background_model.lower().replace(' ', '_')}_v4_1_benchmark.png"
         
         print(f"📈 Creating v4.1 mafioso plot: {title}")
         print(f"   Models: {', '.join(models)}")
@@ -428,6 +563,7 @@ def main():
         # Extract data for plotting
         models = [r['varying_model'] for r in results_list]
         values = [r['win_rate'] for r in results_list]
+        tie_values = [r['tie_win_rate'] for r in results_list]
         errors = [r['sem'] for r in results_list]
         companies = [get_model_company(model) for model in models]
         
@@ -435,22 +571,15 @@ def main():
         benchmark_data = {
             'models': models,
             'values': values,
+            'tie_values': tie_values,
             'errors': errors,
             'companies': companies
         }
         
-        # Create descriptive title and filename
-        background_parts = background_key.split('_')
-        mafioso_model = background_parts[0] if len(background_parts) > 0 else "Unknown"
-        villager_model = background_parts[1] if len(background_parts) > 1 else mafioso_model
-        
-        if mafioso_model == villager_model:
-            background_desc = f"{mafioso_model} Mafia and Villager"
-        else:
-            background_desc = f"{mafioso_model} Mafia and {villager_model} Villager"
-        
-        title = f"Detective vs {background_desc}"
-        filename = f"detective_{background_key.lower()}_v4_1_benchmark.png"
+        # Create descriptive title and filename using background model
+        background_model = background_key  # background_key is now the background model name
+        title = f"Detective vs {background_model} Background"
+        filename = f"detective_{background_model.lower().replace(' ', '_')}_v4_1_benchmark.png"
         
         print(f"📈 Creating v4.1 detective plot: {title}")
         print(f"   Models: {', '.join(models)}")

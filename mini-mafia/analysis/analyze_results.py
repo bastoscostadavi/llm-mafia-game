@@ -59,12 +59,16 @@ def extract_model_name(model_config):
     # Handle API models (OpenAI, Anthropic)
     if model_config.get('type') == 'openai':
         model = model_config.get('model', 'unknown')
-        if model.startswith('gpt-5'):
+        if model.startswith('gpt-5-mini'):
+            return 'GPT-5 Mini'
+        elif model.startswith('gpt-5'):
             return 'GPT-5'
+        elif 'gpt-4o-mini' in model.lower():
+            return 'GPT-4o Mini'
         elif 'gpt-4o' in model.lower():
             return 'GPT-4o'
         elif model.startswith('gpt-4.1-mini'):
-            return 'GPT 4.1 Mini'
+            return 'GPT-4.1 Mini'
         elif model.startswith('gpt-3.5'):
             return 'GPT-3.5'
         else:
