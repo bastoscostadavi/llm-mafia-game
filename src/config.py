@@ -44,9 +44,9 @@ DEFAULT_PROMPT_VERSION = "v4.1"
 # EX: 'mafioso': {'type': 'google', 'model': 'gemini-2.0-flash-exp', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'xai','model': 'grok-3-mini', 'temperature': 0.7},
-    'mafioso': {'type': 'xai','model': 'grok-3-mini', 'temperature': 0.7},
-    'villager': {'type': 'local','model': 'Qwen2.5-7B-Instruct-Q4_K_M.gguf', 'temperature': 0.7}
+    'detective': {'type': 'google','model': 'gemini-2.5-flash-lite', 'temperature': 0.7},
+    'mafioso': {'type': 'deepseek','model': 'deepseek-chat', 'temperature': 0.7},
+    'villager': {'type': 'deepseek','model': 'deepseek-chat', 'temperature': 0.7}
 }
 
 # GAME SETTINGS

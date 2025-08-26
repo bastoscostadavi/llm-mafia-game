@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250826_141117_v4.1_game_0020",
+  "game_number": 20,
+  "timestamp": "2025-08-26T14:30:38.679315",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"I investigated Alice last night and she is mafia. We need to vote her out today.\"",
+        "You: \"That is a lie. I investigated Bob last night and he is mafia. He's trying to frame me.\"",
+        "Charlie: \"I don't know who to trust. Bob, what made you investigate Alice? Alice, why Bob?\"",
+        "Bob: \"I investigated Alice and she is mafia. Alice is lying about investigating me - detectives can't investigate each other on night 1 when there's only one kill.\"",
+        "You: \"Bob is lying. Detectives can investigate anyone, including other detectives. He's trying to cover his mafia identity by making up rules that don't exist.\"",
+        "Charlie: \"I believe Bob is lying about the investigation rules, as detectives can investigate anyone. That makes him suspicious. Let's consider voting for him.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Alice and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"I investigated Alice last night and she is mafia. We need to vote her out today.\"",
+        "Alice: \"That is a lie. I investigated Bob last night and he is mafia. He's trying to frame me.\"",
+        "Charlie: \"I don't know who to trust. Bob, what made you investigate Alice? Alice, why Bob?\"",
+        "You: \"I investigated Alice and she is mafia. Alice is lying about investigating me - detectives can't investigate each other on night 1 when there's only one kill.\"",
+        "Alice: \"Bob is lying. Detectives can investigate anyone, including other detectives. He's trying to cover his mafia identity by making up rules that don't exist.\"",
+        "Charlie: \"I believe Bob is lying about the investigation rules, as detectives can investigate anyone. That makes him suspicious. Let's consider voting for him.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Bob: \"I investigated Alice last night and she is mafia. We need to vote her out today.\"",
+        "Alice: \"That is a lie. I investigated Bob last night and he is mafia. He's trying to frame me.\"",
+        "You: \"I don't know who to trust. Bob, what made you investigate Alice? Alice, why Bob?\"",
+        "Bob: \"I investigated Alice and she is mafia. Alice is lying about investigating me - detectives can't investigate each other on night 1 when there's only one kill.\"",
+        "Alice: \"Bob is lying. Detectives can investigate anyone, including other detectives. He's trying to cover his mafia identity by making up rules that don't exist.\"",
+        "You: \"I believe Bob is lying about the investigation rules, as detectives can investigate anyone. That makes him suspicious. Let's consider voting for him.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250826_140740_v4.1_game_0001",
+  "game_number": 1,
+  "timestamp": "2025-08-26T14:08:11.401990",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"I have information that Bob is the mafioso. We need to vote to arrest him immediately to protect the town.\"",
+        "Charlie: \"I believe Diana's death was not an accident. Let's investigate her last actions and see if we can find a pattern.\"",
+        "Bob: \"\\\"",
+        "Charlie: \"I think it's important to investigate Diana's last actions carefully. I noticed she was near the edge of the town at night, which is unusual for her. Let's gather more evidence before making any accusations.\"",
+        "Bob: remained silent.",
+        "You: \"I stand by my investigation results: Bob is the mafioso. Delaying action risks more deaths. We must vote to arrest Bob now to keep the town safe.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"I have information that Bob is the mafioso. We need to vote to arrest him immediately to protect the town.\"",
+        "Charlie: \"I believe Diana's death was not an accident. Let's investigate her last actions and see if we can find a pattern.\"",
+        "You: \"\\\"",
+        "Charlie: \"I think it's important to investigate Diana's last actions carefully. I noticed she was near the edge of the town at night, which is unusual for her. Let's gather more evidence before making any accusations.\"",
+        "You: remained silent.",
+        "Alice: \"I stand by my investigation results: Bob is the mafioso. Delaying action risks more deaths. We must vote to arrest Bob now to keep the town safe.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"I have information that Bob is the mafioso. We need to vote to arrest him immediately to protect the town.\"",
+        "You: \"I believe Diana's death was not an accident. Let's investigate her last actions and see if we can find a pattern.\"",
+        "Bob: \"\\\"",
+        "You: \"I think it's important to investigate Diana's last actions carefully. I noticed she was near the edge of the town at night, which is unusual for her. Let's gather more evidence before making any accusations.\"",
+        "Bob: remained silent.",
+        "Alice: \"I stand by my investigation results: Bob is the mafioso. Delaying action risks more deaths. We must vote to arrest Bob now to keep the town safe.\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

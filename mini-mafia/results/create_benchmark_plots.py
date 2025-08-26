@@ -16,6 +16,7 @@ import io
 import os
 import json
 import math
+import random
 from collections import defaultdict
 from pathlib import Path
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
@@ -253,6 +254,119 @@ def analyze_v4_1_batch_data():
         config_results[config_key]['evil_wins_after_tie'] += evil_wins_after_tie
         config_results[config_key]['good_wins_after_tie'] += good_wins_after_tie
         config_results[config_key]['total_games'] += total_games
+    
+    return config_results
+
+def sample_games_from_config(batch_path, sample_size=100, random_seed=2):
+    """Sample a specified number of games from a batch directory"""
+    random.seed(random_seed)
+    
+    # Get all game files
+    game_files = [f for f in os.listdir(batch_path) if f.startswith('game_') and f.endswith('.json')]
+    
+    if len(game_files) <= sample_size:
+        return game_files  # Return all if we have fewer than requested
+    
+    # Sample without replacement
+    sampled_files = random.sample(game_files, sample_size)
+    return sampled_files
+
+def analyze_v4_1_batch_data_with_sampling():
+    """Analyze v4.1 batch data with sampling for Mistral configurations"""
+    data_dir = "../data/batch"
+    if not os.path.exists(data_dir):
+        print(f"Data directory '{data_dir}' not found. Run from mini-mafia/results/ directory.")
+        return {}
+    
+    # Find all v4.1 batch directories
+    v4_1_batches = []
+    for batch_dir in os.listdir(data_dir):
+        if batch_dir.endswith("_v4.1"):
+            batch_path = os.path.join(data_dir, batch_dir)
+            if os.path.isdir(batch_path):
+                v4_1_batches.append(batch_path)
+    
+    if not v4_1_batches:
+        print("No v4.1 batch directories found.")
+        return {}
+    
+    print(f"Found {len(v4_1_batches)} v4.1 batch directories")
+    
+    # Track results by model configuration
+    config_results = defaultdict(lambda: {'evil_wins': 0, 'evil_wins_after_tie': 0, 'good_wins_after_tie': 0, 'total_games': 0, 'model_configs': None})
+    
+    for batch_path in sorted(v4_1_batches):
+        batch_name = os.path.basename(batch_path)
+        print(f"Analyzing {batch_name}...")
+        
+        # Get batch configuration
+        config = get_batch_config(batch_path)
+        if not config:
+            continue
+        
+        model_configs = config.get('model_configs', {})
+        config_key = create_config_key(model_configs)
+        
+        # Store model configs for later use
+        if config_results[config_key]['model_configs'] is None:
+            config_results[config_key]['model_configs'] = model_configs
+        
+        # Check if this is a Mistral configuration (all players are Mistral)
+        detective_model = extract_model_name(model_configs.get('detective', {}))
+        villager_model = extract_model_name(model_configs.get('villager', {}))
+        mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
+        
+        is_mistral_config = (
+            'mistral' in detective_model.lower() and 
+            'mistral' in villager_model.lower() and 
+            'mistral' in mafioso_model.lower()
+        )
+        
+        # Sample games if this is a Mistral configuration
+        if is_mistral_config:
+            game_files = sample_games_from_config(batch_path, sample_size=100)
+            print(f"   Sampling 100 games from {len([f for f in os.listdir(batch_path) if f.startswith('game_') and f.endswith('.json')])} available games")
+        else:
+            # Use all games for non-Mistral configurations
+            game_files = [f for f in os.listdir(batch_path) if f.startswith('game_') and f.endswith('.json')]
+        
+        # Count games and wins
+        evil_wins = 0
+        evil_wins_after_tie = 0
+        good_wins_after_tie = 0
+        total_games = 0
+        
+        # Process selected game files
+        for game_file in game_files:
+            game_path = os.path.join(batch_path, game_file)
+            try:
+                with open(game_path, 'r') as f:
+                    game_data = json.load(f)
+                
+                players = game_data.get('players', [])
+                winner = determine_winner(players)
+                
+                if winner != "unknown":
+                    total_games += 1
+                    was_tie = was_tie_vote(players)
+                    
+                    if winner == "evil":
+                        evil_wins += 1
+                        if was_tie:
+                            evil_wins_after_tie += 1
+                    elif winner == "good" and was_tie:
+                        good_wins_after_tie += 1
+                        
+            except (json.JSONDecodeError, IOError, KeyError):
+                continue
+        
+        # Add to overall results
+        config_results[config_key]['evil_wins'] += evil_wins
+        config_results[config_key]['evil_wins_after_tie'] += evil_wins_after_tie
+        config_results[config_key]['good_wins_after_tie'] += good_wins_after_tie
+        config_results[config_key]['total_games'] += total_games
+        
+        print(f"   Processed {total_games} games from {batch_name}")
     
     return config_results
 
@@ -593,8 +707,8 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
 def main():
     """Create dynamic benchmark plots from v4.1 batch data"""
     
-    print("🔄 Analyzing v4.1 batch data...")
-    config_results = analyze_v4_1_batch_data()
+    print("🔄 Analyzing v4.1 batch data with sampling...")
+    config_results = analyze_v4_1_batch_data_with_sampling()
     
     if not config_results:
         print("❌ No v4.1 data found to create plots")
@@ -616,6 +730,8 @@ def main():
     excluded_models = [
         'Claude 3 Haiku',      # High message format failures
         'Claude 3.5 Haiku',   # High message format failures
+        'GPT-4o Mini',
+        'DeepSeek R1'
     ]
     
     # Create mafioso-changing experiment plots (evil win rate)
@@ -630,8 +746,8 @@ def main():
         if len(results_list) < 1:  # Need at least 1 model
             continue
         
-        # Sort by win rate (descending)
-        results_list.sort(key=lambda x: x['win_rate'], reverse=True)
+        # Sort by win rate (ascending), then reverse alphabetically for ties (since list will be reversed for display)
+        results_list.sort(key=lambda x: (x['win_rate'], x['varying_model']), reverse=True)
         
         # Extract data for plotting (reverse order so highest scores appear at top)
         models = [r['varying_model'] for r in reversed(results_list)]
@@ -673,8 +789,8 @@ def main():
         if len(results_list) < 1:  # Need at least 1 model
             continue
         
-        # Sort by win rate (descending)
-        results_list.sort(key=lambda x: x['win_rate'], reverse=True)
+        # Sort by win rate (ascending), then reverse alphabetically for ties (since list will be reversed for display)
+        results_list.sort(key=lambda x: (x['win_rate'], x['varying_model']), reverse=True)
         
         # Extract data for plotting (reverse order so highest scores appear at top)
         models = [r['varying_model'] for r in reversed(results_list)]
@@ -716,8 +832,8 @@ def main():
         if len(results_list) < 1:  # Need at least 1 model
             continue
         
-        # Sort by win rate (descending)
-        results_list.sort(key=lambda x: x['win_rate'], reverse=True)
+        # Sort by win rate (ascending), then reverse alphabetically for ties (since list will be reversed for display)
+        results_list.sort(key=lambda x: (x['win_rate'], x['varying_model']), reverse=True)
         
         # Extract data for plotting (reverse order so highest scores appear at top)
         models = [r['varying_model'] for r in reversed(results_list)]
