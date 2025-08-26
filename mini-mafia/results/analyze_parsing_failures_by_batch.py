@@ -12,8 +12,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-# Add analysis functions from analyze_results
-sys.path.append('../analysis')
+# Import from local analyze_results module
 from analyze_results import extract_model_name, get_batch_config
 
 def analyze_batch_parsing_failures(batch_path):

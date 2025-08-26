@@ -20,9 +20,7 @@ from collections import defaultdict
 from pathlib import Path
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
-# Import analysis functions from analyze_results
-import sys
-sys.path.append('../analysis')
+# Import analysis functions from local analyze_results module
 from analyze_results import (
     extract_model_name, create_config_key, determine_winner, 
     get_batch_config, calculate_sem
@@ -79,11 +77,17 @@ def get_model_company(model_name):
         'GPT-4.1 Mini': 'OpenAI',
         'Grok-4': 'X',
         'Grok 3 Mini': 'X',
-        'Claude-3-Haiku': 'Anthropic',
-        'Claude-3-Sonnet': 'Anthropic',
-        'Claude-3-Opus': 'Anthropic',
-        'Claude-Sonnet-4': 'Anthropic',
+        'Claude 3 Haiku': 'Anthropic',
+        'Claude 3.5 Haiku': 'Anthropic',
+        'Claude 3 Sonnet': 'Anthropic',
+        'Claude 3.5 Sonnet': 'Anthropic',
+        'Claude 3 Opus': 'Anthropic',
+        'Claude Sonnet 4': 'Anthropic',
         'Claude Opus 4.1': 'Anthropic',
+        'DeepSeek V3': 'DeepSeek',
+        'DeepSeek R1': 'DeepSeek',
+        'Gemini 2.5 Flash Lite': 'Google',
+        'Gemini 2.5 Flash': 'Google',
         'Mistral 7B Instruct': 'Mistral AI',
         'Mistral 7B Instruct v0.2': 'Mistral AI',
         'Mistral 7B Instruct v0.3': 'Mistral AI',
@@ -94,11 +98,21 @@ def get_model_company(model_name):
         'Gemma 2 27B Instruct': 'DeepMind'
     }
     
-    # Handle Claude variations
-    if 'claude-sonnet-4' in model_name.lower() or 'sonnet-4' in model_name.lower():
+    # Handle Claude variations and fallbacks
+    if 'claude' in model_name.lower():
         return 'Anthropic'
-    elif 'claude-opus-4' in model_name.lower() or 'opus-4' in model_name.lower():
-        return 'Anthropic'
+    elif 'gpt' in model_name.lower():
+        return 'OpenAI'
+    elif 'grok' in model_name.lower():
+        return 'X'
+    elif 'mistral' in model_name.lower():
+        return 'Mistral AI'
+    elif 'llama' in model_name.lower():
+        return 'Meta'
+    elif 'qwen' in model_name.lower():
+        return 'Alibaba'
+    elif 'gemma' in model_name.lower():
+        return 'DeepMind'
     
     return company_mapping.get(model_name, 'Unknown')
 
@@ -112,6 +126,8 @@ def get_company_color(company):
         'Meta': '#1877F2',
         'Alibaba': '#FF6A00',
         'DeepMind': '#4285F4',
+        'DeepSeek': '#007ACC',  # Blue color for DeepSeek
+        'Google': '#4285F4',    # Google blue
         'Unknown': '#666666'
     }
     return colors.get(company, '#666666')
@@ -126,7 +142,9 @@ def load_company_logo(company, size=(40, 40)):
         "Meta": "meta.png",
         "Alibaba": "baba.png",
         "Anthropic": "anthropic.png",
-        "DeepMind": "deepmind.png"
+        "DeepMind": "deepmind.png",
+        "DeepSeek": "deepseek.png",
+        "Google": "deepmind.png"  # Use DeepMind logo for Google since they're the same company
     }
     
     try:
@@ -251,13 +269,13 @@ def group_results_by_mafioso_experiments(config_results):
         villager_model = extract_model_name(model_configs.get('villager', {}))
         mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
         
-        # Determine background model: if detective and villager are the same, use that model
-        # Otherwise, group by the more common/primary model (detective takes precedence)
+        # Determine background model for MAFIOSO experiments
+        # Only group configurations where detective == villager (pure backgrounds)
         if detective_model == villager_model:
-            background_model = detective_model
+            background_model = detective_model  # Pure background (same detective and villager)
         else:
-            # For mixed backgrounds, use detective as the primary background model
-            background_model = detective_model
+            # Skip mixed backgrounds - we only want pure background experiments
+            continue
         
         evil_wins = results['evil_wins']
         evil_wins_after_tie = results['evil_wins_after_tie']
@@ -319,19 +337,19 @@ def group_results_by_detective_experiments(config_results):
         villager_model = extract_model_name(model_configs.get('villager', {}))
         mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
         
-        # Determine background model: if mafioso and villager are the same, use that model
-        # Otherwise, group by the more common/primary model (villager takes precedence for detective experiments)
+        # Determine background model for DETECTIVE experiments
+        # Only group configurations where mafioso == villager (pure backgrounds)
         if mafioso_model == villager_model:
-            background_model = mafioso_model
+            background_model = mafioso_model  # Pure background (same mafioso and villager)
         else:
-            # For mixed backgrounds, use villager as the primary background model for detective experiments
-            background_model = villager_model
+            # Skip mixed backgrounds - we only want pure background experiments
+            continue
         
         evil_wins = results['evil_wins']
         good_wins_after_tie = results['good_wins_after_tie']
         total_games = results['total_games']
         if total_games > 0:
-            good_wins = total_games - evil_wins
+            good_wins = total_games - evil_wins  # Calculate actual good wins
             win_rate = (good_wins / total_games) * 100  # Good win rate for detective experiments
             tie_win_rate = (good_wins_after_tie / total_games) * 100
             sem = calculate_sem(good_wins, total_games)
@@ -375,6 +393,75 @@ def group_results_by_detective_experiments(config_results):
     
     return background_groups
 
+def group_results_by_villager_experiments(config_results):
+    """Group results for villager-changing experiments by background model"""
+    background_groups = defaultdict(list)
+    
+    for config_key, results in config_results.items():
+        model_configs = results['model_configs']
+        if not model_configs:
+            continue
+        
+        detective_model = extract_model_name(model_configs.get('detective', {}))
+        villager_model = extract_model_name(model_configs.get('villager', {}))
+        mafioso_model = extract_model_name(model_configs.get('mafioso', {}))
+        
+        # Determine background model for VILLAGER experiments
+        # Only group configurations where mafioso == detective (pure backgrounds)
+        if mafioso_model == detective_model:
+            background_model = mafioso_model  # Pure background (same mafioso and detective)
+        else:
+            # Skip mixed backgrounds - we only want pure background experiments
+            continue
+        
+        evil_wins = results['evil_wins']
+        good_wins_after_tie = results['good_wins_after_tie']
+        total_games = results['total_games']
+        if total_games > 0:
+            good_wins = total_games - evil_wins  # Calculate actual good wins
+            win_rate = (good_wins / total_games) * 100  # Good win rate for villager experiments
+            tie_win_rate = (good_wins_after_tie / total_games) * 100
+            sem = calculate_sem(good_wins, total_games)
+            
+            # Check if this varying model already exists in this background group
+            existing_entry = None
+            for entry in background_groups[background_model]:
+                if entry['varying_model'] == villager_model:
+                    existing_entry = entry
+                    break
+            
+            if existing_entry:
+                # Combine with existing entry
+                total_good_wins = existing_entry['good_wins'] + good_wins
+                total_good_wins_after_tie = existing_entry['good_wins_after_tie'] + good_wins_after_tie
+                total_games_combined = existing_entry['games'] + total_games
+                combined_win_rate = (total_good_wins / total_games_combined) * 100
+                combined_tie_win_rate = (total_good_wins_after_tie / total_games_combined) * 100
+                combined_sem = calculate_sem(total_good_wins, total_games_combined)
+                
+                existing_entry.update({
+                    'win_rate': combined_win_rate,
+                    'tie_win_rate': combined_tie_win_rate,
+                    'sem': combined_sem,
+                    'games': total_games_combined,
+                    'good_wins': total_good_wins,
+                    'good_wins_after_tie': total_good_wins_after_tie
+                })
+            else:
+                # Add new entry
+                background_groups[background_model].append({
+                    'varying_model': villager_model,
+                    'background_config': f"{mafioso_model}_{detective_model}",  # Keep original config for reference
+                    'win_rate': win_rate,
+                    'tie_win_rate': tie_win_rate,
+                    'sem': sem,
+                    'games': total_games,
+                    'good_wins': good_wins,
+                    'good_wins_after_tie': good_wins_after_tie
+                })
+    
+    return background_groups
+
 def get_background_color(background_key):
     """Get color based on background model type"""
     if 'mistral' in background_key.lower():
@@ -395,6 +482,10 @@ def get_background_color(background_key):
         return '#7B68EE'  # Qwen purple
     elif 'gemma' in background_key.lower():
         return '#FF4081'  # Gemma pink
+    elif 'deepseek' in background_key.lower():
+        return '#007ACC'  # DeepSeek blue
+    elif 'gemini' in background_key.lower():
+        return '#4285F4'  # Google blue
     else:
         return '#666666'  # Default gray
 
@@ -402,6 +493,17 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     """Create a horizontal bar plot with logos and formatting"""
     # Use non-interactive backend
     plt.ioff()
+    
+    # Set font size to match LaTeX document (much larger for readability)
+    plt.rcParams.update({
+        'font.size': 18,
+        'axes.labelsize': 18,
+        'axes.titlesize': 18,
+        'xtick.labelsize': 18,
+        'ytick.labelsize': 18,
+        'legend.fontsize': 18,
+        'figure.titlesize': 18
+    })
     
     fig, ax = plt.subplots(figsize=(14, 7))
     
@@ -428,8 +530,8 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     
     # Add model names and values on the right side of bars
     for i, (model, value, error) in enumerate(zip(models, values, errors)):
-        ax.text(value + error + 1.5, i, f'{model}: {value:.1f}% ± {error:.1f}%', 
-                ha='left', va='center', fontweight='bold', fontsize=10)
+        ax.text(value + error + 1.5, i, f'{model}: {value:.0f}% ± {error:.1f}%', 
+                ha='left', va='center', fontweight='bold', fontsize=18)
     
     # Add company logos on the left
     for i, company in enumerate(companies):
@@ -444,23 +546,23 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
                 print(f"Failed to add logo for {company}: {e}")
                 # Fallback to company initial
                 ax.text(-6, i, company[0], ha='center', va='center', 
-                        fontweight='bold', fontsize=12, color='black',
+                        fontweight='bold', fontsize=18, color='black',
                         bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
         else:
             # Fallback to company initial
             ax.text(-6, i, company[0], ha='center', va='center', 
-                    fontweight='bold', fontsize=12, color='black',
+                    fontweight='bold', fontsize=18, color='black',
                     bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
     
     # Set axis labels based on metric type
     if use_good_wins:
-        xlabel = 'Good Win Rate (%)'
+        xlabel = 'Town Win Rate (%)'
     else:
         xlabel = 'Mafia Win Rate (%)'
     
     # Formatting
-    ax.set_xlabel(xlabel, fontsize=12, fontweight='bold')
-    ax.set_title(title, fontsize=14, fontweight='bold', pad=20)
+    ax.set_xlabel(xlabel, fontsize=18, fontweight='bold')
+    # Remove title - will be handled by LaTeX captions
     ax.set_yticks([])  # Remove y-axis labels
     ax.set_xlim(-10, 100)  # Set range from -10 (for logos) to 100 (full domain)
     
@@ -480,15 +582,7 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     # Add custom bottom axis line only from 0 to 100
     ax.plot([0, 100], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
-    # Add legend for tie-based wins if any exist
-    if tie_values and any(v > 0 for v in tie_values):
-        from matplotlib.patches import Patch
-        legend_elements = [
-            Patch(facecolor=bar_color, alpha=0.8, label='Regular wins'),
-            Patch(facecolor=bar_color, alpha=0.8, hatch='///', edgecolor='white', label='Wins after tie vote')
-        ]
-        ax.legend(handles=legend_elements, loc='upper right', frameon=True, 
-                 facecolor='white', edgecolor='gray', framealpha=0.9)
+    # Remove legend - will be explained in LaTeX caption
     
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
@@ -508,26 +602,42 @@ def main():
     
     print("📊 Grouping v4.1 results by experiment type...")
     
-    # Group results for both experiment types
+    # Group results for all three experiment types
     mafioso_groups = group_results_by_mafioso_experiments(config_results)
     detective_groups = group_results_by_detective_experiments(config_results)
+    villager_groups = group_results_by_villager_experiments(config_results)
     
     plots_created = 0
+    
+    # Define the main 4 backgrounds we want to plot
+    main_backgrounds = ['Mistral 7B Instruct', 'GPT-4.1 Mini', 'Grok 3 Mini', 'DeepSeek V3']
+    
+    # Models to exclude from plots due to high failure rates or poor format compliance
+    excluded_models = [
+        'Claude 3 Haiku',      # High message format failures
+        'Claude 3.5 Haiku',   # High message format failures
+    ]
     
     # Create mafioso-changing experiment plots (evil win rate)
     print("\n🟡 Creating v4.1 mafioso-changing experiment plots...")
     for background_key, results_list in mafioso_groups.items():
-        if len(results_list) < 2:  # Need at least 2 models to compare
+        if background_key not in main_backgrounds:  # Only plot main backgrounds
+            continue
+        
+        # Filter out excluded models
+        results_list = [r for r in results_list if r['varying_model'] not in excluded_models]
+        
+        if len(results_list) < 1:  # Need at least 1 model
             continue
         
         # Sort by win rate (descending)
         results_list.sort(key=lambda x: x['win_rate'], reverse=True)
         
-        # Extract data for plotting
-        models = [r['varying_model'] for r in results_list]
-        values = [r['win_rate'] for r in results_list]
-        tie_values = [r['tie_win_rate'] for r in results_list]
-        errors = [r['sem'] for r in results_list]
+        # Extract data for plotting (reverse order so highest scores appear at top)
+        models = [r['varying_model'] for r in reversed(results_list)]
+        values = [r['win_rate'] for r in reversed(results_list)]
+        tie_values = [r['tie_win_rate'] for r in reversed(results_list)]
+        errors = [r['sem'] for r in reversed(results_list)]
         companies = [get_model_company(model) for model in models]
         
         # Create benchmark data structure
@@ -554,17 +664,23 @@ def main():
     # Create detective-changing experiment plots (good win rate)
     print("\n🔵 Creating v4.1 detective-changing experiment plots...")
     for background_key, results_list in detective_groups.items():
-        if len(results_list) < 2:  # Need at least 2 models to compare
+        if background_key not in main_backgrounds:  # Only plot main backgrounds
+            continue
+        
+        # Filter out excluded models
+        results_list = [r for r in results_list if r['varying_model'] not in excluded_models]
+        
+        if len(results_list) < 1:  # Need at least 1 model
             continue
         
         # Sort by win rate (descending)
         results_list.sort(key=lambda x: x['win_rate'], reverse=True)
         
-        # Extract data for plotting
-        models = [r['varying_model'] for r in results_list]
-        values = [r['win_rate'] for r in results_list]
-        tie_values = [r['tie_win_rate'] for r in results_list]
-        errors = [r['sem'] for r in results_list]
+        # Extract data for plotting (reverse order so highest scores appear at top)
+        models = [r['varying_model'] for r in reversed(results_list)]
+        values = [r['win_rate'] for r in reversed(results_list)]
+        tie_values = [r['tie_win_rate'] for r in reversed(results_list)]
+        errors = [r['sem'] for r in reversed(results_list)]
         companies = [get_model_company(model) for model in models]
         
         # Create benchmark data structure
@@ -588,11 +704,60 @@ def main():
         create_benchmark_plot(benchmark_data, title, filename, background_key, use_good_wins=True)
         plots_created += 1
     
-    print(f"\n✅ Created {plots_created} v4.1 benchmark plots!")
-    print(f"   📊 Mafioso experiments: {len(mafioso_groups)} plots")
-    print(f"   📊 Detective experiments: {len(detective_groups)} plots")
-    print("\nNote: v4.1 plots are separate from v4.0 plots to maintain version isolation.")
-    print("The special GPT-4o vs GPT-5 v4.1 batch is included in the v4.0 script for comparison.")
+    # Create villager-changing experiment plots (good win rate)
+    print("\n🟢 Creating v4.1 villager-changing experiment plots...")
+    for background_key, results_list in villager_groups.items():
+        if background_key not in main_backgrounds:  # Only plot main backgrounds
+            continue
+        
+        # Filter out excluded models
+        results_list = [r for r in results_list if r['varying_model'] not in excluded_models]
+        
+        if len(results_list) < 1:  # Need at least 1 model
+            continue
+        
+        # Sort by win rate (descending)
+        results_list.sort(key=lambda x: x['win_rate'], reverse=True)
+        
+        # Extract data for plotting (reverse order so highest scores appear at top)
+        models = [r['varying_model'] for r in reversed(results_list)]
+        values = [r['win_rate'] for r in reversed(results_list)]
+        tie_values = [r['tie_win_rate'] for r in reversed(results_list)]
+        errors = [r['sem'] for r in reversed(results_list)]
+        companies = [get_model_company(model) for model in models]
+        
+        # Create benchmark data structure
+        benchmark_data = {
+            'models': models,
+            'values': values,
+            'tie_values': tie_values,
+            'errors': errors,
+            'companies': companies
+        }
+        
+        # Create descriptive title and filename using background model
+        background_model = background_key  # background_key is now the background model name
+        title = f"Villager vs {background_model} Background"
+        filename = f"villager_{background_model.lower().replace(' ', '_')}_v4_1_benchmark.png"
+        
+        print(f"📈 Creating v4.1 villager plot: {title}")
+        print(f"   Models: {', '.join(models)}")
+        print(f"   Sample sizes: {[r['games'] for r in results_list]}")
+        
+        create_benchmark_plot(benchmark_data, title, filename, background_key, use_good_wins=True)
+        plots_created += 1
+    
+    # Count plots per experiment type for main backgrounds
+    mafioso_main_plots = len([bg for bg in mafioso_groups.keys() if bg in main_backgrounds and len(mafioso_groups[bg]) >= 1])
+    detective_main_plots = len([bg for bg in detective_groups.keys() if bg in main_backgrounds and len(detective_groups[bg]) >= 1])
+    villager_main_plots = len([bg for bg in villager_groups.keys() if bg in main_backgrounds and len(villager_groups[bg]) >= 1])
+    
+    print(f"\n✅ Created {plots_created} main v4.1 benchmark plots!")
+    print(f"   📊 Mafioso experiments: {mafioso_main_plots} plots (Mistral, GPT-4.1 Mini, Grok 3 Mini, DeepSeek V3 backgrounds)")
+    print(f"   📊 Detective experiments: {detective_main_plots} plots (Mistral, GPT-4.1 Mini, Grok 3 Mini, DeepSeek V3 backgrounds)")
+    print(f"   📊 Villager experiments: {villager_main_plots} plots (Mistral, GPT-4.1 Mini, Grok 3 Mini, DeepSeek V3 backgrounds)")
+    print(f"\n🎯 Target: 12 plots total (4 backgrounds × 3 experiments)")
+    print("\nNote: Only plotting main backgrounds. Additional experimental data available but filtered out.")
 
 if __name__ == "__main__":
     main()
