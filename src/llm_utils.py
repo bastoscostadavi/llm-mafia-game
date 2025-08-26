@@ -14,6 +14,11 @@ except ImportError:
     anthropic = None
 
 try:
+    import google.generativeai as genai
+except ImportError:
+    genai = None
+
+try:
     from dotenv import load_dotenv
     # Load .env file if it exists
     load_dotenv()
@@ -60,6 +65,40 @@ class OpenAI:
                 return "No response available."
         
         return choice.message.content.strip()
+
+class Google:
+    """Google Gemini API wrapper"""
+    def __init__(self, model, temperature=0.7):
+        self.model_name = model
+        self.temperature = temperature
+        self.display_name = model
+        # Configure the API key
+        api_key = os.getenv('GOOGLE_API_KEY')
+        if api_key:
+            genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(model)
+    
+    def generate(self, prompt, max_tokens=50):
+        try:
+            # Create generation config
+            generation_config = genai.types.GenerationConfig(
+                max_output_tokens=max_tokens,
+                temperature=self.temperature,
+            )
+            
+            response = self.model.generate_content(
+                prompt,
+                generation_config=generation_config
+            )
+            
+            if response.text:
+                return response.text.strip()
+            else:
+                return "No response available."
+                
+        except Exception as e:
+            print(f"Gemini generation failed: {e}")
+            return "I understand the situation."
 
 class XAI:
     """xAI API wrapper (OpenAI compatible)"""
@@ -407,6 +446,20 @@ def create_llm(llm_config):
         temperature = llm_config.get('temperature', 0.7)
         return XAI(client, model, temperature)
     
+    elif llm_type == 'deepseek':
+        if openai is None:
+            print("ERROR: OpenAI package not installed (needed for DeepSeek). Using local model instead.")
+            return create_llm({'type': 'local'})
+        
+        # DeepSeek uses OpenAI SDK with different base URL
+        client = openai.OpenAI(
+            api_key=llm_config.get('api_key') or os.getenv('DEEPSEEK_API_KEY'),
+            base_url="https://api.deepseek.com"
+        )
+        model = llm_config.get('model', 'deepseek-v3')
+        temperature = llm_config.get('temperature', 0.7)
+        return OpenAI(client, model, temperature)
+    
     elif llm_type == 'anthropic':
         if anthropic is None:
             print("ERROR: Anthropic package not installed. Using local model instead.")
@@ -417,6 +470,15 @@ def create_llm(llm_config):
         temperature = llm_config.get('temperature', 0.7)
         use_cache = llm_config.get('use_cache', False)
         return Anthropic(client, model, temperature, use_cache)
+    
+    elif llm_type == 'google':
+        if genai is None:
+            print("ERROR: Google GenerativeAI package not installed. Using local model instead.")
+            return create_llm({'type': 'local'})
+        
+        model = llm_config.get('model', 'gemini-2.5-flash-lite')
+        temperature = llm_config.get('temperature', 0.7)
+        return Google(model, temperature)
     
     elif llm_type == 'human':
         player_name = llm_config.get('player_name', 'Human Player')

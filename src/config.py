@@ -16,9 +16,7 @@ DEFAULT_PROMPT_VERSION = "v4.1"
 # MODEL CONFIGURATIONS
 # Available local models in models/ directory:
 # - Mistral-7B-Instruct-v0.2-Q4_K_M.gguf  # Mistral 7B v0.2 (Dec 2023, 4.1GB) 
-# - Mistral-7B-Instruct-v0.3-Q4_K_M.gguf  # Mistral 7B v0.3 (Aug 2024, 4.1GB)
 # - Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf # Llama 3.1 8B (4.6GB)
-# - Llama-3.2-3B-Instruct-Q4_K_M.gguf     # Llama 3.2 3B (1.9GB, largest text-only 3.2)
 # - Qwen2.5-7B-Instruct-Q4_K_M.gguf       # Qwen2.5 7B (4.4GB)
 # - qwen2.5-32b-instruct-q4_k_m-*-of-00005.gguf # Qwen2.5 32B (5 parts, ~19GB total)
 # - openai_gpt-oss-20b-Q4_K_M.gguf        # GPT-OSS 20B (11GB)
@@ -26,22 +24,29 @@ DEFAULT_PROMPT_VERSION = "v4.1"
 # - Qwen3-14B-Q4_K_M.gguf        # Qwen3 14B (~8GB)
 # EX: 'mafioso': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf', 'temperature': 0.7},
 
-# Available OpenAI/Anthropic/xAI models:
+# Available OpenAI/Anthropic/xAI/DeepSeek/Google models:
 # - gpt-4o                      # OpenAI GPT-4o
 # - gpt-5                       # OpenAI GPT-5 (reasoning model)
 # - gpt-4.1-mini                  # OpenAI GPT-4.1 mini
 # - grok-4                      # xAI Grok-4 (reasoning model)
 # - grok-3-mini                   # xAI Grok-3 mini
 # - claude-sonnet-4-20250514    #Claude Sonnet
-# - claude-opus-4-1-20250805    #Claude Opus    
+# - claude-opus-4-1-20250805    #Claude Opus  
+# - claude-3-haiku-20240307 #Claude Haiku 3  
+# - claude-3-5-haiku-latest #Claude Haiku 3.5
+# - deepseek-v3                 # DeepSeek V3
+# - gemini-2.5-flash           # Google Gemini 2.5 Flash
+# - gemini-2.5-flash-lite       # Google Gemini 2.5 Flash Lite
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-5', 'temperature': 0.7},
 # EX: 'mafioso': {'type': 'xai', 'model': 'grok-4', 'temperature': 0.7},
+# EX: 'mafioso': {'type': 'deepseek', 'model': 'deepseek-v3', 'temperature': 0.7},
+# EX: 'mafioso': {'type': 'google', 'model': 'gemini-2.0-flash-exp', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7},
-    'mafioso': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7},
-    'villager': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7}
+    'detective': {'type': 'xai','model': 'grok-3-mini', 'temperature': 0.7},
+    'mafioso': {'type': 'xai','model': 'grok-3-mini', 'temperature': 0.7},
+    'villager': {'type': 'local','model': 'Qwen2.5-7B-Instruct-Q4_K_M.gguf', 'temperature': 0.7}
 }
 
 # GAME SETTINGS
@@ -70,6 +75,7 @@ MODEL_TOKEN_LIMITS = {
     'gpt-oss': REASONING_TOKEN_LIMITS,  # For any GPT-OSS variants
     'gpt-5': REASONING_TOKEN_LIMITS,    # OpenAI GPT-5 reasoning model
     'grok-4': REASONING_TOKEN_LIMITS,   # xAI Grok-4 reasoning model
+    'deepseek-reasoner': REASONING_TOKEN_LIMITS,  # DeepSeek reasoning model
 }
 
 # Default token limits (used if model not in specific mapping)
@@ -103,6 +109,15 @@ def get_token_limits_for_model(model_config):
         if model_name in MODEL_TOKEN_LIMITS:
             return MODEL_TOKEN_LIMITS[model_name]
         elif model_name.startswith('grok'):
+            return REASONING_TOKEN_LIMITS
+    
+    elif model_config.get('type') == 'deepseek':
+        model_name = model_config.get('model', '')
+        
+        # Check if this is a reasoning model
+        if model_name in MODEL_TOKEN_LIMITS:
+            return MODEL_TOKEN_LIMITS[model_name]
+        elif 'reasoner' in model_name:
             return REASONING_TOKEN_LIMITS
     
     # Default to standard limits

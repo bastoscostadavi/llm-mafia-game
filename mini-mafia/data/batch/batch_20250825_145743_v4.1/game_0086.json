@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250825_145743_v4.1_game_0086",
+  "game_number": 86,
+  "timestamp": "2025-08-25T15:12:24.119568",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "You: \"Diana was found dead last night. We need to be very careful today and try to figure out who among Bob, Charlie, and me might be the mafia.\"",
+        "Bob: \"Charlie is the mafia. I investigated him last night and found out for sure. We should vote to arrest him today to protect the town.\"",
+        "Charlie: remained silent.",
+        "Bob: remained silent.",
+        "Charlie: remained silent.",
+        "You: \"Bob, your claim to have investigated Charlie is suspicious since only the detective can investigate, and you haven't said you're the detective. Can you prove it?\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Alice: \"Diana was found dead last night. We need to be very careful today and try to figure out who among Bob, Charlie, and me might be the mafia.\"",
+        "You: \"Charlie is the mafia. I investigated him last night and found out for sure. We should vote to arrest him today to protect the town.\"",
+        "Charlie: remained silent.",
+        "You: remained silent.",
+        "Charlie: remained silent.",
+        "Alice: \"Bob, your claim to have investigated Charlie is suspicious since only the detective can investigate, and you haven't said you're the detective. Can you prove it?\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"Diana was found dead last night. We need to be very careful today and try to figure out who among Bob, Charlie, and me might be the mafia.\"",
+        "Bob: \"Charlie is the mafia. I investigated him last night and found out for sure. We should vote to arrest him today to protect the town.\"",
+        "You: remained silent.",
+        "Bob: remained silent.",
+        "You: remained silent.",
+        "Alice: \"Bob, your claim to have investigated Charlie is suspicious since only the detective can investigate, and you haven't said you're the detective. Can you prove it?\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}

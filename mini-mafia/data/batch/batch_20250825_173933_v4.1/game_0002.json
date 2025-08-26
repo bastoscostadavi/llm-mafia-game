@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250825_173933_v4.1_game_0002",
+  "game_number": 2,
+  "timestamp": "2025-08-25T17:59:29.821018",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I investigated Bob last night and discovered he is the mafioso. We should vote for him to protect the town.\"",
+        "You: \"I think we should verify Charlie's claim before voting. Does anyone else have information?\"",
+        "Bob: \"Alice, I am the real detective. I investigated Charlie last night and he is the mafioso. He is accusing me to cover himself.\"",
+        "Bob: \"Alice, Charlie is lying. I am the detective and I investigated Charlie last night. He is mafioso. Vote for him to save the town.\"",
+        "Charlie: \"Bob is lying about being the detective. I investigated him and confirmed he's the mafioso. We must vote for him now to save the town.\"",
+        "You: \"I still think we need to verify. Maybe vote for Bob, as Charlie accused first.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Charlie: \"I investigated Bob last night and discovered he is the mafioso. We should vote for him to protect the town.\"",
+        "Alice: \"I think we should verify Charlie's claim before voting. Does anyone else have information?\"",
+        "You: \"Alice, I am the real detective. I investigated Charlie last night and he is the mafioso. He is accusing me to cover himself.\"",
+        "You: \"Alice, Charlie is lying. I am the detective and I investigated Charlie last night. He is mafioso. Vote for him to save the town.\"",
+        "Charlie: \"Bob is lying about being the detective. I investigated him and confirmed he's the mafioso. We must vote for him now to save the town.\"",
+        "Alice: \"I still think we need to verify. Maybe vote for Bob, as Charlie accused first.\""
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"I investigated Bob last night and discovered he is the mafioso. We should vote for him to protect the town.\"",
+        "Alice: \"I think we should verify Charlie's claim before voting. Does anyone else have information?\"",
+        "Bob: \"Alice, I am the real detective. I investigated Charlie last night and he is the mafioso. He is accusing me to cover himself.\"",
+        "Bob: \"Alice, Charlie is lying. I am the detective and I investigated Charlie last night. He is mafioso. Vote for him to save the town.\"",
+        "You: \"Bob is lying about being the detective. I investigated him and confirmed he's the mafioso. We must vote for him now to save the town.\"",
+        "Alice: \"I still think we need to verify. Maybe vote for Bob, as Charlie accused first.\"",
+        "Votes: Alice voted for Bob, Bob voted for Charlie, Charlie voted for Bob",
+        "Bob was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}
