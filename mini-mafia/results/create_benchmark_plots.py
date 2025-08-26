@@ -494,15 +494,15 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     # Use non-interactive backend
     plt.ioff()
     
-    # Set font size to match LaTeX document (much larger for readability)
+    # Set font size to match LaTeX document (even larger for better readability)
     plt.rcParams.update({
-        'font.size': 18,
-        'axes.labelsize': 18,
-        'axes.titlesize': 18,
-        'xtick.labelsize': 18,
-        'ytick.labelsize': 18,
-        'legend.fontsize': 18,
-        'figure.titlesize': 18
+        'font.size': 24,
+        'axes.labelsize': 24,
+        'axes.titlesize': 24,
+        'xtick.labelsize': 24,
+        'ytick.labelsize': 24,
+        'legend.fontsize': 24,
+        'figure.titlesize': 24
     })
     
     fig, ax = plt.subplots(figsize=(14, 7))
@@ -531,7 +531,7 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     # Add model names and values on the right side of bars
     for i, (model, value, error) in enumerate(zip(models, values, errors)):
         ax.text(value + error + 1.5, i, f'{model}: {value:.0f}% ± {error:.1f}%', 
-                ha='left', va='center', fontweight='bold', fontsize=18)
+                ha='left', va='center', fontweight='bold', fontsize=24)
     
     # Add company logos on the left
     for i, company in enumerate(companies):
@@ -546,12 +546,12 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
                 print(f"Failed to add logo for {company}: {e}")
                 # Fallback to company initial
                 ax.text(-6, i, company[0], ha='center', va='center', 
-                        fontweight='bold', fontsize=18, color='black',
+                        fontweight='bold', fontsize=24, color='black',
                         bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
         else:
             # Fallback to company initial
             ax.text(-6, i, company[0], ha='center', va='center', 
-                    fontweight='bold', fontsize=18, color='black',
+                    fontweight='bold', fontsize=24, color='black',
                     bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
     
     # Set axis labels based on metric type
@@ -561,7 +561,7 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
         xlabel = 'Mafia Win Rate (%)'
     
     # Formatting
-    ax.set_xlabel(xlabel, fontsize=18, fontweight='bold')
+    ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
     # Remove title - will be handled by LaTeX captions
     ax.set_yticks([])  # Remove y-axis labels
     ax.set_xlim(-10, 100)  # Set range from -10 (for logos) to 100 (full domain)
