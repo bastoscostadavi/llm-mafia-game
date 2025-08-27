@@ -85,9 +85,9 @@ def extract_model_name(model_config):
     
     elif model_config.get('type') == 'deepseek':
         model = model_config.get('model', 'unknown')
-        if model.startswith('deepseek-chat') or model.startswith('deepseek-v3'):
+        if model.lower().startswith('deepseek-chat') or model.lower().startswith('deepseek-v3'):
             return 'DeepSeek V3'
-        elif model.startswith('deepseek-reasoner'):
+        elif model.lower().startswith('deepseek-reasoner'):
             return 'DeepSeek R1'
         else:
             return model.upper()
@@ -98,6 +98,10 @@ def extract_model_name(model_config):
             return 'Gemini 2.5 Flash Lite'
         elif model.startswith('gemini-2.5-flash'):
             return 'Gemini 2.5 Flash'
+        elif model.lower().startswith('deepseek-chat') or model.lower().startswith('deepseek-v3'):
+            return 'DeepSeek V3'
+        elif model.lower().startswith('deepseek-reasoner'):
+            return 'DeepSeek R1'
         else:
             return model.upper()
     
@@ -128,7 +132,14 @@ def extract_model_name(model_config):
         return model_filename.replace('.gguf', '')
     
     else:
-        return "unknown"
+        # Fallback: try to extract model name from the model field regardless of type
+        model = model_config.get('model', '')
+        if 'deepseek-chat' in model.lower() or 'deepseek-v3' in model.lower():
+            return 'DeepSeek V3'
+        elif 'deepseek-reasoner' in model.lower():
+            return 'DeepSeek R1'
+        else:
+            return "unknown"
 
 def create_config_key(model_configs):
     """Create a configuration key from model configs (MafiosoDetectiveVillager)"""

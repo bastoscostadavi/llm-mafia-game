@@ -178,6 +178,7 @@ def load_company_logo(company, size=(40, 40)):
         print(f"Error loading logo for {company}: {e}")
         return None
 
+
 def analyze_v4_1_batch_data():
     """Analyze ONLY v4.1 batch data and return organized results"""
     data_dir = "../data/batch"
@@ -746,8 +747,8 @@ def main():
         if len(results_list) < 1:  # Need at least 1 model
             continue
         
-        # Sort by win rate (ascending), then reverse alphabetically for ties (since list will be reversed for display)
-        results_list.sort(key=lambda x: (x['win_rate'], x['varying_model']), reverse=True)
+        # Sort by win rate descending, then alphabetically for ties
+        results_list.sort(key=lambda x: (-x['win_rate'], x['varying_model']))
         
         # Extract data for plotting (reverse order so highest scores appear at top)
         models = [r['varying_model'] for r in reversed(results_list)]
@@ -789,8 +790,8 @@ def main():
         if len(results_list) < 1:  # Need at least 1 model
             continue
         
-        # Sort by win rate (ascending), then reverse alphabetically for ties (since list will be reversed for display)
-        results_list.sort(key=lambda x: (x['win_rate'], x['varying_model']), reverse=True)
+        # Sort by win rate descending, then alphabetically for ties
+        results_list.sort(key=lambda x: (-x['win_rate'], x['varying_model']))
         
         # Extract data for plotting (reverse order so highest scores appear at top)
         models = [r['varying_model'] for r in reversed(results_list)]
@@ -832,8 +833,8 @@ def main():
         if len(results_list) < 1:  # Need at least 1 model
             continue
         
-        # Sort by win rate (ascending), then reverse alphabetically for ties (since list will be reversed for display)
-        results_list.sort(key=lambda x: (x['win_rate'], x['varying_model']), reverse=True)
+        # Sort by win rate descending, then alphabetically for ties
+        results_list.sort(key=lambda x: (-x['win_rate'], x['varying_model']))
         
         # Extract data for plotting (reverse order so highest scores appear at top)
         models = [r['varying_model'] for r in reversed(results_list)]
