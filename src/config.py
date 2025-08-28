@@ -34,7 +34,7 @@ DEFAULT_PROMPT_VERSION = "v4.1"
 # - claude-opus-4-1-20250805    #Claude Opus  
 # - claude-3-haiku-20240307 #Claude Haiku 3  
 # - claude-3-5-haiku-latest #Claude Haiku 3.5
-# - deepseek-v3                 # DeepSeek V3
+# - deepseek-chat                 # DeepSeek V3
 # - gemini-2.5-flash           # Google Gemini 2.5 Flash
 # - gemini-2.5-flash-lite       # Google Gemini 2.5 Flash Lite
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
@@ -44,9 +44,9 @@ DEFAULT_PROMPT_VERSION = "v4.1"
 # EX: 'mafioso': {'type': 'google', 'model': 'gemini-2.0-flash-exp', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'google','model': 'gemini-2.5-flash-lite', 'temperature': 0.7},
-    'mafioso': {'type': 'deepseek','model': 'deepseek-chat', 'temperature': 0.7},
-    'villager': {'type': 'deepseek','model': 'deepseek-chat', 'temperature': 0.7}
+    'detective': {'type': 'xai','model': 'grok-3-mini', 'temperature': 0.7},
+    'mafioso': {'type': 'anthropic','model': 'claude-sonnet-4-20250514', 'temperature': 0.7},
+    'villager': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7}
 }
 
 # GAME SETTINGS

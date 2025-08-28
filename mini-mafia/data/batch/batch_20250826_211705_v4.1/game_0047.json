@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250826_211705_v4.1_game_0047",
+  "game_number": 47,
+  "timestamp": "2025-08-26T21:54:17.657828",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Alice, the villager.",
+        "Day 1 begins."
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the villager.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "You: \"Let's figure out what happened to Alice.\"",
+        "Diana: \"I investigated Charlie last night and he is the mafioso. We need to vote him out.\"",
+        "Charlie: \"Diana is lying. I'm the detective and I investigated Bob last night - he's innocent. Diana must be the mafioso trying to frame me.\"",
+        "Diana: \"Charlie is lying. I am the detective and my investigation proves he is mafioso. Bob is innocent. Vote Charlie to win.\"",
+        "You: remained silent.",
+        "Charlie: \"Diana is the real mafioso. I investigated Bob - he's innocent. Diana is trying to frame me because I'm the detective. Vote Diana to win.\"",
+        "Votes: Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Diana, Diana voted for Charlie",
+        "Charlie was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Charlie, the mafioso.",
+        "Night 1 begins.",
+        "You killed Alice.",
+        "Alice was found dead.",
+        "Day 1 begins.",
+        "Bob: \"Let's figure out what happened to Alice.\"",
+        "Diana: \"I investigated Charlie last night and he is the mafioso. We need to vote him out.\"",
+        "You: \"Diana is lying. I'm the detective and I investigated Bob last night - he's innocent. Diana must be the mafioso trying to frame me.\"",
+        "Diana: \"Charlie is lying. I am the detective and my investigation proves he is mafioso. Bob is innocent. Vote Charlie to win.\"",
+        "Bob: remained silent.",
+        "You: \"Diana is the real mafioso. I investigated Bob - he's innocent. Diana is trying to frame me because I'm the detective. Vote Diana to win.\""
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the detective.",
+        "Night 1 begins.",
+        "Alice was found dead.",
+        "You investigated Charlie and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "Bob: \"Let's figure out what happened to Alice.\"",
+        "You: \"I investigated Charlie last night and he is the mafioso. We need to vote him out.\"",
+        "Charlie: \"Diana is lying. I'm the detective and I investigated Bob last night - he's innocent. Diana must be the mafioso trying to frame me.\"",
+        "You: \"Charlie is lying. I am the detective and my investigation proves he is mafioso. Bob is innocent. Vote Charlie to win.\"",
+        "Bob: remained silent.",
+        "Charlie: \"Diana is the real mafioso. I investigated Bob - he's innocent. Diana is trying to frame me because I'm the detective. Vote Diana to win.\"",
+        "Votes: Bob voted for Charlie (the vote was cast randomly because of a failed format), Charlie voted for Diana, Diana voted for Charlie",
+        "Charlie was arrested"
+      ]
+    }
+  ]
+}

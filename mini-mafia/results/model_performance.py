@@ -324,12 +324,22 @@ def analyze_model_performance():
                     stats['mafioso_votes_for_detective'] += strategic_votes
                     stats['mafioso_total_votes'] += strategic_total
     
+    # Filter to models used in benchmark plots
+    benchmark_models = {
+        'Mistral 7B Instruct', 'GPT-4.1 Mini', 'Grok 3 Mini', 'DeepSeek V3',
+        'Llama3.1 8B Instruct', 'Qwen2.5 7B Instruct', 'Gemini 2.5 Flash Lite',
+        'Claude Opus 4.1', 'Claude Sonnet 4', 'GPT-4o Mini'
+    }
+    
+    # Filter model stats to only include benchmark models
+    filtered_stats = {name: stats for name, stats in model_stats.items() if name in benchmark_models}
+    
     # Print results
-    print(f"{'Model':<12} {'Silent%':<8} {'Random%':<9} {'DetAcc%':<9} {'MafTarg%':<10}")
+    print(f"{'Model':<20} {'Silent%':<8} {'Random%':<9} {'DetAcc%':<9} {'MafTarg%':<10}")
     print("-" * 70)
     
-    for model_name in sorted(model_stats.keys()):
-        stats = model_stats[model_name]
+    for model_name in sorted(filtered_stats.keys()):
+        stats = filtered_stats[model_name]
         
         # Calculate percentages
         silent_pct = (stats['silent_messages'] / stats['total_messages'] * 100) if stats['total_messages'] > 0 else 0
@@ -337,14 +347,14 @@ def analyze_model_performance():
         det_acc_pct = (stats['detective_votes_for_mafioso'] / stats['detective_total_votes'] * 100) if stats['detective_total_votes'] > 0 else 0
         maf_targ_pct = (stats['mafioso_votes_for_detective'] / stats['mafioso_total_votes'] * 100) if stats['mafioso_total_votes'] > 0 else 0
         
-        print(f"{model_name:<12} {silent_pct:<8.1f} {random_pct:<9.1f} {det_acc_pct:<9.1f} {maf_targ_pct:<10.1f}")
+        print(f"{model_name:<20} {silent_pct:<8.1f} {random_pct:<9.1f} {det_acc_pct:<9.1f} {maf_targ_pct:<10.1f}")
     
     # Print detailed statistics
     print("\n" + "=" * 70)
     print("DETAILED STATISTICS")
     print("=" * 70)
     
-    for model_name in sorted(model_stats.keys()):
+    for model_name in sorted(filtered_stats.keys()):
         stats = model_stats[model_name]
         print(f"\n{model_name}:")
         print(f"  Messages: {stats['silent_messages']}/{stats['total_messages']} silent "

@@ -605,7 +605,24 @@ def get_background_color(background_key):
         return '#666666'  # Default gray
 
 def create_benchmark_plot(benchmark_data, title, filename, background_key="", use_good_wins=False):
-    """Create a horizontal bar plot with logos and formatting"""
+    """Create a horizontal bar plot with logos and formatting, and export numerical data"""
+    # Export numerical data alongside the plot
+    export_data = {
+        'models': benchmark_data['models'],
+        'win_rates': benchmark_data['values'],
+        'tie_win_rates': benchmark_data.get('tie_values', [0] * len(benchmark_data['values'])),
+        'errors': benchmark_data['errors'],
+        'companies': benchmark_data['companies'],
+        'background': background_key,
+        'use_good_wins': use_good_wins
+    }
+    
+    # Create data filename by replacing .png with .json
+    data_filename = filename.replace('.png', '_data.json')
+    with open(data_filename, 'w') as f:
+        json.dump(export_data, f, indent=2)
+    print(f"Data exported as {data_filename}")
+    
     # Use non-interactive backend
     plt.ioff()
     

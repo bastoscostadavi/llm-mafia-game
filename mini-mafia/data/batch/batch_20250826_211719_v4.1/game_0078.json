@@ -1,0 +1,77 @@
+{
+  "game_id": "batch_20250826_211719_v4.1_game_0078",
+  "game_number": 78,
+  "timestamp": "2025-08-26T22:17:58.811705",
+  "players": [
+    {
+      "name": "Alice",
+      "role": "detective",
+      "alive": true,
+      "imprisoned": true,
+      "memory": [
+        "You're Alice, the detective.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "You investigated Bob and discovered that they are the mafioso.",
+        "Day 1 begins.",
+        "You: \"I investigated Bob last night. He is the mafia. Diana was killed, so we must vote Bob out today.\"",
+        "Bob: \"That's a lie! I'm the detective and I investigated Alice last night. She's mafia trying to frame me after killing Diana.\"",
+        "Charlie: \"I'm with Alice. Bob seems suspicious and Diana's death might be linked to him.\"",
+        "Charlie: \"\\\"",
+        "Bob: \"Alice is lying. I investigated Diana last night and she was the detective. Alice killed her and is now framing me to cover it up. Vote Alice!\"",
+        "You: \"Bob is lying. I am the detective, I investigated Bob and he is mafia. His story about investigating Diana makes no sense since she was killed. Vote Bob!\""
+      ]
+    },
+    {
+      "name": "Bob",
+      "role": "mafioso",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Bob, the mafioso.",
+        "Night 1 begins.",
+        "You killed Diana.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"I investigated Bob last night. He is the mafia. Diana was killed, so we must vote Bob out today.\"",
+        "You: \"That's a lie! I'm the detective and I investigated Alice last night. She's mafia trying to frame me after killing Diana.\"",
+        "Charlie: \"I'm with Alice. Bob seems suspicious and Diana's death might be linked to him.\"",
+        "Charlie: \"\\\"",
+        "You: \"Alice is lying. I investigated Diana last night and she was the detective. Alice killed her and is now framing me to cover it up. Vote Alice!\"",
+        "Alice: \"Bob is lying. I am the detective, I investigated Bob and he is mafia. His story about investigating Diana makes no sense since she was killed. Vote Bob!\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "role": "villager",
+      "alive": true,
+      "imprisoned": false,
+      "memory": [
+        "You're Charlie, the villager.",
+        "Night 1 begins.",
+        "Diana was found dead.",
+        "Day 1 begins.",
+        "Alice: \"I investigated Bob last night. He is the mafia. Diana was killed, so we must vote Bob out today.\"",
+        "Bob: \"That's a lie! I'm the detective and I investigated Alice last night. She's mafia trying to frame me after killing Diana.\"",
+        "You: \"I'm with Alice. Bob seems suspicious and Diana's death might be linked to him.\"",
+        "You: \"\\\"",
+        "Bob: \"Alice is lying. I investigated Diana last night and she was the detective. Alice killed her and is now framing me to cover it up. Vote Alice!\"",
+        "Alice: \"Bob is lying. I am the detective, I investigated Bob and he is mafia. His story about investigating Diana makes no sense since she was killed. Vote Bob!\"",
+        "Votes: Alice voted for Bob, Bob voted for Alice, Charlie voted for Alice",
+        "Alice was arrested"
+      ]
+    },
+    {
+      "name": "Diana",
+      "role": "villager",
+      "alive": false,
+      "imprisoned": false,
+      "memory": [
+        "You're Diana, the villager.",
+        "Day 1 begins."
+      ]
+    }
+  ]
+}
