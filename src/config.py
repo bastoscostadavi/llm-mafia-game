@@ -2,16 +2,9 @@
 """
 Centralized configuration for the LLM Mafia Game system.
 
-This module provides a single source of truth for system-wide settings,
-preventing version mismatches and configuration inconsistencies.
+This module provides a single source of truth for system-wide settings.
+The prompt system now uses a single prompt.txt file for consistency.
 """
-
-
-from src.prompts import PromptConfig
-
-# CURRENT SYSTEM VERSION
-# This is the single source of truth for prompt version across the entire system
-DEFAULT_PROMPT_VERSION = "v4.1"
 
 # MODEL CONFIGURATIONS
 # Available local models in models/ directory:
@@ -123,9 +116,8 @@ def get_token_limits_for_model(model_config):
     # Default to standard limits
     return STANDARD_TOKEN_LIMITS
 
-def get_default_prompt_config():
-    """Get the default prompt configuration for the system"""
-    return PromptConfig(version=DEFAULT_PROMPT_VERSION)
+# Prompt configuration is now handled by prompt.txt file
+# No need for version-specific prompt configuration
 
 def get_default_model_configs():
     """Get the default model configuration for the system"""

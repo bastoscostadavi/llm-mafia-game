@@ -1,228 +1,68 @@
 # LLM Mafia Game
 
-A research framework for studying Large Language Model behavior in social deduction games. This system allows LLMs to play Mafia/Werewolf with different roles, providing insights into AI reasoning, deception, and social dynamics.
+Research framework for studying Large Language Model behavior in social deduction games. LLMs play different roles (Detective, Mafioso, Villager) with asymmetric information, enabling analysis of reasoning, deception, and social dynamics.
 
-## Overview
-
-This project implements a multi-agent Mafia game where different LLMs can play various roles:
-- **Detective**: Investigates players each night to identify mafiosos
-- **Mafioso**: Tries to eliminate good players while avoiding detection
-- **Villager**: Participates in discussions and voting to identify mafiosos
-
-The framework supports multiple LLM backends and includes comprehensive analysis tools for studying gameplay patterns.
-
-## Features
-
-- **Multi-LLM Support**: Local models (llama.cpp), OpenAI GPT, and Anthropic Claude (including Claude Sonnet-4)
-- **Advanced Prompt Caching**: KV caching for local models + Anthropic prompt caching (50%+ API cost reduction)
-- **Flexible Game Modes**: Classic 6-player and Mini-mafia 4-player variants
-- **Web Interface**: Human vs LLM gameplay with real-time browser interface
-- **Research Tools**: Batch experiment runner, dynamic benchmark plotting, and comprehensive analysis
-- **Prompt Versioning**: Reproducible research with versioned prompt configurations (v0.0 - v4.0)
-- **Memory System**: Each agent maintains individual memory of game events
-- **Cost Optimization**: Standardized token limits (50/5/5) for efficient API usage
-
-## Quick Start
-
-### Prerequisites
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# For local models, place GGUF files in models/ directory:
-# - models/mistral.gguf
-# - models/Qwen2.5-7B-Instruct-Q4_K_M.gguf
-# - models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
-
-# For API models, set environment variables:
-export OPENAI_API_KEY="your-openai-key"
-export ANTHROPIC_API_KEY="your-anthropic-key"
-```
-
-### Run a Game
-
-```bash
-# Interactive game launcher with preset configurations
-python run_game.py
-
-# Available options:
-# 1. Classic Game (6 players: 2 mafiosos, 1 detective, 3 villagers)
-# 2. Mini-mafia (4 players: 1 mafioso, 1 detective, 2 villagers)
-
-# Web interface for human vs LLM games
-python web_app.py
-# Open http://localhost:8080 to play against AI opponents
-```
-
-### Research Experiments
-
-```bash
-# Run batch experiments (Mini-mafia)
-cd mini-mafia
-
-# Run 100 games with current configuration (Claude Sonnet-4 + Mistral)
-python run_mini_mafia_batch.py 100
-
-# Analysis and visualization
-python analysis/analyze_results.py       # Comprehensive model performance analysis
-python analysis/model_performance.py     # Individual model behavior analysis
-python results/create_benchmark_plots_final.py  # Dynamic benchmark plots with latest data
-python game_viewer.py                    # Interactive game viewer
-```
-
-## Project Structure
+## Structure
 
 ```
 llm-mafia-game/
-├── README.md                    # This file
-├── requirements.txt             # Python dependencies
-├── run_game.py                  # Main game launcher
-├── preset_games.py              # Predefined game configurations
-├── src/                         # Core game engine
-│   ├── __init__.py              # Package initialization
-│   ├── main.py                  # Game logic and state management
-│   ├── agents.py                # Agent classes and behaviors
-│   ├── llm_utils.py             # LLM wrapper utilities (with prompt caching)
-│   ├── prompts.py               # Prompt templates and versioning (v0.0-v4.0)
-│   └── config.py                # Centralized configuration management
-├── models/                      # Local model files (GGUF format)
-│   ├── mistral.gguf             # Mistral 7B Instruct model
-│   ├── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
-│   ├── Qwen2.5-7B-Instruct-Q4_K_M.gguf
-│   └── openai_gpt-oss-20b-Q4_K_M.gguf
-└── mini-mafia/                  # Mini-mafia research hub
-    ├── README.md                # Experiment documentation
-    ├── mini_mafia.py             # Core mini-mafia game logic
-    ├── run_mini_mafia_batch.py  # Batch runner with Claude Sonnet-4 support
-    ├── run_temperature_experiment.py  # Temperature analysis experiments
-    ├── analysis/                # Analysis tools
-    │   ├── analyze_results.py   # Comprehensive model performance analysis
-    │   └── model_performance.py # Individual model behavior analysis
-    ├── results/                 # Visualization and plotting
-    │   ├── create_benchmark_plots.py  # Dynamic benchmark plotting
-    │   └── logos/               # Company logos for plots
-    ├── web/                     # Web interface for human vs LLM games
-    │   ├── app.py               # Flask web application
-    │   ├── requirements_web.txt # Web-specific dependencies
-    │   └── templates/           # HTML templates
-    │       └── index.html       # Main web UI
-    └── data/                    # Experimental data
-        ├── batch/               # Batch experiment results (v4.0 optimized)
-        │   └── batch_*/         # Individual batch directories
-        ├── web/                 # Human vs LLM game data
-        └── archived/            # Archived experimental data
+├── src/                    # Core game engine
+│   ├── agents.py          # Game agents (Detective, Mafioso, Villager)
+│   ├── prompt.txt         # Game prompt template
+│   ├── prompt_utils.py    # Prompt formatting utilities
+│   ├── config.py          # Model configurations
+│   ├── main.py            # Game state management
+│   └── llm_utils.py       # LLM interface wrappers
+├── experiments/           # Research experiments
+│   └── mini-mafia/        # 4-player Mafia variant
+├── models/                # Local model files (.gguf)
+├── run_game.py           # Interactive game launcher
+└── preset_games.py       # Predefined game configurations
 ```
 
-## Game Modes
+## Quick Start
 
-### Classic Mode (6 Players)
-- **Roles**: 2 Mafiosos, 1 Detective, 3 Villagers
-- **Gameplay**: Full night/day cycle with eliminations
-- **Win Conditions**: 
-  - Good wins: Arrest all mafiosos
-  - Evil wins: Equal or outnumber good players
+```bash
+# Interactive game menu
+python run_game.py
 
-### Mini-Mafia Mode (4 Players)
-- **Setup**: 1 Mafioso, 1 Detective, 2 Villagers (1 killed at night)
-- **Gameplay**: Single day phase with 3 surviving players
-- **Research Focus**: Optimized for studying deception and detection patterns
+# Run mini-mafia experiment
+cd experiments/mini-mafia
+python run_mini_mafia_batch.py 10
+```
 
-### Human vs LLM Mode (Web Interface)
-- **Setup**: 1 Human player + 3 LLM opponents (4 players total)
-- **Roles**: Human can choose Detective, Mafioso, or Villager role
-- **Interface**: Real-time web browser gameplay with interactive prompts
-- **Data Collection**: All games automatically saved for analysis
+## Models Supported
 
-## LLM Backends
+**Local**: Mistral 7B, Llama 3.1 8B, Qwen 2.5 7B, Gemma 2 27B, GPT-OSS 20B  
+**API**: GPT-4o/5, Claude Sonnet/Opus, Grok-3/4, DeepSeek V3, Gemini 2.5
 
-### Local Models (via llama.cpp)
-- Fast inference with GPU acceleration
-- No API costs or rate limits
-- Supports any GGUF format model
-- **KV Caching**: Automatic prompt caching for 50%+ performance improvements
-- **State Management**: Save/load model states for consistent gameplay
+## Game Types
 
-### API Models
-- **OpenAI**: GPT-3.5-turbo, GPT-4o, GPT-5 series (with reasoning_effort optimization)
-- **Anthropic**: Claude-3 series (Haiku, Sonnet, Opus) + Claude Sonnet-4 with prompt caching
-- Configurable per role for comparative studies
-- **Current Default**: Claude Sonnet-4 (mafioso) + Mistral 7B Instruct (detective/villager)
+**Classic**: 6 players (2 mafiosos, 1 detective, 3 villagers)  
+**Mini-Mafia**: 4 players (1 mafioso, 1 detective, 2 villagers)
 
-## Research Applications
+## Features
 
-This framework enables research into:
-
-- **Deception Detection**: How well can LLMs identify lies and inconsistencies?
-- **Strategic Reasoning**: Do different models employ different strategies?
-- **Social Dynamics**: How do models adapt their behavior in group settings?
-- **Human vs AI**: Comparative analysis of human and AI decision-making patterns
-- **Model Comparison**: Comparative analysis across different LLM architectures
-- **Prompt Engineering**: Impact of different prompt formulations on gameplay (v0.0-v4.0)
-
-## Data and Analysis
-
-The system generates rich datasets including:
-- Complete game transcripts with all communications
-- Individual agent memory states (preserves full game narrative)
-- Voting patterns and decision rationales
-- Win/loss statistics across different configurations
-- Human vs LLM gameplay comparisons (web interface data)
-
-Analysis tools provide insights into:
-- Model-specific behavioral patterns
-- Voting accuracy and strategic choices  
-- Communication styles and persuasion attempts
-- Success rates across different prompt versions
+- **Batch Experiments**: Run hundreds of games with automated data collection
+- **SQLite Storage**: Structured database with games, actions, votes, outcomes  
+- **Analysis Tools**: Performance benchmarks, bias detection, statistical plots
+- **Research Output**: Automated paper generation with LaTeX integration
+- **Interactive Tools**: Game viewer, database browser, real-time plotting
 
 ## Configuration
 
-### Prompt Versioning
+Edit `src/config.py` for default model settings:
+
 ```python
-# Available prompt versions
-v0.0: Original research prompts
-v1.0: Enhanced with strategic guidance
-v2.0: Improved clarity and structure
-v3.0: Forced response format for faster API models
-v4.0: Optimized for prompt caching (50%+ performance improvement)
-```
-
-### Model Configuration
-```python
-# Current default configuration (optimized for performance + cost)
-model_configs = {
-    'detective': {'type': 'local', 'model_path': 'models/mistral.gguf'},
-    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 
-                'temperature': 0.7, 'use_cache': True},
-    'villager': {'type': 'local', 'model_path': 'models/mistral.gguf'}
-}
-
-# Token limits (standardized across all models except GPT-5)
-token_limits = {
-    'discussion': 50,    # Balanced quality and cost
-    'voting': 5,         # Player name
-    'night_action': 5    # Player name
+DEFAULT_MODEL_CONFIGS = {
+    'detective': {'type': 'xai', 'model': 'grok-3-mini'},
+    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4'},
+    'villager': {'type': 'xai', 'model': 'grok-3-mini'}
 }
 ```
 
-## Contributing
+## Requirements
 
-This is a research framework. Contributions welcome for:
-- New game variants or mechanics
-- Additional LLM backend integrations  
-- Enhanced analysis tools
-- Performance optimizations
-
-
-## Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-@misc{llm-mafia-game,
-  title={LLM Mafia Game: A Framework for Studying AI Behavior in Social Deduction},
-  author={Davi Bastos Costa},
-  year={2025},
-  url={https://github.com/bastoscostadavi/llm-mafia-game}
-}
-```
+- Python 3.8+
+- API keys for cloud models (optional)
+- Local models in `models/` directory (optional)

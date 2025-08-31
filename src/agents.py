@@ -3,11 +3,15 @@ from typing import List, Dict, Optional
 import json
 import random
 import re
-from src.prompts import PromptConfig, MESSAGE_LIMIT
+from src.prompt_utils import (
+    format_discussion_prompt, format_voting_prompt, format_night_action_prompt,
+    parse_discussion_response, parse_voting_response, parse_night_action_response,
+    MESSAGE_LIMIT
+)
 from src.config import TOKEN_LIMITS, get_token_limits_for_model
 
 class MafiaAgent:
-    def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, prompt_config: PromptConfig = None, model_config: dict = None):
+    def __init__(self, name: str, role: str, llm_interface, debug_prompts: bool = False, model_config: dict = None):
         self.name = name
         self.role = role
         self.llm = llm_interface
@@ -15,7 +19,6 @@ class MafiaAgent:
         self.imprisoned = False
         self.memory = []  # List of all messages and events
         self.debug_prompts = debug_prompts
-        self.prompt_config = prompt_config or PromptConfig()
         self.model_config = model_config or {}
         self.token_limits = get_token_limits_for_model(self.model_config)
         
@@ -48,9 +51,8 @@ class MafiaAgent:
         other_active_players = [name for name in active_players if name != self.name]
         random.shuffle(other_players)
         
-        discussion_prompt = self.prompt_config.format_discussion_prompt(
+        discussion_prompt = format_discussion_prompt(
             name=self.name,
-            role=self.role,
             other_players=', '.join(other_players),
             composition=game_state.get_composition_string(),
             memory=self.get_memory(),
@@ -76,7 +78,7 @@ class MafiaAgent:
             
 
         # Parse the message using centralized parsing
-        message = self.prompt_config.parse_discussion_response(response)
+        message = parse_discussion_response(response)
         if not message:
             # Log failed discussion
             game_state.log_action("discuss", self.name, response, "remained silent")
@@ -101,9 +103,8 @@ class MafiaAgent:
         other_players = [name for name in all_players if name != self.name]
         random.shuffle(other_players)
         
-        voting_prompt = self.prompt_config.format_voting_prompt(
+        voting_prompt = format_voting_prompt(
             name=self.name,
-            role=self.role,
             other_players=', '.join(other_players),
             composition=game_state.get_composition_string(),
             memory=self.get_memory(),
@@ -127,7 +128,7 @@ class MafiaAgent:
             print(f"{'='*60}")
         
         # Parse the vote using centralized parsing
-        vote_target = self.prompt_config.parse_voting_response(response, candidates)
+        vote_target = parse_voting_response(response, candidates)
         if vote_target:
             # Log successful vote
             game_state.log_action("vote", self.name, response, vote_target)
@@ -149,9 +150,8 @@ class MafiaAgent:
         other_players = [name for name in all_players if name != self.name]
         random.shuffle(other_players)
         
-        killing_prompt = self.prompt_config.format_night_action_prompt(
+        killing_prompt = format_night_action_prompt(
             name=self.name,
-            role=self.role,
             other_players=', '.join(other_players),
             composition=game_state.get_composition_string(),
             memory=self.get_memory(),
@@ -177,7 +177,7 @@ class MafiaAgent:
             print(f"{'='*60}")
         
         # Parse the target using centralized parsing
-        target = self.prompt_config.parse_night_action_response(response, candidates)
+        target = parse_night_action_response(response, candidates)
         if not target:
             target = random.choice(candidates)
             parsed_result = f"{target} (random)"
@@ -199,9 +199,8 @@ class MafiaAgent:
         other_players = [name for name in all_players if name != self.name]
         random.shuffle(other_players)
         
-        investigating_prompt = self.prompt_config.format_night_action_prompt(
+        investigating_prompt = format_night_action_prompt(
             name=self.name,
-            role=self.role,
             other_players=', '.join(other_players),
             composition=game_state.get_composition_string(),
             memory=self.get_memory(),
@@ -227,7 +226,7 @@ class MafiaAgent:
             print(f"{'='*60}")
         
         # Parse the target using centralized parsing
-        target = self.prompt_config.parse_night_action_response(response, candidates)
+        target = parse_night_action_response(response, candidates)
         if not target:
             target = random.choice(candidates)
             parsed_result = f"{target} (random)"

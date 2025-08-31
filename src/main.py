@@ -3,7 +3,7 @@ import sys
 import random
 from collections import Counter
 from src.agents import MafiaAgent
-from src.prompts import PromptConfig
+# Prompt configuration is now handled by prompt.txt file
 from src.llm_utils import create_llm
 
 sys.path.append('.')
@@ -305,18 +305,13 @@ class Game:
 
 
 
-def create_game(players, discussion_rounds=2, debug_prompts=False, prompt_config=None):
+def create_game(players, discussion_rounds=2, debug_prompts=False):
     """Create a Mafia game with specified players"""
-    # Use system default prompt config if none provided
-    if prompt_config is None:
-        from src.config import get_default_prompt_config
-        prompt_config = get_default_prompt_config()
-    
     # Create agents
     agents = []
     for player in players:
         llm = create_llm(player['llm'])
-        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts, prompt_config, player['llm'])
+        agent = MafiaAgent(player['name'], player['role'], llm, debug_prompts, player['llm'])
         agent.remember(f"You're {agent.name}, the {agent.role}.")
         agents.append(agent)
     

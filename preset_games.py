@@ -10,8 +10,7 @@ import random
 sys.path.append('.')
 
 from src.main import create_game
-from src.prompts import PromptConfig
-from src.config import get_default_prompt_config
+# Prompt configuration now handled by prompt.txt file
 
 
 def classic_game(debug_prompts=False):
@@ -29,7 +28,7 @@ def classic_game(debug_prompts=False):
         {'name': 'Frank', 'role': roles[5], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}}
     ]
 
-    return create_game(players, discussion_rounds=1, debug_prompts=debug_prompts, prompt_config=get_default_prompt_config())
+    return create_game(players, discussion_rounds=1, debug_prompts=debug_prompts)
 
 def mini_mafia_game(debug_prompts=False):
     """Mini-mafia game: 4 players (1 detective, 1 mafioso, 2 villagers)"""
@@ -44,7 +43,7 @@ def mini_mafia_game(debug_prompts=False):
         {'name': 'Diana', 'role': roles[3], 'llm': {'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf'}}
     ]
 
-    return create_game(players, discussion_rounds=2, debug_prompts=debug_prompts, prompt_config=get_default_prompt_config())
+    return create_game(players, discussion_rounds=2, debug_prompts=debug_prompts)
 
 
 def main():
