@@ -27,38 +27,191 @@ import io
 from src.agents import MafiaAgent
 from src.prompts import PromptConfig
 from src.config import DEFAULT_PROMPT_VERSION, get_default_model_configs, get_default_prompt_config
+from database.db_utils import MiniMafiaDB
 
 
-def save_game_data(game, game_num, batch_id, batch_dir, prompt_config, model_configs=None):
-    """Save minimal game data to JSON file in batch folder"""
-    
-    # Minimal game data - just memories and essential info
-    game_data = {
-        "game_id": f"{batch_id}_game_{game_num:04d}",
-        "game_number": game_num,
-        "timestamp": datetime.now().isoformat(),
+def extract_model_info(model_config):
+    """Extract standardized model information from config."""
+    if not model_config:
+        return 'llm', 'unknown', 'unknown', 0.7
         
-        # Only save player memories and final status
-        "players": [
-            {
-                "name": agent.name,
-                "role": agent.role,
-                "alive": agent.alive,
-                "imprisoned": agent.imprisoned,
-                "memory": agent.memory
-            }
-            for agent in game.state.agents
-        ]
-    }
+    model_type = model_config.get('type', 'unknown')
+    temperature = model_config.get('temperature', 0.7)
     
-    # Save to batch folder
-    filename = f"game_{game_num:04d}.json"
-    filepath = batch_dir / filename
+    # Map different config types to standardized names
+    if model_type == 'openai':
+        model = model_config.get('model', 'unknown')
+        return 'llm', model, 'openai', temperature
+    elif model_type == 'anthropic':
+        model = model_config.get('model', 'unknown')
+        return 'llm', model, 'anthropic', temperature
+    elif model_type == 'xai':
+        model = model_config.get('model', 'unknown')
+        return 'llm', model, 'xai', temperature
+    elif model_type == 'deepseek':
+        model = model_config.get('model', 'deepseek-chat')
+        return 'llm', model, 'deepseek', temperature
+    elif model_type == 'google':
+        model = model_config.get('model', 'unknown')
+        return 'llm', model, 'google', temperature
+    elif model_type == 'local':
+        model_path = model_config.get('model_path', '')
+        model_name = os.path.basename(model_path) if model_path else 'unknown'
+        return 'llm', model_name, 'local', temperature
+    else:
+        # Fallback
+        model = model_config.get('model', model_type)
+        return 'llm', model, model_type, temperature
+
+def save_game_data_to_db(game, game_num, batch_id, db, player_ids):
+    """Save game data directly to SQLite database"""
     
-    with open(filepath, 'w') as f:
-        json.dump(game_data, f, indent=2)
+    game_id = f"{batch_id}_game_{game_num:04d}"
+    timestamp = datetime.now().isoformat()
     
-    return game_data
+    # Determine winner and final status
+    winner = determine_winner(game.state.agents)
+    
+    # Insert game record
+    db.insert_game(game_id, batch_id, game_num, timestamp, winner)
+    
+    # Insert game-player assignments and track characters
+    character_roles = {}
+    for agent in game.state.agents:
+        character_name = agent.name
+        role = agent.role
+        final_status = 'arrested' if agent.imprisoned else ('killed' if not agent.alive else 'alive')
+        
+        player_id = player_ids.get(role)
+        if player_id:
+            db.insert_game_player(game_id, player_id, character_name, role, final_status)
+            character_roles[character_name] = role
+    
+    # Save events from actual game sequence (much more accurate than reconstruction!)
+    events = convert_game_sequence_to_events(game.state.game_sequence, game.state.agents)
+    for event in events:
+        db.insert_event(
+            game_id=game_id,
+            sequence_number=event['sequence_number'],
+            event_type=event['event_type'],
+            actor_character=event.get('actor_character'),
+            target_character=event.get('target_character'),
+            content=event.get('content'),
+            round_number=event.get('round_number'),
+            metadata=event.get('metadata')
+        )
+    
+    return game_id
+
+def convert_game_sequence_to_events(game_sequence, agents):
+    """Convert the game's action log into database events"""
+    import json
+    
+    events = []
+    sequence_num = 1
+    
+    # Add game start event
+    events.append({
+        'sequence_number': sequence_num,
+        'event_type': 'game_start',
+        'actor_character': None,
+        'target_character': None,
+        'content': None,
+        'round_number': None
+    })
+    sequence_num += 1
+    
+    # Process each logged action from the game sequence
+    for log_entry in game_sequence:
+        action = log_entry.get('action')
+        actor = log_entry.get('actor')
+        parsed_result = log_entry.get('parsed_result')
+        raw_response = log_entry.get('raw_response')
+        
+        # Map game actions to our event types
+        if action == 'discuss':
+            if parsed_result == "remained silent":
+                event_type = 'discussion_silent'
+                content = None
+            else:
+                event_type = 'discussion_message'  
+                content = parsed_result
+                
+            events.append({
+                'sequence_number': sequence_num,
+                'event_type': event_type,
+                'actor_character': actor,
+                'target_character': None,
+                'content': content,
+                'round_number': 1,  # Mini-mafia is always 1 round
+                'metadata': json.dumps({
+                    'raw_response': raw_response,
+                    'step': log_entry.get('step')
+                }) if raw_response else None
+            })
+            sequence_num += 1
+            
+        elif action == 'vote':
+            events.append({
+                'sequence_number': sequence_num,
+                'event_type': 'vote_cast',
+                'actor_character': actor,
+                'target_character': parsed_result,
+                'content': None,
+                'round_number': 1,
+                'metadata': json.dumps({
+                    'raw_response': raw_response,
+                    'step': log_entry.get('step')
+                }) if raw_response else None
+            })
+            sequence_num += 1
+            
+        elif action == 'kill':
+            events.append({
+                'sequence_number': sequence_num,
+                'event_type': 'kill_action',
+                'actor_character': actor,
+                'target_character': parsed_result,
+                'content': None,
+                'round_number': 1,
+                'metadata': json.dumps({
+                    'raw_response': raw_response,
+                    'step': log_entry.get('step')
+                }) if raw_response else None
+            })
+            sequence_num += 1
+            
+        elif action == 'investigate':
+            # The parsed_result is the target, content should be the discovered role
+            target_agent = next((a for a in agents if a.name == parsed_result), None)
+            discovered_role = target_agent.role if target_agent else 'unknown'
+            
+            events.append({
+                'sequence_number': sequence_num,
+                'event_type': 'investigate_action',
+                'actor_character': actor,
+                'target_character': parsed_result,
+                'content': discovered_role,
+                'round_number': 1,
+                'metadata': json.dumps({
+                    'raw_response': raw_response,
+                    'step': log_entry.get('step')
+                }) if raw_response else None
+            })
+            sequence_num += 1
+    
+    # Add game end event
+    winner = determine_winner(agents)
+    events.append({
+        'sequence_number': sequence_num,
+        'event_type': 'game_end',
+        'actor_character': None,
+        'target_character': None,
+        'content': winner,
+        'round_number': 1
+    })
+    
+    return events
 
 def determine_winner(agents):
     """Determine who won the game"""
@@ -70,46 +223,10 @@ def determine_winner(agents):
             return "evil"
     return "unknown"
 
-def get_arrested_player(agents):
-    """Get the name and role of arrested player"""
-    arrested = next((a for a in agents if a.imprisoned), None)
-    if arrested:
-        return {"name": arrested.name, "role": arrested.role}
-    return None
-
-def get_dead_player(agents):
-    """Get the name and role of dead player"""
-    dead = next((a for a in agents if not a.alive), None)
-    if dead:
-        return {"name": dead.name, "role": dead.role}
-    return None
-
-def create_batch_folder(batch_id):
-    """Create batch folder and return paths"""
-    base_dir = Path(__file__).parent / "data" / "batch"
-    batch_dir = base_dir / batch_id
-    batch_dir.mkdir(parents=True, exist_ok=True)
-    
-    return batch_dir
-
-def save_batch_config(prompt_config, model_configs, batch_dir, batch_id):
-    """Save batch configuration (prompt + model configs) to batch folder"""
-    config_data = {
-        "batch_id": batch_id,
-        "timestamp": datetime.now().isoformat(),
-        "prompt_config": prompt_config.get_config_dict(),
-        "model_configs": model_configs or get_default_model_configs(),
-        "game_type": "mini_mafia"
-    }
-    
-    config_file = batch_dir / "batch_config.json"
-    with open(config_file, 'w') as f:
-        json.dump(config_data, f, indent=2)
-    
-    return config_file
+# JSON-based functions removed - now using SQLite directly
 
 def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=None, temperature=None):
-    """Run N mini-mafia games and save results"""
+    """Run N mini-mafia games and save results to SQLite database"""
     
     # Use default model configs if none provided
     if model_configs is None:
@@ -117,67 +234,77 @@ def run_batch(n_games, debug_prompts=False, prompt_config=None, model_configs=No
     
     # Include temperature in batch ID if specified
     temp_suffix = f"_temp{temperature}" if temperature is not None else ""
-    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{prompt_config.version}{temp_suffix}"
+    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}_v4.1{temp_suffix}"
     print(f"Starting batch: {batch_id}")
-    print(f"Running {n_games} mini-mafia games with prompt version {prompt_config.version}...")
+    print(f"Running {n_games} mini-mafia games...")
     
-    # Create batch folder
-    batch_dir = create_batch_folder(batch_id)
-    print(f"Batch folder created: {batch_dir}")
+    # Initialize database connection
+    db = MiniMafiaDB()
+    db.connect()
     
-    results = []
+    # Insert batch record
+    timestamp = datetime.now().isoformat()
+    db.insert_batch(batch_id, timestamp, model_configs)
+    print(f"Batch record created in database")
+    
+    # Create player records for this batch's model configurations
+    player_ids = {}
+    for role, config in model_configs.items():
+        player_type, model_name, model_provider, temp = extract_model_info(config)
+        player_id = db.get_or_create_player(player_type, model_name, model_provider, temp)
+        player_ids[role] = player_id
+    
     stats = {"good_wins": 0, "evil_wins": 0, "unknown": 0}
     
-    # Save batch configuration (prompt + model configs) once
-    config_file = save_batch_config(prompt_config, model_configs, batch_dir, batch_id)
-    print(f"Batch config saved to: {config_file}")
-    
-    for i in range(n_games):
-        print(f"\nGame {i+1}/{n_games}")
-        
-        # Create and run game with specific prompt config and model configs
-        game = create_mini_mafia_game(model_configs=model_configs, debug_prompts=debug_prompts, prompt_config=prompt_config)
-        
-        # Capture stdout to avoid cluttering output
-        if not debug_prompts:
-            old_stdout = sys.stdout
-            sys.stdout = buffer = io.StringIO()
+    try:
+        for i in range(n_games):
+            print(f"\nGame {i+1}/{n_games}")
             
-            try:
+            # Create and run game with specific prompt config and model configs
+            game = create_mini_mafia_game(model_configs=model_configs, debug_prompts=debug_prompts, prompt_config=prompt_config)
+            
+            # Capture stdout to avoid cluttering output
+            if not debug_prompts:
+                old_stdout = sys.stdout
+                sys.stdout = buffer = io.StringIO()
+                
+                try:
+                    game.play()
+                finally:
+                    sys.stdout = old_stdout
+            else:
                 game.play()
-            finally:
-                sys.stdout = old_stdout
-        else:
-            game.play()
+            
+            # Save game data to database
+            game_id = save_game_data_to_db(game, i, batch_id, db, player_ids)
+            
+            # Update stats (determine winner from game state)
+            winner = determine_winner(game.state.agents)
+            if winner == "good":
+                stats["good_wins"] += 1
+            elif winner == "evil":
+                stats["evil_wins"] += 1
+            else:
+                stats["unknown"] += 1
+            
+            # Progress indicator
+            if (i + 1) % 10 == 0:
+                print(f"Completed {i+1} games. Current stats: {stats}")
         
-        # Save minimal game data
-        game_data = save_game_data(game, i, batch_id, batch_dir, prompt_config, model_configs)
-        results.append(game_data)
+        print(f"\n{'='*50}")
+        print(f"BATCH COMPLETE: {batch_id}")
+        print(f"{'='*50}")
+        print(f"Total games: {n_games}")
+        print(f"Good wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
+        print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
+        print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
+        print(f"\nResults saved to SQLite database")
+        print(f"Batch ID: {batch_id}")
         
-        # Update stats (determine winner from game state)
-        winner = determine_winner(game.state.agents)
-        if winner == "good":
-            stats["good_wins"] += 1
-        elif winner == "evil":
-            stats["evil_wins"] += 1
-        else:
-            stats["unknown"] += 1
+    finally:
+        # Always close database connection
+        db.close()
         
-        # Progress indicator
-        if (i + 1) % 10 == 0:
-            print(f"Completed {i+1} games. Current stats: {stats}")
-    
-    
-    print(f"\n{'='*50}")
-    print(f"BATCH COMPLETE: {batch_id}")
-    print(f"{'='*50}")
-    print(f"Total games: {n_games}")
-    print(f"Good wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
-    print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
-    print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
-    print(f"\nResults saved to: {batch_dir}")
-    print(f"Use: python analyze_voting.py to analyze results")
-    
     return batch_id
 
 def main():

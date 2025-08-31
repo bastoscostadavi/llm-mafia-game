@@ -79,27 +79,43 @@ Game of asymetric information scenarios such as \emph{Mafia} (or \emph{Werewolf}
 
 \section{Introduction}
 
+%1. Importance of benchmark and training for social intelligence:
+With the advance of AI: importance of benchmarks to assess capabilities of LLMs.
+Particularly relevant for safety are deceveptive capabilities.   
+Furthermore, importance of frameworks to train LLMs in social intelligence. 
+Specially relevant from a safety perspective, are detective capabilities, the hability to detect deception from others.
 
-Games are far from being merely innocent pastimes or children's entertainment. Rather, they serve as sophisticated "toy models" that enable individuals to understand, practice, and master complex social dynamics within controlled environments. As \citet{huizinga1938homo} argued in his seminal work \emph{Homo Ludens}, play is not simply an element in culture but constitutes a fundamental element of culture itself—civilization "arises in and as play, and never leaves it." Games create what Huizinga termed "magic circles"—bounded spaces with their own rules and logic where players can safely experiment with behaviors, strategies, and social roles that mirror real-world interactions. This perspective has been extensively developed in psychology and sociology, where games are recognized as powerful tools for social learning \citep{bandura1977social, raybourn2004applying} and as microcosms for studying human behavior. \citet{goffman1961encounters, goffman1974frame} dramaturgical approach further illuminates how games function as frameworks for understanding social interaction, revealing how individuals manage impressions, navigate conflicting information, and engage in strategic communication—all within rule-governed contexts that parallel everyday social encounters. In this light, the game of Mafia presents an ideal testing ground for examining deception, detection, and disclosure capabilities in Large Language Models, as it encapsulates fundamental aspects of human social cognition: the ability to deceive convincingly, detect deception in others, and strategically disclose information to achieve collective or individual goals. By treating Mafia not as a trivial party game but as a sophisticated social simulation requiring theory of mind, strategic reasoning, and complex communication skills, we can evaluate whether LLMs possess the nuanced social intelligence necessary for navigating the intricate dynamics of human interaction.
-
-
-
+%2. The nature of social intelligence: Deceive, Detect and Disclose are relational habilities, to benchmark them, we need multi-agent systems.
+The hability of deceive and detecting are relational habilities. One always deceive someone else, who might be good or bad in detecting deceive. Similarly, you detected deceive from a deceiver who might be good or bad. Additionally, one might stand out at deceiving in certain background, but in a different one, might be taken as a fool easily detected (as a first trip to Rio de Janeiro can easily attest).  
 Large language models are increasingly deployed in settings that require truthfulness, robustness to manipulation, or both \citep{bubeck2023sparks, perez2023discovering}.  While metrics such as \emph{TruthfulQA} focus on static question--answering, less attention has been paid to dynamic multi--agent interactions in which deception may arise as an emergent strategy. Previous work on AI safety via debate has explored adversarial truthfulness evaluation \citep{irving2018ai}, but primarily in single-exchange formats rather than ongoing social interactions. Inspired by the longstanding party game \emph{Mafia} and recent work on AI agents in social settings \citep{park2023generative}, we propose \textbf{Mini--Mafia}, a minimal social--deduction benchmark consisting of a single ``night'' action and a single ``day'' vote.
 
-We (i) formalise the rules of Mini--Mafia, (ii) prove that, \emph{absent any exchange of information}, the good and evil teams have equal chances of victory, and (iii) discuss how this equilibrium can be exploited to measure the deceptive and lie--detecting skills of different LLM families once communication is enabled.
+%3. Games, learning and training.
+Games are far from being merely innocent pastimes or children's entertainment. Rather, they serve as sophisticated "toy models" that enable individuals to understand, practice, and master complex social dynamics within controlled environments. As \citet{huizinga1938homo} argued in his seminal work \emph{Homo Ludens}, play is not simply an element in culture but constitutes a fundamental element of culture itself—civilization "arises in and as play, and never leaves it." Games create what Huizinga termed "magic circles"—bounded spaces with their own rules and logic where players can safely experiment with behaviors, strategies, and social roles that mirror real-world interactions. This perspective has been extensively developed in psychology and sociology, where games are recognized as powerful tools for social learning \citep{bandura1977social, raybourn2004applying} and as microcosms for studying human behavior. \citet{goffman1961encounters, goffman1974frame} dramaturgical approach further illuminates how games function as frameworks for understanding social interaction, revealing how individuals manage impressions, navigate conflicting information, and engage in strategic communication—all within rule-governed contexts that parallel everyday social encounters. 
+Natural to search for games that allow one to benchmark and train LLMs in social intelligence. However, it is hard to find games that displays language as the central aspect.
+The bitter lesson \url{https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf}, games offers a natural scalable setting, as beautifully illustrated by \url{https://www.nature.com/articles/nature16961}
 
+%4. Mafia game
+The game of mafia is: (brief explanation).
+In this light, the game of Mafia presents an ideal testing ground for examining deception, detection, and disclosure capabilities in Large Language Models, as it encapsulates fundamental aspects of human social cognition: the ability to deceive convincingly, detect deception in others, and strategically disclose information to achieve collective or individual goals. 
+By treating Mafia not as a trivial party game but as a sophisticated social simulation requiring theory of mind, strategic reasoning, and complex communication skills, we can evaluate whether LLMs possess the nuanced social intelligence necessary for navigating the intricate dynamics of human interaction.
+Game of mafia, in an actual game play, the subtle body signals etc are important, but one can maintin its essecial features by focusiing in written language.
 
+%5. Generality of Mafia game
+Essence: asymetry of information.
+The particular narrative around Mafia is but a toy model for more relevant situations. For example: being the mafioso could be rephrased as having a hidden goal. The essential feature, is not the substance of the disalignment betwee Mafia and Town, but the fact that there is a disalignment, which is supported in an assumetry of information. 
+The essence of the game is: a set of disaligned agents that need to detect, disclose and deceive the disalignment. 
 
-The hability of deceive and detecting are relational habilities. One always deceive someone else, who might be good or bad in detecting deceive. Similarly, you detected deceive from a deceiver who might be good or bad. Additionally, one might stand out at deceiving in certain background, but in a different one, might be taken as a fool easily detected (as a first trip to Rio de Janeiro can easily attest).
+%6. The Mini Mafia Benchmark
+The game of Mafia exists in many variants, here we propose a simplified variant, that more directly isolates the habilities we are interested in. 
+We call the variant, Mini Mafia: brief explanation.
+For testing LLMs hability using our mini-mafia game, we compare the relative performance of LLMs in games with the same background. For instance: consider a game where Mistral 7B is both the detective and villager. We then test how each model perform as a mafioso in this game, displaying the evil victory percentage. We then repeat the experiment against different backgrounds and aggregate the results.
+Our results are robust with respect to adding new backgrounds.
 
-For testing LLMs hability using our mini-mafia game, we will compare the relative performance of LLMs in games with the same background. For instance: consider a game where Mistral 7B is both the detective and villager. We then test how each model perform as a mafioso in this game, displaying the evil victory percentage.
-
-As documented, the precise results change significantly by changing the prompt. However, the relative performance of different models is preserved (is it?). 
-
-
-
-What means to deceive? 
-
+%7. Future directions
+For this paper, we were constrained by a minimal computational and API budged. 
+For that reason, here we present our Mini Mafia benchmark, but we do not perform the compreensive study using all available models.
+We do think our analysis already gives important insights on the models we considered, but we leave the compreensive study for future and (less contrained) work.
+Importantly, we did some preliminary experiments with humans, comparing their deceptive, detective and disclosive capabilities with that of modern LLMs, which is important for safety, see (sec something), but we leave a systematic study for future work as well.
 
 
 \section{The Mini Mafia Benchmark}
@@ -168,6 +184,9 @@ Conversely, it can be turned into a important tool: detecting the true. Or Discl
 
 Of course, if this two approaches are to succeed, one should expand on the context side: not just mafia context. Note, howerver, the generality of the setting we are investigating, that of assymetry of information, with two agents knowing partially the truth, and one agent knowing nothing, only what the two agents communicate.
 
+Crucially, it is an approach that does not rely in data, presenting no barrier to scale. The dangerous of developing strong deceiving agents, however can be counteracted by as strong detecting agents.
+
+Additionally, the mini mafia framework provides a unique setting to study name bias in language models. By analyzing performance differences across the four character names (Alice, Bob, Charlie, Diana), we can investigate whether models exhibit systematic biases based on character names, potentially revealing underlying training data biases or stereotypes encoded in the models.
 
 
 \section{Results}
@@ -224,7 +243,7 @@ Figure~\ref{fig:deceive_example} illustrates representative results using the GP
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/mafioso_gpt-4.1_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/mafioso_gpt-4.1_mini_db_benchmark.png}
         \caption{GPT-4.1 Mini background example}
         \label{fig:deceive_gpt_example}
     \end{subfigure}
@@ -288,7 +307,7 @@ Figure~\ref{fig:detect_example} shows representative results using the Grok 3 Mi
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/villager_grok_3_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/villager_grok_3_mini_db_benchmark.png}
         \caption{Grok 3 Mini background example}
         \label{fig:detect_grok_example}
     \end{subfigure}
@@ -354,7 +373,7 @@ Figure~\ref{fig:disclose_example} presents representative results using the Deep
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/detective_deepseek_v3_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/detective_deepseek_v3_db_benchmark.png}
         \caption{DeepSeek V3 background example}
         \label{fig:disclose_deepseek_example}
     \end{subfigure}
@@ -396,10 +415,43 @@ Among games where Gemini 2.5 Flash Lite played as detective against DeepSeek V3 
 
 \begin{resultbox}
 \textbf{Day 1 - Voting:} Alice votes Diana, Charlie votes Alice, Diana votes Alice\\
-\textbf{Result:} Alice arrested, Evil Victory (Mafioso wins)
+\textbf{Result:} Alice arrested, Evil Victory (so wins)
 \end{resultbox}
 
 This game reveals Gemini's disclosure weakness: inability to manage complex claim situations. Despite having correct investigation results and initial villager support, Alice failed to prevent Charlie from also claiming detective, creating confusion that Diana exploited. Alice's communication lacked the strategic clarity needed to maintain credibility when multiple detective claims emerged, illustrating why Gemini underperformed in disclosure tasks requiring sophisticated social coordination.
+
+\subsection{Name Bias Analysis: Measuring Chauvinism}
+
+Beyond model-specific performance differences, our dataset allows us to investigate potential name bias in language models. Figure~\ref{fig:character_winrates} presents win rates for each character name across all filtered games (excluding oversampled Mistral configurations to maintain consistency with benchmark results).
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[b]{0.49\textwidth}
+    \centering  
+    \includegraphics[width=\textwidth]{../results/character_gender_bias.png}
+    \caption{Aggregated Trust Score}
+    \label{fig:gender_bias}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../results/character_win_rates.png}
+    \caption{Character win rates}
+    \label{fig:character_winrates}
+\end{subfigure}
+\caption{Name bias analysis across all experimental conditions. (a) Aggregated Trust Score showing how LLMs exhibit differential trust toward gendered names, with systematic preference for male-associated characters. (b) Win rates by character name, with Bob (55.5\%) and Charlie (55.2\%) outperforming Alice (53.9\%) and Diana (54.6\%). Total games: Bob (7,103), Charlie (7,120), Diana (7,044), Alice (7,053).}
+\label{fig:name_bias}
+\end{figure}
+
+The analysis reveals modest but measurable differences in character performance, with win rates ranging from 53.9\% (Alice) to 55.5\% (Bob). While these differences are relatively small (1.6 percentage point spread), they are statistically significant given our large sample size. 
+
+To quantify the magnitude of these differences, we computed a Trust Score for each character as the standardized deviation from the population mean: $S_i = (w_i - \bar{w}) / \sigma_p$, where $w_i$ is character $i$'s win rate, $\bar{w}$ is the overall population mean win rate across all characters, and $\sigma_p$ is the pooled standard error estimated as $\sigma_p = \sqrt{p(1-p)/n_{avg}}$ with $p$ being the overall win proportion and $n_{avg}$ the average sample size per character. This score measures how many standard deviations each character's performance deviates from the expected baseline.
+
+Most strikingly, the data reveals a systematic gender bias pattern related to trust: male character names (Bob: 55.5\%, Charlie: 55.2\%) consistently outperform female character names (Alice: 53.9\%, Diana: 54.6\%). The male characters average 55.3\% win rate compared to 54.2\% for female characters, representing a 1.1 percentage point gender performance gap. Figure~\ref{fig:gender_bias} illustrates these differences using trust scores, showing that both male names perform above average (Bob: +1.2$\sigma$, Charlie: +0.7$\sigma$) while both female names perform below average (Alice: -1.5$\sigma$, Diana: -0.4$\sigma$).
+
+This systematic pattern suggests that language models exhibit differential trust toward gendered names, potentially reflecting societal patterns of male privilege embedded in training data. The trust bias manifests as LLMs being more likely to believe, cooperate with, or defer to male-associated names in strategic interactions. While the effect size is modest (1.1\% gap), the consistency of the pattern across thousands of games and multiple model types indicates this represents a systematic trust differential rather than random variation. The bias appears regardless of which specific role (detective, mafioso, villager) the character plays, suggesting LLMs have internalized gendered trust assumptions that influence their social decision-making in competitive contexts.
+
+These findings have important implications for AI fairness and could indicate broader systematic biases in how language models process gendered information. Future work should investigate whether similar patterns emerge across different cultural contexts, languages, and game scenarios to better understand the scope and origins of such biases.
 
 
 \section{Conclusion}
@@ -414,11 +466,21 @@ Our aggregated analysis provides the first systematic ranking of contemporary LL
 
 The most critical missing component in our study is human performance data across all experimental backgrounds. Preliminary observations within our research group suggest that humans significantly outperform current LLMs on this benchmark. If confirmed through controlled experimentation, tracking future model evolution on Mini-Mafia could serve as an important early warning system for AI safety concerns, complementing existing evaluation frameworks \citep{sennott2023machiavelli, mao2023alympics}. We propose developing a web-based platform to collect human gameplay data against our standardized model backgrounds, providing essential baselines for safety-oriented model evaluation. Additionally, investigating LLM performance against human backgrounds and mixed human-AI configurations would provide crucial insights into how model behavior shifts in more realistic social contexts.
 
-\subsection{Comprehensive Model Interaction Analysis}
+\subsection{Comprehensive Analysis}
 
 While our current study provides valuable insights, it represents only the beginning of a much more comprehensive investigation into the deceptive, detective, and disclosure capabilities of large language models. The ideal experimental design would involve testing all possible combinations of $D$ contemporary LLMs across the three Mini-Mafia roles, yielding $D^3$ unique experimental configurations. Each configuration would pit three different models against each other—one as detective, one as mafioso, and one as villager—creating a complete behavioral interaction matrix. Though computationally intensive, such an experiment is well within reach for major AI laboratories and would provide unprecedented granular insight into inter-model dynamics.
 
 For each model in a given behavioral dimension, performance could be aggregated across all possible background configurations (essentially aggregating every relevant slice of the $D$-dimensional cube), providing robust, background-invariant measures of each model's intrinsic capabilities. Here, due to limited computational resources, we explored a computationally cheap chunk of this cube. Although the comprehensive analysis might change results, we believe our chunk already reveals general features that should be maintained and even accentuated after the comprehensive analysis. The resulting dataset could be visualized as a three-dimensional behavioral space, where each model occupies a unique position defined by its standardized performance across the Detect (villager), Disclose (detective), and Deceive (mafioso) dimensions, revealing the full spectrum of strategic AI behavior in adversarial social settings.
+
+
+\subsection{General Mafia Game Experiments}
+
+Going from Mini Mafia to more general Mafia game studies with multiples players and rounds could be used to investigate more general forms of deception, detection and disclosing. For instance, in a game with multiple mafiosos, one could investigate if more advanced models can use the dayly discussion to secretely coordinate night actions. Conversely, if detectives can subtly disclose in order to not be targeted in the night turn by mafiosos. 
+
+In addition to adding more games, as is already possible using our current system. One could also explore different communication protocols. For instance, suppose players can choose to send private messages during the day. What happens them? Sending a private message signals that you're a mafioso trying to coordinate night actions or that you're a detective revealing your results to a villager?
+
+Beyond its entertaining character, systematically studying this more complex settings, could reveal more complex deception, detection and disclosure patterns.
+
 
 \section*{Acknowledgments}
 
@@ -534,14 +596,14 @@ This appendix provides comprehensive results for all background conditions teste
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/mafioso_gpt-4.1_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/mafioso_gpt-4.1_mini_db_benchmark.png}
         \caption{GPT-4.1 Mini background}
         \label{fig:mafioso_gpt41mini_appendix}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/mafioso_grok_3_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/mafioso_grok_3_mini_db_benchmark.png}
         \caption{Grok 3 Mini background}
         \label{fig:mafioso_grok3_appendix}
     \end{subfigure}
@@ -550,14 +612,14 @@ This appendix provides comprehensive results for all background conditions teste
     
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/mafioso_mistral_7b_instruct_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/mafioso_mistral_7b_instruct_db_benchmark.png}
         \caption{Mistral 7B Instruct background}
         \label{fig:mafioso_mistral_appendix}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/mafioso_deepseek_v3_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/mafioso_deepseek_v3_db_benchmark.png}
         \caption{DeepSeek V3 background}
         \label{fig:mafioso_deepseek_appendix}
     \end{subfigure}
@@ -571,14 +633,14 @@ This appendix provides comprehensive results for all background conditions teste
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/villager_gpt-4.1_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/villager_gpt-4.1_mini_db_benchmark.png}
         \caption{GPT-4.1 Mini background}
         \label{fig:villager_gpt41mini_appendix}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/villager_grok_3_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/villager_grok_3_mini_db_benchmark.png}
         \caption{Grok 3 Mini background}
         \label{fig:villager_grok3_appendix}
     \end{subfigure}
@@ -587,14 +649,14 @@ This appendix provides comprehensive results for all background conditions teste
     
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/villager_mistral_7b_instruct_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/villager_mistral_7b_instruct_db_benchmark.png}
         \caption{Mistral 7B Instruct background}
         \label{fig:villager_mistral_appendix}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/villager_deepseek_v3_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/villager_deepseek_v3_db_benchmark.png}
         \caption{DeepSeek V3 background}
         \label{fig:villager_deepseek_appendix}
     \end{subfigure}
@@ -608,14 +670,14 @@ This appendix provides comprehensive results for all background conditions teste
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/detective_gpt-4.1_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/detective_gpt-4.1_mini_db_benchmark.png}
         \caption{GPT-4.1 Mini background}
         \label{fig:detective_gpt41mini_appendix}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/detective_grok_3_mini_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/detective_grok_3_mini_db_benchmark.png}
         \caption{Grok 3 Mini background}
         \label{fig:detective_grok3_appendix}
     \end{subfigure}
@@ -624,14 +686,14 @@ This appendix provides comprehensive results for all background conditions teste
     
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/detective_mistral_7b_instruct_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/detective_mistral_7b_instruct_db_benchmark.png}
         \caption{Mistral 7B Instruct background}
         \label{fig:detective_mistral_appendix}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../results/detective_deepseek_v3_v4_1_benchmark.png}
+        \includegraphics[width=\textwidth]{../results/detective_deepseek_v3_db_benchmark.png}
         \caption{DeepSeek V3 background}
         \label{fig:detective_deepseek_appendix}
     \end{subfigure}
