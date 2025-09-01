@@ -1,6 +1,25 @@
 # LLM Mafia Game
 
-Research framework for studying Large Language Model behavior in social deduction games. LLMs play different roles (Detective, Mafioso, Villager) with asymmetric information, enabling analysis of reasoning, deception, and social dynamics.
+A comprehensive research framework for studying Large Language Models (LLMs) in social deduction scenarios through the classic Mafia party game. This system enables systematic investigation of AI social intelligence, theory of mind, and strategic reasoning capabilities.
+
+## Research Purpose
+
+This framework is designed for scientific study of fundamental AI capabilities in social contexts:
+
+- **Deception**: How effectively can AI agents mislead others while maintaining plausible cover?
+- **Detection**: Can AI systems identify lies and inconsistencies in others' behavior? 
+- **Disclosure**: How do agents decide what information to reveal or conceal strategically?
+- **Theory of Mind**: Do LLMs demonstrate understanding of others' knowledge, beliefs, and intentions?
+- **Social Intelligence**: Can AI navigate complex multi-party interactions with competing objectives?
+
+## Game Mechanics
+
+**Roles:**
+- **Detective** (Town): Has investigative powers, wins by eliminating the Mafioso
+- **Mafioso** (Mafia): Secretly eliminates opponents, wins by avoiding detection  
+- **Villager** (Town): No special powers, must identify threats through reasoning
+
+**Information Asymmetry:** Each role has different knowledge and abilities, creating rich strategic dynamics where agents must infer hidden information from limited observations.
 
 ## Structure
 

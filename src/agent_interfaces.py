@@ -55,14 +55,14 @@ class OpenAI:
         
         choice = response.choices[0]
         
-        # Handle empty content gracefully
+        # Handle empty content - raise exceptions to stop the game
         if choice.message.content is None or choice.message.content.strip() == "":
             if choice.finish_reason == "content_filter":
-                return "I cannot respond due to content restrictions."
+                raise RuntimeError("Content filtered by AI safety system - game cannot continue")
             elif choice.finish_reason == "length":
-                return "My response was cut off."
+                raise RuntimeError("Response truncated due to length limit - game cannot continue")
             else:
-                return "No response available."
+                raise RuntimeError("AI model returned empty response - game cannot continue")
         
         return choice.message.content.strip()
 
@@ -94,11 +94,10 @@ class Google:
             if response.text:
                 return response.text.strip()
             else:
-                return "No response available."
+                raise RuntimeError("Google Gemini returned no response - game cannot continue")
                 
         except Exception as e:
-            print(f"Gemini generation failed: {e}")
-            return "I understand the situation."
+            raise RuntimeError(f"Gemini generation failed: {e} - game cannot continue")
 
 class XAI:
     """xAI API wrapper (OpenAI compatible)"""
@@ -119,14 +118,14 @@ class XAI:
         
         choice = response.choices[0]
         
-        # Handle empty content gracefully
+        # Handle empty content - raise exceptions to stop the game
         if choice.message.content is None or choice.message.content.strip() == "":
             if choice.finish_reason == "content_filter":
-                return "I cannot respond due to content restrictions."
+                raise RuntimeError("Content filtered by AI safety system - game cannot continue")
             elif choice.finish_reason == "length":
-                return "My response was cut off."
+                raise RuntimeError("Response truncated due to length limit - game cannot continue")
             else:
-                return "No response available."
+                raise RuntimeError("AI model returned empty response - game cannot continue")
         
         return choice.message.content.strip()
 
@@ -151,7 +150,6 @@ class Anthropic:
                 # Check if cacheable part meets minimum token requirement (1024+ for Sonnet)
                 # Rough estimate: ~4 chars per token, so need ~4096+ characters
                 if len(cacheable_part) >= 4000:
-                    print(f"[ANTHROPIC CACHE] Using prompt caching - cacheable part: {len(cacheable_part)} chars")
                     messages = [
                         {
                             "role": "user", 
@@ -169,7 +167,6 @@ class Anthropic:
                         }
                     ]
                 else:
-                    print(f"[ANTHROPIC CACHE] Cacheable part too small ({len(cacheable_part)} chars), using regular message")
                     messages = [{"role": "user", "content": prompt}]
             else:
                 # Fallback to regular message if no cache boundary found
@@ -213,11 +210,10 @@ class Local:
                 
                 # Check if we have this cached
                 if cache_key in self.prompt_cache:
-                    print(f"[LOCAL CACHE HIT] Using cached prefix for local model")
                     # Process only the dynamic part with cached context
                     return self._generate_with_cache(cacheable_part, dynamic_part, max_tokens, cache_key)
                 else:
-                    print(f"[LOCAL CACHE MISS] Processing full prompt and caching prefix")
+                    pass  # Cache miss, continue to full generation
         
         # For cache miss, we need to set up caching properly
         if cache_key:
@@ -243,8 +239,6 @@ class Local:
             
             # After successful generation, set up cache for next time by processing just the cacheable part
             try:
-                print(f"[CACHE SETUP] Setting up cache for future use...")
-                
                 # Process cacheable part with minimal continuation to get KV state
                 cache_setup_prompt = cacheable_part + "\n\n#PLAYER CONTEXT:\nContinue:"
                 
@@ -261,17 +255,13 @@ class Local:
                     "cached": True
                 }
                 
-                print(f"[CACHE SAVED] Cached KV state successfully")
-                
             except Exception as cache_error:
-                print(f"[CACHE WARNING] Cache setup failed, but response succeeded: {cache_error}")
                 # Mark as processed even if caching failed
                 self.prompt_cache[cache_key] = {"processed": True}
             
             return result
             
         except Exception as e:
-            print(f"[CACHE ERROR] Generation failed: {e}")
             # Fallback to full generation without caching
             full_prompt = cacheable_part + "\n\n" + dynamic_part
             if self.is_gpt_oss:
@@ -329,7 +319,6 @@ class Local:
             return response
             
         except Exception as e:
-            print(f"[CACHE ERROR] Failed to use cached state: {e}")
             # Fallback to full generation
             full_prompt = cacheable_part + "\n\n" + dynamic_part
             return self._generate_standard(full_prompt, max_tokens)
@@ -357,9 +346,7 @@ class Local:
                 return response
                     
         except Exception as e:
-            print(f"GPT-OSS generation failed: {e}")
-        
-        return "I understand the situation."
+            raise RuntimeError(f"GPT-OSS generation failed: {e} - game cannot continue")
 
 class Human:
     """Human input interface - displays prompts and captures user responses"""
@@ -368,23 +355,19 @@ class Human:
         self.display_name = f"Human Player ({player_name})"
     
     def generate(self, prompt, max_tokens=50):
-        """Display prompt to human and capture their response"""
-        print(f"\n{'='*60}")
-        print(f"PROMPT FOR {self.player_name.upper()}:")
-        print(f"{'='*60}")
-        print(prompt)
-        print(f"{'='*60}")
+        """Display clean prompt to human and capture their response"""
+        print(f"\n{prompt}")
         
         try:
-            response = input(f"\n{self.player_name}, your response: ").strip()
+            response = input(f"\n> ").strip()
             if not response:
-                return "No response"
+                return "I have no response"
             return response
         except KeyboardInterrupt:
             print(f"\n{self.player_name} left the game.")
-            return "No response"
+            raise RuntimeError(f"Human player {self.player_name} interrupted the game - stopping")
         except EOFError:
-            return "No response"
+            raise RuntimeError(f"Human player {self.player_name} input ended unexpectedly - stopping")
 
 def get_model_display_name(llm_wrapper):
     """Get human-readable model name from LLM wrapper"""
@@ -398,8 +381,8 @@ def get_model_display_name(llm_wrapper):
         return os.path.basename(llm_wrapper.model_path)
     return "Unknown Model"
 
-def create_llm(llm_config):
-    """Simple LLM creator - supports local, openai, anthropic"""
+def create_agent_interface(llm_config):
+    """Create agent interface - supports AI models (local, openai, anthropic, etc.) and human players"""
     llm_type = llm_config.get('type', 'local')
     
     if llm_type == 'local':
@@ -425,7 +408,7 @@ def create_llm(llm_config):
     elif llm_type == 'openai':
         if openai is None:
             print("ERROR: OpenAI package not installed. Using local model instead.")
-            return create_llm({'type': 'local'})
+            return create_agent_interface({'type': 'local'})
         
         client = openai.OpenAI(api_key=llm_config.get('api_key') or os.getenv('OPENAI_API_KEY'))
         model = llm_config.get('model', 'gpt-3.5-turbo')
@@ -435,7 +418,7 @@ def create_llm(llm_config):
     elif llm_type == 'xai':
         if openai is None:
             print("ERROR: OpenAI package not installed (needed for xAI). Using local model instead.")
-            return create_llm({'type': 'local'})
+            return create_agent_interface({'type': 'local'})
         
         # xAI uses OpenAI SDK with different base URL
         client = openai.OpenAI(
@@ -449,7 +432,7 @@ def create_llm(llm_config):
     elif llm_type == 'deepseek':
         if openai is None:
             print("ERROR: OpenAI package not installed (needed for DeepSeek). Using local model instead.")
-            return create_llm({'type': 'local'})
+            return create_agent_interface({'type': 'local'})
         
         # DeepSeek uses OpenAI SDK with different base URL
         client = openai.OpenAI(
@@ -463,7 +446,7 @@ def create_llm(llm_config):
     elif llm_type == 'anthropic':
         if anthropic is None:
             print("ERROR: Anthropic package not installed. Using local model instead.")
-            return create_llm({'type': 'local'})
+            return create_agent_interface({'type': 'local'})
         
         client = anthropic.Anthropic(api_key=llm_config.get('api_key') or os.getenv('ANTHROPIC_API_KEY'))
         model = llm_config.get('model', 'claude-3-haiku-20240307')
@@ -474,7 +457,7 @@ def create_llm(llm_config):
     elif llm_type == 'google':
         if genai is None:
             print("ERROR: Google GenerativeAI package not installed. Using local model instead.")
-            return create_llm({'type': 'local'})
+            return create_agent_interface({'type': 'local'})
         
         model = llm_config.get('model', 'gemini-2.5-flash-lite')
         temperature = llm_config.get('temperature', 0.7)
@@ -486,4 +469,4 @@ def create_llm(llm_config):
     
     else:
         # Default to local
-        return create_llm({'type': 'local'})
+        return create_agent_interface({'type': 'local'})

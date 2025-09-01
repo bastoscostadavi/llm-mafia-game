@@ -15,7 +15,6 @@ import random
 sys.path.append('../..')
 
 from src.main import create_game
-# Prompt configuration now handled by prompt.txt file
 
 def single_day_play(game):
     """Single day phase play function for mini-mafia"""

@@ -104,7 +104,6 @@ def save_game_data_to_db(game, game_num, batch_id, db, player_ids):
 
 def convert_game_sequence_to_events(game_sequence, agents):
     """Convert the game's action log into database events"""
-    import json
     
     events = []
     sequence_num = 1
@@ -294,8 +293,8 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
         print(f"BATCH COMPLETE: {batch_id}")
         print(f"{'='*50}")
         print(f"Total games: {n_games}")
-        print(f"Good wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
-        print(f"Evil wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
+        print(f"Town wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
+        print(f"Mafia wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
         print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
         print(f"\nResults saved to SQLite database")
         print(f"Batch ID: {batch_id}")
@@ -314,11 +313,9 @@ def main():
     parser.add_argument('--debug', action='store_true', help='Show LLM prompts')
     parser.add_argument('--debug-responses', action='store_true', help='Show raw model responses when parsing fails')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
-# Prompt version argument removed - now using single prompt.txt file
     parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
     
     args = parser.parse_args()
-    # Prompt configuration now handled by prompt.txt file
     
     print("Mini-Mafia Batch Runner")
     print("="*40)
