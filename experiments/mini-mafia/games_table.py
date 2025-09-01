@@ -92,10 +92,10 @@ def analyze_experiment_design(db_path='database/mini_mafia.db'):
                 experiment_key = f"Detect_{background}"
                 experiment_data[varying_model][experiment_key] += 1
             
-            # Disclose experiments (Villager varying, Mafioso==Detective background)
-            if mafioso_model == detective_model:
+            # Disclose experiments (Detective varying, Mafioso==Villager background)
+            if mafioso_model == villager_model:
                 background = mafioso_model
-                varying_model = villager_model
+                varying_model = detective_model
                 experiment_key = f"Disclose_{background}"
                 experiment_data[varying_model][experiment_key] += 1
         
