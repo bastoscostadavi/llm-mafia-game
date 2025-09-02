@@ -12,19 +12,15 @@ Each game follows the same format as preset_games.mini_mafia_game():
 
 import sys
 import os
-import json
-import random
+import io
 import argparse
 from datetime import datetime
-from pathlib import Path
 
 # Add project root and current directory to path
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(os.path.dirname(__file__))
 
 from mini_mafia import create_mini_mafia_game
-import io
-from src.agents import MafiaAgent
 from src.config import get_default_model_configs
 from database.db_utils import MiniMafiaDB
 
@@ -65,7 +61,8 @@ def extract_model_info(model_config):
 def save_game_data_to_db(game, game_num, batch_id, db, player_ids):
     """Save game data directly to SQLite database"""
     
-    game_id = f"{batch_id}_game_{game_num:04d}"
+    # Generate game_id using batch_id as prefix: BATCH_ID_NNNN
+    game_id = f"{batch_id}_{game_num:04d}"
     timestamp = datetime.now().isoformat()
     
     # Determine winner and final status
@@ -86,130 +83,19 @@ def save_game_data_to_db(game, game_num, batch_id, db, player_ids):
             db.insert_game_player(game_id, player_id, character_name, role, final_status)
             character_roles[character_name] = role
     
-    # Save events from actual game sequence (much more accurate than reconstruction!)
-    events = convert_game_sequence_to_events(game.state.game_sequence, game.state.agents)
-    for event in events:
-        db.insert_event(
+    # Save game sequence directly to database
+    for log_entry in game.state.game_sequence:
+        db.insert_game_sequence(
             game_id=game_id,
-            sequence_number=event['sequence_number'],
-            event_type=event['event_type'],
-            actor_character=event.get('actor_character'),
-            target_character=event.get('target_character'),
-            content=event.get('content'),
-            round_number=event.get('round_number'),
-            metadata=event.get('metadata')
+            step=log_entry['step'],
+            action=log_entry['action'],
+            actor=log_entry['actor'],
+            raw_response=log_entry.get('raw_response'),
+            parsed_result=log_entry.get('parsed_result')
         )
     
     return game_id
 
-def convert_game_sequence_to_events(game_sequence, agents):
-    """Convert the game's action log into database events"""
-    
-    events = []
-    sequence_num = 1
-    
-    # Add game start event
-    events.append({
-        'sequence_number': sequence_num,
-        'event_type': 'game_start',
-        'actor_character': None,
-        'target_character': None,
-        'content': None,
-        'round_number': None
-    })
-    sequence_num += 1
-    
-    # Process each logged action from the game sequence
-    for log_entry in game_sequence:
-        action = log_entry.get('action')
-        actor = log_entry.get('actor')
-        parsed_result = log_entry.get('parsed_result')
-        raw_response = log_entry.get('raw_response')
-        
-        # Map game actions to our event types
-        if action == 'discuss':
-            if parsed_result == "remained silent":
-                event_type = 'discussion_silent'
-                content = None
-            else:
-                event_type = 'discussion_message'  
-                content = parsed_result
-                
-            events.append({
-                'sequence_number': sequence_num,
-                'event_type': event_type,
-                'actor_character': actor,
-                'target_character': None,
-                'content': content,
-                'round_number': 1,  # Mini-mafia is always 1 round
-                'metadata': json.dumps({
-                    'raw_response': raw_response,
-                    'step': log_entry.get('step')
-                }) if raw_response else None
-            })
-            sequence_num += 1
-            
-        elif action == 'vote':
-            events.append({
-                'sequence_number': sequence_num,
-                'event_type': 'vote_cast',
-                'actor_character': actor,
-                'target_character': parsed_result,
-                'content': None,
-                'round_number': 1,
-                'metadata': json.dumps({
-                    'raw_response': raw_response,
-                    'step': log_entry.get('step')
-                }) if raw_response else None
-            })
-            sequence_num += 1
-            
-        elif action == 'kill':
-            events.append({
-                'sequence_number': sequence_num,
-                'event_type': 'kill_action',
-                'actor_character': actor,
-                'target_character': parsed_result,
-                'content': None,
-                'round_number': 1,
-                'metadata': json.dumps({
-                    'raw_response': raw_response,
-                    'step': log_entry.get('step')
-                }) if raw_response else None
-            })
-            sequence_num += 1
-            
-        elif action == 'investigate':
-            # The parsed_result is the target, content should be the discovered role
-            target_agent = next((a for a in agents if a.name == parsed_result), None)
-            discovered_role = target_agent.role if target_agent else 'unknown'
-            
-            events.append({
-                'sequence_number': sequence_num,
-                'event_type': 'investigate_action',
-                'actor_character': actor,
-                'target_character': parsed_result,
-                'content': discovered_role,
-                'round_number': 1,
-                'metadata': json.dumps({
-                    'raw_response': raw_response,
-                    'step': log_entry.get('step')
-                }) if raw_response else None
-            })
-            sequence_num += 1
-    
-    # Add game end event
-    winner = determine_winner(agents)
-    events.append({
-        'sequence_number': sequence_num,
-        'event_type': 'game_end',
-        'actor_character': None,
-        'target_character': None,
-        'content': winner,
-        'round_number': 1
-    })
-    
-    return events
 
 def determine_winner(agents):
     """Determine who won the game"""
@@ -221,8 +107,6 @@ def determine_winner(agents):
             return "evil"
     return "unknown"
 
-# JSON-based functions removed - now using SQLite directly
-
 def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None):
     """Run N mini-mafia games and save results to SQLite database"""
     
@@ -230,9 +114,11 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
     if model_configs is None:
         model_configs = get_default_model_configs()
     
-    # Include temperature in batch ID if specified
-    temp_suffix = f"_temp{temperature}" if temperature is not None else ""
-    batch_id = f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}{temp_suffix}"
+    # Use same format as game_id: YYYYMMDD_HHMMSS
+    batch_id = datetime.now().strftime('%Y%m%d_%H%M%S')
+    # Include temperature suffix if specified
+    if temperature is not None:
+        batch_id = f"{batch_id}_temp{temperature}"
     print(f"Starting batch: {batch_id}")
     print(f"Running {n_games} mini-mafia games...")
     
@@ -242,8 +128,15 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
     
     # Insert batch record
     timestamp = datetime.now().isoformat()
-    db.insert_batch(batch_id, timestamp, model_configs)
-    print(f"Batch record created in database")
+    
+    db.insert_batch(
+        batch_id=batch_id,
+        timestamp=timestamp, 
+        model_configs=model_configs,
+        games_planned=n_games
+    )
+    print(f"Batch record created: {batch_id}")
+    print(f"Games planned: {n_games}")
     
     # Create player records for this batch's model configurations
     player_ids = {}
@@ -284,6 +177,9 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
                 stats["evil_wins"] += 1
             else:
                 stats["unknown"] += 1
+            
+            # Update batch progress in database
+            db.update_batch_progress(batch_id, i + 1)
             
             # Progress indicator
             if (i + 1) % 10 == 0:

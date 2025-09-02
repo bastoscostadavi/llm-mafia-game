@@ -99,6 +99,14 @@ def create_mini_mafia_game(model_configs=None, debug_prompts=False):
     for agent in alive_agents:
         agent.remember(f"Night 1 begins.")
     
+    # LOG NIGHT ACTIONS TO GAME SEQUENCE
+    
+    # 1. Log the kill action
+    game.state.log_action('kill', mafioso.name, None, victim.name)
+    
+    # 2. Log the investigate action  
+    game.state.log_action('investigate', detective.name, None, mafioso.name)
+    
     # Mafioso knows who they killed
     mafioso.remember(f"You killed {victim.name}.")
     

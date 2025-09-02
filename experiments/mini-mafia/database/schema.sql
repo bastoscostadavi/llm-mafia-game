@@ -13,13 +13,25 @@ CREATE TABLE players (
     UNIQUE(player_type, model_name, model_provider, temperature)
 );
 
+-- Batch/Session tracking
+CREATE TABLE batches (
+    batch_id TEXT PRIMARY KEY,
+    timestamp DATETIME NOT NULL,
+    model_configs TEXT, -- JSON string of model configurations
+    games_planned INTEGER,
+    games_completed INTEGER DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Individual games metadata
 CREATE TABLE games (
-    game_id TEXT PRIMARY KEY, -- Format: YYYYMMDD_HHMMSS_NNNN (e.g., 20250821_111911_0001)
+    game_id TEXT PRIMARY KEY, -- Format: BATCH_ID_NNNN (e.g., 20250821_111911_0001)
     timestamp DATETIME NOT NULL,
     winner TEXT CHECK(winner IN ('town', 'mafia')),
     was_tie BOOLEAN DEFAULT FALSE, -- True if all 3 active players received votes (tie situation)
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    batch_id TEXT, -- Links to batches table for experiment organization
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (batch_id) REFERENCES batches(batch_id)
 );
 
 -- Game sequence - stores actions directly from game_sequence
@@ -64,9 +76,11 @@ CREATE TABLE game_players (
 );
 
 -- Performance indexes for common query patterns
+CREATE INDEX idx_batches_timestamp ON batches(timestamp);
 CREATE INDEX idx_games_winner ON games(winner);
 CREATE INDEX idx_games_timestamp ON games(timestamp);
 CREATE INDEX idx_games_was_tie ON games(was_tie);
+CREATE INDEX idx_games_batch ON games(batch_id);
 CREATE INDEX idx_game_sequence_game ON game_sequence(game_id);
 CREATE INDEX idx_game_sequence_action ON game_sequence(action);
 CREATE INDEX idx_game_sequence_actor ON game_sequence(actor);

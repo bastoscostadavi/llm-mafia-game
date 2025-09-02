@@ -26,11 +26,47 @@ class MiniMafiaDB:
             self.conn.close()
             self.conn = None
     
-    def insert_batch(self, batch_id, timestamp, model_configs):
-        """Insert a batch record - simplified for mini-mafia."""
-        # For mini-mafia, we don't have a separate batches table
-        # This is just for compatibility with the existing code
-        pass
+    def insert_batch(self, batch_id, timestamp, model_configs, games_planned=None):
+        """Insert a batch record."""
+        cursor = self.conn.cursor()
+        
+        # Convert model_configs to JSON string
+        model_configs_json = json.dumps(model_configs) if model_configs else None
+        
+        cursor.execute("""
+            INSERT INTO batches (batch_id, timestamp, model_configs, games_planned)
+            VALUES (?, ?, ?, ?)
+        """, (batch_id, timestamp, model_configs_json, games_planned))
+        
+        self.conn.commit()
+    
+    def update_batch_progress(self, batch_id, games_completed):
+        """Update the number of completed games in a batch."""
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            UPDATE batches SET games_completed = ? WHERE batch_id = ?
+        """, (games_completed, batch_id))
+        self.conn.commit()
+    
+    def get_batch_info(self, batch_id):
+        """Get batch information."""
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            SELECT batch_id, timestamp, games_planned, games_completed, model_configs
+            FROM batches WHERE batch_id = ?
+        """, (batch_id,))
+        return cursor.fetchone()
+    
+    def list_batches(self, limit=10):
+        """List recent batches."""
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            SELECT batch_id, timestamp, games_planned, games_completed
+            FROM batches 
+            ORDER BY timestamp DESC 
+            LIMIT ?
+        """, (limit,))
+        return cursor.fetchall()
     
     def get_or_create_player(self, player_type, model_name, model_provider, temperature):
         """Get or create a player record and return the player_id."""
@@ -63,9 +99,9 @@ class MiniMafiaDB:
         winner_mapped = "town" if winner == "good" else "mafia" if winner == "evil" else None
         
         cursor.execute("""
-            INSERT OR REPLACE INTO games (game_id, timestamp, winner)
-            VALUES (?, ?, ?)
-        """, (game_id, timestamp, winner_mapped))
+            INSERT OR REPLACE INTO games (game_id, timestamp, winner, batch_id)
+            VALUES (?, ?, ?, ?)
+        """, (game_id, timestamp, winner_mapped, batch_id))
         
         self.conn.commit()
     
@@ -80,6 +116,17 @@ class MiniMafiaDB:
         
         self.conn.commit()
     
+    def insert_game_sequence(self, game_id, step, action, actor, raw_response=None, parsed_result=None):
+        """Insert a game sequence action directly."""
+        cursor = self.conn.cursor()
+        
+        cursor.execute("""
+            INSERT INTO game_sequence (game_id, step, action, actor, raw_response, parsed_result)
+            VALUES (?, ?, ?, ?, ?, ?)
+        """, (game_id, step, action, actor, raw_response, parsed_result))
+        
+        self.conn.commit()
+    
     def insert_event(self, game_id, sequence_number, event_type, actor_character, 
                     target_character=None, content=None, round_number=None, metadata=None):
         """Insert an event/action record."""
@@ -91,14 +138,16 @@ class MiniMafiaDB:
             'discussion_silent': 'discuss',
             'vote_cast': 'vote',
             'kill_action': 'kill',
-            'investigate_action': 'investigate',
-            'game_start': 'discuss',  # Map to discuss as a placeholder
-            'game_end': 'discuss'     # Map to discuss as a placeholder
+            'investigate_action': 'investigate'
         }
         
         action = action_map.get(event_type, event_type)
         if action not in ['discuss', 'vote', 'kill', 'investigate']:
             return  # Skip unsupported event types
+        
+        # Handle NULL actor for system events
+        if actor_character is None:
+            actor_character = 'SYSTEM'
         
         # Parse metadata if it's a JSON string
         raw_response = None

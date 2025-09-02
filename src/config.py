@@ -37,9 +37,9 @@ The prompt system now uses a single prompt.txt file for consistency.
 # EX: 'mafioso': {'type': 'google', 'model': 'gemini-2.0-flash-exp', 'temperature': 0.7},
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'xai','model': 'grok-3-mini', 'temperature': 0.7},
-    'mafioso': {'type': 'anthropic','model': 'claude-sonnet-4-20250514', 'temperature': 0.7},
-    'villager': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7}
+    'detective': {'type': 'openai','model': 'gpt-4o-mini', 'temperature': 0.7},
+    'mafioso': {'type': 'deepseek','model': 'deepseek-chat', 'temperature': 0.7},
+    'villager': {'type': 'openai', 'model': 'gpt-4o-mini', 'temperature': 0.7}
 }
 
 # GAME SETTINGS
