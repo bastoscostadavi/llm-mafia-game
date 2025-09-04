@@ -50,8 +50,9 @@ def extract_model_info(model_config):
         model = model_config.get('model', 'unknown')
         return 'llm', model, 'google', temperature
     elif model_type == 'local':
-        model_path = model_config.get('model_path', '')
-        model_name = os.path.basename(model_path) if model_path else 'unknown'
+        model_name = model_config.get('model')
+        if not model_name:
+            raise ValueError(f"Local model config missing 'model' field: {model_config}")
         return 'llm', model_name, 'local', temperature
     else:
         # Fallback

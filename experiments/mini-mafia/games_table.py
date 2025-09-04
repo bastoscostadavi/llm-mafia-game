@@ -29,11 +29,11 @@ def get_display_name(model_name):
         'claude-3-5-haiku-latest': 'Claude 3.5 Haiku',
         'claude-sonnet-4-20250514': 'Claude Sonnet 4',
         'claude-opus-4-1-20250805': 'Claude Opus 4.1',
-        'deepseek-chat': 'DeepSeek V3',
+        'deepseek-chat': 'DeepSeek V3.1',
         'deepseek-reasoner': 'DeepSeek R1',
         'gemini-2.5-flash-lite': 'Gemini 2.5 Flash Lite',
         'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf': 'Mistral 7B Instruct',
-        'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Meta Llama 3.1 8B',
+        'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama 3.1 8B',
         'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5 7B Instruct',
     }
     
@@ -86,15 +86,15 @@ def analyze_experiment_design(db_path='database/mini_mafia.db'):
                 experiment_data[varying_model][experiment_key] += 1
             
             # Detect experiments (Detective varying, Mafioso==Villager background)  
-            if mafioso_model == villager_model:
+            if mafioso_model == detective_model:
                 background = mafioso_model
-                varying_model = detective_model
+                varying_model = villager_model
                 experiment_key = f"Detect_{background}"
                 experiment_data[varying_model][experiment_key] += 1
             
-            # Disclose experiments (Detective varying, Mafioso==Villager background)
-            if mafioso_model == villager_model:
-                background = mafioso_model
+            # Disclose experiments (Villager varying, Detective==Mafioso background)
+            if villager_model == mafioso_model:
+                background = villager_model
                 varying_model = detective_model
                 experiment_key = f"Disclose_{background}"
                 experiment_data[varying_model][experiment_key] += 1
@@ -109,13 +109,13 @@ def create_experiment_design_table(experiment_data, output_file='experiment_desi
     
     # Define the allowed models and backgrounds
     allowed_models = [
-        'DeepSeek V3', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
-        'Grok 3 Mini', 'GPT-4.1 Mini', 'Mistral 7B Instruct', 
-        'Qwen2.5 7B Instruct', 'Meta Llama 3.1 8B'
+        'DeepSeek V3.1', 'DeepSeek R1', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
+        'Grok 3 Mini', 'GPT-4.1 Mini', 'GPT-5', 'GPT-5 Mini', 'Mistral 7B Instruct', 
+        'Qwen2.5 7B Instruct', 'Llama 3.1 8B'
     ]
     
     allowed_backgrounds = [
-        'Mistral 7B Instruct', 'GPT-4.1 Mini', 'Grok 3 Mini', 'DeepSeek V3'
+        'Mistral 7B Instruct', 'GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'DeepSeek V3.1'
     ]
     
     # Create column structure: Experiment_Background
@@ -170,7 +170,7 @@ def print_experiment_summary(df):
     # Print column headers with better formatting
     print(f"{'Model':<20}", end='')
     
-    backgrounds = ['Mistral 7B Instruct', 'GPT-4.1 Mini', 'Grok 3 Mini', 'DeepSeek V3']
+    backgrounds = ['Mistral 7B Instruct', 'GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'DeepSeek V3.1']
     
     # Print experiment headers
     for experiment in ['Deceive', 'Detect', 'Disclose']:
@@ -181,7 +181,7 @@ def print_experiment_summary(df):
     print(f"{'':<20}", end='')
     for experiment in ['Deceive', 'Detect', 'Disclose']:
         for i, bg in enumerate(backgrounds):
-            bg_short = bg.replace(' 7B Instruct', '').replace(' 3 Mini', '').replace('GPT-4.1 Mini', 'GPT-4.1').replace('DeepSeek V3', 'DeepSeek')
+            bg_short = bg.replace(' 7B Instruct', '').replace(' 3 Mini', '').replace('GPT-4.1 Mini', 'GPT-4.1').replace('GPT-5 Mini', 'GPT-5').replace('DeepSeek V3.1', 'DeepSeek')
             print(f" {bg_short:>9}", end='')
         print(" |", end='')
     print(f" {'Dec Det Dis Tot':>15}")
@@ -190,7 +190,7 @@ def print_experiment_summary(df):
     
     # Print data rows
     for _, row in df.iterrows():
-        model_short = row['Model'].replace(' 7B Instruct', '').replace(' 3 Mini', '').replace('GPT-4.1 Mini', 'GPT-4.1').replace('DeepSeek V3', 'DeepSeek')
+        model_short = row['Model'].replace(' 7B Instruct', '').replace(' 3 Mini', '').replace('GPT-4.1 Mini', 'GPT-4.1').replace('GPT-5 Mini', 'GPT-5').replace('DeepSeek V3.1', 'DeepSeek').replace('DeepSeek R1', 'DSR1')
         print(f"{model_short:<20}", end='')
         
         # Print experiment data

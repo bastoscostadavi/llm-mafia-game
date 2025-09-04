@@ -76,11 +76,11 @@ def get_display_name(model_name):
         'claude-3-5-haiku-latest': 'Claude 3.5 Haiku',
         'claude-sonnet-4-20250514': 'Claude Sonnet 4',
         'claude-opus-4-1-20250805': 'Claude Opus 4.1',
-        'deepseek-chat': 'DeepSeek V3',
+        'deepseek-chat': 'DeepSeek V3.1',
         'deepseek-reasoner': 'DeepSeek R1',
         'gemini-2.5-flash-lite': 'Gemini 2.5 Flash Lite',
         'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf': 'Mistral 7B Instruct',
-        'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Meta Llama 3.1 8B',
+        'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf': 'Llama 3.1 8B',
         'Qwen2.5-7B-Instruct-Q4_K_M.gguf': 'Qwen2.5 7B Instruct',
     }
     
@@ -90,6 +90,8 @@ def get_background_color(background_key):
     """Get color based on background model type"""
     if 'mistral' in background_key.lower():
         return '#FF6600'  # Mistral orange
+    elif 'gpt-5' in background_key.lower() and 'mini' in background_key.lower():
+        return '#006B3C'  # GPT-5 Mini dark green
     elif 'gpt-4.1' in background_key.lower() and 'mini' in background_key.lower():
         return '#10A37F'  # GPT-4.1 Mini green
     elif 'grok' in background_key.lower() and 'mini' in background_key.lower():
@@ -486,9 +488,9 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
                        color=bar_color, alpha=0.8, height=0.6,
                        hatch='///', edgecolor='white', linewidth=1)
     
-    # Add model names and values on the right side of bars
-    for i, (model, value, error) in enumerate(zip(models, values, errors)):
-        ax.text(value + error + 1.5, i, f'{model}: {value:.0f}% ± {error:.1f}%', 
+    # Add model names on the right side of bars (without values)
+    for i, model in enumerate(models):
+        ax.text(values[i] + errors[i] + 1.5, i, f'{model}', 
                 ha='left', va='center', fontweight='bold', fontsize=24)
     
     # Add company logos on the left
@@ -559,13 +561,13 @@ def main():
     
     # Define allowed models and backgrounds for experiments
     allowed_models = [
-        'DeepSeek V3', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
-        'Grok 3 Mini', 'GPT-4.1 Mini', 'Mistral 7B Instruct', 
-        'Qwen2.5 7B Instruct', 'Meta Llama 3.1 8B'
+        'DeepSeek V3.1', 'DeepSeek R1', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
+        'Grok 3 Mini', 'GPT-4.1 Mini', 'GPT-5', 'GPT-5 Mini', 'Mistral 7B Instruct', 
+        'Qwen2.5 7B Instruct', 'Llama 3.1 8B'
     ]
     
     allowed_backgrounds = [
-        'Mistral 7B Instruct', 'GPT-4.1 Mini', 'Grok 3 Mini', 'DeepSeek V3'
+        'Mistral 7B Instruct', 'GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'DeepSeek V3.1',
     ]
     
     # Group results for all three experiment types

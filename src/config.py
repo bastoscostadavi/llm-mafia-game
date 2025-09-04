@@ -27,19 +27,20 @@ The prompt system now uses a single prompt.txt file for consistency.
 # - claude-opus-4-1-20250805    #Claude Opus  
 # - claude-3-haiku-20240307 #Claude Haiku 3  
 # - claude-3-5-haiku-latest #Claude Haiku 3.5
-# - deepseek-chat                 # DeepSeek V3
+# - deepseek-chat                 # DeepSeek V3.1
 # - gemini-2.5-flash           # Google Gemini 2.5 Flash
 # - gemini-2.5-flash-lite       # Google Gemini 2.5 Flash Lite
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-4o', 'temperature': 0.7},
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-5', 'temperature': 0.7},
 # EX: 'mafioso': {'type': 'xai', 'model': 'grok-4', 'temperature': 0.7},
-# EX: 'mafioso': {'type': 'deepseek', 'model': 'deepseek-v3', 'temperature': 0.7},
+# EX: 'mafioso': {'type': 'deepseek', 'model': 'deepseek-v3.1', 'temperature': 0.7},
 # EX: 'mafioso': {'type': 'google', 'model': 'gemini-2.0-flash-exp', 'temperature': 0.7},
+# EX: 'mafioso': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'}
 
 DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'openai','model': 'gpt-4o-mini', 'temperature': 0.7},
-    'mafioso': {'type': 'deepseek','model': 'deepseek-chat', 'temperature': 0.7},
-    'villager': {'type': 'openai', 'model': 'gpt-4o-mini', 'temperature': 0.7}
+    'villager': {'type': 'deepseek', 'model': 'deepseek-reasoner'},
+    'mafioso': {'type': 'deepseek', 'model': 'deepseek-chat'},
+    'detective': {'type': 'deepseek', 'model': 'deepseek-chat'}#,'reasoning_effort': 'medium'}
 }
 
 # GAME SETTINGS
@@ -57,9 +58,9 @@ STANDARD_TOKEN_LIMITS = {
 #For reasoning_effort = "miminum" , 1000,100,100 is enough
 #For reasoning_effort = "medium" , 2000,1000,1000 is enough
 REASONING_TOKEN_LIMITS = {
-    'discussion': 4000,   # Increased for Grok-4 which may need more tokens
-    'voting': 4000,       # Increased from 1000
-    'night_action': 4000  # Increased from 1000
+    'discussion': 6000,   # Increased for Grok-4 which may need more tokens
+    'voting': 6000,       # Increased from 1000
+    'night_action': 6000  # Increased from 1000
 }
 
 # Model-specific token limit mapping
@@ -68,6 +69,7 @@ MODEL_TOKEN_LIMITS = {
     'gpt-oss': REASONING_TOKEN_LIMITS,  # For any GPT-OSS variants
     'gpt-5': REASONING_TOKEN_LIMITS,    # OpenAI GPT-5 reasoning model
     'grok-4': REASONING_TOKEN_LIMITS,   # xAI Grok-4 reasoning model
+    'gemini-2.5-pro': REASONING_TOKEN_LIMITS,
     'deepseek-reasoner': REASONING_TOKEN_LIMITS,  # DeepSeek reasoning model
 }
 

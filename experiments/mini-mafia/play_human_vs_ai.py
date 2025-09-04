@@ -7,9 +7,12 @@ using one of the four background models (Mistral, Grok, GPT, DeepSeek).
 """
 
 import sys
+import json
+from datetime import datetime
 sys.path.append('../..')
 
 from mini_mafia import create_mini_mafia_game
+from database.db_utils import MiniMafiaDB
 
 def get_human_role():
     """Get the human player's role choice"""
@@ -42,7 +45,7 @@ def get_background_model():
     print("1. Mistral 7B Instruct")
     print("2. Grok 3 Mini")
     print("3. GPT-4.1 Mini")
-    print("4. DeepSeek V3")
+    print("4. DeepSeek V3.1")
     print("-" * 50)
     
     model_configs = {
@@ -56,7 +59,7 @@ def get_background_model():
         '1': 'Mistral 7B Instruct',
         '2': 'Grok 3 Mini', 
         '3': 'GPT-4.1 Mini',
-        '4': 'DeepSeek V3'
+        '4': 'DeepSeek V3.1'
     }
     
     while True:
@@ -82,6 +85,91 @@ def create_model_configs(human_role, ai_config):
             model_configs[role] = ai_config
     
     return model_configs
+
+def determine_winner(agents):
+    """Determine who won the game"""
+    arrested = next((a for a in agents if a.imprisoned), None)
+    if arrested:
+        if arrested.role == "mafioso":
+            return "good"
+        else:  # villager or detective arrested
+            return "evil"
+    return "unknown"
+
+def save_game_to_database(game, human_role, ai_model_name):
+    """Save the game results to database"""
+    try:
+        db = MiniMafiaDB()
+        db.connect()
+        
+        # Create unique game ID for human vs AI games
+        timestamp = datetime.now()
+        game_id = f"human_vs_ai_{timestamp.strftime('%Y%m%d_%H%M%S')}"
+        batch_id = "human_vs_ai"
+        
+        # Determine winner
+        winner = determine_winner(game.state.agents)
+        
+        # Insert game record
+        db.insert_game(game_id, batch_id, 0, timestamp.isoformat(), winner)
+        
+        # Create player IDs and insert players
+        for agent in game.state.agents:
+            character_name = agent.name
+            role = agent.role
+            final_status = 'arrested' if agent.imprisoned else ('killed' if not agent.alive else 'alive')
+            
+            # Determine model name based on role
+            if role == human_role:
+                model_name = "human"
+                model_provider = "human"
+            else:
+                model_name = ai_model_name.lower().replace(' ', '_')
+                # Map provider names
+                if 'mistral' in ai_model_name.lower():
+                    model_provider = "mistral"
+                elif 'grok' in ai_model_name.lower():
+                    model_provider = "xai"
+                elif 'gpt' in ai_model_name.lower():
+                    model_provider = "openai"
+                elif 'deepseek' in ai_model_name.lower():
+                    model_provider = "deepseek"
+                else:
+                    model_provider = "unknown"
+            
+            # Insert or get player
+            player_id = db.insert_player_if_not_exists(model_name, model_provider)
+            db.insert_game_player(game_id, player_id, character_name, role, final_status)
+        
+        # Save events if available (simplified)
+        if hasattr(game.state, 'game_sequence') and game.state.game_sequence:
+            from run_mini_mafia_batch import convert_game_sequence_to_events
+            events = convert_game_sequence_to_events(game.state.game_sequence, game.state.agents)
+            for event in events:
+                db.insert_event(
+                    game_id=game_id,
+                    sequence_number=event['sequence_number'],
+                    event_type=event['event_type'],
+                    actor_character=event.get('actor_character'),
+                    target_character=event.get('target_character'),
+                    content=event.get('content'),
+                    round_number=event.get('round_number'),
+                    metadata=json.dumps(event.get('metadata', {}))
+                )
+        
+        db.close()
+        print(f"\n💾 Game saved to database with ID: {game_id}")
+        
+        # Show winner info
+        if winner == "good":
+            print("🏆 TOWN VICTORY! Mafioso was arrested.")
+        elif winner == "evil":
+            print("🏆 MAFIA VICTORY! Town failed to arrest the Mafioso.")
+        else:
+            print("⚖️  UNCLEAR RESULT")
+            
+    except Exception as e:
+        print(f"\n⚠️  Failed to save game to database: {e}")
 
 def play_human_game():
     """Main game loop for human vs AI"""
@@ -118,6 +206,9 @@ def play_human_game():
     try:
         game = create_mini_mafia_game(model_configs, debug_prompts=False)
         game.play()  # This handles all game flow and victory display
+        
+        # Save game to database
+        save_game_to_database(game, human_role, ai_model_name)
         
     except KeyboardInterrupt:
         print("\n\nGame interrupted by user. Goodbye!")

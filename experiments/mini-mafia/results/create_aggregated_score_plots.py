@@ -68,7 +68,7 @@ def load_company_logo(company, size=(40, 40)):
         print(f"Error loading logo for {company}: {e}")
         return None
 
-def load_data_files(behavior_type, exclude_mistral=False):
+def load_data_files(behavior_type, exclude_background=None):
     """Load all JSON data files for a given behavior type"""
     pattern = f"{behavior_type}_*_data.json"
     data_files = list(Path(".").glob(pattern))
@@ -81,8 +81,8 @@ def load_data_files(behavior_type, exclude_mistral=False):
         with open(file_path, 'r') as f:
             data = json.load(f)
             
-            # Skip Mistral background if requested
-            if exclude_mistral and 'mistral' in data['background'].lower():
+            # Skip specified background if requested
+            if exclude_background and exclude_background.lower() in data['background'].lower():
                 continue
                 
             datasets.append({
@@ -150,7 +150,7 @@ def aggregate_z_scores(model_z_scores):
     
     return aggregated_results
 
-def create_zscore_plot(aggregated_results, model_companies, behavior_type, filename):
+def create_zscore_plot(aggregated_results, model_companies, behavior_type, filename, excluded_background=None):
     """Create horizontal bar plot with z-scores"""
     # Use non-interactive backend
     plt.ioff()
@@ -186,14 +186,14 @@ def create_zscore_plot(aggregated_results, model_companies, behavior_type, filen
                    color='#4A90E2', alpha=0.8, height=0.6,
                    error_kw={'capsize': 5, 'capthick': 2})
     
-    # Add model names and values on the right side of bars
+    # Add model names on the right side of bars (without values)
     for i, (model, z_score, z_error) in enumerate(zip(models, z_scores, z_errors)):
         ax.text(max(z_score + z_error + 0.1, 0.1), i, 
-                f'{model}: {z_score:.2f} ± {z_error:.2f}', 
+                f'{model}', 
                 ha='left', va='center', fontweight='bold', fontsize=24)
     
     # Add company logos on the left
-    logo_x_pos = min(min(z_scores) - 0.5, -0.8)  # Position logos to the left
+    logo_x_pos = -2.2  # Fixed position to the left of -2
     for i, company in enumerate(companies):
         logo_img = load_company_logo(company, size=(40, 40))
         if logo_img is not None:
@@ -224,25 +224,29 @@ def create_zscore_plot(aggregated_results, model_companies, behavior_type, filen
     ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
     ax.set_yticks([])  # Remove y-axis labels
     
-    # Set x-axis limits with some padding
-    x_min = min(min(z_scores) - max(z_errors) - 0.5, logo_x_pos - 0.3)
-    x_max = max(max(z_scores) + max(z_errors) + 0.5, 2.0)
-    ax.set_xlim(x_min, x_max)
+    # Set fixed x-axis limits from -2.5 (for logos) to 2
+    ax.set_xlim(-2.5, 2)
+    
+    # Set x-axis ticks only from -2 to 2 (not extending under logos)
+    ax.set_xticks(np.arange(-2, 2.5, 0.5))  # Ticks at -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2
+    ax.xaxis.set_tick_params(labelsize=24)
     
     # Add vertical line at z=0
     ax.axvline(x=0, color='gray', alpha=0.5, linewidth=1, linestyle='--')
     
-    # Add custom grid lines
-    for x in np.arange(-2, 3, 0.5):
+    # Add custom grid lines only in the -2 to 2 range
+    for x in np.arange(-2, 2.5, 0.5):
         if x != 0:  # Don't double-draw the zero line
             ax.axvline(x=x, color='gray', alpha=0.2, linewidth=0.5)
     
-    # Hide all spines except bottom
+    # Hide all spines like benchmark plots
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
-    ax.spines['bottom'].set_color('black')
-    ax.spines['bottom'].set_linewidth(0.8)
+    ax.spines['bottom'].set_visible(False)  # Hide default bottom spine
+    
+    # Add custom bottom line from -2 to 2 only (not extending under logos)
+    ax.plot([-2, 2], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
@@ -274,7 +278,7 @@ def main():
         
         try:
             # Load data files
-            datasets = load_data_files(behavior_key, exclude_mistral=False)
+            datasets = load_data_files(behavior_key, exclude_background=None)
             print(f"   Loaded {len(datasets)} background datasets")
             
             # Compute z-scores
@@ -298,47 +302,69 @@ def main():
             print(f"   ❌ Error processing {behavior_key}: {e}")
             continue
     
-    # Create plots excluding Mistral background
-    print("\n🔄 Creating aggregated z-score benchmark plots (excluding Mistral background)...")
+    # Create additional Deceive plots excluding each background one at a time
+    print("\n🔄 Creating Deceive robustness plots (excluding each background)...")
     
-    for behavior_key, behavior_info in behavior_types.items():
-        print(f"\n📊 Processing {behavior_info['name']} ({behavior_key}) data (no Mistral)...")
+    # Only create these additional plots for Deceive (mafioso)
+    behavior_key = 'mafioso'
+    behavior_info = behavior_types[behavior_key]
+    
+    # Define backgrounds to exclude for robustness testing
+    backgrounds_to_exclude = [
+        'GPT-4.1 Mini',
+        'GPT-5 Mini', 
+        'Grok 3 Mini',
+        'DeepSeek V3.1'
+    ]
+    
+    for exclude_bg in backgrounds_to_exclude:
+        print(f"\n📊 Processing {behavior_info['name']} excluding {exclude_bg}...")
         
         try:
-            # Load data files excluding Mistral
-            datasets = load_data_files(behavior_key, exclude_mistral=True)
-            print(f"   Loaded {len(datasets)} background datasets (excluding Mistral)")
+            # Load data files excluding specified background
+            datasets = load_data_files(behavior_key, exclude_background=exclude_bg)
+            print(f"   Loaded {len(datasets)} background datasets (excluding {exclude_bg})")
             
+            if len(datasets) == 0:
+                print(f"   ⚠️  No datasets remaining after excluding {exclude_bg}, skipping")
+                continue
+                
             # Compute z-scores
             model_z_scores, model_companies = compute_z_scores(datasets)
             print(f"   Computed z-scores for {len(model_z_scores)} models")
             
             # Aggregate across backgrounds
             aggregated_results = aggregate_z_scores(model_z_scores)
-            print(f"   Aggregated results across backgrounds")
+            print(f"   Aggregated results across remaining backgrounds")
             
             # Create plot
-            filename = f"{behavior_key}_score_benchmark_no_mistral.png"
+            safe_bg_name = exclude_bg.replace(' ', '_').replace('.', '_').replace('-', '_')
+            filename = f"{behavior_key}_score_benchmark_no_{safe_bg_name.lower()}.png"
             summary = create_zscore_plot(aggregated_results, model_companies, 
-                                       behavior_info['name'], filename)
+                                       behavior_info['name'], filename, exclude_bg)
             
             # Print summary
             print(f"   📈 Created plot with {summary['n_models']} models")
             print(f"   📋 Top performer: {summary['models'][0]} (z-score: {summary['z_scores'][0]:.2f})")
             
         except Exception as e:
-            print(f"   ❌ Error processing {behavior_key}: {e}")
+            print(f"   ❌ Error processing {behavior_key} excluding {exclude_bg}: {e}")
             continue
     
     print("\n✅ Z-score aggregation complete!")
     print("📁 Generated files:")
     for behavior_key in behavior_types.keys():
         filename = f"{behavior_key}_score_benchmark.png"
-        filename_no_mistral = f"{behavior_key}_score_benchmark_no_mistral.png"
         if os.path.exists(filename):
             print(f"   - {filename}")
-        if os.path.exists(filename_no_mistral):
-            print(f"   - {filename_no_mistral}")
+            
+    # List robustness plots for Deceive
+    backgrounds_to_exclude = ['GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'DeepSeek V3.1']
+    for exclude_bg in backgrounds_to_exclude:
+        safe_bg_name = exclude_bg.replace(' ', '_').replace('.', '_').replace('-', '_')
+        filename = f"mafioso_score_benchmark_no_{safe_bg_name.lower()}.png"
+        if os.path.exists(filename):
+            print(f"   - {filename}")
 
 if __name__ == "__main__":
     main()

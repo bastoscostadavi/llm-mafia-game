@@ -156,26 +156,6 @@ def main():
         results_df.to_csv(output_file, index=False)
         print(f"\n\nResults saved to: {output_file}")
         
-        # Display summary statistics
-        print("\n" + "="*80)
-        print("SUMMARY STATISTICS")
-        print("="*80)
-        
-        numeric_cols = ['Vote Parse Failures (%)', 'Silent Messages (%)', 
-                       'Detective → Mafioso (%)', 'Mafioso → Detective (%)', 
-                       'Villager → Mafioso (%)']
-        
-        for col in numeric_cols:
-            mean_val = results_df[col].mean()
-            max_val = results_df[col].max()
-            min_val = results_df[col].min()
-            max_model = results_df.loc[results_df[col].idxmax(), 'Model']
-            min_model = results_df.loc[results_df[col].idxmin(), 'Model']
-            
-            print(f"\n{col}:")
-            print(f"  Average: {mean_val:.2f}%")
-            print(f"  Highest: {max_val:.2f}% ({max_model})")
-            print(f"  Lowest:  {min_val:.2f}% ({min_model})")
         
     except Exception as e:
         print(f"Error: {e}")

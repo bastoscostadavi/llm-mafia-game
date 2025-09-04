@@ -31,20 +31,27 @@ _model_cache = {}
 
 class OpenAI:
     """OpenAI API wrapper"""
-    def __init__(self, client, model, temperature=0.7):
+    def __init__(self, client, model, temperature=0.7, reasoning_effort=None):
         self.client = client
         self.model = model
         self.temperature = temperature
+        # Force minimal reasoning effort for gpt-5-mini if not specified
+        if model == 'gpt-5-mini' and reasoning_effort is None:
+            self.reasoning_effort = 'minimal'
+        else:
+            self.reasoning_effort = reasoning_effort
         self.display_name = model
     
     def generate(self, prompt, max_tokens=50):
         if self.model.startswith('gpt-5'):
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": prompt}],
-                max_completion_tokens=max_tokens,
-                reasoning_effort="minimal"
-            )
+            params = {
+                "model": self.model,
+                "messages": [{"role": "user", "content": prompt}],
+                "max_completion_tokens": max_tokens
+            }
+            if self.reasoning_effort:
+                params["reasoning_effort"] = self.reasoning_effort
+            response = self.client.chat.completions.create(**params)
         else:
             response = self.client.chat.completions.create(
                 model=self.model,
@@ -80,16 +87,58 @@ class Google:
     
     def generate(self, prompt, max_tokens=50):
         try:
-            # Create generation config
+            # Create generation config with adjusted safety settings
             generation_config = genai.types.GenerationConfig(
                 max_output_tokens=max_tokens,
                 temperature=self.temperature,
             )
             
+            # Configure safety settings to be maximally permissive for research purposes
+            safety_settings = [
+                {
+                    "category": "HARM_CATEGORY_HARASSMENT",
+                    "threshold": "BLOCK_NONE"
+                },
+                {
+                    "category": "HARM_CATEGORY_HATE_SPEECH", 
+                    "threshold": "BLOCK_NONE"
+                },
+                {
+                    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                    "threshold": "BLOCK_NONE"
+                },
+                {
+                    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                    "threshold": "BLOCK_NONE"
+                }
+            ]
+            
             response = self.model.generate_content(
                 prompt,
-                generation_config=generation_config
+                generation_config=generation_config,
+                safety_settings=safety_settings
             )
+            
+            # Check if response was blocked by safety filters
+            if response.candidates and len(response.candidates) > 0:
+                candidate = response.candidates[0]
+                if candidate.finish_reason == 2:  # SAFETY
+                    # Extract safety ratings for debugging
+                    safety_info = []
+                    if hasattr(candidate, 'safety_ratings') and candidate.safety_ratings:
+                        for rating in candidate.safety_ratings:
+                            if hasattr(rating, 'probability') and rating.probability in ['HIGH', 'MEDIUM']:
+                                category = getattr(rating, 'category', 'UNKNOWN')
+                                prob = getattr(rating, 'probability', 'UNKNOWN')
+                                safety_info.append(f"{category}: {prob}")
+                    
+                    if safety_info:
+                        raise RuntimeError(f"Content blocked by Gemini safety filters: {', '.join(safety_info)} - game cannot continue")
+                    else:
+                        # Try even more permissive settings
+                        raise RuntimeError("Content blocked by Gemini safety filters (no specific categories detected). Try adjusting the game prompts to be less adversarial - game cannot continue")
+                elif candidate.finish_reason == 3:  # RECITATION
+                    raise RuntimeError("Content blocked by Gemini recitation filter - game cannot continue")
             
             if response.text:
                 return response.text.strip()
@@ -413,7 +462,8 @@ def create_agent_interface(llm_config):
         client = openai.OpenAI(api_key=llm_config.get('api_key') or os.getenv('OPENAI_API_KEY'))
         model = llm_config.get('model', 'gpt-3.5-turbo')
         temperature = llm_config.get('temperature', 0.7)
-        return OpenAI(client, model, temperature)
+        reasoning_effort = llm_config.get('reasoning_effort')
+        return OpenAI(client, model, temperature, reasoning_effort)
     
     elif llm_type == 'xai':
         if openai is None:
@@ -439,7 +489,7 @@ def create_agent_interface(llm_config):
             api_key=llm_config.get('api_key') or os.getenv('DEEPSEEK_API_KEY'),
             base_url="https://api.deepseek.com"
         )
-        model = llm_config.get('model', 'deepseek-v3')
+        model = llm_config.get('model', 'deepseek-v3.1')
         temperature = llm_config.get('temperature', 0.7)
         return OpenAI(client, model, temperature)
     
