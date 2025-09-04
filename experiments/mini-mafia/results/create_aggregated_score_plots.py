@@ -193,26 +193,26 @@ def create_zscore_plot(aggregated_results, model_companies, behavior_type, filen
                 ha='left', va='center', fontweight='bold', fontsize=24)
     
     # Add company logos on the left
-    logo_x_pos = -2.2  # Fixed position to the left of -2
-    for i, company in enumerate(companies):
-        logo_img = load_company_logo(company, size=(40, 40))
-        if logo_img is not None:
-            try:
-                imagebox = OffsetImage(logo_img, zoom=0.8)
-                ab = AnnotationBbox(imagebox, (logo_x_pos, i), frameon=False, 
-                                  xycoords='data', boxcoords="data")
-                ax.add_artist(ab)
-            except Exception as e:
-                print(f"Failed to add logo for {company}: {e}")
-                # Fallback to company initial
-                ax.text(logo_x_pos, i, company[0], ha='center', va='center', 
-                        fontweight='bold', fontsize=24, color='black',
-                        bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
-        else:
-            # Fallback to company initial
-            ax.text(logo_x_pos, i, company[0], ha='center', va='center', 
-                    fontweight='bold', fontsize=24, color='black',
-                    bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
+    # logo_x_pos = -2.2  # Fixed position to the left of -2
+    # for i, company in enumerate(companies):
+    #     logo_img = load_company_logo(company, size=(40, 40))
+    #     if logo_img is not None:
+    #         try:
+    #             imagebox = OffsetImage(logo_img, zoom=0.8)
+    #             ab = AnnotationBbox(imagebox, (logo_x_pos, i), frameon=False, 
+    #                               xycoords='data', boxcoords="data")
+    #             ax.add_artist(ab)
+    #         except Exception as e:
+    #             print(f"Failed to add logo for {company}: {e}")
+    #             # Fallback to company initial
+    #             ax.text(logo_x_pos, i, company[0], ha='center', va='center', 
+    #                     fontweight='bold', fontsize=24, color='black',
+    #                     bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
+    #     else:
+    #         # Fallback to company initial
+    #         ax.text(logo_x_pos, i, company[0], ha='center', va='center', 
+    #                 fontweight='bold', fontsize=24, color='black',
+    #                 bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
     
     # Set axis labels based on behavior type
     behavior_labels = {
@@ -224,18 +224,18 @@ def create_zscore_plot(aggregated_results, model_companies, behavior_type, filen
     ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
     ax.set_yticks([])  # Remove y-axis labels
     
-    # Set fixed x-axis limits from -2.5 (for logos) to 2
-    ax.set_xlim(-2.5, 2)
+    # Set fixed x-axis limits from -2.5 to 2.5
+    ax.set_xlim(-2.5, 2.5)
     
-    # Set x-axis ticks only from -2 to 2 (not extending under logos)
-    ax.set_xticks(np.arange(-2, 2.5, 0.5))  # Ticks at -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2
+    # Set x-axis ticks from -2.5 to 2.5
+    ax.set_xticks(np.arange(-2.5, 3, 0.5))  # Ticks at -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5
     ax.xaxis.set_tick_params(labelsize=24)
     
     # Add vertical line at z=0
     ax.axvline(x=0, color='gray', alpha=0.5, linewidth=1, linestyle='--')
     
-    # Add custom grid lines only in the -2 to 2 range
-    for x in np.arange(-2, 2.5, 0.5):
+    # Add custom grid lines in the -2.5 to 2.5 range
+    for x in np.arange(-2.5, 3, 0.5):
         if x != 0:  # Don't double-draw the zero line
             ax.axvline(x=x, color='gray', alpha=0.2, linewidth=0.5)
     
@@ -245,8 +245,8 @@ def create_zscore_plot(aggregated_results, model_companies, behavior_type, filen
     ax.spines['left'].set_visible(False)
     ax.spines['bottom'].set_visible(False)  # Hide default bottom spine
     
-    # Add custom bottom line from -2 to 2 only (not extending under logos)
-    ax.plot([-2, 2], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
+    # Add custom bottom line from -2.5 to 2.5
+    ax.plot([-2.5, 2.5], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
@@ -259,6 +259,121 @@ def create_zscore_plot(aggregated_results, model_companies, behavior_type, filen
         'models': models,
         'z_scores': z_scores,
         'z_errors': z_errors,
+        'n_models': len(models)
+    }
+
+def create_exponentiated_plot(aggregated_results, model_companies, behavior_type, filename, excluded_background=None):
+    """Create horizontal bar plot with exponentiated z-scores to make all values positive"""
+    # Use non-interactive backend
+    plt.ioff()
+    
+    # Set font size to match existing plots
+    plt.rcParams.update({
+        'font.size': 24,
+        'axes.labelsize': 24,
+        'axes.titlesize': 24,
+        'xtick.labelsize': 24,
+        'ytick.labelsize': 24,
+        'legend.fontsize': 24,
+        'figure.titlesize': 24
+    })
+    
+    # Sort models by exponentiated z-score (ascending) so best performer appears at top of plot
+    sorted_models = sorted(aggregated_results.keys(), 
+                          key=lambda x: np.exp(aggregated_results[x]['mean_z_score']), 
+                          reverse=False)
+    
+    # Extract data for plotting
+    models = sorted_models
+    z_scores = [aggregated_results[model]['mean_z_score'] for model in models]
+    z_errors = [aggregated_results[model]['sem_z_score'] for model in models]
+    companies = [model_companies.get(model, 'Unknown') for model in models]
+    
+    # Exponentiate the z-scores and propagate uncertainties
+    exp_scores = [np.exp(z) for z in z_scores]
+    # Error propagation for exp(z): d(exp(z)) = exp(z) * dz
+    exp_errors = [np.exp(z) * err for z, err in zip(z_scores, z_errors)]
+    
+    fig, ax = plt.subplots(figsize=(14, 7))
+    
+    y_positions = range(len(models))
+    
+    # Create bars - use different color for exponentiated scores
+    bars = ax.barh(y_positions, exp_scores, xerr=exp_errors, 
+                   color='#E74C3C', alpha=0.8, height=0.6,
+                   error_kw={'capsize': 5, 'capthick': 2})
+    
+    # Add model names on the right side of bars
+    for i, (model, exp_score, exp_error) in enumerate(zip(models, exp_scores, exp_errors)):
+        ax.text(exp_score + exp_error + 0.05, i, 
+                f'{model}', 
+                ha='left', va='center', fontweight='bold', fontsize=24)
+    
+    # Add company logos on the left
+    # logo_x_pos = -0.15  # Adjust position for exponentiated scale
+    # for i, company in enumerate(companies):
+    #     logo_img = load_company_logo(company, size=(40, 40))
+    #     if logo_img is not None:
+    #         try:
+    #             imagebox = OffsetImage(logo_img, zoom=0.8)
+    #             ab = AnnotationBbox(imagebox, (logo_x_pos, i), frameon=False, 
+    #                               xycoords='data', boxcoords="data")
+    #             ax.add_artist(ab)
+    #         except Exception as e:
+    #             print(f"Failed to add logo for {company}: {e}")
+    #             # Fallback to company initial
+    #             ax.text(logo_x_pos, i, company[0], ha='center', va='center', 
+    #                     fontweight='bold', fontsize=24, color='black',
+    #                     bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
+    #     else:
+    #         # Fallback to company initial
+    #         ax.text(logo_x_pos, i, company[0], ha='center', va='center', 
+    #                 fontweight='bold', fontsize=24, color='black',
+    #                 bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
+    
+    # Set axis labels based on behavior type
+    behavior_labels = {
+        'Deceive': 'Exponentiated Deceive Score',
+        'Detect': 'Exponentiated Detect Score', 
+        'Disclose': 'Exponentiated Disclose Score'
+    }
+    xlabel = behavior_labels.get(behavior_type, 'Exponentiated Performance Score')
+    ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
+    ax.set_yticks([])  # Remove y-axis labels
+    
+    # Set x-axis limits based on data range
+    max_val = max([s + e for s, e in zip(exp_scores, exp_errors)])
+    ax.set_xlim(-0.2, max_val * 1.1)
+    
+    # Add vertical line at exp(0) = 1
+    ax.axvline(x=1, color='gray', alpha=0.5, linewidth=1, linestyle='--')
+    
+    # Add custom grid lines
+    grid_lines = [0.5, 1, 2, 4, 8]
+    for x in grid_lines:
+        if x != 1 and x < max_val * 1.1:  # Don't double-draw the 1 line
+            ax.axvline(x=x, color='gray', alpha=0.2, linewidth=0.5)
+    
+    # Hide all spines like benchmark plots
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)  # Hide default bottom spine
+    
+    # Add custom bottom line
+    ax.plot([0, max_val * 1.1], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
+    
+    plt.tight_layout()
+    plt.savefig(filename, dpi=300, bbox_inches='tight', 
+                facecolor='white', edgecolor='none')
+    plt.close()
+    print(f"Exponentiated plot saved as {filename}")
+    
+    # Return summary statistics
+    return {
+        'models': models,
+        'exp_scores': exp_scores,
+        'exp_errors': exp_errors,
         'n_models': len(models)
     }
 
@@ -294,9 +409,15 @@ def main():
             summary = create_zscore_plot(aggregated_results, model_companies, 
                                        behavior_info['name'], filename)
             
+            # Create exponentiated plot
+            exp_filename = f"{behavior_key}_score_benchmark_exponential.png"
+            exp_summary = create_exponentiated_plot(aggregated_results, model_companies, 
+                                                   behavior_info['name'], exp_filename)
+            
             # Print summary
             print(f"   📈 Created plot with {summary['n_models']} models")
             print(f"   📋 Top performer: {summary['models'][0]} (z-score: {summary['z_scores'][0]:.2f})")
+            print(f"   📈 Created exponentiated plot with {exp_summary['n_models']} models")
             
         except Exception as e:
             print(f"   ❌ Error processing {behavior_key}: {e}")
@@ -343,9 +464,15 @@ def main():
             summary = create_zscore_plot(aggregated_results, model_companies, 
                                        behavior_info['name'], filename, exclude_bg)
             
+            # Create exponentiated plot
+            exp_filename = f"{behavior_key}_score_benchmark_no_{safe_bg_name.lower()}_exponential.png"
+            exp_summary = create_exponentiated_plot(aggregated_results, model_companies, 
+                                                   behavior_info['name'], exp_filename, exclude_bg)
+            
             # Print summary
             print(f"   📈 Created plot with {summary['n_models']} models")
             print(f"   📋 Top performer: {summary['models'][0]} (z-score: {summary['z_scores'][0]:.2f})")
+            print(f"   📈 Created exponentiated plot with {exp_summary['n_models']} models")
             
         except Exception as e:
             print(f"   ❌ Error processing {behavior_key} excluding {exclude_bg}: {e}")
@@ -355,16 +482,22 @@ def main():
     print("📁 Generated files:")
     for behavior_key in behavior_types.keys():
         filename = f"{behavior_key}_score_benchmark.png"
+        exp_filename = f"{behavior_key}_score_benchmark_exponential.png"
         if os.path.exists(filename):
             print(f"   - {filename}")
+        if os.path.exists(exp_filename):
+            print(f"   - {exp_filename}")
             
     # List robustness plots for Deceive
     backgrounds_to_exclude = ['GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'DeepSeek V3.1']
     for exclude_bg in backgrounds_to_exclude:
         safe_bg_name = exclude_bg.replace(' ', '_').replace('.', '_').replace('-', '_')
         filename = f"mafioso_score_benchmark_no_{safe_bg_name.lower()}.png"
+        exp_filename = f"mafioso_score_benchmark_no_{safe_bg_name.lower()}_exponential.png"
         if os.path.exists(filename):
             print(f"   - {filename}")
+        if os.path.exists(exp_filename):
+            print(f"   - {exp_filename}")
 
 if __name__ == "__main__":
     main()

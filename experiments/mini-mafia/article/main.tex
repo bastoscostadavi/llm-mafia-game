@@ -182,7 +182,31 @@ Also, if in the game it becomes clear that one is a mafioso and another one is t
 
 \subsection{Experimental Methodology}
 
-Background is an attribution of models to roles. 
+Background is an attribution of models to roles.
+
+\subsubsection{Bayesian Win Rate Estimation}
+
+To obtain robust estimates of model performance and associated uncertainties, we employ a Bayesian approach for win rate estimation. Rather than using frequentist point estimates, we model each model's win rate as a binomial random variable with a uniform prior distribution over $[0,1]$, corresponding to a $\text{Beta}(1,1)$ prior.
+
+Given $n$ games with $p$ wins for a particular model, the posterior distribution over the win rate $\theta$ follows a Beta distribution:
+\begin{align}
+\theta \mid p, n \sim \text{Beta}(p + 1, n - p + 1)
+\end{align}
+
+From this posterior, we compute the Bayesian estimates:
+\begin{align}
+\text{E}[\theta] &= \frac{p + 1}{n + 2}\\[0.5em]
+\text{SD}[\theta] &= \sqrt{\frac{\text{E}[\theta] \cdot (1 - \text{E}[\theta])}{n + 3}}
+\end{align}
+
+This Bayesian approach provides several advantages over frequentist methods:
+\begin{itemize}
+\item \textbf{Regularization}: The prior shrinks extreme estimates toward 50\% win rate, preventing overconfidence from small samples
+\item \textbf{Improved small-sample behavior}: Models with fewer games receive appropriately larger uncertainty estimates
+\item \textbf{Principled uncertainty quantification}: The posterior standard deviation naturally captures both sampling uncertainty and prior uncertainty
+\end{itemize}
+
+The Bayesian mean $\text{E}[\theta] = (p+1)/(n+2)$ differs from the frequentist estimate $p/n$ by incorporating prior knowledge, while the Bayesian standard deviation accounts for both parameter uncertainty and the additional uncertainty from the prior. This methodology proves particularly valuable for models with limited experimental data, where frequentist standard errors can be unreliably large or small. 
 
 
 \subsection{Mini-Mafia uses}

@@ -155,14 +155,20 @@ def load_company_logo(company, size=(40, 40)):
         print(f"Error loading logo for {company}: {e}")
         return None
 
-def calculate_sem(wins, total):
-    """Calculate standard error of the mean for binomial distribution"""
+def calculate_bayesian_stats(wins, total):
+    """Calculate Bayesian mean and standard deviation using Beta posterior"""
     if total == 0:
-        return 0
-    p = wins / total
-    # Standard error for binomial proportion
-    sem = math.sqrt(p * (1 - p) / total) * 100  # Convert to percentage
-    return sem
+        return 0, 0
+    
+    # Bayesian posterior: Beta(wins + 1, total - wins + 1)
+    # E = (wins + 1) / (total + 2)
+    bayesian_mean = (wins + 1) / (total + 2)
+    
+    # SD = sqrt(E(1-E) / (total + 3))
+    bayesian_sd = math.sqrt(bayesian_mean * (1 - bayesian_mean) / (total + 3))
+    
+    # Convert to percentages
+    return bayesian_mean * 100, bayesian_sd * 100
 
 def analyze_database_results(db_path='../database/mini_mafia.db'):
     """Analyze game results from SQLite database"""
@@ -266,9 +272,8 @@ def group_results_by_mafioso_experiments(config_results):
         total_games = results['total_games']
         
         if total_games > 0:
-            win_rate = (mafia_wins / total_games) * 100
+            win_rate, sd = calculate_bayesian_stats(mafia_wins, total_games)
             tie_win_rate = (mafia_tie_wins / total_games) * 100
-            sem = calculate_sem(mafia_wins, total_games)
             
             # Check if this varying model already exists in this background group
             existing_entry = None
@@ -282,14 +287,13 @@ def group_results_by_mafioso_experiments(config_results):
                 total_mafia_wins = existing_entry['mafia_wins'] + mafia_wins
                 total_mafia_tie_wins = existing_entry['mafia_tie_wins'] + mafia_tie_wins
                 total_games_combined = existing_entry['games'] + total_games
-                combined_win_rate = (total_mafia_wins / total_games_combined) * 100
+                combined_win_rate, combined_sd = calculate_bayesian_stats(total_mafia_wins, total_games_combined)
                 combined_tie_win_rate = (total_mafia_tie_wins / total_games_combined) * 100
-                combined_sem = calculate_sem(total_mafia_wins, total_games_combined)
                 
                 existing_entry.update({
                     'win_rate': combined_win_rate,
                     'tie_win_rate': combined_tie_win_rate,
-                    'sem': combined_sem,
+                    'sem': combined_sd,
                     'games': total_games_combined,
                     'mafia_wins': total_mafia_wins,
                     'mafia_tie_wins': total_mafia_tie_wins,
@@ -300,7 +304,7 @@ def group_results_by_mafioso_experiments(config_results):
                     'varying_model': get_display_name(mafioso_model),
                     'win_rate': win_rate,
                     'tie_win_rate': tie_win_rate,
-                    'sem': sem,
+                    'sem': sd,
                     'games': total_games,
                     'mafia_wins': mafia_wins,
                     'mafia_tie_wins': mafia_tie_wins,
@@ -328,9 +332,8 @@ def group_results_by_detective_experiments(config_results):
         total_games = results['total_games']
         
         if total_games > 0:
-            win_rate = (town_wins / total_games) * 100
+            win_rate, sd = calculate_bayesian_stats(town_wins, total_games)
             tie_win_rate = (town_tie_wins / total_games) * 100
-            sem = calculate_sem(town_wins, total_games)
             
             # Check if this varying model already exists in this background group
             existing_entry = None
@@ -344,14 +347,13 @@ def group_results_by_detective_experiments(config_results):
                 total_town_wins = existing_entry['town_wins'] + town_wins
                 total_town_tie_wins = existing_entry['town_tie_wins'] + town_tie_wins
                 total_games_combined = existing_entry['games'] + total_games
-                combined_win_rate = (total_town_wins / total_games_combined) * 100
+                combined_win_rate, combined_sd = calculate_bayesian_stats(total_town_wins, total_games_combined)
                 combined_tie_win_rate = (total_town_tie_wins / total_games_combined) * 100
-                combined_sem = calculate_sem(total_town_wins, total_games_combined)
                 
                 existing_entry.update({
                     'win_rate': combined_win_rate,
                     'tie_win_rate': combined_tie_win_rate,
-                    'sem': combined_sem,
+                    'sem': combined_sd,
                     'games': total_games_combined,
                     'town_wins': total_town_wins,
                     'town_tie_wins': total_town_tie_wins,
@@ -362,7 +364,7 @@ def group_results_by_detective_experiments(config_results):
                     'varying_model': get_display_name(detective_model),
                     'win_rate': win_rate,
                     'tie_win_rate': tie_win_rate,
-                    'sem': sem,
+                    'sem': sd,
                     'games': total_games,
                     'town_wins': town_wins,
                     'town_tie_wins': town_tie_wins,
@@ -390,9 +392,8 @@ def group_results_by_villager_experiments(config_results):
         total_games = results['total_games']
         
         if total_games > 0:
-            win_rate = (town_wins / total_games) * 100
+            win_rate, sd = calculate_bayesian_stats(town_wins, total_games)
             tie_win_rate = (town_tie_wins / total_games) * 100
-            sem = calculate_sem(town_wins, total_games)
             
             # Check if this varying model already exists in this background group
             existing_entry = None
@@ -406,14 +407,13 @@ def group_results_by_villager_experiments(config_results):
                 total_town_wins = existing_entry['town_wins'] + town_wins
                 total_town_tie_wins = existing_entry['town_tie_wins'] + town_tie_wins
                 total_games_combined = existing_entry['games'] + total_games
-                combined_win_rate = (total_town_wins / total_games_combined) * 100
+                combined_win_rate, combined_sd = calculate_bayesian_stats(total_town_wins, total_games_combined)
                 combined_tie_win_rate = (total_town_tie_wins / total_games_combined) * 100
-                combined_sem = calculate_sem(total_town_wins, total_games_combined)
                 
                 existing_entry.update({
                     'win_rate': combined_win_rate,
                     'tie_win_rate': combined_tie_win_rate,
-                    'sem': combined_sem,
+                    'sem': combined_sd,
                     'games': total_games_combined,
                     'town_wins': total_town_wins,
                     'town_tie_wins': total_town_tie_wins,
@@ -424,7 +424,7 @@ def group_results_by_villager_experiments(config_results):
                     'varying_model': get_display_name(villager_model),
                     'win_rate': win_rate,
                     'tie_win_rate': tie_win_rate,
-                    'sem': sem,
+                    'sem': sd,
                     'games': total_games,
                     'town_wins': town_wins,
                     'town_tie_wins': town_tie_wins,
@@ -494,25 +494,25 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
                 ha='left', va='center', fontweight='bold', fontsize=24)
     
     # Add company logos on the left
-    for i, company in enumerate(companies):
-        logo_img = load_company_logo(company, size=(40, 40))
-        if logo_img is not None:
-            try:
-                imagebox = OffsetImage(logo_img, zoom=0.8)
-                ab = AnnotationBbox(imagebox, (-6, i), frameon=False, 
-                                  xycoords='data', boxcoords="data")
-                ax.add_artist(ab)
-            except Exception as e:
-                print(f"Failed to add logo for {company}: {e}")
-                # Fallback to company initial
-                ax.text(-6, i, company[0], ha='center', va='center', 
-                        fontweight='bold', fontsize=24, color='black',
-                        bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
-        else:
-            # Fallback to company initial
-            ax.text(-6, i, company[0], ha='center', va='center', 
-                    fontweight='bold', fontsize=24, color='black',
-                    bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
+    # for i, company in enumerate(companies):
+    #     logo_img = load_company_logo(company, size=(40, 40))
+    #     if logo_img is not None:
+    #         try:
+    #             imagebox = OffsetImage(logo_img, zoom=0.8)
+    #             ab = AnnotationBbox(imagebox, (-6, i), frameon=False, 
+    #                               xycoords='data', boxcoords="data")
+    #             ax.add_artist(ab)
+    #         except Exception as e:
+    #             print(f"Failed to add logo for {company}: {e}")
+    #             # Fallback to company initial
+    #             ax.text(-6, i, company[0], ha='center', va='center', 
+    #                     fontweight='bold', fontsize=24, color='black',
+    #                     bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
+    #     else:
+    #         # Fallback to company initial
+    #         ax.text(-6, i, company[0], ha='center', va='center', 
+    #                 fontweight='bold', fontsize=24, color='black',
+    #                 bbox=dict(boxstyle="circle,pad=0.3", facecolor='lightgray'))
     
     # Set axis labels based on metric type
     if use_good_wins:
@@ -523,7 +523,7 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     # Formatting
     ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
     ax.set_yticks([])  # Remove y-axis labels
-    ax.set_xlim(-10, 100)  # Set range from -10 (for logos) to 100 (full domain)
+    ax.set_xlim(0, 100)  # Set range from 0 to 100 (full domain)
     
     # Customize x-axis to only show positive values
     ax.set_xticks([0, 20, 40, 60, 80, 100])
@@ -561,7 +561,7 @@ def main():
     
     # Define allowed models and backgrounds for experiments
     allowed_models = [
-        'DeepSeek V3.1', 'DeepSeek R1', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
+        'DeepSeek V3.1', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
         'Grok 3 Mini', 'GPT-4.1 Mini', 'GPT-5', 'GPT-5 Mini', 'Mistral 7B Instruct', 
         'Qwen2.5 7B Instruct', 'Llama 3.1 8B'
     ]
