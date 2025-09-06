@@ -71,16 +71,16 @@
 \title{Deceive, Detect, and Disclose: \\ Large Language Models Playing Mini-Mafia}
 
 \author{%
-%\begin{tabular}{c@{\hspace{2cm}}c}
+\begin{tabular}{c@{\hspace{2cm}}c}
     Davi Bastos Costa 
-%& Renato Vicente
-%\end{tabular} \\ 
+& Renato Vicente
+\end{tabular} \\ 
 \\
   TELUS Digital Research Hub \\
   Center for Artificial Intelligence and Machine Learning \\
   Institute of Mathematics, Statistics and Computer Science \\
   University of São Paulo \\
-  \texttt{davicosta@uchicago.edu}%,rvicent@usp.edu} \\
+  \texttt{\{davi.costa,rvicent\}@usp.edu} \\
 }
 
 \begin{document}
@@ -93,14 +93,14 @@
     To enable systematic investigation, we introduce \textit{Mini-Mafia}: a streamlined four-player variant with one mafioso, one detective, and two villagers. We fix the mafioso to kill a villager and the detective to investigate the mafioso during the night phase, reducing the game to a single day phase.
     This design isolates three dimensions of interactive capabilities through role-specific win conditions: the mafioso must deceive, the villager must detect deception, and the detective must effectively disclose information.
     Our methodology fixes models in two roles as a background and varies the model in the third role, whose relative performance measures that model's capability in the targeted dimension. 
-    Aggregating results across different backgrounds yields the 3D (Deceive, Detect and Disclose) benchmark.
+    Aggregating results across different backgrounds yields the Mini-Mafia or 3D (Deceive, Detect and Disclose) benchmark.
     A key feature of these benchmarks is its robustness and scalability. Built entirely from model interactions without external data requirements, it evolves as new models are added, with each new model serving as background to update the benchmark while also being evaluated against it.
     Despite using minimal computational resources, our initial experiments reveal counterintuitive findings, including instances where smaller models outperform their larger counterparts.
     Beyond benchmarking, our framework yields valuable safety insights. Tracking model capabilities relative to human performance can red-flag concerning developments, while the generated gameplay data enables training deception-detection classifiers.
     Additionally, our experiments measure gender bias in trust attribution, with male names achieving statistically higher win rates than female names.
 \end{abstract}
 
-%\tableofcontents
+\tableofcontents
 
 \section{Introduction}
 
@@ -140,73 +140,52 @@ Despite minimal computational resources, our initial experiments reveal surprisi
 \end{description}
 
 
-\subsection{Theoretical Baselines}
 
 
-We have one detective $D$, one mafioso $M$, and one villager $V$.  
-$D$ knows $M$ and always votes for $M$.  
-$M$ and $V$ each vote randomly for one of the other two players.  
-In case of a tie, a random player is eliminate, thus: Town wins with probability $1/3$, Mafia with $2/3$. There are four possible outcomes:
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        $M$'s vote & $V$'s vote & Outcome & P(Mafia Win) \\
-        \hline
-        $D$ & $D$ & $D$ arrested & $1$ \\
-        $D$ & $M$ & $M$ arrested & $0$ \\
-        $V$ & $D$ & Tie & $2/3$ \\
-        $V$ & $M$ & $M$ arrested & $0$ \\
-        \hline
-    \end{tabular}
-    \caption{Caption}
-    \label{tab:placeholder}
-\end{table}
-Each case has probability $1/4$, so
+
+
+\subsection{Theoretical Framework}
+
+Ideally, model performance in Mini-Mafia would emerge from a unified theoretical framework where each model possesses three intrinsic capabilities: $(\alpha_i^{\text{deceive}}, \alpha_i^{\text{detect}}, \alpha_i^{\text{disclose}})$, and game outcomes arise from their interaction:
 \begin{align}
-    p_M=\frac{5}{12}\approx42\%
+\text{logit}(p_{\text{mafia wins}}) = f(\alpha_m^{\text{deceive}}, \alpha_d^{\text{detect}}, \alpha_v^{\text{disclose}})
 \end{align}
+where $m$, $d$, and $v$ denote the mafioso, detective, and villager models respectively. Such a framework would enable prediction of any experimental configuration from the intrinsic capabilities alone, providing deep theoretical insight into strategic AI interactions.
 
-If the detective does not vote in the mafioso (which happens for less capable models), 
+However, developing and validating this complete theoretical model represents a significant undertaking beyond the scope of the current study (see Section~\ref{sec:future_directions} for detailed discussion). Therefore, we employ a simplified approximation that treats each experimental configuration independently and then aggregates results across backgrounds using standardized z-scores. While Appendix~\ref{appendix:hierarchical_bayesian} presents a more sophisticated hierarchical Bayesian approach that jointly estimates all parameters in a single unified model, both methodologies represent approximations of the complete theoretical framework, and we defer the full theoretical investigation to future work. 
 
-\begin{align}
-    p_M=\frac{2}{3}\approx 67\%.
-\end{align}
-
-Also, if in the game it becomes clear that one is a mafioso and another one is the detective, but none is more convincing than the other, then one should have:
-
-\begin{align}
-    p_M=\frac{1}{2}=50\%.
-\end{align}
-
-
-\subsection{Experimental Methodology}
-
-Background is an attribution of models to roles.
 
 \subsubsection{Bayesian Win Rate Estimation}
 
-To obtain robust estimates of model performance and associated uncertainties, we employ a Bayesian approach for win rate estimation. Rather than using frequentist point estimates, we model each model's win rate as a binomial random variable with a uniform prior distribution over $[0,1]$, corresponding to a $\text{Beta}(1,1)$ prior.
-
-Given $n$ games with $p$ wins for a particular model, the posterior distribution over the win rate $\theta$ follows a Beta distribution:
+To obtain robust estimates of model performance and associated uncertainties, we employ a Bayesian approach for win rate estimation. We model each model's win rate as a binomial random variable with a uniform prior distribution over $[0,1]$. Given $n$ games with $p$ wins for a particular model, the posterior distribution over the win rate $\omega$ follows a Beta distribution:
 \begin{align}
-\theta \mid p, n \sim \text{Beta}(p + 1, n - p + 1)
+\omega\sim \text{Beta}(p + 1, n - p + 1).
 \end{align}
 
-From this posterior, we compute the Bayesian estimates:
+From this posterior, the average win rate estimates and its uncertainties are:
 \begin{align}
-\text{E}[\theta] &= \frac{p + 1}{n + 2}\\[0.5em]
-\text{SD}[\theta] &= \sqrt{\frac{\text{E}[\theta] \cdot (1 - \text{E}[\theta])}{n + 3}}
+\overline{\omega} = \mathbb{E}[\omega]&= \frac{p + 1}{n + 2} \label{winrate},\\
+\delta\overline{\omega}=\textrm{Var}[\omega] &= \sqrt{\frac{\overline{\omega} \cdot (1 - \overline{\omega})}{n + 3}}.
+\label{uncertainty}
 \end{align}
 
-This Bayesian approach provides several advantages over frequentist methods:
-\begin{itemize}
-\item \textbf{Regularization}: The prior shrinks extreme estimates toward 50\% win rate, preventing overconfidence from small samples
-\item \textbf{Improved small-sample behavior}: Models with fewer games receive appropriately larger uncertainty estimates
-\item \textbf{Principled uncertainty quantification}: The posterior standard deviation naturally captures both sampling uncertainty and prior uncertainty
-\end{itemize}
+Note that the Bayesian mean and standard deviation differs from the frequentist estimates $p/n$ and $\sqrt{p/n(1-p/n)/n}$ by incorporating prior knowledge, while the Bayesian standard deviation accounts for both parameter uncertainty and the additional uncertainty from the prior. This methodology proves particularly valuable for models with limited experimental data, where frequentist standard errors can be unreliably large or small. 
 
-The Bayesian mean $\text{E}[\theta] = (p+1)/(n+2)$ differs from the frequentist estimate $p/n$ by incorporating prior knowledge, while the Bayesian standard deviation accounts for both parameter uncertainty and the additional uncertainty from the prior. This methodology proves particularly valuable for models with limited experimental data, where frequentist standard errors can be unreliably large or small. 
+\subsubsection{Aggregating Win Rates Accross Backgrounds}
+
+To provide a unified comparison across different experimental backgrounds, we developed an aggregated scoring methodology that standardizes model performance. Given $\overline{\theta}_{ij}$, the model's $i$ win rate in the $j$ background defined in Eq. \eqref{winrate}, we compute the background score:
+\begin{align}
+    s_{ij}=\frac{\overline{\theta}_{ij}-\mu_j}{\sigma_j},
+\end{align}
+with average $\mu_j=\mathbb{E}[\overline{\theta}_{ij}]$ and variance $\sigma_j=\textrm{Var}[\overline{\theta}_{ij}]$ computed over the $i$-index, associated with different models. Then, for each behavior type (Decive, Detect, and Disclose), the score of model $i$ is computed as the average of the background scores
+\begin{align}
+    \overline{s}_i=\frac{1}{J}\sum_{j=1}^Js_{ij},
+    \label{aggregated_score}
+\end{align}
+with $J$ the total number of backgrounds. The uncertainty of $\overline{s}_i$ is then computed from Eq. \eqref{aggregated_score}, by propagating $\delta\overline{\theta}_{ij}$ defined in \eqref{uncertainty}.
+
+In our methodology, we are assuming that background $j$ sets a scale controlled by $\mu_j$ and $\sigma_j$, and that $s_{ij}$ is a sampled from a Gaussian distribution with mean $\overline{s}_i$. Then, Eq. \eqref{aggregated_score} is a estimate of $\overline{s}_i$. Our methodology produces performance metrics that are robust under addition of backgorunds as one can check from Appendix \ref{appendix:benchmark_robustness}. The positive scores indicate above-average performance and negative scores indicate below-average performance, measured in units of standard deviation from the mean.
+
 
 
 \subsection{Mini-Mafia uses}
@@ -226,18 +205,6 @@ Additionally, the Mini-Mafia framework provides a unique setting to study name b
 
 
 \section{Results}
-
-To provide a unified comparison across different experimental backgrounds, we developed an aggregated scoring methodology that standardizes model performance. For each behavior type (Deceive, Detect, Disclose), we:
-
-\begin{enumerate}
-    \item Compute performance metrics for each model across all background conditions
-    \item For each background, calculate the mean ($\mu$) and standard deviation ($\sigma$) of win rates across all tested models
-    \item Standardize each model's performance: $\text{score} = \frac{\text{win\_rate} - \mu}{\sigma}$
-    \item Average these standardized scores across all backgrounds to obtain the final aggregated score
-    \item Propagate uncertainties using standard error of the mean across backgrounds
-\end{enumerate}
-
-This methodology produces background-invariant performance metrics where positive scores indicate above-average performance and negative scores indicate below-average performance, measured in units of standard deviation from the mean.
 
 Table~\ref{tab:aggregated_scores} presents the complete aggregated performance scores for all models across the three behavior types. The best performers in each category are \textbf{GPT-5} for Deceive (1.70 ± 0.51), \textbf{DeepSeek R1} for Detect (1.04 ± 0.10), and \textbf{DeepSeek R1} for Disclose (1.32 ± 0.27). The worst performers are \textbf{Llama 3.1 8B} for Deceive (-1.05 ± 0.24), \textbf{Llama 3.1 8B} for Detect (-2.45 ± 0.11), and \textbf{Claude Sonnet 4} for Disclose (-0.87 ± 0.23). Notably, some models show consistent performance across tasks (e.g., Gemini 2.5 Flash Lite with near-zero scores), while others exhibit specialization in specific behaviors.
 
@@ -564,6 +531,7 @@ We have successfully established Mini-Mafia as a novel benchmark for evaluating 
 Our aggregated analysis provides the first systematic ranking of contemporary LLMs across these critical social interaction dimensions. The methodology's ability to control for background effects while measuring intrinsic capabilities offers a valuable tool for the AI safety and alignment communities to track the evolution of potentially concerning behaviors as models become more sophisticated \citep{hendrycks2023overview, morris2023levels}.
 
 \section{Future Directions}
+\label{sec:future_directions}
 
 \subsection{Human Baseline for Safety Assessment}
 
@@ -575,6 +543,27 @@ While our current study provides valuable insights, it represents only the begin
 
 For each model in a given behavioral dimension, performance could be aggregated across all possible background configurations (essentially aggregating every relevant slice of the $D$-dimensional cube), providing robust, background-invariant measures of each model's intrinsic capabilities. Here, due to limited computational resources, we explored a computationally cheap chunk of this cube. Although the comprehensive analysis might change results, we believe our chunk already reveals general features that should be maintained and even accentuated after the comprehensive analysis. The resulting dataset could be visualized as a three-dimensional behavioral space, where each model occupies a unique position defined by its standardized performance across the Detect (villager), Disclose (detective), and Deceive (mafioso) dimensions, revealing the full spectrum of strategic AI behavior in adversarial social settings.
 
+
+\subsection{Theoretical Extensions of the Hierarchical Model}
+
+Our current hierarchical Bayesian framework represents a significant methodological advance, but it embodies a fundamental simplification that opens rich avenues for theoretical investigation. The model currently treats each behavioral capability (Deceive, Detect, Disclose) as independent, with background effects $\beta_j$ serving as fixed nuisance parameters. However, this approach constitutes an approximation of a more complex underlying reality.
+
+In our experimental design, when we vary the mafioso model while fixing detective and villager roles as background, we implicitly assume that $\beta_j$ captures all relevant background effects through a single scalar parameter. Yet the background should logically be a function of the intrinsic capabilities of the fixed models: when testing deception, $\beta_j$ should depend on both the \textit{detect} capability of the villager model and the \textit{disclose} capability of the detective model in the background configuration.
+
+A more theoretically satisfying approach would model game outcomes as emerging from the interaction of three fundamental model capabilities. Consider a model where each LLM $i$ possesses intrinsic abilities $(\alpha_i^{\text{deceive}}, \alpha_i^{\text{detect}}, \alpha_i^{\text{disclose}})$, and game outcomes arise from some functional form:
+
+\begin{align}
+\text{logit}(p_{\text{mafia wins}}) = f(\alpha_m^{\text{deceive}}, \alpha_d^{\text{detect}}, \alpha_v^{\text{disclose}})
+\end{align}
+
+where $m$, $d$, and $v$ denote the mafioso, detective, and villager models respectively. The current background parameters $\beta_j$ would then emerge as:
+\begin{align}
+\beta_j = g(\alpha_j^{\text{detect}}, \alpha_j^{\text{disclose}})
+\end{align}
+
+Investigating the functional forms of $f(\cdot)$ and $g(\cdot)$ represents a fascinating theoretical challenge. Are these functions additive, multiplicative, or more complex? Do capabilities interact synergistically or competitively? Such a unified model would enable prediction of any $D^3$ experimental configuration from just $3D$ estimated parameters—the three intrinsic capabilities of each of the $D$ models—dramatically reducing experimental requirements while providing deeper theoretical insight into multi-agent strategic interactions.
+
+This extension would transform our current descriptive framework into a predictive theory of strategic AI behavior, with profound implications for understanding how model capabilities compose in adversarial settings.
 
 \subsection{General Mafia Game Experiments}
 
@@ -1121,5 +1110,60 @@ The robustness analysis reveals important insights about the stability of our De
 \textbf{Statistical Significance:} The z-score differences between top performers are relatively small (ranging from -1.05 to -1.37), indicating that the ranking changes may be within statistical noise rather than representing fundamental differences in model capabilities.
 
 These findings demonstrate that our aggregated Deceive benchmark provides an exceptionally robust and reliable framework for evaluating deceptive capabilities. The perfect stability of rankings across all background exclusions—with DeepSeek V3.1 consistently maintaining top performance and Claude Opus 4.1 consistently in second place—strongly validates the methodology's ability to identify genuine performance differences rather than experimental artifacts. The benchmark demonstrates outstanding reliability in identifying clear performance tiers and consistently distinguishing strong from weak performers, making it a highly dependable tool for evaluating LLM deceptive capabilities across diverse experimental conditions.
+
+\section{Hierarchical Bayesian Model}
+\label{appendix:hierarchical_bayesian}
+
+While our main analysis employs the simplified aggregation methodology for transparency and interpretability, we also explored a more sophisticated hierarchical Bayesian approach that jointly estimates model performance across all backgrounds while accounting for background-specific effects.
+
+\subsection{Model Specification}
+
+Let $z_{ij}$ denote the number of successes observed for model $i \in \{1, \ldots, I\}$ in background $j \in \{1, \ldots, J\}$ out of $n_{ij}$ trials. The hierarchical model specifies a binomial likelihood for the observed data:
+\begin{align}
+z_{ij} \sim \text{Binomial}(n_{ij}, p_{ij}),
+\end{align}
+where $p_{ij}$ represents the success probability for model $i$ in background $j$.
+
+To ensure probabilities remain in $[0,1]$ while enabling linear modeling, we employ a logit link function:
+\begin{align}
+\text{logit}(p_{ij}) = \alpha_i + \beta_j,
+\end{align}
+where $\alpha_i$ represents the intrinsic ability of model $i$ and $\beta_j$ captures the background-specific effect. For identifiability, we impose the constraint $\sum_j \beta_j = 0$.
+
+The hierarchical structure assumes model abilities arise from a common distribution:
+\begin{align}
+\alpha_i &\sim \mathcal{N}(\mu_\alpha, \sigma_\alpha^2), \\
+\beta_j &\sim \mathcal{N}(0, \sigma_\beta^2),
+\end{align}
+with hyperpriors $\mu_\alpha \sim \mathcal{N}(0, \tau_\mu^2)$, $\sigma_\alpha \sim \text{Half-Normal}(\tau_\alpha)$, and $\sigma_\beta \sim \text{Half-Normal}(\tau_\beta)$.
+
+This formulation enables partial pooling: models with limited observations in certain backgrounds borrow statistical strength from other models and backgrounds, yielding more stable estimates than independent analysis. The posterior distribution $p(\alpha_i | \{z_{ij}, n_{ij}\})$ provides full uncertainty quantification for model rankings and pairwise comparisons.
+
+\subsection{Comparison with Simplified Methodology}
+
+Figure~\ref{fig:methodology_comparison} presents a direct comparison between our simplified z-score aggregation approach and the hierarchical Bayesian alternative for the Deceive capability. Both methodologies produce remarkably similar rankings and relative performance assessments, validating our choice of the simpler, more interpretable approach for the main analysis.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../results/mafioso_score_benchmark.png}
+        \caption{Simplified Z-score Aggregation}
+        \label{fig:simplified_method}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../results/mafioso_ability_hierarchical_bayesian.png}
+        \caption{Hierarchical Bayesian ($\alpha_i$ estimates)}
+        \label{fig:hierarchical_method}
+    \end{subfigure}
+    \caption{Comparison of methodological approaches for Deceive capability assessment. Both the simplified z-score aggregation (left) and hierarchical Bayesian approach (right) produce qualitatively identical rankings, with similar relative performance differences between models. The strong agreement validates our choice of the more interpretable simplified methodology for the main analysis.}
+    \label{fig:methodology_comparison}
+\end{figure}
+
+The close correspondence between methodologies demonstrates that while the hierarchical Bayesian approach offers theoretical elegance and principled uncertainty quantification, it does not substantially alter the core findings. Both approaches identify the same top and bottom performers with similar relative magnitudes, supporting the robustness of our conclusions across different statistical frameworks.
+
+However, as discussed in Section~\ref{sec:future_directions}, both methodologies represent approximations of a more complete theoretical framework that would jointly model the interaction of all three behavioral capabilities (Deceive, Detect, Disclose) in determining game outcomes.
 
 \end{document}
