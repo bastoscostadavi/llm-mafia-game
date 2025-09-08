@@ -97,15 +97,16 @@ def load_data_files(behavior_type, exclude_background=None):
     return datasets
 
 def compute_z_scores(datasets):
-    """Compute z-scores for each model across all backgrounds"""
-    # Collect all z-scores for each model
+    """Compute z-scores and their uncertainties for each model across all backgrounds"""
+    # Collect all z-scores and their uncertainties for each model
     model_z_scores = defaultdict(list)
+    model_z_uncertainties = defaultdict(list)  # Store z-score uncertainties
     model_companies = {}  # Store company mapping
     
     for dataset in datasets:
         models = dataset['models']
         win_rates = np.array(dataset['win_rates'])
-        errors = np.array(dataset['errors'])
+        errors = np.array(dataset['errors'])  # These are the Bayesian standard deviations
         companies = dataset['companies']
         
         # Store company info for each model
@@ -123,28 +124,34 @@ def compute_z_scores(datasets):
         # Compute z-scores for each model
         z_scores = (win_rates - mean_rate) / std_rate
         
-        # Store z-scores by model
-        for model, z_score in zip(models, z_scores):
+        # Compute z-score uncertainties via error propagation
+        # δz = δ(win_rate) / std_rate  (treating std_rate as exact for simplicity)
+        z_uncertainties = errors / std_rate
+        
+        # Store z-scores and their uncertainties by model
+        for model, z_score, z_uncertainty in zip(models, z_scores, z_uncertainties):
             model_z_scores[model].append(z_score)
+            model_z_uncertainties[model].append(z_uncertainty)
     
-    return model_z_scores, model_companies
+    return model_z_scores, model_z_uncertainties, model_companies
 
-def aggregate_z_scores(model_z_scores):
-    """Aggregate z-scores across backgrounds and compute uncertainties"""
+def aggregate_z_scores(model_z_scores, model_z_uncertainties):
+    """Aggregate z-scores across backgrounds and compute proper propagated uncertainties"""
     aggregated_results = {}
     
     for model, z_scores in model_z_scores.items():
         z_array = np.array(z_scores)
+        z_uncert_array = np.array(model_z_uncertainties[model])
         
         # Aggregate: mean z-score across backgrounds
         mean_z_score = np.mean(z_array)
         
-        # Uncertainty: standard error of the mean
-        sem_z_score = np.std(z_array, ddof=1) / np.sqrt(len(z_array)) if len(z_array) > 1 else 0
+        # Proper uncertainty propagation for the mean: δz_mean = √(Σδz_i²)/n
+        propagated_uncertainty = np.sqrt(np.sum(z_uncert_array**2)) / len(z_array)
         
         aggregated_results[model] = {
             'mean_z_score': mean_z_score,
-            'sem_z_score': sem_z_score,
+            'sem_z_score': propagated_uncertainty,
             'n_backgrounds': len(z_array)
         }
     
@@ -333,26 +340,39 @@ def create_exponentiated_plot(aggregated_results, model_companies, behavior_type
     
     # Set axis labels based on behavior type
     behavior_labels = {
-        'Deceive': 'Exponentiated Deceive Score',
-        'Detect': 'Exponentiated Detect Score', 
-        'Disclose': 'Exponentiated Disclose Score'
+        'Deceive': 'Deceive Score',
+        'Detect': 'Detect Score', 
+        'Disclose': 'Disclose Score'
     }
-    xlabel = behavior_labels.get(behavior_type, 'Exponentiated Performance Score')
+    xlabel = behavior_labels.get(behavior_type, 'Performance Score')
     ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
     ax.set_yticks([])  # Remove y-axis labels
     
-    # Set x-axis limits based on data range
+    # Set data-driven x-axis limits with some padding
     max_val = max([s + e for s, e in zip(exp_scores, exp_errors)])
-    ax.set_xlim(-0.2, max_val * 1.1)
+    min_val = min([s - e for s, e in zip(exp_scores, exp_errors)])
+    padding = (max_val - min_val) * 0.1
+    x_min = max(0, min_val - padding)
+    x_max = max_val + padding
+    ax.set_xlim(x_min, x_max)
     
-    # Add vertical line at exp(0) = 1
-    ax.axvline(x=1, color='gray', alpha=0.5, linewidth=1, linestyle='--')
+    # Add vertical line at exp(0) = 1 - the key reference point
+    if x_min <= 1 <= x_max:  # Only show if 1 is in the visible range
+        ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
     
-    # Add custom grid lines
-    grid_lines = [0.5, 1, 2, 4, 8]
-    for x in grid_lines:
-        if x != 1 and x < max_val * 1.1:  # Don't double-draw the 1 line
-            ax.axvline(x=x, color='gray', alpha=0.2, linewidth=0.5)
+    # Minimal, clean x-axis ticks - let matplotlib choose reasonable ones
+    # But ensure 1 is included if it's in range
+    if x_min <= 1 <= x_max:
+        # Get matplotlib's suggested ticks
+        suggested_ticks = ax.get_xticks()
+        # Add 1 if it's not already close to an existing tick
+        ticks = list(suggested_ticks)
+        if not any(abs(t - 1) < 0.1 for t in ticks):
+            ticks.append(1)
+        ticks = [t for t in ticks if x_min <= t <= x_max]
+        ticks.sort()
+        ax.set_xticks(ticks)
+    ax.xaxis.set_tick_params(labelsize=24)
     
     # Hide all spines like benchmark plots
     ax.spines['top'].set_visible(False)
@@ -361,7 +381,7 @@ def create_exponentiated_plot(aggregated_results, model_companies, behavior_type
     ax.spines['bottom'].set_visible(False)  # Hide default bottom spine
     
     # Add custom bottom line
-    ax.plot([0, max_val * 1.1], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
+    ax.plot([x_min, x_max], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
@@ -397,11 +417,11 @@ def main():
             print(f"   Loaded {len(datasets)} background datasets")
             
             # Compute z-scores
-            model_z_scores, model_companies = compute_z_scores(datasets)
+            model_z_scores, model_z_uncertainties, model_companies = compute_z_scores(datasets)
             print(f"   Computed z-scores for {len(model_z_scores)} models")
             
             # Aggregate across backgrounds
-            aggregated_results = aggregate_z_scores(model_z_scores)
+            aggregated_results = aggregate_z_scores(model_z_scores, model_z_uncertainties)
             print(f"   Aggregated results across backgrounds")
             
             # Create plot
@@ -418,6 +438,13 @@ def main():
             print(f"   📈 Created plot with {summary['n_models']} models")
             print(f"   📋 Top performer: {summary['models'][0]} (z-score: {summary['z_scores'][0]:.2f})")
             print(f"   📈 Created exponentiated plot with {exp_summary['n_models']} models")
+            
+            # Print exponentiated scores for table verification
+            print(f"   📊 Exponentiated scores for {behavior_info['name']}:")
+            for i, model in enumerate(exp_summary['models']):
+                score = exp_summary['exp_scores'][i]
+                error = exp_summary['exp_errors'][i] 
+                print(f"      {model}: {score:.2f} ± {error:.2f}")
             
         except Exception as e:
             print(f"   ❌ Error processing {behavior_key}: {e}")
@@ -451,11 +478,11 @@ def main():
                 continue
                 
             # Compute z-scores
-            model_z_scores, model_companies = compute_z_scores(datasets)
+            model_z_scores, model_z_uncertainties, model_companies = compute_z_scores(datasets)
             print(f"   Computed z-scores for {len(model_z_scores)} models")
             
             # Aggregate across backgrounds
-            aggregated_results = aggregate_z_scores(model_z_scores)
+            aggregated_results = aggregate_z_scores(model_z_scores, model_z_uncertainties)
             print(f"   Aggregated results across remaining backgrounds")
             
             # Create plot

@@ -375,6 +375,97 @@ def create_ability_plot(all_results, experiment_type, filename):
     
     print(f"Hierarchical Bayesian ability plot saved as {filename}")
 
+def create_ability_plot_exponential(all_results, experiment_type, filename):
+    """Create plot showing exponentiated model abilities exp(α_i) across all backgrounds"""
+    
+    # Use non-interactive backend  
+    plt.ioff()
+    
+    # Set font size
+    plt.rcParams.update({
+        'font.size': 24,
+        'axes.labelsize': 24,
+        'axes.titlesize': 24,
+        'xtick.labelsize': 24,
+        'ytick.labelsize': 24,
+        'legend.fontsize': 24,
+        'figure.titlesize': 24
+    })
+    
+    # Aggregate α_i estimates across all backgrounds (should be consistent)
+    # Take the first background's results since α_i should be the same
+    first_bg = list(all_results.keys())[0]
+    results = all_results[first_bg]
+    
+    # Sort by ability
+    models = list(results['alpha'].keys())
+    abilities = [results['alpha'][model] for model in models]
+    ability_stds = [results['alpha_std'][model] for model in models]
+    
+    # Exponentiate: exp(α_i) with error propagation
+    exp_abilities = [np.exp(alpha) for alpha in abilities]
+    exp_ability_stds = [np.exp(alpha) * std for alpha, std in zip(abilities, ability_stds)]
+    
+    # Sort by exponentiated ability (ascending, so best performers at top)
+    sorted_indices = np.argsort(exp_abilities)
+    models = [models[i] for i in sorted_indices]
+    exp_abilities = [exp_abilities[i] for i in sorted_indices]  
+    exp_ability_stds = [exp_ability_stds[i] for i in sorted_indices]
+    companies = [get_company_from_model(model) for model in models]
+    
+    fig, ax = plt.subplots(figsize=(14, 7))
+    
+    y_positions = range(len(models))
+    
+    # Create bars
+    bars = ax.barh(y_positions, exp_abilities, xerr=exp_ability_stds,
+                   color='#E74C3C', alpha=0.8, height=0.6,
+                   error_kw={'capsize': 5, 'capthick': 2})
+    
+    # Add model names
+    for i, (model, exp_ability, exp_ability_std) in enumerate(zip(models, exp_abilities, exp_ability_stds)):
+        x_pos = max(exp_ability + exp_ability_std + 0.05, 0.05)
+        ax.text(x_pos, i, f'{model}',
+                ha='left', va='center', fontweight='bold', fontsize=24)
+    
+    # Set axis labels
+    behavior_labels = {
+        'mafioso': 'Deceive Score',
+        'detective': 'Disclose Score',
+        'villager': 'Detect Score'
+    }
+    xlabel = behavior_labels.get(experiment_type, 'Model Score')
+    ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
+    ax.set_yticks([])
+    
+    # Set data-driven x-axis limits with some padding
+    max_val = max([s + e for s, e in zip(exp_abilities, exp_ability_stds)])
+    min_val = min([s - e for s, e in zip(exp_abilities, exp_ability_stds)])
+    padding = (max_val - min_val) * 0.1
+    x_min = max(0, min_val - padding)
+    x_max = max_val + padding
+    ax.set_xlim(x_min, x_max)
+    
+    # Add vertical line at exp(0) = 1 - the key reference point
+    if x_min <= 1 <= x_max:  # Only show if 1 is in the visible range
+        ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
+    
+    # Add grid
+    ax.grid(True, alpha=0.3, axis='x')
+    ax.set_axisbelow(True)
+    
+    # Hide spines
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    
+    plt.tight_layout()
+    plt.savefig(filename, dpi=300, bbox_inches='tight',
+                facecolor='white', edgecolor='none')
+    plt.close()
+    
+    print(f"Hierarchical Bayesian exponentiated ability plot saved as {filename}")
+
 def main():
     """Main function to generate hierarchical Bayesian plots"""
     
@@ -438,10 +529,14 @@ def main():
                     print(f"     Error fitting model for {background}: {e}")
                     continue
         
-        # Create aggregated ability plot
+        # Create aggregated ability plot (both regular and exponentiated)
         if all_results:
             ability_filename = f"{exp_type}_ability_hierarchical_bayesian.png"  
             create_ability_plot(all_results, exp_type, ability_filename)
+            
+            # Create exponentiated ability plot
+            exp_ability_filename = f"{exp_type}_ability_hierarchical_bayesian_exponential.png"
+            create_ability_plot_exponential(all_results, exp_type, exp_ability_filename)
     
     print("\n✅ Hierarchical Bayesian analysis complete!")
     print(f"📁 Generated plots in current directory")

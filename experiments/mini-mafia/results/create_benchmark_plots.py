@@ -484,9 +484,9 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
                    error_kw={'capsize': 5, 'capthick': 2})
     
     # Create hatched overlay bars for tie-based wins
-    tie_bars = ax.barh(y_positions, tie_values, 
-                       color=bar_color, alpha=0.8, height=0.6,
-                       hatch='///', edgecolor='white', linewidth=1)
+    # tie_bars = ax.barh(y_positions, tie_values, 
+    #                    color=bar_color, alpha=0.8, height=0.6,
+    #                    hatch='///', edgecolor='white', linewidth=1)
     
     # Add model names on the right side of bars (without values)
     for i, model in enumerate(models):
@@ -523,23 +523,13 @@ def create_benchmark_plot(benchmark_data, title, filename, background_key="", us
     # Formatting
     ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
     ax.set_yticks([])  # Remove y-axis labels
-    ax.set_xlim(0, 100)  # Set range from 0 to 100 (full domain)
     
-    # Customize x-axis to only show positive values
-    ax.set_xticks([0, 20, 40, 60, 80, 100])
+    # Let matplotlib choose optimal x-axis range and ticks automatically
+    ax.grid(True, axis='x', color='gray', alpha=0.3, linewidth=0.5)
     
-    # Add custom grid lines only for positive values
-    for x in [0, 20, 40, 60, 80, 100]:
-        ax.axvline(x=x, color='gray', alpha=0.3, linewidth=0.5)
-    
-    # Hide all spines
+    # Hide top and right spines, keep bottom and left for automatic scaling
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    
-    # Add custom bottom axis line only from 0 to 100
-    ax.plot([0, 100], [ax.get_ylim()[0], ax.get_ylim()[0]], color='black', linewidth=0.8)
     
     plt.tight_layout()
     plt.savefig(filename, dpi=300, bbox_inches='tight', 
@@ -561,9 +551,9 @@ def main():
     
     # Define allowed models and backgrounds for experiments
     allowed_models = [
-        'DeepSeek V3.1', 'Claude Opus 4.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
-        'Grok 3 Mini', 'GPT-4.1 Mini', 'GPT-5', 'GPT-5 Mini', 'Mistral 7B Instruct', 
-        'Qwen2.5 7B Instruct', 'Llama 3.1 8B'
+        'DeepSeek V3.1', 'Claude Sonnet 4', 'Gemini 2.5 Flash Lite',
+        'Grok 3 Mini', 'GPT-4.1 Mini', 'GPT-5 Mini', 'Mistral 7B Instruct', 
+        'Qwen2.5 7B Instruct', 'Llama 3.1 8B', 'Claude Opus 4.1'
     ]
     
     allowed_backgrounds = [
