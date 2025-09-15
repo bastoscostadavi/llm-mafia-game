@@ -1,87 +1,126 @@
 # LLM Mafia Game
 
-A comprehensive research framework for studying Large Language Models (LLMs) in social deduction scenarios through the classic Mafia party game. This system enables systematic investigation of AI social intelligence, theory of mind, and strategic reasoning capabilities.
+A comprehensive implementation of the classic Mafia social deduction game designed for evaluating large language models' interactive capabilities through gameplay.
 
-## Research Purpose
+## Overview
 
-This framework is designed for scientific study of fundamental AI capabilities in social contexts:
+This repository provides a general-purpose Mafia game implementation that can be configured with different numbers of players, roles, and game mechanics. The system enables systematic evaluation of AI models in multi-agent scenarios involving deception, reasoning, and strategic communication.
 
-- **Deception**: How effectively can AI agents mislead others while maintaining plausible cover?
-- **Detection**: Can AI systems identify lies and inconsistencies in others' behavior? 
-- **Disclosure**: How do agents decide what information to reveal or conceal strategically?
-- **Theory of Mind**: Do LLMs demonstrate understanding of others' knowledge, beliefs, and intentions?
-- **Social Intelligence**: Can AI navigate complex multi-party interactions with competing objectives?
+## Game Implementation
 
-## Game Mechanics
+### Core Features
 
-**Roles:**
-- **Detective** (Town): Has investigative powers, wins by eliminating the Mafioso
-- **Mafioso** (Mafia): Secretly eliminates opponents, wins by avoiding detection  
-- **Villager** (Town): No special powers, must identify threats through reasoning
+- **Flexible Game Configuration**: Support for variable numbers of players, roles, and game mechanics
+- **Multi-Agent LLM Support**: Compatible with various language models through a unified interface
+- **Complete Game Flow**: Implements full Mafia gameplay including night phases, day discussions, and voting
+- **Structured Communication**: Standardized prompt templates and response parsing for consistent AI interactions
+- **Game State Management**: Comprehensive tracking of player roles, actions, and game progression
 
-**Information Asymmetry:** Each role has different knowledge and abilities, creating rich strategic dynamics where agents must infer hidden information from limited observations.
+### Supported Roles
 
-## Structure
+- **Mafia**: Informed minority that eliminates town members during night phases
+- **Detective**: Town members with investigation abilities to identify mafia
+- **Villager**: Town members with voting power but no special abilities
+- **Extensible Role System**: Framework supports additional custom roles
+
+### Game Phases
+
+1. **Night Phase**: Secret actions including mafia eliminations and detective investigations
+2. **Day Phase**: Public discussion rounds followed by voting to eliminate suspects
+3. **Win Conditions**: Town wins by eliminating all mafia; mafia wins by achieving parity
+
+## Project Structure
 
 ```
-llm-mafia-game/
-├── src/                    # Core game engine
-│   ├── agents.py          # Game agents (Detective, Mafioso, Villager)
-│   ├── prompt.txt         # Game prompt template
-│   ├── prompt_utils.py    # Prompt formatting utilities
-│   ├── config.py          # Model configurations
-│   ├── main.py            # Game state management
-│   └── llm_utils.py       # LLM interface wrappers
-├── experiments/           # Research experiments
-│   └── mini-mafia/        # 4-player Mafia variant
-├── models/                # Local model files (.gguf)
-├── run_game.py           # Interactive game launcher
-└── preset_games.py       # Predefined game configurations
+├── src/                    # Core game implementation
+├── models/                 # LLM integration and model configurations
+├── experiments/           # Specific experimental setups
+│   └── mini-mafia/       # Mini-Mafia benchmark implementation
+├── run_game.py           # Basic game execution script
+├── preset_games.py       # Predefined game configurations
+└── requirements.txt      # Python dependencies
 ```
+
+## Mini-Mafia Benchmark
+
+This repository includes the **Mini-Mafia Benchmark**, a specialized four-player variant designed for systematic evaluation of LLM capabilities. Mini-Mafia isolates three key interactive dimensions:
+
+- **Deceive**: Mafioso must mislead other players
+- **Detect**: Villager must identify deception
+- **Disclose**: Detective must effectively share information
+
+For detailed information about the Mini-Mafia benchmark, methodology, and results, see [`experiments/mini-mafia/`](experiments/mini-mafia/).
 
 ## Quick Start
 
-```bash
-# Interactive game menu
-python run_game.py
+### Installation
 
-# Run mini-mafia experiment
-cd experiments/mini-mafia
-python run_mini_mafia_batch.py 10
+```bash
+git clone https://github.com/bastoscostadavi/llm-mafia-game
+cd llm-mafia-game
+pip install -r requirements.txt
 ```
 
-## Models Supported
+### Basic Usage
 
-**Local**: Mistral 7B, Llama 3.1 8B, Qwen 2.5 7B, Gemma 2 27B, GPT-OSS 20B  
-**API**: GPT-4o/5, Claude Sonnet/Opus, Grok-3/4, DeepSeek V3, Gemini 2.5
+```bash
+# Run a basic game
+python run_game.py
 
-## Game Types
+# Run preset game configurations
+python preset_games.py
+```
 
-**Classic**: 6 players (2 mafiosos, 1 detective, 3 villagers)  
-**Mini-Mafia**: 4 players (1 mafioso, 1 detective, 2 villagers)
+### Configuration
 
-## Features
+Set up your model API keys in `.env`:
+```bash
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
+# Add other model provider keys as needed
+```
 
-- **Batch Experiments**: Run hundreds of games with automated data collection
-- **SQLite Storage**: Structured database with games, actions, votes, outcomes  
-- **Analysis Tools**: Performance benchmarks, bias detection, statistical plots
-- **Research Output**: Automated paper generation with LaTeX integration
-- **Interactive Tools**: Game viewer, database browser, real-time plotting
+## Research Applications
 
-## Configuration
+### Benchmarking
+- Systematic evaluation of LLM social intelligence capabilities
+- Cross-model performance comparisons in interactive scenarios
+- Capability-specific assessments (deception, detection, disclosure)
 
-Edit `src/config.py` for default model settings:
+### Multi-Agent Studies
+- Investigation of emergent behaviors in AI-AI interactions
+- Analysis of social biases and procedural advantages
+- Communication strategy evolution across different models
 
-```python
-DEFAULT_MODEL_CONFIGS = {
-    'detective': {'type': 'xai', 'model': 'grok-3-mini'},
-    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4'},
-    'villager': {'type': 'xai', 'model': 'grok-3-mini'}
+### AI Safety Research
+- Tracking deception capabilities relative to human baselines
+- Training data generation for deception detection systems
+- Early warning system for concerning social manipulation abilities
+
+## Citation
+
+If you use this implementation in your research, please cite:
+
+```bibtex
+@article{costa2025minimafia,
+  title={Deceive, Detect, and Disclose: Large Language Models Playing Mini-Mafia},
+  author={Costa, Davi Bastos and Vicente, Renato},
+  journal={arXiv preprint},
+  year={2025}
 }
 ```
 
-## Requirements
+## Contributing
 
-- Python 3.8+
-- API keys for cloud models (optional)
-- Local models in `models/` directory (optional)
+We welcome contributions to improve the game implementation, add new features, or extend the benchmark capabilities. Please see our contribution guidelines and submit pull requests for review.
+
+## License
+
+This project is released under [appropriate license]. See LICENSE file for details.
+
+## Support
+
+For questions, issues, or collaboration inquiries, please:
+- Open an issue on GitHub
+- Contact: davi.costa@usp.br
+- Visit our research group page: [TELUS Digital Research Hub](https://example.com)

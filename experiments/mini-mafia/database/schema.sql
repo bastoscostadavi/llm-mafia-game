@@ -90,3 +90,21 @@ CREATE INDEX idx_votes_target ON votes(voted_for);
 CREATE INDEX idx_game_players_game ON game_players(game_id);
 CREATE INDEX idx_game_players_role ON game_players(role);
 CREATE INDEX idx_game_players_character ON game_players(character_name);
+
+-- Benchmark table for Mini-Mafia experiments
+-- Links games to specific experimental configurations
+CREATE TABLE benchmark (
+    capability TEXT NOT NULL CHECK(capability IN ('deceive', 'detect', 'disclose')),
+    background TEXT NOT NULL, -- Model used for background roles (e.g., 'gpt_4_1_mini')
+    target TEXT NOT NULL, -- Model being tested in the variable role
+    game_id TEXT NOT NULL,
+    count INTEGER, -- Game number within this configuration (1-100)
+    PRIMARY KEY (capability, background, target, count),
+    FOREIGN KEY (game_id) REFERENCES games(game_id)
+);
+
+-- Index for benchmark queries
+CREATE INDEX idx_benchmark_capability ON benchmark(capability);
+CREATE INDEX idx_benchmark_background ON benchmark(background);
+CREATE INDEX idx_benchmark_target ON benchmark(target);
+CREATE INDEX idx_benchmark_game ON benchmark(game_id);
