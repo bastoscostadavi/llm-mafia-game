@@ -25,7 +25,7 @@ Mini-Mafia reduces the classic Mafia game to its essential interactive elements,
 ### Information Asymmetry
 - **Mafioso**: Knows who they eliminated (partial information)
 - **Detective**: Knows the mafioso's identity (complete information)
-- **Villager**: Has no special information (zero information)
+- **Villager**: Has no special information (no information)
 
 ## Benchmark Methodology
 
@@ -47,7 +47,7 @@ The benchmark uses a **background** methodology where two roles are held constan
 - **Models Evaluated**: 10 contemporary LLMs including Claude, GPT, Grok, DeepSeek, and others
 - **Backgrounds**: 5 different opponent configurations per capability
 - **Games per Configuration**: 100 games (5,000 total per capability)
-- **Total Dataset**: 15,000 unique games across all three capabilities
+- **Total Dataset**: 15,000 games across all three capabilities (14,000 unique games)
 
 ## Key Results
 

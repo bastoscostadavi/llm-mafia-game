@@ -123,4 +123,3 @@ This project is released under [appropriate license]. See LICENSE file for detai
 For questions, issues, or collaboration inquiries, please:
 - Open an issue on GitHub
 - Contact: davi.costa@usp.br
-- Visit our research group page: [TELUS Digital Research Hub](https://example.com)

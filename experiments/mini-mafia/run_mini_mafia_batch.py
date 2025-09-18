@@ -211,6 +211,7 @@ def main():
     parser.add_argument('--debug-responses', action='store_true', help='Show raw model responses when parsing fails')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
     parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
+    parser.add_argument('--model-configs', type=str, help='JSON string with model configurations')
     
     args = parser.parse_args()
     
@@ -255,8 +256,14 @@ def main():
     print(f"  Debug prompts: {debug}")
     
     try:
+        # Parse model configs if provided
+        model_configs = None
+        if args.model_configs:
+            import json
+            model_configs = json.loads(args.model_configs)
+        
         # Run the batch
-        batch_id = run_batch(n_games, debug_prompts=debug, temperature=args.temperature)
+        batch_id = run_batch(n_games, debug_prompts=debug, model_configs=model_configs, temperature=args.temperature)
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")
