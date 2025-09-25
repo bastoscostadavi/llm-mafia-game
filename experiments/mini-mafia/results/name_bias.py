@@ -8,33 +8,7 @@ import sqlite3
 import pandas as pd
 import numpy as np
 from pathlib import Path
-
-def bayesian_win_rate_estimation(wins, total_games):
-    """
-    Calculate Bayesian win rate estimation using Beta-Binomial posterior.
-
-    Uses uniform prior Beta(1,1) which leads to posterior Beta(wins+1, losses+1).
-    This implements the Laplace rule of succession from the article.
-
-    Args:
-        wins: Number of wins
-        total_games: Total number of games played
-
-    Returns:
-        tuple: (mean_win_rate, uncertainty_std)
-    """
-    # Bayesian estimation with uniform prior (Laplace rule of succession)
-    alpha = wins + 1
-    beta = total_games - wins + 1
-
-    # Mean of Beta(alpha, beta)
-    mean_win_rate = alpha / (alpha + beta)
-
-    # Variance of Beta(alpha, beta)
-    variance = (alpha * beta) / ((alpha + beta)**2 * (alpha + beta + 1))
-    uncertainty_std = np.sqrt(variance)
-
-    return mean_win_rate, uncertainty_std
+from utils import bayesian_win_rate
 
 def analyze_name_bias():
     """
@@ -83,7 +57,10 @@ def analyze_name_bias():
         wins = name_data['won'].sum()
 
         # Calculate Bayesian win rate and uncertainty
-        win_rate, uncertainty = bayesian_win_rate_estimation(wins, total_games)
+        win_rate, uncertainty = bayesian_win_rate(wins, total_games)
+        # Convert from percentage back to proportion for consistency with original format
+        win_rate = win_rate / 100
+        uncertainty = uncertainty / 100
 
         results.append({
             'character_name': name,
@@ -103,7 +80,10 @@ def analyze_name_bias():
     for gender, gender_data in [('Male', male_data), ('Female', female_data)]:
         total_games = len(gender_data)
         wins = gender_data['won'].sum()
-        win_rate, uncertainty = bayesian_win_rate_estimation(wins, total_games)
+        win_rate, uncertainty = bayesian_win_rate(wins, total_games)
+        # Convert from percentage back to proportion for consistency
+        win_rate = win_rate / 100
+        uncertainty = uncertainty / 100
 
         results.append({
             'character_name': gender,

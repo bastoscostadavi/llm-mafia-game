@@ -12,78 +12,20 @@ Bayesian model described in the paper:
 Generates hierarchical Bayesian scores for comparison with simplified methodology.
 """
 
-import sqlite3
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import warnings
 from collections import defaultdict
 import math
+from utils import get_display_name, create_horizontal_bar_plot, _MODEL_DISPLAY_NAMES
 
 # For Bayesian inference
-try:
-    import pymc as pm
-    import arviz as az
-    HAS_PYMC = True
-except ImportError:
-    print("⚠️  PyMC not available. Using approximate hierarchical Bayesian method.")
-    HAS_PYMC = False
+import pymc as pm
+import arviz as az
 
-warnings.filterwarnings('ignore')
 
-def get_company_color(model_name):
-    """Get color based on company, matching existing plots"""
-    company_colors = {
-        'Claude Opus 4.1': '#FF6B35',      # Anthropic orange
-        'Claude Sonnet 4': '#FF6B35',      # Anthropic orange
-        'DeepSeek V3.1': '#4ECDC4',        # DeepSeek teal
-        'GPT-4.1 Mini': '#45B7D1',        # OpenAI blue
-        'GPT-5 Mini': '#45B7D1',          # OpenAI blue
-        'Gemini 2.5 Flash Lite': '#96CEB4', # Google green
-        'Grok 3 Mini': '#FFEAA7',         # X yellow
-        'Llama 3.1 8B Instruct': '#DDA0DD', # Meta purple
-        'Mistral 7B Instruct': '#FFB6C1',  # Mistral pink
-        'Qwen2.5 7B Instruct': '#F0E68C'   # Alibaba khaki
-    }
-    return company_colors.get(model_name, '#666666')
 
 def create_hierarchical_bayesian_plot(models, scores, errors, capability_name):
     """Create hierarchical Bayesian score plot matching existing format exactly"""
-
-    # Use non-interactive backend
-    plt.ioff()
-
-    # Set font size - exact match
-    plt.rcParams.update({
-        'font.size': 24,
-        'axes.labelsize': 24,
-        'axes.titlesize': 24,
-        'xtick.labelsize': 24,
-        'ytick.labelsize': 24,
-        'legend.fontsize': 24,
-        'figure.titlesize': 24
-    })
-
-    # Sort by score (ascending, so best performers at top)
-    sorted_indices = np.argsort(scores)
-    sorted_models = [models[i] for i in sorted_indices]
-    sorted_scores = [scores[i] for i in sorted_indices]
-    sorted_errors = [errors[i] for i in sorted_indices]
-
-    fig, ax = plt.subplots(figsize=(14, 7))
-
-    y_positions = range(len(sorted_models))
-
-    # Create bars - use single color like original
-    bars = ax.barh(y_positions, sorted_scores, xerr=sorted_errors,
-                   color='#E74C3C', alpha=0.8, height=0.6,
-                   error_kw={'capsize': 5, 'capthick': 2})
-
-    # Add model names - exact positioning like original
-    for i, (model, score, error) in enumerate(zip(sorted_models, sorted_scores, sorted_errors)):
-        x_pos = max(score + error + 0.05, 0.05)
-        ax.text(x_pos, i, f'{model}',
-                ha='left', va='center', fontweight='bold', fontsize=24)
 
     # Set axis labels - match behavior labels
     behavior_labels = {
@@ -92,107 +34,73 @@ def create_hierarchical_bayesian_plot(models, scores, errors, capability_name):
         'disclose': 'Disclose Score'
     }
     xlabel = behavior_labels.get(capability_name.lower(), 'Model Score')
-    ax.set_xlabel(xlabel, fontsize=24, fontweight='bold')
-    ax.set_yticks([])
 
-    # Set data-driven x-axis limits with padding - exact match
-    max_val = max([s + e for s, e in zip(sorted_scores, sorted_errors)])
-    min_val = min([s - e for s, e in zip(sorted_scores, sorted_errors)])
-    padding = (max_val - min_val) * 0.1
-    x_min = 0
-    x_max = max_val + padding
-    ax.set_xlim(x_min, x_max)
-
-    # Add vertical line at exp(0) = 1 - exact match
-    if x_min <= 1 <= x_max:  # Only show if 1 is in the visible range
-        ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
-
-    # Add grid - exact match
-    ax.grid(True, alpha=0.3, axis='x')
-    ax.set_axisbelow(True)
-
-    # Hide spines - exact match
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-
-    plt.tight_layout()
-
-    # Save plot with new naming convention: scores_capability_hierarchical.png
+    # Save plot with hierarchical naming convention
     capability_clean = capability_name.lower()
     filename = f"scores_{capability_clean}_hierarchical.png"
 
-    plt.savefig(filename, dpi=300, bbox_inches='tight',
-                facecolor='white', edgecolor='none')
-    plt.close()
+    # Use unified plotting function
+    create_horizontal_bar_plot(
+        models=models,
+        values=scores,
+        errors=errors,
+        xlabel=xlabel,
+        filename=filename,
+        color='#E74C3C',
+        sort_ascending=True,
+        show_reference_line=True
+    )
 
     print(f"Hierarchical Bayesian plot saved as {filename}")
     return filename
 
-def get_display_name(model_name):
-    """Convert internal model names to display names"""
-    display_names = {
-        'claude_opus_4_1': 'Claude Opus 4.1',
-        'claude_sonnet_4': 'Claude Sonnet 4',
-        'deepseek_v3_1': 'DeepSeek V3.1',
-        'gemini_2_5_flash_lite': 'Gemini 2.5 Flash Lite',
-        'grok_3_mini': 'Grok 3 Mini',
-        'gpt_4_1_mini': 'GPT-4.1 Mini',
-        'gpt_5_mini': 'GPT-5 Mini',
-        'mistral_7b_instruct': 'Mistral 7B Instruct',
-        'qwen2_5_7b_instruct': 'Qwen2.5 7B Instruct',
-        'llama_3_1_8b_instruct': 'Llama 3.1 8B Instruct'
-    }
-    return display_names.get(model_name, model_name)
 
-def get_benchmark_data():
-    """Get win/total counts from benchmark table using all 15,000 entries"""
-    db_path = "../database/mini_mafia.db"
-    conn = sqlite3.connect(db_path)
+def load_win_counts_from_csv():
+    """Load win counts from the existing CSV file instead of querying database"""
+    print("🔍 Loading win counts from CSV...")
 
-    print("🔍 Loading benchmark data for hierarchical Bayesian analysis...")
+    # Read the win counts CSV
+    df = pd.read_csv('win_counts.csv')
 
-    # Query to get all benchmark entries with game outcomes
-    query = """
-    SELECT
-        b.capability,
-        b.background,
-        b.target,
-        g.winner,
-        COUNT(*) as total_games
-    FROM benchmark b
-    JOIN games g ON b.game_id = g.game_id
-    WHERE g.winner IS NOT NULL
-    GROUP BY b.capability, b.background, b.target, g.winner
-    """
-
-    df = pd.read_sql_query(query, conn)
-    conn.close()
-
-    # Process the data to get win counts per capability-background-target combination
+    # Process into the format expected by PyMC function
     results = {}
-    capabilities = ['deceive', 'detect', 'disclose']
 
-    for capability in capabilities:
+    for capability in ['Deceive', 'Detect', 'Disclose']:
         cap_data = df[df['capability'] == capability]
         win_counts = defaultdict(lambda: defaultdict(int))
 
         for _, row in cap_data.iterrows():
-            background = row['background']
-            target = row['target']
-            winner = row['winner']
-            games = row['total_games']
+            target = row['model']
+            # Convert display names back to internal names for consistency
+            target_internal = None
+            for internal, display in _MODEL_DISPLAY_NAMES.items():
+                if display == target:
+                    target_internal = internal
+                    break
 
-            # Determine if this is a win for the target model
-            if (capability == 'deceive' and winner == 'mafia') or \
-               (capability in ['detect', 'disclose'] and winner == 'town'):
-                win_counts[(target, background)]['wins'] += games
+            if target_internal is None:
+                continue  # Skip if we can't map back
 
-            win_counts[(target, background)]['total'] += games
+            # Process each background column
+            for background_display in ['DeepSeek V3.1', 'GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'Mistral 7B Instruct']:
+                if background_display in row:
+                    wins = int(row[background_display])
+                    total = 100  # Each combination has 100 games
 
-        results[capability] = win_counts
+                    # Convert display name back to internal name
+                    background_internal = None
+                    for internal, display in _MODEL_DISPLAY_NAMES.items():
+                        if display == background_display:
+                            background_internal = internal
+                            break
 
-    print(f"📊 Loaded data for {len(capabilities)} capabilities")
+                    if background_internal is not None:
+                        win_counts[(target_internal, background_internal)]['wins'] = wins
+                        win_counts[(target_internal, background_internal)]['total'] = total
+
+        results[capability.lower()] = win_counts
+
+    print(f"📊 Loaded data for {len(results)} capabilities from CSV")
     return results
 
 def run_hierarchical_bayesian_pymc(win_counts, capability):
@@ -262,78 +170,14 @@ def run_hierarchical_bayesian_pymc(win_counts, capability):
 
     return targets, alpha_mean, alpha_std
 
-def run_approximate_hierarchical_bayesian(win_counts, capability):
-    """Approximate hierarchical Bayesian analysis without PyMC"""
-
-    print(f"  📈 Running approximate hierarchical Bayesian for {capability}")
-
-    # Prepare data
-    data_list = []
-    for (target, background), counts in win_counts.items():
-        if counts['total'] > 0:
-            win_rate = counts['wins'] / counts['total']
-            data_list.append({
-                'target': target,
-                'background': background,
-                'win_rate': win_rate,
-                'wins': counts['wins'],
-                'total': counts['total']
-            })
-
-    data_df = pd.DataFrame(data_list)
-
-    # Get targets and backgrounds
-    targets = sorted(data_df['target'].unique())
-    backgrounds = sorted(data_df['background'].unique())
-
-    # Simple hierarchical approximation
-    # 1. Compute overall mean and variance
-    overall_logit = np.mean([np.log(max(0.01, min(0.99, wr)) / (1 - max(0.01, min(0.99, wr))))
-                            for wr in data_df['win_rate']])
-
-    # 2. Estimate target effects
-    target_effects = {}
-    target_errors = {}
-
-    for target in targets:
-        target_data = data_df[data_df['target'] == target]
-
-        if len(target_data) > 0:
-            # Weighted average of logits
-            logits = []
-            weights = []
-            for _, row in target_data.iterrows():
-                p = max(0.01, min(0.99, row['win_rate']))
-                logit = np.log(p / (1 - p))
-                weight = row['total']  # Weight by sample size
-                logits.append(logit)
-                weights.append(weight)
-
-            if weights:
-                weighted_logit = np.average(logits, weights=weights)
-                target_effects[target] = weighted_logit
-                # Approximate standard error
-                target_errors[target] = 1.0 / np.sqrt(sum(weights))
-            else:
-                target_effects[target] = overall_logit
-                target_errors[target] = 1.0
-        else:
-            target_effects[target] = overall_logit
-            target_errors[target] = 1.0
-
-    # Convert to alpha scale
-    alpha_mean = np.array([np.exp(target_effects[target]) for target in targets])
-    alpha_std = np.array([target_errors[target] * alpha_mean[i] for i, target in enumerate(targets)])
-
-    return targets, alpha_mean, alpha_std
 
 def create_hierarchical_bayesian_scores():
     """Create hierarchical Bayesian scores for all capabilities"""
 
     print("🔄 Creating hierarchical Bayesian scores...")
 
-    # Get benchmark data
-    benchmark_data = get_benchmark_data()
+    # Load data from existing CSV instead of database
+    benchmark_data = load_win_counts_from_csv()
 
     all_results = {}
 
@@ -342,14 +186,7 @@ def create_hierarchical_bayesian_scores():
 
         win_counts = benchmark_data[capability]
 
-        if HAS_PYMC:
-            try:
-                targets, alpha_mean, alpha_std = run_hierarchical_bayesian_pymc(win_counts, capability)
-            except Exception as e:
-                print(f"  ⚠️  PyMC failed, using approximate method: {e}")
-                targets, alpha_mean, alpha_std = run_approximate_hierarchical_bayesian(win_counts, capability)
-        else:
-            targets, alpha_mean, alpha_std = run_approximate_hierarchical_bayesian(win_counts, capability)
+        targets, alpha_mean, alpha_std = run_hierarchical_bayesian_pymc(win_counts, capability)
 
         # Store results
         results_df = pd.DataFrame({

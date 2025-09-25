@@ -14,10 +14,10 @@ Where μᵦ and σᵦ are the mean and std of win rates for background b.
 """
 
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
 import math
 from pathlib import Path
+from utils import create_horizontal_bar_plot
 
 
 def load_win_rates_data():
@@ -111,73 +111,26 @@ def calculate_aggregated_scores(win_rates_df, uncertainties_df, capability_name)
 
 def create_exponential_score_plot(exp_scores, exp_errors, capability_name):
     """Create exponential score plot for a specific capability"""
-    
-    # Sort models by score (ascending for consistent ordering)
-    sorted_data = sorted(zip(exp_scores.index, exp_scores.values, exp_errors.values), 
-                        key=lambda x: x[1])
-    
-    models = [x[0] for x in sorted_data]
-    scores = [x[1] for x in sorted_data] 
-    errors = [x[2] for x in sorted_data]
-    
+
+    models = exp_scores.index.tolist()
+    scores = exp_scores.values.tolist()
+    errors = exp_errors.values.tolist()
+
     filename = f"scores_{capability_name.lower()}.png"
-    
-    # Use non-interactive backend
-    plt.ioff()
-    
-    # Set font size to match LaTeX document
-    plt.rcParams.update({
-        'font.size': 24,
-        'axes.labelsize': 24,
-        'axes.titlesize': 24,
-        'xtick.labelsize': 24,
-        'ytick.labelsize': 24,
-        'legend.fontsize': 24,
-        'figure.titlesize': 24
-    })
-    
-    fig, ax = plt.subplots(figsize=(14, 7))
-    
-    y_positions = range(len(models))
-    
-    # Use original orange color from template
-    bar_color = '#E74C3C'  # Original aggregate score color
-    
-    # Create bars
-    bars = ax.barh(y_positions, scores, xerr=errors,
-                   color=bar_color, alpha=0.8, height=0.6,
-                   error_kw={'capsize': 5, 'capthick': 2})
-    
-    # Add model names on the right side of bars
-    for i, model in enumerate(models):
-        ax.text(scores[i] + errors[i] + 0.1, i, f'{model}',
-                ha='left', va='center', fontweight='bold', fontsize=24)
+    xlabel = f'{capability_name} Score'
 
-    # Formatting - Update legend text to show specific capability
-    ax.set_xlabel(f'{capability_name} Score', fontsize=24, fontweight='bold')
-    ax.set_yticks([])  # Remove y-axis labels
+    # Use unified plotting function
+    create_horizontal_bar_plot(
+        models=models,
+        values=scores,
+        errors=errors,
+        xlabel=xlabel,
+        filename=filename,
+        color='#E74C3C',  # Original aggregate score color
+        sort_ascending=True,
+        show_reference_line=True
+    )
 
-    # Set data-driven x-axis limits with padding
-    max_val = max([s + e for s, e in zip(scores, errors)])
-    min_val = min([s - e for s, e in zip(scores, errors)])
-    padding = (max_val - min_val) * 0.1
-    x_min = max(0, min_val - padding)
-    x_max = max_val + padding
-    ax.set_xlim(x_min, x_max)
-
-    # Add vertical line at exp(0) = 1 - same as hierarchical plots
-    if x_min <= 1 <= x_max:  # Only show if 1 is in the visible range
-        ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
-
-    # Grid and styling
-    ax.grid(True, axis='x', color='gray', alpha=0.3, linewidth=0.5)
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    
-    plt.tight_layout()
-    plt.savefig(filename, dpi=300, bbox_inches='tight',
-                facecolor='white', edgecolor='none')
-    plt.close()
     print(f"  Plot saved: {filename}")
 
 def create_results_table():

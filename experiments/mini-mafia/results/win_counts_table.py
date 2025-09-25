@@ -13,6 +13,7 @@ Output format:
 
 import sqlite3
 import pandas as pd
+from utils import get_display_name
 
 def create_win_counts_table():
     """Create win counts table from benchmark data."""
@@ -51,39 +52,18 @@ def create_win_counts_table():
         fill_value=0
     ).reset_index()
 
-    # Rename columns to match expected format
-    column_mapping = {
-        'deepseek_v3_1': 'DeepSeek V3.1',
-        'gpt_4_1_mini': 'GPT-4.1 Mini',
-        'gpt_5_mini': 'GPT-5 Mini',
-        'grok_3_mini': 'Grok 3 Mini',
-        'mistral_7b_instruct': 'Mistral 7B Instruct'
-    }
+    # Use centralized display name mapping for columns
+    pivot_df.columns = [get_display_name(col) for col in pivot_df.columns]
 
-    pivot_df.columns = [column_mapping.get(col, col) for col in pivot_df.columns]
-
-    # Rename model values to match expected format
-    model_mapping = {
-        'claude_opus_4_1': 'Claude Opus 4.1',
-        'claude_sonnet_4': 'Claude Sonnet 4',
-        'deepseek_v3_1': 'DeepSeek V3.1',
-        'gemini_2_5_flash_lite': 'Gemini 2.5 Flash Lite',
-        'gpt_4_1_mini': 'GPT-4.1 Mini',
-        'gpt_5_mini': 'GPT-5 Mini',
-        'grok_3_mini': 'Grok 3 Mini',
-        'llama_3_1_8b_instruct': 'Llama 3.1 8B Instruct',
-        'mistral_7b_instruct': 'Mistral 7B Instruct',
-        'qwen2_5_7b_instruct': 'Qwen2.5 7B Instruct'
-    }
-
-    pivot_df['model'] = pivot_df['model'].map(model_mapping)
+    # Use centralized display name mapping for models
+    pivot_df['model'] = pivot_df['model'].map(get_display_name)
 
     # Capitalize capability names
     pivot_df['capability'] = pivot_df['capability'].str.capitalize()
 
-    # Reorder columns
-    background_cols = ['DeepSeek V3.1', 'GPT-4.1 Mini', 'GPT-5 Mini', 'Grok 3 Mini', 'Mistral 7B Instruct']
-    pivot_df = pivot_df[['capability', 'model'] + background_cols]
+    # Reorder columns - get background columns dynamically
+    background_cols = [col for col in pivot_df.columns if col not in ['capability', 'model']]
+    pivot_df = pivot_df[['capability', 'model'] + sorted(background_cols)]
 
     # Save to CSV
     output_file = "win_counts.csv"

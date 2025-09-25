@@ -8,14 +8,7 @@ import sqlite3
 import math
 import csv
 from pathlib import Path
-
-
-def bayesian_win_rate(wins, total_games):
-    """Calculate Bayesian win rate estimate and uncertainty."""
-    mean = (wins + 1) / (total_games + 2)
-    variance = (mean * (1 - mean)) / (total_games + 3)
-    std = math.sqrt(variance)
-    return mean, std
+from utils import bayesian_win_rate
 
 
 def analyze_role_win_rates(db_path):
@@ -98,18 +91,14 @@ def analyze_role_win_rates(db_path):
 
         # Total win rate
         if stats['total_games'] > 0:
-            total_mean, total_std = bayesian_win_rate(stats['total_wins'], stats['total_games'])
-            total_win_rate = total_mean * 100
-            total_uncertainty = total_std * 100
+            total_win_rate, total_uncertainty = bayesian_win_rate(stats['total_wins'], stats['total_games'])
         else:
             total_win_rate = 0
             total_uncertainty = 0
 
         # Last speaker win rate
         if stats['last_speaker_games'] > 0:
-            last_mean, last_std = bayesian_win_rate(stats['last_speaker_wins'], stats['last_speaker_games'])
-            last_win_rate = last_mean * 100
-            last_uncertainty = last_std * 100
+            last_win_rate, last_uncertainty = bayesian_win_rate(stats['last_speaker_wins'], stats['last_speaker_games'])
         else:
             last_win_rate = 0
             last_uncertainty = 0
@@ -132,6 +121,46 @@ def analyze_role_win_rates(db_path):
             print(f"         : {stats['last_speaker_wins']:5}/{stats['last_speaker_games']:5} last  = {last_win_rate:5.2f}±{last_uncertainty:.2f}%")
         else:
             print(f"         : {'0':5}/{'0':5} last  = {'0.00':5}±{'0.00':.2f}%")
+
+    # Calculate aggregate statistics across all roles
+    total_games_all = sum(role_stats[role]['total_games'] for role in role_stats)
+    total_wins_all = sum(role_stats[role]['total_wins'] for role in role_stats)
+    last_speaker_games_all = sum(role_stats[role]['last_speaker_games'] for role in role_stats)
+    last_speaker_wins_all = sum(role_stats[role]['last_speaker_wins'] for role in role_stats)
+
+    # Compute aggregate win rates using Bayesian estimation
+    if total_games_all > 0:
+        agg_total_win_rate, agg_total_uncertainty = bayesian_win_rate(total_wins_all, total_games_all)
+    else:
+        agg_total_win_rate = 0
+        agg_total_uncertainty = 0
+
+    if last_speaker_games_all > 0:
+        agg_last_win_rate, agg_last_uncertainty = bayesian_win_rate(last_speaker_wins_all, last_speaker_games_all)
+    else:
+        agg_last_win_rate = 0
+        agg_last_uncertainty = 0
+
+    # Add aggregate results
+    aggregate_result = {
+        'role': 'aggregate',
+        'total_games': total_games_all,
+        'total_wins': total_wins_all,
+        'total_win_rate_pct': agg_total_win_rate,
+        'total_uncertainty_pct': agg_total_uncertainty,
+        'last_speaker_games': last_speaker_games_all,
+        'last_speaker_wins': last_speaker_wins_all,
+        'last_speaker_win_rate_pct': agg_last_win_rate,
+        'last_speaker_uncertainty_pct': agg_last_uncertainty
+    }
+    results.append(aggregate_result)
+
+    # Print aggregate results
+    print(f"\n{'Aggregate':9}: {total_wins_all:5}/{total_games_all:5} total = {agg_total_win_rate:5.2f}±{agg_total_uncertainty:.2f}%")
+    if last_speaker_games_all > 0:
+        print(f"         : {last_speaker_wins_all:5}/{last_speaker_games_all:5} last  = {agg_last_win_rate:5.2f}±{agg_last_uncertainty:.2f}%")
+    else:
+        print(f"         : {'0':5}/{'0':5} last  = {'0.00':5}±{'0.00':.2f}%")
 
     return results
 
