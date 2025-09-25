@@ -12,7 +12,7 @@ A compact version of the classic Mafia game:
 
 import sys
 import random
-sys.path.append('../..')
+sys.path.append('..')
 
 from src.main import create_game
 

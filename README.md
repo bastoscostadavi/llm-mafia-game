@@ -32,13 +32,12 @@ This repository provides a general-purpose Mafia game implementation that can be
 ## Project Structure
 
 ```
-├── src/                    # Core game implementation
-├── models/                 # LLM integration and model configurations
-├── experiments/           # Specific experimental setups
-│   └── mini-mafia/       # Mini-Mafia benchmark implementation
-├── run_game.py           # Basic game execution script
-├── preset_games.py       # Predefined game configurations
-└── requirements.txt      # Python dependencies
+├── src/                      # Core game implementation
+├── models/                   # LLM integration and model configurations
+├── mini-mafia-benchmark/     # Mini-Mafia benchmark implementation
+├── run_game.py              # Basic game execution script
+├── preset_games.py          # Predefined game configurations
+└── requirements.txt         # Python dependencies
 ```
 
 ## Mini-Mafia Benchmark
@@ -49,7 +48,7 @@ This repository includes the **Mini-Mafia Benchmark**, a specialized four-player
 - **Detect**: Villager must identify deception
 - **Disclose**: Detective must effectively share information
 
-For detailed information about the Mini-Mafia benchmark, methodology, and results, see [`experiments/mini-mafia/`](experiments/mini-mafia/).
+For detailed information about the Mini-Mafia benchmark, methodology, and results, see [`mini-mafia-benchmark/`](mini-mafia-benchmark/).
 
 ## Quick Start
 

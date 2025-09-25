@@ -70,7 +70,7 @@ Performance scores where 1.0 represents average performance:
 ## Repository Structure
 
 ```
-experiments/mini-mafia/
+mini-mafia-benchmark/
 ├── README.md                    # This file
 ├── run_mini_mafia_batch.py     # Batch experiment execution
 ├── experiment_design_table.csv # Experimental configuration
