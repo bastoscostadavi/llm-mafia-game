@@ -52,15 +52,20 @@ The benchmark uses a **background** methodology where two roles are held constan
 ## Key Results
 
 ### Performance Scores
-Performance scores where 1.0 represents average performance:
+Performance scores where 1.0 represents average performance, with uncertainties:
 
 | Model | Deceive | Detect | Disclose |
 |-------|---------|--------|----------|
-| DeepSeek V3.1 | **3.13** | 2.13 | 1.68 |
-| Grok 3 Mini | 2.05 | **6.70** | 1.90 |
-| GPT-5 Mini | 0.73 | 0.66 | **2.07** |
-| Claude Opus 4.1 | 2.20 | 1.98 | 1.92 |
-| Claude Sonnet 4 | 1.86 | **0.48** | 1.74 |
+| DeepSeek V3.1 | 1.79 ± 0.10 | 12.76 ± 3.24 | 13.85 ± 3.98 |
+| Grok 3 Mini | 1.61 ± 0.08 | 157.86 ± 97.44 | 18.44 ± 5.60 |
+| GPT-5 Mini | 1.37 ± 0.05 | 4.43 ± 0.59 | 22.15 ± 7.07 |
+| Claude Opus 4.1 | 1.68 ± 0.09 | 13.19 ± 3.45 | 16.41 ± 4.72 |
+| Claude Sonnet 4 | 1.62 ± 0.08 | 3.39 ± 0.37 | 13.81 ± 3.74 |
+| Gemini 2.5 Flash Lite | 1.52 ± 0.06 | 5.55 ± 0.87 | 6.38 ± 1.13 |
+| GPT-4.1 Mini | 1.33 ± 0.04 | 4.38 ± 0.59 | 9.73 ± 2.19 |
+| Mistral 7B Instruct | 1.36 ± 0.04 | 3.61 ± 0.41 | 2.86 ± 0.28 |
+| Qwen2.5 7B Instruct | 1.25 ± 0.03 | 4.02 ± 0.50 | 2.84 ± 0.27 |
+| Llama 3.1 8B Instruct | 1.23 ± 0.03 | 3.68 ± 0.45 | 1.32 ± 0.04 |
 
 ### Key Findings
 - **Model Specialization**: No single model dominates all dimensions
@@ -77,10 +82,13 @@ mini-mafia-benchmark/
 ├── database/
 │   └── mini_mafia.db           # Complete experimental dataset
 ├── results/                    # Analysis scripts and outputs
-│   ├── create_benchmark_plots.py
+│   ├── last_speaker_advantage.py
+│   ├── name_bias.py
 │   ├── scores_hierarchical_table_and_plot.py
-│   ├── gender_bias.py
-│   └── analyze_role_win_rates.py
+│   ├── scores_table_and_plot.py
+│   ├── utils.py
+│   ├── win_counts_table.py
+│   └── win_rates_table_and_plot.py
 └── article/                    # Research paper and LaTeX source
     ├── main.tex
     ├── main.pdf
