@@ -56,16 +56,16 @@ Performance scores where 1.0 represents average performance, with uncertainties:
 
 | Model | Deceive | Detect | Disclose |
 |-------|---------|--------|----------|
-| DeepSeek V3.1 | 1.79 ± 0.10 | 12.76 ± 3.24 | 13.85 ± 3.98 |
-| Grok 3 Mini | 1.61 ± 0.08 | 157.86 ± 97.44 | 18.44 ± 5.60 |
-| GPT-5 Mini | 1.37 ± 0.05 | 4.43 ± 0.59 | 22.15 ± 7.07 |
-| Claude Opus 4.1 | 1.68 ± 0.09 | 13.19 ± 3.45 | 16.41 ± 4.72 |
-| Claude Sonnet 4 | 1.62 ± 0.08 | 3.39 ± 0.37 | 13.81 ± 3.74 |
-| Gemini 2.5 Flash Lite | 1.52 ± 0.06 | 5.55 ± 0.87 | 6.38 ± 1.13 |
-| GPT-4.1 Mini | 1.33 ± 0.04 | 4.38 ± 0.59 | 9.73 ± 2.19 |
-| Mistral 7B Instruct | 1.36 ± 0.04 | 3.61 ± 0.41 | 2.86 ± 0.28 |
-| Qwen2.5 7B Instruct | 1.25 ± 0.03 | 4.02 ± 0.50 | 2.84 ± 0.27 |
-| Llama 3.1 8B Instruct | 1.23 ± 0.03 | 3.68 ± 0.45 | 1.32 ± 0.04 |
+| DeepSeek V3.1 | **3.09** ± 0.86 | 2.14 ± 0.42 | 1.69 ± 0.22 |
+| Grok 3 Mini | 2.05 ± 0.52 | **6.70** ± 1.16 | 1.93 ± 0.25 |
+| Claude Opus 4.1 | 2.18 ± 0.59 | 1.98 ± 0.38 | 1.94 ± 0.25 |
+| Claude Sonnet 4 | 1.83 ± 0.49 | **0.48** ± 0.10 | 1.76 ± 0.23 |
+| Gemini 2.5 Flash Lite | 1.28 ± 0.33 | 1.00 ± 0.21 | 1.11 ± 0.15 |
+| GPT-5 Mini | 0.86 ± 0.22 | 0.60 ± 0.13 | **1.92** ± 0.25 |
+| Mistral 7B Instruct | 0.67 ± 0.16 | 0.52 ± 0.11 | 0.53 ± 0.07 |
+| GPT-4.1 Mini | 0.53 ± 0.13 | 0.65 ± 0.14 | 1.51 ± 0.20 |
+| Qwen2.5 7B Instruct | 0.35 ± 0.08 | 0.64 ± 0.14 | 0.52 ± 0.07 |
+| Llama 3.1 8B Instruct | 0.29 ± 0.07 | 0.55 ± 0.12 | **0.10** ± 0.01 |
 
 ### Key Findings
 - **Model Specialization**: No single model dominates all dimensions
@@ -130,18 +130,28 @@ results = pd.read_sql_query("""
 
 ### Analysis Scripts
 
-- **`create_benchmark_plots.py`**: Generate performance score visualizations
-- **`gender_bias.py`**: Analyze character name bias effects
-- **`analyze_role_win_rates.py`**: Study last-speaker advantages
-- **`scores_hierarchical_table_and_plot.py`**: Hierarchical Bayesian analysis
+- **`win_counts_table.py`**: Create win counts table from benchmark data
+- **`win_rates_table_and_plot.py`**: Create win rates CSV and visualization plots
+- **`scores_hierarchical_table_and_plot.py`**: Hierarchical Bayesian analysis and score plots
+- **`name_bias.py`**: Analyze character name bias effects
+- **`last_speaker_advantage.py`**: Study role win rates and last-speaker advantages
+- **`utils.py`**: Shared utilities for Bayesian statistics and plotting functions
 
 ## Emergent Phenomena
 
-### Gender Bias in Trust Attribution
-Analysis across 14,000 games reveals systematic bias:
+### Name Bias in Trust Attribution
+Analysis across 14,000 unique games reveals systematic name bias in LLM trust attribution, reflected in win rates:
+
+**Individual Character Performance:**
+- **Bob**: 55.97 ± 0.48% win rate
+- **Alice**: 55.56 ± 0.48% win rate
+- **Charlie**: 54.16 ± 0.48% win rate
+- **Diana**: 53.76 ± 0.49% win rate
+
+**Gender-Based Analysis:**
 - **Male characters**: 55.06 ± 0.34% win rate
 - **Female characters**: 54.66 ± 0.34% win rate
-- **Male advantage**: 0.40 ± 0.48 percentage points
+- **Gender advantage**: Bob outperforms Diana by 2.20 ± 0.68 percentage points
 
 ### Last-Speaker Advantage
 Significant procedural advantages observed:
