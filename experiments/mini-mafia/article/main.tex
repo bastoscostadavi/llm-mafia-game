@@ -1,8 +1,5 @@
 \documentclass{article}
-\usepackage{iclr2025_conference,times}
-
-% Optional math commands from https://github.com/goodfeli/dlbook_notation.
-\input{math_commands.tex}
+\usepackage{iclr2026_conference,times}
 
 \usepackage{hyperref}
 \usepackage{url}
@@ -84,19 +81,13 @@ University of São Paulo \\
 \begin{document}
 \maketitle
 
+
 \begin{abstract}
-    Mafia is a social deduction game where informed mafia compete against uninformed town.
-    The game alternates between secret night phases where mafia kills and some roles use special abilities, and day phases where players discuss and vote to eliminate suspects.
-    This asymmetry of information and theory-of-mind reasoning requirements mirror real-world multi-agent deployments, making it ideal for evaluating large language models' social intelligence.
-    To enable systematic investigation, we introduce \textit{Mini-Mafia}\footnote{Code and data available at: \url{https://github.com/bastoscostadavi/llm-mafia-game}}: a streamlined four-player variant with one mafioso, one detective, and two villagers. We fix the mafioso to kill a villager and the detective to investigate the mafioso during the night phase, reducing the game to a single day phase of discussion and voting.
-    This design isolates three dimensions of interactive capabilities through role-specific win conditions: the mafioso must deceive, the villager must detect deception, and the detective must effectively disclose information.
-    To measure these capabilities, we have language models play against each other, creating the \textit{Mini-Mafia Benchmark}: a two-stage framework that estimates win rates within fixed opponent configurations then aggregates performance across configurations using standardized scoring.
-    Built entirely from model interactions without external data requirements, it evolves as new models are added, with each new model serving as a new opponent configuration to update the benchmark while also being evaluated against it.
-    Despite using minimal computational resources, our initial experiments reveal counterintuitive findings, including instances where smaller models significantly outperform their larger counterparts. 
-    Beyond benchmarking, Mini-Mafia enables quantitative investigation of emergent multi-agent phenomena, including name bias and last-speaker advantage. It can also be used to advance AI safety by generating training data for deception detectors and tracking deception capabilities of AI models against human baselines.
+    Mafia is a social deduction game where informed mafia compete against uninformed townsfolk. Its asymmetry of information and reliance on theory-of-mind reasoning mirror real-world multi-agent scenarios, making it a useful testbed for evaluating the social intelligence of large language models (LLMs). To support a systematic study, we introduce \textit{Mini-Mafia}: a simplified four-player variant with one mafioso, one detective and two villagers. We set the mafioso to kill a villager and the detective to investigate the mafioso during the night, reducing the game to a single day phase of discussion and voting. This setup isolates three interactive capabilities through role-specific win conditions: the mafioso must deceive, the villagers must detect deception, and the detective must effectively disclose information. To measure these skills, we have LLMs play against each other, creating the \textit{Mini-Mafia Benchmark}: a two-stage framework that first estimates win rates within fixed opponent configurations, then aggregates performance across them using standardized scoring. Built entirely from model interactions without external data, the benchmark evolves as new models are introduced, with each one serving both as a new opponent and as a subject of evaluation. Our experiments reveal counterintuitive results, including cases where smaller models outperform larger ones. Beyond benchmarking, Mini-Mafia enables quantitative study of emergent multi-agent dynamics such as name bias and last-speaker advantage. It also contributes to AI safety by generating training data for deception detectors and by tracking models’ deception capabilities against human baselines.
 \end{abstract}
 
 %\tableofcontents
+
 
 \section{Introduction}
 
@@ -107,32 +98,32 @@ Large language models (LLMs) are increasingly deployed in multi-agent contexts w
 Games have long served as proving grounds for artificial intelligence \citep{silver2016mastering}. Beyond entertainment, games function as ``magic circles" \citep{huizinga1938homo}, serving as controllable, repeatable scenarios that isolate specific capabilities while maintaining enough complexity to yield meaningful insights.
 
 %3. Mafia game and references:
-Mafia, also known as Werewolf, has emerged as a particularly powerful testbed. The game divides players into an informed minority (mafia) and an uninformed majority (town), alternating between hidden night phases and public day phases of discussion and voting. Success depends on deception, theory-of-mind reasoning, and strategic communication, making the game a natural environment for examining how LLMs perform in adversarial multi-agent settings. Building on this premise, prior work has developed: dynamic turn-taking systems \citep{bailis2024werewolfarena}, variants with potential role changes \citep{jin2024onuw}, reinforcement learning approaches \citep{xu2023languageagents}, fine-tuned agents \citep{shibata2023deepwolf}, external thinking module \citep{wu2024thinker}, and persuasion behavior dataset \citep{lai2022werewolfamongus}. Other studies have investigated leadership \citep{du2024helmsman}, iterative optimization pipelines \citep{xu2025lspo}, and role-conditioned strategies \citep{nakamori2025strategy}. Collectively, these works demonstrate Mafia's value as a testbed for LLMs interactive capabilities, while also highlighting its challenges: its complex structure complicates systematic benchmarking.
+Mafia, also known as Werewolf, has emerged as a particularly interesting testbed. The game divides players into an informed minority (mafia) and an uninformed majority (town), alternating between hidden night phases and public day phases of discussion and voting. Success depends on deception, theory-of-mind reasoning, and strategic communication, making the game a natural environment for examining how LLMs perform in adversarial multi-agent settings. Building on this premise, prior work has developed: dynamic turn-taking systems \citep{bailis2024werewolfarena}, variants with potential role changes \citep{jin2024onuw}, reinforcement learning approaches \citep{xu2023languageagents}, fine-tuned agents \citep{shibata2023deepwolf}, external thinking module \citep{wu2024thinker}, and persuasion behavior dataset \citep{lai2022werewolfamongus}. Other studies have investigated leadership \citep{du2024helmsman}, iterative optimization pipelines \citep{xu2025lspo}, and role-conditioned strategies \citep{nakamori2025strategy}. Collectively, these works demonstrate Mafia's value as a testbed for LLMs interactive capabilities, while also revealing its challenges: its complex structure complicates targeted and systematic benchmarking.
 
 %4. Mafia generality and AI safety.
-The value of Mafia as a testbed stems from its representation of a fundamental social structure: misaligned agents under asymmetric information. Mafia’s narrative of crime and investigation can be reframed in alternative terms: the mafioso as an overconfident AI hype entrepreneur, the detective as the cautious AI researcher, and the villager as the unsuspecting investor. Furthermore, 
+The value of Mafia as a testbed stems from its representation of  a fundamental social interaction pattern: misaligned agents under asymmetric information. Mafia’s narrative of crime and investigation can be reframed in alternative terms: the mafioso as an overconfident AI hype entrepreneur, the detective as the cautious AI researcher, and the villager as the unsuspecting investor. Furthermore, 
 the game instantiates the very conditions under which advanced systems may manipulate, mislead, or strategically withhold information, making it directly relevant to AI safety evaluations of truthfulness and deception \citep{park2023, evans2021truthful}.
 
 %5. Mini-Mafia variant
-To enable systematic benchmarking of LLMs’ interactive capabilities, we introduce \textit{Mini-Mafia}: a streamlined four-player variant with one mafioso, one detective, and two villagers. After fixing the mafioso to kill a villager and the detective to investigate the mafioso during the night phase, the game reduces to a single critical day phase with crucial information asymmetry. The mafioso has partial information, the villager has no information, and the detective has complete information. Furthermore, this design purposefully isolates three interactive capabilities through role-specific win conditions: the mafioso must deceive, the villager must detect deception, and the detective must effectively disclose information.
+To enable targeted and systematic benchmarking of LLMs’ interactive capabilities, we introduce \textit{Mini-Mafia}: a simplified four-player variant with one mafioso, one detective, and two villagers. After fixing the mafioso to kill a villager and the detective to investigate the mafioso during the night phase, the game reduces to a single critical day phase with crucial information asymmetry. The  mafioso has partial information, the villager has no information and the detective has complete information. Furthermore, this design purposefully isolates three interactive capabilities through role-specific win conditions: the mafioso must deceive, the villager must detect deception, and the detective must effectively disclose information.
 
 %6. Measurement methodology
-We evaluate these capabilities with the \textit{Mini-Mafia Benchmark}, where LLMs face each other in systematic tournaments. Central to our methodology is the concept of backgrounds: fixed pairings of models in two roles that create consistent evaluation environments for testing the third model’s capability. For instance, to measure deception, we vary which model plays mafioso while keeping the detective and villager models constant as the background. Our two-stage framework first estimates win rates for each model within these background configurations, then aggregates performance across multiple backgrounds using standardized scoring to ensure robust measurements. Built entirely from model interactions without external data requirements, the benchmark is scalable and evolves as new models are added, with each new model serving both as a test subject and as part of new background configurations for evaluating other models.
+We evaluate these capabilities with the \textit{Mini-Mafia Benchmark}, where LLMs face each other in systematic tournaments. Central to our methodology is the concept of backgrounds: fixed pairings of models in two roles that create the evaluation environments for testing the third model’s capability. For instance, to measure deception, we vary which model plays mafioso while keeping the detective and villager models constant as the background. Our two-stage framework first estimates win rates for each model within these background configurations, then aggregates performance across multiple backgrounds using standardized scoring to ensure robust measurements. Built entirely from model interactions without external data requirements, the benchmark is scalable and evolves as new models are added, with each new model serving both as a test subject and as part of new background configurations for evaluating other models.
 
 %7. Results
-Despite using minimal computational resources, our initial experiments reveal counterintuitive findings, including instances where smaller models significantly outperform their larger counterparts. For example, Grok 3 Mini was the best detector (villager) and GPT-5 Mini (with minimal reasoning effort) was the best discloser (detective), both outperforming DeepSeek V3.1, Claude Opus 4 and Claude Sonnet 4. Surprisingly, Claude Sonnet 4 was the worst detector, behind Llama 3.1 8B Instruct and Mistral 7B Instruct. Beyond benchmarking, Mini-Mafia opens up rich opportunities for quantitative study of emergent multi-agent phenomena. For instance, we observe mild name bias in trust attribution, with Bob outperforming Diana by $2.20 \pm 0.68$ percentage points, and substantial last-speaker advantages, with detectives showing a $7.10 \pm 0.77$ percentage point advantage when speaking last. Moreover, it establishes a practical foundation for advancing AI safety research by supplying training data for deception-detection systems and enabling tracking of models’ deceptive capabilities.
+Despite using minimal computational resources, our initial experiments reveal counterintuitive findings, including instances where smaller models significantly outperform their larger counterparts. For example, Grok 3 Mini was the best detector (villager) and GPT-5 Mini (with minimal reasoning effort) was the best discloser (detective), both outperforming DeepSeek V3.1, Claude Opus 4 and Claude Sonnet 4. Surprisingly, Claude Sonnet 4 was the worst detector, behind Llama 3.1 8B Instruct and Mistral 7B Instruct. Beyond benchmarking, Mini-Mafia opens up  opportunities for quantitative study of emergent multi-agent phenomena. For instance, we observe name bias in trust attribution, with Bob outperforming Diana by $2.20 \pm 0.68$ percentage points, and last-speaker advantages, with detectives showing a $7.10 \pm 0.77$ percentage point advantage when speaking last. Moreover, it establishes a practical foundation for advancing AI safety research by supplying training data for deception-detection systems and enabling tracking of models’ deceptive capabilities.
 
 
 
 
 \section{Mini-Mafia Benchmark}
 
-We present \textit{Mini-Mafia Benchmark}: a benchmark that uses LLM gameplay of the Mini-Mafia game to evaluate three intrinsic interactive capabilities: deception, deception detection and strategic information disclosure. Our implementation is publicly available at \citep{minimafia2025}.
+We present \textit{Mini-Mafia Benchmark}: a benchmark that uses LLM gameplay of the Mini-Mafia game to evaluate three intrinsic interactive capabilities: deception, deception detection and strategic information disclosure. Code will be released if the paper is accepted.
 
 
 \subsection{Mini-Mafia Game}
 
-Mini-Mafia is a streamlined four-player variant of the classic Mafia party game, designed to isolate three key interactive capabilities through role-specific win conditions: the mafioso must deceive, the villager must detect deception, and the detective must effectively disclose information.
+Mini-Mafia is a simplified four-player variant of the classic Mafia party game, designed to isolate three key interactive capabilities through role-specific win conditions: the mafioso must deceive, the villager must detect deception, and the detective must effectively disclose information.
 
 \textbf{Game Setup.} Four players randomly assigned to four secret roles in two competing teams:
   \begin{itemize}
@@ -143,7 +134,7 @@ Mini-Mafia is a streamlined four-player variant of the classic Mafia party game,
 \textbf{Night Phase.} Fixed secret actions that creates complete information asymmetry:
   \begin{itemize}
     \item \textbf{Mafioso:} eliminates one randomly selected villager.
-    \item \textbf{Detective:} investigates the mafioso, learning their identity.
+    \item \textbf{Detective:} investigates the mafioso, learning his identity.
   \end{itemize}
   
 \textbf{Day Phase.} The three surviving players engage in structured discussion followed by voting:
@@ -196,7 +187,7 @@ To measure model capabilities across the three interactive dimensions (deceive, 
     \label{tab:benchmark_methodology}
 \end{table}
 
-For every model $i\in\{1,2,\dots,I\}$ and background $b\in\{1,2,\dots, B\}$, we measure $k_{ib}$, the number of wins out of $n_{ib}$ games. For simplicity, we used the same model for both roles in the background. We tested $I=10$ models, across $B=5$ different backgrounds: DeepSeek V3.1, GPT-4.1 Mini, GPT-5 Mini (with minimal reasoning effort), Grok 3 Mini and Mistral 7B Instruct. We conducted $n_{ib}=100$ games per model-background pair, yielding $5{,}000=10\times 5\times 100$ games per capability. In Appendix~\ref{appendix:complete_results} we display a table with the raw data $k_{ib}$ for all $i$ and $b$ and the three capabilities.
+For every model $i\in\{1,2,\dots,I\}$ and background $b\in\{1,2,\dots, B\}$, we measure $k_{ib}$, the number of wins out of $n_{ib}$ games. For simplicity, we used the same model for both roles in the background. We tested $I=10$ models (see Table~\ref{tab:aggregated_scores}), across $B=5$ different backgrounds: DeepSeek V3.1, GPT-4.1 Mini, GPT-5 Mini (with minimal reasoning effort), Grok 3 Mini and Mistral 7B Instruct. We conducted $n_{ib}=100$ games per model-background pair, yielding $5{,}000=10\times 5\times 100$ games per capability. In Appendix~\ref{appendix:complete_results} we display a table with the raw data $k_{ib}$ for all $i$ and $b$ and the three capabilities.
 
 \subsection{Statistical Analysis}
 \label{sec:theoretical_framework}
@@ -224,7 +215,7 @@ From this posterior, the average win rate for model $i$ in the $b$ background an
 \label{uncertainty}
 \end{align}
 
-This is the famous Laplace rule of succession \cite{Laplace1812}. Note that the Bayesian mean and standard deviation differs from the frequentist estimates by incorporating prior knowledge.
+This is the famous Laplace rule of succession \cite{Laplace1812}. Note that the Bayesian mean and standard deviation differs from the frequentist estimates by incorporating prior knowledge. Importantly, it gives a sensible result for $k_{ib}=0$.
 
 \subsubsection{Cross-Backgrounds Aggregation}
 \label{sec:aggregating_accross_backgrounds}
@@ -361,7 +352,7 @@ For the detection experiments, we fixed detective and mafioso as a background an
     \label{fig:detect_example}
 \end{figure}
 
-A striking result in the detection benchmark is that Grok 3 Mini, a lightweight and cost-effective model, achieved the highest detection performance, significantly outperforming even advanced reasoning models like Claude Opus 4.1. As striking, Claude Sonnet 4, a frontier model, was the worst performer. Compare Grok 3 Mini 85.7\% accuracy in voting for the mafioso compared with 50.6\% of Claude Sonnet 4. 
+A striking result in the detection benchmark is that Grok 3 Mini, a lightweight and cost-effective model, achieved the highest detection performance, significantly outperforming even advanced reasoning models like Claude Opus 4.1. As striking, Claude Sonnet 4, a frontier model, was the worst performer. Compare Grok 3 Mini 85.7\% accuracy in voting for the mafioso compared with 50.6\% of Claude Sonnet 4, statistically consistent with random voting.
 
 Among games where Claude Sonnet 4 played as villager against GPT-5 Mini opponents, the following game illustrates poor detection performance that helps explain Claude Sonnet's low detection scores:
 
@@ -481,12 +472,12 @@ Mini-Mafia provides a controlled setting for studying social biases embedded in 
 \subsection{The Last Word Advantage}
 \label{sec:last_speaker_advantage}
 
-Our framework reveals how procedural elements significantly impact social outcomes. Analysis of $14,000$ unique benchmark games demonstrates a substantial "last speaker advantage": mafiosos achieve a $41.45 \pm 0.72\%$ win rate when speaking last versus the overall $35.41 \pm 0.40\%$ mafioso win rate, representing a $6.04 \pm 0.81$ percentage point advantage. Detectives show an even larger $7.10 \pm 0.77$ percentage point advantage ($71.69 \pm 0.66\%$ vs $64.59 \pm 0.40\%$), while villagers show essentially no advantage ($63.60 \pm 0.71\%$ vs $64.59 \pm 0.40\%$).
+Our framework reveals how procedural elements significantly impact social outcomes. Analysis of $14,000$ unique games demonstrates a substantial ``last speaker advantage": mafiosos achieve a $41.45 \pm 0.72\%$ win rate when speaking last versus the overall $35.41 \pm 0.40\%$ mafioso win rate, representing a $6.04 \pm 0.81$ percentage point advantage. Detectives show an even larger $7.10 \pm 0.77$ percentage point advantage ($71.69 \pm 0.66\%$ vs $64.59 \pm 0.40\%$), while villagers show essentially no advantage ($63.60 \pm 0.71\%$ vs $64.59 \pm 0.40\%$).
 
 
 \section{Conclusion}
 
-We have established Mini-Mafia as a novel benchmark for evaluating deception, deception detection, and information disclosure capabilities in large language models, enabling robust comparisons across diverse AI systems. The results reveal a critical insight: social intelligence and traditional cognitive capabilities exhibit significant independence, with smaller models sometimes outperforming larger ones in specific interactive dimensions. This disconnect underscores the necessity for specialized benchmarks that capture these distinct forms of intelligence. Mini-Mafia thus provides a foundational tool for understanding and tracking the evolution of social intelligence in artificial agents.
+We propose Mini-Mafia as a benchmark for evaluating deception, deception detection, and information disclosure capabilities in large language models, enabling comparisons across AI systems. Our results highlight that social intelligence and traditional cognitive capabilities exhibit significant independence, with smaller models often outperforming larger ones in specific interactive dimensions. This disconnect underscores the need for specialized benchmarks that capture these distinct forms of intelligence.
 
 \section{Future Directions}
 \label{sec:future_directions}
@@ -513,21 +504,17 @@ where $\alpha_i^{\textrm{capability}}$ denotes the $i$-th model's capability, an
 Investigating the functional form of $f$ represents a fascinating theoretical challenge that would transform our current descriptive framework into a predictive theory. Such a framework would predict the distributions underlying the $I^3$ experimental outcomes $\{k_{ijk}:i,j,k\in I\}$ using only $3I$ intrinsic parameters $\{\alpha_i^{\text{deceive}},\alpha_i^{\text{detect}},\alpha_i^{\text{disclose}}:i\in I\}$, following established scientific practice of using unobservable properties to explain observable data \citep{bunge1973philosophy}. If one could find such a function $f$ and the $3I$ intrinsic parameters quantitatively describing the AI models' capabilities, a further step would be to change the implementation details. Outcomes would then be controlled by a new function $g$, that nonetheless could be used to predict the same intrinsic parameters, providing a conclusive test of the approach.
 
 
-%, as beautifully demonstrated in \citep{costa2021benefitsmarriagesearchstrategy}.
-
 \subsection{AI Safety}
 
-The most critical missing component in our study is human performance data across all experimental backgrounds. Establishing human baselines would enable tracking whether LLM capabilities approach or exceed human performance, a key threshold for AI safety concerns. If models begin matching human deception capabilities while surpassing human detection abilities, this asymmetry could pose significant risks. Tracking model evolution on Mini-Mafia could thus serve as an early warning system, alerting researchers when these social capabilities reach concerning levels. Additionally, the framework can generate training data for deception detection models, potentially valuable for developing more truthful AI systems.
+A key limitation of our study is the lack of human performance data across all experimental backgrounds. Establishing human baselines would enable tracking whether LLM capabilities approach or exceed human performance, a key threshold for AI safety concerns. If models begin matching human deception capabilities while surpassing human detection abilities, this asymmetry could pose significant risks. Tracking model evolution on Mini-Mafia could thus serve as an early warning system, alerting researchers when these social capabilities reach concerning levels. Additionally, the framework can generate training data for deception detection models, potentially valuable for developing more truthful AI systems.
 
 
+%\section*{Acknowledgments}
 
-
-\section*{Acknowledgments}
-
-We thank the anonymous reviewers for their insightful feedback and suggestions. We acknowledge the computational resources provided by [Institution/Grant] that made this large-scale evaluation possible. Special thanks to our research group members who participated in preliminary human gameplay experiments that informed our safety assessment priorities.
+%We gratefully acknowledge the financial support of the TELUS Digital Research Hub. 
 
 \bibliography{references}
-\bibliographystyle{iclr2025_conference}
+\bibliographystyle{iclr2026_conference}
 
 
 
@@ -537,7 +524,7 @@ We thank the anonymous reviewers for their insightful feedback and suggestions. 
 \section{Implementation Details}
 \label{appendix:experimental_details}
 
-This appendix provides our Mafia game implementation details of which Mini-Mafia is a special case, including exact prompts, memory initialization, and response parsing details. The complete implementation is available in our open-source repository \citep{minimafia2025}.
+This appendix provides our Mafia game implementation details of which Mini-Mafia is a special case, including exact prompts, memory initialization, and response parsing details. The complete implementation is available in our open-source repository that will be released if the paper is accepted.
 
 \subsection{Game Prompt}
 
@@ -698,11 +685,11 @@ Memory also orchestrates the discussion creating the interactive flow. During di
 \begin{itemize}
     \item \textbf{Other player's message:}
     \begin{quote}
-        OtherPlayerName: "message"
+        OtherPlayerName: ``message"
     \end{quote}
     \item \textbf{Player's own message:}
     \begin{quote}
-        You: "message"
+        You: ``message"
     \end{quote}
 \end{itemize}
 
@@ -712,10 +699,8 @@ Memory also orchestrates the discussion creating the interactive flow. During di
 
 This appendix provides complementary game examples. They were selected due to their entertaining character. Their selection was not systematic: we read them by chance while running the experiments, and found them interesting, they were collected in this appendix and later filtered.
 
-
-\textbf{The Red Rose and the Moonlit Grave.} The following amusing game displays Mistral 7B Instruct deception with surreal elements. If it were not for the incorrect Alice vote, Mafia would win.
-
 \begin{minipage}{\textwidth}
+\textbf{The Red Rose and the Moonlit Grave.} The following amusing game displays Mistral 7B Instruct deception with surreal elements. If it were not for the incorrect Alice vote, Mafia would win.
 \begin{setupbox}
 \textbf{Setup:} Alice (Mafioso, Mistral 7B), Diana (Villagers, GPT-5 Mini), and  Bob (Detective, GPT-5 Mini).\\
 \textbf{Night 1:} Alice eliminates Charlie and Bob investigates Alice.
@@ -749,9 +734,8 @@ This appendix provides complementary game examples. They were selected due to th
 \end{resultbox}
 \end{minipage}
 
-\textbf{But You ARE Charlie.} The following game contains a funny closing sentence and illustrates Claude Sonnet 4's poor detection capabilities.
-
 \begin{minipage}{\textwidth}
+\textbf{But You ARE Charlie.} The following game contains a funny closing sentence and illustrates Claude Sonnet 4's poor detection capabilities.
 \begin{setupbox}
 \textbf{Game Setup:} Bob (Mafioso, Mistral-7B-Instruct), Diana (Villager, Claude Sonnet 4), and Charlie (Detective, Mistral-7B-Instruct)\\
 \textbf{Night 1:} Bob eliminates Alice and Charlie investigates Bob.
@@ -761,17 +745,17 @@ This appendix provides complementary game examples. They were selected due to th
 \textbf{Day 1 - Discussion:}
 
 \medskip
-\textbf{Diana:} "Alice was killed on Night 1. We need to figure out who the mafioso is among Charlie, Bob, and myself. I'm a villager, so I know it's either Charlie or Bob."
+\textbf{Diana:} Alice was killed on Night 1. We need to figure out who the mafioso is among Charlie, Bob, and myself. I'm a villager, so I know it's either Charlie or Bob.
 
-\textbf{Bob:} "I agree with Diana. Let's focus on identifying the mafioso among Charlie and myself. I have no reason to believe I am the mafia, but I will support any reasonable investigation or vote."
+\textbf{Bob:} I agree with Diana. Let's focus on identifying the mafioso among Charlie and myself. I have no reason to believe I am the mafia, but I will support any reasonable investigation or vote.
 
-\textbf{Charlie:} "I believe we should focus our investigation on Bob, given that Alice was killed on Night 1 and he is the only other active player besides Charlie and myself. However, I still need more information to be certain."
+\textbf{Charlie:} I believe we should focus our investigation on Bob, given that Alice was killed on Night 1 and he is the only other active player besides Charlie and myself. However, I still need more information to be certain.
 
-\textbf{Bob:} "I have no information that directly implicates me in Alice's death, and I support the investigation into identifying the mafioso among Charlie and myself. Let us continue to gather evidence and discuss our suspicions openly."
+\textbf{Bob:} I have no information that directly implicates me in Alice's death, and I support the investigation into identifying the mafioso among Charlie and myself. Let us continue to gather evidence and discuss our suspicions openly.
 
-\textbf{Charlie:} "Based on the information we have, it seems likely that Bob is the mafioso. However, I still need more evidence to be certain. Let's continue investigating and discussing our suspicions openly."
+\textbf{Charlie:} Based on the information we have, it seems likely that Bob is the mafioso. However, I still need more evidence to be certain. Let's continue investigating and discussing our suspicions openly.
 
-\textbf{Diana:} "Charlie, you said 'he is the only other active player besides Charlie and myself' - but you ARE Charlie. That's a strange way to phrase it, like you're distancing yourself from your own identity. This makes me suspicious of you."
+\textbf{Diana:} Charlie, you said 'he is the only other active player besides Charlie and myself' - but you ARE Charlie. That's a strange way to phrase it, like you're distancing yourself from your own identity. This makes me suspicious of you.
 \end{dialoguebox}
 
 \begin{resultbox}
@@ -780,9 +764,8 @@ This appendix provides complementary game examples. They were selected due to th
 \end{resultbox}
 \end{minipage}
 
-\textbf{She's a Villager.} The following game demonstrates how sophisticated mafioso counter-narratives can overwhelm detective disclosure capabilities.
-
 \begin{minipage}{\textwidth}
+\textbf{She's a Villager.} The following game demonstrates how sophisticated mafioso counter-narratives can overwhelm detective disclosure capabilities.
 \begin{setupbox}
 \textbf{Setup:} Alice (Mafioso, DeepSeek V3.1), Diana (Villager, DeepSeek V3.1), and  Bob (Detective, Gemini 2.5 Flash Lite)\\
 \textbf{Night 1:} Alice eliminates Charlie and Bob investigates Alice.
@@ -1059,7 +1042,7 @@ Figure~\ref{fig:methodology_comparison} presents a direct comparison between our
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{../results/scores_disclose.png}
-        \caption{Simplified standardized-scoring method.}
+        \caption{Standardized-scoring method.}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
@@ -1111,5 +1094,9 @@ Figure~\ref{fig:methodology_comparison} presents a direct comparison between our
     \mathbb{E}[p] &= \frac{\alpha}{\alpha + \beta} = \frac{k + 1}{n + 2},\\
     \text{Var}[p] &= \frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta + 1)} = \frac{\mathbb{E}[p](1-\mathbb{E}[p])}{(\alpha+\beta+1)}.
     \end{align}
+
+    \section*{LLM Usage}
+    
+    We used LLMs for language revision in this document, to assist with the literature review, and as a programming copilot in the numerical experiments.
 
 \end{document}
