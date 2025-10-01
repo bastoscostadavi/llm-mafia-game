@@ -200,8 +200,8 @@ Significant procedural advantages observed:
   title={Deceive, Detect, and Disclose: Large Language Models Playing Mini-Mafia},
   author={Costa, Davi Bastos and Vicente, Renato},
   journal={arXiv preprint},
+  url=\url{https://arxiv.org/pdf/2509.23023}
   year={2025},
-  note={Code and data available at: \url{https://github.com/bastoscostadavi/llm-mafia-game}}
 }
 ```
 
