@@ -196,12 +196,14 @@ Significant procedural advantages observed:
 ## Citation
 
 ```bibtex
-@article{costa2025minimafia,
-  title={Deceive, Detect, and Disclose: Large Language Models Playing Mini-Mafia},
-  author={Costa, Davi Bastos and Vicente, Renato},
-  journal={arXiv preprint},
-  url=\url{https://arxiv.org/pdf/2509.23023}
-  year={2025},
+@misc{costa2025deceivedetectdiscloselarge,
+      title={Deceive, Detect, and Disclose: Large Language Models Play Mini-Mafia}, 
+      author={Davi Bastos Costa and Renato Vicente},
+      year={2025},
+      eprint={2509.23023},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2509.23023}, 
 }
 ```
 
