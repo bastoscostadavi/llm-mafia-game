@@ -210,4 +210,4 @@ Significant procedural advantages observed:
 - **Authors**: Davi Bastos Costa, Renato Vicente
 - **Institution**: TELUS Digital Research Hub, University of São Paulo
 - **Email**: davi.costa@usp.br
-- **Paper**: [arXiv preprint](https://arxiv.org/abs/XXXX.XXXXX)
+- **Paper**: [arXiv preprint](https://arxiv.org/abs/2509.23023)
