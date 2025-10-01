@@ -98,14 +98,17 @@ ANTHROPIC_API_KEY=your_anthropic_key
 
 ## Citation
 
-If you use this implementation in your research, please cite:
+If you use this implementation in your research, please cite our paper:
 
 ```bibtex
-@article{costa2025minimafia,
-  title={Deceive, Detect, and Disclose: Large Language Models Playing Mini-Mafia},
-  author={Costa, Davi Bastos and Vicente, Renato},
-  journal={arXiv preprint},
-  year={2025}
+@misc{costa2025deceivedetectdiscloselarge,
+      title={Deceive, Detect, and Disclose: Large Language Models Play Mini-Mafia}, 
+      author={Davi Bastos Costa and Renato Vicente},
+      year={2025},
+      eprint={2509.23023},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2509.23023}, 
 }
 ```
 
