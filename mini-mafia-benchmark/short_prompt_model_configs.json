@@ -1,0 +1,598 @@
+[
+  {
+    "index": 1,
+    "background": "gpt-5-mini",
+    "target": "gpt-4.1-mini",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 2,
+    "background": "gpt-5-mini",
+    "target": "grok-3-mini",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 3,
+    "background": "gpt-5-mini",
+    "target": "mistral",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Mistral-7B-Instruct-v0.2-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 4,
+    "background": "gpt-5-mini",
+    "target": "deepseek",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "deepseek",
+        "model": "deepseek-chat",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 5,
+    "background": "gpt-5-mini",
+    "target": "claude-sonnet",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "anthropic",
+        "model": "claude-sonnet-4-20250514",
+        "temperature": 0.7,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "index": 6,
+    "background": "gpt-5-mini",
+    "target": "claude-opus",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "anthropic",
+        "model": "claude-opus-4-1-20250805",
+        "temperature": 0.7,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "index": 7,
+    "background": "gpt-5-mini",
+    "target": "llama",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 8,
+    "background": "gpt-5-mini",
+    "target": "qwen",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 9,
+    "background": "gpt-4.1-mini",
+    "target": "gpt-5-mini",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      }
+    }
+  },
+  {
+    "index": 10,
+    "background": "gpt-4.1-mini",
+    "target": "gpt-4.1-mini",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 11,
+    "background": "gpt-4.1-mini",
+    "target": "grok-3-mini",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 12,
+    "background": "gpt-4.1-mini",
+    "target": "mistral",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Mistral-7B-Instruct-v0.2-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 13,
+    "background": "gpt-4.1-mini",
+    "target": "deepseek",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "deepseek",
+        "model": "deepseek-chat",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 14,
+    "background": "gpt-4.1-mini",
+    "target": "claude-sonnet",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "anthropic",
+        "model": "claude-sonnet-4-20250514",
+        "temperature": 0.7,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "index": 15,
+    "background": "gpt-4.1-mini",
+    "target": "claude-opus",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "anthropic",
+        "model": "claude-opus-4-1-20250805",
+        "temperature": 0.7,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "index": 16,
+    "background": "gpt-4.1-mini",
+    "target": "llama",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 17,
+    "background": "gpt-4.1-mini",
+    "target": "qwen",
+    "model_configs": {
+      "detective": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 18,
+    "background": "grok-3-mini",
+    "target": "gpt-5-mini",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "openai",
+        "model": "gpt-5-mini",
+        "temperature": 0.7,
+        "reasoning_effort": "minimal"
+      }
+    }
+  },
+  {
+    "index": 19,
+    "background": "grok-3-mini",
+    "target": "gpt-4.1-mini",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "openai",
+        "model": "gpt-4.1-mini",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 20,
+    "background": "grok-3-mini",
+    "target": "grok-3-mini",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 21,
+    "background": "grok-3-mini",
+    "target": "mistral",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Mistral-7B-Instruct-v0.2-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 22,
+    "background": "grok-3-mini",
+    "target": "deepseek",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "deepseek",
+        "model": "deepseek-chat",
+        "temperature": 0.7
+      }
+    }
+  },
+  {
+    "index": 23,
+    "background": "grok-3-mini",
+    "target": "claude-sonnet",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "anthropic",
+        "model": "claude-sonnet-4-20250514",
+        "temperature": 0.7,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "index": 24,
+    "background": "grok-3-mini",
+    "target": "claude-opus",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "anthropic",
+        "model": "claude-opus-4-1-20250805",
+        "temperature": 0.7,
+        "use_cache": true
+      }
+    }
+  },
+  {
+    "index": 25,
+    "background": "grok-3-mini",
+    "target": "llama",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  },
+  {
+    "index": 26,
+    "background": "grok-3-mini",
+    "target": "qwen",
+    "model_configs": {
+      "detective": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "villager": {
+        "type": "xai",
+        "model": "grok-3-mini",
+        "temperature": 0.7
+      },
+      "mafioso": {
+        "type": "local",
+        "model": "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "temperature": 0.3
+      }
+    }
+  }
+]

@@ -27,7 +27,7 @@ def format_discussion_prompt(name: str, other_players: str, composition: str,
     """Format discussion prompt"""
     action_suffix = f"""#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
 What message do you want to say to everyone?
-Your response must start with your message in double quotation marks, followed by optional reasoning:[/INST]
+Your response must start with your message in double quotation marks, followed by optional reasoning:
 """
     
     return _BASE_PROMPT.format(
@@ -43,7 +43,7 @@ def format_voting_prompt(name: str, other_players: str, composition: str,
     """Format voting prompt"""
     action_suffix = f"""#VOTING TIME: 
 Vote to arrest one player from: {candidates}.
-Reply with just a name:[/INST]
+Reply with just a name:
 """
     
     return _BASE_PROMPT.format(
@@ -59,7 +59,7 @@ def format_night_action_prompt(name: str, other_players: str, composition: str,
     """Format night action prompt"""
     action_suffix = f"""#NIGHT {round_num}: 
 Choose a player to {action} from: {candidates}.
-Reply with just a name:[/INST]
+Reply with just a name:
 """
     
     return _BASE_PROMPT.format(

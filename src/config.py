@@ -38,9 +38,9 @@ The prompt system now uses a single prompt.txt file for consistency.
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'}
 
 DEFAULT_MODEL_CONFIGS = {
-    'villager': {'type': 'anthropic', 'model': 'claude-opus-4-1-20250805'},
-    'mafioso': {'type': 'deepseek', 'model': 'deepseek-chat'},
-    'detective': {'type': 'deepseek', 'model': 'deepseek-chat'}
+    'villager': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
+    'mafioso': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
+    'detective': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'}
 }
 
 # GAME SETTINGS

@@ -15,10 +15,15 @@ import os
 import io
 import argparse
 from datetime import datetime
+from pathlib import Path
 
-# Add project root and current directory to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
-sys.path.append(os.path.dirname(__file__))
+# Add repo root and script directory to path before site-packages.
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+for path in (REPO_ROOT, SCRIPT_DIR):
+    path_str = str(path)
+    if path_str not in sys.path:
+        sys.path.insert(0, path_str)
 
 from mini_mafia import create_mini_mafia_game
 from src.config import get_default_model_configs
@@ -108,8 +113,8 @@ def determine_winner(agents):
             return "evil"
     return "unknown"
 
-def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None):
-    """Run N mini-mafia games and save results to SQLite database"""
+def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None, db_path=None):
+    """Run N mini-mafia games and save results to SQLite database."""
     
     # Use default model configs if none provided
     if model_configs is None:
@@ -124,7 +129,7 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
     print(f"Running {n_games} mini-mafia games...")
     
     # Initialize database connection
-    db = MiniMafiaDB()
+    db = MiniMafiaDB(db_path=db_path) if db_path else MiniMafiaDB()
     db.connect()
     
     # Insert batch record
@@ -193,7 +198,8 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
         print(f"Town wins: {stats['good_wins']} ({stats['good_wins']/n_games:.1%})")
         print(f"Mafia wins: {stats['evil_wins']} ({stats['evil_wins']/n_games:.1%})")
         print(f"Unknown: {stats['unknown']} ({stats['unknown']/n_games:.1%})")
-        print(f"\nResults saved to SQLite database")
+        target_db = db.db_path if hasattr(db, 'db_path') else 'database/mini_mafia.db'
+        print(f"\nResults saved to SQLite database: {target_db}")
         print(f"Batch ID: {batch_id}")
         
     finally:
@@ -212,6 +218,7 @@ def main():
     parser.add_argument('--interactive', action='store_true', help='Interactive mode with prompts')
     parser.add_argument('--temperature', type=float, help='Temperature for all models (default: 0.7)')
     parser.add_argument('--model-configs', type=str, help='JSON string with model configurations')
+    parser.add_argument('--db-path', type=str, help='SQLite database path (default: database/mini_mafia.db)')
     
     args = parser.parse_args()
     
@@ -263,7 +270,13 @@ def main():
             model_configs = json.loads(args.model_configs)
         
         # Run the batch
-        batch_id = run_batch(n_games, debug_prompts=debug, model_configs=model_configs, temperature=args.temperature)
+        batch_id = run_batch(
+            n_games,
+            debug_prompts=debug,
+            model_configs=model_configs,
+            temperature=args.temperature,
+            db_path=args.db_path
+        )
         
     except KeyboardInterrupt:
         print("\n\nBatch interrupted by user.")
