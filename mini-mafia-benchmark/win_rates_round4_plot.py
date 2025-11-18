@@ -152,7 +152,9 @@ def create_plot(data):
         filename=str(PLOT_PATH),
         color=ROUND4_COLOR,
         sort_ascending=True,
-        show_reference_line=False
+        show_reference_line=False,
+        x_min=0,
+        x_max=100
     )
     print(f"Saved plot: {PLOT_PATH}")
 
@@ -174,7 +176,8 @@ def create_exponential_z_plot(round4_data):
         filename=str(Z_PLOT_PATH),
         color=ORANGE_COLOR,
         sort_ascending=True,
-        show_reference_line=True
+        show_reference_line=True,
+        x_min=0
     )
     print(f"Saved exp(z) plot: {Z_PLOT_PATH}")
 

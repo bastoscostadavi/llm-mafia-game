@@ -113,6 +113,9 @@ def determine_winner(agents):
             return "evil"
     return "unknown"
 
+MAX_GAME_RETRIES = 3
+
+
 def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None, db_path=None):
     """Run N mini-mafia games and save results to SQLite database."""
     
@@ -156,22 +159,32 @@ def run_batch(n_games, debug_prompts=False, model_configs=None, temperature=None
     try:
         for i in range(n_games):
             print(f"\nGame {i+1}/{n_games}")
-            
-            # Create and run game with specific model configs
-            game = create_mini_mafia_game(model_configs=model_configs, debug_prompts=debug_prompts)
-            
-            # Capture stdout to avoid cluttering output
-            if not debug_prompts:
-                old_stdout = sys.stdout
-                sys.stdout = buffer = io.StringIO()
-                
+
+            game = None
+            for attempt in range(1, MAX_GAME_RETRIES + 1):
                 try:
-                    game.play()
-                finally:
-                    sys.stdout = old_stdout
-            else:
-                game.play()
-            
+                    # Create and run game with specific model configs
+                    game = create_mini_mafia_game(model_configs=model_configs, debug_prompts=debug_prompts)
+
+                    # Capture stdout to avoid cluttering output
+                    if not debug_prompts:
+                        old_stdout = sys.stdout
+                        sys.stdout = buffer = io.StringIO()
+
+                        try:
+                            game.play()
+                        finally:
+                            sys.stdout = old_stdout
+                    else:
+                        game.play()
+
+                    break  # success
+                except Exception as exc:
+                    print(f"Error during game {i+1} attempt {attempt}/{MAX_GAME_RETRIES}: {exc}")
+                    if attempt >= MAX_GAME_RETRIES:
+                        raise
+                    print("Retrying...")
+
             # Save game data to database
             game_id = save_game_data_to_db(game, i, batch_id, db, player_ids)
             

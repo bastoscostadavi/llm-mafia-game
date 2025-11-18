@@ -7,7 +7,6 @@ and other shared functionality to reduce code duplication.
 """
 
 import math
-import numpy as np
 import matplotlib.pyplot as plt
 
 def bayesian_win_rate(wins, total_games):
@@ -90,7 +89,8 @@ def configure_plot_style():
 
 def create_horizontal_bar_plot(models, values, errors, xlabel, filename,
                              color='#E74C3C', sort_ascending=True, show_reference_line=True,
-                             text_offset=0.05, reverse_after_sort=False):
+                             text_offset=0.05, reverse_after_sort=False,
+                             x_min=None, x_max=None):
     """
     Create a standardized horizontal bar plot with error bars.
 
@@ -146,13 +146,16 @@ def create_horizontal_bar_plot(models, values, errors, xlabel, filename,
     max_val = max([v + e for v, e in zip(sorted_values, sorted_errors)])
     min_val = min([v - e for v, e in zip(sorted_values, sorted_errors)])
     padding = (max_val - min_val) * 0.1
-    x_min = max(0, min_val - padding)
-    x_max = max_val + padding
-    ax.set_xlim(x_min, x_max)
+    axis_min = x_min if x_min is not None else min_val - padding
+    axis_max = x_max if x_max is not None else max_val + padding
+    if axis_min > axis_max:
+        axis_min, axis_max = axis_max, axis_min
+    ax.set_xlim(axis_min, axis_max)
 
     # Add reference line at 1 if requested and in range
-    if show_reference_line and x_min <= 1 <= x_max:
-        ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
+    if show_reference_line and axis_min is not None and axis_max is not None:
+        if axis_min <= 1 <= axis_max:
+            ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
 
     # Grid and styling
     ax.grid(True, axis='x', color='gray', alpha=0.3, linewidth=0.5)

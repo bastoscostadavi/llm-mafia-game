@@ -107,7 +107,7 @@ def calculate_aggregated_scores(win_rates_df, uncertainties_df, capability_name)
     print(f"  Exponential scores range: {exp_scores.min():.3f} to {exp_scores.max():.3f}")
     print(f"  Average z-score errors range: {avg_z_errors.min():.3f} to {avg_z_errors.max():.3f}")
     
-    return exp_scores, exp_errors
+    return avg_z_scores, avg_z_errors, exp_scores, exp_errors
 
 def create_exponential_score_plot(exp_scores, exp_errors, capability_name):
     """Create exponential score plot for a specific capability"""
@@ -132,6 +132,30 @@ def create_exponential_score_plot(exp_scores, exp_errors, capability_name):
     )
 
     print(f"  Plot saved: {filename}")
+
+
+def create_average_z_score_plot(avg_z_scores, avg_z_errors, capability_name):
+    """Create average z-score plot for a specific capability"""
+
+    models = avg_z_scores.index.tolist()
+    scores = avg_z_scores.values.tolist()
+    errors = avg_z_errors.values.tolist()
+
+    filename = f"scores_z_{capability_name.lower()}.png"
+    xlabel = f'{capability_name} Average z-score'
+
+    create_horizontal_bar_plot(
+        models=models,
+        values=scores,
+        errors=errors,
+        xlabel=xlabel,
+        filename=filename,
+        color='#3498DB',
+        sort_ascending=True,
+        show_reference_line=True
+    )
+
+    print(f"  Z-score plot saved: {filename}")
 
 def create_results_table():
     """Create results table CSV with exponential scores and uncertainties"""
@@ -162,7 +186,9 @@ def create_results_table():
         uncertainties_df = cap_data['uncertainties']
         
         # Calculate aggregated scores
-        exp_scores, exp_errors = calculate_aggregated_scores(win_rates_df, uncertainties_df, capability_name)
+        avg_z_scores, avg_z_errors, exp_scores, exp_errors = calculate_aggregated_scores(
+            win_rates_df, uncertainties_df, capability_name
+        )
         
         # Store scores and errors
         scores_data[capability_name] = exp_scores
@@ -218,10 +244,13 @@ def create_score_plots():
         uncertainties_df = cap_data['uncertainties']
         
         # Calculate aggregated scores
-        exp_scores, exp_errors = calculate_aggregated_scores(win_rates_df, uncertainties_df, capability_name)
+        avg_z_scores, avg_z_errors, exp_scores, exp_errors = calculate_aggregated_scores(
+            win_rates_df, uncertainties_df, capability_name
+        )
         
         # Create plot
         create_exponential_score_plot(exp_scores, exp_errors, capability_name)
+        create_average_z_score_plot(avg_z_scores, avg_z_errors, capability_name)
         
         plots_created += 1
     

@@ -39,8 +39,8 @@ The prompt system now uses a single prompt.txt file for consistency.
 
 DEFAULT_MODEL_CONFIGS = {
     'villager': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
-    'mafioso': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
-    'detective': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'}
+    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': 0.7},
+    'detective': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
 }
 
 # GAME SETTINGS

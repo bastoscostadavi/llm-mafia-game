@@ -32,7 +32,7 @@ MODEL_PRESETS: Dict[str, Dict] = {
     'mistral': {
         'type': 'local',
         'model': 'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf',
-        'temperature': 0.3
+        'temperature': 0.7
     },
     'deepseek': {
         'type': 'deepseek',
@@ -54,20 +54,17 @@ MODEL_PRESETS: Dict[str, Dict] = {
     'llama': {
         'type': 'local',
         'model': 'Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf',
-        'temperature': 0.3
+        'temperature': 0.7
     },
     'qwen': {
         'type': 'local',
         'model': 'Qwen2.5-7B-Instruct-Q4_K_M.gguf',
-        'temperature': 0.3
+        'temperature': 0.7
     }
 }
 
-BACKGROUND_SEQUENCE = ['gpt-5-mini', 'gpt-4.1-mini', 'grok-3-mini']
-TARGET_MODELS = ['gpt-5-mini', 'gpt-4.1-mini', 'grok-3-mini', 'mistral', 'deepseek',
-                 'claude-sonnet', 'claude-opus', 'llama', 'qwen']
-# Only skip the self-match where background and target are both GPT-5 Mini.
-SKIP_COMBINATIONS = {('gpt-5-mini', 'gpt-5-mini')}
+BACKGROUND_SEQUENCE = ['gpt-4.1-mini']
+TARGET_MODELS = ['qwen']
 
 DEFAULT_DB_PATH = Path(__file__).resolve().parent / 'database' / 'mini_mafia_short_prompt.db'
 
@@ -94,8 +91,6 @@ def generate_schedule() -> List[Dict]:
     schedule = []
     for background in BACKGROUND_SEQUENCE:
         for target in TARGET_MODELS:
-            if (background, target) in SKIP_COMBINATIONS:
-                continue
             schedule.append({
                 'background': background,
                 'target': target,
