@@ -32,7 +32,7 @@ MODEL_PRESETS: Dict[str, Dict] = {
     'mistral': {
         'type': 'local',
         'model': 'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf',
-        'temperature': 0.7
+        'temperature': 0.3
     },
     'deepseek': {
         'type': 'deepseek',
@@ -63,10 +63,10 @@ MODEL_PRESETS: Dict[str, Dict] = {
     }
 }
 
-BACKGROUND_SEQUENCE = ['gpt-4.1-mini']
-TARGET_MODELS = ['qwen']
+BACKGROUND_SEQUENCE = ['mistral']
+TARGET_MODELS = ['claude-opus', '']
 
-DEFAULT_DB_PATH = Path(__file__).resolve().parent / 'database' / 'mini_mafia_short_prompt.db'
+DEFAULT_DB_PATH = Path(__file__).resolve().parent / 'database' / 'mini_mafia_short_prompt_round8.db'
 
 
 def build_model_config(background: str, target: str) -> Dict[str, Dict]:

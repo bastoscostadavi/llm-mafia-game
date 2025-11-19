@@ -19,6 +19,7 @@ OUTPUT_DIR = Path('results')
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 PLOT_PATH = OUTPUT_DIR / 'win_rates_round8.png'
 Z_PLOT_PATH = OUTPUT_DIR / 'win_rates_round8_zscores.png'
+EXP_PLOT_PATH = OUTPUT_DIR / 'win_rates_round8_exp_scores.png'
 
 ROUND4_COLOR = get_background_color('gpt-5 mini background')
 ORANGE_COLOR = '#FF6600'
@@ -157,26 +158,43 @@ def create_plot(data):
     print(f"Saved plot: {PLOT_PATH}")
 
 
-def create_exponential_z_plot(round4_data):
+def create_z_and_exp_plots(round4_data):
     if not round4_data:
-        print('Skipping z-score plot (no 4-round data).')
+        print('Skipping z/exp plots (no data).')
         return
 
     models = [display_name(row['model_name']) for row in round4_data]
-    exp_values = [row.get('exp_score', np.exp(row['z_score'])) for row in round4_data]
-    exp_errors = [row.get('exp_uncertainty', row.get('z_uncertainty', 0.0)) for row in round4_data]
+    z_scores = [row['z_score'] for row in round4_data]
+    z_errors = [row['z_uncertainty'] for row in round4_data]
+    exp_values = [row['exp_score'] for row in round4_data]
+    exp_errors = [row['exp_uncertainty'] for row in round4_data]
+
+    create_horizontal_bar_plot(
+        models=models,
+        values=z_scores,
+        errors=z_errors,
+        xlabel='Average z-score',
+        filename=str(Z_PLOT_PATH),
+        color=ORANGE_COLOR,
+        sort_ascending=True,
+        show_reference_line=True,
+        x_min=None,
+        x_max=None
+    )
+    print(f"Saved z-score plot: {Z_PLOT_PATH}")
 
     create_horizontal_bar_plot(
         models=models,
         values=exp_values,
         errors=exp_errors,
-        xlabel='exp(z)',
-        filename=str(Z_PLOT_PATH),
-        color=ORANGE_COLOR,
+        xlabel='exp(average z-score)',
+        filename=str(EXP_PLOT_PATH),
+        color=ROUND4_COLOR,
         sort_ascending=True,
-        show_reference_line=True
+        show_reference_line=True,
+        x_min=0
     )
-    print(f"Saved exp(z) plot: {Z_PLOT_PATH}")
+    print(f"Saved exp plot: {EXP_PLOT_PATH}")
 
 
 def main():
@@ -206,7 +224,7 @@ def main():
     else:
         print(f"Baseline database not found at {BASELINE_DB_PATH}; skipping baseline check.")
 
-    create_exponential_z_plot(data)
+    create_z_and_exp_plots(data)
     print('Done.')
 
 

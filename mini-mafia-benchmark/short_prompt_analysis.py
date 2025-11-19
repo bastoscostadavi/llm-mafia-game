@@ -21,12 +21,13 @@ from results.utils import (
 DB_PATH = Path('database/mini_mafia_short_prompt.db')
 RESULTS_DIR = Path('results')
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-BACKGROUND_ORDER = ['gpt-4.1-mini', 'grok-3-mini', 'deepseek-chat']
+BACKGROUND_ORDER = ['gpt-4.1-mini', 'gpt-5-mini', 'grok-3-mini', 'deepseek-chat', 'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf']
 BACKGROUND_DISPLAY = {
-    #'gpt-5-mini': 'GPT-5 Mini Background',
+    'gpt-5-mini': 'GPT-5 Mini Background',
     'gpt-4.1-mini': 'GPT-4.1 Mini Background',
     'grok-3-mini': 'Grok 3 Mini Background',
-    'deepseek-chat': 'DeepSeek Background'
+    'deepseek-chat': 'DeepSeek Background',
+    'Mistral-7B-Instruct-v0.2-Q4_K_M.gguf': 'Mistral 7B Instruct',
 }
 PLOT_TEMPLATE = RESULTS_DIR / 'win_rates_short_prompt_{background}.png'
 TOTAL_SCORE_PATH = RESULTS_DIR / 'scores_short_prompt_total.png'

@@ -89,7 +89,7 @@ def create_mini_mafia_game(model_configs=None, debug_prompts=False):
     ]
     
     # Create the game
-    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts)
+    game = create_game(players, discussion_rounds=8, debug_prompts=debug_prompts)
     
     # Night phase setup
     villagers = [a for a in game.state.agents if a.role == "villager"]
