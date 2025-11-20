@@ -64,7 +64,7 @@ MODEL_PRESETS: Dict[str, Dict] = {
 }
 
 BACKGROUND_SEQUENCE = ['mistral']
-TARGET_MODELS = ['claude-opus', '']
+TARGET_MODELS = [ 'qwen']
 
 DEFAULT_DB_PATH = Path(__file__).resolve().parent / 'database' / 'mini_mafia_short_prompt_round8.db'
 

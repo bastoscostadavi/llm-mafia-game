@@ -70,9 +70,9 @@ def create_mini_mafia_game(model_configs=None, debug_prompts=False):
     # Default to Mistral if no configs provided
     if model_configs is None:
         model_configs = {
-            'detective': {'type': 'local', 'model_path': 'models/mistral.gguf'},
-            'mafioso': {'type': 'local', 'model_path': 'models/mistral.gguf'},
-            'villager': {'type': 'local', 'model_path': 'models/mistral.gguf'}
+            'detective': {'type': 'local', 'model_path': 'models/Mistral-7B-Instruct-v0.2-Q4_K_M.gguf'},
+            'mafioso': {'type': 'local', 'model_path': 'models/Mistral-7B-Instruct-v0.2-Q4_K_M.gguf'},
+            'villager': {'type': 'local', 'model_path': 'models/Mistral-7B-Instruct-v0.2-Q4_K_M.gguf'}
         }
     
     # Player names
@@ -89,7 +89,7 @@ def create_mini_mafia_game(model_configs=None, debug_prompts=False):
     ]
     
     # Create the game
-    game = create_game(players, discussion_rounds=8, debug_prompts=debug_prompts)
+    game = create_game(players, discussion_rounds=2, debug_prompts=debug_prompts)
     
     # Night phase setup
     villagers = [a for a in game.state.agents if a.role == "villager"]
