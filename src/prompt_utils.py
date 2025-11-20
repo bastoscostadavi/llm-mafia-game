@@ -22,14 +22,14 @@ def load_base_prompt() -> str:
 # Cache the base prompt
 _BASE_PROMPT = load_base_prompt()
 
-def format_discussion_prompt(name: str, other_players: str, composition: str, 
+def format_discussion_prompt(name: str, other_players: str, composition: str,
                            memory: str, round_num: int, discussion_rounds: int) -> str:
     """Format discussion prompt"""
-    action_suffix = f"""#DISCUSSION ROUND {round_num}/{discussion_rounds}: 
+    action_suffix = f"""#DISCUSSION ROUND {round_num}/{discussion_rounds}:
 What message do you want to say to everyone?
 Your response must start with your message in double quotation marks, followed by optional reasoning:
 """
-    
+
     return _BASE_PROMPT.format(
         name=name,
         other_players=other_players,
@@ -76,24 +76,24 @@ def parse_discussion_response(response: str) -> str:
     if '<|channel|>final<|message|>' in response:
         response = response.split('<|channel|>final<|message|>', 1)[1]
         response = response.split('<|')[0].strip()
-    
+
     # Handle GPT-OSS reasoning format: extract content after final<|message|>
     if 'final<|message|>' in response:
         response = response.split('final<|message|>')[-1].strip()
-    
+
     # Split on newline and take only the first line to avoid capturing reasoning
     first_line = response.split('\n')[0].strip()
-    
+
     # First try to match complete quoted message on first line
     match = re.search(r'^\s*"([^"]+)"', first_line)
     if match:
         return match.group(1)
-    
+
     # If no complete quote found, check for truncated message on first line
     truncated_match = re.search(r'^\s*"([^"]*)', first_line)
     if truncated_match and len(truncated_match.group(1)) > 0:
         return f'{truncated_match.group(1)}...'
-    
+
     return None
 
 def parse_voting_response(response: str, candidates: List[str]) -> str:

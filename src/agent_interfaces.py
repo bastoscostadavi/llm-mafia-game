@@ -402,11 +402,11 @@ class Human:
     def __init__(self, player_name):
         self.player_name = player_name
         self.display_name = f"Human Player ({player_name})"
-    
+
     def generate(self, prompt, max_tokens=50):
         """Display clean prompt to human and capture their response"""
         print(f"\n{prompt}")
-        
+
         try:
             response = input(f"\n> ").strip()
             if not response:
