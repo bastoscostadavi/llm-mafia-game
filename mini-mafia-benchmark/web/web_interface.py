@@ -505,6 +505,34 @@ def submit_response():
 
     return jsonify({'success': True})
 
+def kill_process_on_port(port):
+    """Kill any process using the specified port"""
+    import subprocess
+    import time
+    try:
+        # Find process using the port
+        result = subprocess.run(
+            ['lsof', '-ti', f':{port}'],
+            capture_output=True,
+            text=True
+        )
+
+        if result.stdout.strip():
+            pids = result.stdout.strip().split('\n')
+            for pid in pids:
+                if pid:
+                    print(f"⚠️  Killing existing process on port {port} (PID: {pid})")
+                    subprocess.run(['kill', '-9', pid], capture_output=True)
+
+            # Wait for port to be released
+            print(f"⏳ Waiting for port {port} to be released...")
+            time.sleep(1)
+            return True
+        return False
+    except Exception as e:
+        print(f"⚠️  Could not check port {port}: {e}")
+        return False
+
 if __name__ == '__main__':
     print("Initializing Mini-Mafia Web Interface...")
     init_database()
@@ -513,6 +541,9 @@ if __name__ == '__main__':
     print(f"\nCurrent background: {config['background_name']}")
     print(f"  Detective: {config['detective_model']}")
     print(f"  Villager: {config['villager_model']}")
+
+    # Kill any existing process on port 5002
+    kill_process_on_port(5002)
 
     print("\nStarting server at: http://localhost:5002")
     print("For external access: ngrok http 5002\n")
