@@ -14,6 +14,7 @@ from typing import Dict, Tuple
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import numpy as np
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -409,6 +410,55 @@ def plot_exp_overlay(rows, include_short_prompt_round8):
     print(f'Saved exp overlay plot to {OUTPUT_EXP_PLOT}')
 
 
+def compute_correlations_with_uncertainty(exp_maps, labels, n_samples=10000):
+    """
+    Compute pairwise correlation coefficients with Monte Carlo uncertainty estimation.
+
+    Args:
+        exp_maps: List of dictionaries mapping model names to (score, error) tuples
+        labels: List of labels for each dataset
+        n_samples: Number of Monte Carlo samples for uncertainty estimation
+
+    Returns:
+        Dictionary mapping (label1, label2) tuples to (correlation, uncertainty) tuples
+    """
+    n_datasets = len(exp_maps)
+    correlations = {}
+
+    # For each pair of datasets
+    for i in range(n_datasets):
+        for j in range(i + 1, n_datasets):
+            # Find common models
+            common_models = list(set(exp_maps[i].keys()) & set(exp_maps[j].keys()))
+            if not common_models:
+                continue
+
+            # Extract scores and errors for common models
+            scores_i = np.array([exp_maps[i][m][0] for m in common_models])
+            errors_i = np.array([exp_maps[i][m][1] for m in common_models])
+            scores_j = np.array([exp_maps[j][m][0] for m in common_models])
+            errors_j = np.array([exp_maps[j][m][1] for m in common_models])
+
+            # Monte Carlo sampling
+            sampled_correlations = []
+            for _ in range(n_samples):
+                # Sample from normal distributions
+                sampled_i = np.random.normal(scores_i, errors_i)
+                sampled_j = np.random.normal(scores_j, errors_j)
+
+                # Compute Pearson correlation
+                corr = np.corrcoef(sampled_i, sampled_j)[0, 1]
+                sampled_correlations.append(corr)
+
+            # Calculate mean and std dev
+            mean_corr = np.mean(sampled_correlations)
+            std_corr = np.std(sampled_correlations)
+
+            correlations[(labels[i], labels[j])] = (mean_corr, std_corr, len(common_models))
+
+    return correlations
+
+
 def plot_bland_altman(rows):
     if not rows:
         raise ValueError('No data to plot.')
@@ -482,6 +532,27 @@ def main():
     plot_z_overlay(rows, include_short_prompt_round8)
     plot_exp_overlay(rows, include_short_prompt_round8)
     plot_bland_altman(rows)
+
+    # Compute correlation coefficients with Monte Carlo uncertainty estimation
+    print('\n' + '=' * 60)
+    print('CORRELATION ANALYSIS (Exponential Scores)')
+    print('=' * 60)
+
+    exp_maps = [short_exp, article_exp]
+    labels = ['Short-prompt', 'Article']
+
+    if include_short_prompt_round8:
+        exp_maps.append(short_prompt_round8_exp)
+        labels.append('Short-prompt Round8')
+
+    correlations = compute_correlations_with_uncertainty(exp_maps, labels, n_samples=10000)
+
+    for (label1, label2), (corr, err, n_models) in sorted(correlations.items()):
+        print(f'\n{label1} vs {label2}:')
+        print(f'  Pearson r = {corr:.4f} ± {err:.4f}')
+        print(f'  n = {n_models} models')
+
+    print('\n' + '=' * 60)
 
 
 if __name__ == '__main__':

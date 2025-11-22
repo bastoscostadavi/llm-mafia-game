@@ -90,7 +90,7 @@ def configure_plot_style():
 def create_horizontal_bar_plot(models, values, errors, xlabel, filename,
                              color='#E74C3C', sort_ascending=True, show_reference_line=True,
                              text_offset=0.05, reverse_after_sort=False,
-                             x_min=None, x_max=None):
+                             x_min=None, x_max=None, reference_lines=None):
     """
     Create a standardized horizontal bar plot with error bars.
 
@@ -103,6 +103,7 @@ def create_horizontal_bar_plot(models, values, errors, xlabel, filename,
         color: Bar color (default: red)
         sort_ascending: Whether to sort by ascending values (default: True)
         show_reference_line: Whether to show reference line at x=1 (default: True)
+        reference_lines: List of tuples (value, label, color, linestyle) for custom reference lines
 
     Returns:
         filename: The saved plot filename
@@ -157,11 +158,29 @@ def create_horizontal_bar_plot(models, values, errors, xlabel, filename,
         if axis_min <= 1 <= axis_max:
             ax.axvline(x=1, color='gray', alpha=0.7, linewidth=2, linestyle='--')
 
+    # Add custom reference lines if provided
+    if reference_lines is not None:
+        for line_spec in reference_lines:
+            if len(line_spec) >= 2:
+                value, label = line_spec[0], line_spec[1]
+                line_color = line_spec[2] if len(line_spec) > 2 else 'gray'
+                linestyle = line_spec[3] if len(line_spec) > 3 else '--'
+
+                if axis_min is not None and axis_max is not None and axis_min <= value <= axis_max:
+                    ax.axvline(x=value, color=line_color, alpha=0.7, linewidth=2, linestyle=linestyle, label=label)
+
     # Grid and styling
     ax.grid(True, axis='x', color='gray', alpha=0.3, linewidth=0.5)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
+
+    # Add legend if there are labeled reference lines
+    if reference_lines is not None and any(len(line) >= 2 and line[1] for line in reference_lines):
+        # Only add legend if there are actually labeled artists
+        handles, labels = ax.get_legend_handles_labels()
+        if handles:
+            ax.legend(loc='best', fontsize=20, framealpha=0.9)
 
     plt.tight_layout()
 

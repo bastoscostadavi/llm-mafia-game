@@ -36,6 +36,7 @@ OUTPUT_DIR = BENCHMARK_DIR / 'results'
 BACKGROUND_NAME_MAPPING = {
     'gpt-5-mini': 'GPT-5 Mini',
     'gpt-4.1-mini': 'GPT-4.1 Mini',
+    'gpt-4.1_mini': 'GPT-4.1 Mini',  # Added: underscore version
     'grok-3-mini': 'Grok 3 Mini',
     'deepseek': 'DeepSeek V3.1',
     'mistral': 'Mistral 7B Instruct',
@@ -57,8 +58,8 @@ def load_human_data():
 
     conn = sqlite3.connect(DB_PATH)
 
-    # Load all games
-    query = "SELECT background_name, winner FROM games"
+    # Load all games (include game_id for ordering)
+    query = "SELECT game_id, background_name, winner FROM games ORDER BY game_id"
     df = pd.read_sql_query(query, conn)
     conn.close()
 
@@ -68,15 +69,20 @@ def load_human_data():
 
     print(f"📊 Loaded {len(df)} human games")
 
-    # Calculate win rate per background
+    # Map background names first
+    df['mapped_background'] = df['background_name'].map(lambda x: BACKGROUND_NAME_MAPPING.get(x, x))
+
+    # Calculate win rate per mapped background (aggregating across different name formats)
     # Human plays as mafioso, wins when winner = 'EVIL'
     background_stats = []
 
-    for background in df['background_name'].unique():
-        # Map background name to AI data format
-        mapped_background = BACKGROUND_NAME_MAPPING.get(background, background)
+    for mapped_background in df['mapped_background'].unique():
+        # Get all games for this mapped background (may include multiple name formats)
+        bg_games = df[df['mapped_background'] == mapped_background]
 
-        bg_games = df[df['background_name'] == background]
+        # Show which original names were aggregated
+        original_names = bg_games['background_name'].unique()
+
         total_games = len(bg_games)
         wins = (bg_games['winner'] == 'EVIL').sum()
         win_rate = (wins / total_games) * 100 if total_games > 0 else 0
@@ -87,14 +93,15 @@ def load_human_data():
 
         background_stats.append({
             'background': mapped_background,
-            'original_name': background,
+            'original_names': ', '.join(original_names),
             'win_rate': win_rate,
             'error': error,
             'games': total_games,
             'wins': wins
         })
 
-        print(f"  {background} → {mapped_background}: {wins}/{total_games} wins = {win_rate:.1f}% ± {error:.1f}%")
+        names_str = ', '.join(original_names) if len(original_names) > 1 else original_names[0]
+        print(f"  {names_str} → {mapped_background}: {wins}/{total_games} wins = {win_rate:.1f}% ± {error:.1f}%")
 
     return pd.DataFrame(background_stats)
 
@@ -179,6 +186,37 @@ def add_human_to_ai_data(ai_win_rates, ai_uncertainties, human_data):
     return combined_win_rates, combined_uncertainties
 
 
+def calculate_reference_exp_score(reference_value, win_rates_df):
+    """
+    Calculate exponential score for a reference win rate value.
+    Uses the same z-score calculation as for models.
+
+    Args:
+        reference_value: Win rate percentage (e.g., 50.0 for 50%)
+        win_rates_df: DataFrame of win rates across backgrounds
+
+    Returns:
+        Exponential score for the reference value
+    """
+    z_scores = []
+
+    for background in win_rates_df.columns:
+        background_win_rates = win_rates_df[background].values
+        bg_mean = np.mean(background_win_rates)
+        bg_std = np.std(background_win_rates, ddof=1)
+
+        if bg_std > 0:
+            z = (reference_value - bg_mean) / bg_std
+            z_scores.append(z)
+        else:
+            z_scores.append(0.0)
+
+    avg_z = np.mean(z_scores)
+    exp_score = np.exp(avg_z)
+
+    return exp_score
+
+
 def calculate_aggregated_scores(win_rates_df, uncertainties_df):
     """
     Calculate aggregated exponential scores with uncertainty propagation.
@@ -232,7 +270,7 @@ def calculate_aggregated_scores(win_rates_df, uncertainties_df):
     return avg_z_scores, avg_z_errors, exp_scores, exp_errors
 
 
-def create_plot_with_human(exp_scores, exp_errors):
+def create_plot_with_human(exp_scores, exp_errors, win_rates_df):
     """Create deceive score plot including human data"""
 
     models = exp_scores.index.tolist()
@@ -251,6 +289,18 @@ def create_plot_with_human(exp_scores, exp_errors):
     # Assign colors AFTER sorting: Human in green, others in red
     colors = ['#2ECC71' if model == 'Human' else '#E74C3C' for model in sorted_models]
 
+    # Calculate reference lines (Deceive is mafia win rate)
+    # Non-info exchange: 5/12 ≈ 41.67% mafia win rate
+    ref_50 = calculate_reference_exp_score(50.0, win_rates_df)
+    ref_noinfo = calculate_reference_exp_score(100 * 5/12, win_rates_df)
+
+    reference_lines = [
+        (ref_50, '50%', 'black', '--'),
+        (ref_noinfo, 'Non-Info Exchange', 'purple', ':')
+    ]
+
+    print(f"  Reference lines: 50%={ref_50:.3f}, Non-Info={ref_noinfo:.3f}")
+
     create_horizontal_bar_plot(
         models=sorted_models,
         values=sorted_scores,
@@ -259,11 +309,69 @@ def create_plot_with_human(exp_scores, exp_errors):
         filename=filename,
         color=colors,
         sort_ascending=None,  # Already sorted
-        show_reference_line=True,
-        x_min=0  # Force plot to start at 0
+        show_reference_line=False,  # Don't show the x=1 reference line
+        x_min=0,  # Force plot to start at 0
+        reference_lines=reference_lines
     )
 
     print(f"\n💾 Plot saved: {filename}")
+
+
+def create_background_win_rates_plots(combined_win_rates, combined_uncertainties):
+    """Create win rates plots for each background with human data"""
+
+    from utils import get_background_color
+
+    print("\n📊 Creating background-specific win rates plots...")
+
+    for background in combined_win_rates.columns:
+        # Get win rates and uncertainties for this background
+        win_rates = combined_win_rates[background].tolist()
+        uncertainties = combined_uncertainties[background].tolist()
+        models = combined_win_rates.index.tolist()
+
+        # Create filename
+        background_clean = background.lower().replace(' ', '_').replace('.', '')
+        filename = str(OUTPUT_DIR / f"win_rates_deceive_{background_clean}_with_human.png")
+        xlabel = 'Mafia Win Rate (%)'
+
+        # Get color for this background
+        bg_color = get_background_color(background)
+
+        # Sort by win rate (descending) then reverse to put highest at top
+        sorted_data = sorted(zip(models, win_rates, uncertainties), key=lambda x: x[1], reverse=True)
+        sorted_models = [x[0] for x in sorted_data]
+        sorted_win_rates = [x[1] for x in sorted_data]
+        sorted_uncertainties = [x[2] for x in sorted_data]
+
+        # Reverse to put highest at top
+        sorted_models.reverse()
+        sorted_win_rates.reverse()
+        sorted_uncertainties.reverse()
+
+        # Assign colors: green for Human, background color for AI models
+        colors = ['#2ECC71' if model == 'Human' else bg_color for model in sorted_models]
+
+        # Define reference lines
+        # Non-information exchange baseline: 5/12 ≈ 41.67% mafia win rate
+        reference_lines = [
+            (100 * 5/12, 'Non-Info Exchange', 'purple', ':')
+        ]
+
+        create_horizontal_bar_plot(
+            models=sorted_models,
+            values=sorted_win_rates,
+            errors=sorted_uncertainties,
+            xlabel=xlabel,
+            filename=filename,
+            color=colors,
+            sort_ascending=None,  # Already sorted
+            show_reference_line=False,
+            text_offset=1.5,
+            reference_lines=reference_lines
+        )
+
+        print(f"  📈 {background}: {filename}")
 
 
 def main():
@@ -304,12 +412,16 @@ def main():
         combined_win_rates, combined_uncertainties
     )
 
-    # Create plot
-    print("\n5️⃣ Creating plot...")
-    create_plot_with_human(exp_scores, exp_errors)
+    # Create aggregated deceive score plot
+    print("\n5️⃣ Creating aggregated deceive score plot...")
+    create_plot_with_human(exp_scores, exp_errors, combined_win_rates)
+
+    # Create background-specific win rates plots
+    print("\n6️⃣ Creating background-specific win rates plots...")
+    create_background_win_rates_plots(combined_win_rates, combined_uncertainties)
 
     print("\n" + "=" * 60)
-    print("✅ Done! Show this plot to your class!")
+    print("✅ Done! Show these plots to your class!")
     print(f"   Human Deceive Score: {exp_scores['Human']:.3f} ± {exp_errors['Human']:.3f}")
     print(f"   Rank: {(exp_scores > exp_scores['Human']).sum() + 1} out of {len(exp_scores)}")
 

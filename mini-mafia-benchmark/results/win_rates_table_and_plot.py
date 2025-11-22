@@ -103,6 +103,20 @@ def create_benchmark_plot(models, win_rates, uncertainties, background_name, cap
     # Get color based on background
     bar_color = get_background_color(background_name)
 
+    # Define reference lines
+    # Non-information exchange baseline: 5/12 mafia win rate (7/12 town win rate)
+    # = 41.67% mafia, 58.33% town
+    if use_good_wins:
+        # Town win rate plot (Detect and Disclose capabilities)
+        reference_lines = [
+            (100 * 7/12, 'Non-Info Exchange', 'purple', ':')
+        ]
+    else:
+        # Mafia win rate plot (Deceive capability)
+        reference_lines = [
+            (100 * 5/12, 'Non-Info Exchange', 'purple', ':')
+        ]
+
     # Use unified plotting function with win-rates specific sorting (descending then reversed)
     create_horizontal_bar_plot(
         models=models,
@@ -112,9 +126,10 @@ def create_benchmark_plot(models, win_rates, uncertainties, background_name, cap
         filename=filename,
         color=bar_color,
         sort_ascending=False,  # Sort descending first
-        show_reference_line=False,  # Win rates don't need reference line
+        show_reference_line=False,  # Win rates don't need reference line at 1
         text_offset=1.5,  # Win rates use larger offset
-        reverse_after_sort=True  # Then reverse to put highest at top
+        reverse_after_sort=True,  # Then reverse to put highest at top
+        reference_lines=reference_lines
     )
 
     print(f"  📈 Plot saved: {filename}")

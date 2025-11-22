@@ -47,42 +47,73 @@ def load_win_rates_data():
     
     return capabilities_data
 
+def calculate_reference_exp_score(reference_value, win_rates_df):
+    """
+    Calculate exponential score for a reference win rate value.
+    Uses the same z-score calculation as for models.
+
+    Args:
+        reference_value: Win rate percentage (e.g., 50.0 for 50%)
+        win_rates_df: DataFrame of win rates across backgrounds
+
+    Returns:
+        Exponential score for the reference value
+    """
+    z_scores = []
+
+    for background in win_rates_df.columns:
+        background_win_rates = win_rates_df[background].values
+        bg_mean = np.mean(background_win_rates)
+        bg_std = np.std(background_win_rates, ddof=1)
+
+        if bg_std > 0:
+            z = (reference_value - bg_mean) / bg_std
+            z_scores.append(z)
+        else:
+            z_scores.append(0.0)
+
+    avg_z = np.mean(z_scores)
+    exp_score = np.exp(avg_z)
+
+    return exp_score
+
+
 def calculate_aggregated_scores(win_rates_df, uncertainties_df, capability_name):
     """
     Calculate aggregated exponential scores with proper uncertainty propagation.
-    
+
     Algorithm:
-    1. For each background, calculate mean and std across models  
+    1. For each background, calculate mean and std across models
     2. Calculate z-scores for each model in each background
     3. Propagate uncertainties through z-score calculation
     4. Average z-scores across backgrounds for each model
     5. Compute exponential scores: αᵢ = e^z̄ᵢ
     6. Propagate uncertainties to exponential scores
     """
-    
+
     print(f"  Win rates shape: {win_rates_df.shape}")
     print(f"  Sample win rates: {win_rates_df.iloc[0].to_dict()}")
-    
+
     # Calculate z-scores and z-score uncertainties for each model in each background
     z_scores_df = pd.DataFrame(index=win_rates_df.index, columns=win_rates_df.columns)
     z_errors_df = pd.DataFrame(index=win_rates_df.index, columns=win_rates_df.columns)
-    
+
     for background in win_rates_df.columns:
         # Get win rates and uncertainties for this background across all models
         background_win_rates = win_rates_df[background].values
         background_uncertainties = uncertainties_df[background].values
-        
+
         # Calculate background mean and standard deviation
         bg_mean = np.mean(background_win_rates)
         bg_std = np.std(background_win_rates, ddof=1)  # Sample standard deviation
-        
+
         print(f"  Background {background}: mean={bg_mean:.1f}%, std={bg_std:.1f}%")
-        
+
         # Calculate z-scores for each model in this background
         if bg_std > 0:
             z_scores = (background_win_rates - bg_mean) / bg_std
             z_scores_df[background] = z_scores
-            
+
             # Propagate uncertainties to z-scores: δz = δp / σ_background
             z_errors = background_uncertainties / bg_std
             z_errors_df[background] = z_errors
@@ -90,26 +121,26 @@ def calculate_aggregated_scores(win_rates_df, uncertainties_df, capability_name)
             # If std is 0, all models have same performance
             z_scores_df[background] = 0.0
             z_errors_df[background] = 0.0
-    
+
     # Calculate average z-score for each model across backgrounds
     avg_z_scores = z_scores_df.mean(axis=1)
-    
+
     # Calculate uncertainty in average z-scores (quadrature sum divided by number of backgrounds)
     z_variance_sum = (z_errors_df ** 2).sum(axis=1)  # Sum of variances
     avg_z_errors = np.sqrt(z_variance_sum) / len(z_scores_df.columns)  # Standard error of mean
-    
+
     # Calculate exponential scores: αᵢ = e^z̄ᵢ
     exp_scores = np.exp(avg_z_scores)
-    
+
     # Propagate uncertainties to exponential scores: δα = α * δz̄
     exp_errors = exp_scores * avg_z_errors
-    
+
     print(f"  Exponential scores range: {exp_scores.min():.3f} to {exp_scores.max():.3f}")
     print(f"  Average z-score errors range: {avg_z_errors.min():.3f} to {avg_z_errors.max():.3f}")
-    
+
     return avg_z_scores, avg_z_errors, exp_scores, exp_errors
 
-def create_exponential_score_plot(exp_scores, exp_errors, capability_name):
+def create_exponential_score_plot(exp_scores, exp_errors, capability_name, win_rates_df):
     """Create exponential score plot for a specific capability"""
 
     models = exp_scores.index.tolist()
@@ -118,6 +149,23 @@ def create_exponential_score_plot(exp_scores, exp_errors, capability_name):
 
     filename = f"scores_{capability_name.lower()}.png"
     xlabel = f'{capability_name} Score'
+
+    # Calculate reference lines
+    # For Deceive: 50% and 5/12≈41.67% (mafia win rates)
+    # For Detect/Disclose: 50% and 7/12≈58.33% (town win rates)
+    if capability_name == 'Deceive':
+        ref_50 = calculate_reference_exp_score(50.0, win_rates_df)
+        ref_noinfo = calculate_reference_exp_score(100 * 5/12, win_rates_df)
+    else:
+        ref_50 = calculate_reference_exp_score(50.0, win_rates_df)
+        ref_noinfo = calculate_reference_exp_score(100 * 7/12, win_rates_df)
+
+    reference_lines = [
+        (ref_50, '50%', 'black', '--'),
+        (ref_noinfo, 'Non-Info Exchange', 'purple', ':')
+    ]
+
+    print(f"  Reference lines: 50%={ref_50:.3f}, Non-Info={ref_noinfo:.3f}")
 
     # Use unified plotting function
     create_horizontal_bar_plot(
@@ -128,7 +176,8 @@ def create_exponential_score_plot(exp_scores, exp_errors, capability_name):
         filename=filename,
         color='#E74C3C',  # Original aggregate score color
         sort_ascending=True,
-        show_reference_line=True
+        show_reference_line=False,  # Don't show the x=1 reference line
+        reference_lines=reference_lines
     )
 
     print(f"  Plot saved: {filename}")
@@ -247,9 +296,9 @@ def create_score_plots():
         avg_z_scores, avg_z_errors, exp_scores, exp_errors = calculate_aggregated_scores(
             win_rates_df, uncertainties_df, capability_name
         )
-        
+
         # Create plot
-        create_exponential_score_plot(exp_scores, exp_errors, capability_name)
+        create_exponential_score_plot(exp_scores, exp_errors, capability_name, win_rates_df)
         create_average_z_score_plot(avg_z_scores, avg_z_errors, capability_name)
         
         plots_created += 1

@@ -48,6 +48,9 @@ event_queues = {}  # session_id -> queue of game events (AI messages, etc)
 # Game results storage (since we can't access Flask session from background thread)
 game_results = {}  # session_id -> {game_done, winner, result_message, game_id}
 
+# Game sequence tracking (for 10-game sessions)
+game_sequences = {}  # session_id -> {current_game: int, total_games: int, game_ids: list, wins: int}
+
 # Get game explanation from prompt.txt
 GAME_EXPLANATION = load_base_prompt().split('#REQUIRED RESPONSE FORMATS')[0].strip()
 
@@ -106,41 +109,60 @@ class WebHuman:
             return '\n'.join(lines[-3:]) if len(lines) > 3 else full_prompt
 
 def create_web_mini_mafia_game(config, session_id):
-    """Create mini-mafia game with web-human as mafioso"""
+    """Create mini-mafia game with web-human as mafioso, detective, or villager"""
+    human_role = config.get('human_role', 'mafioso')
+
     # Create model configs for all roles
-    # Use a dummy config for mafioso, we'll replace it after
-    model_configs = {
-        'detective': config['detective_model'],
-        'villager': config['villager_model'],
-        'mafioso': config['detective_model']  # Temporary, will be replaced
-    }
+    if human_role == 'detective':
+        model_configs = {
+            'detective': config['mafioso_model'],  # Temporary, will be replaced
+            'villager': config.get('villager_model', config['mafioso_model']),
+            'mafioso': config['mafioso_model']
+        }
+    elif human_role == 'villager':
+        model_configs = {
+            'detective': config['detective_model'],
+            'villager': config['detective_model'],  # Temporary, will be replaced
+            'mafioso': config['mafioso_model']
+        }
+    else:  # mafioso
+        model_configs = {
+            'detective': config.get('detective_model', config.get('mafioso_model', {})),
+            'villager': config.get('villager_model', config.get('detective_model', {})),
+            'mafioso': config.get('detective_model', config.get('mafioso_model', {}))  # Temporary, will be replaced
+        }
 
     game = create_mini_mafia_game(model_configs, debug_prompts=False)
 
     # Get game information for initial messages
-    mafioso_agent = next(a for a in game.state.agents if a.role == 'mafioso')
     victim = next(a for a in game.state.agents if not a.alive)
+    # For villager, make sure we get the ALIVE one (since one villager dies at night)
+    if human_role == 'villager':
+        human_agent = next(a for a in game.state.agents if a.role == human_role and a.alive)
+    else:
+        human_agent = next(a for a in game.state.agents if a.role == human_role)
     all_names = [a.name for a in game.state.agents]
-    other_names = [n for n in all_names if n != mafioso_agent.name]
+    other_names = [n for n in all_names if n != human_agent.name]
 
     # Send initial game setup messages
     if session_id in event_queues:
         event_queues[session_id].put({
             'type': 'system',
-            'message': f"You're {mafioso_agent.name} and you're playing Mafia with: {', '.join(other_names)}."
+            'message': f"You're {human_agent.name} and you're playing Mafia with: {', '.join(other_names)}."
         })
         event_queues[session_id].put({
             'type': 'system',
-            'message': f"You're {mafioso_agent.name}, the mafioso."
+            'message': f"You're {human_agent.name}, the {human_role}."
         })
         event_queues[session_id].put({
             'type': 'system',
             'message': "Night 1 begins."
         })
-        event_queues[session_id].put({
-            'type': 'system',
-            'message': f"You killed {victim.name}."
-        })
+        if human_role == 'mafioso':
+            event_queues[session_id].put({
+                'type': 'system',
+                'message': f"You killed {victim.name}."
+            })
         event_queues[session_id].put({
             'type': 'system',
             'message': f"{victim.name} was found dead."
@@ -150,13 +172,13 @@ def create_web_mini_mafia_game(config, session_id):
             'message': "Day 1 begins."
         })
 
-    # Replace the mafioso's LLM with WebHuman
-    mafioso_agent.llm = WebHuman(session_id)
-    mafioso_agent.model_config = {'type': 'web_human'}
+    # Replace the human role's LLM with WebHuman
+    human_agent.llm = WebHuman(session_id)
+    human_agent.model_config = {'type': 'web_human'}
 
     # Wrap AI agents' message method to capture their responses
     for agent in game.state.agents:
-        if agent.role != 'mafioso':
+        if agent.role != human_role:
             original_message = agent.message
             def wrapped_message(active_players, round_num, all_players, discussion_rounds, game_state, agent=agent, orig=original_message):
                 result = orig(active_players, round_num, all_players, discussion_rounds, game_state)
@@ -183,7 +205,8 @@ def init_database():
             detective_name TEXT,
             villager_name TEXT,
             arrested_name TEXT,
-            background_name TEXT
+            background_name TEXT,
+            human_role TEXT
         )
     ''')
     cursor.execute('''
@@ -201,7 +224,7 @@ def init_database():
     conn.commit()
     conn.close()
 
-def save_game(game_state, background_name):
+def save_game(game_state, background_name, human_role='mafioso'):
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
 
@@ -214,10 +237,10 @@ def save_game(game_state, background_name):
 
     cursor.execute('''
         INSERT INTO games (timestamp, winner, mafioso_name, detective_name, villager_name,
-                          arrested_name, background_name)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+                          arrested_name, background_name, human_role)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ''', (datetime.now().isoformat(), winner, mafioso.name, detective.name,
-          villager.name, arrested.name if arrested else None, background_name))
+          villager.name, arrested.name if arrested else None, background_name, human_role))
 
     game_id = cursor.lastrowid
 
@@ -240,35 +263,35 @@ HTML = """
     <title>Mini-Mafia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: Arial; max-width: 900px; margin: 20px auto; padding: 20px; background: #f5f5f5; }
-        h1 { color: #1976d2; text-align: center; }
-        .game-area { background: white; padding: 20px; border-radius: 10px; margin-top: 20px; }
-        .event-feed { min-height: 400px; max-height: 600px; overflow-y: auto; margin-bottom: 20px; }
-        .event { padding: 12px; margin: 8px 0; border-radius: 5px; animation: fadeIn 0.3s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .event.system { background: #f5f5f5; color: #666; font-style: italic; }
-        .event.ai { background: #e3f2fd; }
-        .event.you { background: #e8f5e9; font-weight: bold; border-left: 4px solid #4caf50; }
-        .event.prompt { background: #fff9e6; border-left: 4px solid #ffc107; }
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #fafafa; }
+        h1 { color: #333; text-align: center; font-weight: normal; font-size: 28px; margin-bottom: 30px; }
+        .game-area { background: white; padding: 25px; border: 1px solid #ddd; }
+        .event-feed { min-height: 400px; max-height: 600px; overflow-y: auto; margin-bottom: 20px; border: 1px solid #eee; padding: 15px; }
+        .event { padding: 10px; margin: 6px 0; border-left: 3px solid #ddd; }
+        .event.system { color: #666; font-style: italic; }
+        .event.ai { background: #e5e5ea; color: #000; }
+        .event.you { background: #dcf8c6; font-weight: bold; border-left-color: #4caf50; }
+        .event.prompt { background: #f5f5f5; border-left-color: #999; }
         .input-area { margin-top: 20px; }
-        textarea { width: 100%; padding: 12px; font-size: 14px; border: 2px solid #ddd; border-radius: 5px; font-family: Arial; box-sizing: border-box; }
-        button { padding: 12px 30px; font-size: 16px; background: #1976d2; color: white; border: none;
-                border-radius: 5px; cursor: pointer; margin: 10px 5px 0 0; }
-        button:hover { background: #1565c0; }
+        textarea { width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ddd; font-family: Arial, sans-serif; box-sizing: border-box; }
+        button { padding: 10px 25px; font-size: 14px; background: #333; color: white; border: none; cursor: pointer; margin: 10px 5px 0 0; }
+        button:hover { background: #555; }
         button:disabled { background: #ccc; cursor: not-allowed; }
-        .result { text-align: center; padding: 30px; font-size: 24px; font-weight: bold; }
+        .result { text-align: center; padding: 30px; font-size: 20px; font-weight: normal; }
         .result.win { color: #2e7d32; }
         .result.lose { color: #c62828; }
+        .progress-header { text-align: center; color: #666; font-size: 16px; margin: -10px 0 20px 0; }
     </style>
 </head>
 <body>
-    <h1>🎭 Mini-Mafia Game</h1>
+    <h1>Mini-Mafia Game</h1>
+    <div class="progress-header" id="progress-header">10-Game Sequence</div>
 
     <div class="game-area">
         <div class="event-feed" id="event-feed"></div>
 
         <div class="input-area" id="input-area" style="display:none;">
-            <textarea id="response-input" rows="3" placeholder="Your response..." ></textarea>
+            <textarea id="response-input" rows="3" placeholder="" ></textarea>
             <button onclick="submitResponse()">Submit Response</button>
         </div>
 
@@ -294,6 +317,11 @@ HTML = """
 
             if (data.success) {
                 gameThread = data.thread_id;
+                // Update progress header
+                document.getElementById('progress-header').textContent =
+                    `Game ${data.current_game} of ${data.total_games}`;
+                // Show game progress
+                addEvent(`Starting Game ${data.current_game} of ${data.total_games}`, 'system');
                 pollForEvents();
             }
         }
@@ -314,13 +342,14 @@ HTML = """
                     // Continue polling without delay
                     continue;
                 } else if (data.has_prompt) {
-                    // Show prompt as an event
-                    addEvent(data.prompt, 'prompt');
+                    // Use prompt as textarea placeholder instead of showing it
+                    const textarea = document.getElementById('response-input');
+                    textarea.placeholder = data.prompt;
+                    textarea.value = '';
 
                     // Show input area
                     document.getElementById('input-area').style.display = 'block';
-                    document.getElementById('response-input').value = '';
-                    document.getElementById('response-input').focus();
+                    textarea.focus();
                     isWaitingForInput = true;
                     break;
                 } else if (data.game_done) {
@@ -358,16 +387,44 @@ HTML = """
 
         function showResults(data) {
             const resultDiv = document.getElementById('result-area');
-            const youWon = data.winner === 'EVIL';
 
-            addEvent('Game Over!', 'system');
-            addEvent(data.result_message, youWon ? 'you' : 'ai');
+            if (data.continue_sequence) {
+                // Game finished, but more to go
+                const youWon = data.winner === 'EVIL';
+                addEvent('Game Over!', 'system');
+                addEvent(data.result_message, youWon ? 'you' : 'ai');
+                addEvent(`Progress: ${data.wins_so_far} wins out of ${data.current_game} games`, 'system');
+                addEvent(`Starting next game in 3 seconds...`, 'system');
 
-            resultDiv.className = 'result ' + (youWon ? 'win' : 'lose');
-            resultDiv.innerHTML =
-                `<div>${youWon ? '🎉 YOU WON!' : '😞 YOU LOST'}</div>` +
-                `<p style="font-size: 14px; color: #666; margin-top: 10px;">Game ID: ${data.game_id}</p>`;
-            resultDiv.style.display = 'block';
+                // Auto-start next game after 3 seconds
+                setTimeout(() => {
+                    startGame();
+                }, 3000);
+
+            } else if (data.sequence_complete) {
+                // All 10 games complete - show final summary
+                addEvent('🎉 All games complete!', 'system');
+
+                resultDiv.className = 'result';
+                resultDiv.innerHTML =
+                    `<div style="font-size: 24px; margin-bottom: 20px;">Sequence Complete!</div>` +
+                    `<div style="font-size: 36px; font-weight: bold; color: #2ECC71; margin: 20px 0;">${data.total_wins}/${data.total_games} Wins</div>` +
+                    `<div style="font-size: 20px; margin-bottom: 20px;">Win Rate: ${data.win_rate.toFixed(1)}%</div>` +
+                    `<p style="font-size: 12px; color: #999; margin-top: 20px;">Game IDs: ${data.game_ids.join(', ')}</p>`;
+                resultDiv.style.display = 'block';
+
+            } else {
+                // Single game (shouldn't happen in sequence mode, but handle it)
+                const youWon = data.winner === 'EVIL';
+                addEvent('Game Over!', 'system');
+                addEvent(data.result_message, youWon ? 'you' : 'ai');
+
+                resultDiv.className = 'result ' + (youWon ? 'win' : 'lose');
+                resultDiv.innerHTML =
+                    `<div>${youWon ? 'YOU WON' : 'YOU LOST'}</div>` +
+                    `<p style="font-size: 12px; color: #999; margin-top: 10px;">Game ID: ${data.game_id}</p>`;
+                resultDiv.style.display = 'block';
+            }
         }
 
         // Character counter
@@ -408,6 +465,22 @@ def start_game():
     session_id = session.sid if hasattr(session, 'sid') else id(session)
     config = load_config()
 
+    # Initialize game sequence if first game
+    if session_id not in game_sequences:
+        game_sequences[session_id] = {
+            'current_game': 1,
+            'total_games': 100,
+            'game_ids': [],
+            'wins': 0
+        }
+
+    # Get current game number
+    current_game = game_sequences[session_id]['current_game']
+    total_games = game_sequences[session_id]['total_games']
+
+    # Clear any previous game results
+    game_results.pop(session_id, None)
+
     # Initialize queues before creating game
     prompt_queues[session_id] = queue.Queue()
     response_queues[session_id] = queue.Queue()
@@ -423,23 +496,53 @@ def start_game():
                     game.play()  # This runs single_day_play which handles the full game
 
             # Game finished, save results (outside stdout redirect)
-            game_id = save_game(game.state, config['background_name'])
+            human_role = config.get('human_role', 'mafioso')
+            game_id = save_game(game.state, config['background_name'], human_role)
 
             # Determine results
             arrested = next((a for a in game.state.agents if a.imprisoned), None)
             winner = 'GOOD' if arrested and arrested.role == 'mafioso' else 'EVIL'
             result_message = "Town wins! Mafioso arrested!" if winner == 'GOOD' else "Mafia wins! Town lost!"
 
-            # Store results in global dict (can't use session from background thread)
-            game_results[session_id] = {
-                'game_done': True,
-                'winner': winner,
-                'result_message': result_message,
-                'game_id': game_id
-            }
+            # Update sequence tracking
+            human_role = config.get('human_role', 'mafioso')
+            game_sequences[session_id]['game_ids'].append(game_id)
+            # Human wins if: (mafioso and EVIL wins) OR (detective/villager and GOOD wins)
+            if (human_role == 'mafioso' and winner == 'EVIL') or (human_role in ['detective', 'villager'] and winner == 'GOOD'):
+                game_sequences[session_id]['wins'] += 1
+
+            # Check if we should continue to next game
+            current = game_sequences[session_id]['current_game']
+            total = game_sequences[session_id]['total_games']
+
+            if current < total:
+                # More games to play
+                game_sequences[session_id]['current_game'] += 1
+                game_results[session_id] = {
+                    'game_done': True,
+                    'continue_sequence': True,
+                    'current_game': current,
+                    'total_games': total,
+                    'winner': winner,
+                    'result_message': result_message,
+                    'game_id': game_id,
+                    'wins_so_far': game_sequences[session_id]['wins']
+                }
+            else:
+                # Sequence complete
+                game_results[session_id] = {
+                    'game_done': True,
+                    'sequence_complete': True,
+                    'total_games': total,
+                    'total_wins': game_sequences[session_id]['wins'],
+                    'game_ids': game_sequences[session_id]['game_ids'],
+                    'win_rate': (game_sequences[session_id]['wins'] / total) * 100
+                }
 
         except Exception as e:
             print(f"Game error: {e}")
+            import traceback
+            traceback.print_exc()
             game_results[session_id] = {
                 'game_done': True,
                 'error': str(e)
@@ -451,7 +554,12 @@ def start_game():
     session['session_id'] = session_id
     session['game_done'] = False
 
-    return jsonify({'success': True, 'thread_id': session_id})
+    return jsonify({
+        'success': True,
+        'thread_id': session_id,
+        'current_game': current_game,
+        'total_games': total_games
+    })
 
 @app.route('/api/get_prompt', methods=['GET'])
 def get_prompt():
@@ -538,9 +646,18 @@ if __name__ == '__main__':
     init_database()
 
     config = load_config()
+    human_role = config.get('human_role', 'mafioso')
     print(f"\nCurrent background: {config['background_name']}")
-    print(f"  Detective: {config['detective_model']}")
-    print(f"  Villager: {config['villager_model']}")
+    print(f"Human role: {human_role}")
+    if human_role == 'detective':
+        print(f"  Mafioso: {config['mafioso_model']}")
+        print(f"  Villager: {config.get('villager_model', config['mafioso_model'])}")
+    elif human_role == 'villager':
+        print(f"  Mafioso: {config['mafioso_model']}")
+        print(f"  Detective: {config['detective_model']}")
+    else:  # mafioso
+        print(f"  Detective: {config.get('detective_model', config.get('mafioso_model', 'N/A'))}")
+        print(f"  Villager: {config.get('villager_model', config.get('detective_model', 'N/A'))}")
 
     # Kill any existing process on port 5002
     kill_process_on_port(5002)
