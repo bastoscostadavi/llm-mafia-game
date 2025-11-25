@@ -273,16 +273,27 @@ def plot_z_overlay(rows, include_short_prompt_round8):
         sp_r8_scores = [row['short_prompt_round8'][0] for row in rows]
         sp_r8_errs = [row['short_prompt_round8'][1] for row in rows]
 
-    # Plot with multiple bars per model
+    # Plot with multiple bars per model - matching theoretical model style
     plt.ioff()
-    num_datasets = 2 + (1 if include_short_prompt_round8 else 0)
-    fig, ax = plt.subplots(figsize=(14, 7))
-    y_pos = list(range(len(models)))
-    bar_height = 0.8 / num_datasets
 
+    # Set font size to match theoretical model exactly
+    plt.rcParams.update({
+        'font.size': 13,
+        'axes.labelsize': 14,
+        'axes.titlesize': 14,
+        'xtick.labelsize': 13,
+        'ytick.labelsize': 13,
+    })
+
+    num_datasets = 2 + (1 if include_short_prompt_round8 else 0)
+    fig, ax = plt.subplots(figsize=(9, 6))
+    y_pos = list(range(len(models)))
+    bar_height = 0.7 / num_datasets
+
+    # Use distinct colors for each dataset
     datasets = [
-        (sp_scores, sp_errs, 'Short-prompt', '#1f77b4'),
-        (art_scores, art_errs, 'Default', '#E74C3C')
+        (sp_scores, sp_errs, 'Short-prompt', '#2E86AB'),
+        (art_scores, art_errs, 'Default', '#E63946')
     ]
     if include_short_prompt_round8:
         datasets.append((sp_r8_scores, sp_r8_errs, 'Short-prompt and 8 Rounds', '#9B59B6'))
@@ -290,12 +301,13 @@ def plot_z_overlay(rows, include_short_prompt_round8):
     for idx, (scores, errs, label, color) in enumerate(datasets):
         offset = (idx - (num_datasets - 1) / 2) * bar_height
         ax.barh([y + offset for y in y_pos], scores, height=bar_height,
-                xerr=errs, label=label, color=color, alpha=0.85,
-                error_kw={'capsize': 5, 'capthick': 2})
+                xerr=errs, label=label, color=color, alpha=0.7,
+                error_kw={'capsize': 3, 'capthick': 1.5, 'elinewidth': 1.5})
 
-    ax.set_xlabel('Deceive Score', fontsize=24, fontweight='bold')
-    ax.set_yticks([])
-    ax.legend(fontsize=16)
+    ax.set_xlabel('Deceive Score', fontsize=12)
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(models)
+    ax.legend(fontsize=11)
 
     all_values = sp_scores + art_scores
     all_errors = sp_errs + art_errs
@@ -307,30 +319,27 @@ def plot_z_overlay(rows, include_short_prompt_round8):
     all_left = [v - e for v, e in zip(all_values, all_errors)]
     max_val = max(all_right)
     min_val = min(all_left)
-    padding = (max_val - min_val) * 0.1 if max_val > min_val else 0.1
+    padding = (max_val - min_val) * 0.15
     ax.set_xlim(min_val - padding, max_val + padding)
 
-    data_range = max_val - min_val if max_val > min_val else 1.0
-    text_offset = data_range * 0.02
-    for idx, model in enumerate(models):
-        # Place text at the rightmost edge
-        right_edge = max(
-            art_scores[idx] + art_errs[idx],
-            sp_scores[idx] + sp_errs[idx]
-        )
-        if include_short_prompt_round8:
-            right_edge = max(right_edge, sp_r8_scores[idx] + sp_r8_errs[idx])
-        ax.text(right_edge + text_offset, idx, model, ha='left', va='center',
-                fontweight='bold', fontsize=20)
+    # Add vertical line at 0 (reference point)
+    if min_val <= 0 <= max_val:
+        ax.axvline(x=0, color='#333333', alpha=0.5, linewidth=1.5, linestyle='-', zorder=0)
 
-    ax.axvline(0, color='gray', linestyle='--', linewidth=2)
-    ax.grid(True, axis='x', color='gray', alpha=0.3)
+    # Minimal grid
+    ax.grid(True, alpha=0.2, axis='x', linewidth=0.5)
+    ax.set_axisbelow(True)
+
+    # Clean spines - exactly like theoretical model
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
+    ax.spines['left'].set_color('#CCCCCC')
+    ax.spines['bottom'].set_color('#CCCCCC')
+    ax.spines['left'].set_linewidth(0.5)
+    ax.spines['bottom'].set_linewidth(0.5)
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_Z_PLOT, dpi=300, bbox_inches='tight')
+    plt.savefig(OUTPUT_Z_PLOT, dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
     plt.close()
     print(f'Saved overlay plot to {OUTPUT_Z_PLOT}')
 
@@ -349,15 +358,27 @@ def plot_exp_overlay(rows, include_short_prompt_round8):
         sp_r8_scores = [row['short_prompt_round8_exp'][0] for row in rows]
         sp_r8_errs = [row['short_prompt_round8_exp'][1] for row in rows]
 
+    # Plot with multiple bars per model - matching theoretical model style
     plt.ioff()
-    num_datasets = 2 + (1 if include_short_prompt_round8 else 0)
-    fig, ax = plt.subplots(figsize=(14, 7))
-    y_pos = list(range(len(models)))
-    bar_height = 0.8 / num_datasets
 
+    # Set font size to match theoretical model exactly
+    plt.rcParams.update({
+        'font.size': 13,
+        'axes.labelsize': 14,
+        'axes.titlesize': 14,
+        'xtick.labelsize': 13,
+        'ytick.labelsize': 13,
+    })
+
+    num_datasets = 2 + (1 if include_short_prompt_round8 else 0)
+    fig, ax = plt.subplots(figsize=(9, 6))
+    y_pos = list(range(len(models)))
+    bar_height = 0.7 / num_datasets
+
+    # Use distinct colors for each dataset
     datasets = [
-        (sp_scores, sp_errs, 'Short-prompt', '#1f77b4'),
-        (art_scores, art_errs, 'Default', '#E74C3C')
+        (sp_scores, sp_errs, 'Short-prompt', '#2E86AB'),
+        (art_scores, art_errs, 'Default', '#E63946')
     ]
     if include_short_prompt_round8:
         datasets.append((sp_r8_scores, sp_r8_errs, 'Short-prompt and 8 Rounds', '#9B59B6'))
@@ -365,12 +386,13 @@ def plot_exp_overlay(rows, include_short_prompt_round8):
     for idx, (scores, errs, label, color) in enumerate(datasets):
         offset = (idx - (num_datasets - 1) / 2) * bar_height
         ax.barh([y + offset for y in y_pos], scores, height=bar_height,
-                xerr=errs, label=label, color=color, alpha=0.85,
-                error_kw={'capsize': 5, 'capthick': 2})
+                xerr=errs, label=label, color=color, alpha=0.7,
+                error_kw={'capsize': 3, 'capthick': 1.5, 'elinewidth': 1.5})
 
-    ax.set_xlabel('Deceive Score', fontsize=24, fontweight='bold')
-    ax.set_yticks([])
-    ax.legend(fontsize=16)
+    ax.set_xlabel('Deceive Score', fontsize=12)
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(models)
+    ax.legend(fontsize=11)
 
     all_values = sp_scores + art_scores
     all_errors = sp_errs + art_errs
@@ -382,30 +404,27 @@ def plot_exp_overlay(rows, include_short_prompt_round8):
     all_left = [v - e for v, e in zip(all_values, all_errors)]
     max_val = max(all_right)
     min_val = min(all_left)
-    padding = (max_val - min_val) * 0.1 if max_val > min_val else 0.1
+    padding = (max_val - min_val) * 0.15
     ax.set_xlim(min_val - padding, max_val + padding)
 
-    data_range = max_val - min_val if max_val > min_val else 1.0
-    text_offset = data_range * 0.02
-    for idx, model in enumerate(models):
-        # Place text at the rightmost edge
-        right_edge = max(
-            art_scores[idx] + art_errs[idx],
-            sp_scores[idx] + sp_errs[idx]
-        )
-        if include_short_prompt_round8:
-            right_edge = max(right_edge, sp_r8_scores[idx] + sp_r8_errs[idx])
-        ax.text(right_edge + text_offset, idx, model, ha='left', va='center',
-                fontweight='bold', fontsize=20)
+    # Add vertical line at 1 (reference point)
+    if min_val <= 1 <= max_val:
+        ax.axvline(x=1, color='#333333', alpha=0.5, linewidth=1.5, linestyle='-', zorder=0)
 
-    ax.axvline(1, color='gray', linestyle='--', linewidth=2)
-    ax.grid(True, axis='x', color='gray', alpha=0.3)
+    # Minimal grid
+    ax.grid(True, alpha=0.2, axis='x', linewidth=0.5)
+    ax.set_axisbelow(True)
+
+    # Clean spines - exactly like theoretical model
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
+    ax.spines['left'].set_color('#CCCCCC')
+    ax.spines['bottom'].set_color('#CCCCCC')
+    ax.spines['left'].set_linewidth(0.5)
+    ax.spines['bottom'].set_linewidth(0.5)
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_EXP_PLOT, dpi=300, bbox_inches='tight')
+    plt.savefig(OUTPUT_EXP_PLOT, dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
     plt.close()
     print(f'Saved exp overlay plot to {OUTPUT_EXP_PLOT}')
 

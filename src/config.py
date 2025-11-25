@@ -38,8 +38,8 @@ The prompt system now uses a single prompt.txt file for consistency.
 # EX: 'mafioso': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'}
 
 DEFAULT_MODEL_CONFIGS = {
-    'villager': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
-    'mafioso': {'type': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'temperature': 0.7},
+    'villager': {'type': 'xai', 'model': 'grok-3-mini', 'temperature': 0.7},
+    'mafioso': {'type': 'deepseek', 'model': 'deepseek-chat', 'temperature': 0.7},
     'detective': {'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'},
 }
 
