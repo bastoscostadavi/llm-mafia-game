@@ -1,124 +1,269 @@
 # LLM Mafia Game
 
-A comprehensive implementation of the classic Mafia social deduction game designed for evaluating large language models' interactive capabilities through gameplay.
+A flexible implementation of the classic Mafia social deduction game where LLM agents (or humans) play as town members trying to identify hidden mafiosos through strategic discussion, voting, and night actions.
 
 ## Overview
 
-This repository provides a general-purpose Mafia game implementation that can be configured with different numbers of players, roles, and game mechanics. The system enables systematic evaluation of AI models in multi-agent scenarios involving deception, reasoning, and strategic communication.
+This project enables:
+- **Interactive gameplay** with AI agents from multiple providers (OpenAI, Anthropic, Google, xAI, DeepSeek, local models)
+- **Human participation** through a web interface or command-line
+- **Benchmarking and research** on LLM deception, detection, and strategic reasoning
+- **Flexible configuration** for different game variants and model combinations
 
-## Game Implementation
+## Game Rules
 
-### Core Features
+### Roles
 
-- **Flexible Game Configuration**: Support for variable numbers of players, roles, and game mechanics
-- **Multi-Agent LLM Support**: Compatible with various language models through a unified interface
-- **Complete Game Flow**: Implements full Mafia gameplay including night phases, day discussions, and voting
-- **Structured Communication**: Standardized prompt templates and response parsing for consistent AI interactions
-- **Game State Management**: Comprehensive tracking of player roles, actions, and game progression
+**Town Team (eliminate all mafia to win):**
+- **Detective**: Investigates one player each night to learn their true role
+- **Villager**: No special abilities, relies on discussion and voting
 
-### Supported Roles
+**Mafia Team (eliminate all town members to win):**
+- **Mafioso**: Knows other mafiosos, kills one town member each night
 
-- **Mafia**: Informed minority that eliminates town members during night phases
-- **Detective**: Town members with investigation abilities to identify mafia
-- **Villager**: Town members with voting power but no special abilities
-- **Extensible Role System**: Framework supports additional custom roles
+### Game Flow
 
-### Game Phases
+**Night Phase:**
+1. Detectives investigate players to learn their roles (private information)
+2. One randomly selected mafioso chooses a target to eliminate
+3. Deaths are announced publicly at the start of the next day
 
-1. **Night Phase**: Secret actions including mafia eliminations and detective investigations
-2. **Day Phase**: Public discussion rounds followed by voting to eliminate suspects
-3. **Win Conditions**: Town wins by eliminating all mafia; mafia wins by achieving parity
+**Day Phase:**
+1. **Discussion rounds**: Players speak in random order, sharing suspicions and information
+2. **Voting**: All active players vote to arrest someone
+3. The player with the most votes is arrested and removed from play
 
-## Project Structure
-
-```
-├── src/                      # Core game implementation
-├── models/                   # LLM integration and model configurations
-├── mini-mafia-benchmark/     # Mini-Mafia benchmark implementation
-├── run_game.py              # Basic game execution script
-├── preset_games.py          # Predefined game configurations
-└── requirements.txt         # Python dependencies
-```
-
-## Mini-Mafia Benchmark
-
-This repository includes the **Mini-Mafia Benchmark**, a specialized four-player variant designed for systematic evaluation of LLM capabilities. Mini-Mafia isolates three key interactive dimensions:
-
-- **Deceive**: Mafioso must mislead other players
-- **Detect**: Villager must identify deception
-- **Disclose**: Detective must effectively share information
-
-For detailed information about the Mini-Mafia benchmark, methodology, and results, see [`mini-mafia-benchmark/`](mini-mafia-benchmark/).
+**Victory Conditions:**
+- Town wins when all mafiosos are arrested
+- Mafia wins when all non-mafiosos are eliminated
 
 ## Quick Start
 
 ### Installation
 
 ```bash
-git clone https://github.com/bastoscostadavi/llm-mafia-game
+# Clone the repository
+git clone <repository-url>
 cd llm-mafia-game
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### Basic Usage
+### Running a Game
 
+**Option 1: Preset Games (Easiest)**
 ```bash
-# Run a basic game
 python run_game.py
-
-# Run preset game configurations
-python preset_games.py
 ```
 
-### Configuration
+This launches a menu where you can choose:
+- **Classic** (6 players: 2 mafiosos, 1 detective, 3 villagers)
+- **Mini-mafia** (4 players: 1 mafioso, 1 detective, 2 villagers)
 
-Set up your model API keys in `.env`:
+**Option 2: Custom Game (Python API)**
+```python
+from src.main import create_game
+
+players = [
+    {'name': 'Alice', 'role': 'detective', 'llm': {'type': 'openai', 'model': 'gpt-4'}},
+    {'name': 'Bob', 'role': 'mafioso', 'llm': {'type': 'local', 'model': 'mistral.gguf'}},
+    {'name': 'Charlie', 'role': 'villager', 'llm': {'type': 'anthropic', 'model': 'claude-3-haiku'}},
+    {'name': 'Diana', 'role': 'villager', 'llm': {'type': 'human'}}
+]
+
+game = create_game(players, discussion_rounds=2, debug_prompts=False)
+game.play()
+```
+
+**Option 3: Web Interface (Human Players)**
 ```bash
-OPENAI_API_KEY=your_openai_key
-ANTHROPIC_API_KEY=your_anthropic_key
-# Add other model provider keys as needed
+cd mini-mafia-benchmark/web
+python web_interface.py
+# Open browser to http://localhost:5000
 ```
 
-## Research Applications
+## Supported LLM Providers
 
-### Benchmarking
-- Systematic evaluation of LLM social intelligence capabilities
-- Cross-model performance comparisons in interactive scenarios
-- Capability-specific assessments (deception, detection, disclosure)
+### Local Models (llama-cpp)
+```python
+{'type': 'local', 'model': 'Mistral-7B-Instruct-v0.3-Q4_K_M.gguf', 'n_ctx': 2048}
+```
+- Download GGUF models to the `models/` directory
+- Supports GPU acceleration via llama-cpp-python
 
-### Multi-Agent Studies
-- Investigation of emergent behaviors in AI-AI interactions
-- Analysis of social biases and procedural advantages
-- Communication strategy evolution across different models
+### OpenAI
+```python
+{'type': 'openai', 'model': 'gpt-4o-mini', 'temperature': 0.7}
+{'type': 'openai', 'model': 'gpt-5-mini', 'reasoning_effort': 'minimal'}
+```
+- Requires `OPENAI_API_KEY` environment variable
 
-### AI Safety Research
-- Tracking deception capabilities relative to human baselines
-- Training data generation for deception detection systems
-- Early warning system for concerning social manipulation abilities
+### Anthropic (Claude)
+```python
+{'type': 'anthropic', 'model': 'claude-3-5-sonnet-20241022', 'use_cache': True}
+```
+- Requires `ANTHROPIC_API_KEY` environment variable
+- Supports prompt caching to reduce costs
+
+### Google (Gemini)
+```python
+{'type': 'google', 'model': 'gemini-2.0-flash-exp', 'temperature': 0.7}
+```
+- Requires `GOOGLE_API_KEY` environment variable
+
+### xAI (Grok)
+```python
+{'type': 'xai', 'model': 'grok-4', 'temperature': 0.7}
+```
+- Requires `XAI_API_KEY` environment variable
+
+### DeepSeek
+```python
+{'type': 'deepseek', 'model': 'deepseek-v3.1', 'temperature': 0.7}
+```
+- Requires `DEEPSEEK_API_KEY` environment variable
+
+### Human Players
+```python
+{'type': 'human', 'player_name': 'Alice'}
+```
+- Input responses via command line or web interface
+
+## Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+```bash
+# API Keys (only needed for respective providers)
+OPENAI_API_KEY=sk-...
+ANTHROPIC_API_KEY=sk-ant-...
+GOOGLE_API_KEY=...
+XAI_API_KEY=...
+DEEPSEEK_API_KEY=...
+```
+
+### Prompt Customization
+
+Game prompts are defined in `src/prompt.txt` (standard version) and `src/prompt_short.txt` (concise version). You can modify these to change how agents perceive the game rules and their objectives.
+
+## Project Structure
+
+```
+llm-mafia-game/
+├── src/                        # Core game engine
+│   ├── main.py                 # Game controller and state management
+│   ├── agents.py               # Agent behavior (discuss, vote, kill, investigate)
+│   ├── agent_interfaces.py     # LLM provider wrappers
+│   ├── prompt_utils.py         # Prompt formatting and parsing
+│   ├── config.py               # Token limits and model configurations
+│   ├── prompt.txt              # Standard game prompt
+│   └── prompt_short.txt        # Concise game prompt
+│
+├── mini-mafia-benchmark/       # Research and benchmarking suite
+│   ├── mini_mafia.py           # 4-player variant implementation
+│   ├── experiments/            # Experimental game configurations
+│   ├── database/               # SQLite database for game records
+│   ├── analysis/               # Analysis scripts and notebooks
+│   ├── results/                # Plots and result tables
+│   ├── article/                # Research paper (LaTeX)
+│   └── web/                    # Web interface for human data collection
+│       ├── web_interface.py    # Flask server
+│       └── setup_web_game.py   # Web game configuration
+│
+├── models/                     # Local model files (.gguf)
+├── run_game.py                 # Simple launcher for preset games
+├── preset_games.py             # Predefined game configurations
+├── requirements.txt            # Python dependencies
+└── README.md                   # This file
+```
+
+## Advanced Features
+
+### Debug Mode
+
+Enable debug mode to see all prompts and raw LLM responses:
+```python
+game = create_game(players, discussion_rounds=2, debug_prompts=True)
+```
+
+### Custom Discussion Rounds
+
+Adjust the number of discussion rounds per day phase:
+```python
+game = create_game(players, discussion_rounds=3)  # 3 rounds of discussion
+```
+
+### Game State Logging
+
+All game actions (discuss, vote, kill, investigate) are automatically logged to `game.state.game_sequence` with raw responses and parsed results for analysis.
+
+### Prompt Caching
+
+For repeated games with the same configuration:
+- **Anthropic**: Set `'use_cache': True` in model config
+- **Local models**: Automatic KV cache for static prompt sections
+
+## Research & Benchmarking
+
+The `mini-mafia-benchmark/` directory contains tools for systematic evaluation:
+
+- **Automated experiments**: Run hundreds of games with different model configurations
+- **Database storage**: SQLite database tracks all games, actions, and outcomes
+- **Statistical analysis**: Scripts for analyzing win rates, deception patterns, detection accuracy
+- **Web interface**: Collect human gameplay data for comparison
+
+See `mini-mafia-benchmark/analysis/README.md` for details on analysis tools and methodologies.
+
+## Tips for Effective Games
+
+**For AI Agents:**
+- Use temperature 0.3-0.7 for more strategic play
+- Larger models (70B+, GPT-4, Claude-3.5-Sonnet) perform better at deception and strategic reasoning
+- Smaller models may struggle with output format compliance
+
+**For Human Players:**
+- Web interface provides the best experience for humans
+- Command-line interface works but requires precise format adherence
+- Mix humans with AI for interesting emergent dynamics
+
+**For Research:**
+- Use `debug_prompts=False` and collect data via `game.state.game_sequence`
+- Store results in the database for longitudinal analysis
+- Control for confounds (player names, speaking order, role assignment)
+
+## Troubleshooting
+
+**Model loading issues:**
+- Ensure `.gguf` model files are in the `models/` directory
+- Check that `llama-cpp-python` is installed with GPU support if needed
+
+**API errors:**
+- Verify API keys are set in `.env` file
+- Check rate limits for your provider
+- Some providers may filter game content (deception themes)
+
+**Format parsing failures:**
+- Agents sometimes fail to follow output format requirements
+- Failed actions fall back to random selection
+- Enable `debug_prompts=True` to diagnose parsing issues
 
 ## Citation
 
-If you use this implementation in your research, please cite:
-
-```bibtex
-@article{costa2025minimafia,
-  title={Deceive, Detect, and Disclose: Large Language Models Playing Mini-Mafia},
-  author={Costa, Davi Bastos and Vicente, Renato},
-  journal={arXiv preprint},
-  year={2025}
-}
+If you use this codebase for research, please cite:
 ```
-
-## Contributing
-
-We welcome contributions to improve the game implementation, add new features, or extend the benchmark capabilities. Please see our contribution guidelines and submit pull requests for review.
+[Citation information to be added]
+```
 
 ## License
 
-This project is released under [appropriate license]. See LICENSE file for details.
+[License information to be added]
 
-## Support
+## Contributing
 
-For questions, issues, or collaboration inquiries, please:
-- Open an issue on GitHub
-- Contact: davi.costa@usp.br
+Contributions welcome! Areas of interest:
+- New game variants (e.g., multiple mafia teams, additional roles)
+- Additional LLM provider integrations
+- Improved prompt engineering for better strategic play
+- Analysis tools and visualizations
