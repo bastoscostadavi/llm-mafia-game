@@ -253,7 +253,15 @@ See `mini-mafia-benchmark/analysis/README.md` for details on analysis tools and 
 
 If you use this codebase for research, please cite:
 ```
-[Citation information to be added]
+@misc{costa2025deceivedetectdiscloselarge,
+      title={Deceive, Detect, and Disclose: Large Language Models Play Mini-Mafia}, 
+      author={Davi Bastos Costa and Renato Vicente},
+      year={2025},
+      eprint={2509.23023},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2509.23023}, 
+}
 ```
 
 ## License
