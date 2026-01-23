@@ -163,6 +163,13 @@ def create_web_mini_mafia_game(config, session_id):
                 'type': 'system',
                 'message': f"You killed {victim.name}."
             })
+        elif human_role == 'detective':
+            # Detective investigates and learns who the mafioso is
+            mafioso = next(a for a in game.state.agents if a.role == 'mafioso')
+            event_queues[session_id].put({
+                'type': 'system',
+                'message': f"You investigated {mafioso.name} and discovered they are the MAFIOSO!"
+            })
         event_queues[session_id].put({
             'type': 'system',
             'message': f"{victim.name} was found dead."
@@ -388,9 +395,14 @@ HTML = """
         function showResults(data) {
             const resultDiv = document.getElementById('result-area');
 
+            // Determine if human won based on role
+            // Mafioso wins when EVIL wins, Detective/Villager win when GOOD wins
+            const humanRole = data.human_role || 'mafioso';  // default to mafioso for backward compat
+            const youWon = (humanRole === 'mafioso' && data.winner === 'EVIL') ||
+                          ((humanRole === 'detective' || humanRole === 'villager') && data.winner === 'GOOD');
+
             if (data.continue_sequence) {
                 // Game finished, but more to go
-                const youWon = data.winner === 'EVIL';
                 addEvent('Game Over!', 'system');
                 addEvent(data.result_message, youWon ? 'you' : 'ai');
                 addEvent(`Progress: ${data.wins_so_far} wins out of ${data.current_game} games`, 'system');
@@ -415,7 +427,6 @@ HTML = """
 
             } else {
                 // Single game (shouldn't happen in sequence mode, but handle it)
-                const youWon = data.winner === 'EVIL';
                 addEvent('Game Over!', 'system');
                 addEvent(data.result_message, youWon ? 'you' : 'ai');
 
@@ -526,7 +537,8 @@ def start_game():
                     'winner': winner,
                     'result_message': result_message,
                     'game_id': game_id,
-                    'wins_so_far': game_sequences[session_id]['wins']
+                    'wins_so_far': game_sequences[session_id]['wins'],
+                    'human_role': human_role
                 }
             else:
                 # Sequence complete
@@ -536,7 +548,8 @@ def start_game():
                     'total_games': total,
                     'total_wins': game_sequences[session_id]['wins'],
                     'game_ids': game_sequences[session_id]['game_ids'],
-                    'win_rate': (game_sequences[session_id]['wins'] / total) * 100
+                    'win_rate': (game_sequences[session_id]['wins'] / total) * 100,
+                    'human_role': human_role
                 }
 
         except Exception as e:
@@ -574,7 +587,16 @@ def get_prompt():
                 'winner': result.get('winner'),
                 'result_message': result.get('result_message'),
                 'game_id': result.get('game_id'),
-                'error': result.get('error')
+                'error': result.get('error'),
+                'human_role': result.get('human_role'),
+                'continue_sequence': result.get('continue_sequence'),
+                'sequence_complete': result.get('sequence_complete'),
+                'current_game': result.get('current_game'),
+                'total_games': result.get('total_games'),
+                'wins_so_far': result.get('wins_so_far'),
+                'total_wins': result.get('total_wins'),
+                'game_ids': result.get('game_ids'),
+                'win_rate': result.get('win_rate')
             })
 
     # Check if there's an event waiting (AI message, system message, etc)

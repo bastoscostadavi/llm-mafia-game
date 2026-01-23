@@ -28,14 +28,14 @@ RESULTS_DIR = Path(__file__).parent.parent.parent / "results" / "top_down_theore
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 DB_PATH = Path(__file__).parent.parent.parent / "database" / "mini_mafia.db"
 
-# For Bayesian inference
+# For Bayesian inference (required)
 try:
     import pymc as pm
     import arviz as az
     HAS_PYMC = True
 except ImportError:
-    print("⚠️  PyMC not available. Using maximum likelihood estimation instead.")
     HAS_PYMC = False
+    # Will raise error in main function with install instructions
 
 warnings.filterwarnings('ignore')
 
@@ -222,8 +222,9 @@ def run_theoretical_model_pymc(data_df):
     print(f"   Detect (v): [{detect_mean_raw.min():.3f}, {detect_mean_raw.max():.3f}], mean = {v_mean_value:.3f}")
 
     # Apply rescaling to all samples (for proper uncertainty propagation)
-    m_samples_rescaled = a_samples / scale_factor
-    d_samples_rescaled = b_samples / scale_factor
+    # If we divide v by λ, we must multiply m and d by λ to preserve predictions
+    m_samples_rescaled = a_samples * scale_factor
+    d_samples_rescaled = b_samples * scale_factor
     v_samples_rescaled = c_samples / scale_factor
 
     # Compute rescaled statistics
@@ -245,101 +246,6 @@ def run_theoretical_model_pymc(data_df):
     print(f"\n   Parameter uncertainties (std):")
     for i, model in enumerate(all_models):
         print(f"   {get_display_name(model):30s} - m:{deceive_std[i]:.3f}  d:{disclose_std[i]:.3f}  v:{detect_std[i]:.3f}")
-
-    return all_models, deceive_mean, deceive_std, detect_mean, detect_std, disclose_mean, disclose_std
-
-def run_theoretical_model_mle(data_df):
-    """
-    Run theoretical model using maximum likelihood estimation (fallback).
-    Uses scipy.optimize to find parameters that maximize likelihood.
-    """
-    print("\n🔬 Running theoretical model with MLE...")
-    from scipy.optimize import minimize
-    from scipy.special import expit  # sigmoid function
-
-    # Get unique models
-    all_models = sorted(set(data_df['mafioso'].unique()) |
-                       set(data_df['villager'].unique()) |
-                       set(data_df['detective'].unique()))
-
-    n_models = len(all_models)
-    print(f"   Models: {n_models}")
-
-    # Create indices
-    model_idx = {model: i for i, model in enumerate(all_models)}
-
-    # Prepare data
-    mafioso_indices = np.array([model_idx[m] for m in data_df['mafioso']])
-    villager_indices = np.array([model_idx[v] for v in data_df['villager']])
-    detective_indices = np.array([model_idx[d] for d in data_df['detective']])
-    wins = data_df['wins'].values
-    totals = data_df['total'].values
-
-    print(f"   Observations: {len(data_df)}")
-    print(f"   Total games: {totals.sum()}")
-
-    def negative_log_likelihood(params):
-        """Negative log likelihood for binomial model"""
-        # Split parameters
-        a = params[:n_models]  # deceive
-        b = params[n_models:2*n_models]  # disclose
-        c = params[2*n_models:]  # detect (can be negative)
-
-        # Compute logit(p)
-        logit_p = c[villager_indices] * (a[mafioso_indices] - b[detective_indices])
-
-        # Probability
-        p = expit(logit_p)  # sigmoid
-        p = np.clip(p, 1e-10, 1 - 1e-10)  # Avoid log(0)
-
-        # Binomial log likelihood
-        log_lik = wins * np.log(p) + (totals - wins) * np.log(1 - p)
-
-        return -np.sum(log_lik)
-
-    # Initialize parameters at 0
-    initial_params = np.zeros(3 * n_models)
-
-    print("   🔄 Optimizing likelihood...")
-    result = minimize(negative_log_likelihood, initial_params, method='L-BFGS-B')
-
-    if not result.success:
-        print(f"   ⚠️  Optimization warning: {result.message}")
-
-    # Extract results - keep raw values
-    a = result.x[:n_models]
-    b = result.x[n_models:2*n_models]
-    c = result.x[2*n_models:]  # c can be negative
-
-    print(f"\n✅ Optimization complete!")
-    print(f"   Negative log-likelihood: {result.fun:.2f}")
-    print(f"   Raw parameter ranges (before rescaling):")
-    print(f"   Deceive (m): [{a.min():.3f}, {a.max():.3f}]")
-    print(f"   Disclose (d): [{b.min():.3f}, {b.max():.3f}]")
-    print(f"   Detect (v): [{c.min():.3f}, {c.max():.3f}], mean = {np.mean(c):.3f}")
-
-    # Rescale to fix identifiability: set mean(v) = 1
-    v_mean_value = np.mean(c)
-    scale_factor = v_mean_value
-
-    m_rescaled = a / scale_factor
-    d_rescaled = b / scale_factor
-    v_rescaled = c / scale_factor
-
-    # Use rescaled values
-    deceive_mean = m_rescaled
-    disclose_mean = d_rescaled
-    detect_mean = v_rescaled
-
-    # Rough error estimates
-    deceive_std = np.ones(n_models) * 0.2
-    disclose_std = np.ones(n_models) * 0.2
-    detect_std = np.ones(n_models) * 0.2
-
-    print(f"\n   Rescaled parameters (mean(v) = 1):")
-    print(f"   Deceive (m): [{deceive_mean.min():.3f}, {deceive_mean.max():.3f}]")
-    print(f"   Disclose (d): [{disclose_mean.min():.3f}, {disclose_mean.max():.3f}]")
-    print(f"   Detect (v): [{detect_mean.min():.3f}, {detect_mean.max():.3f}], mean = {np.mean(detect_mean):.3f}")
 
     return all_models, deceive_mean, deceive_std, detect_mean, detect_std, disclose_mean, disclose_std
 
@@ -381,8 +287,8 @@ def create_score_plot(models, scores, errors, capability_name, output_suffix="th
     for i, (score, error) in enumerate(zip(sorted_scores, sorted_errors)):
         # Position text at the end of the bar (including error bar)
         x_pos = score + error if score > 0 else score - error
-        # Add some padding
-        x_pos = x_pos + (0.3 if score > 0 else -0.3)
+        # Add minimal padding
+        x_pos = x_pos + (0.1 if score > 0 else -0.1)
 
         # Format the value
         label = f'{score:.2f}'
@@ -410,7 +316,7 @@ def create_score_plot(models, scores, errors, capability_name, output_suffix="th
     # Set x-axis limits with padding
     max_val = max([s + e for s, e in zip(sorted_scores, sorted_errors)])
     min_val = min([s - e for s, e in zip(sorted_scores, sorted_errors)])
-    padding = (max_val - min_val) * 0.15
+    padding = (max_val - min_val) * 0.25
     x_min = min_val - padding
     x_max = max_val + padding
     ax.set_xlim(x_min, x_max)
@@ -457,19 +363,14 @@ def create_theoretical_scores():
     # Step 2: Aggregate by configuration
     data_df = aggregate_game_outcomes(games_df)
 
-    # Step 3: Run theoretical model
-    if HAS_PYMC:
-        try:
-            models, deceive_mean, deceive_std, detect_mean, detect_std, disclose_mean, disclose_std = \
-                run_theoretical_model_pymc(data_df)
-        except Exception as e:
-            print(f"⚠️  PyMC failed: {e}")
-            print("   Falling back to MLE...")
-            models, deceive_mean, deceive_std, detect_mean, detect_std, disclose_mean, disclose_std = \
-                run_theoretical_model_mle(data_df)
-    else:
-        models, deceive_mean, deceive_std, detect_mean, detect_std, disclose_mean, disclose_std = \
-            run_theoretical_model_mle(data_df)
+    # Step 3: Run theoretical model (requires PyMC)
+    if not HAS_PYMC:
+        raise ImportError(
+            "PyMC is required for Bayesian inference. Install with: pip install pymc arviz"
+        )
+
+    models, deceive_mean, deceive_std, detect_mean, detect_std, disclose_mean, disclose_std = \
+        run_theoretical_model_pymc(data_df)
 
     # Create results DataFrame
     display_models = [get_display_name(m) for m in models]
@@ -563,7 +464,7 @@ def create_combined_theoretical_plot(df):
         # Set x-axis limits with padding
         max_val = max([s + e for s, e in zip(scores, errors)])
         min_val = min([s - e for s, e in zip(scores, errors)])
-        padding = (max_val - min_val) * 0.15
+        padding = (max_val - min_val) * 0.25
         x_min = min_val - padding
         x_max = max_val + padding
         ax.set_xlim(x_min, x_max)

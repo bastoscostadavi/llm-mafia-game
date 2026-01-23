@@ -1,27 +1,31 @@
 # Web Interface for Human Gameplay
 
-This folder contains a Flask-based web interface that allows humans to play Mini-Mafia as the Mafioso against AI opponents. Perfect for teaching, demonstrations, and collecting human performance data.
+This folder contains a Flask-based web interface that allows humans to play Mini-Mafia in **any role** (Mafioso, Detective, or Villager) against AI opponents. Perfect for teaching, demonstrations, and collecting human performance data across all three social capabilities.
 
 ## Files
 
 - **`web_interface.py`** - Main Flask application
-- **`setup_web_game.py`** - Configure AI opponents (detective and villager)
+- **`setup_web_game.py`** - Configure human role and AI opponents
 - **`web_game_config.json`** - Current configuration (auto-generated)
+- **`DETECTIVE_SETUP.md`** - Guide for running detective (disclose) games
 - **`START_HERE.sh`** - Quick start script
 - **`SIMPLE_START.md`** - Quick start guide
 - **`flask_session/`** - Session data (auto-generated at runtime)
 
 ## Quick Start
 
-### 1. Configure AI Opponents
+### 1. Configure Game Setup
 
 ```bash
 python3 setup_web_game.py
 ```
 
-Select which AI models will play as:
-- **Detective** (knows you're the mafioso)
-- **Villager** (the player you need to deceive)
+**First, select the human player role:**
+1. **Mafioso (Deceive)** - Human tries to deceive the villager
+2. **Detective (Disclose)** - Human reveals who the mafioso is
+3. **Villager (Detect)** - Human tries to identify the mafioso
+
+**Then select AI models** for the other two roles
 
 ### 2. Start the Server
 

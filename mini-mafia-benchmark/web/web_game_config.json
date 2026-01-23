@@ -1,12 +1,13 @@
 {
-  "background_name": "gpt-5-mini",
-  "human_role": "villager",
+  "human_role": "detective",
+  "background_name": "gpt-5-mini+gpt-5-mini",
   "mafioso_model": {
     "type": "openai",
-    "model": "gpt-4o-mini"
+    "model": "gpt-5-mini"
   },
-  "detective_model": {
+  "detective_model": null,
+  "villager_model": {
     "type": "openai",
-    "model": "gpt-4o-mini"
+    "model": "gpt-5-mini"
   }
 }

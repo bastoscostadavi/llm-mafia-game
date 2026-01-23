@@ -237,8 +237,8 @@ def create_average_z_score_plot(avg_z_scores, avg_z_errors, capability_name):
     for i, (score, error) in enumerate(zip(scores, errors)):
         # Position text at the end of the bar (including error bar)
         x_pos = score + error if score > 0 else score - error
-        # Add some padding
-        x_pos = x_pos + (0.3 if score > 0 else -0.3)
+        # Add minimal padding
+        x_pos = x_pos + (0.1 if score > 0 else -0.1)
 
         # Format the value
         label = f'{score:.2f}'
