@@ -184,14 +184,20 @@ def run_theoretical_model_pymc(data_df):
                          target_accept=0.95, random_seed=42,
                          progressbar=True)
 
-        # Check convergence diagnostics
+        # Check convergence diagnostics and persist them for reporting
+        diag_summary = az.summary(trace, var_names=['a', 'b', 'c'], round_to=4)
+        diag_path = RESULTS_DIR / "mcmc_diagnostics.csv"
+        diag_summary.to_csv(diag_path)
+
+        max_rhat = float(diag_summary['r_hat'].max())
+        min_bulk_ess = float(diag_summary['ess_bulk'].min())
+        min_tail_ess = float(diag_summary['ess_tail'].min())
+
         print("\n   📊 Convergence diagnostics:")
-        rhat = az.rhat(trace)
-        max_rhat_a = float(rhat['a'].max())
-        max_rhat_b = float(rhat['b'].max())
-        max_rhat_c = float(rhat['c'].max())
-        print(f"   Max R-hat: a={max_rhat_a:.4f}, b={max_rhat_b:.4f}, c={max_rhat_c:.4f}")
-        if max(max_rhat_a, max_rhat_b, max_rhat_c) > 1.01:
+        print(f"   Max R-hat: {max_rhat:.4f}")
+        print(f"   Min ESS (bulk/tail): {min_bulk_ess:.0f} / {min_tail_ess:.0f}")
+        print(f"   Diagnostics saved to: {diag_path}")
+        if max_rhat > 1.01:
             print("   ⚠️  Some R-hat values > 1.01 (chain convergence issues)")
         else:
             print("   ✓ All R-hat values < 1.01 (good convergence)")
