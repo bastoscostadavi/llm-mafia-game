@@ -207,6 +207,12 @@ def run_theoretical_model_pymc(data_df):
     b_samples = trace.posterior['b'].values.reshape(-1, n_models)
     c_samples = trace.posterior['c'].values.reshape(-1, n_models)
 
+    # Fix additive gauge freedom by forcing mean(m)=0 while preserving
+    # the gaps m_i - d_j.
+    mean_shift = a_samples.mean(axis=1, keepdims=True)
+    a_samples = a_samples - mean_shift
+    b_samples = b_samples - mean_shift
+
     # Compute statistics - keep raw values from the model
     # m_i: deceive capability (logit scale)
     # d_j: disclose capability (logit scale)

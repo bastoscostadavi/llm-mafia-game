@@ -432,14 +432,19 @@ def run_theoretical_model_pymc(data_df):
         max_rhat_c = float(rhat['c'].max())
         print(f"   Max R-hat: a={max_rhat_a:.4f}, b={max_rhat_b:.4f}, c={max_rhat_c:.4f}")
 
-    # Extract and rescale
+    # Extract posterior samples
     a_samples = trace.posterior['a'].values.reshape(-1, n_models)
     b_samples = trace.posterior['b'].values.reshape(-1, n_models)
     c_samples = trace.posterior['c'].values.reshape(-1, n_models)
 
-    # Rescale to mean(v) = 1
-    v_mean_raw = np.mean(c_samples, axis=0).mean()
-    scale_factor = v_mean_raw
+    # Remove additive gauge freedom by enforcing mean(m) = 0
+    mean_shift = a_samples.mean(axis=1, keepdims=True)
+    a_samples = a_samples - mean_shift
+    b_samples = b_samples - mean_shift
+
+    # Rescale so that mean(v) = 1
+    detect_mean_raw = np.mean(c_samples, axis=0)
+    scale_factor = np.mean(detect_mean_raw)
 
     m_samples = a_samples * scale_factor
     d_samples = b_samples * scale_factor
