@@ -1,6 +1,6 @@
 # LLM Mafia Game
 
-A flexible implementation of the classic Mafia social deduction game where LLM agents (and humans) play as town members trying to identify hidden mafiosos through discussion, voting, and night actions. Based on the paper [Deceive, Detect, and Disclose: Large Language Models Play Mini-Mafia](https://arxiv.org/abs/2509.23023).
+A flexible implementation of the classic Mafia social deduction game where LLM agents (and humans) play as town members trying to identify hidden mafiosos through discussion, voting, and night actions.
 
 ## Setup
 
@@ -115,7 +115,7 @@ Prompts are in `src/prompt.txt` (standard) and `src/prompt_short.txt` (concise).
 
 The `mini-mafia-benchmark/` directory contains the full research suite: automated batch experiments, a SQLite database (~15k games), analysis scripts, and the web interface for collecting human gameplay data.
 
-See [`mini-mafia-benchmark/README.md`](mini-mafia-benchmark/README.md) for the benchmarking workflow.
+The `mini-mafia-benchmark/` directory is the research suite behind the paper [Deceive, Detect, and Disclose: Large Language Models Play Mini-Mafia](https://arxiv.org/abs/2509.23023). See [`mini-mafia-benchmark/README.md`](mini-mafia-benchmark/README.md) for the benchmarking workflow.
 
 ## Citation
 
