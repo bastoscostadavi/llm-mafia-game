@@ -1,6 +1,6 @@
 # Mini-Mafia Benchmark
 
-The research suite behind the paper [Deceive, Detect, and Disclose: Large Language Models Play Mini-Mafia](https://arxiv.org/abs/2509.23023). Provides systematic evaluation of LLM social reasoning capabilities — deception, detection, and disclosure — using a 4-player Mini-Mafia variant as a testbed.
+Provides systematic evaluation of LLM social reasoning capabilities — deception, detection, and disclosure — using a 4-player Mini-Mafia variant as a testbed.
 
 ## Overview
 
