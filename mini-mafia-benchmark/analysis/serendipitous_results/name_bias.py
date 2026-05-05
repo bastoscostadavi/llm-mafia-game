@@ -112,5 +112,81 @@ def analyze_name_bias():
 
     return results_df
 
+def analyze_name_bias_per_model():
+    """
+    Analyze name bias restricted to games where each target model is being evaluated.
+    Produces one table per model saved as name_bias_per_model.csv.
+    """
+    conn = sqlite3.connect(DB_PATH)
+
+    # Get all target models
+    models = [row[0] for row in conn.execute(
+        "SELECT DISTINCT target FROM benchmark ORDER BY target"
+    ).fetchall()]
+
+    # Base query filtered to a specific target model
+    query = """
+    SELECT DISTINCT
+        gp.character_name,
+        gp.final_status,
+        g.winner,
+        gp.role,
+        gp.game_id,
+        CASE
+            WHEN gp.role = 'detective' AND g.winner = 'town' THEN 1
+            WHEN gp.role = 'villager' AND g.winner = 'town' THEN 1
+            WHEN gp.role = 'mafioso' AND g.winner = 'mafia' THEN 1
+            ELSE 0
+        END as won
+    FROM game_players gp
+    JOIN games g ON gp.game_id = g.game_id
+    JOIN benchmark b ON g.game_id = b.game_id
+    WHERE gp.final_status != 'killed'
+      AND b.target = ?
+    """
+
+    all_results = []
+
+    for model in models:
+        df = pd.read_sql_query(query, conn, params=(model,))
+
+        for name in ['Alice', 'Bob', 'Charlie', 'Diana']:
+            name_data = df[df['character_name'] == name]
+            if len(name_data) == 0:
+                continue
+
+            total_games = len(name_data)
+            wins = name_data['won'].sum()
+            win_rate, uncertainty = bayesian_win_rate(wins, total_games)
+            win_rate /= 100
+            uncertainty /= 100
+
+            all_results.append({
+                'model': model,
+                'character_name': name,
+                'total_games': total_games,
+                'wins': int(wins),
+                'win_rate_bayesian': win_rate,
+                'uncertainty_std': uncertainty,
+                'confidence_interval_lower': max(0, win_rate - 1.96 * uncertainty),
+                'confidence_interval_upper': min(1, win_rate + 1.96 * uncertainty),
+            })
+
+    conn.close()
+
+    results_df = pd.DataFrame(all_results)
+    output_path = RESULTS_DIR / "name_bias_per_model.csv"
+    results_df.to_csv(output_path, index=False)
+
+    # Print one table per model
+    for model in models:
+        model_df = results_df[results_df['model'] == model].drop(columns='model')
+        print(f"\n=== {model} ===")
+        print(model_df.to_string(index=False))
+
+    return results_df
+
+
 if __name__ == "__main__":
     analyze_name_bias()
+    analyze_name_bias_per_model()
