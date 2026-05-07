@@ -453,17 +453,12 @@ def create_combined_theoretical_plot(df):
                 color=colors, alpha=0.7, height=0.7,
                 error_kw={'capsize': 3, 'capthick': 1.5, 'elinewidth': 1.5})
 
-        # Add value labels on the bars
+        # Add value labels with the tighter placement used by the
+        # with-humans combined figure template.
         for i, (score, error) in enumerate(zip(scores, errors)):
-            # Position text at the end of the bar (including error bar)
             x_pos = score + error if score > 0 else score - error
-            # Add some padding
-            x_pos = x_pos + (0.3 if score > 0 else -0.3)
-
-            # Format the value
+            x_pos = x_pos + (0.1 if score > 0 else -0.1)
             label = f'{score:.2f}'
-
-            # Add text
             ax.text(x_pos, i, label,
                    va='center',
                    ha='left' if score > 0 else 'right',

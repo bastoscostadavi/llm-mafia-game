@@ -295,6 +295,119 @@ def create_average_z_score_plot(avg_z_scores, avg_z_errors, capability_name):
     plt.close()
     print(f"  Z-score plot saved: {filename}")
 
+def create_combined_z_score_plot(results_df):
+    """Create a combined z-score plot matching the theoretical combined layout."""
+
+    plt.ioff()
+
+    plt.rcParams.update({
+        'font.size': 12,
+        'axes.labelsize': 13,
+        'axes.titlesize': 13,
+        'xtick.labelsize': 11,
+        'ytick.labelsize': 12,
+    })
+
+    capabilities = ['Deceive', 'Detect', 'Disclose']
+    capability_labels = {
+        'Deceive': 'Average Deception z-score',
+        'Detect': 'Average Detection z-score',
+        'Disclose': 'Average Disclosure z-score'
+    }
+
+    fig, axes = plt.subplots(1, 3, figsize=(18, 7), sharey=False)
+
+    n_models = len(results_df)
+
+    for idx, capability in enumerate(capabilities):
+        ax = axes[idx]
+
+        score_col = f'{capability}_Z'
+        error_col = f'{capability}_Z_Error'
+
+        sorted_data = sorted(
+            zip(results_df.index, results_df[score_col], results_df[error_col]),
+            key=lambda x: x[1],
+            reverse=False
+        )
+
+        models = [item[0] for item in sorted_data]
+        scores = [item[1] for item in sorted_data]
+        errors = [item[2] for item in sorted_data]
+        y_positions = range(len(models))
+
+        colors = ['#2E86AB' if score >= 0 else '#E63946' for score in scores]
+
+        ax.barh(
+            y_positions,
+            scores,
+            xerr=errors,
+            color=colors,
+            alpha=0.7,
+            height=0.7,
+            error_kw={'capsize': 3, 'capthick': 1.5, 'elinewidth': 1.5}
+        )
+
+        for i, (score, error) in enumerate(zip(scores, errors)):
+            x_pos = score + error if score > 0 else score - error
+            x_pos = x_pos + (0.10 if score > 0 else -0.10)
+            ax.text(
+                x_pos,
+                y_positions[i],
+                f'{score:.2f}',
+                va='center',
+                ha='left' if score > 0 else 'right',
+                fontsize=10,
+                color='#333333'
+            )
+
+        ax.set_xlabel(capability_labels[capability], fontsize=13)
+
+        max_val = max([s + e for s, e in zip(scores, errors)])
+        min_val = min([s - e for s, e in zip(scores, errors)])
+        padding = (max_val - min_val) * 0.25
+        if padding == 0:
+            padding = 0.5
+        x_min = min_val - padding
+        x_max = max_val + padding
+        ax.set_xlim(x_min, x_max)
+
+        if x_min <= 0 <= x_max:
+            ax.axvline(x=0, color='#333333', alpha=0.5, linewidth=1.5, linestyle='-', zorder=0)
+
+        ax.grid(True, alpha=0.2, axis='x', linewidth=0.5)
+        ax.set_axisbelow(True)
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['bottom'].set_color('#CCCCCC')
+        ax.spines['bottom'].set_linewidth(0.5)
+
+        if idx == 0:
+            ax.spines['left'].set_color('#CCCCCC')
+            ax.spines['left'].set_linewidth(0.5)
+        else:
+            ax.spines['left'].set_visible(False)
+
+        ax.set_yticks(list(y_positions))
+        ax.set_ylim(-0.5, n_models - 0.5)
+
+        if idx == 0:
+            ax.set_yticklabels(models, fontsize=12)
+            ax.tick_params(axis='y', which='both', length=0, pad=5)
+        else:
+            ax.set_yticklabels([])
+            ax.tick_params(axis='y', which='both', left=False)
+
+    plt.tight_layout(pad=1.5)
+
+    filename = RESULTS_DIR / "scores_z_combined.png"
+    plt.savefig(filename, dpi=300, bbox_inches='tight',
+                facecolor='white', edgecolor='none')
+    plt.close()
+    print(f"  Combined z-score plot saved: {filename}")
+    return filename
+
 def create_results_table():
     """Create results tables for exponential scores and raw z-scores"""
     
@@ -391,6 +504,7 @@ def create_score_plots():
     capabilities_data = load_win_rates_data()
     
     plots_created = 0
+    z_plot_results = {}
     
     for capability_name in ['Deceive', 'Detect', 'Disclose']:
         if capability_name not in capabilities_data:
@@ -412,8 +526,16 @@ def create_score_plots():
         # Create plots
         create_exponential_score_plot(exp_scores, exp_errors, capability_name)
         create_average_z_score_plot(avg_z_scores, avg_z_errors, capability_name)
+
+        z_plot_results[f'{capability_name}_Z'] = avg_z_scores
+        z_plot_results[f'{capability_name}_Z_Error'] = avg_z_errors
         
         plots_created += 2
+
+    if z_plot_results:
+        z_results_df = pd.DataFrame(z_plot_results)
+        create_combined_z_score_plot(z_results_df)
+        plots_created += 1
     
     return plots_created
 
