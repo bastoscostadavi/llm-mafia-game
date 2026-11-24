@@ -1,0 +1,184 @@
+\begin{tikzpicture}[
+  font=\small,
+  node distance=18mm and 0mm,
+  benchbox/.style = {
+    draw, rounded corners,
+    align=center,
+    fill=benchbg,
+    inner xsep=10pt,    % horizontal padding
+    inner ysep=16pt,    % vertical padding (taller boxes)
+    minimum width=5cm,  % narrower
+    minimum height=1.8cm
+  },
+  roleicon/.style = {
+    draw, rounded corners,
+    inner sep=2pt,
+    minimum width=0.45cm,
+    minimum height=0.45cm,
+    font=\footnotesize,
+    fill=white
+  },
+  arrow/.style = {line width=0.9pt, -{Latex[length=2.4mm,width=1.4mm]}}
+]
+
+% Make sure in your preamble you have:
+% \usetikzlibrary{arrows.meta}
+
+\definecolor{mafcolor}{HTML}{E74C3C}
+\definecolor{detcolor}{HTML}{2E86C1}
+\definecolor{vilcolor}{HTML}{27AE60}
+\definecolor{benchbg}{HTML}{F2F6FF}
+
+% --------------------------------------------------
+% 1) WIN RATE BOX (aligned at x=0)
+% --------------------------------------------------
+
+\node[benchbox] (winBox) at (0,0) {};
+
+% label (left, vertical)
+\node[font=\small, rotate=90, anchor=south]
+  at ($(winBox.west)+(-0.5pt,0)$) {Win rate};
+
+% Eq label: bottom-right corner
+\node[anchor=south east, font=\scriptsize]
+  at ($(winBox.south east)+(-3pt,3pt)$) {Eq.~\eqref{eq:binomial_background}};
+
+% contents, positioned relative to winBox.center
+\node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black]
+  (wMaf) at ($(winBox.center)+(-1.4,0)$) {\faUserSecret};
+\node[font=\scriptsize] at ($(wMaf.north)+(0,4pt)$) {Model};
+
+\node[roleicon, fill=detcolor!15, draw=detcolor!70!black]
+  (wDet) at ($(winBox.center)+(0.9,0)$) {\faSearch};
+\node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black]
+  (wVil) at ($(winBox.center)+(1.55,0)$) {\faUser};
+
+\node[font=\scriptsize] at ($(wDet.north)!0.5!(wVil.north)+(0,4pt)$) {Background};
+\node[font=\scriptsize] at ($(wMaf.east)!0.5!(wDet.west)$) {vs};
+
+% --------------------------------------------------
+% 2) Z-SCORE BOX (same width, directly below, same x)
+% --------------------------------------------------
+
+\node[benchbox, below=5mm of winBox] (zBox) {};
+
+% vertical label
+\node[font=\small, rotate=90, anchor=south]
+  at ($(zBox.west)+(-0.5pt,0)$) {$z$-score};
+
+% Eq label: bottom-right
+\node[anchor=south east, font=\scriptsize]
+  at ($(zBox.south east)+(-3pt,3pt)$) {Eq.~\eqref{eq:zscore_background}};
+
+% contents relative to zBox.center
+\node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black]
+  (zM) at ($(zBox.center)+(-1.8,0.4)$) {\faUserSecret};
+
+\node[font=\scriptsize, anchor=west]
+  (zMinus) at ($(zM.east)+(1mm,0)$) {$-$};
+\node[font=\scriptsize, anchor=east]
+  (zE) at ($(zMinus.east)+(3mm,0)$) {$\mathbb{E}[$};
+
+\node[roleicon, fill=mafcolor!5, draw=mafcolor!60!black, anchor=west]
+  (zM1) at ($(zE.east)+(1pt,0)$) {\faUserSecret};
+\node[roleicon, fill=mafcolor!5, draw=mafcolor!60!black, anchor=west]
+  (zM2) at ($(zM1.east)+(2mm,0)$) {\faUserSecret};
+\node[roleicon, fill=mafcolor!5, draw=mafcolor!60!black, anchor=west]
+  (zM3) at ($(zM2.east)+(2mm,0)$) {\faUserSecret};
+
+\node[font=\scriptsize, anchor=west]
+  (zDotsN) at ($(zM3.east)+(2pt,0)$) {$\dots$};
+\node[font=\scriptsize, anchor=west]
+  (zRightN) at ($(zDotsN.east)+(-5pt,0)$) {$]$};
+
+\coordinate (fracY) at ($(zM.south)+(0,-7pt)$);
+\coordinate (fracLeft)  at (fracY -| zM.west);
+\coordinate (fracRight) at (fracY -| zRightN.east);
+\draw (fracLeft) -- (fracRight);
+
+\node[font=\scriptsize, anchor=west]
+  (zVar) at ($(fracLeft)+(0,-9pt)$) {$\sqrt{\operatorname{Var}}[$};
+
+\node[roleicon, fill=mafcolor!5, draw=mafcolor!60!black, anchor=west]
+  (zMd1) at ($(zVar.east)+(1pt,0)$) {\faUserSecret};
+\node[roleicon, fill=mafcolor!5, draw=mafcolor!60!black, anchor=west]
+  (zMd2) at ($(zMd1.east)+(2mm,0)$) {\faUserSecret};
+\node[roleicon, fill=mafcolor!5, draw=mafcolor!60!black, anchor=west]
+  (zMd3) at ($(zMd2.east)+(2mm,0)$) {\faUserSecret};
+
+\node[font=\scriptsize, anchor=west]
+  (zDotsD) at ($(zMd3.east)+(2pt,0)$) {$\dots$};
+\node[font=\scriptsize, anchor=west]
+  (zRightD) at ($(zDotsD.east)+(-5pt,0)$) {$]$};
+
+% --------------------------------------------------
+% 3) SCORE BOX (same width, directly below, same x)
+% --------------------------------------------------
+
+\node[benchbox, below=5mm of zBox] (aggBox) {};
+
+% vertical label
+\node[font=\small, rotate=90, anchor=south]
+  at ($(aggBox.west)+(-0.5pt,0)$) {Score};
+
+% Eq label: bottom-right
+\node[anchor=south east, font=\scriptsize]
+  at ($(aggBox.south east)+(-3pt,3pt)$) {Eq.~\eqref{eq:aggregated_score_background}};
+
+\node[roleicon, fill=detcolor!15, draw=detcolor!70!black]
+  (aDet1) at ($(aggBox.center)+(-1.55,0)$) {\faSearch};
+\node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black]
+  (aVil1) at ($(aggBox.center)+(-1.0,0)$) {\faUser};
+
+\node[roleicon, fill=detcolor!15, draw=detcolor!70!black]
+  (aDet2) at ($(aggBox.center)+(-0.25,0)$) {\faSearch};
+\node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black]
+  (aVil2) at ($(aggBox.center)+(+0.30,0)$) {\faUser};
+
+\node[roleicon, fill=detcolor!15, draw=detcolor!70!black]
+  (aDet3) at ($(aggBox.center)+(+1.05,0)$) {\faSearch};
+\node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black]
+  (aVil3) at ($(aggBox.center)+(+1.60,0)$) {\faUser};
+
+\node[font=\tiny] at ($(aDet1.south)!0.5!(aVil1.south)+(0,-4pt)$) {$b_1$};
+\node[font=\tiny] at ($(aDet2.south)!0.5!(aVil2.south)+(0,-4pt)$) {$b_2$};
+\node[font=\tiny] at ($(aDet3.south)!0.5!(aVil3.south)+(0,-4pt)$) {$b_3$};
+
+\node[font=\scriptsize]
+  at ($(aVil1.east)!0.5!(aDet2.west)$) {$+$};
+\node[font=\scriptsize]
+  at ($(aVil2.east)!0.5!(aDet3.west)$) {$+$};
+\node[font=\scriptsize] at ($(aVil3.east)+(6pt,0)$) {$\dots$};
+
+% --------------------------------------------------
+% 4) ARROWS (same look as your night/day diagram)
+% --------------------------------------------------
+
+\draw[arrow]
+  ($(winBox.south)+(0,-1pt)$) -- ($(zBox.north)+(0,1pt)$)
+  node[midway,right=4pt, font=\scriptsize]{Normalize};
+
+\draw[arrow]
+  ($(zBox.south)+(0,-1pt)$) -- ($(aggBox.north)+(0,1pt)$)
+  node[midway,right=4pt, font=\scriptsize]{Aggregate};
+  
+
+% --------------------------------------------------
+% 5) OUTER "DECEIVE" BOX
+% --------------------------------------------------
+
+\begin{pgfonlayer}{background}
+  \node[
+    draw=mafcolor!70!black,
+    rounded corners,
+    inner sep=12pt,
+    fill=mafcolor!8,       % <<< soft reddish background
+    fit=(winBox) (zBox) (aggBox)
+  ] (outerBox) {};
+\end{pgfonlayer}
+
+\node[anchor=north west, font=\small\bfseries]
+  at ($(outerBox.north west)+(1pt,-1pt)$) {Deceive};
+
+
+\end{tikzpicture}

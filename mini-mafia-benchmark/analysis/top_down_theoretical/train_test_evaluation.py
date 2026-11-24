@@ -4,7 +4,9 @@ Train/Test Evaluation for the Mini-Mafia Theoretical Model
 
 5-fold cross-validation on the 140 aggregated (mafioso, villager, detective)
 configurations to test whether logit(p_ijk) = v_k × (m_i − d_j) has
-predictive power beyond goodness-of-fit.
+predictive power beyond goodness-of-fit. The same held-out folds compare the
+theoretical model with a training-mean constant, a villager/detection-only
+model, and an unconstrained additive role-effects model.
 """
 
 import sys
@@ -111,6 +113,157 @@ def fit_model_map(data_df: pd.DataFrame, n_restarts: int = 10) -> tuple:
     return (all_models, m_map, zeros, v_map, zeros, d_map, zeros)
 
 
+def fit_cubic_model_map(data_df: pd.DataFrame, n_restarts: int = 10) -> dict:
+    """Fit the nested cubic extension logit(p) = x + gamma*x^3.
+
+    Here x = v_k(m_i-d_j), so gamma=0 recovers the theoretical model. This
+    provides a cheap test of whether the high-probability residuals demand the
+    next odd term in the expansion rather than the closed form used in the
+    paper.
+    """
+    all_models = sorted(
+        set(data_df['mafioso']) | set(data_df['villager']) | set(data_df['detective'])
+    )
+    n = len(all_models)
+    idx = {m: i for i, m in enumerate(all_models)}
+    maf_idx = np.array([idx[m] for m in data_df['mafioso']])
+    vil_idx = np.array([idx[m] for m in data_df['villager']])
+    det_idx = np.array([idx[m] for m in data_df['detective']])
+    wins = data_df['wins'].to_numpy(dtype=float)
+    totals = data_df['total'].to_numpy(dtype=float)
+    sigma2 = 4.0
+
+    def objective(params):
+        m = params[:n]
+        d = params[n:2*n]
+        v = np.exp(params[2*n:3*n])
+        gamma = params[-1]
+        x = v[vil_idx] * (m[maf_idx] - d[det_idx])
+        logits = x + gamma * x**3
+        nll = np.sum(totals * np.logaddexp(0.0, logits) - wins * logits)
+        prior = 0.5 * (
+            np.sum(m**2) + np.sum(d**2) + np.sum(params[2*n:3*n]**2) + gamma**2
+        ) / sigma2
+        return nll + prior
+
+    best_result, best_value = None, np.inf
+    for seed in range(n_restarts):
+        rng = np.random.default_rng(seed * 17 + 11)
+        x0 = np.concatenate([
+            rng.normal(0, 1.0, n),
+            rng.normal(0, 1.0, n),
+            rng.normal(0, 0.5, n),
+            np.array([0.0]),
+        ])
+        result = minimize(
+            objective,
+            x0,
+            method='L-BFGS-B',
+            options={'maxiter': 3000, 'ftol': 1e-12},
+        )
+        if result.fun < best_value:
+            best_result, best_value = result, result.fun
+
+    params = best_result.x
+    m = params[:n]
+    d = params[n:2*n]
+    v = np.exp(params[2*n:3*n])
+    shift = m.mean()
+    m -= shift
+    d -= shift
+    scale = v.mean()
+    m *= scale
+    d *= scale
+    v /= scale
+    return {
+        'models': all_models,
+        'm': dict(zip(all_models, m)),
+        'd': dict(zip(all_models, d)),
+        'v': dict(zip(all_models, v)),
+        'gamma': float(params[-1]),
+    }
+
+
+def predict_cubic(model: dict, data_df: pd.DataFrame) -> np.ndarray:
+    """Predict with the nested cubic theoretical extension."""
+    logits = []
+    for row in data_df.itertuples(index=False):
+        x = model['v'][row.villager] * (
+            model['m'][row.mafioso] - model['d'][row.detective]
+        )
+        logits.append(x + model['gamma'] * x**3)
+    return expit(np.asarray(logits))
+
+
+def fit_role_effect_model(
+    data_df: pd.DataFrame,
+    roles: tuple[str, ...],
+    prior_sigma: float = 2.0,
+) -> dict:
+    """Fit a regularized logistic model with categorical effects for ``roles``.
+
+    One alphabetically first reference model is omitted for each role. With all
+    three roles this gives 1 + 3(I-1) = 28 identifiable coefficients, matching
+    the theoretical model's effective parameter count after its two gauges.
+    """
+    all_models = sorted(
+        set(data_df['mafioso']) | set(data_df['villager']) | set(data_df['detective'])
+    )
+    reference = all_models[0]
+    effect_models = all_models[1:]
+    effect_index = {
+        (role, model): 1 + role_idx * len(effect_models) + model_idx
+        for role_idx, role in enumerate(roles)
+        for model_idx, model in enumerate(effect_models)
+    }
+    n_params = 1 + len(roles) * len(effect_models)
+    wins = data_df['wins'].to_numpy(dtype=float)
+    totals = data_df['total'].to_numpy(dtype=float)
+
+    design = np.zeros((len(data_df), n_params), dtype=float)
+    design[:, 0] = 1.0
+    for row_idx, row in enumerate(data_df.itertuples(index=False)):
+        for role in roles:
+            model = getattr(row, role)
+            if model != reference:
+                design[row_idx, effect_index[(role, model)]] = 1.0
+
+    def objective(beta):
+        logits = design @ beta
+        # log(1 + exp(x)) is evaluated stably by logaddexp.
+        nll = np.sum(totals * np.logaddexp(0.0, logits) - wins * logits)
+        # Do not shrink the intercept; apply the same weak N(0, 2) scale used
+        # for the theoretical model to role effects.
+        penalty = 0.5 * np.sum(beta[1:] ** 2) / (prior_sigma ** 2)
+        return nll + penalty
+
+    result = minimize(
+        objective,
+        np.zeros(n_params),
+        method='L-BFGS-B',
+        options={'maxiter': 2000, 'ftol': 1e-12},
+    )
+    if not result.success:
+        raise RuntimeError(f"Role-effect fit failed: {result.message}")
+    return {
+        'roles': roles,
+        'reference': reference,
+        'effect_index': effect_index,
+        'beta': result.x,
+    }
+
+
+def predict_role_effect_model(model: dict, data_df: pd.DataFrame) -> np.ndarray:
+    """Predict probabilities for a fitted categorical role-effect model."""
+    logits = np.full(len(data_df), model['beta'][0], dtype=float)
+    for row_idx, row in enumerate(data_df.itertuples(index=False)):
+        for role in model['roles']:
+            role_model = getattr(row, role)
+            if role_model != model['reference']:
+                logits[row_idx] += model['beta'][model['effect_index'][(role, role_model)]]
+    return expit(logits)
+
+
 def get_and_aggregate_data() -> pd.DataFrame:
     games_df = get_unique_games_data()
     return aggregate_game_outcomes(games_df)
@@ -207,6 +360,22 @@ def compute_metrics(test_df: pd.DataFrame, preds: np.ndarray, baseline_p: float)
     }
 
 
+def compute_comparison_metrics(test_df: pd.DataFrame, preds: np.ndarray) -> dict:
+    """Metrics used for the cross-validated model-comparison table."""
+    k = test_df['wins'].to_numpy(dtype=float)
+    n = test_df['total'].to_numpy(dtype=float)
+    observed = k / n
+    p_hat = np.clip(preds, 1e-9, 1 - 1e-9)
+    return {
+        'brier_score': float(np.mean((p_hat - observed) ** 2)),
+        'mae': float(np.mean(np.abs(p_hat - observed))),
+        'game_log_loss': float(
+            -np.sum(k * np.log(p_hat) + (n - k) * np.log(1 - p_hat)) / np.sum(n)
+        ),
+        'pearson_r': float(np.corrcoef(p_hat, observed)[0, 1]),
+    }
+
+
 def run_cross_validation(n_splits: int = 5):
     """
     Full k-fold CV: split → train → predict → evaluate.
@@ -224,6 +393,7 @@ def run_cross_validation(n_splits: int = 5):
 
     fold_records = []
     pred_records = []
+    comparison_records = []
 
     for fold_idx, (train_df, test_df) in enumerate(splits):
         print(f"\n{'='*70}")
@@ -237,6 +407,25 @@ def run_cross_validation(n_splits: int = 5):
         params = run_theoretical_model_train(train_df)
         preds = predict(params, test_df)
         metrics = compute_metrics(test_df, preds, baseline_p)
+
+        detection_only = fit_role_effect_model(train_df, roles=('villager',))
+        additive_roles = fit_role_effect_model(
+            train_df, roles=('mafioso', 'detective', 'villager')
+        )
+        cubic_theory = fit_cubic_model_map(train_df)
+        comparison_predictions = {
+            'Constant (training mean)': np.full(len(test_df), baseline_p),
+            'Detection-only': predict_role_effect_model(detection_only, test_df),
+            'Additive role effects': predict_role_effect_model(additive_roles, test_df),
+            'Theoretical $v(m-d)$': preds,
+            'Cubic extension': predict_cubic(cubic_theory, test_df),
+        }
+        for model_name, model_preds in comparison_predictions.items():
+            comparison_records.append({
+                'fold': fold_idx + 1,
+                'model': model_name,
+                **compute_comparison_metrics(test_df, model_preds),
+            })
 
         print(f"\n  Fold {fold_idx + 1} results:")
         print(f"  Log-likelihood — Model: {metrics['log_likelihood']:.2f}  |  Baseline: {metrics['baseline_log_likelihood']:.2f}")
@@ -260,6 +449,9 @@ def run_cross_validation(n_splits: int = 5):
                 'villager': get_display_name(row.villager),
                 'detective': get_display_name(row.detective),
                 'predicted_p': preds[i],
+                'predicted_constant': comparison_predictions['Constant (training mean)'][i],
+                'predicted_detection_only': comparison_predictions['Detection-only'][i],
+                'predicted_additive_roles': comparison_predictions['Additive role effects'][i],
                 'observed_rate': row.wins / row.total,
                 'wins': row.wins,
                 'total': row.total,
@@ -278,7 +470,25 @@ def run_cross_validation(n_splits: int = 5):
     print(f"{'='*70}")
     print(fold_df.to_string(index=False))
 
-    return fold_df, pd.DataFrame(pred_records)
+    comparison_folds = pd.DataFrame(comparison_records)
+    comparison_summary = (
+        comparison_folds.groupby('model', sort=False)
+        .agg(
+            brier_score=('brier_score', 'mean'),
+            brier_se=('brier_score', lambda x: x.std(ddof=1) / np.sqrt(len(x))),
+            mae=('mae', 'mean'),
+            mae_se=('mae', lambda x: x.std(ddof=1) / np.sqrt(len(x))),
+            game_log_loss=('game_log_loss', 'mean'),
+            game_log_loss_se=('game_log_loss', lambda x: x.std(ddof=1) / np.sqrt(len(x))),
+            pearson_r=('pearson_r', 'mean'),
+            pearson_r_se=('pearson_r', lambda x: x.std(ddof=1) / np.sqrt(len(x))),
+        )
+        .reset_index()
+    )
+    print("\nCross-validated model comparison (mean ± SE across folds):")
+    print(comparison_summary.to_string(index=False))
+
+    return fold_df, pd.DataFrame(pred_records), comparison_folds, comparison_summary
 
 
 def create_calibration_plot(pred_df: pd.DataFrame, output_path: Path):
@@ -365,12 +575,16 @@ def create_metrics_summary(fold_df: pd.DataFrame, output_path: Path):
 
 
 if __name__ == "__main__":
-    fold_df, pred_df = run_cross_validation(n_splits=5)
+    fold_df, pred_df, comparison_folds, comparison_summary = run_cross_validation(n_splits=5)
 
     fold_df.to_csv(RESULTS_DIR / "cv_metrics.csv", index=False)
     pred_df.to_csv(RESULTS_DIR / "cv_predictions.csv", index=False)
+    comparison_folds.to_csv(RESULTS_DIR / "cv_model_comparison_folds.csv", index=False)
+    comparison_summary.to_csv(RESULTS_DIR / "cv_model_comparison.csv", index=False)
     print(f"\n💾 Saved: {RESULTS_DIR / 'cv_metrics.csv'}")
     print(f"💾 Saved: {RESULTS_DIR / 'cv_predictions.csv'}")
+    print(f"💾 Saved: {RESULTS_DIR / 'cv_model_comparison_folds.csv'}")
+    print(f"💾 Saved: {RESULTS_DIR / 'cv_model_comparison.csv'}")
 
     print("\nCreating plots...")
     create_calibration_plot(pred_df, RESULTS_DIR / "calibration_plot.png")

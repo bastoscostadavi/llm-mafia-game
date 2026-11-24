@@ -23,8 +23,8 @@ Evaluates capabilities by varying the target model against fixed backgrounds.
 
 ### Top-down Theoretical Model
 Fits the theoretical model: `logit(p_ijk) = v_k × (m_i - d_j)` using Bayesian inference.
-- **Scripts**: 1 comprehensive script
-- **Outputs**: Model parameters (m, d, v) for all models
+- **Scripts**: parameter estimation, cross-validated model comparison, and background-score consistency analysis
+- **Outputs**: Model parameters (m, d, v), held-out predictions and metrics for constant/detection-only/additive/theoretical/cubic models, and top-down versus bottom-up correlations
 - **Location**: `top_down_theoretical/`
 
 ### Serendipitous Results
@@ -53,6 +53,8 @@ python3 scores_table_and_plot.py
 # Top-down theoretical model
 cd ../top_down_theoretical/
 python3 scores_theoretical_model.py
+python3 train_test_evaluation.py
+python3 compare_background_scores.py
 
 # Serendipitous results
 cd ../serendipitous_results/

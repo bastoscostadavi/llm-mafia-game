@@ -15,7 +15,7 @@ Provides systematic evaluation of LLM social reasoning capabilities — deceptio
 <tr>
 <td colspan="2">
 
-![Gameplay and benchmark pipeline](figures/fig_gameplay_pipeline.png)
+![Gameplay and benchmark pipeline](fig_gameplay_pipeline.png)
 
 </td>
 </tr>
@@ -25,7 +25,7 @@ Mini-Mafia is a 4-player game: 1 Mafioso, 1 Detective, 2 Villagers. Each model i
 
 **Fig. 3 — Results**
 
-![Capability scores for all models and humans](figures/fig_results.png)
+![Capability scores for all models and humans](fig_results.png)
 
 *Theoretical model capability scores (m = deceive, d = disclose, v = detect) inferred from ~15k games. Human performance highlighted in green.*
 
@@ -172,13 +172,14 @@ Human games are stored in `database/mini_mafia_human.db` and can be included in 
 ```
 mini-mafia-benchmark/
 ├── mini_mafia.py          # 4-player game engine (imported by all experiments)
-├── figures/               # Images used in this README
+├── fig_gameplay_pipeline.png  # Images used in this README
+├── fig_results.png
 ├── experiments/           # Batch experiment runners
 ├── database/              # SQLite databases + schema + viewer
 ├── analysis/              # Analysis scripts (by methodology)
 ├── results/               # Output CSVs and plots
 ├── web/                   # Flask interface for human players
-└── article/               # LaTeX source for the paper
+└── paper/                 # LaTeX source for the paper
 ```
 
 ## Databases

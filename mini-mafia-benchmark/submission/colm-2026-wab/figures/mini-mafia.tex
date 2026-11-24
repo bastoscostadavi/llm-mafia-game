@@ -1,0 +1,128 @@
+\begin{tikzpicture}[
+  font=\small,
+  node distance=10mm and 12mm,
+  bigbox/.style = {draw, rounded corners, inner sep=8pt, align=center, fill=none},
+  roleicon/.style = {draw, rounded corners,
+                     inner sep=1pt,
+                     minimum width=0.4cm,
+                     minimum height=0.4cm,
+                     font=\footnotesize,
+                     fill=white},
+  arrow/.style = {line width=0.9pt, -{Latex[length=2.4mm,width=1.4mm]}}
+]
+
+\definecolor{mafcolor}{HTML}{E74C3C}
+\definecolor{detcolor}{HTML}{2E86C1}
+\definecolor{vilcolor}{HTML}{27AE60}
+
+% soft background colors
+\definecolor{nightbg}{HTML}{EDE7F6} % light purple
+\definecolor{daybg}{HTML}{FFF9E6}   % light yellow
+
+% ---------------- NIGHT PHASE ---------------- %
+
+\coordinate (nightRef) at (0,0);
+
+\matrix (nightRoles) [below=4mm of nightRef, row sep=1.5mm, column sep=3mm] {
+  % icon row
+  \node[roleicon, fill=detcolor!15, draw=detcolor!70!black] (nDetI) {\faSearch}; &
+  \node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black] (nMafI) {\faUserSecret}; &
+  \node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black] (nVil1I) {\faUser}; &
+  \node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black] (nVil2I) {\faUser}; \\
+  % label row
+  \node[font=\scriptsize] (nDetL) {Detective}; &
+  \node[font=\scriptsize] (nMafL) {Mafioso}; &
+  \node[font=\scriptsize] (nVil1L) {Villager}; &
+  \node[font=\scriptsize] (nVil2L) {Villager}; \\
+};
+
+\begin{pgfonlayer}{background}
+  \node[bigbox,
+        fit=(nightRef) (nightRoles),
+        inner xsep=3pt, inner ysep=3pt,
+        fill=nightbg] (nightBox) {};
+\end{pgfonlayer}
+
+% Night phase label (upper-left of night box)
+\node[anchor=north west, font=\small\bfseries]
+  at ($(nightBox.north west)+(1pt,-1pt)$) {Night};
+
+\draw[arrow] (nDetI) -- node[above,yshift=1pt,font=\scriptsize]{Investigate} (nMafI);
+\draw[arrow] (nMafI) -- node[above,yshift=1pt,font=\scriptsize]{Kills} (nVil1I);
+
+\node at (nVil1I.center) {X};
+
+
+% ---------------- DISCUSSION (DAY PHASE PART 1) ---------------- %
+
+\matrix (discRoles) [below=8mm of nightBox.south, row sep=2mm, column sep=11mm] {
+  \node[roleicon, fill=detcolor!15, draw=detcolor!70!black] (dDet1) {\faSearch}; &
+  \node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black] (dMaf1) {\faUserSecret}; &
+  \node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black] (dVil1) {\faUser}; \\
+  \node[roleicon, fill=detcolor!15, draw=detcolor!70!black] (dDet2) {\faSearch}; &
+  \node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black] (dMaf2) {\faUserSecret}; &
+  \node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black] (dVil2) {\faUser}; \\
+  \node[roleicon, fill=detcolor!15, draw=detcolor!70!black] (dDet3) {\faSearch}; &
+  \node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black] (dMaf3) {\faUserSecret}; &
+  \node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black] (dVil3) {\faUser}; \\
+};
+
+\node[bigbox, dotted,
+      fit=(discRoles),
+      inner xsep=12pt, inner ysep=6pt] (discBox) {};
+
+% Vertical "Discussion" label on the left side
+\node[font=\small, rotate=90, anchor=south]
+  at ($(discBox.west)+(-1pt,0)$) {Discussion};
+
+\node[font=\scriptsize] at ([xshift=3mm]dMaf1.east) {\faComments};
+\node[font=\scriptsize] at ([xshift=3mm]dDet2.east) {\faComments};
+\node[font=\scriptsize] at ([xshift=3mm]dVil3.east) {\faComments};
+
+
+% ---------------- VOTING (DAY PHASE PART 2) ---------------- %
+
+\matrix (voteRoles) [below=8mm of discBox.south, row sep=0mm, column sep=11mm] {
+  \node[roleicon, fill=detcolor!15, draw=detcolor!70!black] (vDet) {\faSearch}; &
+  \node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black] (vMaf) {\faUserSecret}; &
+  \node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black] (vVil) {\faUser}; \\
+};
+
+\node[bigbox, dotted,
+      fit=(voteRoles),
+      inner xsep=12pt, inner ysep=6pt] (voteBox) {};
+
+% Vertical "Voting" label on the left side
+\node[font=\small, rotate=90, anchor=south]
+  at ($(voteBox.west)+(-1pt,0)$) {Voting};
+
+\draw[arrow, bend left=20] (vDet) to (vMaf);
+\draw[arrow, bend right=20] (vVil) to (vMaf);
+\draw[arrow, bend left=28] (vMaf) to (vDet);
+
+
+% ---------------- DAY PHASE WRAPPER ---------------- %
+
+\begin{pgfonlayer}{background}
+  \node[bigbox, draw=black,
+        fit=(discBox) (voteBox),
+        inner xsep=16pt, inner ysep=14pt,
+        fill=daybg] (dayBox) {};
+\end{pgfonlayer}
+
+% Day phase label (upper-left of day box)
+\node[anchor=north west, font=\small\bfseries]
+  at ($(dayBox.north west)+(1pt,-1pt)$) {Day};
+
+
+% ---------------- CONTEXT ARROWS ---------------- %
+
+\draw[arrow]
+  ($(nightBox.south)+(0,-1pt)$) -- ($(discBox.north)+(0,2pt)$)
+  node[midway,right=4pt, font=\scriptsize]{Context};
+
+\draw[arrow]
+  ($(discBox.south)+(0,-1pt)$) -- ($(voteBox.north)+(0,2pt)$)
+  node[midway,right=4pt,font=\scriptsize]{Context};
+
+\end{tikzpicture}

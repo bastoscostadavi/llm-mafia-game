@@ -1,0 +1,123 @@
+\begin{tikzpicture}[
+  font=\small,
+  node distance=18mm and 0mm,
+  benchbox/.style = {
+    draw, rounded corners,
+    align=center,
+    fill=benchbg,
+    inner xsep=10pt,    % horizontal padding
+    inner ysep=16pt,    % vertical padding (taller boxes)
+    minimum width=5cm,  % narrower
+    minimum height=1.8cm
+  },
+  roleicon/.style = {
+    draw, rounded corners,
+    inner sep=2pt,
+    minimum width=0.45cm,
+    minimum height=0.45cm,
+    font=\footnotesize,
+    fill=white
+  },
+  arrow/.style = {line width=0.9pt, -{Latex[length=2.4mm,width=1.4mm]}}
+]
+
+% Make sure in your preamble you have:
+% \usetikzlibrary{arrows.meta}
+
+\definecolor{mafcolor}{HTML}{E74C3C}
+\definecolor{detcolor}{HTML}{2E86C1}
+\definecolor{vilcolor}{HTML}{27AE60}
+\definecolor{benchbg}{HTML}{F2F6FF}
+
+% --------------------------------------------------
+% 1) WIN COUNT BOX (aligned at x=0)
+% --------------------------------------------------
+
+\node[benchbox] (winBox) at (0,0) {};
+
+% label (left, vertical)
+\node[font=\small, rotate=90, anchor=south]
+  at ($(winBox.west)+(-0.5pt,0)$) {Win count};
+
+% Eq label: bottom-right corner
+\node[anchor=south east, font=\scriptsize]
+  at ($(winBox.south east)+(-3pt,3pt)$) {Eq.~\eqref{eq:binomial_full}};
+
+% contents, positioned relative to winBox.center
+\node[font=\small, align=center]
+  at (winBox.center) {$\omega_{ijk} \sim \text{Binomial}(n_{ijk}, p_{ijk})$};
+
+% --------------------------------------------------
+% 2) THEORETICAL MODEL BOX (same width, directly below, same x)
+% --------------------------------------------------
+
+\node[benchbox, below=5mm of winBox] (zBox) {};
+
+% vertical label
+\node[font=\small, rotate=90, anchor=south]
+  at ($(zBox.west)+(-0.5pt,0)$) {Model};
+
+% Eq label: bottom-right
+\node[anchor=south east, font=\scriptsize]
+  at ($(zBox.south east)+(-3pt,3pt)$) {Eq.~\eqref{eq:theoretical_model}};
+
+% Role icons above the equation
+\node[roleicon, fill=mafcolor!15, draw=mafcolor!70!black]
+  (mIcon) at ($(zBox.center)+(0.9,0.35)$) {\faUserSecret};
+\node[roleicon, fill=detcolor!15, draw=detcolor!70!black]
+  (dIcon) at ($(zBox.center)+(1.7,0.35)$) {\faSearch};
+\node[roleicon, fill=vilcolor!15, draw=vilcolor!70!black]
+  (vIcon) at ($(zBox.center)+(0,0.35)$) {\faUser};
+
+% contents relative to zBox.center
+\node[font=\small, align=center]
+  (eqNode) at ($(zBox.center)+(0,-0.2)$) {$\text{logit}(p_{ijk}) = v_k \times (m_i - d_j)$};
+
+% --------------------------------------------------
+% 3) BAYESIAN INFERENCE BOX (same width, directly below, same x)
+% --------------------------------------------------
+
+\node[benchbox, below=5mm of zBox] (aggBox) {};
+
+% vertical label
+\node[font=\small, rotate=90, anchor=south]
+  at ($(aggBox.west)+(-0.5pt,0)$) {Inference};
+
+% Eq label: bottom-right
+\node[anchor=south east, font=\scriptsize]
+  at ($(aggBox.south east)+(-3pt,3pt)$) {Eq.~\eqref{eq:bayesian_inference}};
+
+% contents relative to aggBox.center
+\node[font=\small, align=center]
+  at (aggBox.center) {Priors: $m_i, d_j, v_k \sim \mathcal{N}(0, 2)$};
+
+% --------------------------------------------------
+% 4) ARROWS (same look as your night/day diagram)
+% --------------------------------------------------
+
+\draw[arrow]
+  ($(winBox.south)+(0,-1pt)$) -- ($(zBox.north)+(0,1pt)$)
+  node[midway,right=4pt, font=\scriptsize]{Model};
+
+\draw[arrow]
+  ($(zBox.south)+(0,-1pt)$) -- ($(aggBox.north)+(0,1pt)$)
+  node[midway,right=4pt, font=\scriptsize]{Bayesian};
+  
+
+% --------------------------------------------------
+% 5) OUTER "DECEIVE" BOX
+% --------------------------------------------------
+
+\begin{pgfonlayer}{background}
+  \node[
+    draw=mafcolor!70!black,
+    rounded corners,
+    inner sep=12pt,
+    fill=mafcolor!8,       % <<< soft reddish background
+    fit=(winBox) (zBox) (aggBox)
+  ] (outerBox) {};
+\end{pgfonlayer}
+
+
+
+\end{tikzpicture}

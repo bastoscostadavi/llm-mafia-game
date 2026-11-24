@@ -1,0 +1,286 @@
+\documentclass[aspectratio=169]{beamer}
+
+% ── Minimalist theme ──────────────────────────────────────────────────────────
+\usetheme{default}
+\usecolortheme{dove}
+\usefonttheme[onlymath]{serif}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \hfill{\scriptsize\color{black!35}\insertframenumber}\kern1.8em\vspace{0.5em}}
+\setbeamertemplate{frametitle}{%
+  \vspace{0.6em}%
+  {\usebeamerfont{frametitle}\insertframetitle}\par
+  \vspace{0.18em}{\color{black!15}\hrule height 0.3pt}\vspace{0.1em}}
+\setbeamertemplate{itemize item}{\small---}
+
+\setbeamerfont{frametitle}{size=\normalsize, series=\bfseries}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{normal text}{fg=black!87}
+\setbeamercolor{structure}{fg=black!55}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[numbers,compress]{natbib}
+
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\usepackage{qrcode}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage[most]{tcolorbox}
+
+\graphicspath{{figures/}}
+
+\newtcolorbox{dialoguebox}{
+  colback=green!8!white, colframe=green!50!black,
+  boxrule=0.4pt, arc=2mm,
+  left=2mm, right=2mm, top=1mm, bottom=1mm,
+  fontupper=\scriptsize,
+}
+\newtcolorbox{setupbox}{
+  colback=red!8!white, colframe=red!50!black,
+  boxrule=0.4pt, arc=2mm,
+  left=2mm, right=2mm, top=1mm, bottom=1mm,
+  fontupper=\scriptsize,
+}
+\newtcolorbox{resultbox}{
+  colback=blue!5!white, colframe=blue!40!black,
+  boxrule=0.4pt, arc=2mm,
+  left=2mm, right=2mm, top=1mm, bottom=1mm,
+  fontupper=\scriptsize,
+}
+
+\title{Deceive, Detect, and Disclose\\Large Language Models Play Mini-Mafia}
+\author{Davi Bastos Costa \and Renato Vicente}
+\institute{TELUS Digital Research Hub \quad University of S\~{a}o Paulo}
+\date{AAMAS 2026 Workshop on Strategic Engineering}
+
+\begin{document}
+
+% ── Title ─────────────────────────────────────────────────────────────────────
+\begin{frame}[plain]
+  \vfill\centering
+  {\large\bfseries Deceive, Detect, and Disclose:\\[0.3em]
+   Large Language Models Play Mini-Mafia}\\[1.2em]
+  {\normalsize Davi Bastos Costa \quad Renato Vicente}\\[0.4em]
+  {\small\color{black!50} TELUS Digital Research Hub \quad University of S\~{a}o Paulo}\\[1.5em]
+  {\small\color{black!40} AAMAS 2026 Workshop on Strategic Engineering \;\cite{costa2026deceivedetectdiscloselarge}}
+  \vfill
+\end{frame}
+
+% ── Intro: positioning ────────────────────────────────────────────────────────
+\begin{frame}{Where we work}
+  \begin{center}
+  \begin{tikzpicture}[font=\small]
+    \definecolor{circA}{HTML}{2E86C1}
+    \definecolor{circB}{HTML}{27AE60}
+    \begin{scope}[blend group=multiply]
+      \fill[circA!20] (-1.4,0) circle (2.6);
+      \fill[circB!20] ( 1.4,0) circle (2.6);
+    \end{scope}
+    \draw[circA!70!black, thick] (-1.4,0) circle (2.6);
+    \draw[circB!70!black, thick] ( 1.4,0) circle (2.6);
+    \node[align=center, text width=3.2cm] at (-2.6, 0)
+      {\textbf{Theoretical modeling}\\of multi-agent\\LLM systems};
+    \node[align=center, text width=3.2cm] at ( 2.6, 0)
+      {\textbf{Benchmarking}\\LLM interactive\\capabilities};
+    \node[align=center, font=\itshape] at (0,-0.05) {Mini-Mafia};
+  \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+% ── Mini-Mafia gameplay ──────────────────────────────────────────────────────
+\begin{frame}{Mini-Mafia}
+  \begin{center}
+    \resizebox{!}{0.80\textheight}{\input{figures/mini-mafia.tex}}
+  \end{center}
+  \vspace{0.2em}
+  \centering
+  {\small Fixed night collapses Mafia to one critical exchange:
+   \textit{deceive}, \textit{disclose}, \textit{detect}.}
+\end{frame}
+
+% ── Game script ───────────────────────────────────────────────────────────────
+\begin{frame}{An illustrative game}
+  \begin{setupbox}
+    Bob (\faUserSecret, GPT-5 Mini), Alice (\faUser, Claude Sonnet 4), Diana (\faSearch, GPT-5 Mini).\\
+    Night 1: Bob kills Charlie; Diana investigates Bob.
+  \end{setupbox}
+  \begin{dialoguebox}
+    \textbf{Bob:} \textit{Terrible about Charlie. Who last spoke with him?}\\
+    \textbf{Diana:} \textit{I investigated Bob last night --- he's the mafioso. Vote Bob.}\\
+    \textbf{Alice:} \textit{Diana, that's a bold claim. Why investigate Bob on night 1?}\\
+    \textbf{Bob:} \textit{Diana's claim is suspiciously convenient; a real detective wouldn't reveal so soon. I vote Diana.}\\
+    \textbf{Diana:} \textit{I investigated Bob night 1. We must vote Bob now to stop more kills.}\\
+    \textbf{Alice:} \textit{Bob, your counter-vote seems defensive. I'm voting Diana.}
+  \end{dialoguebox}
+  \begin{resultbox}
+    Alice $\to$ Diana, \;Bob $\to$ Diana, \;Diana $\to$ Bob. \quad \textbf{Mafia wins.}
+  \end{resultbox}
+\end{frame}
+
+% ── Theoretical model: axioms + symmetries ──────────────────────────────────
+\begin{frame}{Theoretical model}
+  \textbf{Axioms}
+  \begin{enumerate}\small
+    \item $\mathrm{logit}(p_{ijk}) = f(v_k,\, m_i - d_j)$
+    \item $p_{ijk} = 1/2$ \;when\; $m_i - d_j = 0$
+    \item $p_{ijk} = 1/2$ \;when\; $v_k = 0$
+  \end{enumerate}
+  \vspace{0.4em}
+  \begin{center}
+    Second-order expansion \;$\Longrightarrow$\;
+    $\boxed{\mathrm{logit}(p_{ijk}) = v_k\,(m_i - d_j)}$
+  \end{center}
+  \vspace{0.6em}
+  \textbf{Residual symmetries}
+  \begin{align*}
+    \text{shift:}\quad &  m_i \to m_i + c,\; d_j \to d_j + c \\
+    \text{scale:}\quad & v_k \to v_k / \lambda,\; m_i \to \lambda m_i,\; d_j \to \lambda d_j
+  \end{align*}
+  \vspace{-0.4em}
+  \begin{center}
+    {\small Gauge-fix by $\mathbb{E}[m_i] = 0$ and $\mathbb{E}[v_k] = 1$.}
+  \end{center}
+\end{frame}
+
+% ── Benchmark pipeline ─────────────────────────────────────────────────────
+\begin{frame}{Benchmark pipeline}
+  \begin{center}
+    \resizebox{!}{0.80\textheight}{\input{figures/benchmark.tex}}
+  \end{center}
+  \vspace{0.2em}
+  \centering
+  {\small Closed-form win-rate: $\mathrm{logit}(p_{ijk}) = v_k\,(m_i - d_j)$.}
+\end{frame}
+
+% ── Parameter reduction ─────────────────────────────────────────────────────
+\begin{frame}{$I^3$ outcomes \;$\longrightarrow$\; $3I$ parameters}
+  \begin{center}
+  \begin{tikzpicture}[font=\footnotesize]
+    \definecolor{mafcol}{HTML}{E74C3C}
+    \definecolor{detcol}{HTML}{2E86C1}
+    \definecolor{vilcol}{HTML}{27AE60}
+
+    % LEFT: I^3 cube of outcomes
+    \begin{scope}[xshift=-4.8cm]
+      \def\sz{2.6}
+      \def\dx{0.7}
+      \def\dy{0.45}
+      % back/top/right faces
+      \fill[black!7] (0,0) rectangle (\sz,\sz);
+      \fill[black!12] (\sz,0) -- (\sz+\dx,\dy) -- (\sz+\dx,\sz+\dy) -- (\sz,\sz) -- cycle;
+      \fill[black!4]  (0,\sz) -- (\sz,\sz) -- (\sz+\dx,\sz+\dy) -- (\dx,\sz+\dy) -- cycle;
+      % front-face grid (10x10)
+      \foreach \i in {1,...,9} {
+        \draw[black!30, very thin] (\i*\sz/10,0) -- (\i*\sz/10,\sz);
+        \draw[black!30, very thin] (0,\i*\sz/10) -- (\sz,\i*\sz/10);
+      }
+      % cube outline
+      \draw[black!60] (0,0) rectangle (\sz,\sz);
+      \draw[black!60] (\sz,0) -- (\sz+\dx,\dy) -- (\sz+\dx,\sz+\dy) -- (\sz,\sz);
+      \draw[black!60] (0,\sz) -- (\dx,\sz+\dy) -- (\sz+\dx,\sz+\dy);
+      \node[font=\normalsize] at (\sz/2+\dx/2, -0.55) {$I^3 = 1{,}000$ for $I=10$};
+    \end{scope}
+
+    % MIDDLE: big arrow
+    \draw[-{Latex[length=3mm,width=2mm]}, line width=1.2pt]
+      (-1.0,1.5) -- (1.0,1.5);
+
+    % RIGHT: three vertical columns of I cells, color-coded
+    \begin{scope}[xshift=2.4cm]
+      \def\cw{0.32}
+      \def\ch{0.28}
+      \def\gap{0.55}
+      \foreach \r in {0,...,9} {
+        % m (red)
+        \fill[mafcol!25] (0, \r*\ch) rectangle (\cw, \r*\ch+\ch);
+        \draw[mafcol!70!black, thin] (0, \r*\ch) rectangle (\cw, \r*\ch+\ch);
+        % d (blue)
+        \fill[detcol!25] (\gap, \r*\ch) rectangle (\gap+\cw, \r*\ch+\ch);
+        \draw[detcol!70!black, thin] (\gap, \r*\ch) rectangle (\gap+\cw, \r*\ch+\ch);
+        % v (green)
+        \fill[vilcol!25] (2*\gap, \r*\ch) rectangle (2*\gap+\cw, \r*\ch+\ch);
+        \draw[vilcol!70!black, thin] (2*\gap, \r*\ch) rectangle (2*\gap+\cw, \r*\ch+\ch);
+      }
+      \node[font=\small] at (\cw/2, 10*\ch+0.25) {$m$};
+      \node[font=\small] at (\gap+\cw/2, 10*\ch+0.25) {$d$};
+      \node[font=\small] at (2*\gap+\cw/2, 10*\ch+0.25) {$v$};
+      \node[font=\normalsize] at (\gap+\cw/2, -0.55) {$3I = 30$ for $I=10$};
+    \end{scope}
+  \end{tikzpicture}
+  \end{center}
+  \vspace{0.4em}
+  \centering
+  {\small A $33\times$ compression: tournament outcomes predicted from intrinsic per-model capabilities.}
+\end{frame}
+
+% ── Benchmark scores: deceive ────────────────────────────────────────────────
+\begin{frame}{Deceive \;\faUserSecret}
+  \begin{center}
+    \includegraphics[width=0.78\textwidth,height=0.78\textheight,keepaspectratio]{scores_deceive_theoretical.png}
+  \end{center}
+  \vspace{0.1em}
+  \centering
+  {\small DeepSeek V3.1 leads as mafioso; counter-accusation is the universal defense.}
+\end{frame}
+
+% ── Benchmark scores: detect ─────────────────────────────────────────────────
+\begin{frame}{Detect \;\faUser}
+  \begin{center}
+    \includegraphics[width=0.78\textwidth,height=0.78\textheight,keepaspectratio]{scores_detect_theoretical.png}
+  \end{center}
+  \vspace{0.1em}
+  \centering
+  {\small Grok 3 Mini tops the villagers; Claude Sonnet 4 sits near random chance.}
+\end{frame}
+
+% ── Benchmark scores: disclose ───────────────────────────────────────────────
+\begin{frame}{Disclose \;\faSearch}
+  \begin{center}
+    \includegraphics[width=0.78\textwidth,height=0.78\textheight,keepaspectratio]{scores_disclose_theoretical.png}
+  \end{center}
+  \vspace{0.1em}
+  \centering
+  {\small GPT-5 Mini discloses first round 99.8\% of the time; Llama 3.1 8B never reveals in 69.9\%.}
+\end{frame}
+
+% ── Validation ────────────────────────────────────────────────────────────────
+\begin{frame}{Validation}
+  \begin{center}
+    \includegraphics[height=0.72\textheight,keepaspectratio]{cv_scatter.png}\hspace{0.5em}%
+    \includegraphics[height=0.72\textheight,keepaspectratio]{calibration_plot.png}
+  \end{center}
+  \vspace{0.1em}
+  \centering
+  {\small 5-fold cross-validation on 140 configurations: $76.6\%$ Brier-score reduction over baseline.}
+\end{frame}
+
+% ── Thank you ─────────────────────────────────────────────────────────────────
+\begin{frame}[plain]
+  \vfill\centering
+  {\Large\bfseries Thank you}\\[1.2em]
+  {\normalsize Davi Bastos Costa \quad Renato Vicente}\\[0.4em]
+  {\small\color{black!50} TELUS Digital Research Hub \quad University of S\~{a}o Paulo}\\[1em]
+  {\small\color{black!45} davi.costa@usp.br}\\[1.4em]
+  \begin{tabular}{@{}c@{\hspace{2.8em}}c@{}}
+    \qrcode[height=2.2cm]{https://github.com/bastoscostadavi/llm-mafia-game/tree/main/src} &
+    \qrcode[height=2.2cm]{https://arxiv.org/abs/2509.23023} \\
+    {\scriptsize\color{black!60} GitHub repo} &
+    {\scriptsize\color{black!60} Paper}
+  \end{tabular}
+  \vfill
+\end{frame}
+
+% ── References ────────────────────────────────────────────────────────────────
+\begin{frame}[allowframebreaks]{References}
+  \bibliographystyle{unsrtnat}
+  \bibliography{references}
+\end{frame}
+
+\end{document}
